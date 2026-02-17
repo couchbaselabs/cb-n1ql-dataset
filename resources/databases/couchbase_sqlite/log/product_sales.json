@@ -1,0 +1,116 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "category_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "book",
+              "cd",
+              "dvd"
+            ],
+            "type": "string"
+          },
+          "product_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "B002",
+              "C002",
+              "D001",
+              "D002",
+              "D003"
+            ],
+            "type": "string"
+          },
+          "sales": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10000,
+              15000,
+              20000,
+              30000,
+              50000
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "product_sales::0",
+                  "product_sales::1",
+                  "product_sales::2",
+                  "product_sales::4",
+                  "product_sales::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "product_sales::0"
+              },
+              {
+                "id": "product_sales::1"
+              },
+              {
+                "id": "product_sales::2"
+              },
+              {
+                "id": "product_sales::4"
+              },
+              {
+                "id": "product_sales::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "category_name": "book",
+      "product_id": "B002",
+      "sales": 15000
+    },
+    {
+      "category_name": "book",
+      "product_id": "B001",
+      "sales": 20000
+    },
+    {
+      "category_name": "book",
+      "product_id": "B003",
+      "sales": 10000
+    },
+    {
+      "category_name": "cd",
+      "product_id": "C002",
+      "sales": 20000
+    },
+    {
+      "category_name": "cd",
+      "product_id": "C003",
+      "sales": 10000
+    }
+  ]
+}

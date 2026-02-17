@@ -1,0 +1,152 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "feature": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Average Wind Speed (Day)",
+              "Cycle length(days)",
+              "First Hour of Period",
+              "Hip(inch)",
+              "f_48"
+            ],
+            "type": "string"
+          },
+          "importance": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              0.00206464118936187,
+              0.0567951318458418,
+              0.13793103448275862,
+              0.8070222372457908
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Hospital Mortality Prediction",
+              "PCOS",
+              "Solar Power Generation",
+              "oil spill",
+              "water quality 2"
+            ],
+            "type": "string"
+          },
+          "step": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "version": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "feature_importance::1303",
+                  "feature_importance::1445",
+                  "feature_importance::1469",
+                  "feature_importance::1688",
+                  "feature_importance::1690"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "feature_importance::1303"
+              },
+              {
+                "id": "feature_importance::1445"
+              },
+              {
+                "id": "feature_importance::1469"
+              },
+              {
+                "id": "feature_importance::1688"
+              },
+              {
+                "id": "feature_importance::1690"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "feature": "f_5",
+      "importance": 0,
+      "name": "oil spill",
+      "step": 1,
+      "version": 2
+    },
+    {
+      "feature": "f_2",
+      "importance": 0,
+      "name": "oil spill",
+      "step": 2,
+      "version": 2
+    },
+    {
+      "feature": "f_31",
+      "importance": 0.003378378378378384,
+      "name": "oil spill",
+      "step": 2,
+      "version": 2
+    },
+    {
+      "feature": "f_2",
+      "importance": 0.032069970845481084,
+      "name": "oil spill",
+      "step": 1,
+      "version": 5
+    },
+    {
+      "feature": "f_3",
+      "importance": 0.08746355685131192,
+      "name": "oil spill",
+      "step": 1,
+      "version": 5
+    }
+  ]
+}

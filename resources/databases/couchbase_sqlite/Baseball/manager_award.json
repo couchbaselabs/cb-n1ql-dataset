@@ -1,0 +1,160 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 177,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`notes` = \"\"",
+        "properties": {
+          "award_id": {
+            "#docs": 177,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BBWAA Manager of the year",
+              "TSN Manager of the Year"
+            ],
+            "type": "string"
+          },
+          "league_id": {
+            "#docs": 177,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AL",
+              "ML",
+              "NL"
+            ],
+            "type": "string"
+          },
+          "notes": {
+            "#docs": 177,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              ""
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 177,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "durocle01",
+              "gardero01",
+              "herzowh01",
+              "melvibo01",
+              "tannech01"
+            ],
+            "type": "string"
+          },
+          "tie": {
+            "#docs": 177,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Y",
+              ""
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 177,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1954,
+              1972,
+              1982,
+              2007,
+              2010
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 177,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 177,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "manager_award::109",
+                  "manager_award::155",
+                  "manager_award::161",
+                  "manager_award::81",
+                  "manager_award::99"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "manager_award::109"
+              },
+              {
+                "id": "manager_award::155"
+              },
+              {
+                "id": "manager_award::161"
+              },
+              {
+                "id": "manager_award::81"
+              },
+              {
+                "id": "manager_award::99"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "award_id": "TSN Manager of the Year",
+      "league_id": "AL",
+      "notes": "",
+      "player_id": "maddojo99",
+      "tie": "",
+      "year": 2008
+    },
+    {
+      "award_id": "TSN Manager of the Year",
+      "league_id": "AL",
+      "notes": "",
+      "player_id": "maddojo99",
+      "tie": "",
+      "year": 2011
+    },
+    {
+      "award_id": "TSN Manager of the Year",
+      "league_id": "ML",
+      "notes": "",
+      "player_id": "tebbebi01",
+      "tie": "",
+      "year": 1956
+    },
+    {
+      "award_id": "TSN Manager of the Year",
+      "league_id": "ML",
+      "notes": "",
+      "player_id": "bambege01",
+      "tie": "",
+      "year": 1978
+    },
+    {
+      "award_id": "TSN Manager of the Year",
+      "league_id": "NL",
+      "notes": "",
+      "player_id": "aloufe01",
+      "tie": "",
+      "year": 1994
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "account_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1691,
+              1831,
+              1941,
+              2621,
+              2671
+            ],
+            "type": "number"
+          },
+          "gloss_amt_usd": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              37.45,
+              52.43,
+              239.68,
+              277.13
+            ],
+            "type": "number"
+          },
+          "gloss_qty": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5,
+              7,
+              32,
+              37
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1001,
+              1191,
+              1346,
+              2151,
+              2216
+            ],
+            "type": "number"
+          },
+          "occurred_at": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2015-01-15T08:02:18.000Z",
+              "2016-07-08T20:45:56.000Z",
+              "2016-07-24T02:32:03.000Z",
+              "2016-11-11T22:46:33.000Z",
+              "2016-12-14T04:09:28.000Z"
+            ],
+            "type": "string"
+          },
+          "poster_amt_usd": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              81.2,
+              259.84,
+              284.2,
+              75524.12
+            ],
+            "type": "number"
+          },
+          "poster_qty": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              10,
+              32,
+              35,
+              9301
+            ],
+            "type": "number"
+          },
+          "standard_amt_usd": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              538.92,
+              748.5,
+              893.21,
+              1521.95,
+              2375.24
+            ],
+            "type": "number"
+          },
+          "standard_qty": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              108,
+              150,
+              179,
+              305,
+              476
+            ],
+            "type": "number"
+          },
+          "total": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              157,
+              177,
+              194,
+              476,
+              9638
+            ],
+            "type": "number"
+          },
+          "total_amt_usd": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              800.93,
+              1011.86,
+              1075.89,
+              2375.24,
+              77285.75
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_orders::1000",
+                  "web_orders::1190",
+                  "web_orders::1345",
+                  "web_orders::2150",
+                  "web_orders::2215"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_orders::1000"
+              },
+              {
+                "id": "web_orders::1190"
+              },
+              {
+                "id": "web_orders::1345"
+              },
+              {
+                "id": "web_orders::2150"
+              },
+              {
+                "id": "web_orders::2215"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "account_id": 1121,
+      "gloss_amt_usd": 247.17,
+      "gloss_qty": 33,
+      "id": 102,
+      "occurred_at": "2015-08-26T00:32:35.000Z",
+      "poster_amt_usd": 89.32,
+      "poster_qty": 11,
+      "standard_amt_usd": 1462.07,
+      "standard_qty": 293,
+      "total": 337,
+      "total_amt_usd": 1798.56
+    },
+    {
+      "account_id": 1791,
+      "gloss_amt_usd": 52.43,
+      "gloss_qty": 7,
+      "id": 1158,
+      "occurred_at": "2016-06-11T11:56:20.000Z",
+      "poster_amt_usd": 16.24,
+      "poster_qty": 2,
+      "standard_amt_usd": 2445.1,
+      "standard_qty": 490,
+      "total": 499,
+      "total_amt_usd": 2513.77
+    },
+    {
+      "account_id": 1791,
+      "gloss_amt_usd": 0,
+      "gloss_qty": 0,
+      "id": 1164,
+      "occurred_at": "2016-12-06T01:41:14.000Z",
+      "poster_amt_usd": 64.96,
+      "poster_qty": 8,
+      "standard_amt_usd": 2465.06,
+      "standard_qty": 494,
+      "total": 502,
+      "total_amt_usd": 2530.02
+    },
+    {
+      "account_id": 1131,
+      "gloss_amt_usd": 239.68,
+      "gloss_qty": 32,
+      "id": 120,
+      "occurred_at": "2016-07-12T00:17:14.000Z",
+      "poster_amt_usd": 178.64,
+      "poster_qty": 22,
+      "standard_amt_usd": 1477.04,
+      "standard_qty": 296,
+      "total": 350,
+      "total_amt_usd": 1895.36
+    },
+    {
+      "account_id": 1851,
+      "gloss_amt_usd": 0,
+      "gloss_qty": 0,
+      "id": 1213,
+      "occurred_at": "2014-08-15T09:19:41.000Z",
+      "poster_amt_usd": 243.6,
+      "poster_qty": 30,
+      "standard_amt_usd": 2460.07,
+      "standard_qty": 493,
+      "total": 523,
+      "total_amt_usd": 2703.67
+    }
+  ]
+}

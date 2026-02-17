@@ -1,0 +1,131 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 303,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "L1_model": {
+            "#docs": 303,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "regression",
+              "tree"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 303,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Critical Heat Flux",
+              "Hospital Mortality Prediction",
+              "kindey stone urine analysis",
+              "oil spill",
+              "survey lung cancer"
+            ],
+            "type": "string"
+          },
+          "step": {
+            "#docs": 303,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "version": {
+            "#docs": 303,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 303,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 303,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "model::148",
+                  "model::150",
+                  "model::164",
+                  "model::215",
+                  "model::221"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "model::148"
+              },
+              {
+                "id": "model::150"
+              },
+              {
+                "id": "model::164"
+              },
+              {
+                "id": "model::215"
+              },
+              {
+                "id": "model::221"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "L1_model": "tree",
+      "name": "survey lung cancer",
+      "step": 2,
+      "version": 5
+    },
+    {
+      "L1_model": "regression",
+      "name": "oil spill",
+      "step": 2,
+      "version": 2
+    },
+    {
+      "L1_model": "regression",
+      "name": "kindey stone urine analysis",
+      "step": 3,
+      "version": 1
+    },
+    {
+      "L1_model": "tree",
+      "name": "kindey stone urine analysis",
+      "step": 2,
+      "version": 6
+    },
+    {
+      "L1_model": "tree",
+      "name": "Delaney solubility",
+      "step": 3,
+      "version": 4
+    }
+  ]
+}

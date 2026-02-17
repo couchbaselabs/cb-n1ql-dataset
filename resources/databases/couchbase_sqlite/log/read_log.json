@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 15,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "action": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "read-20%",
+              "read-40%",
+              "read-60%",
+              "read-80%",
+              "view"
+            ],
+            "type": "string"
+          },
+          "session": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "08962ace",
+              "76c67c39",
+              "77d477cc",
+              "afbd3d09",
+              "df6eb25d"
+            ],
+            "type": "string"
+          },
+          "stamp": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-12-29 21:45:47",
+              "2016-12-29 21:45:54",
+              "2016-12-29 21:45:56",
+              "2016-12-29 21:45:59",
+              "2016-12-29 21:46:13"
+            ],
+            "type": "string"
+          },
+          "url": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "http://www.example.com/article...",
+              "http://www.example.com/article...",
+              "http://www.example.com/article...",
+              "http://www.example.com/article...",
+              "http://www.example.com/article..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 15,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "read_log::11",
+                  "read_log::14",
+                  "read_log::2",
+                  "read_log::4",
+                  "read_log::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "read_log::11"
+              },
+              {
+                "id": "read_log::14"
+              },
+              {
+                "id": "read_log::2"
+              },
+              {
+                "id": "read_log::4"
+              },
+              {
+                "id": "read_log::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "action": "view",
+      "session": "a80ded24",
+      "stamp": "2016-12-29 21:45:47",
+      "url": "http://www.example.com/article?id=trend925"
+    },
+    {
+      "action": "view",
+      "session": "df6eb25d",
+      "stamp": "2016-12-29 21:45:47",
+      "url": "http://www.example.com/article?id=news731"
+    },
+    {
+      "action": "read-40%",
+      "session": "76c67c39",
+      "stamp": "2016-12-29 21:45:59",
+      "url": "http://www.example.com/article?id=trend925"
+    },
+    {
+      "action": "read-60%",
+      "session": "df6eb25d",
+      "stamp": "2016-12-29 21:46:13",
+      "url": "http://www.example.com/article?id=news731"
+    },
+    {
+      "action": "read-80%",
+      "session": "df6eb25d",
+      "stamp": "2016-12-29 21:46:22",
+      "url": "http://www.example.com/article?id=news731"
+    }
+  ]
+}

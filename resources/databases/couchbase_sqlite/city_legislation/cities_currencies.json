@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 254,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code_2": {
+            "#docs": 254,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "am",
+              "id",
+              "lt",
+              "ly",
+              "uy"
+            ],
+            "type": "string"
+          },
+          "currency_code": {
+            "#docs": [
+              1,
+              253
+            ],
+            "%docs": [
+              0.39,
+              99.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "amd",
+                "eur",
+                "idr",
+                "lyd",
+                "uyi"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "currency_id": {
+            "#docs": 254,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              105,
+              129,
+              131,
+              242
+            ],
+            "type": "number"
+          },
+          "currency_name": {
+            "#docs": 254,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "armenian dram",
+              "euro",
+              "libyan dinar",
+              "rupiah",
+              "uruguay peso en unidades index..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 254,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 254,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cities_currencies::104",
+                  "cities_currencies::128",
+                  "cities_currencies::130",
+                  "cities_currencies::241",
+                  "cities_currencies::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cities_currencies::104"
+              },
+              {
+                "id": "cities_currencies::128"
+              },
+              {
+                "id": "cities_currencies::130"
+              },
+              {
+                "id": "cities_currencies::241"
+              },
+              {
+                "id": "cities_currencies::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code_2": "bl",
+      "currency_code": "eur",
+      "currency_id": 189,
+      "currency_name": "euro"
+    },
+    {
+      "country_code_2": "kn",
+      "currency_code": "xcd",
+      "currency_id": 191,
+      "currency_name": "east caribbean dollar"
+    },
+    {
+      "country_code_2": "cl",
+      "currency_code": "clf",
+      "currency_id": 44,
+      "currency_name": "unidad de fomento"
+    },
+    {
+      "country_code_2": "fi",
+      "currency_code": "eur",
+      "currency_id": 78,
+      "currency_name": "euro"
+    },
+    {
+      "country_code_2": "bb",
+      "currency_code": "bbd",
+      "currency_id": 18,
+      "currency_name": "barbados dollar"
+    }
+  ]
+}

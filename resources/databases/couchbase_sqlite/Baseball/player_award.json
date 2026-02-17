@@ -1,0 +1,167 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "award_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Baseball Magazine All-Star",
+              "Cy Young Award",
+              "Gold Glove",
+              "TSN All-Star",
+              "TSN Guide MVP"
+            ],
+            "type": "string"
+          },
+          "league_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AL",
+              "ML",
+              "NL"
+            ],
+            "type": "string"
+          },
+          "notes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "P3",
+              "C",
+              "C2",
+              "OF",
+              ""
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ainsmed01",
+              "marioma01",
+              "munsoth01",
+              "willibi01",
+              "wyattwh01"
+            ],
+            "type": "string"
+          },
+          "tie": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Y",
+              ""
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1912,
+              1942,
+              1944,
+              1964,
+              1975
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "player_award::1520",
+                  "player_award::1651",
+                  "player_award::194",
+                  "player_award::2470",
+                  "player_award::3084"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "player_award::1520"
+              },
+              {
+                "id": "player_award::1651"
+              },
+              {
+                "id": "player_award::194"
+              },
+              {
+                "id": "player_award::2470"
+              },
+              {
+                "id": "player_award::3084"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "award_id": "Baseball Magazine All-Star",
+      "league_id": "AL",
+      "notes": "RF",
+      "player_id": "foxpe01",
+      "tie": "",
+      "year": 1935
+    },
+    {
+      "award_id": "Baseball Magazine All-Star",
+      "league_id": "NL",
+      "notes": "RF",
+      "player_id": "ottme01",
+      "tie": "",
+      "year": 1935
+    },
+    {
+      "award_id": "Most Valuable Player",
+      "league_id": "AL",
+      "notes": "",
+      "player_id": "greenha01",
+      "tie": "",
+      "year": 1935
+    },
+    {
+      "award_id": "Baseball Magazine All-Star",
+      "league_id": "ML",
+      "notes": "LF",
+      "player_id": "dimagjo01",
+      "tie": "",
+      "year": 1936
+    },
+    {
+      "award_id": "Baseball Magazine All-Star",
+      "league_id": "NL",
+      "notes": "SS",
+      "player_id": "vaughar01",
+      "tie": "",
+      "year": 1936
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "AlbumId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              114,
+              152,
+              153,
+              178,
+              180
+            ],
+            "type": "number"
+          },
+          "Bytes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8019563,
+              9016789,
+              10229577,
+              12170693,
+              23711872
+            ],
+            "type": "number"
+          },
+          "Composer": {
+            "#docs": [
+              259,
+              741
+            ],
+            "%docs": [
+              25.9,
+              74.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Eddie Vedder",
+                "Hetfield, Ulrich, Hammett",
+                "J.Hetfield/L.Ulrich",
+                "Steve Harris",
+                "Steven Tyler, Joe Perry, Desmo..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "GenreId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              4,
+              7,
+              24
+            ],
+            "type": "number"
+          },
+          "MediaTypeId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "Milliseconds": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              246204,
+              276453,
+              312424,
+              372480,
+              592744
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Battery",
+              "Better Man",
+              "Carpe Diem Baby",
+              "Love Boat Captain",
+              "The Angel And The Gambler"
+            ],
+            "type": "string"
+          },
+          "TrackId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1407,
+              1853,
+              1867,
+              2162,
+              2180
+            ],
+            "type": "number"
+          },
+          "UnitPrice": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.99,
+              1.99
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Track::1406",
+                  "Track::1852",
+                  "Track::1866",
+                  "Track::2161",
+                  "Track::2179"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Track::1406"
+              },
+              {
+                "id": "Track::1852"
+              },
+              {
+                "id": "Track::1866"
+              },
+              {
+                "id": "Track::2161"
+              },
+              {
+                "id": "Track::2179"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AlbumId": 86,
+      "Bytes": 9594738,
+      "Composer": null,
+      "GenreId": 7,
+      "MediaTypeId": 1,
+      "Milliseconds": 282409,
+      "Name": "Stir It Up (Live)",
+      "TrackId": 1090,
+      "UnitPrice": 0.99
+    },
+    {
+      "AlbumId": 86,
+      "Bytes": 8358128,
+      "Composer": null,
+      "GenreId": 7,
+      "MediaTypeId": 1,
+      "Milliseconds": 248842,
+      "Name": "Vendedor De Caranguejo (Live)",
+      "TrackId": 1092,
+      "UnitPrice": 0.99
+    },
+    {
+      "AlbumId": 87,
+      "Bytes": 11998470,
+      "Composer": null,
+      "GenreId": 2,
+      "MediaTypeId": 1,
+      "Milliseconds": 356101,
+      "Name": "Doce De Carnaval (Candy All)",
+      "TrackId": 1102,
+      "UnitPrice": 0.99
+    },
+    {
+      "AlbumId": 73,
+      "Bytes": 7217955,
+      "Composer": "Gilberto Gil",
+      "GenreId": 7,
+      "MediaTypeId": 1,
+      "Milliseconds": 218070,
+      "Name": "S\u00edtio Do Pica-Pau Amarelo",
+      "TrackId": 1120,
+      "UnitPrice": 0.99
+    },
+    {
+      "AlbumId": 89,
+      "Bytes": 8485122,
+      "Composer": "Mike Dint, Billie Joe, Tr\u00e9 Cool",
+      "GenreId": 4,
+      "MediaTypeId": 1,
+      "Milliseconds": 260858,
+      "Name": "Boulevard Of Broken Dreams",
+      "TrackId": 1136,
+      "UnitPrice": 0.99
+    }
+  ]
+}

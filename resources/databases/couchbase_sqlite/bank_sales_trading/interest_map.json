@@ -1,0 +1,168 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1209,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "created_at": {
+            "#docs": 1209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-05-26 14:57:59",
+              "2017-02-21 13:23:44",
+              "2019-01-28 23:00:00",
+              "2019-02-06 21:00:02",
+              "2019-04-26 18:00:00"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "#docs": 1209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              115,
+              142,
+              44586,
+              45679,
+              51120
+            ],
+            "type": "number"
+          },
+          "interest_name": {
+            "#docs": 1209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Credit Card Researchers",
+              "Foot Health Researchers",
+              "Government Student Loan Resear...",
+              "Mens Shoe Shoppers",
+              "Opera Enthusiasts"
+            ],
+            "type": "string"
+          },
+          "interest_summary": {
+            "#docs": [
+              20,
+              1189
+            ],
+            "%docs": [
+              1.65,
+              98.34
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Consumers comparing credit car...",
+                "Consumers in-market for mens s...",
+                "People reading about operas an...",
+                "People reading news and advice...",
+                "People researching and compari..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "last_modified": {
+            "#docs": 1209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-05-23 11:30:12",
+              "2018-05-23 11:30:13",
+              "2019-02-01 14:12:57",
+              "2019-02-07 15:17:14",
+              "2019-04-29 14:20:04"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1209,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "interest_map::105",
+                  "interest_map::1142",
+                  "interest_map::1176",
+                  "interest_map::1207",
+                  "interest_map::129"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "interest_map::105"
+              },
+              {
+                "id": "interest_map::1142"
+              },
+              {
+                "id": "interest_map::1176"
+              },
+              {
+                "id": "interest_map::1207"
+              },
+              {
+                "id": "interest_map::129"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "created_at": "2016-05-26 14:57:59",
+      "id": 115,
+      "interest_name": "Mens Shoe Shoppers",
+      "interest_summary": "Consumers in-market for mens shoes.",
+      "last_modified": "2018-05-23 11:30:13"
+    },
+    {
+      "created_at": "2019-01-28 23:00:00",
+      "id": 44586,
+      "interest_name": "Opera Enthusiasts",
+      "interest_summary": "People reading about operas and performers.",
+      "last_modified": "2019-02-01 14:12:57"
+    },
+    {
+      "created_at": "2019-02-06 21:00:02",
+      "id": 45679,
+      "interest_name": "Government Student Loan Researchers",
+      "interest_summary": "People researching and comparing student loan offerings from government institutions.",
+      "last_modified": "2019-02-07 15:17:14"
+    },
+    {
+      "created_at": "2019-04-26 18:00:00",
+      "id": 51120,
+      "interest_name": "Foot Health Researchers",
+      "interest_summary": "People reading news and advice on preventing and treating foot health issues.",
+      "last_modified": "2019-04-29 14:20:04"
+    },
+    {
+      "created_at": "2016-05-26 14:57:59",
+      "id": 142,
+      "interest_name": "Credit Card Researchers",
+      "interest_summary": "Consumers comparing credit card offers.",
+      "last_modified": "2018-05-23 11:30:12"
+    }
+  ]
+}

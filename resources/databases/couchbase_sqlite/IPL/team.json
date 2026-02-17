@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 12,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Deccan Chargers",
+              "Delhi Daredevils",
+              "Rajasthan Royals",
+              "Rising Pune Supergiants",
+              "Sunrisers Hyderabad"
+            ],
+            "type": "string"
+          },
+          "team_id": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              8,
+              11,
+              12
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 12,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "team::10",
+                  "team::3",
+                  "team::4",
+                  "team::6",
+                  "team::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "team::10"
+              },
+              {
+                "id": "team::3"
+              },
+              {
+                "id": "team::4"
+              },
+              {
+                "id": "team::6"
+              },
+              {
+                "id": "team::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "Sunrisers Hyderabad",
+      "team_id": 11
+    },
+    {
+      "name": "Pune Warriors",
+      "team_id": 10
+    },
+    {
+      "name": "Gujarat Lions",
+      "team_id": 13
+    },
+    {
+      "name": "Deccan Chargers",
+      "team_id": 8
+    },
+    {
+      "name": "Delhi Daredevils",
+      "team_id": 6
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 11,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              502,
+              522,
+              523,
+              533,
+              534
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bottle 500cl",
+              "Box Medium",
+              "Box Small",
+              "Pallet Mix MS",
+              "Pallet Mix SG"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 11,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "packaging::1",
+                  "packaging::10",
+                  "packaging::4",
+                  "packaging::5",
+                  "packaging::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "packaging::1"
+              },
+              {
+                "id": "packaging::10"
+              },
+              {
+                "id": "packaging::4"
+              },
+              {
+                "id": "packaging::5"
+              },
+              {
+                "id": "packaging::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 531,
+      "name": "Pallet of L"
+    },
+    {
+      "id": 524,
+      "name": "Gift Box"
+    },
+    {
+      "id": 502,
+      "name": "Bottle 500cl"
+    },
+    {
+      "id": 501,
+      "name": "Bottle 330cl"
+    },
+    {
+      "id": 511,
+      "name": "Gift Carton"
+    }
+  ]
+}

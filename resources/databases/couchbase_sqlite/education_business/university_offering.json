@@ -1,0 +1,214 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 13,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CourseNo": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "FIN300",
+              "FIN450",
+              "IS320",
+              "IS460",
+              "IS480"
+            ],
+            "type": "string"
+          },
+          "FacNo": {
+            "#docs": [
+              2,
+              11
+            ],
+            "%docs": [
+              15.38,
+              84.61
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                98765432,
+                654321098,
+                765432109,
+                876543210,
+                987654321
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "OffDays": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MW",
+              "TTH"
+            ],
+            "type": "string"
+          },
+          "OffLocation": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BLM207",
+              "BLM212",
+              "BLM214",
+              "BLM302",
+              "BLM412"
+            ],
+            "type": "string"
+          },
+          "OffTerm": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "FALL",
+              "SPRING",
+              "SUMMER",
+              "WINTER"
+            ],
+            "type": "string"
+          },
+          "OffTime": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10:30 AM",
+              "1:30 PM",
+              "3:30 PM",
+              "8:30 AM"
+            ],
+            "type": "string"
+          },
+          "OffYear": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2009,
+              2010
+            ],
+            "type": "number"
+          },
+          "OfferNo": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1234,
+              3333,
+              4321,
+              5679,
+              6666
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 13,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "university_offering::1",
+                  "university_offering::3",
+                  "university_offering::4",
+                  "university_offering::8",
+                  "university_offering::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "university_offering::1"
+              },
+              {
+                "id": "university_offering::3"
+              },
+              {
+                "id": "university_offering::4"
+              },
+              {
+                "id": "university_offering::8"
+              },
+              {
+                "id": "university_offering::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CourseNo": "IS460",
+      "FacNo": 654321098,
+      "OffDays": "TTH",
+      "OffLocation": "BLM307",
+      "OffTerm": "SPRING",
+      "OffTime": "1:30 PM",
+      "OffYear": 2010,
+      "OfferNo": 9876
+    },
+    {
+      "CourseNo": "IS320",
+      "FacNo": 543210987,
+      "OffDays": "TTH",
+      "OffLocation": "BLM302",
+      "OffTerm": "WINTER",
+      "OffTime": "3:30 PM",
+      "OffYear": 2010,
+      "OfferNo": 4444
+    },
+    {
+      "CourseNo": "IS320",
+      "FacNo": null,
+      "OffDays": "MW",
+      "OffLocation": "BLM302",
+      "OffTerm": "SUMMER",
+      "OffTime": "10:30 AM",
+      "OffYear": 2010,
+      "OfferNo": 1111
+    },
+    {
+      "CourseNo": "IS320",
+      "FacNo": 98765432,
+      "OffDays": "MW",
+      "OffLocation": "BLM302",
+      "OffTerm": "FALL",
+      "OffTime": "10:30 AM",
+      "OffYear": 2009,
+      "OfferNo": 1234
+    },
+    {
+      "CourseNo": "FIN450",
+      "FacNo": 987654321,
+      "OffDays": "TTH",
+      "OffLocation": "BLM212",
+      "OffTerm": "WINTER",
+      "OffTime": "10:30 AM",
+      "OffYear": 2010,
+      "OfferNo": 6666
+    }
+  ]
+}

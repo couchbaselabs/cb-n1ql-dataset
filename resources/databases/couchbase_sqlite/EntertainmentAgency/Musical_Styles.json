@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 25,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "StyleID": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              6,
+              17,
+              20,
+              23
+            ],
+            "type": "number"
+          },
+          "StyleName": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "70's Music",
+              "Country",
+              "Motown",
+              "Show Tunes",
+              "Variety"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 25,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Musical_Styles::16",
+                  "Musical_Styles::19",
+                  "Musical_Styles::22",
+                  "Musical_Styles::3",
+                  "Musical_Styles::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Musical_Styles::16"
+              },
+              {
+                "id": "Musical_Styles::19"
+              },
+              {
+                "id": "Musical_Styles::22"
+              },
+              {
+                "id": "Musical_Styles::3"
+              },
+              {
+                "id": "Musical_Styles::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "StyleID": 11,
+      "StyleName": "Country Rock"
+    },
+    {
+      "StyleID": 25,
+      "StyleName": "90's Music"
+    },
+    {
+      "StyleID": 7,
+      "StyleName": "Classical"
+    },
+    {
+      "StyleID": 16,
+      "StyleName": "Karaoke"
+    },
+    {
+      "StyleID": 22,
+      "StyleName": "Top 40 Hits"
+    }
+  ]
+}

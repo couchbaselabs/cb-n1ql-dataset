@@ -1,0 +1,103 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 4,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`app_id` = 542",
+        "properties": {
+          "app_id": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              542
+            ],
+            "type": "number"
+          },
+          "friendly_url": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "/About",
+              "/Breweries",
+              "/Categories",
+              "/Shop"
+            ],
+            "type": "string"
+          },
+          "page_no": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 4,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_pages::0",
+                  "web_pages::1",
+                  "web_pages::2",
+                  "web_pages::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_pages::0"
+              },
+              {
+                "id": "web_pages::1"
+              },
+              {
+                "id": "web_pages::2"
+              },
+              {
+                "id": "web_pages::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "app_id": 542,
+      "friendly_url": "/Shop",
+      "page_no": 1
+    },
+    {
+      "app_id": 542,
+      "friendly_url": "/Breweries",
+      "page_no": 3
+    },
+    {
+      "app_id": 542,
+      "friendly_url": "/About",
+      "page_no": 4
+    },
+    {
+      "app_id": 542,
+      "friendly_url": "/Categories",
+      "page_no": 2
+    }
+  ]
+}

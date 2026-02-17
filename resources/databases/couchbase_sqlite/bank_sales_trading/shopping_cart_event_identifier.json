@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "event_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Ad Click",
+              "Ad Impression",
+              "Add to Cart",
+              "Page View",
+              "Purchase"
+            ],
+            "type": "string"
+          },
+          "event_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "shopping_cart_event_identifier...",
+                  "shopping_cart_event_identifier...",
+                  "shopping_cart_event_identifier...",
+                  "shopping_cart_event_identifier...",
+                  "shopping_cart_event_identifier..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "shopping_cart_event_identifier::0"
+              },
+              {
+                "id": "shopping_cart_event_identifier::1"
+              },
+              {
+                "id": "shopping_cart_event_identifier::2"
+              },
+              {
+                "id": "shopping_cart_event_identifier::3"
+              },
+              {
+                "id": "shopping_cart_event_identifier::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "event_name": "Purchase",
+      "event_type": 3
+    },
+    {
+      "event_name": "Add to Cart",
+      "event_type": 2
+    },
+    {
+      "event_name": "Ad Click",
+      "event_type": 5
+    },
+    {
+      "event_name": "Page View",
+      "event_type": 1
+    },
+    {
+      "event_name": "Ad Impression",
+      "event_type": 4
+    }
+  ]
+}

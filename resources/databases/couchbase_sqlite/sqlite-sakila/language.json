@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 6,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`last_update` = \"2021-03-06 15:51:48\"",
+        "properties": {
+          "language_id": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:51:48"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "French",
+              "German",
+              "Italian",
+              "Japanese",
+              "Mandarin"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 6,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "language::1",
+                  "language::2",
+                  "language::3",
+                  "language::4",
+                  "language::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "language::1"
+              },
+              {
+                "id": "language::2"
+              },
+              {
+                "id": "language::3"
+              },
+              {
+                "id": "language::4"
+              },
+              {
+                "id": "language::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "language_id": 3,
+      "last_update": "2021-03-06 15:51:48",
+      "name": "Japanese"
+    },
+    {
+      "language_id": 4,
+      "last_update": "2021-03-06 15:51:48",
+      "name": "Mandarin"
+    },
+    {
+      "language_id": 6,
+      "last_update": "2021-03-06 15:51:48",
+      "name": "German"
+    },
+    {
+      "language_id": 1,
+      "last_update": "2021-03-06 15:51:48",
+      "name": "English"
+    },
+    {
+      "language_id": 2,
+      "last_update": "2021-03-06 15:51:48",
+      "name": "Italian"
+    }
+  ]
+}

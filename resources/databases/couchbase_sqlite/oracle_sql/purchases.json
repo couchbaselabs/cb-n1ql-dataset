@@ -1,0 +1,170 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 180,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "brewery_id": {
+            "#docs": 180,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              518,
+              523,
+              536
+            ],
+            "type": "number"
+          },
+          "cost": {
+            "#docs": 180,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              115,
+              192,
+              374,
+              394,
+              503
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 180,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              618,
+              624,
+              654,
+              753,
+              767
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 180,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4280,
+              5430,
+              6520,
+              6600,
+              7790
+            ],
+            "type": "number"
+          },
+          "purchased": {
+            "#docs": 180,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-04-05",
+              "2016-05-08",
+              "2016-11-08",
+              "2018-07-27",
+              "2018-10-23"
+            ],
+            "type": "string"
+          },
+          "qty": {
+            "#docs": 180,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              16,
+              37,
+              53,
+              54,
+              68
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 180,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 180,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "purchases::152",
+                  "purchases::166",
+                  "purchases::17",
+                  "purchases::23",
+                  "purchases::53"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "purchases::152"
+              },
+              {
+                "id": "purchases::166"
+              },
+              {
+                "id": "purchases::17"
+              },
+              {
+                "id": "purchases::23"
+              },
+              {
+                "id": "purchases::53"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "brewery_id": 518,
+      "cost": 633,
+      "id": 748,
+      "product_id": 5430,
+      "purchased": "2018-06-25",
+      "qty": 88
+    },
+    {
+      "brewery_id": 523,
+      "cost": 217,
+      "id": 774,
+      "product_id": 7790,
+      "purchased": "2018-11-28",
+      "qty": 31
+    },
+    {
+      "brewery_id": 523,
+      "cost": 394,
+      "id": 654,
+      "product_id": 7790,
+      "purchased": "2016-11-08",
+      "qty": 53
+    },
+    {
+      "brewery_id": 518,
+      "cost": 482,
+      "id": 668,
+      "product_id": 5430,
+      "purchased": "2017-02-15",
+      "qty": 71
+    },
+    {
+      "brewery_id": 536,
+      "cost": 75,
+      "id": 717,
+      "product_id": 4280,
+      "purchased": "2017-12-13",
+      "qty": 13
+    }
+  ]
+}

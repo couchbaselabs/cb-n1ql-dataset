@@ -1,0 +1,127 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 6,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "extras": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "extras_count": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              7,
+              9,
+              10
+            ],
+            "type": "number"
+          },
+          "row_id": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 6,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pizza_get_extras::0",
+                  "pizza_get_extras::1",
+                  "pizza_get_extras::2",
+                  "pizza_get_extras::4",
+                  "pizza_get_extras::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pizza_get_extras::0"
+              },
+              {
+                "id": "pizza_get_extras::1"
+              },
+              {
+                "id": "pizza_get_extras::2"
+              },
+              {
+                "id": "pizza_get_extras::4"
+              },
+              {
+                "id": "pizza_get_extras::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "extras": 1,
+      "extras_count": 1,
+      "order_id": 5,
+      "row_id": 1
+    },
+    {
+      "extras": 1,
+      "extras_count": 1,
+      "order_id": 7,
+      "row_id": 1
+    },
+    {
+      "extras": 5,
+      "extras_count": 2,
+      "order_id": 9,
+      "row_id": 2
+    },
+    {
+      "extras": 1,
+      "extras_count": 2,
+      "order_id": 9,
+      "row_id": 1
+    },
+    {
+      "extras": 1,
+      "extras_count": 2,
+      "order_id": 10,
+      "row_id": 1
+    }
+  ]
+}

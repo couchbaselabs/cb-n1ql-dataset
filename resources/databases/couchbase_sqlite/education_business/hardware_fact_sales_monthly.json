@@ -1,0 +1,151 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              70008170,
+              90010045,
+              90012039,
+              90013120,
+              90020097
+            ],
+            "type": "number"
+          },
+          "date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-10-01",
+              "2020-02-01",
+              "2020-06-01",
+              "2020-08-01",
+              "2020-09-01"
+            ],
+            "type": "string"
+          },
+          "fiscal_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2020,
+              2021
+            ],
+            "type": "number"
+          },
+          "product_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A1320150403",
+              "A2319150303",
+              "A3220150402",
+              "A3320150501",
+              "A3718150102"
+            ],
+            "type": "string"
+          },
+          "sold_quantity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              44,
+              86,
+              113
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "hardware_fact_sales_monthly::1...",
+                  "hardware_fact_sales_monthly::2...",
+                  "hardware_fact_sales_monthly::4...",
+                  "hardware_fact_sales_monthly::4...",
+                  "hardware_fact_sales_monthly::5..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "hardware_fact_sales_monthly::176279"
+              },
+              {
+                "id": "hardware_fact_sales_monthly::297319"
+              },
+              {
+                "id": "hardware_fact_sales_monthly::441032"
+              },
+              {
+                "id": "hardware_fact_sales_monthly::461429"
+              },
+              {
+                "id": "hardware_fact_sales_monthly::502635"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_code": 90018107,
+      "date": "2020-03-01",
+      "fiscal_year": 2020,
+      "product_code": "A0620150305",
+      "sold_quantity": 1
+    },
+    {
+      "customer_code": 70003182,
+      "date": "2020-04-01",
+      "fiscal_year": 2020,
+      "product_code": "A0620150305",
+      "sold_quantity": 50
+    },
+    {
+      "customer_code": 70008170,
+      "date": "2020-04-01",
+      "fiscal_year": 2020,
+      "product_code": "A0620150305",
+      "sold_quantity": 11
+    },
+    {
+      "customer_code": 90023024,
+      "date": "2020-04-01",
+      "fiscal_year": 2020,
+      "product_code": "A0620150305",
+      "sold_quantity": 3
+    },
+    {
+      "customer_code": 70006158,
+      "date": "2020-05-01",
+      "fiscal_year": 2020,
+      "product_code": "A0620150305",
+      "sold_quantity": 69
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 56,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CategoryID": {
+            "#docs": 56,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACC",
+              "ART",
+              "BUS",
+              "CIS",
+              "POL"
+            ],
+            "type": "string"
+          },
+          "SubjectCode": {
+            "#docs": 56,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACC 210",
+              "ART 101",
+              "BUS 170",
+              "CIS 236",
+              "POL 213"
+            ],
+            "type": "string"
+          },
+          "SubjectDescription": {
+            "#docs": 56,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Includes database concepts, da...",
+              "Introduces basic accounting co...",
+              "Introduction to concepts of po...",
+              "Studio sudies in the fundament...",
+              "Uses Word for Windows word pro..."
+            ],
+            "type": "string"
+          },
+          "SubjectID": {
+            "#docs": 56,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              9,
+              12,
+              26,
+              56
+            ],
+            "type": "number"
+          },
+          "SubjectName": {
+            "#docs": 56,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Database Management",
+              "Design",
+              "Financial Accounting Fundament...",
+              "Information Technology I",
+              "Women and Politics"
+            ],
+            "type": "string"
+          },
+          "SubjectPreReq": {
+            "#docs": [
+              47,
+              9
+            ],
+            "%docs": [
+              83.92,
+              16.07
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "ACC 210",
+                "ACC 220",
+                "BUS 170",
+                "ENG 101",
+                "MAT 098"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 56,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 56,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Subjects::0",
+                  "Subjects::11",
+                  "Subjects::25",
+                  "Subjects::55",
+                  "Subjects::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Subjects::0"
+              },
+              {
+                "id": "Subjects::11"
+              },
+              {
+                "id": "Subjects::25"
+              },
+              {
+                "id": "Subjects::55"
+              },
+              {
+                "id": "Subjects::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CategoryID": "ACC",
+      "SubjectCode": "ACC 251",
+      "SubjectDescription": "In-depth review of financial accounting principles. Emphasizes the conceptual framework of accounting, revenue and expense recognition. Accounts Receivable, Depreciation, and Amortization, etc. Prereq: ACC 220 or instructor permission.",
+      "SubjectID": 4,
+      "SubjectName": "Intermediate Accounting",
+      "SubjectPreReq": "ACC 220"
+    },
+    {
+      "CategoryID": "POL",
+      "SubjectCode": "POL 101",
+      "SubjectDescription": "Introduction to theory, organization, politics and administration of government. Includes political theory, comparative systems, political socialization, public administration, political parties and elections, and international relations.",
+      "SubjectID": 54,
+      "SubjectName": "Introduction to Political Science",
+      "SubjectPreReq": null
+    },
+    {
+      "CategoryID": "BIO",
+      "SubjectCode": "BIO 101",
+      "SubjectDescription": "Basic bilogical concepts with emphasis on general cell processes, plant and animal diversity, morphyology, limited reproduction, phylogeny of the living organisms, exploration of molecular genetics.",
+      "SubjectID": 18,
+      "SubjectName": "General Biology",
+      "SubjectPreReq": null
+    },
+    {
+      "CategoryID": "CIS",
+      "SubjectCode": "CIS 102",
+      "SubjectDescription": "Provides a broad introduction to computers and information systems. Includes coverage of hardware, software, data organization, data communications, and systems development. Also covers the evolving role of computers in society.",
+      "SubjectID": 24,
+      "SubjectName": "Information Systems Concepts",
+      "SubjectPreReq": null
+    },
+    {
+      "CategoryID": "BUS",
+      "SubjectCode": "BUS 171",
+      "SubjectDescription": "Uses intermediate Word features including formatting and production, mail merge, macros, text columns, graphics, and fonts; Excel spreadsheet; and introduction to PowerPoint presentation software, Internet and email. Prereq: BUS 170 or permission from instructor.",
+      "SubjectID": 10,
+      "SubjectName": "Information Technology II",
+      "SubjectPreReq": "BUS 170"
+    }
+  ]
+}

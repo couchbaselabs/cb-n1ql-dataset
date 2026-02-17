@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1821,
+              3188,
+              3678,
+              4724,
+              6614
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MSG Show (Apr '81)",
+              "MSG Show (Jan '95)",
+              "Mixed Match Challenge #1",
+              "Payback '13",
+              "WWE Live: Road To WrestleMania"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Events::1038",
+                  "Events::2168",
+                  "Events::2235",
+                  "Events::2573",
+                  "Events::2883"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Events::1038"
+              },
+              {
+                "id": "Events::2168"
+              },
+              {
+                "id": "Events::2235"
+              },
+              {
+                "id": "Events::2573"
+              },
+              {
+                "id": "Events::2883"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 1980,
+      "name": "Superstars of Wrestling Taping #397"
+    },
+    {
+      "id": 1982,
+      "name": "Wrestling Challenge Taping #400"
+    },
+    {
+      "id": 2002,
+      "name": "Superstars of Wrestling Taping #391"
+    },
+    {
+      "id": 2071,
+      "name": "Superstars of Wrestling Taping #368"
+    },
+    {
+      "id": 2082,
+      "name": "Superstars of Wrestling Taping #366"
+    }
+  ]
+}

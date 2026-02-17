@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "day": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-05-01",
+              "2019-05-02"
+            ],
+            "type": "string"
+          },
+          "f_fb_cnt": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              564,
+              752
+            ],
+            "type": "number"
+          },
+          "f_fb_qty": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              68,
+              78
+            ],
+            "type": "number"
+          },
+          "f_tw_cnt": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              651,
+              840
+            ],
+            "type": "number"
+          },
+          "f_tw_qty": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              76,
+              92
+            ],
+            "type": "number"
+          },
+          "m_fb_cnt": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1017,
+              1198
+            ],
+            "type": "number"
+          },
+          "m_fb_qty": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              64,
+              70
+            ],
+            "type": "number"
+          },
+          "m_tw_cnt": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1232,
+              1438
+            ],
+            "type": "number"
+          },
+          "m_tw_qty": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              86,
+              142
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_demographics::0",
+                  "web_demographics::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_demographics::0"
+              },
+              {
+                "id": "web_demographics::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "day": "2019-05-01",
+      "f_fb_cnt": 564,
+      "f_fb_qty": 68,
+      "f_tw_cnt": 651,
+      "f_tw_qty": 76,
+      "m_fb_cnt": 1017,
+      "m_fb_qty": 64,
+      "m_tw_cnt": 1232,
+      "m_tw_qty": 86
+    },
+    {
+      "day": "2019-05-02",
+      "f_fb_cnt": 752,
+      "f_fb_qty": 78,
+      "f_tw_cnt": 840,
+      "f_tw_qty": 92,
+      "m_fb_cnt": 1198,
+      "m_fb_qty": 70,
+      "m_tw_cnt": 1438,
+      "m_tw_qty": 142
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "constructor_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              66,
+              135,
+              154,
+              183
+            ],
+            "type": "number"
+          },
+          "constructor_ref": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "brabham-climax",
+              "brm",
+              "ferrari",
+              "lago",
+              "pawl"
+            ],
+            "type": "string"
+          },
+          "driver_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              375,
+              383,
+              386,
+              653,
+              783
+            ],
+            "type": "number"
+          },
+          "driver_ref": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "anderson",
+              "davies",
+              "ginther",
+              "grignard",
+              "scarfiotti"
+            ],
+            "type": "string"
+          },
+          "team_driver_rank": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              6,
+              13
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1951,
+              1964,
+              1966,
+              1967,
+              1972
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "team_driver_ranks::1316",
+                  "team_driver_ranks::144",
+                  "team_driver_ranks::1450",
+                  "team_driver_ranks::1464",
+                  "team_driver_ranks::170"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "team_driver_ranks::1316"
+              },
+              {
+                "id": "team_driver_ranks::144"
+              },
+              {
+                "id": "team_driver_ranks::1450"
+              },
+              {
+                "id": "team_driver_ranks::1464"
+              },
+              {
+                "id": "team_driver_ranks::170"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "constructor_id": 172,
+      "constructor_ref": "lotus-climax",
+      "driver_id": 435,
+      "driver_ref": "mairesse",
+      "team_driver_rank": 19,
+      "year": 1961
+    },
+    {
+      "constructor_id": 6,
+      "constructor_ref": "ferrari",
+      "driver_id": 435,
+      "driver_ref": "mairesse",
+      "team_driver_rank": 5,
+      "year": 1962
+    },
+    {
+      "constructor_id": 172,
+      "constructor_ref": "lotus-climax",
+      "driver_id": 473,
+      "driver_ref": "hocking",
+      "team_driver_rank": 16,
+      "year": 1962
+    },
+    {
+      "constructor_id": 172,
+      "constructor_ref": "lotus-climax",
+      "driver_id": 368,
+      "driver_ref": "tingle",
+      "team_driver_rank": 22,
+      "year": 1962
+    },
+    {
+      "constructor_id": 172,
+      "constructor_ref": "lotus-climax",
+      "driver_id": 410,
+      "driver_ref": "lederle",
+      "team_driver_rank": 7,
+      "year": 1965
+    }
+  ]
+}

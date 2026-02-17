@@ -1,0 +1,170 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "driver_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              60,
+              65,
+              77,
+              817,
+              840
+            ],
+            "type": "number"
+          },
+          "lap": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              23,
+              40,
+              49,
+              50
+            ],
+            "type": "number"
+          },
+          "position_order": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              17,
+              18,
+              19,
+              21,
+              22
+            ],
+            "type": "number"
+          },
+          "race_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              164,
+              204,
+              917,
+              996,
+              1071
+            ],
+            "type": "number"
+          },
+          "retirement_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Retirement (Disqualification)",
+              "Retirement (Driver Error)",
+              "Retirement (Mechanical Problem..."
+            ],
+            "type": "string"
+          },
+          "status_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              20,
+              22,
+              29,
+              75
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "retirements::1013",
+                  "retirements::10874",
+                  "retirements::11170",
+                  "retirements::11389",
+                  "retirements::1410"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "retirements::1013"
+              },
+              {
+                "id": "retirements::10874"
+              },
+              {
+                "id": "retirements::11170"
+              },
+              {
+                "id": "retirements::11389"
+              },
+              {
+                "id": "retirements::1410"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "driver_id": 615,
+      "lap": 72,
+      "position_order": 27,
+      "race_id": 818,
+      "retirement_type": "Retirement (Mechanical Problem)",
+      "status_id": 101
+    },
+    {
+      "driver_id": 627,
+      "lap": 18,
+      "position_order": 17,
+      "race_id": 820,
+      "retirement_type": "Retirement (Mechanical Problem)",
+      "status_id": 5
+    },
+    {
+      "driver_id": 738,
+      "lap": 7,
+      "position_order": 15,
+      "race_id": 822,
+      "retirement_type": "Retirement (Mechanical Problem)",
+      "status_id": 6
+    },
+    {
+      "driver_id": 664,
+      "lap": 5,
+      "position_order": 22,
+      "race_id": 824,
+      "retirement_type": "Retirement (Mechanical Problem)",
+      "status_id": 22
+    },
+    {
+      "driver_id": 611,
+      "lap": 136,
+      "position_order": 12,
+      "race_id": 826,
+      "retirement_type": "Retirement (Mechanical Problem)",
+      "status_id": 5
+    }
+  ]
+}

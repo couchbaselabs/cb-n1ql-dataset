@@ -1,0 +1,116 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 32,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "EntertainerID": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1003,
+              1005,
+              1006,
+              1007,
+              1011
+            ],
+            "type": "number"
+          },
+          "StyleID": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7,
+              8,
+              20,
+              23,
+              24
+            ],
+            "type": "number"
+          },
+          "StyleStrength": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 32,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Entertainer_Styles::11",
+                  "Entertainer_Styles::13",
+                  "Entertainer_Styles::25",
+                  "Entertainer_Styles::27",
+                  "Entertainer_Styles::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Entertainer_Styles::11"
+              },
+              {
+                "id": "Entertainer_Styles::13"
+              },
+              {
+                "id": "Entertainer_Styles::25"
+              },
+              {
+                "id": "Entertainer_Styles::27"
+              },
+              {
+                "id": "Entertainer_Styles::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "EntertainerID": 1007,
+      "StyleID": 11,
+      "StyleStrength": 1
+    },
+    {
+      "EntertainerID": 1010,
+      "StyleID": 4,
+      "StyleStrength": 2
+    },
+    {
+      "EntertainerID": 1001,
+      "StyleID": 10,
+      "StyleStrength": 2
+    },
+    {
+      "EntertainerID": 1012,
+      "StyleID": 7,
+      "StyleStrength": 2
+    },
+    {
+      "EntertainerID": 1013,
+      "StyleID": 10,
+      "StyleStrength": 2
+    }
+  ]
+}

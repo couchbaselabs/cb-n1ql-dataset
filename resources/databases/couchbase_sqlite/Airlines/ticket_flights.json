@@ -1,0 +1,134 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "amount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              16600,
+              16700,
+              19100,
+              27900,
+              41500
+            ],
+            "type": "number"
+          },
+          "fare_conditions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Business",
+              "Comfort",
+              "Economy"
+            ],
+            "type": "string"
+          },
+          "flight_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              286,
+              1640,
+              6233,
+              10117,
+              20959
+            ],
+            "type": "number"
+          },
+          "ticket_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0005433367661",
+              "0005434573768",
+              "0005434877220",
+              "0005435142603",
+              "0005435999043"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ticket_flights::1020305",
+                  "ticket_flights::233339",
+                  "ticket_flights::323246",
+                  "ticket_flights::339213",
+                  "ticket_flights::54636"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ticket_flights::1020305"
+              },
+              {
+                "id": "ticket_flights::233339"
+              },
+              {
+                "id": "ticket_flights::323246"
+              },
+              {
+                "id": "ticket_flights::339213"
+              },
+              {
+                "id": "ticket_flights::54636"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "amount": 27900,
+      "fare_conditions": "Economy",
+      "flight_id": 9827,
+      "ticket_no": "0005434728745"
+    },
+    {
+      "amount": 27900,
+      "fare_conditions": "Economy",
+      "flight_id": 9827,
+      "ticket_no": "0005434728831"
+    },
+    {
+      "amount": 14000,
+      "fare_conditions": "Economy",
+      "flight_id": 7752,
+      "ticket_no": "0005435215254"
+    },
+    {
+      "amount": 14000,
+      "fare_conditions": "Economy",
+      "flight_id": 7752,
+      "ticket_no": "0005435725734"
+    },
+    {
+      "amount": 43100,
+      "fare_conditions": "Business",
+      "flight_id": 10900,
+      "ticket_no": "0005435616867"
+    }
+  ]
+}

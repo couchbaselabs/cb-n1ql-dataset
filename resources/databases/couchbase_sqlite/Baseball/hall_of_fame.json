@@ -1,0 +1,262 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ballots": {
+            "#docs": [
+              958,
+              42
+            ],
+            "%docs": [
+              95.8,
+              4.19
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                160,
+                201,
+                226,
+                252,
+                447
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "category": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Manager",
+              "Pioneer/Executive",
+              "Player",
+              "Umpire"
+            ],
+            "type": "string"
+          },
+          "inducted": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N",
+              "Y"
+            ],
+            "type": "string"
+          },
+          "needed": {
+            "#docs": [
+              973,
+              27
+            ],
+            "%docs": [
+              97.3,
+              2.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                120,
+                151,
+                170,
+                189,
+                336
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "needed_note": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Top 20",
+              "1st",
+              ""
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "durocle01",
+              "gordojo01",
+              "mathech01",
+              "ricesa01",
+              "whiteea01"
+            ],
+            "type": "string"
+          },
+          "votedby": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BBWAA",
+              "Final Ballot",
+              "Nominating Vote",
+              "Run Off",
+              "Veterans"
+            ],
+            "type": "string"
+          },
+          "votes": {
+            "#docs": [
+              958,
+              42
+            ],
+            "%docs": [
+              95.8,
+              4.19
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                4,
+                6,
+                9,
+                15,
+                205
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "yearid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1936,
+              1954,
+              1962,
+              1964,
+              1989
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "hall_of_fame::1395",
+                  "hall_of_fame::1917",
+                  "hall_of_fame::1923",
+                  "hall_of_fame::2008",
+                  "hall_of_fame::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "hall_of_fame::1395"
+              },
+              {
+                "id": "hall_of_fame::1917"
+              },
+              {
+                "id": "hall_of_fame::1923"
+              },
+              {
+                "id": "hall_of_fame::2008"
+              },
+              {
+                "id": "hall_of_fame::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ballots": 168,
+      "category": "Player",
+      "inducted": "N",
+      "needed": 126,
+      "needed_note": "",
+      "player_id": "jonesfi01",
+      "votedby": "BBWAA",
+      "votes": 1,
+      "yearid": 1950
+    },
+    {
+      "ballots": 168,
+      "category": "Player",
+      "inducted": "N",
+      "needed": 126,
+      "needed_note": "",
+      "player_id": "oneilst01",
+      "votedby": "BBWAA",
+      "votes": 1,
+      "yearid": 1950
+    },
+    {
+      "ballots": 226,
+      "category": "Player",
+      "inducted": "N",
+      "needed": 170,
+      "needed_note": "",
+      "player_id": "roushed01",
+      "votedby": "BBWAA",
+      "votes": 21,
+      "yearid": 1951
+    },
+    {
+      "ballots": 234,
+      "category": "Player",
+      "inducted": "N",
+      "needed": 176,
+      "needed_note": "",
+      "player_id": "rolfere01",
+      "votedby": "BBWAA",
+      "votes": 4,
+      "yearid": 1952
+    },
+    {
+      "ballots": 234,
+      "category": "Player",
+      "inducted": "N",
+      "needed": 176,
+      "needed_note": "",
+      "player_id": "ruelmu01",
+      "votedby": "BBWAA",
+      "votes": 1,
+      "yearid": 1952
+    }
+  ]
+}

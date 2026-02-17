@@ -1,0 +1,82 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "email": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "sato@example.com",
+              "suzuki@example.com"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Sato",
+              "Suzuki"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U001",
+              "U002"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "app1_mst_users::0",
+                  "app1_mst_users::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "app1_mst_users::0"
+              },
+              {
+                "id": "app1_mst_users::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "email": "sato@example.com",
+      "name": "Sato",
+      "user_id": "U001"
+    },
+    {
+      "email": "suzuki@example.com",
+      "name": "Suzuki",
+      "user_id": "U002"
+    }
+  ]
+}

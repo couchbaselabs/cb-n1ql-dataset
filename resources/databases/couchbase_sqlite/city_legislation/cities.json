@@ -1,0 +1,219 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "capital": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "city_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1038,
+              13054,
+              29432,
+              36177,
+              36398
+            ],
+            "type": "number"
+          },
+          "city_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "detmold",
+              "honolulu",
+              "olecko",
+              "pontiac",
+              "rosaryville"
+            ],
+            "type": "string"
+          },
+          "country_code_2": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "de",
+              "dz",
+              "fr",
+              "pl",
+              "us"
+            ],
+            "type": "string"
+          },
+          "insert_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-05-09",
+              "2021-06-29",
+              "2022-03-21",
+              "2022-06-03",
+              "2023-03-31"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -157.846,
+              -88.6409,
+              -76.8266,
+              8.8833,
+              22.5
+            ],
+            "type": "number"
+          },
+          "longitude": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21.3294,
+              38.7672,
+              40.8894,
+              51.9378,
+              54.0333
+            ],
+            "type": "number"
+          },
+          "population": {
+            "#docs": [
+              7,
+              993
+            ],
+            "%docs": [
+              0.7,
+              99.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                11766,
+                11881,
+                16364,
+                74388,
+                835291
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cities::1037",
+                  "cities::13053",
+                  "cities::29431",
+                  "cities::36176",
+                  "cities::36397"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cities::1037"
+              },
+              {
+                "id": "cities::13053"
+              },
+              {
+                "id": "cities::29431"
+              },
+              {
+                "id": "cities::36176"
+              },
+              {
+                "id": "cities::36397"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "capital": 0,
+      "city_id": 10058,
+      "city_name": "paro",
+      "country_code_2": "bt",
+      "insert_date": "2022-01-21",
+      "latitude": 89.4167,
+      "longitude": 27.4333,
+      "population": 15000
+    },
+    {
+      "capital": 0,
+      "city_id": 10064,
+      "city_name": "north new hyde park",
+      "country_code_2": "us",
+      "insert_date": "2021-02-18",
+      "latitude": -73.6876,
+      "longitude": 40.746,
+      "population": 15125
+    },
+    {
+      "capital": 0,
+      "city_id": 10283,
+      "city_name": "gonzalez",
+      "country_code_2": "mx",
+      "insert_date": "2023-07-07",
+      "latitude": -98.4306,
+      "longitude": 22.8281,
+      "population": 11212
+    },
+    {
+      "capital": 0,
+      "city_id": 10313,
+      "city_name": "henley on thames",
+      "country_code_2": "gb",
+      "insert_date": "2023-05-24",
+      "latitude": -0.903,
+      "longitude": 51.5357,
+      "population": 11619
+    },
+    {
+      "capital": 0,
+      "city_id": 10327,
+      "city_name": "hirnyk",
+      "country_code_2": "ua",
+      "insert_date": "2021-02-19",
+      "latitude": 37.3667,
+      "longitude": 48.05,
+      "population": 11378
+    }
+  ]
+}

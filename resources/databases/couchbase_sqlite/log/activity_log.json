@@ -1,0 +1,166 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 244,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`action` = \"view\"",
+        "properties": {
+          "action": {
+            "#docs": 244,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "view"
+            ],
+            "type": "string"
+          },
+          "option": {
+            "#docs": 244,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "detail",
+              "page",
+              "search"
+            ],
+            "type": "string"
+          },
+          "path": {
+            "#docs": 244,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "/confirm",
+              "/detail",
+              "/input",
+              "/search_input",
+              "/search_list"
+            ],
+            "type": "string"
+          },
+          "search_type": {
+            "#docs": 244,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Pref-with-Job",
+              "Area-L",
+              "Area-S",
+              "Pref",
+              ""
+            ],
+            "type": "string"
+          },
+          "session": {
+            "#docs": 244,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "111f2996",
+              "5d5b0997",
+              "8cc03a54",
+              "9afaf87c",
+              "cabf98e8"
+            ],
+            "type": "string"
+          },
+          "stamp": {
+            "#docs": 244,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-01-09 12:18:43",
+              "2017-01-09 12:18:46",
+              "2017-01-09 12:20:46",
+              "2017-01-09 12:21:39",
+              "2017-01-09 12:22:52"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 244,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 244,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "activity_log::196",
+                  "activity_log::197",
+                  "activity_log::80",
+                  "activity_log::81",
+                  "activity_log::99"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "activity_log::196"
+              },
+              {
+                "id": "activity_log::197"
+              },
+              {
+                "id": "activity_log::80"
+              },
+              {
+                "id": "activity_log::81"
+              },
+              {
+                "id": "activity_log::99"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "action": "view",
+      "option": "detail",
+      "path": "/detail",
+      "search_type": "",
+      "session": "87b5725f",
+      "stamp": "2017-01-09 12:18:43"
+    },
+    {
+      "action": "view",
+      "option": "page",
+      "path": "/input",
+      "search_type": "Area-L",
+      "session": "8cc03a54",
+      "stamp": "2017-01-09 12:18:44"
+    },
+    {
+      "action": "view",
+      "option": "page",
+      "path": "/complete",
+      "search_type": "Area-L",
+      "session": "8cc03a54",
+      "stamp": "2017-01-09 12:18:46"
+    },
+    {
+      "action": "view",
+      "option": "search",
+      "path": "/search_list/",
+      "search_type": "Pref",
+      "session": "989004ea",
+      "stamp": "2017-01-09 12:20:03"
+    },
+    {
+      "action": "view",
+      "option": "search",
+      "path": "/search_list",
+      "search_type": "Pref-with-Job",
+      "session": "36dd0df7",
+      "stamp": "2017-01-09 12:18:43"
+    }
+  ]
+}

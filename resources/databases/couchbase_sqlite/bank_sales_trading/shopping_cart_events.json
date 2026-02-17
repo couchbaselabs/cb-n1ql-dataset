@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "cookie_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "30cf50",
+              "37d83e",
+              "3b46d1",
+              "3cc483",
+              "4a10ad"
+            ],
+            "type": "string"
+          },
+          "event_time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-01-29 18:31:05.75387",
+              "2020-02-24 10:22:31.296152",
+              "2020-02-28 03:51:12.665748",
+              "2020-03-18 11:23:59.966223",
+              "2020-03-27 00:12:25.983196"
+            ],
+            "type": "string"
+          },
+          "event_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "page_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              6,
+              9,
+              11,
+              12
+            ],
+            "type": "number"
+          },
+          "sequence_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              5,
+              6,
+              8,
+              13
+            ],
+            "type": "number"
+          },
+          "visit_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "25edca",
+              "4d689d",
+              "96f848",
+              "bfddee",
+              "c98647"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "shopping_cart_events::10797",
+                  "shopping_cart_events::12628",
+                  "shopping_cart_events::13763",
+                  "shopping_cart_events::14246",
+                  "shopping_cart_events::14488"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "shopping_cart_events::10797"
+              },
+              {
+                "id": "shopping_cart_events::12628"
+              },
+              {
+                "id": "shopping_cart_events::13763"
+              },
+              {
+                "id": "shopping_cart_events::14246"
+              },
+              {
+                "id": "shopping_cart_events::14488"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "cookie_id": "38b3ef",
+      "event_time": "2020-02-28 10:25:36.466688",
+      "event_type": 3,
+      "page_id": 13,
+      "sequence_number": 9,
+      "visit_id": "194935"
+    },
+    {
+      "cookie_id": "114144",
+      "event_time": "2020-03-18 03:28:37.225462",
+      "event_type": 1,
+      "page_id": 9,
+      "sequence_number": 5,
+      "visit_id": "8f835a"
+    },
+    {
+      "cookie_id": "114144",
+      "event_time": "2020-03-18 03:29:07.844094",
+      "event_type": 3,
+      "page_id": 13,
+      "sequence_number": 7,
+      "visit_id": "8f835a"
+    },
+    {
+      "cookie_id": "728449",
+      "event_time": "2020-05-03 06:52:15.883721",
+      "event_type": 2,
+      "page_id": 4,
+      "sequence_number": 4,
+      "visit_id": "8ab78e"
+    },
+    {
+      "cookie_id": "6974ce",
+      "event_time": "2020-01-12 05:35:47.116766",
+      "event_type": 3,
+      "page_id": 13,
+      "sequence_number": 12,
+      "visit_id": "3519b5"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "payment_amount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              19.99,
+              39.75,
+              69.9,
+              203.6,
+              216.4
+            ],
+            "type": "number"
+          },
+          "payment_fee": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.4,
+                0.6,
+                1.05,
+                5.5,
+                5.84
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "payment_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4692629,
+              4834976,
+              4900072,
+              4988318,
+              5087725
+            ],
+            "type": "number"
+          },
+          "payment_method": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DEBIT",
+              "DEBIT_STORE",
+              "ONLINE",
+              "STORE_DIRECT_PAYMENT",
+              "VOUCHER"
+            ],
+            "type": "string"
+          },
+          "payment_order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              76606621,
+              80501604,
+              82146694,
+              83998786,
+              85995206
+            ],
+            "type": "number"
+          },
+          "payment_status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CHARGEBACK",
+              "PAID"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "payments::101089",
+                  "payments::155856",
+                  "payments::179888",
+                  "payments::212546",
+                  "payments::251767"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "payments::101089"
+              },
+              {
+                "id": "payments::155856"
+              },
+              {
+                "id": "payments::179888"
+              },
+              {
+                "id": "payments::212546"
+              },
+              {
+                "id": "payments::251767"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "payment_amount": 12,
+      "payment_fee": 0,
+      "payment_id": 4428254,
+      "payment_method": "VOUCHER",
+      "payment_order_id": 68427630,
+      "payment_status": "PAID"
+    },
+    {
+      "payment_amount": 75.9,
+      "payment_fee": 1.14,
+      "payment_id": 4430780,
+      "payment_method": "ONLINE",
+      "payment_order_id": 68542612,
+      "payment_status": "PAID"
+    },
+    {
+      "payment_amount": 36,
+      "payment_fee": 0.54,
+      "payment_id": 4689736,
+      "payment_method": "ONLINE",
+      "payment_order_id": 76521083,
+      "payment_status": "PAID"
+    },
+    {
+      "payment_amount": 5,
+      "payment_fee": 0,
+      "payment_id": 4689749,
+      "payment_method": "VOUCHER",
+      "payment_order_id": 76521156,
+      "payment_status": "PAID"
+    },
+    {
+      "payment_amount": 49.8,
+      "payment_fee": 0.65,
+      "payment_id": 4453878,
+      "payment_method": "CREDIT_STORE",
+      "payment_order_id": 69331677,
+      "payment_status": "PAID"
+    }
+  ]
+}

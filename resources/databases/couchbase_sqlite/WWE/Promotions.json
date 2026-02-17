@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 6,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3211,
+              9876,
+              10963,
+              12682
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ECW",
+              "NXT",
+              "WCW",
+              "WWE",
+              "WWWF"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 6,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Promotions::0",
+                  "Promotions::2",
+                  "Promotions::3",
+                  "Promotions::4",
+                  "Promotions::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Promotions::0"
+              },
+              {
+                "id": "Promotions::2"
+              },
+              {
+                "id": "Promotions::3"
+              },
+              {
+                "id": "Promotions::4"
+              },
+              {
+                "id": "Promotions::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 3211,
+      "name": "WWE"
+    },
+    {
+      "id": 10963,
+      "name": "NXT"
+    },
+    {
+      "id": 230,
+      "name": "WWF"
+    },
+    {
+      "id": 9876,
+      "name": "WCW"
+    },
+    {
+      "id": 12682,
+      "name": "ECW"
+    }
+  ]
+}

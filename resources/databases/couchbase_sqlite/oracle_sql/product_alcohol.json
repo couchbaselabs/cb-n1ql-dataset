@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "abv": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              4.5,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4280,
+              5310,
+              6520,
+              6600,
+              7870
+            ],
+            "type": "number"
+          },
+          "sales_volume": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              330,
+              500
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "product_alcohol::2",
+                  "product_alcohol::3",
+                  "product_alcohol::5",
+                  "product_alcohol::6",
+                  "product_alcohol::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "product_alcohol::2"
+              },
+              {
+                "id": "product_alcohol::3"
+              },
+              {
+                "id": "product_alcohol::5"
+              },
+              {
+                "id": "product_alcohol::6"
+              },
+              {
+                "id": "product_alcohol::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "abv": 6,
+      "product_id": 4160,
+      "sales_volume": 500
+    },
+    {
+      "abv": 4.5,
+      "product_id": 7870,
+      "sales_volume": 330
+    },
+    {
+      "abv": 7,
+      "product_id": 4280,
+      "sales_volume": 330
+    },
+    {
+      "abv": 5,
+      "product_id": 5310,
+      "sales_volume": 330
+    },
+    {
+      "abv": 6.5,
+      "product_id": 5430,
+      "sales_volume": 330
+    }
+  ]
+}

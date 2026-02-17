@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 7,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Classes",
+              "Departments",
+              "Student_Class_Status",
+              "Students",
+              "Subjects"
+            ],
+            "type": "string"
+          },
+          "seq": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              5,
+              56,
+              1019,
+              6600
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 7,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sqlite_sequence::1",
+                  "sqlite_sequence::2",
+                  "sqlite_sequence::3",
+                  "sqlite_sequence::5",
+                  "sqlite_sequence::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sqlite_sequence::1"
+              },
+              {
+                "id": "sqlite_sequence::2"
+              },
+              {
+                "id": "sqlite_sequence::3"
+              },
+              {
+                "id": "sqlite_sequence::5"
+              },
+              {
+                "id": "sqlite_sequence::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "Student_Class_Status",
+      "seq": 3
+    },
+    {
+      "name": "Subjects",
+      "seq": 56
+    },
+    {
+      "name": "Departments",
+      "seq": 5
+    },
+    {
+      "name": "Students",
+      "seq": 1019
+    },
+    {
+      "name": "Classes",
+      "seq": 6600
+    }
+  ]
+}

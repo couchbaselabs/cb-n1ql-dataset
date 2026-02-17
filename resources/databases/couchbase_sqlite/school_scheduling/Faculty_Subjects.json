@@ -1,0 +1,116 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 110,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ProficiencyRating": {
+            "#docs": 110,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              9,
+              10
+            ],
+            "type": "number"
+          },
+          "StaffID": {
+            "#docs": 110,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              98005,
+              98025,
+              98040,
+              98048,
+              98062
+            ],
+            "type": "number"
+          },
+          "SubjectID": {
+            "#docs": 110,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              9,
+              28,
+              36,
+              55
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 110,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 110,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Faculty_Subjects::3",
+                  "Faculty_Subjects::41",
+                  "Faculty_Subjects::59",
+                  "Faculty_Subjects::75",
+                  "Faculty_Subjects::95"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Faculty_Subjects::3"
+              },
+              {
+                "id": "Faculty_Subjects::41"
+              },
+              {
+                "id": "Faculty_Subjects::59"
+              },
+              {
+                "id": "Faculty_Subjects::75"
+              },
+              {
+                "id": "Faculty_Subjects::95"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ProficiencyRating": 9,
+      "StaffID": 98030,
+      "SubjectID": 48
+    },
+    {
+      "ProficiencyRating": 10,
+      "StaffID": 98045,
+      "SubjectID": 13
+    },
+    {
+      "ProficiencyRating": 10,
+      "StaffID": 98007,
+      "SubjectID": 24
+    },
+    {
+      "ProficiencyRating": 9,
+      "StaffID": 98059,
+      "SubjectID": 54
+    },
+    {
+      "ProficiencyRating": 8,
+      "StaffID": 98028,
+      "SubjectID": 39
+    }
+  ]
+}

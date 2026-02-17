@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 8,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`picture` = \"\\\\x\"",
+        "properties": {
+          "categoryid": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "categoryname": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Beverages",
+              "Confections",
+              "Dairy Products",
+              "Grains/Cereals",
+              "Meat/Poultry"
+            ],
+            "type": "string"
+          },
+          "description": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Breads, crackers, pasta, and c...",
+              "Cheeses",
+              "Desserts, candies, and sweet b...",
+              "Prepared meats",
+              "Soft drinks, coffees, teas, be..."
+            ],
+            "type": "string"
+          },
+          "picture": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "\\x"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 8,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "categories::0",
+                  "categories::2",
+                  "categories::3",
+                  "categories::4",
+                  "categories::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "categories::0"
+              },
+              {
+                "id": "categories::2"
+              },
+              {
+                "id": "categories::3"
+              },
+              {
+                "id": "categories::4"
+              },
+              {
+                "id": "categories::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "categoryid": 3,
+      "categoryname": "Confections",
+      "description": "Desserts, candies, and sweet breads",
+      "picture": "\\x"
+    },
+    {
+      "categoryid": 1,
+      "categoryname": "Beverages",
+      "description": "Soft drinks, coffees, teas, beers, and ales",
+      "picture": "\\x"
+    },
+    {
+      "categoryid": 7,
+      "categoryname": "Produce",
+      "description": "Dried fruit and bean curd",
+      "picture": "\\x"
+    },
+    {
+      "categoryid": 8,
+      "categoryname": "Seafood",
+      "description": "Seaweed and fish",
+      "picture": "\\x"
+    },
+    {
+      "categoryid": 6,
+      "categoryname": "Meat/Poultry",
+      "description": "Prepared meats",
+      "picture": "\\x"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1085,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "company_id": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              189,
+              250,
+              540,
+              747,
+              813
+            ],
+            "type": "number"
+          },
+          "date_joined": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-06-24T00:00:00.000",
+              "2018-01-23T00:00:00.000",
+              "2018-03-27T00:00:00.000",
+              "2018-12-19T00:00:00.000",
+              "2021-08-10T00:00:00.000"
+            ],
+            "type": "string"
+          },
+          "year_founded": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1919,
+              2011,
+              2015,
+              2016,
+              2017
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1085,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "companies_dates::11",
+                  "companies_dates::188",
+                  "companies_dates::190",
+                  "companies_dates::25",
+                  "companies_dates::345"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "companies_dates::11"
+              },
+              {
+                "id": "companies_dates::188"
+              },
+              {
+                "id": "companies_dates::190"
+              },
+              {
+                "id": "companies_dates::25"
+              },
+              {
+                "id": "companies_dates::345"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "company_id": 364,
+      "date_joined": "2019-02-01T00:00:00.000",
+      "year_founded": 2015
+    },
+    {
+      "company_id": 314,
+      "date_joined": "2021-12-01T00:00:00.000",
+      "year_founded": 2021
+    },
+    {
+      "company_id": 844,
+      "date_joined": "2021-07-07T00:00:00.000",
+      "year_founded": 2018
+    },
+    {
+      "company_id": 704,
+      "date_joined": "2021-11-04T00:00:00.000",
+      "year_founded": 2016
+    },
+    {
+      "company_id": 756,
+      "date_joined": "2021-11-04T00:00:00.000",
+      "year_founded": 2018
+    }
+  ]
+}

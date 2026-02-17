@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 609,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 609,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1123,
+              4382,
+              4752,
+              5300,
+              5374
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 609,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Auckland, Auckland",
+              "Lawton, Oklahoma",
+              "New Delhi, Delhi",
+              "Oberhausen, North Rhine-Westph...",
+              "Oslo, Oslo"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 609,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 609,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Locations::182",
+                  "Locations::357",
+                  "Locations::363",
+                  "Locations::409",
+                  "Locations::411"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Locations::182"
+              },
+              {
+                "id": "Locations::357"
+              },
+              {
+                "id": "Locations::363"
+              },
+              {
+                "id": "Locations::409"
+              },
+              {
+                "id": "Locations::411"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 189,
+      "name": "Alexandria, Virginia"
+    },
+    {
+      "id": 387,
+      "name": "Greensboro, North Carolina"
+    },
+    {
+      "id": 440,
+      "name": "Biloxi, Mississippi"
+    },
+    {
+      "id": 240,
+      "name": "Peoria, Illinois"
+    },
+    {
+      "id": 1901,
+      "name": "Rostock, Mecklenburg-Vorpommern"
+    }
+  ]
+}

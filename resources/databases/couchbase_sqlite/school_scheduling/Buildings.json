@@ -1,0 +1,146 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 6,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "BuildingCode": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AS",
+              "CC",
+              "IB",
+              "LB",
+              "TB"
+            ],
+            "type": "string"
+          },
+          "BuildingName": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Arts and Sciences",
+              "College Center",
+              "Instructional Building",
+              "Library",
+              "Technology Building"
+            ],
+            "type": "string"
+          },
+          "ElevatorAccess": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "NumberOfFloors": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "SiteParkingAvailable": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 6,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Buildings::0",
+                  "Buildings::1",
+                  "Buildings::3",
+                  "Buildings::4",
+                  "Buildings::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Buildings::0"
+              },
+              {
+                "id": "Buildings::1"
+              },
+              {
+                "id": "Buildings::3"
+              },
+              {
+                "id": "Buildings::4"
+              },
+              {
+                "id": "Buildings::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BuildingCode": "IB",
+      "BuildingName": "Instructional Building",
+      "ElevatorAccess": 1,
+      "NumberOfFloors": 3,
+      "SiteParkingAvailable": 1
+    },
+    {
+      "BuildingCode": "AS",
+      "BuildingName": "Arts and Sciences",
+      "ElevatorAccess": 1,
+      "NumberOfFloors": 3,
+      "SiteParkingAvailable": 1
+    },
+    {
+      "BuildingCode": "GYM",
+      "BuildingName": "PE and Wellness",
+      "ElevatorAccess": 0,
+      "NumberOfFloors": 1,
+      "SiteParkingAvailable": 1
+    },
+    {
+      "BuildingCode": "LB",
+      "BuildingName": "Library",
+      "ElevatorAccess": 1,
+      "NumberOfFloors": 2,
+      "SiteParkingAvailable": 1
+    },
+    {
+      "BuildingCode": "CC",
+      "BuildingName": "College Center",
+      "ElevatorAccess": 1,
+      "NumberOfFloors": 3,
+      "SiteParkingAvailable": 0
+    }
+  ]
+}

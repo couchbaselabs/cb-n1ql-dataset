@@ -1,0 +1,170 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 397,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "category": {
+            "#docs": 397,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Business Laptop",
+              "Graphic Card",
+              "Internal HDD",
+              "Mouse",
+              "Personal Laptop"
+            ],
+            "type": "string"
+          },
+          "division": {
+            "#docs": 397,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N & S",
+              "P & A",
+              "PC"
+            ],
+            "type": "string"
+          },
+          "product": {
+            "#docs": 397,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AQ BZ 101",
+              "AQ BZ Gen Y",
+              "AQ F16",
+              "AQ Maxima Ms",
+              "AQ Trigger Ms"
+            ],
+            "type": "string"
+          },
+          "product_code": {
+            "#docs": 397,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A2520150501",
+              "A2520150503",
+              "A2721150705",
+              "A4821110803",
+              "A4918110101"
+            ],
+            "type": "string"
+          },
+          "segment": {
+            "#docs": 397,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Accessories",
+              "Desktop",
+              "Notebook",
+              "Peripherals",
+              "Storage"
+            ],
+            "type": "string"
+          },
+          "variant": {
+            "#docs": 397,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Plus 1",
+              "Premium 1",
+              "Standard 1",
+              "Standard Grey",
+              "Standard Red"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 397,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 397,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "hardware_dim_product::108",
+                  "hardware_dim_product::110",
+                  "hardware_dim_product::124",
+                  "hardware_dim_product::255",
+                  "hardware_dim_product::261"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "hardware_dim_product::108"
+              },
+              {
+                "id": "hardware_dim_product::110"
+              },
+              {
+                "id": "hardware_dim_product::124"
+              },
+              {
+                "id": "hardware_dim_product::255"
+              },
+              {
+                "id": "hardware_dim_product::261"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "category": "Keyboard",
+      "division": "P & A",
+      "product": "AQ Lite",
+      "product_code": "A3220150403",
+      "segment": "Accessories",
+      "variant": "Plus 1"
+    },
+    {
+      "category": "Keyboard",
+      "division": "P & A",
+      "product": "AQ Qwerty",
+      "product_code": "A3421150605",
+      "segment": "Accessories",
+      "variant": "Premium 1"
+    },
+    {
+      "category": "Personal Laptop",
+      "division": "PC",
+      "product": "AQ Velocity",
+      "product_code": "A4319110303",
+      "segment": "Notebook",
+      "variant": "Standard Red"
+    },
+    {
+      "category": "Personal Laptop",
+      "division": "PC",
+      "product": "AQ Elite",
+      "product_code": "A4419110403",
+      "segment": "Notebook",
+      "variant": "Standard Red"
+    },
+    {
+      "category": "USB Flash Drives",
+      "division": "N & S",
+      "product": "AQ Ultra Dual 3.0",
+      "product_code": "A7020160403",
+      "segment": "Storage",
+      "variant": "Premium"
+    }
+  ]
+}

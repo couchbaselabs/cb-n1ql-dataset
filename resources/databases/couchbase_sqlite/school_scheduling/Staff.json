@@ -1,0 +1,278 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 27,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "DateHired": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1984-01-17",
+              "1986-07-05",
+              "1987-01-13",
+              "1988-03-02",
+              "1992-02-10"
+            ],
+            "type": "string"
+          },
+          "Position": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Faculty",
+              "Graduate Advisor",
+              "Registrar",
+              "Secretary"
+            ],
+            "type": "string"
+          },
+          "Salary": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              44000,
+              45000,
+              50000,
+              57000,
+              60000
+            ],
+            "type": "number"
+          },
+          "StaffID": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              98013,
+              98028,
+              98040,
+              98053,
+              98063
+            ],
+            "type": "number"
+          },
+          "StfAreaCode": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "210",
+              "253",
+              "425",
+              "503",
+              "562"
+            ],
+            "type": "string"
+          },
+          "StfCity": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Long Beach",
+              "Marysville",
+              "Salem",
+              "San Antonio",
+              "Tacoma"
+            ],
+            "type": "string"
+          },
+          "StfFirstName": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alaina",
+              "Caleb",
+              "Deb",
+              "Jim",
+              "Kirk"
+            ],
+            "type": "string"
+          },
+          "StfLastname": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DeGrasse",
+              "Hallmark",
+              "Viescas",
+              "Waldal",
+              "Wilson"
+            ],
+            "type": "string"
+          },
+          "StfPhoneNumber": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "555-0037",
+              "555-2311",
+              "555-2496",
+              "555-2631",
+              "555-2636"
+            ],
+            "type": "string"
+          },
+          "StfState": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CA",
+              "OR",
+              "TX",
+              "WA"
+            ],
+            "type": "string"
+          },
+          "StfStreetAddress": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "101 NE 88th",
+              "4501 Wetland Road",
+              "455 West Palm Ave",
+              "908 W. Capital Way",
+              "Route 2, Box 203B"
+            ],
+            "type": "string"
+          },
+          "StfZipCode": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "78284",
+              "90809",
+              "97301",
+              "98270",
+              "98413"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 27,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 27,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Staff::11",
+                  "Staff::14",
+                  "Staff::20",
+                  "Staff::25",
+                  "Staff::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Staff::11"
+              },
+              {
+                "id": "Staff::14"
+              },
+              {
+                "id": "Staff::20"
+              },
+              {
+                "id": "Staff::25"
+              },
+              {
+                "id": "Staff::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "DateHired": "1982-11-20",
+      "Position": "Faculty",
+      "Salary": 60000,
+      "StaffID": 98036,
+      "StfAreaCode": "760",
+      "StfCity": "Palm Springs",
+      "StfFirstName": "Sam",
+      "StfLastname": "Abolrous",
+      "StfPhoneNumber": "555-2611",
+      "StfState": "CA",
+      "StfStreetAddress": "611 Alpine Drive",
+      "StfZipCode": "92263"
+    },
+    {
+      "DateHired": "1986-07-16",
+      "Position": "Faculty",
+      "Salary": 60000,
+      "StaffID": 98014,
+      "StfAreaCode": "425",
+      "StfCity": "Kirkland",
+      "StfFirstName": "Peter",
+      "StfLastname": "Brehm",
+      "StfPhoneNumber": "555-2501",
+      "StfState": "WA",
+      "StfStreetAddress": "722 Moss Bay Blvd.",
+      "StfZipCode": "98033"
+    },
+    {
+      "DateHired": "1986-05-31",
+      "Position": "Faculty",
+      "Salary": 44000,
+      "StaffID": 98005,
+      "StfAreaCode": "425",
+      "StfCity": "Redmond",
+      "StfFirstName": "Suzanne",
+      "StfLastname": "Viescas",
+      "StfPhoneNumber": "555-2686",
+      "StfState": "WA",
+      "StfStreetAddress": "15127 NE 24th, #383",
+      "StfZipCode": "98052"
+    },
+    {
+      "DateHired": "1989-11-02",
+      "Position": "Faculty",
+      "Salary": 45000,
+      "StaffID": 98019,
+      "StfAreaCode": "503",
+      "StfCity": "Portland",
+      "StfFirstName": "Mariya",
+      "StfLastname": "Sergienko",
+      "StfPhoneNumber": "555-2526",
+      "StfState": "OR",
+      "StfStreetAddress": "901 Pine Avenue",
+      "StfZipCode": "97208"
+    },
+    {
+      "DateHired": "1988-05-31",
+      "Position": "Faculty",
+      "Salary": 48000,
+      "StaffID": 98030,
+      "StfAreaCode": "425",
+      "StfCity": "Bellevue",
+      "StfFirstName": "Liz",
+      "StfLastname": "Keyser",
+      "StfPhoneNumber": "555-2556",
+      "StfState": "WA",
+      "StfStreetAddress": "13920 S.E. 40th Street",
+      "StfZipCode": "98006"
+    }
+  ]
+}

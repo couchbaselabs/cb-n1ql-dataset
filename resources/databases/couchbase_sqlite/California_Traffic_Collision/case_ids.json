@@ -1,0 +1,98 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "case_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1921370,
+              2575311,
+              2912517,
+              4282909,
+              5679901
+            ],
+            "type": "number"
+          },
+          "db_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2018,
+              2020,
+              2021
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "case_ids::13760",
+                  "case_ids::16671",
+                  "case_ids::24076",
+                  "case_ids::27126",
+                  "case_ids::29468"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "case_ids::13760"
+              },
+              {
+                "id": "case_ids::16671"
+              },
+              {
+                "id": "case_ids::24076"
+              },
+              {
+                "id": "case_ids::27126"
+              },
+              {
+                "id": "case_ids::29468"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "case_id": 90299601,
+      "db_year": 2021
+    },
+    {
+      "case_id": 732593,
+      "db_year": 2018
+    },
+    {
+      "case_id": 723440,
+      "db_year": 2018
+    },
+    {
+      "case_id": 6855989,
+      "db_year": 2021
+    },
+    {
+      "case_id": 90034438,
+      "db_year": 2021
+    }
+  ]
+}

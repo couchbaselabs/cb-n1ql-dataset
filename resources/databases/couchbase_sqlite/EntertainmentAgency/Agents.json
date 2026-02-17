@@ -1,0 +1,258 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 9,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`AgtState` = \"WA\"",
+        "properties": {
+          "AgentID": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              5,
+              8,
+              9
+            ],
+            "type": "number"
+          },
+          "AgtCity": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bellevue",
+              "Kirkland",
+              "Redmond",
+              "Seattle",
+              "Tacoma"
+            ],
+            "type": "string"
+          },
+          "AgtFirstName": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Daffy",
+              "Maria",
+              "Marianne",
+              "Scott",
+              "William"
+            ],
+            "type": "string"
+          },
+          "AgtLastName": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bishop",
+              "Dumbwit",
+              "Patterson",
+              "Thompson",
+              "Wier"
+            ],
+            "type": "string"
+          },
+          "AgtPhoneNumber": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "555-1234",
+              "555-2291",
+              "555-2606",
+              "555-2666",
+              "555-2681"
+            ],
+            "type": "string"
+          },
+          "AgtState": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WA"
+            ],
+            "type": "string"
+          },
+          "AgtStreetAddress": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "122 Spring River Drive",
+              "1234 Main Street",
+              "3445 Cheyenne Road",
+              "66 Spring Valley Drive",
+              "908 W. Capital Way"
+            ],
+            "type": "string"
+          },
+          "AgtZipCode": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "98006",
+              "98033",
+              "98053",
+              "98125",
+              "98413"
+            ],
+            "type": "string"
+          },
+          "CommissionRate": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.01,
+              0.04,
+              0.045,
+              0.05,
+              0.06
+            ],
+            "type": "number"
+          },
+          "DateHired": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1997-05-15",
+              "1997-09-03",
+              "1998-02-02",
+              "1998-02-05",
+              "2000-02-05"
+            ],
+            "type": "string"
+          },
+          "Salary": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              50,
+              24500,
+              27000,
+              30000,
+              35000
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 9,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Agents::0",
+                  "Agents::1",
+                  "Agents::4",
+                  "Agents::7",
+                  "Agents::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Agents::0"
+              },
+              {
+                "id": "Agents::1"
+              },
+              {
+                "id": "Agents::4"
+              },
+              {
+                "id": "Agents::7"
+              },
+              {
+                "id": "Agents::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AgentID": 2,
+      "AgtCity": "Seattle",
+      "AgtFirstName": "Scott",
+      "AgtLastName": "Bishop",
+      "AgtPhoneNumber": "555-2666",
+      "AgtState": "WA",
+      "AgtStreetAddress": "66 Spring Valley Drive",
+      "AgtZipCode": "98125",
+      "CommissionRate": 0.04,
+      "DateHired": "1998-02-05",
+      "Salary": 27000
+    },
+    {
+      "AgentID": 6,
+      "AgtCity": "Seattle",
+      "AgtFirstName": "John",
+      "AgtLastName": "Kennedy",
+      "AgtPhoneNumber": "555-2621",
+      "AgtState": "WA",
+      "AgtStreetAddress": "16679 NE 41st Court",
+      "AgtZipCode": "98125",
+      "CommissionRate": 0.06,
+      "DateHired": "1997-05-15",
+      "Salary": 33000
+    },
+    {
+      "AgentID": 4,
+      "AgtCity": "Seattle",
+      "AgtFirstName": "Karen",
+      "AgtLastName": "Smith",
+      "AgtPhoneNumber": "555-2551",
+      "AgtState": "WA",
+      "AgtStreetAddress": "30301 - 166th Ave. N.E.",
+      "AgtZipCode": "98125",
+      "CommissionRate": 0.055,
+      "DateHired": "1998-03-05",
+      "Salary": 22000
+    },
+    {
+      "AgentID": 9,
+      "AgtCity": "Kirkland",
+      "AgtFirstName": "Daffy",
+      "AgtLastName": "Dumbwit",
+      "AgtPhoneNumber": "555-1234",
+      "AgtState": "WA",
+      "AgtStreetAddress": "1234 Main Street",
+      "AgtZipCode": "98033",
+      "CommissionRate": 0.01,
+      "DateHired": "2000-02-05",
+      "Salary": 50
+    },
+    {
+      "AgentID": 1,
+      "AgtCity": "Redmond",
+      "AgtFirstName": "William",
+      "AgtLastName": "Thompson",
+      "AgtPhoneNumber": "555-2681",
+      "AgtState": "WA",
+      "AgtStreetAddress": "122 Spring River Drive",
+      "AgtZipCode": "98053",
+      "CommissionRate": 0.04,
+      "DateHired": "1997-05-15",
+      "Salary": 35000
+    }
+  ]
+}

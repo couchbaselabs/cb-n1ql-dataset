@@ -1,0 +1,174 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`active` = 1, `last_update` = \"2021-03-06 15:52:00\", `password` = \"8cb2237d0679ca88db6464eac60da96...\"",
+        "properties": {
+          "active": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "address_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "email": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Jon.Stephens@sakilastaff.com",
+              "Mike.Hillyer@sakilastaff.com"
+            ],
+            "type": "string"
+          },
+          "first_name": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Jon",
+              "Mike"
+            ],
+            "type": "string"
+          },
+          "last_name": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Hillyer",
+              "Stephens"
+            ],
+            "type": "string"
+          },
+          "last_update": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:52:00"
+            ],
+            "type": "string"
+          },
+          "password": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "8cb2237d0679ca88db6464eac60da9..."
+            ],
+            "type": "string"
+          },
+          "picture": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "staff_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "store_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "username": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Jon",
+              "Mike"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "staff::0",
+                  "staff::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "staff::0"
+              },
+              {
+                "id": "staff::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "active": 1,
+      "address_id": 4,
+      "email": "Jon.Stephens@sakilastaff.com",
+      "first_name": "Jon",
+      "last_name": "Stephens",
+      "last_update": "2021-03-06 15:52:00",
+      "password": "8cb2237d0679ca88db6464eac60da96345513964",
+      "picture": null,
+      "staff_id": 2,
+      "store_id": 2,
+      "username": "Jon"
+    },
+    {
+      "active": 1,
+      "address_id": 3,
+      "email": "Mike.Hillyer@sakilastaff.com",
+      "first_name": "Mike",
+      "last_name": "Hillyer",
+      "last_update": "2021-03-06 15:52:00",
+      "password": "8cb2237d0679ca88db6464eac60da96345513964",
+      "picture": null,
+      "staff_id": 1,
+      "store_id": 1,
+      "username": "Mike"
+    }
+  ]
+}

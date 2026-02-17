@@ -1,0 +1,70 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "pizza_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "pizza_name": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Meatlovers",
+              "Vegetarian"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pizza_names::0",
+                  "pizza_names::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pizza_names::0"
+              },
+              {
+                "id": "pizza_names::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "pizza_id": 1,
+      "pizza_name": "Meatlovers"
+    },
+    {
+      "pizza_id": 2,
+      "pizza_name": "Vegetarian"
+    }
+  ]
+}

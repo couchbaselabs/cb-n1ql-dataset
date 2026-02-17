@@ -1,0 +1,165 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 8,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "error_type": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "format_error",
+              "not_kana",
+              "require"
+            ],
+            "type": "string"
+          },
+          "field": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "email",
+              "kana",
+              "tel",
+              "zip"
+            ],
+            "type": "string"
+          },
+          "form": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "cart",
+              "regist"
+            ],
+            "type": "string"
+          },
+          "session": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "004dc3ef",
+              "00700be4",
+              "01061716",
+              "02596e8a",
+              "035a1ebb"
+            ],
+            "type": "string"
+          },
+          "stamp": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-12-30 00:56:08",
+              "2016-12-30 00:56:09",
+              "2016-12-30 00:56:42",
+              "2016-12-30 00:57:21"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "\u5c71\u7530 \u592a\u90ce",
+              "03-99999999",
+              "xxx---.co.jp",
+              "xxx@---cojp",
+              ""
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 8,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "form_error_log::0",
+                  "form_error_log::1",
+                  "form_error_log::5",
+                  "form_error_log::6",
+                  "form_error_log::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "form_error_log::0"
+              },
+              {
+                "id": "form_error_log::1"
+              },
+              {
+                "id": "form_error_log::5"
+              },
+              {
+                "id": "form_error_log::6"
+              },
+              {
+                "id": "form_error_log::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "error_type": "require",
+      "field": "email",
+      "form": "regist",
+      "session": "004dc3ef",
+      "stamp": "2016-12-30 00:56:08",
+      "value": ""
+    },
+    {
+      "error_type": "format_error",
+      "field": "email",
+      "form": "cart",
+      "session": "00700be4",
+      "stamp": "2016-12-30 00:56:08",
+      "value": "xxx---.co.jp"
+    },
+    {
+      "error_type": "format_error",
+      "field": "email",
+      "form": "regist",
+      "session": "01061716",
+      "stamp": "2016-12-30 00:56:09",
+      "value": "xxx@---cojp"
+    },
+    {
+      "error_type": "format_error",
+      "field": "zip",
+      "form": "regist",
+      "session": "004dc3ef",
+      "stamp": "2016-12-30 00:57:21",
+      "value": "101-"
+    },
+    {
+      "error_type": "format_error",
+      "field": "tel",
+      "form": "cart",
+      "session": "035a1ebb",
+      "stamp": "2016-12-30 00:56:09",
+      "value": "03-99999999"
+    }
+  ]
+}

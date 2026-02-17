@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 9,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "aircraft_code": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "319",
+              "320",
+              "321",
+              "773",
+              "CR2"
+            ],
+            "type": "string"
+          },
+          "model": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "{\"en\": \"Airbus A319-100\", \"ru\"...",
+              "{\"en\": \"Airbus A320-200\", \"ru\"...",
+              "{\"en\": \"Airbus A321-200\", \"ru\"...",
+              "{\"en\": \"Boeing 777-300\", \"ru\":...",
+              "{\"en\": \"Bombardier CRJ-200\", \"..."
+            ],
+            "type": "string"
+          },
+          "range": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2700,
+              5600,
+              5700,
+              6700,
+              11100
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 9,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "aircrafts_data::0",
+                  "aircrafts_data::3",
+                  "aircrafts_data::4",
+                  "aircrafts_data::5",
+                  "aircrafts_data::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "aircrafts_data::0"
+              },
+              {
+                "id": "aircrafts_data::3"
+              },
+              {
+                "id": "aircrafts_data::4"
+              },
+              {
+                "id": "aircrafts_data::5"
+              },
+              {
+                "id": "aircrafts_data::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aircraft_code": "320",
+      "model": "{\"en\": \"Airbus A320-200\", \"ru\": \"\u0410\u044d\u0440\u043e\u0431\u0443\u0441 A320-200\"}",
+      "range": 5700
+    },
+    {
+      "aircraft_code": "321",
+      "model": "{\"en\": \"Airbus A321-200\", \"ru\": \"\u0410\u044d\u0440\u043e\u0431\u0443\u0441 A321-200\"}",
+      "range": 5600
+    },
+    {
+      "aircraft_code": "763",
+      "model": "{\"en\": \"Boeing 767-300\", \"ru\": \"\u0411\u043e\u0438\u043d\u0433 767-300\"}",
+      "range": 7900
+    },
+    {
+      "aircraft_code": "773",
+      "model": "{\"en\": \"Boeing 777-300\", \"ru\": \"\u0411\u043e\u0438\u043d\u0433 777-300\"}",
+      "range": 11100
+    },
+    {
+      "aircraft_code": "SU9",
+      "model": "{\"en\": \"Sukhoi Superjet-100\", \"ru\": \"\u0421\u0443\u0445\u043e\u0439 \u0421\u0443\u043f\u0435\u0440\u0434\u0436\u0435\u0442-100\"}",
+      "range": 3000
+    }
+  ]
+}

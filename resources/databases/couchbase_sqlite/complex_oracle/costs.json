@@ -1,0 +1,168 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "channel_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "prod_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21,
+              33,
+              45,
+              125,
+              127
+            ],
+            "type": "number"
+          },
+          "promo_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              350,
+              351,
+              999
+            ],
+            "type": "number"
+          },
+          "time_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-03-03",
+              "2019-10-22",
+              "2019-11-04",
+              "2020-12-13",
+              "2021-08-04"
+            ],
+            "type": "string"
+          },
+          "unit_cost": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15.02,
+              31.92,
+              39.63,
+              41.22,
+              813.77
+            ],
+            "type": "number"
+          },
+          "unit_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              16.53,
+              38.14,
+              47.45,
+              49.72,
+              1075.95
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "costs::1158",
+                  "costs::14068",
+                  "costs::14813",
+                  "costs::33156",
+                  "costs::44640"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "costs::1158"
+              },
+              {
+                "id": "costs::14068"
+              },
+              {
+                "id": "costs::14813"
+              },
+              {
+                "id": "costs::33156"
+              },
+              {
+                "id": "costs::44640"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "channel_id": 3,
+      "prod_id": 131,
+      "promo_id": 999,
+      "time_id": "2019-02-05",
+      "unit_cost": 16.85,
+      "unit_price": 26.96
+    },
+    {
+      "channel_id": 3,
+      "prod_id": 43,
+      "promo_id": 350,
+      "time_id": "2019-08-17",
+      "unit_cost": 40.12,
+      "unit_price": 47.45
+    },
+    {
+      "channel_id": 2,
+      "prod_id": 47,
+      "promo_id": 999,
+      "time_id": "2019-07-20",
+      "unit_cost": 26.19,
+      "unit_price": 30.5
+    },
+    {
+      "channel_id": 3,
+      "prod_id": 26,
+      "promo_id": 999,
+      "time_id": "2019-02-03",
+      "unit_cost": 133.11,
+      "unit_price": 167.99
+    },
+    {
+      "channel_id": 3,
+      "prod_id": 114,
+      "promo_id": 350,
+      "time_id": "2019-08-11",
+      "unit_cost": 17.14,
+      "unit_price": 22.49
+    }
+  ]
+}

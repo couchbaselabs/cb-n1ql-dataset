@@ -1,0 +1,284 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`language_id` = 1, `release_year` = \"2006\"",
+        "properties": {
+          "description": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A Awe-Inspiring Character Stud...",
+              "A Beautiful Display of a Pastr...",
+              "A Emotional Tale of a Pastry C...",
+              "A Epic Story of a Mad Cow And ...",
+              "A Unbelieveable Epistle of a R..."
+            ],
+            "type": "string"
+          },
+          "film_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              104,
+              138,
+              247,
+              273,
+              489
+            ],
+            "type": "number"
+          },
+          "language_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:52:00",
+              "2021-03-06 15:52:01",
+              "2021-03-06 15:52:02",
+              "2021-03-06 15:52:04",
+              "2021-03-06 15:52:05"
+            ],
+            "type": "string"
+          },
+          "length": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              47,
+              54,
+              71,
+              107,
+              119
+            ],
+            "type": "number"
+          },
+          "original_language_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "rating": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "G",
+              "NC-17",
+              "PG",
+              "PG-13",
+              "R"
+            ],
+            "type": "string"
+          },
+          "release_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2006"
+            ],
+            "type": "string"
+          },
+          "rental_duration": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "rental_rate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.99,
+              2.99,
+              4.99
+            ],
+            "type": "number"
+          },
+          "replacement_cost": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14.99,
+              17.99,
+              18.99,
+              19.99,
+              29.99
+            ],
+            "type": "number"
+          },
+          "special_features": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Commentaries",
+              "Commentaries,Behind the Scenes",
+              "Deleted Scenes,Behind the Scen...",
+              "Trailers,Commentaries",
+              "Trailers,Commentaries,Deleted ..."
+            ],
+            "type": "string"
+          },
+          "title": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BUGSY SONG",
+              "CHARIOTS CONSPIRACY",
+              "DOWNHILL ENOUGH",
+              "EFFECT GLADIATOR",
+              "JUGGLER HARDLY"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "film::103",
+                  "film::137",
+                  "film::246",
+                  "film::272",
+                  "film::488"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "film::103"
+              },
+              {
+                "id": "film::137"
+              },
+              {
+                "id": "film::246"
+              },
+              {
+                "id": "film::272"
+              },
+              {
+                "id": "film::488"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "description": "A Amazing Drama of a Butler And a Husband who must Reach a A Shark in A U-Boat",
+      "film_id": 294,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:03",
+      "length": 138,
+      "original_language_id": null,
+      "rating": "PG-13",
+      "release_year": "2006",
+      "rental_duration": 5,
+      "rental_rate": 4.99,
+      "replacement_cost": 26.99,
+      "special_features": "Deleted Scenes",
+      "title": "EXPECATIONS NATURAL"
+    },
+    {
+      "description": "A Thrilling Reflection of a Pastry Chef And a Crocodile who must Reach a Teacher in The Outback",
+      "film_id": 304,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:03",
+      "length": 130,
+      "original_language_id": null,
+      "rating": "G",
+      "release_year": "2006",
+      "rental_duration": 3,
+      "rental_rate": 2.99,
+      "replacement_cost": 28.99,
+      "special_features": "Deleted Scenes",
+      "title": "FARGO GANDHI"
+    },
+    {
+      "description": "A Beautiful Documentary of a Woman And a Pioneer who must Pursue a Mad Scientist in A Shark Tank",
+      "film_id": 338,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:03",
+      "length": 51,
+      "original_language_id": null,
+      "rating": "PG",
+      "release_year": "2006",
+      "rental_duration": 6,
+      "rental_rate": 4.99,
+      "replacement_cost": 23.99,
+      "special_features": "Commentaries,Deleted Scenes,Behind the Scenes",
+      "title": "FRISCO FORREST"
+    },
+    {
+      "description": "A Amazing Saga of a Madman And a Dentist who must Build a Car in A Manhattan Penthouse",
+      "film_id": 446,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:04",
+      "length": 150,
+      "original_language_id": null,
+      "rating": "PG",
+      "release_year": "2006",
+      "rental_duration": 5,
+      "rental_rate": 4.99,
+      "replacement_cost": 19.99,
+      "special_features": "Trailers,Commentaries,Deleted Scenes",
+      "title": "HYSTERICAL GRAIL"
+    },
+    {
+      "description": "A Astounding Saga of a Dog And a Squirrel who must Conquer a Dog in An Abandoned Fun House",
+      "film_id": 470,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:04",
+      "length": 79,
+      "original_language_id": null,
+      "rating": "R",
+      "release_year": "2006",
+      "rental_duration": 4,
+      "rental_rate": 4.99,
+      "replacement_cost": 24.99,
+      "special_features": "Trailers,Commentaries,Deleted Scenes",
+      "title": "ISHTAR ROCKETEER"
+    }
+  ]
+}

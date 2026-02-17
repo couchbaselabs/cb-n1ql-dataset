@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 109,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`last_update` = \"2021-03-06 15:51:49\"",
+        "properties": {
+          "country": {
+            "#docs": 109,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cambodia",
+              "Colombia",
+              "Latvia",
+              "New Zealand",
+              "Venezuela"
+            ],
+            "type": "string"
+          },
+          "country_id": {
+            "#docs": 109,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              18,
+              24,
+              54,
+              68,
+              104
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 109,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:51:49"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 109,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 109,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "country::103",
+                  "country::17",
+                  "country::23",
+                  "country::53",
+                  "country::67"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "country::103"
+              },
+              {
+                "id": "country::17"
+              },
+              {
+                "id": "country::23"
+              },
+              {
+                "id": "country::53"
+              },
+              {
+                "id": "country::67"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country": "Indonesia",
+      "country_id": 45,
+      "last_update": "2021-03-06 15:51:49"
+    },
+    {
+      "country": "Nigeria",
+      "country_id": 69,
+      "last_update": "2021-03-06 15:51:49"
+    },
+    {
+      "country": "Oman",
+      "country_id": 71,
+      "last_update": "2021-03-06 15:51:49"
+    },
+    {
+      "country": "Australia",
+      "country_id": 8,
+      "last_update": "2021-03-06 15:51:49"
+    },
+    {
+      "country": "Argentina",
+      "country_id": 6,
+      "last_update": "2021-03-06 15:51:49"
+    }
+  ]
+}

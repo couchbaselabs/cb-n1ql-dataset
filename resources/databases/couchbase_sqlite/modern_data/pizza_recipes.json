@@ -1,0 +1,70 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "pizza_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "toppings": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1, 2, 3, 4, 5, 6, 8, 10",
+              "4, 6, 7, 9, 11, 12"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pizza_recipes::0",
+                  "pizza_recipes::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pizza_recipes::0"
+              },
+              {
+                "id": "pizza_recipes::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "pizza_id": 1,
+      "toppings": "1, 2, 3, 4, 5, 6, 8, 10"
+    },
+    {
+      "pizza_id": 2,
+      "toppings": "4, 6, 7, 9, 11, 12"
+    }
+  ]
+}

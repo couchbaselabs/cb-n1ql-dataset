@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "MID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt0154942",
+              "tt0281913",
+              "tt2323964",
+              "tt4579982",
+              "tt6078866"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1196,
+              1343,
+              1849,
+              2579,
+              2608
+            ],
+            "type": "number"
+          },
+          "num_votes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              53,
+              78,
+              100,
+              407,
+              4135
+            ],
+            "type": "number"
+          },
+          "rating": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4.1,
+              4.3,
+              6.5,
+              7.2,
+              7.7
+            ],
+            "type": "number"
+          },
+          "title": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Hogi Pyaar Ki Jeet",
+              "Ishq Click",
+              "Mere Dad Ki Maruti",
+              "Neecha Nagar",
+              "Soni"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1946",
+              "1999",
+              "2013",
+              "2016",
+              "2018"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Movie::1196",
+                  "Movie::1343",
+                  "Movie::1849",
+                  "Movie::2579",
+                  "Movie::2608"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Movie::1196"
+              },
+              {
+                "id": "Movie::1343"
+              },
+              {
+                "id": "Movie::1849"
+              },
+              {
+                "id": "Movie::2579"
+              },
+              {
+                "id": "Movie::2608"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "MID": "tt0059354",
+      "index": 1155,
+      "num_votes": 121,
+      "rating": 6.8,
+      "title": "Khandan",
+      "year": "1965"
+    },
+    {
+      "MID": "tt1372266",
+      "index": 1161,
+      "num_votes": 235,
+      "rating": 5.5,
+      "title": "Kisaan",
+      "year": "2009"
+    },
+    {
+      "MID": "tt3309662",
+      "index": 1179,
+      "num_votes": 635,
+      "rating": 2.2,
+      "title": "Jackpot",
+      "year": "II 2013"
+    },
+    {
+      "MID": "tt0102645",
+      "index": 1208,
+      "num_votes": 691,
+      "rating": 5.7,
+      "title": "Patthar Ke Phool",
+      "year": "1991"
+    },
+    {
+      "MID": "tt1890513",
+      "index": 1210,
+      "num_votes": 2190,
+      "rating": 5,
+      "title": "Ragini MMS",
+      "year": "2011"
+    }
+  ]
+}

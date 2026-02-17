@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 51,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "stateabbr": {
+            "#docs": 51,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DE",
+              "ME",
+              "NJ",
+              "NV",
+              "SC"
+            ],
+            "type": "string"
+          },
+          "stateid": {
+            "#docs": 51,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              20,
+              29,
+              31,
+              41
+            ],
+            "type": "number"
+          },
+          "statename": {
+            "#docs": 51,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Delaware",
+              "Maine",
+              "Nevada",
+              "New Jersey",
+              "South Carolina"
+            ],
+            "type": "string"
+          },
+          "stateregion": {
+            "#docs": 51,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "east",
+              "midwest",
+              "north",
+              "south",
+              "west"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 51,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 51,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "usstates::19",
+                  "usstates::28",
+                  "usstates::30",
+                  "usstates::40",
+                  "usstates::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "usstates::19"
+              },
+              {
+                "id": "usstates::28"
+              },
+              {
+                "id": "usstates::30"
+              },
+              {
+                "id": "usstates::40"
+              },
+              {
+                "id": "usstates::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "stateabbr": "TX",
+      "stateid": 44,
+      "statename": "Texas",
+      "stateregion": "west"
+    },
+    {
+      "stateabbr": "NC",
+      "stateid": 34,
+      "statename": "North Carolina",
+      "stateregion": "east"
+    },
+    {
+      "stateabbr": "SD",
+      "stateid": 42,
+      "statename": "South Dakota",
+      "stateregion": "midwest"
+    },
+    {
+      "stateabbr": "WV",
+      "stateid": 49,
+      "statename": "West Virginia",
+      "stateregion": "south"
+    },
+    {
+      "stateabbr": "WY",
+      "stateid": 51,
+      "statename": "Wyoming",
+      "stateregion": "west"
+    }
+  ]
+}

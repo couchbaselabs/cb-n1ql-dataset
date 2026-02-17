@@ -1,0 +1,538 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`STATUS` = \"5\", `comment` = \"\", `revisionnumber` = 8",
+        "properties": {
+          "STATUS": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "5"
+            ],
+            "type": "string"
+          },
+          "accountnumber": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10-4020-000187",
+              "10-4020-000344",
+              "10-4020-000385",
+              "10-4020-000557",
+              "10-4020-000584"
+            ],
+            "type": "string"
+          },
+          "billtoaddressid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              815,
+              871,
+              974,
+              1020,
+              1053
+            ],
+            "type": "number"
+          },
+          "comment": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              ""
+            ],
+            "type": "string"
+          },
+          "creditcardapprovalcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "18284Vi51318",
+              "45614Vi34749",
+              "48162Vi75759",
+              "65050Vi701",
+              "96826Vi66885"
+            ],
+            "type": "string"
+          },
+          "creditcardid": {
+            "#docs": [
+              977,
+              23
+            ],
+            "%docs": [
+              97.7,
+              2.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                126,
+                6675,
+                9973,
+                12933,
+                14612
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "currencyrateid": {
+            "#docs": [
+              383,
+              617
+            ],
+            "%docs": [
+              38.3,
+              61.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                6510,
+                8361,
+                9637,
+                9912,
+                10822
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "customerid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              29501,
+              29606,
+              29749,
+              29901,
+              29938
+            ],
+            "type": "number"
+          },
+          "duedate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-07-13 00:00:00",
+              "2012-05-12 00:00:00",
+              "2012-10-12 00:00:00",
+              "2013-09-11 00:00:00",
+              "2013-11-11 00:00:00"
+            ],
+            "type": "string"
+          },
+          "freight": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20.938,
+              110.231,
+              701.3777,
+              748.1513,
+              1177.6782
+            ],
+            "type": "number"
+          },
+          "modifieddate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-07-08 00:00:00",
+              "2012-05-07 00:00:00",
+              "2012-10-07 00:00:00",
+              "2013-09-06 00:00:00",
+              "2013-11-06 00:00:00"
+            ],
+            "type": "string"
+          },
+          "onlineorderflag": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "f",
+              "t"
+            ],
+            "type": "string"
+          },
+          "orderdate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-07-01 00:00:00",
+              "2012-04-30 00:00:00",
+              "2012-09-30 00:00:00",
+              "2013-08-30 00:00:00",
+              "2013-10-30 00:00:00"
+            ],
+            "type": "string"
+          },
+          "purchaseordernumber": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PO16327172067",
+              "PO19894119597",
+              "PO2697124986",
+              "PO5075167857",
+              "PO5684167807"
+            ],
+            "type": "string"
+          },
+          "revisionnumber": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8
+            ],
+            "type": "number"
+          },
+          "rowguid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "83b3d7c7-75df-446b-af7c-8d7ad4...",
+              "a10072cb-7165-4012-8f46-06555c...",
+              "a9815d99-0c1b-411f-9f71-1b3b0e...",
+              "ab1f3bd7-f051-4334-95b7-29a4c2...",
+              "eba1f4fa-0d52-4420-927f-1e5044..."
+            ],
+            "type": "string"
+          },
+          "salesorderid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              43861,
+              46362,
+              48066,
+              55318,
+              58903
+            ],
+            "type": "number"
+          },
+          "salespersonid": {
+            "#docs": [
+              543,
+              457
+            ],
+            "%docs": [
+              54.3,
+              45.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                276,
+                277,
+                279,
+                281,
+                283
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "shipdate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-07-08 00:00:00",
+              "2012-05-07 00:00:00",
+              "2012-10-07 00:00:00",
+              "2013-09-06 00:00:00",
+              "2013-11-06 00:00:00"
+            ],
+            "type": "string"
+          },
+          "shipmethodid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5
+            ],
+            "type": "number"
+          },
+          "shiptoaddressid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              815,
+              871,
+              974,
+              1020,
+              1053
+            ],
+            "type": "number"
+          },
+          "subtotal": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              696.582,
+              3614.46,
+              13319.4071,
+              23401.1062,
+              39124.5205
+            ],
+            "type": "number"
+          },
+          "taxamt": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              67.0015,
+              352.7392,
+              2244.4088,
+              2394.0841,
+              3768.5704
+            ],
+            "type": "number"
+          },
+          "territoryid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "totaldue": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              784.5215,
+              4077.4302,
+              16461.6425,
+              26346.8927,
+              44070.7691
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "salesorderheader::11659",
+                  "salesorderheader::15244",
+                  "salesorderheader::202",
+                  "salesorderheader::2703",
+                  "salesorderheader::4407"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "salesorderheader::11659"
+              },
+              {
+                "id": "salesorderheader::15244"
+              },
+              {
+                "id": "salesorderheader::202"
+              },
+              {
+                "id": "salesorderheader::2703"
+              },
+              {
+                "id": "salesorderheader::4407"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "STATUS": "5",
+      "accountnumber": "10-4030-019590",
+      "billtoaddressid": 25839,
+      "comment": "",
+      "creditcardapprovalcode": "617387Vi97714",
+      "creditcardid": 18807,
+      "currencyrateid": 9093,
+      "customerid": 19590,
+      "duedate": "2013-08-13 00:00:00",
+      "freight": 0.807,
+      "modifieddate": "2013-08-08 00:00:00",
+      "onlineorderflag": "t",
+      "orderdate": "2013-08-01 00:00:00",
+      "purchaseordernumber": "",
+      "revisionnumber": 8,
+      "rowguid": "bd8728d1-1075-4b6d-9525-5c4efb3d320b",
+      "salesorderid": 53668,
+      "salespersonid": "",
+      "shipdate": "2013-08-08 00:00:00",
+      "shipmethodid": 1,
+      "shiptoaddressid": 25839,
+      "subtotal": 32.28,
+      "taxamt": 2.5824,
+      "territoryid": 9,
+      "totaldue": 35.6694
+    },
+    {
+      "STATUS": "5",
+      "accountnumber": "10-4030-018211",
+      "billtoaddressid": 22002,
+      "comment": "",
+      "creditcardapprovalcode": "717622Vi45326",
+      "creditcardid": 8778,
+      "currencyrateid": 9093,
+      "customerid": 18211,
+      "duedate": "2013-08-13 00:00:00",
+      "freight": 1.4243,
+      "modifieddate": "2013-08-08 00:00:00",
+      "onlineorderflag": "t",
+      "orderdate": "2013-08-01 00:00:00",
+      "purchaseordernumber": "",
+      "revisionnumber": 8,
+      "rowguid": "b1f5183a-a14f-4ffc-8ffd-f7d660122517",
+      "salesorderid": 53670,
+      "salespersonid": "",
+      "shipdate": "2013-08-08 00:00:00",
+      "shipmethodid": 1,
+      "shiptoaddressid": 22002,
+      "subtotal": 56.97,
+      "taxamt": 4.5576,
+      "territoryid": 9,
+      "totaldue": 62.9519
+    },
+    {
+      "STATUS": "5",
+      "accountnumber": "10-4030-011142",
+      "billtoaddressid": 22812,
+      "comment": "",
+      "creditcardapprovalcode": "1122784Vi18457",
+      "creditcardid": 3510,
+      "currencyrateid": 9095,
+      "customerid": 11142,
+      "duedate": "2013-08-13 00:00:00",
+      "freight": 1.7493,
+      "modifieddate": "2013-08-08 00:00:00",
+      "onlineorderflag": "t",
+      "orderdate": "2013-08-01 00:00:00",
+      "purchaseordernumber": "",
+      "revisionnumber": 8,
+      "rowguid": "8c9bcc61-2407-49ba-9edf-7cf48cbf7ad0",
+      "salesorderid": 53684,
+      "salespersonid": "",
+      "shipdate": "2013-08-08 00:00:00",
+      "shipmethodid": 1,
+      "shiptoaddressid": 22812,
+      "subtotal": 69.97,
+      "taxamt": 5.5976,
+      "territoryid": 6,
+      "totaldue": 77.3169
+    },
+    {
+      "STATUS": "5",
+      "accountnumber": "10-4030-019026",
+      "billtoaddressid": 15512,
+      "comment": "",
+      "creditcardapprovalcode": "323281Vi1669",
+      "creditcardid": 335,
+      "currencyrateid": 9128,
+      "customerid": 19026,
+      "duedate": "2013-08-16 00:00:00",
+      "freight": 0.9318,
+      "modifieddate": "2013-08-11 00:00:00",
+      "onlineorderflag": "t",
+      "orderdate": "2013-08-04 00:00:00",
+      "purchaseordernumber": "",
+      "revisionnumber": 8,
+      "rowguid": "519a1cf6-38e6-47fa-8e96-fce750d757cc",
+      "salesorderid": 53840,
+      "salespersonid": "",
+      "shipdate": "2013-08-11 00:00:00",
+      "shipmethodid": 1,
+      "shiptoaddressid": 15512,
+      "subtotal": 37.27,
+      "taxamt": 2.9816,
+      "territoryid": 6,
+      "totaldue": 41.1834
+    },
+    {
+      "STATUS": "5",
+      "accountnumber": "10-4030-012156",
+      "billtoaddressid": 12759,
+      "comment": "",
+      "creditcardapprovalcode": "537591Vi16271",
+      "creditcardid": 3092,
+      "currencyrateid": "",
+      "customerid": 12156,
+      "duedate": "2013-08-16 00:00:00",
+      "freight": 58.5493,
+      "modifieddate": "2013-08-11 00:00:00",
+      "onlineorderflag": "t",
+      "orderdate": "2013-08-04 00:00:00",
+      "purchaseordernumber": "",
+      "revisionnumber": 8,
+      "rowguid": "8d3dc5b8-f329-4e76-aa91-e28394dc1f88",
+      "salesorderid": 53858,
+      "salespersonid": "",
+      "shipdate": "2013-08-11 00:00:00",
+      "shipmethodid": 1,
+      "shiptoaddressid": 12759,
+      "subtotal": 2341.97,
+      "taxamt": 187.3576,
+      "territoryid": 4,
+      "totaldue": 2587.8769
+    }
+  ]
+}

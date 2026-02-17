@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1156,
+              1383,
+              1555,
+              1561,
+              1889
+            ],
+            "type": "number"
+          },
+          "seller_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "almirante tamandare",
+              "araraquara",
+              "bebedouro",
+              "sp",
+              "tiete"
+            ],
+            "type": "string"
+          },
+          "seller_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1de62b6f2fd96227629786db492433...",
+              "6a8b085f816a1f75f92dbac6eb545f...",
+              "79565f7d5603b24ddf07ade262547f...",
+              "817f85dbb65aa3e70831d90fe75cdf...",
+              "c200c73f9d7e5a08ca439d6a0803da..."
+            ],
+            "type": "string"
+          },
+          "seller_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CE",
+              "MG",
+              "PR",
+              "SC",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "seller_zip_code_prefix": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14709,
+              14804,
+              16021,
+              18530,
+              83507
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sellers::1156",
+                  "sellers::1383",
+                  "sellers::1555",
+                  "sellers::1561",
+                  "sellers::1889"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sellers::1156"
+              },
+              {
+                "id": "sellers::1383"
+              },
+              {
+                "id": "sellers::1555"
+              },
+              {
+                "id": "sellers::1561"
+              },
+              {
+                "id": "sellers::1889"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "index": 1157,
+      "seller_city": "sao paulo",
+      "seller_id": "ba143b05f0110f0dc71ad71b4466ce92",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 2274
+    },
+    {
+      "index": 1163,
+      "seller_city": "sao paulo",
+      "seller_id": "c5e60e39c0f42b8e827daa13cff74afa",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 3449
+    },
+    {
+      "index": 1212,
+      "seller_city": "sao paulo",
+      "seller_id": "f049a72cf58fd31b11f8919cade515e7",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 1023
+    },
+    {
+      "index": 1226,
+      "seller_city": "rio de janeiro",
+      "seller_id": "1d2732ef8321502ee8488e8bed1ab8cd",
+      "seller_state": "RJ",
+      "seller_zip_code_prefix": 20031
+    },
+    {
+      "index": 1382,
+      "seller_city": "mogi das cruzes",
+      "seller_id": "ff1fb4c404b2efe68b03350a8dc24122",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 8710
+    }
+  ]
+}

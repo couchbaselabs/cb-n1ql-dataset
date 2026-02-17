@@ -1,0 +1,241 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "g": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              63,
+              80,
+              81,
+              158,
+              163
+            ],
+            "type": "number"
+          },
+          "inseason": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "l": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              29,
+              42,
+              47,
+              68,
+              71
+            ],
+            "type": "number"
+          },
+          "league_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "UA",
+              "AA",
+              "AL",
+              "NL",
+              ""
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "alstowa01",
+              "mckecbi01",
+              "melesa01",
+              "owenspa99",
+              "sherrno01"
+            ],
+            "type": "string"
+          },
+          "plyr_mgr": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N",
+              "Y"
+            ],
+            "type": "string"
+          },
+          "rank": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "team_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CAL",
+              "LAN",
+              "MIN",
+              "PHI",
+              "SLN"
+            ],
+            "type": "string"
+          },
+          "w": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              33,
+              34,
+              39,
+              90,
+              91
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1929,
+              1962,
+              1972,
+              1976,
+              1977
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "manager::1075",
+                  "manager::1707",
+                  "manager::1986",
+                  "manager::2099",
+                  "manager::2111"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "manager::1075"
+              },
+              {
+                "id": "manager::1707"
+              },
+              {
+                "id": "manager::1986"
+              },
+              {
+                "id": "manager::2099"
+              },
+              {
+                "id": "manager::2111"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "g": 154,
+      "inseason": 1,
+      "l": 53,
+      "league_id": "AL",
+      "player_id": "huggimi01",
+      "plyr_mgr": "N",
+      "rank": 1,
+      "team_id": "NYA",
+      "w": 101,
+      "year": 1928
+    },
+    {
+      "g": 154,
+      "inseason": 1,
+      "l": 92,
+      "league_id": "AL",
+      "player_id": "bushdo01",
+      "plyr_mgr": "N",
+      "rank": 7,
+      "team_id": "CHA",
+      "w": 62,
+      "year": 1930
+    },
+    {
+      "g": 154,
+      "inseason": 1,
+      "l": 66,
+      "league_id": "NL",
+      "player_id": "mckecbi01",
+      "plyr_mgr": "N",
+      "rank": 3,
+      "team_id": "CIN",
+      "w": 88,
+      "year": 1941
+    },
+    {
+      "g": 154,
+      "inseason": 1,
+      "l": 99,
+      "league_id": "AL",
+      "player_id": "mackco01",
+      "plyr_mgr": "N",
+      "rank": 8,
+      "team_id": "PHA",
+      "w": 55,
+      "year": 1942
+    },
+    {
+      "g": 63,
+      "inseason": 2,
+      "l": 37,
+      "league_id": "NL",
+      "player_id": "fitzsfr01",
+      "plyr_mgr": "N",
+      "rank": 7,
+      "team_id": "PHI",
+      "w": 25,
+      "year": 1943
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "product_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6520,
+              6600
+            ],
+            "type": "number"
+          },
+          "qty_minimum": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30,
+              100
+            ],
+            "type": "number"
+          },
+          "qty_purchase": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              100,
+              400
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "product_minimums::0",
+                  "product_minimums::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "product_minimums::0"
+              },
+              {
+                "id": "product_minimums::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "product_id": 6520,
+      "qty_minimum": 100,
+      "qty_purchase": 400
+    },
+    {
+      "product_id": 6600,
+      "qty_minimum": 30,
+      "qty_purchase": 100
+    }
+  ]
+}

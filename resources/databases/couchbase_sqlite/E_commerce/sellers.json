@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "seller_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "campinas",
+              "catanduva",
+              "jaragua do sul",
+              "palhoca",
+              "sao paulo"
+            ],
+            "type": "string"
+          },
+          "seller_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "11742f81550ac064cc9a40f67151d9...",
+              "1f2eebc0e970fd3c463e4f5d965268...",
+              "7c462184585ae80bd6e5774c62ce50...",
+              "8cbac7e12637ed9cffa18c78752074...",
+              "a513150f33f99a06569e9cd5c4bb88..."
+            ],
+            "type": "string"
+          },
+          "seller_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MG",
+              "RJ",
+              "RS",
+              "SC",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "seller_zip_code_prefix": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1311,
+              1545,
+              13086,
+              15810,
+              89254
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sellers::1054",
+                  "sellers::1463",
+                  "sellers::157",
+                  "sellers::1682",
+                  "sellers::1803"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sellers::1054"
+              },
+              {
+                "id": "sellers::1463"
+              },
+              {
+                "id": "sellers::157"
+              },
+              {
+                "id": "sellers::1682"
+              },
+              {
+                "id": "sellers::1803"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "seller_city": "guarulhos",
+      "seller_id": "688756f717c462a206ad854c5027a64a",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 7094
+    },
+    {
+      "seller_city": "brotas",
+      "seller_id": "6c9875b2f94ba781186f0c1aed8d1687",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 17380
+    },
+    {
+      "seller_city": "sao miguel do oeste",
+      "seller_id": "c74f14c1e26cf1bd5bd34b6a1e274426",
+      "seller_state": "SC",
+      "seller_zip_code_prefix": 89900
+    },
+    {
+      "seller_city": "cotia",
+      "seller_id": "3820c6537b3853be1a0687d5a60807ec",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 6717
+    },
+    {
+      "seller_city": "uberlandia",
+      "seller_id": "e99e927c81e3f51739c94fcdfca9f10f",
+      "seller_state": "MG",
+      "seller_zip_code_prefix": 38400
+    }
+  ]
+}

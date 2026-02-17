@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 11,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_id": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              1729,
+              4769,
+              10257,
+              13274
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              1729,
+              4769,
+              10257,
+              13274
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Belgium Jupiler League",
+              "England Premier League",
+              "France Ligue 1",
+              "Italy Serie A",
+              "Netherlands Eredivisie"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 11,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "League::0",
+                  "League::1",
+                  "League::2",
+                  "League::4",
+                  "League::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "League::0"
+              },
+              {
+                "id": "League::1"
+              },
+              {
+                "id": "League::2"
+              },
+              {
+                "id": "League::4"
+              },
+              {
+                "id": "League::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_id": 19694,
+      "id": 19694,
+      "name": "Scotland Premier League"
+    },
+    {
+      "country_id": 4769,
+      "id": 4769,
+      "name": "France Ligue 1"
+    },
+    {
+      "country_id": 7809,
+      "id": 7809,
+      "name": "Germany 1. Bundesliga"
+    },
+    {
+      "country_id": 24558,
+      "id": 24558,
+      "name": "Switzerland Super League"
+    },
+    {
+      "country_id": 13274,
+      "id": 13274,
+      "name": "Netherlands Eredivisie"
+    }
+  ]
+}

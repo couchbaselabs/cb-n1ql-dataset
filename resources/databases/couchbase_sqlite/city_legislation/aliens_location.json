@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`country` = \"United States\"",
+        "properties": {
+          "country": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "United States"
+            ],
+            "type": "string"
+          },
+          "current_location": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Albany",
+              "Alexandria",
+              "Bradenton",
+              "San Francisco",
+              "San Jose"
+            ],
+            "type": "string"
+          },
+          "loc_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1223,
+              17957,
+              20897,
+              22218,
+              22930
+            ],
+            "type": "number"
+          },
+          "occupation": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Chemical Engineer",
+              "General Manager",
+              "Help Desk Operator",
+              "Internal Auditor",
+              "Junior Executive"
+            ],
+            "type": "string"
+          },
+          "state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "California",
+              "Florida",
+              "Iowa",
+              "New York",
+              "Virginia"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "aliens_location::1222",
+                  "aliens_location::17956",
+                  "aliens_location::20896",
+                  "aliens_location::22217",
+                  "aliens_location::22929"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "aliens_location::1222"
+              },
+              {
+                "id": "aliens_location::17956"
+              },
+              {
+                "id": "aliens_location::20896"
+              },
+              {
+                "id": "aliens_location::22217"
+              },
+              {
+                "id": "aliens_location::22929"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country": "United States",
+      "current_location": "Orlando",
+      "loc_id": 10017,
+      "occupation": "Automation Specialist IV",
+      "state": "Florida"
+    },
+    {
+      "country": "United States",
+      "current_location": "Saint Louis",
+      "loc_id": 10023,
+      "occupation": "Media Manager IV",
+      "state": "Missouri"
+    },
+    {
+      "country": "United States",
+      "current_location": "Birmingham",
+      "loc_id": 10187,
+      "occupation": "Recruiting Manager",
+      "state": "Alabama"
+    },
+    {
+      "country": "United States",
+      "current_location": "Pueblo",
+      "loc_id": 10354,
+      "occupation": "Electrical Engineer",
+      "state": "Colorado"
+    },
+    {
+      "country": "United States",
+      "current_location": "Lincoln",
+      "loc_id": 10368,
+      "occupation": "Data Coordiator",
+      "state": "Nebraska"
+    }
+  ]
+}

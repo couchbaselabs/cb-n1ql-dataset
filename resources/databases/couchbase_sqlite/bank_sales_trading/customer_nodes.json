@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              68,
+              124,
+              151,
+              165,
+              398
+            ],
+            "type": "number"
+          },
+          "end_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-01-04",
+              "2020-02-21",
+              "2020-02-28",
+              "2020-03-07",
+              "2020-04-23"
+            ],
+            "type": "string"
+          },
+          "node_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "region_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "start_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-01-01",
+              "2020-02-07",
+              "2020-02-12",
+              "2020-02-14",
+              "2020-04-06"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customer_nodes::1150",
+                  "customer_nodes::1164",
+                  "customer_nodes::123",
+                  "customer_nodes::1567",
+                  "customer_nodes::1897"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customer_nodes::1150"
+              },
+              {
+                "id": "customer_nodes::1164"
+              },
+              {
+                "id": "customer_nodes::123"
+              },
+              {
+                "id": "customer_nodes::1567"
+              },
+              {
+                "id": "customer_nodes::1897"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_id": 49,
+      "end_date": "2020-02-11",
+      "node_id": 4,
+      "region_id": 2,
+      "start_date": "2020-02-02"
+    },
+    {
+      "customer_id": 51,
+      "end_date": "2020-02-17",
+      "node_id": 2,
+      "region_id": 1,
+      "start_date": "2020-02-17"
+    },
+    {
+      "customer_id": 65,
+      "end_date": "2020-03-27",
+      "node_id": 2,
+      "region_id": 1,
+      "start_date": "2020-02-28"
+    },
+    {
+      "customer_id": 286,
+      "end_date": "2020-02-25",
+      "node_id": 2,
+      "region_id": 4,
+      "start_date": "2020-02-01"
+    },
+    {
+      "customer_id": 316,
+      "end_date": "2020-03-17",
+      "node_id": 4,
+      "region_id": 4,
+      "start_date": "2020-03-02"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 48,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "constructor_ref": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "aston_martin",
+              "ferrari",
+              "mclaren",
+              "mercedes",
+              "red_bull"
+            ],
+            "type": "string"
+          },
+          "driver_ref": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "norris",
+              "rosberg",
+              "stroll",
+              "vettel",
+              "webber"
+            ],
+            "type": "string"
+          },
+          "team_driver_rank": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2008,
+              2014,
+              2016,
+              2021,
+              2022
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 48,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "tdr_overrides::15",
+                  "tdr_overrides::21",
+                  "tdr_overrides::39",
+                  "tdr_overrides::44",
+                  "tdr_overrides::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "tdr_overrides::15"
+              },
+              {
+                "id": "tdr_overrides::21"
+              },
+              {
+                "id": "tdr_overrides::39"
+              },
+              {
+                "id": "tdr_overrides::44"
+              },
+              {
+                "id": "tdr_overrides::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "constructor_ref": "mclaren",
+      "driver_ref": "alonso",
+      "team_driver_rank": 1,
+      "year": 2015
+    },
+    {
+      "constructor_ref": "red_bull",
+      "driver_ref": "kvyat",
+      "team_driver_rank": 2,
+      "year": 2016
+    },
+    {
+      "constructor_ref": "haas",
+      "driver_ref": "grosjean",
+      "team_driver_rank": 1,
+      "year": 2019
+    },
+    {
+      "constructor_ref": "ferrari",
+      "driver_ref": "massa",
+      "team_driver_rank": 1,
+      "year": 2009
+    },
+    {
+      "constructor_ref": "renault",
+      "driver_ref": "hulkenberg",
+      "team_driver_rank": 1,
+      "year": 2017
+    }
+  ]
+}

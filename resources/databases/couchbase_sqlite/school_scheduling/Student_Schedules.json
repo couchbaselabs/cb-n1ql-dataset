@@ -1,0 +1,134 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 120,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ClassID": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1030,
+              1500,
+              2223,
+              2907,
+              5510
+            ],
+            "type": "number"
+          },
+          "ClassStatus": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "Grade": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              65.8,
+              77.07,
+              93.05,
+              97.84
+            ],
+            "type": "number"
+          },
+          "StudentID": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1007,
+              1009,
+              1010,
+              1012,
+              1013
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 120,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Student_Schedules::42",
+                  "Student_Schedules::55",
+                  "Student_Schedules::61",
+                  "Student_Schedules::76",
+                  "Student_Schedules::79"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Student_Schedules::42"
+              },
+              {
+                "id": "Student_Schedules::55"
+              },
+              {
+                "id": "Student_Schedules::61"
+              },
+              {
+                "id": "Student_Schedules::76"
+              },
+              {
+                "id": "Student_Schedules::79"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ClassID": 1156,
+      "ClassStatus": 2,
+      "Grade": 88.54,
+      "StudentID": 1017
+    },
+    {
+      "ClassID": 4002,
+      "ClassStatus": 1,
+      "Grade": 0,
+      "StudentID": 1017
+    },
+    {
+      "ClassID": 1500,
+      "ClassStatus": 2,
+      "Grade": 85.01,
+      "StudentID": 1015
+    },
+    {
+      "ClassID": 4002,
+      "ClassStatus": 1,
+      "Grade": 0,
+      "StudentID": 1006
+    },
+    {
+      "ClassID": 4180,
+      "ClassStatus": 1,
+      "Grade": 0,
+      "StudentID": 1006
+    }
+  ]
+}

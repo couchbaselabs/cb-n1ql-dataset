@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 40,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "channel_id": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              24,
+              25,
+              43,
+              44
+            ],
+            "type": "number"
+          },
+          "channel_name": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ALL PLACE",
+              "CAICAI PLACE",
+              "FULL PLACE",
+              "ON PLACE",
+              "READY PLACE"
+            ],
+            "type": "string"
+          },
+          "channel_type": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MARKETPLACE",
+              "OWN CHANNEL"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 40,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "channels::11",
+                  "channels::18",
+                  "channels::19",
+                  "channels::34",
+                  "channels::35"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "channels::11"
+              },
+              {
+                "id": "channels::18"
+              },
+              {
+                "id": "channels::19"
+              },
+              {
+                "id": "channels::34"
+              },
+              {
+                "id": "channels::35"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "channel_id": 10,
+      "channel_name": "LISBON PLACE",
+      "channel_type": "OWN CHANNEL"
+    },
+    {
+      "channel_id": 1,
+      "channel_name": "OTHER PLACE",
+      "channel_type": "OWN CHANNEL"
+    },
+    {
+      "channel_id": 11,
+      "channel_name": "SUPER PLACE",
+      "channel_type": "OWN CHANNEL"
+    },
+    {
+      "channel_id": 32,
+      "channel_name": "BEATLES PLACE",
+      "channel_type": "MARKETPLACE"
+    },
+    {
+      "channel_id": 21,
+      "channel_name": "LONDON PLACE",
+      "channel_type": "MARKETPLACE"
+    }
+  ]
+}

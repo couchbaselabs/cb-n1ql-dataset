@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "boarding_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              18,
+              64,
+              74,
+              106,
+              305
+            ],
+            "type": "number"
+          },
+          "flight_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              435,
+              5310,
+              5333,
+              8031,
+              28173
+            ],
+            "type": "number"
+          },
+          "seat_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "19B",
+              "20H",
+              "21G",
+              "28A",
+              "51F"
+            ],
+            "type": "string"
+          },
+          "ticket_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0005433057173",
+              "0005433101849",
+              "0005435042821",
+              "0005435613038",
+              "0005435844307"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "boarding_passes::130740",
+                  "boarding_passes::152005",
+                  "boarding_passes::171936",
+                  "boarding_passes::178082",
+                  "boarding_passes::204897"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "boarding_passes::130740"
+              },
+              {
+                "id": "boarding_passes::152005"
+              },
+              {
+                "id": "boarding_passes::171936"
+              },
+              {
+                "id": "boarding_passes::178082"
+              },
+              {
+                "id": "boarding_passes::204897"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "boarding_no": 158,
+      "flight_id": 9914,
+      "seat_no": "45D",
+      "ticket_no": "0005432202999"
+    },
+    {
+      "boarding_no": 188,
+      "flight_id": 9914,
+      "seat_no": "51F",
+      "ticket_no": "0005434821682"
+    },
+    {
+      "boarding_no": 4,
+      "flight_id": 26010,
+      "seat_no": "21A",
+      "ticket_no": "0005435790256"
+    },
+    {
+      "boarding_no": 20,
+      "flight_id": 7571,
+      "seat_no": "19E",
+      "ticket_no": "0005433123575"
+    },
+    {
+      "boarding_no": 17,
+      "flight_id": 1955,
+      "seat_no": "6A",
+      "ticket_no": "0005434639094"
+    }
+  ]
+}

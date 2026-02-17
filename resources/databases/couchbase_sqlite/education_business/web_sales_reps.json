@@ -1,0 +1,117 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 50,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 50,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              321630,
+              321770,
+              321790,
+              321810,
+              321910
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 50,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Brandie Riva",
+              "Cordell Rieder",
+              "Julia Behrman",
+              "Kathleen Lalonde",
+              "Moon Torian"
+            ],
+            "type": "string"
+          },
+          "region_id": {
+            "#docs": 50,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 50,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 50,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_sales_reps::13",
+                  "web_sales_reps::27",
+                  "web_sales_reps::29",
+                  "web_sales_reps::31",
+                  "web_sales_reps::41"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_sales_reps::13"
+              },
+              {
+                "id": "web_sales_reps::27"
+              },
+              {
+                "id": "web_sales_reps::29"
+              },
+              {
+                "id": "web_sales_reps::31"
+              },
+              {
+                "id": "web_sales_reps::41"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 321680,
+      "name": "Elna Condello",
+      "region_id": 1
+    },
+    {
+      "id": 321840,
+      "name": "Vernita Plump",
+      "region_id": 3
+    },
+    {
+      "id": 321980,
+      "name": "Micha Woodford",
+      "region_id": 4
+    },
+    {
+      "id": 321570,
+      "name": "Shawanda Selke",
+      "region_id": 1
+    },
+    {
+      "id": 321640,
+      "name": "Tia Amato",
+      "region_id": 1
+    }
+  ]
+}

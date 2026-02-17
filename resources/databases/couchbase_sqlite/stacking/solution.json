@@ -1,0 +1,199 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 101,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`correlation` = 0.75",
+        "properties": {
+          "correlation": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.75
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Critical Heat Flux",
+              "Franck-Hertz",
+              "Liver disease prediction",
+              "PCOS",
+              "survey lung cancer"
+            ],
+            "type": "string"
+          },
+          "nb_feature": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              5,
+              6,
+              10
+            ],
+            "type": "number"
+          },
+          "nb_model": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              7
+            ],
+            "type": "number"
+          },
+          "resampling": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "score": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.4,
+              0.45,
+              0.7,
+              0.85,
+              0.9
+            ],
+            "type": "number"
+          },
+          "test_size": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.29,
+              0.3,
+              0.33
+            ],
+            "type": "number"
+          },
+          "version": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 101,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 101,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "solution::15",
+                  "solution::21",
+                  "solution::39",
+                  "solution::48",
+                  "solution::50"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "solution::15"
+              },
+              {
+                "id": "solution::21"
+              },
+              {
+                "id": "solution::39"
+              },
+              {
+                "id": "solution::48"
+              },
+              {
+                "id": "solution::50"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "correlation": 0.75,
+      "name": "Delaney solubility",
+      "nb_feature": 5,
+      "nb_model": 5,
+      "resampling": 0,
+      "score": 0.7,
+      "test_size": 0.33,
+      "version": 3
+    },
+    {
+      "correlation": 0.75,
+      "name": "Pumpkin Seeds",
+      "nb_feature": 3,
+      "nb_model": 3,
+      "resampling": 0,
+      "score": 0.7,
+      "test_size": 0.33,
+      "version": 4
+    },
+    {
+      "correlation": 0.75,
+      "name": "Delaney solubility",
+      "nb_feature": 3,
+      "nb_model": 3,
+      "resampling": 0,
+      "score": 0.8,
+      "test_size": 0.33,
+      "version": 5
+    },
+    {
+      "correlation": 0.75,
+      "name": "Delaney solubility",
+      "nb_feature": 5,
+      "nb_model": 3,
+      "resampling": 0,
+      "score": 0.7,
+      "test_size": 0.33,
+      "version": 4
+    },
+    {
+      "correlation": 0.75,
+      "name": "water quality",
+      "nb_feature": 5,
+      "nb_model": 5,
+      "resampling": 0,
+      "score": 0.7,
+      "test_size": 0.33,
+      "version": 1
+    }
+  ]
+}

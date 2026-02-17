@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 19,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CategoryDescription": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Art",
+              "Biology",
+              "Economics",
+              "English",
+              "Math"
+            ],
+            "type": "string"
+          },
+          "CategoryID": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ART",
+              "BIO",
+              "ECO",
+              "ENG",
+              "MAT"
+            ],
+            "type": "string"
+          },
+          "DepartmentID": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 19,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Categories::1",
+                  "Categories::14",
+                  "Categories::2",
+                  "Categories::7",
+                  "Categories::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Categories::1"
+              },
+              {
+                "id": "Categories::14"
+              },
+              {
+                "id": "Categories::2"
+              },
+              {
+                "id": "Categories::7"
+              },
+              {
+                "id": "Categories::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CategoryDescription": "Computer Information Systems",
+      "CategoryID": "CIS",
+      "DepartmentID": 5
+    },
+    {
+      "CategoryDescription": "German",
+      "CategoryID": "GER",
+      "DepartmentID": 3
+    },
+    {
+      "CategoryDescription": "Accounting",
+      "CategoryID": "ACC",
+      "DepartmentID": 1
+    },
+    {
+      "CategoryDescription": "Geography",
+      "CategoryID": "GEG",
+      "DepartmentID": 4
+    },
+    {
+      "CategoryDescription": "Music",
+      "CategoryID": "MUS",
+      "DepartmentID": 3
+    }
+  ]
+}

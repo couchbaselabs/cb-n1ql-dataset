@@ -1,0 +1,208 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "freight_value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14.61,
+              15.64,
+              18.23,
+              19.28,
+              49.86
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              17973,
+              23427,
+              33223,
+              102668,
+              107779
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "293429beb0a9a73217c1b2ebed0091...",
+              "3568ebea6d5338487cf9c64e9f59ab...",
+              "4b4c7655aadab4cf1eb81eddf40afc...",
+              "e9240e3e8bd5fbca3e55e993b597b5...",
+              "f4efa4faef71d2d5292f202ba37bbd..."
+            ],
+            "type": "string"
+          },
+          "order_item_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14.33,
+              108.9,
+              173.9,
+              179,
+              199.8
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "05a9dadb8402b6b7ae3dd28f7da187...",
+              "0c71252f37443403376d2008034a72...",
+              "0f9dbdf3289052ac7406ba5bc1b0db...",
+              "8922a988522761e78f0444350218e7...",
+              "ccd686475dbff77b93871eae475452..."
+            ],
+            "type": "string"
+          },
+          "seller_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "522620dcb18a6b31cd7bdf73665113...",
+              "70c27847eca8195c983ed7e798c567...",
+              "bacb1f0ed56ad24198f5810d2b3fe9...",
+              "e250d617a0ad591ba9bd663e584a89...",
+              "fa1c13f2614d7b5c4749cbc52fecda..."
+            ],
+            "type": "string"
+          },
+          "shipping_limit_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-06-28 21:30:20",
+              "2018-04-30 10:31:20",
+              "2018-05-18 17:35:29",
+              "2018-06-05 17:55:52",
+              "2018-06-20 16:31:19"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "order_items::102668",
+                  "order_items::107779",
+                  "order_items::17973",
+                  "order_items::23427",
+                  "order_items::33223"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "order_items::102668"
+              },
+              {
+                "id": "order_items::107779"
+              },
+              {
+                "id": "order_items::17973"
+              },
+              {
+                "id": "order_items::23427"
+              },
+              {
+                "id": "order_items::33223"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "freight_value": 18.27,
+      "index": 100148,
+      "order_id": "e31fbb2860d15276b1e38f43e9423924",
+      "order_item_id": 1,
+      "price": 156.99,
+      "product_id": "c37123a4ab536f2b55e1164f5759318a",
+      "seller_id": "06e5eefc71ec47ae763c5c6f8db7064f",
+      "shipping_limit_date": "2018-05-23 19:12:55"
+    },
+    {
+      "freight_value": 17.76,
+      "index": 100150,
+      "order_id": "e32049d31df0d952f7a6f6d8243b554a",
+      "order_item_id": 1,
+      "price": 90,
+      "product_id": "71b7afd92c42feab780d5ea512fc7348",
+      "seller_id": "c3aad7dc65449ae90a5e9c3c6c1e78e0",
+      "shipping_limit_date": "2018-08-24 05:09:40"
+    },
+    {
+      "freight_value": 22.39,
+      "index": 100164,
+      "order_id": "e327b1f61853b5d93ba0c53bf998b557",
+      "order_item_id": 1,
+      "price": 65.06,
+      "product_id": "2bf81ae622207551768a47a59930c69f",
+      "seller_id": "dc4a0fc896dc34b0d5bfec8438291c80",
+      "shipping_limit_date": "2017-04-12 05:55:25"
+    },
+    {
+      "freight_value": 19.9,
+      "index": 100215,
+      "order_id": "e33cd806dc139902dbd4f1e2bb2d1775",
+      "order_item_id": 1,
+      "price": 288,
+      "product_id": "9fbfc0d1a475bb65f9c0e39bb927a99a",
+      "seller_id": "ec80e49e69745ab6c14f984bf2149423",
+      "shipping_limit_date": "2018-04-17 19:10:47"
+    },
+    {
+      "freight_value": 36.74,
+      "index": 100221,
+      "order_id": "e3406c9214774d66295ee5aa96724ef6",
+      "order_item_id": 1,
+      "price": 199,
+      "product_id": "f9b4f8ef12259efd919fbaf21f8f66a4",
+      "seller_id": "7ad32824caee82087b3e2e5f33b1bf32",
+      "shipping_limit_date": "2018-08-01 17:10:17"
+    }
+  ]
+}

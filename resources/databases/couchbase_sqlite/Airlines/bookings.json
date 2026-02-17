@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "book_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-07-05 04:54:00+03",
+              "2017-07-12 06:11:00+03",
+              "2017-07-13 20:15:00+03",
+              "2017-07-15 09:03:00+03",
+              "2017-07-22 19:55:00+03"
+            ],
+            "type": "string"
+          },
+          "book_ref": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "01C43B",
+              "67FFF3",
+              "6A37F0",
+              "7755BC",
+              "DC8BE8"
+            ],
+            "type": "string"
+          },
+          "total_amount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13000,
+              23400,
+              24800,
+              99700,
+              179400
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "bookings::106820",
+                  "bookings::109071",
+                  "bookings::122592",
+                  "bookings::1881",
+                  "bookings::226350"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "bookings::106820"
+              },
+              {
+                "id": "bookings::109071"
+              },
+              {
+                "id": "bookings::122592"
+              },
+              {
+                "id": "bookings::1881"
+              },
+              {
+                "id": "bookings::226350"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "book_date": "2017-08-07 22:30:00+03",
+      "book_ref": "6179A1",
+      "total_amount": 38500
+    },
+    {
+      "book_date": "2017-08-12 21:01:00+03",
+      "book_ref": "617DF5",
+      "total_amount": 20400
+    },
+    {
+      "book_date": "2017-07-20 07:55:00+03",
+      "book_ref": "6183AE",
+      "total_amount": 72200
+    },
+    {
+      "book_date": "2017-08-12 11:11:00+03",
+      "book_ref": "618452",
+      "total_amount": 14400
+    },
+    {
+      "book_date": "2017-07-11 07:09:00+03",
+      "book_ref": "619D78",
+      "total_amount": 77200
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 4,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "groupname": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "High",
+              "Low",
+              "Medium",
+              "Very High"
+            ],
+            "type": "string"
+          },
+          "rangebottom": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1000,
+              5000,
+              10000
+            ],
+            "type": "number"
+          },
+          "rangetop": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              999.9999,
+              4999.9999,
+              9999.9999,
+              922337203685477.6
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 4,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customergroupthreshold::0",
+                  "customergroupthreshold::1",
+                  "customergroupthreshold::2",
+                  "customergroupthreshold::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customergroupthreshold::0"
+              },
+              {
+                "id": "customergroupthreshold::1"
+              },
+              {
+                "id": "customergroupthreshold::2"
+              },
+              {
+                "id": "customergroupthreshold::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "groupname": "Low",
+      "rangebottom": 0,
+      "rangetop": 999.9999
+    },
+    {
+      "groupname": "High",
+      "rangebottom": 5000,
+      "rangetop": 9999.9999
+    },
+    {
+      "groupname": "Very High",
+      "rangebottom": 10000,
+      "rangetop": 922337203685477.6
+    },
+    {
+      "groupname": "Medium",
+      "rangebottom": 1000,
+      "rangetop": 4999.9999
+    }
+  ]
+}

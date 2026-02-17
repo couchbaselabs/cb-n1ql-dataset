@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              93715,
+              109114,
+              117034,
+              117186,
+              129040
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A-Train & Billy Gunn & Booker ...",
+              "Big Al",
+              "Brie Bella & Eve Torres & Gail...",
+              "Sid Vicious & Terry Funk",
+              "Super Assassin #1 & Super Assa..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Wrestlers::10640",
+                  "Wrestlers::12506",
+                  "Wrestlers::13461",
+                  "Wrestlers::13479",
+                  "Wrestlers::14391"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Wrestlers::10640"
+              },
+              {
+                "id": "Wrestlers::12506"
+              },
+              {
+                "id": "Wrestlers::13461"
+              },
+              {
+                "id": "Wrestlers::13479"
+              },
+              {
+                "id": "Wrestlers::14391"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 88855,
+      "name": "Kung Fu Naki"
+    },
+    {
+      "id": 89298,
+      "name": "Alex Riley & Daniel Bryan & Drew McIntyre & Ezekiel Jackson & John Morrison & Justin Gabriel & Sheamus & Sin Cara & Ted DiBiase Jr."
+    },
+    {
+      "id": 89386,
+      "name": "Joey Gray"
+    },
+    {
+      "id": 90834,
+      "name": "Brodus Clay & Chavo Guerrero & Chris Masters & Cody Rhodes & Curt Hawkins & Drew McIntyre & Ezekiel Jackson & Heath Slater & JTG & Jack Swagger & Justin Gabriel & Kane & Kofi Kingston & Rey Mysterio & The Big Show & Trent Barreta & Tyler Reks & Wade Barrett & Yoshi Tatsu"
+    },
+    {
+      "id": 90939,
+      "name": "Edge & John Cena & Randy Orton & Rey Mysterio"
+    }
+  ]
+}

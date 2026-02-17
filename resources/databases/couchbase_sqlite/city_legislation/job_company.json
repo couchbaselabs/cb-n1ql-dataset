@@ -1,0 +1,196 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "company_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              47927,
+              105460,
+              178038,
+              208283,
+              423161
+            ],
+            "type": "number"
+          },
+          "link": {
+            "#docs": [
+              745,
+              255
+            ],
+            "%docs": [
+              74.5,
+              25.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "http://www.anpost.com/",
+                "http://www.buccaneers.com/",
+                "http://www.leutek.de/",
+                "http://www.maximizer.com/",
+                "http://www.nba.com/hornets/"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "link_google": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "https://www.google.com/search?...",
+                "https://www.google.com/search?...",
+                "https://www.google.com/search?...",
+                "https://www.google.com/search?...",
+                "https://www.google.com/search?..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "EKAF",
+              "KODERS",
+              "Robson Bale",
+              "Sovendus GmbH",
+              "\ub85c\uc774\ucee8\uc124\ud305 \uc8fc\uc2dd\ud68c\uc0ac"
+            ],
+            "type": "string"
+          },
+          "thumbnail": {
+            "#docs": [
+              685,
+              315
+            ],
+            "%docs": [
+              68.5,
+              31.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "https://encrypted-tbn0.gstatic...",
+                "https://encrypted-tbn0.gstatic...",
+                "https://encrypted-tbn0.gstatic...",
+                "https://encrypted-tbn0.gstatic...",
+                "https://encrypted-tbn0.gstatic..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "job_company::10169",
+                  "job_company::10344",
+                  "job_company::12393",
+                  "job_company::12790",
+                  "job_company::3109"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "job_company::10169"
+              },
+              {
+                "id": "job_company::10344"
+              },
+              {
+                "id": "job_company::12393"
+              },
+              {
+                "id": "job_company::12790"
+              },
+              {
+                "id": "job_company::3109"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "company_id": 481008,
+      "link": null,
+      "link_google": "https://www.google.com/search?ucbcb=1&hl=en&gl=us&q=Artiset&sa=X&ved=0ahUKEwjJwfqDh7D9AhXwkokEHWYEASg4FBCYkAIIlAo",
+      "name": "Artiset",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlYhTIctosy8Q-PULpKW-VbJjPh99wvMHEBJrN7gk&s"
+    },
+    {
+      "company_id": 675776,
+      "link": "http://www.efgbank.com/",
+      "link_google": "https://www.google.com/search?sca_esv=577385484&hl=en&gl=us&q=EFG+BANK+AG+(EFG+BANK+SA)+(EFG+BANK+LTD)&sa=X&ved=0ahUKEwiQs5XOjJiCAxUBkIkEHW_oAKwQmJACCL8J",
+      "name": "EFG BANK AG (EFG BANK SA) (EFG BANK LTD)",
+      "thumbnail": null
+    },
+    {
+      "company_id": 110635,
+      "link": null,
+      "link_google": "https://www.google.com/search?sca_esv=579729357&gl=us&hl=en&q=XYZies+Call+Center&sa=X&ved=0ahUKEwjpk6XZ5q6CAxXSElkFHRKcDig4KBCYkAIIkg0",
+      "name": "XYZies Call Center",
+      "thumbnail": null
+    },
+    {
+      "company_id": 698977,
+      "link": null,
+      "link_google": "https://www.google.com/search?sca_esv=559635945&hl=en&gl=us&q=Saint+James+Health+Services&sa=X&ved=0ahUKEwiqk8mEz_SAAxUjRDABHbmpBvQ4ChCYkAII6Qo",
+      "name": "Saint James Health Services",
+      "thumbnail": null
+    },
+    {
+      "company_id": 685588,
+      "link": null,
+      "link_google": "https://www.google.com/search?sca_esv=587222008&hl=en&gl=us&q=Shifastar&sa=X&ved=0ahUKEwj82O79jPCCAxX-FlkFHVB2Aug4FBCYkAII7gk",
+      "name": "Shifastar",
+      "thumbnail": null
+    }
+  ]
+}

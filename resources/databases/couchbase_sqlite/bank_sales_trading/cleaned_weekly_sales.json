@@ -1,0 +1,306 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "age_band": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Middle Aged",
+              "Retirees",
+              "Young Adults",
+              "unknown"
+            ],
+            "type": "string"
+          },
+          "avg_transaction": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              32.53,
+              39.51,
+              61.27,
+              172.84,
+              178.09
+            ],
+            "type": "number"
+          },
+          "calendar_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2018,
+              2019,
+              2020
+            ],
+            "type": "number"
+          },
+          "customer_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Existing",
+              "Guest",
+              "New"
+            ],
+            "type": "string"
+          },
+          "demographic": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Couples",
+              "Families",
+              "unknown"
+            ],
+            "type": "string"
+          },
+          "month_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Retail",
+              "Shopify"
+            ],
+            "type": "string"
+          },
+          "region": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AFRICA",
+              "CANADA",
+              "EUROPE",
+              "SOUTH AMERICA",
+              "USA"
+            ],
+            "type": "string"
+          },
+          "sales": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8192,
+              22815,
+              134727,
+              859654,
+              5412840
+            ],
+            "type": "number"
+          },
+          "segment": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C1",
+              "C3",
+              "F1",
+              "F2",
+              "unknown"
+            ],
+            "type": "string"
+          },
+          "transactions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              46,
+              132,
+              4142,
+              21760,
+              88351
+            ],
+            "type": "number"
+          },
+          "week_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-07-16",
+              "2018-07-23",
+              "2018-08-20",
+              "2019-04-01",
+              "2019-04-22"
+            ],
+            "type": "string"
+          },
+          "week_date_formatted": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-7-16",
+              "2018-7-23",
+              "2018-8-20",
+              "2019-4-1",
+              "2019-4-22"
+            ],
+            "type": "string"
+          },
+          "week_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14,
+              17,
+              29,
+              30,
+              34
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cleaned_weekly_sales::10315",
+                  "cleaned_weekly_sales::11103",
+                  "cleaned_weekly_sales::11978",
+                  "cleaned_weekly_sales::12994",
+                  "cleaned_weekly_sales::13100"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cleaned_weekly_sales::10315"
+              },
+              {
+                "id": "cleaned_weekly_sales::11103"
+              },
+              {
+                "id": "cleaned_weekly_sales::11978"
+              },
+              {
+                "id": "cleaned_weekly_sales::12994"
+              },
+              {
+                "id": "cleaned_weekly_sales::13100"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "age_band": "unknown",
+      "avg_transaction": 40.88,
+      "calendar_year": 2019,
+      "customer_type": "New",
+      "demographic": "unknown",
+      "month_number": 4,
+      "platform": "Retail",
+      "region": "CANADA",
+      "sales": 671311,
+      "segment": "unknown",
+      "transactions": 16421,
+      "week_date": "2019-04-29",
+      "week_date_formatted": "2019-4-29",
+      "week_number": 18
+    },
+    {
+      "age_band": "Young Adults",
+      "avg_transaction": 43.25,
+      "calendar_year": 2019,
+      "customer_type": "Existing",
+      "demographic": "Couples",
+      "month_number": 4,
+      "platform": "Retail",
+      "region": "CANADA",
+      "sales": 2343902,
+      "segment": "C1",
+      "transactions": 54196,
+      "week_date": "2019-04-29",
+      "week_date_formatted": "2019-4-29",
+      "week_number": 18
+    },
+    {
+      "age_band": "Retirees",
+      "avg_transaction": 43.01,
+      "calendar_year": 2020,
+      "customer_type": "New",
+      "demographic": "Couples",
+      "month_number": 8,
+      "platform": "Retail",
+      "region": "EUROPE",
+      "sales": 176979,
+      "segment": "C3",
+      "transactions": 4115,
+      "week_date": "2020-08-03",
+      "week_date_formatted": "2020-8-3",
+      "week_number": 32
+    },
+    {
+      "age_band": "Retirees",
+      "avg_transaction": 149,
+      "calendar_year": 2020,
+      "customer_type": "New",
+      "demographic": "Families",
+      "month_number": 8,
+      "platform": "Shopify",
+      "region": "CANADA",
+      "sales": 4321,
+      "segment": "F3",
+      "transactions": 29,
+      "week_date": "2020-08-03",
+      "week_date_formatted": "2020-8-3",
+      "week_number": 32
+    },
+    {
+      "age_band": "Middle Aged",
+      "avg_transaction": 41.06,
+      "calendar_year": 2019,
+      "customer_type": "New",
+      "demographic": "Families",
+      "month_number": 4,
+      "platform": "Retail",
+      "region": "USA",
+      "sales": 1170907,
+      "segment": "F2",
+      "transactions": 28517,
+      "week_date": "2019-04-22",
+      "week_date_formatted": "2019-4-22",
+      "week_number": 17
+    }
+  ]
+}

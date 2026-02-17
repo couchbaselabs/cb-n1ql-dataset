@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 71,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "product_category_name": {
+            "#docs": 71,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "esporte_lazer",
+              "fashion_calcados",
+              "livros_tecnicos",
+              "moveis_decoracao",
+              "telefonia_fixa"
+            ],
+            "type": "string"
+          },
+          "product_category_name_english": {
+            "#docs": 71,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "books_technical",
+              "fashion_shoes",
+              "fixed_telephony",
+              "furniture_decor",
+              "sports_leisure"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 71,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 71,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "product_category_name_translat...",
+                  "product_category_name_translat...",
+                  "product_category_name_translat...",
+                  "product_category_name_translat...",
+                  "product_category_name_translat..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "product_category_name_translation::15"
+              },
+              {
+                "id": "product_category_name_translation::21"
+              },
+              {
+                "id": "product_category_name_translation::39"
+              },
+              {
+                "id": "product_category_name_translation::4"
+              },
+              {
+                "id": "product_category_name_translation::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "product_category_name": "agro_industria_e_comercio",
+      "product_category_name_english": "agro_industry_and_commerce"
+    },
+    {
+      "product_category_name": "moveis_quarto",
+      "product_category_name_english": "furniture_bedroom"
+    },
+    {
+      "product_category_name": "artes",
+      "product_category_name_english": "art"
+    },
+    {
+      "product_category_name": "construcao_ferramentas_ferramentas",
+      "product_category_name_english": "costruction_tools_tools"
+    },
+    {
+      "product_category_name": "livros_importados",
+      "product_category_name_english": "books_imported"
+    }
+  ]
+}

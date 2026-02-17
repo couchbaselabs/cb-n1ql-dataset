@@ -1,0 +1,190 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "birthday": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1982-06-28 00:00:00",
+              "1984-12-05 00:00:00",
+              "1991-01-20 00:00:00",
+              "1993-07-06 00:00:00",
+              "1995-07-14 00:00:00"
+            ],
+            "type": "string"
+          },
+          "height": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              170.18,
+              172.72,
+              182.88,
+              185.42,
+              187.96
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10369,
+              10383,
+              10431,
+              10437,
+              10780
+            ],
+            "type": "number"
+          },
+          "player_api_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13131,
+              149260,
+              182962,
+              350986,
+              540098
+            ],
+            "type": "number"
+          },
+          "player_fifa_api_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              136222,
+              181896,
+              195202,
+              221641,
+              222907
+            ],
+            "type": "number"
+          },
+          "player_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Tom Cairney",
+              "Tom Muyters",
+              "Tomasz Zajac",
+              "Tomislav Pacovski",
+              "Wilfried Kanon"
+            ],
+            "type": "string"
+          },
+          "weight": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              132,
+              159,
+              181,
+              185,
+              187
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Player::10353",
+                  "Player::10367",
+                  "Player::10415",
+                  "Player::10421",
+                  "Player::10764"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Player::10353"
+              },
+              {
+                "id": "Player::10367"
+              },
+              {
+                "id": "Player::10415"
+              },
+              {
+                "id": "Player::10421"
+              },
+              {
+                "id": "Player::10764"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "birthday": "1978-12-20 00:00:00",
+      "height": 180.34,
+      "id": 1012,
+      "player_api_id": 45832,
+      "player_fifa_api_id": 149008,
+      "player_name": "Arturo ten Heuvel",
+      "weight": 176
+    },
+    {
+      "birthday": "1980-11-26 00:00:00",
+      "height": 175.26,
+      "id": 1014,
+      "player_api_id": 30901,
+      "player_fifa_api_id": 39521,
+      "player_name": "Aruna Dindane",
+      "weight": 176
+    },
+    {
+      "birthday": "1994-02-14 00:00:00",
+      "height": 187.96,
+      "id": 10168,
+      "player_api_id": 299572,
+      "player_fifa_api_id": 203485,
+      "player_name": "Terence Kongolo",
+      "weight": 154
+    },
+    {
+      "birthday": "1991-04-11 00:00:00",
+      "height": 175.26,
+      "id": 10182,
+      "player_api_id": 172949,
+      "player_fifa_api_id": 189509,
+      "player_name": "Thiago Alcantara",
+      "weight": 154
+    },
+    {
+      "birthday": "1989-11-05 00:00:00",
+      "height": 182.88,
+      "id": 10233,
+      "player_api_id": 186951,
+      "player_fifa_api_id": 193124,
+      "player_name": "Thomas Konrad",
+      "weight": 168
+    }
+  ]
+}

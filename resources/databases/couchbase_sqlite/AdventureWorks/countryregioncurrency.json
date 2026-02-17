@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 109,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "countryregioncode": {
+            "#docs": 109,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BH",
+              "IT",
+              "KW",
+              "NZ",
+              "ZW"
+            ],
+            "type": "string"
+          },
+          "currencycode": {
+            "#docs": 109,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BHD",
+              "ITL",
+              "KWD",
+              "NZD",
+              "ZWD"
+            ],
+            "type": "string"
+          },
+          "modifieddate": {
+            "#docs": 109,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2008-04-30 00:00:00",
+              "2014-02-08 10:17:21.51"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 109,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 109,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "countryregioncurrency::10",
+                  "countryregioncurrency::108",
+                  "countryregioncurrency::54",
+                  "countryregioncurrency::60",
+                  "countryregioncurrency::78"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "countryregioncurrency::10"
+              },
+              {
+                "id": "countryregioncurrency::108"
+              },
+              {
+                "id": "countryregioncurrency::54"
+              },
+              {
+                "id": "countryregioncurrency::60"
+              },
+              {
+                "id": "countryregioncurrency::78"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "countryregioncode": "AT",
+      "currencycode": "ATS",
+      "modifieddate": "2014-02-08 10:17:21.51"
+    },
+    {
+      "countryregioncode": "SI",
+      "currencycode": "SIT",
+      "modifieddate": "2014-02-08 10:17:21.51"
+    },
+    {
+      "countryregioncode": "ES",
+      "currencycode": "ESP",
+      "modifieddate": "2014-02-08 10:17:21.51"
+    },
+    {
+      "countryregioncode": "VN",
+      "currencycode": "VND",
+      "modifieddate": "2014-02-08 10:17:21.51"
+    },
+    {
+      "countryregioncode": "GR",
+      "currencycode": "GRD",
+      "modifieddate": "2014-02-08 10:17:21.51"
+    }
+  ]
+}

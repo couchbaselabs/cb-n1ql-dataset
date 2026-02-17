@@ -1,0 +1,147 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Gender": {
+            "#docs": [
+              228,
+              772
+            ],
+            "%docs": [
+              22.8,
+              77.19
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Female",
+                "Male"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " Ashish Kumar",
+              " Jeetendra",
+              " Natalie Portman",
+              " Navin Rathod",
+              " Umesh Pandey"
+            ],
+            "type": "string"
+          },
+          "PID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "nm0000204",
+              "nm1339294",
+              "nm1542848",
+              "nm1649619",
+              "nm2197105"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1755,
+              16023,
+              16840,
+              17547,
+              19354
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Person::16023",
+                  "Person::16840",
+                  "Person::17547",
+                  "Person::1755",
+                  "Person::19354"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Person::16023"
+              },
+              {
+                "id": "Person::16840"
+              },
+              {
+                "id": "Person::17547"
+              },
+              {
+                "id": "Person::1755"
+              },
+              {
+                "id": "Person::19354"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Gender": null,
+      "Name": " R.K. Nair",
+      "PID": "nm0619770",
+      "index": 10089
+    },
+    {
+      "Gender": "Male",
+      "Name": " Avtar Sahani",
+      "PID": "nm1596505",
+      "index": 10091
+    },
+    {
+      "Gender": "Male",
+      "Name": " Dilip Merala",
+      "PID": "nm6630099",
+      "index": 10101
+    },
+    {
+      "Gender": "Male",
+      "Name": " Peter Farrel",
+      "PID": "nm3171148",
+      "index": 10119
+    },
+    {
+      "Gender": null,
+      "Name": " Steve Fahl",
+      "PID": "nm3806318",
+      "index": 10135
+    }
+  ]
+}

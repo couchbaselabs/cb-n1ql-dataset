@@ -1,0 +1,184 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 414,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "award_id": {
+            "#docs": 414,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Mgr of the Year",
+              "Mgr of the year"
+            ],
+            "type": "string"
+          },
+          "league_id": {
+            "#docs": 414,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AL",
+              "NL"
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 414,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "johnsda02",
+              "littlgr99",
+              "mcnamjo99",
+              "pinielo01",
+              "willidi02"
+            ],
+            "type": "string"
+          },
+          "points_max": {
+            "#docs": 414,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              28,
+              120,
+              140,
+              150,
+              160
+            ],
+            "type": "number"
+          },
+          "points_won": {
+            "#docs": 414,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              4,
+              19,
+              41,
+              51
+            ],
+            "type": "number"
+          },
+          "votes_first": {
+            "#docs": 414,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              4,
+              10,
+              19
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 414,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1984,
+              1985,
+              1992,
+              1994,
+              2003
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 414,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 414,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "manager_award_vote::107",
+                  "manager_award_vote::133",
+                  "manager_award_vote::15",
+                  "manager_award_vote::21",
+                  "manager_award_vote::242"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "manager_award_vote::107"
+              },
+              {
+                "id": "manager_award_vote::133"
+              },
+              {
+                "id": "manager_award_vote::15"
+              },
+              {
+                "id": "manager_award_vote::21"
+              },
+              {
+                "id": "manager_award_vote::242"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "award_id": "Mgr of the year",
+      "league_id": "NL",
+      "player_id": "coxbo01",
+      "points_max": 140,
+      "points_won": 20,
+      "votes_first": 1,
+      "year": 1995
+    },
+    {
+      "award_id": "Mgr of the year",
+      "league_id": "NL",
+      "player_id": "bakerdu01",
+      "points_max": 140,
+      "points_won": 110,
+      "votes_first": 17,
+      "year": 1997
+    },
+    {
+      "award_id": "Mgr of the year",
+      "league_id": "AL",
+      "player_id": "howear01",
+      "points_max": 140,
+      "points_won": 74,
+      "votes_first": 2,
+      "year": 2000
+    },
+    {
+      "award_id": "Mgr of the Year",
+      "league_id": "NL",
+      "player_id": "coxbo01",
+      "points_max": 160,
+      "points_won": 93,
+      "votes_first": 9,
+      "year": 2002
+    },
+    {
+      "award_id": "Mgr of the Year",
+      "league_id": "NL",
+      "player_id": "hurdlcl01",
+      "points_max": 150,
+      "points_won": 80,
+      "votes_first": 8,
+      "year": 2014
+    }
+  ]
+}

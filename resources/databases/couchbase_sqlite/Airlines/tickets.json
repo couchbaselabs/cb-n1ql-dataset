@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "book_ref": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "21CDC9",
+              "2AB8B2",
+              "5E3251",
+              "76F6F0",
+              "F6B2EB"
+            ],
+            "type": "string"
+          },
+          "passenger_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1638 348108",
+              "4919 567505",
+              "6646 240607",
+              "7527 262310",
+              "9786 544941"
+            ],
+            "type": "string"
+          },
+          "ticket_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0005432264504",
+              "0005433517026",
+              "0005433716551",
+              "0005433960238",
+              "0005433961724"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "tickets::136983",
+                  "tickets::154302",
+                  "tickets::175251",
+                  "tickets::176736",
+                  "tickets::23646"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "tickets::136983"
+              },
+              {
+                "id": "tickets::154302"
+              },
+              {
+                "id": "tickets::175251"
+              },
+              {
+                "id": "tickets::176736"
+              },
+              {
+                "id": "tickets::23646"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "book_ref": "79FD5A",
+      "passenger_id": "1115 621036",
+      "ticket_no": "0005432112502"
+    },
+    {
+      "book_ref": "F6D589",
+      "passenger_id": "4739 644055",
+      "ticket_no": "0005433110383"
+    },
+    {
+      "book_ref": "0C6D96",
+      "passenger_id": "5113 485518",
+      "ticket_no": "0005433110389"
+    },
+    {
+      "book_ref": "426F3A",
+      "passenger_id": "8569 545661",
+      "ticket_no": "0005433113527"
+    },
+    {
+      "book_ref": "AEF351",
+      "passenger_id": "7370 798343",
+      "ticket_no": "0005433113557"
+    }
+  ]
+}

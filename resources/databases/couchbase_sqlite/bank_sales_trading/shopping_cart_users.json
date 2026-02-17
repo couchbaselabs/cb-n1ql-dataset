@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "cookie_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1194cc",
+              "467446",
+              "6046eb",
+              "aee327",
+              "cd5e23"
+            ],
+            "type": "string"
+          },
+          "start_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-02-02",
+              "2020-02-06",
+              "2020-02-13",
+              "2020-03-09",
+              "2020-03-23"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              125,
+              133,
+              374,
+              387,
+              390
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "shopping_cart_users::1017",
+                  "shopping_cart_users::1023",
+                  "shopping_cart_users::1187",
+                  "shopping_cart_users::1352",
+                  "shopping_cart_users::1366"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "shopping_cart_users::1017"
+              },
+              {
+                "id": "shopping_cart_users::1023"
+              },
+              {
+                "id": "shopping_cart_users::1187"
+              },
+              {
+                "id": "shopping_cart_users::1352"
+              },
+              {
+                "id": "shopping_cart_users::1366"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "cookie_id": "3c4d72",
+      "start_date": "2020-01-28",
+      "user_id": 273
+    },
+    {
+      "cookie_id": "2f3541",
+      "start_date": "2020-03-02",
+      "user_id": 54
+    },
+    {
+      "cookie_id": "84d725",
+      "start_date": "2020-01-31",
+      "user_id": 159
+    },
+    {
+      "cookie_id": "c0c44e",
+      "start_date": "2020-02-22",
+      "user_id": 151
+    },
+    {
+      "cookie_id": "efbd1e",
+      "start_date": "2020-04-10",
+      "user_id": 423
+    }
+  ]
+}

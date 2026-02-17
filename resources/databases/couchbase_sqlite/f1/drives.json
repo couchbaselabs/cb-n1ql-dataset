@@ -1,0 +1,202 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "constructor_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              57,
+              82,
+              97,
+              107,
+              114
+            ],
+            "type": "number"
+          },
+          "drive_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -1,
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "driver_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              246,
+              306,
+              465,
+              521,
+              526
+            ],
+            "type": "number"
+          },
+          "first_round": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              5,
+              11,
+              16
+            ],
+            "type": "number"
+          },
+          "is_final_drive_of_season": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "is_first_drive_of_season": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "last_round": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              5,
+              11,
+              16
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1952,
+              1960,
+              1962,
+              1967,
+              1976
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "drives::1081",
+                  "drives::1254",
+                  "drives::1512",
+                  "drives::190",
+                  "drives::2041"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "drives::1081"
+              },
+              {
+                "id": "drives::1254"
+              },
+              {
+                "id": "drives::1512"
+              },
+              {
+                "id": "drives::190"
+              },
+              {
+                "id": "drives::2041"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "constructor_id": 6,
+      "drive_id": 1,
+      "driver_id": 498,
+      "first_round": 1,
+      "is_final_drive_of_season": 1,
+      "is_first_drive_of_season": 1,
+      "last_round": 1,
+      "year": 1960
+    },
+    {
+      "constructor_id": 105,
+      "drive_id": 1,
+      "driver_id": 503,
+      "first_round": 1,
+      "is_final_drive_of_season": 1,
+      "is_first_drive_of_season": 1,
+      "last_round": 1,
+      "year": 1960
+    },
+    {
+      "constructor_id": 114,
+      "drive_id": 1,
+      "driver_id": 518,
+      "first_round": 3,
+      "is_final_drive_of_season": 1,
+      "is_first_drive_of_season": 1,
+      "last_round": 3,
+      "year": 1960
+    },
+    {
+      "constructor_id": 89,
+      "drive_id": 1,
+      "driver_id": 368,
+      "first_round": 10,
+      "is_final_drive_of_season": 1,
+      "is_first_drive_of_season": 1,
+      "last_round": 10,
+      "year": 1963
+    },
+    {
+      "constructor_id": 176,
+      "drive_id": 3,
+      "driver_id": 404,
+      "first_round": 6,
+      "is_final_drive_of_season": 0,
+      "is_first_drive_of_season": 0,
+      "last_round": 6,
+      "year": 1963
+    }
+  ]
+}

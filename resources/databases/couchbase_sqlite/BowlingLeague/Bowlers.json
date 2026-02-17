@@ -1,0 +1,323 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 34,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`BowlerState` = \"WA\"",
+        "properties": {
+          "BowlerAddress": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "16 Maple Lane",
+              "17950 N 59th",
+              "722 Moss Bay Blvd.",
+              "908 W. Capital Way",
+              "Route 2, Box 203B"
+            ],
+            "type": "string"
+          },
+          "BowlerCity": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Auburn",
+              "Kirkland",
+              "Seattle",
+              "Tacoma",
+              "Woodinville"
+            ],
+            "type": "string"
+          },
+          "BowlerCurrentAverage": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              142,
+              150,
+              157,
+              158
+            ],
+            "type": "number"
+          },
+          "BowlerCurrentHcp": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              38,
+              39,
+              45,
+              52
+            ],
+            "type": "number"
+          },
+          "BowlerFirstName": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alaina",
+              "Maria",
+              "Neil",
+              "Rachel",
+              "Richard"
+            ],
+            "type": "string"
+          },
+          "BowlerGamesBowled": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              39
+            ],
+            "type": "number"
+          },
+          "BowlerID": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              16,
+              22,
+              30,
+              34
+            ],
+            "type": "number"
+          },
+          "BowlerLastName": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Clothier",
+              "Hallmark",
+              "Patterson",
+              "Rosales",
+              "Sheskey"
+            ],
+            "type": "string"
+          },
+          "BowlerMiddleInit": {
+            "#docs": [
+              23,
+              11
+            ],
+            "%docs": [
+              67.64,
+              32.35
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "A",
+                "G",
+                "K",
+                "L",
+                "M"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "BowlerPhoneNumber": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(206) 555-3412",
+              "(206) 555-3487",
+              "(206) 555-8990",
+              "(206) 555-9482",
+              "(206) 555-9893"
+            ],
+            "type": "string"
+          },
+          "BowlerState": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WA"
+            ],
+            "type": "string"
+          },
+          "BowlerTotalPins": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5549,
+              6126,
+              6147,
+              6150
+            ],
+            "type": "number"
+          },
+          "BowlerZip": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "98002",
+              "98011",
+              "98033",
+              "98072",
+              "98404"
+            ],
+            "type": "string"
+          },
+          "TeamID": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              4,
+              6,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 34,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 34,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Bowlers::15",
+                  "Bowlers::21",
+                  "Bowlers::29",
+                  "Bowlers::33",
+                  "Bowlers::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Bowlers::15"
+              },
+              {
+                "id": "Bowlers::21"
+              },
+              {
+                "id": "Bowlers::29"
+              },
+              {
+                "id": "Bowlers::33"
+              },
+              {
+                "id": "Bowlers::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BowlerAddress": "16 Maple Lane",
+      "BowlerCity": "Auburn",
+      "BowlerCurrentAverage": 0,
+      "BowlerCurrentHcp": 0,
+      "BowlerFirstName": "Kerry",
+      "BowlerGamesBowled": 0,
+      "BowlerID": 33,
+      "BowlerLastName": "Patterson",
+      "BowlerMiddleInit": null,
+      "BowlerPhoneNumber": "(206) 555-3487",
+      "BowlerState": "WA",
+      "BowlerTotalPins": 0,
+      "BowlerZip": "98002",
+      "TeamID": 7
+    },
+    {
+      "BowlerAddress": "218 Main Street",
+      "BowlerCity": "Redmond",
+      "BowlerCurrentAverage": 143,
+      "BowlerCurrentHcp": 51,
+      "BowlerFirstName": "Suzanne",
+      "BowlerGamesBowled": 39,
+      "BowlerID": 20,
+      "BowlerLastName": "Viescas",
+      "BowlerMiddleInit": "L",
+      "BowlerPhoneNumber": "(206) 881-5596",
+      "BowlerState": "WA",
+      "BowlerTotalPins": 5589,
+      "BowlerZip": "98052",
+      "TeamID": 5
+    },
+    {
+      "BowlerAddress": "4110 Old Redmond Rd.",
+      "BowlerCity": "Redmond",
+      "BowlerCurrentAverage": 159,
+      "BowlerCurrentHcp": 37,
+      "BowlerFirstName": "David",
+      "BowlerGamesBowled": 39,
+      "BowlerID": 10,
+      "BowlerLastName": "Cunningham",
+      "BowlerMiddleInit": null,
+      "BowlerPhoneNumber": "(206) 555-8122",
+      "BowlerState": "WA",
+      "BowlerTotalPins": 6184,
+      "BowlerZip": "98052",
+      "TeamID": 3
+    },
+    {
+      "BowlerAddress": "67 Willow Drive",
+      "BowlerCity": "Bothell",
+      "BowlerCurrentAverage": 158,
+      "BowlerCurrentHcp": 38,
+      "BowlerFirstName": "David",
+      "BowlerGamesBowled": 39,
+      "BowlerID": 2,
+      "BowlerLastName": "Fournier",
+      "BowlerMiddleInit": null,
+      "BowlerPhoneNumber": "(206) 555-9876",
+      "BowlerState": "WA",
+      "BowlerTotalPins": 6152,
+      "BowlerZip": "98014",
+      "TeamID": 1
+    },
+    {
+      "BowlerAddress": "16345 NE 32nd Street",
+      "BowlerCity": "Bellevue",
+      "BowlerCurrentAverage": 143,
+      "BowlerCurrentHcp": 51,
+      "BowlerFirstName": "Carol",
+      "BowlerGamesBowled": 39,
+      "BowlerID": 12,
+      "BowlerLastName": "Viescas",
+      "BowlerMiddleInit": "M",
+      "BowlerPhoneNumber": "(206) 555-7295",
+      "BowlerState": "WA",
+      "BowlerTotalPins": 5560,
+      "BowlerZip": "98004",
+      "TeamID": 3
+    }
+  ]
+}

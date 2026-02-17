@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 25,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "GenreId": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              15,
+              16,
+              21,
+              22
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Blues",
+              "Comedy",
+              "Drama",
+              "Electronica/Dance",
+              "World"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 25,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "genres::14",
+                  "genres::15",
+                  "genres::20",
+                  "genres::21",
+                  "genres::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "genres::14"
+              },
+              {
+                "id": "genres::15"
+              },
+              {
+                "id": "genres::20"
+              },
+              {
+                "id": "genres::21"
+              },
+              {
+                "id": "genres::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "GenreId": 11,
+      "Name": "Bossa Nova"
+    },
+    {
+      "GenreId": 25,
+      "Name": "Opera"
+    },
+    {
+      "GenreId": 14,
+      "Name": "R&B/Soul"
+    },
+    {
+      "GenreId": 18,
+      "Name": "Science Fiction"
+    },
+    {
+      "GenreId": 24,
+      "Name": "Classical"
+    }
+  ]
+}

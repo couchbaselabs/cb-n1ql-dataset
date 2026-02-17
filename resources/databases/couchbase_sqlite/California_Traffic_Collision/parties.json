@@ -1,0 +1,957 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "at_fault": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "case_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1590116,
+              2851754,
+              2886826,
+              4075642,
+              4524343
+            ],
+            "type": "number"
+          },
+          "cellphone_in_use": {
+            "#docs": [
+              20,
+              980
+            ],
+            "%docs": [
+              2,
+              98
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "cellphone_use_type": {
+            "#docs": [
+              20,
+              980
+            ],
+            "%docs": [
+              2,
+              98
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "cellphone in use",
+                "cellphone in use (handheld)",
+                "cellphone in use (hands-free)",
+                "cellphone not in use",
+                "no cellphone/unknown"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "chp_vehicle_type_towed": {
+            "#docs": [
+              200,
+              800
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "00",
+                "emergency vehicle (on emergenc...",
+                "federally legal semi",
+                "semi",
+                "utility"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "chp_vehicle_type_towing": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "motor home",
+                "passenger car, station",
+                "pickups & panels",
+                "sport utility vehicle",
+                "three or more axle truck"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "direction_of_travel": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "east",
+                "north",
+                "south",
+                "west"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "financial_responsibility": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "no proof of insurance obtained",
+                "not applicable",
+                "proof of insurance obtained"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "hazardous_materials": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              762168,
+              903937,
+              2853686,
+              5296432,
+              5358901
+            ],
+            "type": "number"
+          },
+          "movement_preceding_collision": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "crossed into opposing lane",
+                "other",
+                "proceeding straight",
+                "ran off road",
+                "stopped"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "oaf_violation_category": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "improper turning"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "oaf_violation_code": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "vehicle"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "oaf_violation_section": {
+            "#docs": [
+              980,
+              20
+            ],
+            "%docs": [
+              98,
+              2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "oaf_violation_suffix": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "other_associate_factor_1": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "inattention",
+                "none apparent",
+                "other",
+                "stop and go traffic",
+                "vision obscurements"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "other_associate_factor_2": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "none apparent"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "party_age": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                19,
+                35,
+                45,
+                51,
+                63
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "party_drug_physical": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "not applicable"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "party_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "party_number_injured": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              7
+            ],
+            "type": "number"
+          },
+          "party_number_killed": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "party_race": {
+            "#docs": [
+              20,
+              980
+            ],
+            "%docs": [
+              2,
+              98
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "asian",
+                "black",
+                "hispanic",
+                "other",
+                "white"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "party_safety_equipment_1": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "air bag deployed",
+                "air bag not deployed",
+                "lap/shoulder harness used",
+                "not required",
+                "other"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "party_safety_equipment_2": {
+            "#docs": [
+              20,
+              980
+            ],
+            "%docs": [
+              2,
+              98
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "air bag not deployed",
+                "driver, motorcycle helmet used",
+                "lap/shoulder harness used",
+                "shoulder harness used",
+                "unknown"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "party_sex": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "female",
+                "male"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "party_sobriety": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "had been drinking, not under i...",
+                "had been drinking, under influ...",
+                "had not been drinking",
+                "impairment unknown",
+                "not applicable"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "party_type": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "bicyclist",
+                "driver",
+                "other",
+                "parked vehicle",
+                "pedestrian"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "school_bus_related": {
+            "#docs": [
+              998,
+              2
+            ],
+            "%docs": [
+              99.8,
+              0.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "statewide_vehicle_type": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "emergency vehicle",
+                "other vehicle",
+                "passenger car",
+                "pickup or panel truck",
+                "truck or truck tractor with tr..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "vehicle_make": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "gmc",
+                "honda",
+                "hyundai",
+                "lexus",
+                "toyota"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "vehicle_year": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1983,
+                1991,
+                1999,
+                2002,
+                2004
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "parties::121671",
+                  "parties::149122",
+                  "parties::70974",
+                  "parties::83299",
+                  "parties::94194"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "parties::121671"
+              },
+              {
+                "id": "parties::149122"
+              },
+              {
+                "id": "parties::70974"
+              },
+              {
+                "id": "parties::83299"
+              },
+              {
+                "id": "parties::94194"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "at_fault": 1,
+      "case_id": 90197475,
+      "cellphone_in_use": 1,
+      "cellphone_use_type": "cellphone in use (handheld)",
+      "chp_vehicle_type_towed": null,
+      "chp_vehicle_type_towing": "passenger car, station",
+      "direction_of_travel": "south",
+      "financial_responsibility": "no proof of insurance obtained",
+      "hazardous_materials": null,
+      "id": 7809005,
+      "movement_preceding_collision": "other",
+      "oaf_violation_category": "improper turning",
+      "oaf_violation_code": null,
+      "oaf_violation_section": 22107,
+      "oaf_violation_suffix": null,
+      "other_associate_factor_1": "violation",
+      "other_associate_factor_2": null,
+      "party_age": 20,
+      "party_drug_physical": null,
+      "party_number": 1,
+      "party_number_injured": 0,
+      "party_number_killed": 0,
+      "party_race": "white",
+      "party_safety_equipment_1": "air bag not deployed",
+      "party_safety_equipment_2": "lap/shoulder harness used",
+      "party_sex": "male",
+      "party_sobriety": "had been drinking, under influence",
+      "party_type": "driver",
+      "school_bus_related": null,
+      "statewide_vehicle_type": "passenger car",
+      "vehicle_make": "dodge",
+      "vehicle_year": 2016
+    },
+    {
+      "at_fault": 0,
+      "case_id": 91274046,
+      "cellphone_in_use": 0,
+      "cellphone_use_type": "cellphone not in use",
+      "chp_vehicle_type_towed": null,
+      "chp_vehicle_type_towing": "passenger car, station",
+      "direction_of_travel": "west",
+      "financial_responsibility": "proof of insurance obtained",
+      "hazardous_materials": null,
+      "id": 9914784,
+      "movement_preceding_collision": "proceeding straight",
+      "oaf_violation_category": null,
+      "oaf_violation_code": null,
+      "oaf_violation_section": null,
+      "oaf_violation_suffix": null,
+      "other_associate_factor_1": "none apparent",
+      "other_associate_factor_2": null,
+      "party_age": 23,
+      "party_drug_physical": null,
+      "party_number": 2,
+      "party_number_injured": 0,
+      "party_number_killed": 0,
+      "party_race": "black",
+      "party_safety_equipment_1": "air bag not deployed",
+      "party_safety_equipment_2": "lap/shoulder harness used",
+      "party_sex": "male",
+      "party_sobriety": "had not been drinking",
+      "party_type": "driver",
+      "school_bus_related": null,
+      "statewide_vehicle_type": "passenger car",
+      "vehicle_make": "chevrolet",
+      "vehicle_year": 2007
+    },
+    {
+      "at_fault": 0,
+      "case_id": 5399741,
+      "cellphone_in_use": 0,
+      "cellphone_use_type": "cellphone not in use",
+      "chp_vehicle_type_towed": "00",
+      "chp_vehicle_type_towing": "mini-vans",
+      "direction_of_travel": "east",
+      "financial_responsibility": "proof of insurance obtained",
+      "hazardous_materials": null,
+      "id": 2306426,
+      "movement_preceding_collision": "proceeding straight",
+      "oaf_violation_category": null,
+      "oaf_violation_code": null,
+      "oaf_violation_section": null,
+      "oaf_violation_suffix": null,
+      "other_associate_factor_1": "none apparent",
+      "other_associate_factor_2": null,
+      "party_age": 55,
+      "party_drug_physical": null,
+      "party_number": 1,
+      "party_number_injured": 0,
+      "party_number_killed": 0,
+      "party_race": "white",
+      "party_safety_equipment_1": "air bag not deployed",
+      "party_safety_equipment_2": "lap/shoulder harness used",
+      "party_sex": "male",
+      "party_sobriety": "had not been drinking",
+      "party_type": "driver",
+      "school_bus_related": null,
+      "statewide_vehicle_type": "passenger car",
+      "vehicle_make": "honda",
+      "vehicle_year": 2000
+    },
+    {
+      "at_fault": 0,
+      "case_id": 5274040,
+      "cellphone_in_use": 0,
+      "cellphone_use_type": "cellphone not in use",
+      "chp_vehicle_type_towed": "00",
+      "chp_vehicle_type_towing": "passenger car, station",
+      "direction_of_travel": "south",
+      "financial_responsibility": "proof of insurance obtained",
+      "hazardous_materials": null,
+      "id": 2075218,
+      "movement_preceding_collision": "stopped",
+      "oaf_violation_category": null,
+      "oaf_violation_code": null,
+      "oaf_violation_section": null,
+      "oaf_violation_suffix": null,
+      "other_associate_factor_1": "none apparent",
+      "other_associate_factor_2": null,
+      "party_age": 24,
+      "party_drug_physical": null,
+      "party_number": 2,
+      "party_number_injured": 1,
+      "party_number_killed": 0,
+      "party_race": "white",
+      "party_safety_equipment_1": "air bag not deployed",
+      "party_safety_equipment_2": "lap/shoulder harness used",
+      "party_sex": "female",
+      "party_sobriety": "had not been drinking",
+      "party_type": "driver",
+      "school_bus_related": null,
+      "statewide_vehicle_type": "passenger car",
+      "vehicle_make": "ford",
+      "vehicle_year": 2009
+    },
+    {
+      "at_fault": 0,
+      "case_id": 8467725,
+      "cellphone_in_use": null,
+      "cellphone_use_type": null,
+      "chp_vehicle_type_towed": null,
+      "chp_vehicle_type_towing": "passenger car, station",
+      "direction_of_travel": "east",
+      "financial_responsibility": "proof of insurance obtained",
+      "hazardous_materials": null,
+      "id": 6391555,
+      "movement_preceding_collision": "stopped",
+      "oaf_violation_category": null,
+      "oaf_violation_code": null,
+      "oaf_violation_section": null,
+      "oaf_violation_suffix": null,
+      "other_associate_factor_1": "none apparent",
+      "other_associate_factor_2": null,
+      "party_age": 26,
+      "party_drug_physical": "G",
+      "party_number": 2,
+      "party_number_injured": 0,
+      "party_number_killed": 0,
+      "party_race": "hispanic",
+      "party_safety_equipment_1": "air bag not deployed",
+      "party_safety_equipment_2": "lap/shoulder harness used",
+      "party_sex": "male",
+      "party_sobriety": "impairment unknown",
+      "party_type": "driver",
+      "school_bus_related": null,
+      "statewide_vehicle_type": "passenger car",
+      "vehicle_make": "dodge",
+      "vehicle_year": 2015
+    }
+  ]
+}

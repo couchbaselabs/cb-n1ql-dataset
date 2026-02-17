@@ -1,0 +1,131 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 120,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`app_id` = 542",
+        "properties": {
+          "app_id": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              542
+            ],
+            "type": "number"
+          },
+          "counter": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2172,
+              2249,
+              3612,
+              3999,
+              7260
+            ],
+            "type": "number"
+          },
+          "day": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04-05",
+              "2019-04-09",
+              "2019-04-11",
+              "2019-04-15",
+              "2019-04-19"
+            ],
+            "type": "string"
+          },
+          "page_no": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 120,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_counter_hist::18",
+                  "web_counter_hist::34",
+                  "web_counter_hist::44",
+                  "web_counter_hist::68",
+                  "web_counter_hist::70"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_counter_hist::18"
+              },
+              {
+                "id": "web_counter_hist::34"
+              },
+              {
+                "id": "web_counter_hist::44"
+              },
+              {
+                "id": "web_counter_hist::68"
+              },
+              {
+                "id": "web_counter_hist::70"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "app_id": 542,
+      "counter": 2864,
+      "day": "2019-04-23",
+      "page_no": 3
+    },
+    {
+      "app_id": 542,
+      "counter": 2901,
+      "day": "2019-04-24",
+      "page_no": 3
+    },
+    {
+      "app_id": 542,
+      "counter": 555,
+      "day": "2019-04-26",
+      "page_no": 4
+    },
+    {
+      "app_id": 542,
+      "counter": 4625,
+      "day": "2019-04-28",
+      "page_no": 2
+    },
+    {
+      "app_id": 542,
+      "counter": 1938,
+      "day": "2019-04-04",
+      "page_no": 3
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "match_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              392204,
+              392213,
+              829822,
+              829826,
+              980906
+            ],
+            "type": "number"
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14,
+              61,
+              132,
+              303,
+              364
+            ],
+            "type": "number"
+          },
+          "role": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Captain",
+              "CaptainKeeper",
+              "Keeper",
+              "Player"
+            ],
+            "type": "string"
+          },
+          "team_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              6,
+              8,
+              12
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "player_match::10627",
+                  "player_match::10783",
+                  "player_match::11343",
+                  "player_match::11377",
+                  "player_match::11405"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "player_match::10627"
+              },
+              {
+                "id": "player_match::10783"
+              },
+              {
+                "id": "player_match::11343"
+              },
+              {
+                "id": "player_match::11377"
+              },
+              {
+                "id": "player_match::11405"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "match_id": 336031,
+      "player_id": 113,
+      "role": "Player",
+      "team_id": 2
+    },
+    {
+      "match_id": 336032,
+      "player_id": 35,
+      "role": "Player",
+      "team_id": 5
+    },
+    {
+      "match_id": 336034,
+      "player_id": 14,
+      "role": "Player",
+      "team_id": 2
+    },
+    {
+      "match_id": 336041,
+      "player_id": 44,
+      "role": "Player",
+      "team_id": 7
+    },
+    {
+      "match_id": 336042,
+      "player_id": 131,
+      "role": "Player",
+      "team_id": 8
+    }
+  ]
+}

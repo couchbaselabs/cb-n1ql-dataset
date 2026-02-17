@@ -1,0 +1,133 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "film_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              230,
+              402,
+              408,
+              483,
+              524
+            ],
+            "type": "number"
+          },
+          "inventory_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1028,
+              1845,
+              1871,
+              2233,
+              2397
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:52:16",
+              "2021-03-06 15:52:23",
+              "2021-03-06 15:52:26",
+              "2021-03-06 15:52:27",
+              "2021-03-06 15:52:28"
+            ],
+            "type": "string"
+          },
+          "store_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "inventory::1027",
+                  "inventory::1844",
+                  "inventory::1870",
+                  "inventory::2232",
+                  "inventory::2396"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "inventory::1027"
+              },
+              {
+                "id": "inventory::1844"
+              },
+              {
+                "id": "inventory::1870"
+              },
+              {
+                "id": "inventory::2232"
+              },
+              {
+                "id": "inventory::2396"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "film_id": 241,
+      "inventory_id": 1081,
+      "last_update": "2021-03-06 15:52:17",
+      "store_id": 1
+    },
+    {
+      "film_id": 244,
+      "inventory_id": 1099,
+      "last_update": "2021-03-06 15:52:17",
+      "store_id": 2
+    },
+    {
+      "film_id": 3,
+      "inventory_id": 12,
+      "last_update": "2021-03-06 15:52:08",
+      "store_id": 2
+    },
+    {
+      "film_id": 246,
+      "inventory_id": 1109,
+      "last_update": "2021-03-06 15:52:17",
+      "store_id": 2
+    },
+    {
+      "film_id": 246,
+      "inventory_id": 1111,
+      "last_update": "2021-03-06 15:52:17",
+      "store_id": 2
+    }
+  ]
+}

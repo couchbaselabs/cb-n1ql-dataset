@@ -1,0 +1,218 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 11,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`StdState` = \"WA\"",
+        "properties": {
+          "StdCity": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BOTHELL",
+              "REDMOND",
+              "SEATTLE",
+              "TACOMA"
+            ],
+            "type": "string"
+          },
+          "StdClass": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "FR",
+              "JR",
+              "SO",
+              "SR"
+            ],
+            "type": "string"
+          },
+          "StdFirstName": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BOB",
+              "CRISTOPHER",
+              "HOMER",
+              "TESS",
+              "WILLIAM"
+            ],
+            "type": "string"
+          },
+          "StdGPA": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2.7,
+              3,
+              3.3,
+              3.8,
+              4
+            ],
+            "type": "number"
+          },
+          "StdLastName": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "COLAN",
+              "DODGE",
+              "NORBERT",
+              "PILGRIM",
+              "WELLS"
+            ],
+            "type": "string"
+          },
+          "StdMajor": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACCT",
+              "FIN",
+              "IS"
+            ],
+            "type": "string"
+          },
+          "StdNo": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              123456789,
+              124567890,
+              678901234,
+              876543210,
+              901234567
+            ],
+            "type": "number"
+          },
+          "StdState": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WA"
+            ],
+            "type": "string"
+          },
+          "StdZip": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "98011-2121",
+              "98113-1885",
+              "98114-1332",
+              "98116-2344",
+              "98121-1111"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 11,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "university_student::0",
+                  "university_student::1",
+                  "university_student::10",
+                  "university_student::6",
+                  "university_student::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "university_student::0"
+              },
+              {
+                "id": "university_student::1"
+              },
+              {
+                "id": "university_student::10"
+              },
+              {
+                "id": "university_student::6"
+              },
+              {
+                "id": "university_student::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "StdCity": "SEATTLE",
+      "StdClass": "JR",
+      "StdFirstName": "ROBERTO",
+      "StdGPA": 2.5,
+      "StdLastName": "MORALES",
+      "StdMajor": "FIN",
+      "StdNo": 789012345,
+      "StdState": "WA",
+      "StdZip": "98121-2212"
+    },
+    {
+      "StdCity": "SEATTLE",
+      "StdClass": "FR",
+      "StdFirstName": "HOMER",
+      "StdGPA": 3,
+      "StdLastName": "WELLS",
+      "StdMajor": "IS",
+      "StdNo": 123456789,
+      "StdState": "WA",
+      "StdZip": "98121-1111"
+    },
+    {
+      "StdCity": "SEATTLE",
+      "StdClass": "SR",
+      "StdFirstName": "JOE",
+      "StdGPA": 3.2,
+      "StdLastName": "ESTRADA",
+      "StdMajor": "FIN",
+      "StdNo": 456789012,
+      "StdState": "WA",
+      "StdZip": "98121-2333"
+    },
+    {
+      "StdCity": "BOTHELL",
+      "StdClass": "SO",
+      "StdFirstName": "WILLIAM",
+      "StdGPA": 3.8,
+      "StdLastName": "PILGRIM",
+      "StdMajor": "IS",
+      "StdNo": 901234567,
+      "StdState": "WA",
+      "StdZip": "98113-1885"
+    },
+    {
+      "StdCity": "SEATTLE",
+      "StdClass": "JR",
+      "StdFirstName": "MARIAH",
+      "StdGPA": 3.6,
+      "StdLastName": "DODGE",
+      "StdMajor": "IS",
+      "StdNo": 567890123,
+      "StdState": "WA",
+      "StdZip": "98114-0021"
+    }
+  ]
+}

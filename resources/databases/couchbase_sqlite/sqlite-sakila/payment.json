@@ -1,0 +1,187 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "amount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1.99,
+              2.99,
+              3.99,
+              4.99,
+              5.99
+            ],
+            "type": "number"
+          },
+          "customer_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              375,
+              403,
+              504,
+              576,
+              577
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:56:28",
+              "2021-03-06 15:57:21",
+              "2021-03-06 15:57:27",
+              "2021-03-06 15:57:49",
+              "2021-03-06 15:58:04"
+            ],
+            "type": "string"
+          },
+          "payment_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2005-05-29 09:33:33.000",
+              "2005-06-18 16:06:14.000",
+              "2005-07-28 10:23:48.000",
+              "2005-07-30 09:59:00.000",
+              "2005-08-01 09:01:04.000"
+            ],
+            "type": "string"
+          },
+          "payment_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10153,
+              10896,
+              13590,
+              15441,
+              15459
+            ],
+            "type": "number"
+          },
+          "rental_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              749,
+              2399,
+              7875,
+              9133,
+              10443
+            ],
+            "type": "number"
+          },
+          "staff_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "payment::10152",
+                  "payment::10895",
+                  "payment::13589",
+                  "payment::15440",
+                  "payment::15458"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "payment::10152"
+              },
+              {
+                "id": "payment::10895"
+              },
+              {
+                "id": "payment::13589"
+              },
+              {
+                "id": "payment::15440"
+              },
+              {
+                "id": "payment::15458"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "amount": 0.99,
+      "customer_id": 373,
+      "last_update": "2021-03-06 15:57:21",
+      "payment_date": "2005-07-11 18:18:52.000",
+      "payment_id": 10096,
+      "rental_id": 6311,
+      "staff_id": 2
+    },
+    {
+      "amount": 6.99,
+      "customer_id": 373,
+      "last_update": "2021-03-06 15:57:21",
+      "payment_date": "2005-07-31 18:01:36.000",
+      "payment_id": 10106,
+      "rental_id": 10010,
+      "staff_id": 1
+    },
+    {
+      "amount": 1.99,
+      "customer_id": 374,
+      "last_update": "2021-03-06 15:57:21",
+      "payment_date": "2005-07-06 14:54:52.000",
+      "payment_id": 10130,
+      "rental_id": 3797,
+      "staff_id": 1
+    },
+    {
+      "amount": 6.99,
+      "customer_id": 374,
+      "last_update": "2021-03-06 15:57:21",
+      "payment_date": "2005-07-10 03:46:47.000",
+      "payment_id": 10132,
+      "rental_id": 5570,
+      "staff_id": 1
+    },
+    {
+      "amount": 2.99,
+      "customer_id": 378,
+      "last_update": "2021-03-06 15:57:22",
+      "payment_date": "2005-07-31 13:20:08.000",
+      "payment_id": 10241,
+      "rental_id": 9868,
+      "staff_id": 1
+    }
+  ]
+}

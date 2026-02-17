@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "region_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "region_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Africa",
+              "America",
+              "Asia",
+              "Australia",
+              "Europe"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customer_regions::0",
+                  "customer_regions::1",
+                  "customer_regions::2",
+                  "customer_regions::3",
+                  "customer_regions::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customer_regions::0"
+              },
+              {
+                "id": "customer_regions::1"
+              },
+              {
+                "id": "customer_regions::2"
+              },
+              {
+                "id": "customer_regions::3"
+              },
+              {
+                "id": "customer_regions::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "region_id": 1,
+      "region_name": "Australia"
+    },
+    {
+      "region_id": 2,
+      "region_name": "America"
+    },
+    {
+      "region_id": 4,
+      "region_name": "Asia"
+    },
+    {
+      "region_id": 5,
+      "region_name": "Europe"
+    },
+    {
+      "region_id": 3,
+      "region_name": "Africa"
+    }
+  ]
+}

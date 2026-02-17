@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 48,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "mth": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-02-01",
+              "2018-06-01",
+              "2018-08-01",
+              "2019-06-01",
+              "2019-12-01"
+            ],
+            "type": "string"
+          },
+          "product_id": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6520,
+              6600
+            ],
+            "type": "number"
+          },
+          "qty": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              20,
+              30,
+              40,
+              55
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 48,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 48,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "monthly_budget::1",
+                  "monthly_budget::17",
+                  "monthly_budget::23",
+                  "monthly_budget::29",
+                  "monthly_budget::31"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "monthly_budget::1"
+              },
+              {
+                "id": "monthly_budget::17"
+              },
+              {
+                "id": "monthly_budget::23"
+              },
+              {
+                "id": "monthly_budget::29"
+              },
+              {
+                "id": "monthly_budget::31"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "mth": "2018-01-01",
+      "product_id": 6520,
+      "qty": 30
+    },
+    {
+      "mth": "2019-05-01",
+      "product_id": 6520,
+      "qty": 55
+    },
+    {
+      "mth": "2019-11-01",
+      "product_id": 6520,
+      "qty": 40
+    },
+    {
+      "mth": "2019-01-01",
+      "product_id": 6600,
+      "qty": 20
+    },
+    {
+      "mth": "2019-11-01",
+      "product_id": 6600,
+      "qty": 20
+    }
+  ]
+}

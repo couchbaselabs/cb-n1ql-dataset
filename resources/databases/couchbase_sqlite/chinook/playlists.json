@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 18,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Name": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Classical 101 - Next Steps",
+              "Grunge",
+              "Music",
+              "Music Videos",
+              "On-The-Go 1"
+            ],
+            "type": "string"
+          },
+          "PlaylistId": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              8,
+              9,
+              16,
+              18
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 18,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "playlists::0",
+                  "playlists::15",
+                  "playlists::17",
+                  "playlists::7",
+                  "playlists::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "playlists::0"
+              },
+              {
+                "id": "playlists::15"
+              },
+              {
+                "id": "playlists::17"
+              },
+              {
+                "id": "playlists::7"
+              },
+              {
+                "id": "playlists::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Name": "TV Shows",
+      "PlaylistId": 3
+    },
+    {
+      "Name": "Classical 101 - Deep Cuts",
+      "PlaylistId": 13
+    },
+    {
+      "Name": "Music",
+      "PlaylistId": 8
+    },
+    {
+      "Name": "On-The-Go 1",
+      "PlaylistId": 18
+    },
+    {
+      "Name": "Audiobooks",
+      "PlaylistId": 4
+    }
+  ]
+}

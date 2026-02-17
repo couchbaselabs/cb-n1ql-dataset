@@ -1,0 +1,131 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1260,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country": {
+            "#docs": 1260,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Canada",
+              "China",
+              "Israel",
+              "Kuwait",
+              "Romania"
+            ],
+            "type": "string"
+          },
+          "month": {
+            "#docs": 1260,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              4,
+              5,
+              7,
+              10
+            ],
+            "type": "number"
+          },
+          "to_us": {
+            "#docs": 1260,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.74,
+              1
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1260,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2019,
+              2020,
+              2021
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1260,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1260,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "currency::101",
+                  "currency::1146",
+                  "currency::1172",
+                  "currency::119",
+                  "currency::1203"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "currency::101"
+              },
+              {
+                "id": "currency::1146"
+              },
+              {
+                "id": "currency::1172"
+              },
+              {
+                "id": "currency::119"
+              },
+              {
+                "id": "currency::1203"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country": "Egypt",
+      "month": 1,
+      "to_us": 1,
+      "year": 2019
+    },
+    {
+      "country": "Egypt",
+      "month": 4,
+      "to_us": 1,
+      "year": 2021
+    },
+    {
+      "country": "Australia",
+      "month": 9,
+      "to_us": 1,
+      "year": 2019
+    },
+    {
+      "country": "Australia",
+      "month": 4,
+      "to_us": 1,
+      "year": 2020
+    },
+    {
+      "country": "Spain",
+      "month": 8,
+      "to_us": 1,
+      "year": 2020
+    }
+  ]
+}

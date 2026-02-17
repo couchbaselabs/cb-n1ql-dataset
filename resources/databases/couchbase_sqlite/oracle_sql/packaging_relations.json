@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 12,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "contains_id": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              501,
+              502,
+              522,
+              523,
+              524
+            ],
+            "type": "number"
+          },
+          "packaging_id": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              511,
+              522,
+              523,
+              533,
+              534
+            ],
+            "type": "number"
+          },
+          "qty": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              16,
+              20,
+              30,
+              36
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 12,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "packaging_relations::1",
+                  "packaging_relations::11",
+                  "packaging_relations::3",
+                  "packaging_relations::4",
+                  "packaging_relations::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "packaging_relations::1"
+              },
+              {
+                "id": "packaging_relations::11"
+              },
+              {
+                "id": "packaging_relations::3"
+              },
+              {
+                "id": "packaging_relations::4"
+              },
+              {
+                "id": "packaging_relations::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "contains_id": 523,
+      "packaging_id": 533,
+      "qty": 20
+    },
+    {
+      "contains_id": 502,
+      "packaging_id": 523,
+      "qty": 30
+    },
+    {
+      "contains_id": 522,
+      "packaging_id": 533,
+      "qty": 10
+    },
+    {
+      "contains_id": 524,
+      "packaging_id": 534,
+      "qty": 16
+    },
+    {
+      "contains_id": 502,
+      "packaging_id": 511,
+      "qty": 2
+    }
+  ]
+}

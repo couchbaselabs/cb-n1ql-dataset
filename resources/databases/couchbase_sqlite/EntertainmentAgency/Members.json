@@ -1,0 +1,165 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 25,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Gender": {
+            "#docs": [
+              1,
+              24
+            ],
+            "%docs": [
+              4,
+              96
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "F",
+                "M"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "MbrFirstName": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "David",
+              "George",
+              "Kendra",
+              "Mariya",
+              "Michael"
+            ],
+            "type": "string"
+          },
+          "MbrLastName": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bonnicksen",
+              "Chavez",
+              "Hamilton",
+              "Hernandez",
+              "Sergienko"
+            ],
+            "type": "string"
+          },
+          "MbrPhoneNumber": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "555-2526",
+              "555-2701",
+              "555-2711",
+              "555-2716",
+              "555-9930"
+            ],
+            "type": "string"
+          },
+          "MemberID": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              101,
+              106,
+              112,
+              114,
+              120
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 25,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Members::0",
+                  "Members::11",
+                  "Members::13",
+                  "Members::19",
+                  "Members::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Members::0"
+              },
+              {
+                "id": "Members::11"
+              },
+              {
+                "id": "Members::13"
+              },
+              {
+                "id": "Members::19"
+              },
+              {
+                "id": "Members::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Gender": "F",
+      "MbrFirstName": "Suzanne",
+      "MbrLastName": "Viescas",
+      "MbrPhoneNumber": "555-2686",
+      "MemberID": 102
+    },
+    {
+      "Gender": "M",
+      "MbrFirstName": "David",
+      "MbrLastName": "Viescas",
+      "MbrPhoneNumber": "555-2661",
+      "MemberID": 109
+    },
+    {
+      "Gender": "F",
+      "MbrFirstName": "Manuela",
+      "MbrLastName": "Seidel",
+      "MbrPhoneNumber": "555-2641",
+      "MemberID": 110
+    },
+    {
+      "Gender": "F",
+      "MbrFirstName": "Kendra",
+      "MbrLastName": "Bonnicksen",
+      "MbrPhoneNumber": "555-2716",
+      "MemberID": 112
+    },
+    {
+      "Gender": "F",
+      "MbrFirstName": "Janice",
+      "MbrLastName": "Galvin",
+      "MbrPhoneNumber": "555-2691",
+      "MemberID": 118
+    }
+  ]
+}

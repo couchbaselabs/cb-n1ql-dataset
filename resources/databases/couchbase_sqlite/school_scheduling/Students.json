@@ -1,0 +1,275 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 19,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "StudAreaCode": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "253",
+              "425",
+              "541",
+              "760",
+              "806"
+            ],
+            "type": "string"
+          },
+          "StudCity": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Eugene",
+              "Lubbock",
+              "Palm Springs",
+              "Redmond",
+              "Tacoma"
+            ],
+            "type": "string"
+          },
+          "StudFirstName": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Betsy",
+              "David",
+              "Janice",
+              "Karen",
+              "Sarah"
+            ],
+            "type": "string"
+          },
+          "StudGPA": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              78.755,
+              80,
+              81,
+              85.235,
+              89.5
+            ],
+            "type": "number"
+          },
+          "StudLastName": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Galvin",
+              "Hamilton",
+              "Smith",
+              "Stadick",
+              "Thompson"
+            ],
+            "type": "string"
+          },
+          "StudMajor": {
+            "#docs": [
+              1,
+              18
+            ],
+            "%docs": [
+              5.26,
+              94.73
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "StudPhoneNumber": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "555-2551",
+              "555-2626",
+              "555-2691",
+              "555-2696",
+              "555-2701"
+            ],
+            "type": "string"
+          },
+          "StudState": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CA",
+              "OR",
+              "TX",
+              "WA"
+            ],
+            "type": "string"
+          },
+          "StudStreetAddress": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2222 Springer Road",
+              "30301 - 166th Ave. N.E.",
+              "4110 Old Redmond Rd.",
+              "611 Alpine Drive",
+              "908 W. Capital Way"
+            ],
+            "type": "string"
+          },
+          "StudZipCode": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "79402",
+              "92263",
+              "97401",
+              "98052",
+              "98413"
+            ],
+            "type": "string"
+          },
+          "StudentID": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1002,
+              1003,
+              1004,
+              1009,
+              1012
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 19,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 19,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Students::1",
+                  "Students::11",
+                  "Students::2",
+                  "Students::3",
+                  "Students::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Students::1"
+              },
+              {
+                "id": "Students::11"
+              },
+              {
+                "id": "Students::2"
+              },
+              {
+                "id": "Students::3"
+              },
+              {
+                "id": "Students::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "StudAreaCode": "503",
+      "StudCity": "Portland",
+      "StudFirstName": "John",
+      "StudGPA": 77.65,
+      "StudLastName": "Kennedy",
+      "StudMajor": 4,
+      "StudPhoneNumber": "555-2621",
+      "StudState": "OR",
+      "StudStreetAddress": "16679 NE 41st Court",
+      "StudZipCode": "97208",
+      "StudentID": 1011
+    },
+    {
+      "StudAreaCode": "425",
+      "StudCity": "Redmond",
+      "StudFirstName": "Janice",
+      "StudGPA": 81,
+      "StudLastName": "Galvin",
+      "StudMajor": 4,
+      "StudPhoneNumber": "555-2691",
+      "StudState": "WA",
+      "StudStreetAddress": "4110 Old Redmond Rd.",
+      "StudZipCode": "98052",
+      "StudentID": 1004
+    },
+    {
+      "StudAreaCode": "206",
+      "StudCity": "Marysville",
+      "StudFirstName": "George",
+      "StudGPA": 79.25,
+      "StudLastName": "Chavez",
+      "StudMajor": 6,
+      "StudPhoneNumber": "555-9930",
+      "StudState": "WA",
+      "StudStreetAddress": "281 Old Navy Road",
+      "StudZipCode": "98270",
+      "StudentID": 1017
+    },
+    {
+      "StudAreaCode": "541",
+      "StudCity": "Eugene",
+      "StudFirstName": "Karen",
+      "StudGPA": 80,
+      "StudLastName": "Smith",
+      "StudMajor": 2,
+      "StudPhoneNumber": "555-2551",
+      "StudState": "OR",
+      "StudStreetAddress": "30301 - 166th Ave. N.E.",
+      "StudZipCode": "97401",
+      "StudentID": 1009
+    },
+    {
+      "StudAreaCode": "206",
+      "StudCity": "Seattle",
+      "StudFirstName": "Doris",
+      "StudGPA": 72.225,
+      "StudLastName": "Hartwig",
+      "StudMajor": 5,
+      "StudPhoneNumber": "555-2671",
+      "StudState": "WA",
+      "StudStreetAddress": "4726 - 11th Ave. N.E.",
+      "StudZipCode": "98105",
+      "StudentID": 1005
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 71,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "index": {
+            "#docs": 71,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9,
+              12,
+              26,
+              56,
+              62
+            ],
+            "type": "number"
+          },
+          "product_category_name": {
+            "#docs": 71,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "casa_conforto_2",
+              "eletrodomesticos_2",
+              "moveis_cozinha_area_de_servico...",
+              "papelaria",
+              "relogios_presentes"
+            ],
+            "type": "string"
+          },
+          "product_category_name_english": {
+            "#docs": 71,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "home_appliances_2",
+              "home_comfort_2",
+              "kitchen_dining_laundry_garden_...",
+              "stationery",
+              "watches_gifts"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 71,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 71,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "product_category_name_translat...",
+                  "product_category_name_translat...",
+                  "product_category_name_translat...",
+                  "product_category_name_translat...",
+                  "product_category_name_translat..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "product_category_name_translation::12"
+              },
+              {
+                "id": "product_category_name_translation::26"
+              },
+              {
+                "id": "product_category_name_translation::56"
+              },
+              {
+                "id": "product_category_name_translation::62"
+              },
+              {
+                "id": "product_category_name_translation::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "index": 6,
+      "product_category_name": "perfumaria",
+      "product_category_name_english": "perfumery"
+    },
+    {
+      "index": 7,
+      "product_category_name": "utilidades_domesticas",
+      "product_category_name_english": "housewares"
+    },
+    {
+      "index": 56,
+      "product_category_name": "eletrodomesticos_2",
+      "product_category_name_english": "home_appliances_2"
+    },
+    {
+      "index": 62,
+      "product_category_name": "casa_conforto_2",
+      "product_category_name_english": "home_comfort_2"
+    },
+    {
+      "index": 4,
+      "product_category_name": "moveis_decoracao",
+      "product_category_name_english": "furniture_decor"
+    }
+  ]
+}

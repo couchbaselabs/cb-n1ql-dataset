@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 163,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "BusinessEntityID": {
+            "#docs": 163,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              274,
+              278,
+              281,
+              282,
+              286
+            ],
+            "type": "number"
+          },
+          "ModifiedDate": {
+            "#docs": 163,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-07-17 00:00:00",
+              "2012-01-15 00:00:00",
+              "2012-10-16 00:00:00",
+              "2013-10-16 00:00:00",
+              "2014-01-15 00:00:00"
+            ],
+            "type": "string"
+          },
+          "QuotaDate": {
+            "#docs": 163,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-08-31 00:00:00",
+              "2012-02-29 00:00:00",
+              "2012-11-30 00:00:00",
+              "2013-11-30 00:00:00",
+              "2014-03-01 00:00:00"
+            ],
+            "type": "string"
+          },
+          "SalesQuota": {
+            "#docs": 163,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              107000,
+              356000,
+              399000,
+              549000,
+              830000
+            ],
+            "type": "number"
+          },
+          "rowguid": {
+            "#docs": 163,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "{13947D2C-A254-47C9-8817-CBD18...",
+              "{5690E967-970D-41F6-9864-C64BD...",
+              "{5AF006C1-AA62-4303-875F-F248B...",
+              "{AD3E7040-3F1F-485E-A716-F7D18...",
+              "{F020801A-4E65-42E3-83E5-CB92F..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 163,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 163,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "SalesPersonQuotaHistory::107",
+                  "SalesPersonQuotaHistory::133",
+                  "SalesPersonQuotaHistory::49",
+                  "SalesPersonQuotaHistory::6",
+                  "SalesPersonQuotaHistory::85"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "SalesPersonQuotaHistory::107"
+              },
+              {
+                "id": "SalesPersonQuotaHistory::133"
+              },
+              {
+                "id": "SalesPersonQuotaHistory::49"
+              },
+              {
+                "id": "SalesPersonQuotaHistory::6"
+              },
+              {
+                "id": "SalesPersonQuotaHistory::85"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BusinessEntityID": 281,
+      "ModifiedDate": "2013-10-16 00:00:00",
+      "QuotaDate": "2013-11-30 00:00:00",
+      "SalesQuota": 614000,
+      "rowguid": "{070F2190-C4FB-4261-98EF-C6B5CA745DE8}"
+    },
+    {
+      "BusinessEntityID": 274,
+      "ModifiedDate": "2013-01-14 00:00:00",
+      "QuotaDate": "2013-02-28 00:00:00",
+      "SalesQuota": 58000,
+      "rowguid": "{BC1A222F-47A0-48D1-9C56-AC873269DC98}"
+    },
+    {
+      "BusinessEntityID": 281,
+      "ModifiedDate": "2011-04-16 00:00:00",
+      "QuotaDate": "2011-05-31 00:00:00",
+      "SalesQuota": 460000,
+      "rowguid": "{FCEF2AF1-6183-41B3-A04F-2EAD88389267}"
+    },
+    {
+      "BusinessEntityID": 274,
+      "ModifiedDate": "2013-04-15 00:00:00",
+      "QuotaDate": "2013-05-30 00:00:00",
+      "SalesQuota": 263000,
+      "rowguid": "{8B4E3CBF-F0EF-49C5-9A8C-87679055057E}"
+    },
+    {
+      "BusinessEntityID": 281,
+      "ModifiedDate": "2013-07-16 00:00:00",
+      "QuotaDate": "2013-08-30 00:00:00",
+      "SalesQuota": 684000,
+      "rowguid": "{CFA3347D-BBF9-4F9B-8339-6FC0FD0079F4}"
+    }
+  ]
+}

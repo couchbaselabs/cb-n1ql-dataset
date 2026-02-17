@@ -1,0 +1,90 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 4,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bowlers",
+              "Teams",
+              "Tournaments",
+              "Tourney_Matches"
+            ],
+            "type": "string"
+          },
+          "seq": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              20,
+              34,
+              57
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 4,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sqlite_sequence::0",
+                  "sqlite_sequence::1",
+                  "sqlite_sequence::2",
+                  "sqlite_sequence::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sqlite_sequence::0"
+              },
+              {
+                "id": "sqlite_sequence::1"
+              },
+              {
+                "id": "sqlite_sequence::2"
+              },
+              {
+                "id": "sqlite_sequence::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "Tournaments",
+      "seq": 20
+    },
+    {
+      "name": "Bowlers",
+      "seq": 34
+    },
+    {
+      "name": "Teams",
+      "seq": 10
+    },
+    {
+      "name": "Tourney_Matches",
+      "seq": 57
+    }
+  ]
+}

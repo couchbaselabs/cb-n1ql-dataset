@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 26,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "skill_id": {
+            "#docs": 26,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              16,
+              30,
+              164,
+              187,
+              250
+            ],
+            "type": "number"
+          },
+          "skills": {
+            "#docs": 26,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "asp.netcore",
+              "qlik",
+              "ruby",
+              "t-sql",
+              "twilio"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "#docs": 26,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "analyst_tools",
+              "databases",
+              "programming",
+              "sync",
+              "webframeworks"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 26,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 26,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "skills_dim::11",
+                  "skills_dim::19",
+                  "skills_dim::2",
+                  "skills_dim::25",
+                  "skills_dim::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "skills_dim::11"
+              },
+              {
+                "id": "skills_dim::19"
+              },
+              {
+                "id": "skills_dim::2"
+              },
+              {
+                "id": "skills_dim::25"
+              },
+              {
+                "id": "skills_dim::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "skill_id": 70,
+      "skills": "sqlite",
+      "type": "databases"
+    },
+    {
+      "skill_id": 199,
+      "skills": "spss",
+      "type": "analyst_tools"
+    },
+    {
+      "skill_id": 30,
+      "skills": "ruby",
+      "type": "programming"
+    },
+    {
+      "skill_id": 16,
+      "skills": "t-sql",
+      "type": "programming"
+    },
+    {
+      "skill_id": 86,
+      "skills": "heroku",
+      "type": "cloud"
+    }
+  ]
+}

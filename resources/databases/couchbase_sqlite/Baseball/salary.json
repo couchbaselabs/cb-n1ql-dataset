@@ -1,0 +1,151 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "league_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AL",
+              "NL"
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "clemero02",
+              "cruzjo02",
+              "mcelrch01",
+              "rodrijo03",
+              "thomafr04"
+            ],
+            "type": "string"
+          },
+          "salary": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              150000,
+              332000,
+              1050000,
+              9927000,
+              10100000
+            ],
+            "type": "number"
+          },
+          "team_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CHA",
+              "COL",
+              "NYA",
+              "SLN",
+              "TOR"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1997,
+              1999,
+              2002,
+              2003,
+              2006
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "salary::10234",
+                  "salary::11585",
+                  "salary::14133",
+                  "salary::15299",
+                  "salary::17990"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "salary::10234"
+              },
+              {
+                "id": "salary::11585"
+              },
+              {
+                "id": "salary::14133"
+              },
+              {
+                "id": "salary::15299"
+              },
+              {
+                "id": "salary::17990"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "league_id": "NL",
+      "player_id": "mcmilbi01",
+      "salary": 153000,
+      "team_id": "PHI",
+      "year": 1997
+    },
+    {
+      "league_id": "NL",
+      "player_id": "erickjo01",
+      "salary": 200000,
+      "team_id": "PIT",
+      "year": 1997
+    },
+    {
+      "league_id": "AL",
+      "player_id": "eversbr01",
+      "salary": 150000,
+      "team_id": "TEX",
+      "year": 1997
+    },
+    {
+      "league_id": "NL",
+      "player_id": "jonesch06",
+      "salary": 2550000,
+      "team_id": "ATL",
+      "year": 1998
+    },
+    {
+      "league_id": "AL",
+      "player_id": "kamiesc01",
+      "salary": 2850000,
+      "team_id": "BAL",
+      "year": 1998
+    }
+  ]
+}

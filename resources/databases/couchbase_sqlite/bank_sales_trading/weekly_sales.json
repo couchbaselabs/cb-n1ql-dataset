@@ -1,0 +1,199 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Existing",
+              "Guest",
+              "New"
+            ],
+            "type": "string"
+          },
+          "platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Retail",
+              "Shopify"
+            ],
+            "type": "string"
+          },
+          "region": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ASIA",
+              "EUROPE",
+              "OCEANIA",
+              "SOUTH AMERICA",
+              "USA"
+            ],
+            "type": "string"
+          },
+          "sales": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3695,
+              18696,
+              21978,
+              213231,
+              15823156
+            ],
+            "type": "number"
+          },
+          "segment": {
+            "#docs": [
+              167,
+              833
+            ],
+            "%docs": [
+              16.7,
+              83.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "C1",
+                "C2",
+                "C4",
+                "F2",
+                "F3"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "transactions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              17,
+              90,
+              158,
+              3941,
+              287614
+            ],
+            "type": "number"
+          },
+          "week_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "13/8/18",
+              "21/5/18",
+              "25/3/19",
+              "27/7/20",
+              "27/8/18"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "weekly_sales::11400",
+                  "weekly_sales::11860",
+                  "weekly_sales::12153",
+                  "weekly_sales::1352",
+                  "weekly_sales::15075"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "weekly_sales::11400"
+              },
+              {
+                "id": "weekly_sales::11860"
+              },
+              {
+                "id": "weekly_sales::12153"
+              },
+              {
+                "id": "weekly_sales::1352"
+              },
+              {
+                "id": "weekly_sales::15075"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_type": "Existing",
+      "platform": "Shopify",
+      "region": "CANADA",
+      "sales": 124490,
+      "segment": "F3",
+      "transactions": 654,
+      "week_date": "3/8/20"
+    },
+    {
+      "customer_type": "New",
+      "platform": "Retail",
+      "region": "AFRICA",
+      "sales": 3526020,
+      "segment": "C3",
+      "transactions": 96054,
+      "week_date": "29/4/19"
+    },
+    {
+      "customer_type": "New",
+      "platform": "Shopify",
+      "region": "CANADA",
+      "sales": 8562,
+      "segment": "F1",
+      "transactions": 54,
+      "week_date": "29/4/19"
+    },
+    {
+      "customer_type": "New",
+      "platform": "Retail",
+      "region": "CANADA",
+      "sales": 755030,
+      "segment": "C1",
+      "transactions": 28635,
+      "week_date": "29/4/19"
+    },
+    {
+      "customer_type": "New",
+      "platform": "Retail",
+      "region": "SOUTH AMERICA",
+      "sales": 15986,
+      "segment": "F2",
+      "transactions": 399,
+      "week_date": "22/4/19"
+    }
+  ]
+}

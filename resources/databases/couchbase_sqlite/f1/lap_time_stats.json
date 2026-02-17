@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "avg_milliseconds": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              89167.08333333333,
+              91842.71929824562,
+              100359.69811320755,
+              102399.54545454546,
+              106962.63636363637
+            ],
+            "type": "number"
+          },
+          "avg_seconds": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              89.16708333333332,
+              91.8427192982456,
+              100.35969811320759,
+              102.39954545454546,
+              106.96263636363632
+            ],
+            "type": "number"
+          },
+          "driver_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              25,
+              30,
+              43,
+              822
+            ],
+            "type": "number"
+          },
+          "race_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              51,
+              109,
+              161,
+              171,
+              1120
+            ],
+            "type": "number"
+          },
+          "stdev_milliseconds": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3213.9343913782245,
+              3287.1859256394705,
+              6502.339250017185,
+              6906.318905882646,
+              23610.149659954892
+            ],
+            "type": "number"
+          },
+          "stdev_seconds": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3.213934391378224,
+              3.2871859256394704,
+              6.5023392500171875,
+              6.906318905882647,
+              23.610149659954892
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "lap_time_stats::1018",
+                  "lap_time_stats::10561",
+                  "lap_time_stats::2150",
+                  "lap_time_stats::3193",
+                  "lap_time_stats::3400"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "lap_time_stats::1018"
+              },
+              {
+                "id": "lap_time_stats::10561"
+              },
+              {
+                "id": "lap_time_stats::2150"
+              },
+              {
+                "id": "lap_time_stats::3193"
+              },
+              {
+                "id": "lap_time_stats::3400"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "avg_milliseconds": 81112.40277777778,
+      "avg_seconds": 81.11240277777776,
+      "driver_id": 855,
+      "race_id": 1088,
+      "stdev_milliseconds": 10121.190174386775,
+      "stdev_seconds": 10.121190174386776
+    },
+    {
+      "avg_milliseconds": 88784.48387096774,
+      "avg_seconds": 88.78448387096775,
+      "driver_id": 4,
+      "race_id": 1089,
+      "stdev_milliseconds": 4148.233039079898,
+      "stdev_seconds": 4.148233039079898
+    },
+    {
+      "avg_milliseconds": 92890.44230769231,
+      "avg_seconds": 92.89044230769228,
+      "driver_id": 849,
+      "race_id": 1089,
+      "stdev_milliseconds": 13025.039060052848,
+      "stdev_seconds": 13.025039060052846
+    },
+    {
+      "avg_milliseconds": 98847.76,
+      "avg_seconds": 98.84776000000002,
+      "driver_id": 852,
+      "race_id": 1099,
+      "stdev_milliseconds": 12090.73549881892,
+      "stdev_seconds": 12.09073549881892
+    },
+    {
+      "avg_milliseconds": 102973.5,
+      "avg_seconds": 102.9735,
+      "driver_id": 848,
+      "race_id": 1100,
+      "stdev_milliseconds": 20770.08584278521,
+      "stdev_seconds": 20.77008584278521
+    }
+  ]
+}

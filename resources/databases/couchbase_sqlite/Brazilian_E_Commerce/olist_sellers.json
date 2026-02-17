@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "seller_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "fortaleza",
+              "ibitinga",
+              "jaboticabal",
+              "sao paulo",
+              "sao vicente"
+            ],
+            "type": "string"
+          },
+          "seller_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "173d56ffbd4c56cb80fc3615487d71...",
+              "578fa3a9cb6b6dceab39231ad59cda...",
+              "aa1eb17b9fdf6dfd546e25c45c7b92...",
+              "c68fb906c8f4b4b946d8386bfa6e54...",
+              "f7c31656c19db6275a8acadca289f4..."
+            ],
+            "type": "string"
+          },
+          "seller_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CE",
+              "MG",
+              "RJ",
+              "SC",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "seller_zip_code_prefix": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4794,
+              11370,
+              14870,
+              14940,
+              60025
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "olist_sellers::1312",
+                  "olist_sellers::1478",
+                  "olist_sellers::1699",
+                  "olist_sellers::1709",
+                  "olist_sellers::1711"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "olist_sellers::1312"
+              },
+              {
+                "id": "olist_sellers::1478"
+              },
+              {
+                "id": "olist_sellers::1699"
+              },
+              {
+                "id": "olist_sellers::1709"
+              },
+              {
+                "id": "olist_sellers::1711"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "seller_city": "araucaria",
+      "seller_id": "681fce914360217db47784ae28905a96",
+      "seller_state": "PR",
+      "seller_zip_code_prefix": 83709
+    },
+    {
+      "seller_city": "maringa",
+      "seller_id": "c79151301b9d90985d1fa52879213105",
+      "seller_state": "PR",
+      "seller_zip_code_prefix": 87083
+    },
+    {
+      "seller_city": "lencois paulista",
+      "seller_id": "bdb3edbaee43a761e2d4f258dc08f348",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 18680
+    },
+    {
+      "seller_city": "sao paulo",
+      "seller_id": "37be5a7c751166fbc5f8ccba4119e043",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 4248
+    },
+    {
+      "seller_city": "sao paulo",
+      "seller_id": "9d39404483343dd55c7ae254494d8388",
+      "seller_state": "SP",
+      "seller_zip_code_prefix": 1044
+    }
+  ]
+}

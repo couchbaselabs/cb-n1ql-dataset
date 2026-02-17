@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1208,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 1208,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5070,
+              5745,
+              61744,
+              62705,
+              64661
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 1208,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Dudley Boyz Invitational table...",
+              "Philadelphia streetfight (tag)",
+              "referee: Larry Zbyszko",
+              "referee: Shawn Michaels 60 min...",
+              "referee: Sonny Onoo \"Martial A..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1208,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1208,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Match_Types::1096",
+                  "Match_Types::1106",
+                  "Match_Types::113",
+                  "Match_Types::1132",
+                  "Match_Types::127"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Match_Types::1096"
+              },
+              {
+                "id": "Match_Types::1106"
+              },
+              {
+                "id": "Match_Types::113"
+              },
+              {
+                "id": "Match_Types::1132"
+              },
+              {
+                "id": "Match_Types::127"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 8,
+      "name": "6-person tag (2 out of 3 falls)"
+    },
+    {
+      "id": 161,
+      "name": "6-person tag (3 out of 5 falls)"
+    },
+    {
+      "id": 58237,
+      "name": "three-way hardcore tag"
+    },
+    {
+      "id": 58898,
+      "name": "handicap \"House of Pain\""
+    },
+    {
+      "id": 59186,
+      "name": "triple-threat street fight tag"
+    }
+  ]
+}

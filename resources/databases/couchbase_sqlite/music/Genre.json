@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 25,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "GenreId": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              14,
+              15,
+              17,
+              21
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Drama",
+              "Easy Listening",
+              "Electronica/Dance",
+              "Hip Hop/Rap",
+              "R&B/Soul"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 25,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Genre::11",
+                  "Genre::13",
+                  "Genre::14",
+                  "Genre::16",
+                  "Genre::20"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Genre::11"
+              },
+              {
+                "id": "Genre::13"
+              },
+              {
+                "id": "Genre::14"
+              },
+              {
+                "id": "Genre::16"
+              },
+              {
+                "id": "Genre::20"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "GenreId": 14,
+      "Name": "R&B/Soul"
+    },
+    {
+      "GenreId": 7,
+      "Name": "Latin"
+    },
+    {
+      "GenreId": 3,
+      "Name": "Metal"
+    },
+    {
+      "GenreId": 15,
+      "Name": "Electronica/Dance"
+    },
+    {
+      "GenreId": 21,
+      "Name": "Drama"
+    }
+  ]
+}

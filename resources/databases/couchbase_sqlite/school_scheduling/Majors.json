@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 7,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Major": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Accounting",
+              "Art",
+              "General Studies",
+              "Information Sciences",
+              "Mathematics"
+            ],
+            "type": "string"
+          },
+          "MajorID": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 7,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Majors::0",
+                  "Majors::3",
+                  "Majors::4",
+                  "Majors::5",
+                  "Majors::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Majors::0"
+              },
+              {
+                "id": "Majors::3"
+              },
+              {
+                "id": "Majors::4"
+              },
+              {
+                "id": "Majors::5"
+              },
+              {
+                "id": "Majors::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Major": "Mathematics",
+      "MajorID": 7
+    },
+    {
+      "Major": "Art",
+      "MajorID": 6
+    },
+    {
+      "Major": "Accounting",
+      "MajorID": 5
+    },
+    {
+      "Major": "English",
+      "MajorID": 2
+    },
+    {
+      "Major": "Music",
+      "MajorID": 3
+    }
+  ]
+}

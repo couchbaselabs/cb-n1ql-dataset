@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 15,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "emp_id": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              143,
+              144,
+              145,
+              146,
+              147
+            ],
+            "type": "number"
+          },
+          "end_": {
+            "#docs": [
+              7,
+              8
+            ],
+            "%docs": [
+              46.66,
+              53.33
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2012-04-01",
+                "2014-01-01",
+                "2015-05-01",
+                "2016-02-01",
+                "2016-06-01"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "start_": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2012-04-01",
+              "2014-02-01",
+              "2016-11-01",
+              "2017-03-01",
+              "2019-02-01"
+            ],
+            "type": "string"
+          },
+          "title": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IT Developer",
+              "Operations Chief",
+              "Product Director",
+              "Scrum Master",
+              "Warehouse Manager"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 15,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "emp_hire_periods::11",
+                  "emp_hire_periods::14",
+                  "emp_hire_periods::7",
+                  "emp_hire_periods::8",
+                  "emp_hire_periods::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "emp_hire_periods::11"
+              },
+              {
+                "id": "emp_hire_periods::14"
+              },
+              {
+                "id": "emp_hire_periods::7"
+              },
+              {
+                "id": "emp_hire_periods::8"
+              },
+              {
+                "id": "emp_hire_periods::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "emp_id": 144,
+      "end_": null,
+      "start_": "2012-04-01",
+      "title": "Product Director"
+    },
+    {
+      "emp_id": 142,
+      "end_": "2012-04-01",
+      "start_": "2010-07-01",
+      "title": "Product Director"
+    },
+    {
+      "emp_id": 145,
+      "end_": null,
+      "start_": "2019-02-01",
+      "title": "Scrum Master"
+    },
+    {
+      "emp_id": 147,
+      "end_": "2017-03-01",
+      "start_": "2016-05-01",
+      "title": "Warehouse Manager"
+    },
+    {
+      "emp_id": 145,
+      "end_": null,
+      "start_": "2014-02-01",
+      "title": "IT Developer"
+    }
+  ]
+}

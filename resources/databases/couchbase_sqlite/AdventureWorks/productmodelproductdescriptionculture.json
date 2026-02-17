@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 762,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`modifieddate` = \"2013-04-30 00:00:00\"",
+        "properties": {
+          "cultureid": {
+            "#docs": 762,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ar",
+              "en",
+              "he",
+              "th",
+              "zh-cht"
+            ],
+            "type": "string"
+          },
+          "modifieddate": {
+            "#docs": 762,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-04-30 00:00:00"
+            ],
+            "type": "string"
+          },
+          "productdescriptionid": {
+            "#docs": 762,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1189,
+              1402,
+              1643,
+              1678,
+              1731
+            ],
+            "type": "number"
+          },
+          "productmodelid": {
+            "#docs": 762,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              18,
+              23,
+              42,
+              46,
+              82
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 762,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 762,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "productmodelproductdescription...",
+                  "productmodelproductdescription...",
+                  "productmodelproductdescription...",
+                  "productmodelproductdescription...",
+                  "productmodelproductdescription..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "productmodelproductdescriptionculture::102"
+              },
+              {
+                "id": "productmodelproductdescriptionculture::136"
+              },
+              {
+                "id": "productmodelproductdescriptionculture::247"
+              },
+              {
+                "id": "productmodelproductdescriptionculture::273"
+              },
+              {
+                "id": "productmodelproductdescriptionculture::489"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "cultureid": "ar",
+      "modifieddate": "2013-04-30 00:00:00",
+      "productdescriptionid": 1472,
+      "productmodelid": 32
+    },
+    {
+      "cultureid": "he",
+      "modifieddate": "2013-04-30 00:00:00",
+      "productdescriptionid": 1786,
+      "productmodelid": 59
+    },
+    {
+      "cultureid": "en",
+      "modifieddate": "2013-04-30 00:00:00",
+      "productdescriptionid": 847,
+      "productmodelid": 62
+    },
+    {
+      "cultureid": "en",
+      "modifieddate": "2013-04-30 00:00:00",
+      "productdescriptionid": 852,
+      "productmodelid": 70
+    },
+    {
+      "cultureid": "en",
+      "modifieddate": "2013-04-30 00:00:00",
+      "productdescriptionid": 856,
+      "productmodelid": 71
+    }
+  ]
+}

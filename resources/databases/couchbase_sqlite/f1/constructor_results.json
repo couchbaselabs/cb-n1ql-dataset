@@ -1,0 +1,164 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "constructor_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              6,
+              15,
+              27,
+              131
+            ],
+            "type": "number"
+          },
+          "constructor_results_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1373,
+              14773,
+              15176,
+              15555,
+              15962
+            ],
+            "type": "number"
+          },
+          "points": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              4,
+              21,
+              27,
+              43
+            ],
+            "type": "number"
+          },
+          "race_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              149,
+              897,
+              943,
+              980,
+              1021
+            ],
+            "type": "number"
+          },
+          "status": {
+            "#docs": [
+              997,
+              3
+            ],
+            "%docs": [
+              99.7,
+              0.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "D"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "constructor_results::10274",
+                  "constructor_results::10677",
+                  "constructor_results::11056",
+                  "constructor_results::11461",
+                  "constructor_results::1372"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "constructor_results::10274"
+              },
+              {
+                "id": "constructor_results::10677"
+              },
+              {
+                "id": "constructor_results::11056"
+              },
+              {
+                "id": "constructor_results::11461"
+              },
+              {
+                "id": "constructor_results::1372"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "constructor_id": 3,
+      "constructor_results_id": 14544,
+      "points": 0,
+      "race_id": 875,
+      "status": null
+    },
+    {
+      "constructor_id": 131,
+      "constructor_results_id": 14568,
+      "points": 0,
+      "race_id": 877,
+      "status": null
+    },
+    {
+      "constructor_id": 206,
+      "constructor_results_id": 14570,
+      "points": 0,
+      "race_id": 877,
+      "status": null
+    },
+    {
+      "constructor_id": 15,
+      "constructor_results_id": 14787,
+      "points": 8,
+      "race_id": 898,
+      "status": null
+    },
+    {
+      "constructor_id": 3,
+      "constructor_results_id": 14789,
+      "points": 4,
+      "race_id": 898,
+      "status": null
+    }
+  ]
+}

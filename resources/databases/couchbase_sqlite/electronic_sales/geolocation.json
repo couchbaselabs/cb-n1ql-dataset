@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "geolocation_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "caieiras",
+              "monte alto",
+              "rio de janeiro",
+              "santos",
+              "s\u00e3o paulo"
+            ],
+            "type": "string"
+          },
+          "geolocation_lat": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -23.932969092705832,
+              -23.50920529682142,
+              -23.338518881213663,
+              -22.90533489702239,
+              -21.267212456620648
+            ],
+            "type": "number"
+          },
+          "geolocation_lng": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -48.48646279775679,
+              -46.759055106234094,
+              -46.665456664232494,
+              -46.330799097553246,
+              -43.17706062502171
+            ],
+            "type": "number"
+          },
+          "geolocation_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MG",
+              "PR",
+              "RJ",
+              "RS",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "geolocation_zip_code_prefix": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2518,
+              7718,
+              11010,
+              15910,
+              20011
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              32430,
+              191942,
+              247846,
+              359023,
+              406052
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "geolocation::191942",
+                  "geolocation::247846",
+                  "geolocation::32430",
+                  "geolocation::359023",
+                  "geolocation::406052"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "geolocation::191942"
+              },
+              {
+                "id": "geolocation::247846"
+              },
+              {
+                "id": "geolocation::32430"
+              },
+              {
+                "id": "geolocation::359023"
+              },
+              {
+                "id": "geolocation::406052"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "geolocation_city": "ipiranga do sul",
+      "geolocation_lat": -27.93526525128416,
+      "geolocation_lng": -52.42723209270409,
+      "geolocation_state": "RS",
+      "geolocation_zip_code_prefix": 99925,
+      "index": 1000148
+    },
+    {
+      "geolocation_city": "tapejara",
+      "geolocation_lat": -28.069025135378347,
+      "geolocation_lng": -52.01116994956856,
+      "geolocation_state": "RS",
+      "geolocation_zip_code_prefix": 99950,
+      "index": 1000150
+    },
+    {
+      "geolocation_city": "sao paulo",
+      "geolocation_lat": -23.627905024494726,
+      "geolocation_lng": -46.66532536566556,
+      "geolocation_state": "SP",
+      "geolocation_zip_code_prefix": 4625,
+      "index": 100055
+    },
+    {
+      "geolocation_city": "s\u00e3o paulo",
+      "geolocation_lat": -23.61918365306711,
+      "geolocation_lng": -46.66305069317329,
+      "geolocation_state": "SP",
+      "geolocation_zip_code_prefix": 4612,
+      "index": 100061
+    },
+    {
+      "geolocation_city": "sao paulo",
+      "geolocation_lat": -23.63188136441802,
+      "geolocation_lng": -46.66281888273988,
+      "geolocation_state": "SP",
+      "geolocation_zip_code_prefix": 4630,
+      "index": 100079
+    }
+  ]
+}

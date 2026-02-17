@@ -1,0 +1,80 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 3,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ClassStatus": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "ClassStatusDescription": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Completed",
+              "Enrolled",
+              "Withdrew"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 3,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Student_Class_Status::0",
+                  "Student_Class_Status::1",
+                  "Student_Class_Status::2"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Student_Class_Status::0"
+              },
+              {
+                "id": "Student_Class_Status::1"
+              },
+              {
+                "id": "Student_Class_Status::2"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ClassStatus": 2,
+      "ClassStatusDescription": "Completed"
+    },
+    {
+      "ClassStatus": 3,
+      "ClassStatusDescription": "Withdrew"
+    },
+    {
+      "ClassStatus": 1,
+      "ClassStatusDescription": "Enrolled"
+    }
+  ]
+}

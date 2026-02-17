@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 145,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ClassID": {
+            "#docs": 145,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2889,
+              3085,
+              4156,
+              4812,
+              5510
+            ],
+            "type": "number"
+          },
+          "StaffID": {
+            "#docs": 145,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              98007,
+              98012,
+              98040,
+              98055,
+              98059
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 145,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 145,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Faculty_Classes::116",
+                  "Faculty_Classes::41",
+                  "Faculty_Classes::59",
+                  "Faculty_Classes::75",
+                  "Faculty_Classes::95"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Faculty_Classes::116"
+              },
+              {
+                "id": "Faculty_Classes::41"
+              },
+              {
+                "id": "Faculty_Classes::59"
+              },
+              {
+                "id": "Faculty_Classes::75"
+              },
+              {
+                "id": "Faculty_Classes::95"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ClassID": 2907,
+      "StaffID": 98013
+    },
+    {
+      "ClassID": 4006,
+      "StaffID": 98045
+    },
+    {
+      "ClassID": 4020,
+      "StaffID": 98028
+    },
+    {
+      "ClassID": 2911,
+      "StaffID": 98013
+    },
+    {
+      "ClassID": 4012,
+      "StaffID": 98030
+    }
+  ]
+}

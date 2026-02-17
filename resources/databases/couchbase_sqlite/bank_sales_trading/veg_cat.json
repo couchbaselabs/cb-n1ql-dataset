@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 251,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "category_code": {
+            "#docs": 251,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1011010101,
+              1011010402,
+              1011010501,
+              1011010504,
+              1011010801
+            ],
+            "type": "number"
+          },
+          "category_name": {
+            "#docs": 251,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aquatic Tuberous Vegetables",
+              "Capsicum",
+              "Edible Mushroom",
+              "Flower/Leaf\u00a0Vegetables",
+              "Solanum"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 251,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              43,
+              77,
+              116,
+              122,
+              197
+            ],
+            "type": "number"
+          },
+          "item_code": {
+            "#docs": 251,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              102900011008522,
+              102900011011669,
+              102900011024010,
+              102900011033531,
+              102900051000944
+            ],
+            "type": "number"
+          },
+          "item_name": {
+            "#docs": 251,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Fresh Lotus Root Zone (Bag)",
+              "Honghu Lotus Root",
+              "Red Coral (Leaf)",
+              "Sweet Chinese Cabbage",
+              "Xiuzhen Mushroom"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 251,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 251,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "veg_cat::116",
+                  "veg_cat::122",
+                  "veg_cat::197",
+                  "veg_cat::43",
+                  "veg_cat::77"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "veg_cat::116"
+              },
+              {
+                "id": "veg_cat::122"
+              },
+              {
+                "id": "veg_cat::197"
+              },
+              {
+                "id": "veg_cat::43"
+              },
+              {
+                "id": "veg_cat::77"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "category_code": 1011010504,
+      "category_name": "Capsicum",
+      "index": 156,
+      "item_code": 102900011029305,
+      "item_name": "Fruit Chili"
+    },
+    {
+      "category_code": 1011010504,
+      "category_name": "Capsicum",
+      "index": 162,
+      "item_code": 102900011032022,
+      "item_name": "Xiaozhoupi (Bag)"
+    },
+    {
+      "category_code": 1011010801,
+      "category_name": "Edible Mushroom",
+      "index": 213,
+      "item_code": 102900011030912,
+      "item_name": "Haixian Mushroom (Bag)"
+    },
+    {
+      "category_code": 1011010801,
+      "category_name": "Edible Mushroom",
+      "index": 227,
+      "item_code": 102900011034330,
+      "item_name": "Agaricus Bisporus (Box)"
+    },
+    {
+      "category_code": 1011010101,
+      "category_name": "Flower/Leaf\u00a0Vegetables",
+      "index": 37,
+      "item_code": 102900011007495,
+      "item_name": "The Dandelion"
+    }
+  ]
+}

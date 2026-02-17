@@ -1,0 +1,204 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 15,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`CustState` = \"WA\"",
+        "properties": {
+          "CustCity": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bellevue",
+              "Kirkland",
+              "Redmond",
+              "Seattle",
+              "Tacoma"
+            ],
+            "type": "string"
+          },
+          "CustFirstName": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Darren",
+              "Estella",
+              "Kerry",
+              "Liz",
+              "Sarah"
+            ],
+            "type": "string"
+          },
+          "CustLastName": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Gehring",
+              "Keyser",
+              "Patterson",
+              "Pundt",
+              "Thompson"
+            ],
+            "type": "string"
+          },
+          "CustPhoneNumber": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "555-0399",
+              "555-2556",
+              "555-2616",
+              "555-2626",
+              "555-9938"
+            ],
+            "type": "string"
+          },
+          "CustState": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WA"
+            ],
+            "type": "string"
+          },
+          "CustStreetAddress": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "13920 S.E. 40th Street",
+              "2222 Springer Road",
+              "2500 Rosales Lane",
+              "2601 Seaview Lane",
+              "777 Fenexet Blvd"
+            ],
+            "type": "string"
+          },
+          "CustZipCode": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "98006",
+              "98033",
+              "98052",
+              "98105",
+              "98413"
+            ],
+            "type": "string"
+          },
+          "CustomerID": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10007,
+              10008,
+              10009,
+              10012,
+              10013
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 15,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Customers::11",
+                  "Customers::12",
+                  "Customers::6",
+                  "Customers::7",
+                  "Customers::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Customers::11"
+              },
+              {
+                "id": "Customers::12"
+              },
+              {
+                "id": "Customers::6"
+              },
+              {
+                "id": "Customers::7"
+              },
+              {
+                "id": "Customers::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CustCity": "Redmond",
+      "CustFirstName": "Kerry",
+      "CustLastName": "Patterson",
+      "CustPhoneNumber": "555-0399",
+      "CustState": "WA",
+      "CustStreetAddress": "777 Fenexet Blvd",
+      "CustZipCode": "98052",
+      "CustomerID": 10012
+    },
+    {
+      "CustCity": "Bellevue",
+      "CustFirstName": "Joyce",
+      "CustLastName": "Bonnicksen",
+      "CustPhoneNumber": "555-2726",
+      "CustState": "WA",
+      "CustStreetAddress": "2424 Thames Drive",
+      "CustZipCode": "98006",
+      "CustomerID": 10011
+    },
+    {
+      "CustCity": "Kirkland",
+      "CustFirstName": "Darren",
+      "CustLastName": "Gehring",
+      "CustPhoneNumber": "555-2616",
+      "CustState": "WA",
+      "CustStreetAddress": "2601 Seaview Lane",
+      "CustZipCode": "98033",
+      "CustomerID": 10008
+    },
+    {
+      "CustCity": "Kirkland",
+      "CustFirstName": "Zachary",
+      "CustLastName": "Ehrlich",
+      "CustPhoneNumber": "555-2721",
+      "CustState": "WA",
+      "CustStreetAddress": "12330 Kingman Drive",
+      "CustZipCode": "98033",
+      "CustomerID": 10010
+    },
+    {
+      "CustCity": "Seattle",
+      "CustFirstName": "Doris",
+      "CustLastName": "Hartwig",
+      "CustPhoneNumber": "555-2671",
+      "CustState": "WA",
+      "CustStreetAddress": "4726 - 11th Ave. N.E.",
+      "CustZipCode": "98105",
+      "CustomerID": 10001
+    }
+  ]
+}

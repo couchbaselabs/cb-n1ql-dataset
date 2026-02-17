@@ -1,0 +1,244 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "actual_arrival": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-07-29 19:30:00+03",
+              "2017-07-31 18:05:00+03",
+              "2017-08-03 10:30:00+03",
+              "2017-08-14 08:35:00+03",
+              "\\N"
+            ],
+            "type": "string"
+          },
+          "actual_departure": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-07-29 17:22:00+03",
+              "2017-07-31 15:19:00+03",
+              "2017-08-03 06:51:00+03",
+              "2017-08-14 08:10:00+03",
+              "\\N"
+            ],
+            "type": "string"
+          },
+          "aircraft_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "319",
+              "321",
+              "CN1",
+              "CR2",
+              "SU9"
+            ],
+            "type": "string"
+          },
+          "arrival_airport": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CEK",
+              "DME",
+              "SCW",
+              "SGC",
+              "VKO"
+            ],
+            "type": "string"
+          },
+          "departure_airport": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CEK",
+              "MMK",
+              "NBC",
+              "PKV",
+              "VKT"
+            ],
+            "type": "string"
+          },
+          "flight_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12321,
+              15600,
+              17613,
+              17880,
+              17890
+            ],
+            "type": "number"
+          },
+          "flight_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PG0006",
+              "PG0060",
+              "PG0190",
+              "PG0290",
+              "PG0415"
+            ],
+            "type": "string"
+          },
+          "scheduled_arrival": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-07-29 19:25:00+03",
+              "2017-08-22 10:45:00+03",
+              "2017-08-23 20:10:00+03",
+              "2017-08-31 16:10:00+03",
+              "2017-09-11 19:25:00+03"
+            ],
+            "type": "string"
+          },
+          "scheduled_departure": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-07-29 17:20:00+03",
+              "2017-08-22 07:35:00+03",
+              "2017-08-23 17:50:00+03",
+              "2017-08-31 14:05:00+03",
+              "2017-09-11 17:20:00+03"
+            ],
+            "type": "string"
+          },
+          "status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Arrived",
+              "Cancelled",
+              "Delayed",
+              "On Time",
+              "Scheduled"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "flights::12336",
+                  "flights::15613",
+                  "flights::17624",
+                  "flights::17891",
+                  "flights::17901"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "flights::12336"
+              },
+              {
+                "id": "flights::15613"
+              },
+              {
+                "id": "flights::17624"
+              },
+              {
+                "id": "flights::17891"
+              },
+              {
+                "id": "flights::17901"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "actual_arrival": "\\N",
+      "actual_departure": "\\N",
+      "aircraft_code": "CN1",
+      "arrival_airport": "KJA",
+      "departure_airport": "OVB",
+      "flight_id": 10038,
+      "flight_no": "PG0205",
+      "scheduled_arrival": "2017-08-28 15:35:00+03",
+      "scheduled_departure": "2017-08-28 13:30:00+03",
+      "status": "Scheduled"
+    },
+    {
+      "actual_arrival": "\\N",
+      "actual_departure": "\\N",
+      "aircraft_code": "CN1",
+      "arrival_airport": "KJA",
+      "departure_airport": "OVB",
+      "flight_id": 10044,
+      "flight_no": "PG0205",
+      "scheduled_arrival": "2017-09-01 15:35:00+03",
+      "scheduled_departure": "2017-09-01 13:30:00+03",
+      "status": "Scheduled"
+    },
+    {
+      "actual_arrival": "2017-07-25 10:05:00+03",
+      "actual_departure": "2017-07-25 07:13:00+03",
+      "aircraft_code": "CR2",
+      "arrival_airport": "MJZ",
+      "departure_airport": "OVB",
+      "flight_id": 10265,
+      "flight_no": "PG0390",
+      "scheduled_arrival": "2017-07-25 10:00:00+03",
+      "scheduled_departure": "2017-07-25 07:10:00+03",
+      "status": "Arrived"
+    },
+    {
+      "actual_arrival": "2017-08-01 10:05:00+03",
+      "actual_departure": "2017-08-01 07:13:00+03",
+      "aircraft_code": "CR2",
+      "arrival_airport": "MJZ",
+      "departure_airport": "OVB",
+      "flight_id": 10295,
+      "flight_no": "PG0390",
+      "scheduled_arrival": "2017-08-01 10:00:00+03",
+      "scheduled_departure": "2017-08-01 07:10:00+03",
+      "status": "Arrived"
+    },
+    {
+      "actual_arrival": "2017-08-14 09:09:00+03",
+      "actual_departure": "2017-08-14 06:17:00+03",
+      "aircraft_code": "CR2",
+      "arrival_airport": "PYJ",
+      "departure_airport": "OVB",
+      "flight_id": 10309,
+      "flight_no": "PG0083",
+      "scheduled_arrival": "2017-08-14 09:05:00+03",
+      "scheduled_departure": "2017-08-14 06:15:00+03",
+      "status": "Arrived"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1096,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "DateField": {
+            "#docs": 1096,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-05-22",
+              "2017-06-09",
+              "2017-06-25",
+              "2017-07-24",
+              "2017-08-17"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1096,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1096,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ztblDays::141",
+                  "ztblDays::159",
+                  "ztblDays::175",
+                  "ztblDays::204",
+                  "ztblDays::228"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ztblDays::141"
+              },
+              {
+                "id": "ztblDays::159"
+              },
+              {
+                "id": "ztblDays::175"
+              },
+              {
+                "id": "ztblDays::204"
+              },
+              {
+                "id": "ztblDays::228"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "DateField": "2017-06-02"
+    },
+    {
+      "DateField": "2017-06-16"
+    },
+    {
+      "DateField": "2017-08-06"
+    },
+    {
+      "DateField": "2017-08-12"
+    },
+    {
+      "DateField": "2018-01-23"
+    }
+  ]
+}

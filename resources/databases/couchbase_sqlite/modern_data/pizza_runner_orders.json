@@ -1,0 +1,223 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "cancellation": {
+            "#docs": [
+              8,
+              2
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Customer Cancellation",
+                "Restaurant Cancellation"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "distance": {
+            "#docs": [
+              2,
+              8
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "10",
+                "13.4km",
+                "20km",
+                "23.4",
+                "25km"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "duration": {
+            "#docs": [
+              2,
+              8
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "20 mins",
+                "25mins",
+                "27 minutes",
+                "32 minutes",
+                "40"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            "type": "number"
+          },
+          "pickup_time": {
+            "#docs": [
+              2,
+              8
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-01-01 18:15:34",
+                "2021-01-01 19:10:54",
+                "2021-01-03 00:12:37",
+                "2021-01-04 13:53:03",
+                "2021-01-08 21:30:45"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "runner_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pizza_runner_orders::0",
+                  "pizza_runner_orders::1",
+                  "pizza_runner_orders::2",
+                  "pizza_runner_orders::3",
+                  "pizza_runner_orders::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pizza_runner_orders::0"
+              },
+              {
+                "id": "pizza_runner_orders::1"
+              },
+              {
+                "id": "pizza_runner_orders::2"
+              },
+              {
+                "id": "pizza_runner_orders::3"
+              },
+              {
+                "id": "pizza_runner_orders::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "cancellation": null,
+      "distance": "23.4 km",
+      "duration": "15 minute",
+      "order_id": 8,
+      "pickup_time": "2021-01-10 00:15:02",
+      "runner_id": 2
+    },
+    {
+      "cancellation": null,
+      "distance": "10",
+      "duration": "15",
+      "order_id": 5,
+      "pickup_time": "2021-01-08 21:10:57",
+      "runner_id": 3
+    },
+    {
+      "cancellation": null,
+      "distance": "10km",
+      "duration": "10minutes",
+      "order_id": 10,
+      "pickup_time": "2021-01-11 18:50:20",
+      "runner_id": 1
+    },
+    {
+      "cancellation": null,
+      "distance": "25km",
+      "duration": "25mins",
+      "order_id": 7,
+      "pickup_time": "2021-01-08 21:30:45",
+      "runner_id": 2
+    },
+    {
+      "cancellation": null,
+      "distance": "13.4km",
+      "duration": "20 mins",
+      "order_id": 3,
+      "pickup_time": "2021-01-03 00:12:37",
+      "runner_id": 1
+    }
+  ]
+}

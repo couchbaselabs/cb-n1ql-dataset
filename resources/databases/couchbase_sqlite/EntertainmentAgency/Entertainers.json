@@ -1,0 +1,283 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 13,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`EntState` = \"WA\"",
+        "properties": {
+          "DateEntered": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1995-11-30",
+              "1996-02-14",
+              "1997-05-12",
+              "1997-07-11",
+              "1998-09-13"
+            ],
+            "type": "string"
+          },
+          "EntCity": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Auburn",
+              "Bellevue",
+              "Redmond",
+              "Seattle",
+              "Woodinville"
+            ],
+            "type": "string"
+          },
+          "EntEMailAddress": {
+            "#docs": [
+              11,
+              2
+            ],
+            "%docs": [
+              84.61,
+              15.38
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "carolinec@willow.com",
+                "ke@mzo.com"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "EntPhoneNumber": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "555-0399",
+              "555-2306",
+              "555-2541",
+              "555-2561",
+              "555-2591"
+            ],
+            "type": "string"
+          },
+          "EntSSN": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "888-30-1031",
+              "888-38-1043",
+              "888-50-1061",
+              "888-61-1103",
+              "888-71-1123"
+            ],
+            "type": "string"
+          },
+          "EntStageName": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Caroline Coie Cuartet",
+              "Coldwater Cattle Company",
+              "Jazz Persuasion",
+              "Katherine Ehrlich",
+              "Topazz"
+            ],
+            "type": "string"
+          },
+          "EntState": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WA"
+            ],
+            "type": "string"
+          },
+          "EntStreetAddress": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "16 Maple Lane",
+              "233 West Valley Hwy",
+              "298 Forest Lane",
+              "4726 - 11th Ave. N.E.",
+              "777 Fenexet Blvd"
+            ],
+            "type": "string"
+          },
+          "EntWebPage": {
+            "#docs": [
+              2,
+              11
+            ],
+            "%docs": [
+              15.38,
+              84.61
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "www.coldwatercows.com",
+                "www.jazzper.com",
+                "www.jvd6.com",
+                "www.moderndance.com",
+                "www.topazz.com"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "EntZipCode": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "98002",
+              "98005",
+              "98009",
+              "98072",
+              "98105"
+            ],
+            "type": "string"
+          },
+          "EntertainerID": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1002,
+              1005,
+              1007,
+              1009,
+              1013
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 13,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 13,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Entertainers::1",
+                  "Entertainers::12",
+                  "Entertainers::4",
+                  "Entertainers::6",
+                  "Entertainers::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Entertainers::1"
+              },
+              {
+                "id": "Entertainers::12"
+              },
+              {
+                "id": "Entertainers::4"
+              },
+              {
+                "id": "Entertainers::6"
+              },
+              {
+                "id": "Entertainers::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "DateEntered": "1996-02-14",
+      "EntCity": "Auburn",
+      "EntEMailAddress": null,
+      "EntPhoneNumber": "555-2591",
+      "EntSSN": "888-50-1061",
+      "EntStageName": "Topazz",
+      "EntState": "WA",
+      "EntStreetAddress": "16 Maple Lane",
+      "EntWebPage": "www.topazz.com",
+      "EntZipCode": "98002",
+      "EntertainerID": 1002
+    },
+    {
+      "DateEntered": "1995-01-20",
+      "EntCity": "Seattle",
+      "EntEMailAddress": "edz@coolness.com",
+      "EntPhoneNumber": "555-0039",
+      "EntSSN": "888-64-1109",
+      "EntStageName": "Saturday Revue",
+      "EntState": "WA",
+      "EntStreetAddress": "3887 Easy Street",
+      "EntWebPage": "www.satrevue.com",
+      "EntZipCode": "98125",
+      "EntertainerID": 1010
+    },
+    {
+      "DateEntered": "1996-02-28",
+      "EntCity": "Seattle",
+      "EntEMailAddress": null,
+      "EntPhoneNumber": "555-2711",
+      "EntSSN": "888-98-1133",
+      "EntStageName": "Country Feeling",
+      "EntState": "WA",
+      "EntStreetAddress": "PO Box 223311",
+      "EntWebPage": null,
+      "EntZipCode": "98125",
+      "EntertainerID": 1008
+    },
+    {
+      "DateEntered": "1998-10-12",
+      "EntCity": "Bellevue",
+      "EntEMailAddress": "susan@gs.com",
+      "EntPhoneNumber": "555-2301",
+      "EntSSN": "888-70-1121",
+      "EntStageName": "Susan McLain",
+      "EntState": "WA",
+      "EntStreetAddress": "511 Lenora Ave",
+      "EntWebPage": "www.greensleeves.com",
+      "EntZipCode": "98006",
+      "EntertainerID": 1012
+    },
+    {
+      "DateEntered": "1996-04-12",
+      "EntCity": "Seattle",
+      "EntEMailAddress": null,
+      "EntPhoneNumber": "555-9936",
+      "EntSSN": "888-65-1111",
+      "EntStageName": "Julia Schnebly",
+      "EntState": "WA",
+      "EntStreetAddress": "2343 Harmony Lane",
+      "EntWebPage": null,
+      "EntZipCode": "99837",
+      "EntertainerID": 1011
+    }
+  ]
+}

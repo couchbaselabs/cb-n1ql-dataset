@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 600,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "city": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Augusta-Richmond County",
+              "Cianjur",
+              "Clarksville",
+              "Kaliningrad",
+              "Kimchon"
+            ],
+            "type": "string"
+          },
+          "city_id": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              41,
+              117,
+              123,
+              254,
+              268
+            ],
+            "type": "number"
+          },
+          "country_id": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15,
+              45,
+              80,
+              86,
+              103
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:51:50",
+              "2021-03-06 15:51:51",
+              "2021-03-06 15:51:52",
+              "2021-03-06 15:51:53",
+              "2021-03-06 15:51:54"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 600,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "city::116",
+                  "city::122",
+                  "city::253",
+                  "city::267",
+                  "city::40"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "city::116"
+              },
+              {
+                "id": "city::122"
+              },
+              {
+                "id": "city::253"
+              },
+              {
+                "id": "city::267"
+              },
+              {
+                "id": "city::40"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "city": "Dzerzinsk",
+      "city_id": 150,
+      "country_id": 80,
+      "last_update": "2021-03-06 15:51:51"
+    },
+    {
+      "city": "Effon-Alaiye",
+      "city_id": 152,
+      "country_id": 69,
+      "last_update": "2021-03-06 15:51:51"
+    },
+    {
+      "city": "Ezhou",
+      "city_id": 166,
+      "country_id": 23,
+      "last_update": "2021-03-06 15:51:51"
+    },
+    {
+      "city": "Ibirit",
+      "city_id": 215,
+      "country_id": 15,
+      "last_update": "2021-03-06 15:51:51"
+    },
+    {
+      "city": "Imus",
+      "city_id": 221,
+      "country_id": 75,
+      "last_update": "2021-03-06 15:51:51"
+    }
+  ]
+}

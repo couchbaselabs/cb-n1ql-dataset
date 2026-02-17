@@ -1,0 +1,128 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 23,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`app_id` = 542",
+        "properties": {
+          "app_id": {
+            "#docs": 23,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              542
+            ],
+            "type": "number"
+          },
+          "client_ip": {
+            "#docs": 23,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "104.130.89.12",
+              "85.237.86.200"
+            ],
+            "type": "string"
+          },
+          "page_no": {
+            "#docs": 23,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "visit_time": {
+            "#docs": 23,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04-20 09:17:50",
+              "2019-04-20 09:34:29",
+              "2019-04-20 09:47:08",
+              "2019-04-20 09:49:12",
+              "2019-04-20 14:45:10"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 23,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 23,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_page_visits::11",
+                  "web_page_visits::12",
+                  "web_page_visits::17",
+                  "web_page_visits::7",
+                  "web_page_visits::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_page_visits::11"
+              },
+              {
+                "id": "web_page_visits::12"
+              },
+              {
+                "id": "web_page_visits::17"
+              },
+              {
+                "id": "web_page_visits::7"
+              },
+              {
+                "id": "web_page_visits::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "app_id": 542,
+      "client_ip": "85.237.86.200",
+      "page_no": 3,
+      "visit_time": "2019-04-20 12:02:02"
+    },
+    {
+      "app_id": 542,
+      "client_ip": "104.130.89.12",
+      "page_no": 3,
+      "visit_time": "2019-04-20 15:05:48"
+    },
+    {
+      "app_id": 542,
+      "client_ip": "85.237.86.200",
+      "page_no": 2,
+      "visit_time": "2019-04-20 11:58:09"
+    },
+    {
+      "app_id": 542,
+      "client_ip": "104.130.89.12",
+      "page_no": 2,
+      "visit_time": "2019-04-20 15:04:01"
+    },
+    {
+      "app_id": 542,
+      "client_ip": "104.130.89.12",
+      "page_no": 1,
+      "visit_time": "2019-04-20 14:45:10"
+    }
+  ]
+}

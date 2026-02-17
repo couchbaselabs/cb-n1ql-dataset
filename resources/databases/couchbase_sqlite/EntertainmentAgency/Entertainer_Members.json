@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 40,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "EntertainerID": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1003,
+              1005,
+              1006,
+              1007,
+              1008
+            ],
+            "type": "number"
+          },
+          "MemberID": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              109,
+              110,
+              114,
+              118,
+              120
+            ],
+            "type": "number"
+          },
+          "Status": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 40,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Entertainer_Members::13",
+                  "Entertainer_Members::17",
+                  "Entertainer_Members::23",
+                  "Entertainer_Members::27",
+                  "Entertainer_Members::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Entertainer_Members::13"
+              },
+              {
+                "id": "Entertainer_Members::17"
+              },
+              {
+                "id": "Entertainer_Members::23"
+              },
+              {
+                "id": "Entertainer_Members::27"
+              },
+              {
+                "id": "Entertainer_Members::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "EntertainerID": 1001,
+      "MemberID": 118,
+      "Status": 2
+    },
+    {
+      "EntertainerID": 1006,
+      "MemberID": 118,
+      "Status": 1
+    },
+    {
+      "EntertainerID": 1007,
+      "MemberID": 110,
+      "Status": 1
+    },
+    {
+      "EntertainerID": 1003,
+      "MemberID": 102,
+      "Status": 1
+    },
+    {
+      "EntertainerID": 1005,
+      "MemberID": 120,
+      "Status": 2
+    }
+  ]
+}

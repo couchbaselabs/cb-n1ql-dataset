@@ -1,0 +1,168 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 299,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 299,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              4234,
+              9551,
+              16239,
+              47612
+            ],
+            "type": "number"
+          },
+          "team_api_id": {
+            "#docs": 299,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7869,
+              8165,
+              8191,
+              8635,
+              9851
+            ],
+            "type": "number"
+          },
+          "team_fifa_api_id": {
+            "#docs": [
+              11,
+              288
+            ],
+            "%docs": [
+              3.67,
+              96.32
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                74,
+                171,
+                229,
+                1796,
+                1867
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "team_long_name": {
+            "#docs": 299,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1. FC N\u00fcrnberg",
+              "Burnley",
+              "C\u00f3rdoba CF",
+              "RSC Anderlecht",
+              "Stade Rennais FC"
+            ],
+            "type": "string"
+          },
+          "team_short_name": {
+            "#docs": 299,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AND",
+              "BUR",
+              "COR",
+              "NUR",
+              "REN"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 299,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 299,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Team::113",
+                  "Team::282",
+                  "Team::47",
+                  "Team::5",
+                  "Team::73"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Team::113"
+              },
+              {
+                "id": "Team::282"
+              },
+              {
+                "id": "Team::47"
+              },
+              {
+                "id": "Team::5"
+              },
+              {
+                "id": "Team::73"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 31444,
+      "team_api_id": 8031,
+      "team_fifa_api_id": 111429,
+      "team_long_name": "Polonia Bytom",
+      "team_short_name": "POB"
+    },
+    {
+      "id": 3468,
+      "team_api_id": 8655,
+      "team_fifa_api_id": 3,
+      "team_long_name": "Blackburn Rovers",
+      "team_short_name": "BLB"
+    },
+    {
+      "id": 49479,
+      "team_api_id": 10190,
+      "team_fifa_api_id": 898,
+      "team_long_name": "FC St. Gallen",
+      "team_short_name": "GAL"
+    },
+    {
+      "id": 5744,
+      "team_api_id": 10003,
+      "team_fifa_api_id": 1960,
+      "team_long_name": "Swansea City",
+      "team_short_name": "SWA"
+    },
+    {
+      "id": 5756,
+      "team_api_id": 9850,
+      "team_fifa_api_id": 1792,
+      "team_long_name": "Norwich City",
+      "team_short_name": "NOR"
+    }
+  ]
+}

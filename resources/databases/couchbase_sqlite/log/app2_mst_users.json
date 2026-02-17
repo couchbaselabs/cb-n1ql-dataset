@@ -1,0 +1,82 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Ito",
+              "Tanaka"
+            ],
+            "type": "string"
+          },
+          "phone": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "070-xxxx-xxxx",
+              "080-xxxx-xxxx"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U001",
+              "U002"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "app2_mst_users::0",
+                  "app2_mst_users::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "app2_mst_users::0"
+              },
+              {
+                "id": "app2_mst_users::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "Ito",
+      "phone": "080-xxxx-xxxx",
+      "user_id": "U001"
+    },
+    {
+      "name": "Tanaka",
+      "phone": "070-xxxx-xxxx",
+      "user_id": "U002"
+    }
+  ]
+}

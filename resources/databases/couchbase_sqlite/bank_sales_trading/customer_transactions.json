@@ -1,0 +1,134 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              270,
+              290,
+              302,
+              403,
+              413
+            ],
+            "type": "number"
+          },
+          "txn_amount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              60,
+              69,
+              340,
+              508,
+              531
+            ],
+            "type": "number"
+          },
+          "txn_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-01-28",
+              "2020-02-09",
+              "2020-02-26",
+              "2020-03-30",
+              "2020-04-06"
+            ],
+            "type": "string"
+          },
+          "txn_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "deposit",
+              "purchase",
+              "withdrawal"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customer_transactions::2894",
+                  "customer_transactions::2904",
+                  "customer_transactions::3369",
+                  "customer_transactions::3857",
+                  "customer_transactions::4126"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customer_transactions::2894"
+              },
+              {
+                "id": "customer_transactions::2904"
+              },
+              {
+                "id": "customer_transactions::3369"
+              },
+              {
+                "id": "customer_transactions::3857"
+              },
+              {
+                "id": "customer_transactions::4126"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_id": 68,
+      "txn_amount": 574,
+      "txn_date": "2020-01-20",
+      "txn_type": "deposit"
+    },
+    {
+      "customer_id": 266,
+      "txn_amount": 858,
+      "txn_date": "2020-04-15",
+      "txn_type": "deposit"
+    },
+    {
+      "customer_id": 93,
+      "txn_amount": 16,
+      "txn_date": "2020-02-13",
+      "txn_type": "purchase"
+    },
+    {
+      "customer_id": 366,
+      "txn_amount": 569,
+      "txn_date": "2020-02-21",
+      "txn_type": "deposit"
+    },
+    {
+      "customer_id": 89,
+      "txn_amount": 246,
+      "txn_date": "2020-03-08",
+      "txn_type": "purchase"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 4,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Midwest",
+              "Northeast",
+              "Southeast",
+              "West"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 4,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_region::0",
+                  "web_region::1",
+                  "web_region::2",
+                  "web_region::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_region::0"
+              },
+              {
+                "id": "web_region::1"
+              },
+              {
+                "id": "web_region::2"
+              },
+              {
+                "id": "web_region::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 4,
+      "name": "West"
+    },
+    {
+      "id": 3,
+      "name": "Southeast"
+    },
+    {
+      "id": 1,
+      "name": "Northeast"
+    },
+    {
+      "id": 2,
+      "name": "Midwest"
+    }
+  ]
+}

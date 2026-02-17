@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "genre": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Action",
+              "Comedy",
+              "Drama",
+              "Romance",
+              "Thriller"
+            ],
+            "type": "string"
+          },
+          "movie_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt2560792",
+              "tt7205208",
+              "tt7304212",
+              "tt7620746",
+              "tt9075778"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "genre::10436",
+                  "genre::10773",
+                  "genre::11614",
+                  "genre::1258",
+                  "genre::14077"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "genre::10436"
+              },
+              {
+                "id": "genre::10773"
+              },
+              {
+                "id": "genre::11614"
+              },
+              {
+                "id": "genre::1258"
+              },
+              {
+                "id": "genre::14077"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "genre": "Romance",
+      "movie_id": "tt7063130"
+    },
+    {
+      "genre": "Drama",
+      "movie_id": "tt7071382"
+    },
+    {
+      "genre": "Mystery",
+      "movie_id": "tt7080138"
+    },
+    {
+      "genre": "Horror",
+      "movie_id": "tt7154284"
+    },
+    {
+      "genre": "Drama",
+      "movie_id": "tt7158430"
+    }
+  ]
+}

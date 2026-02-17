@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "campo bom",
+              "olimpia",
+              "rio de janeiro",
+              "salvador",
+              "vitoria da conquista"
+            ],
+            "type": "string"
+          },
+          "customer_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "023d1d56f9187c91230a4e8b50ab6f...",
+              "1bec19baa3b9b15b6dfea90d4f534d...",
+              "7bc187ccb73d502b2088482e4fb0a1...",
+              "b4645427a641aee53c205d38e34dd5...",
+              "b9fc3d447729dee0ddba58c9aad62f..."
+            ],
+            "type": "string"
+          },
+          "customer_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BA",
+              "MG",
+              "RJ",
+              "RS",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "customer_unique_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "39a049ced60af02ddf4e0294d71bef...",
+              "39e943abc3dcbe0ff54fd2764cc474...",
+              "3d470cf44ec101a9ae26d7388f1670...",
+              "7ba3c99c622cccc68f846b190e4ad9...",
+              "d87cc9520e3fd47ef88f7098e51afe..."
+            ],
+            "type": "string"
+          },
+          "customer_zip_code_prefix": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15400,
+              22281,
+              41385,
+              45051,
+              93700
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "olist_customers::20457",
+                  "olist_customers::59552",
+                  "olist_customers::64367",
+                  "olist_customers::64439",
+                  "olist_customers::68205"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "olist_customers::20457"
+              },
+              {
+                "id": "olist_customers::59552"
+              },
+              {
+                "id": "olist_customers::64367"
+              },
+              {
+                "id": "olist_customers::64439"
+              },
+              {
+                "id": "olist_customers::68205"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_city": "sao paulo",
+      "customer_id": "ef88187a0432a68c69a1bb4c27269999",
+      "customer_state": "SP",
+      "customer_unique_id": "29457ea6cb4d58e67149f91c611002a9",
+      "customer_zip_code_prefix": 4547
+    },
+    {
+      "customer_city": "escada",
+      "customer_id": "84e14521bff8cbb289a87be1961d3d08",
+      "customer_state": "PE",
+      "customer_unique_id": "9202421110f6a19ddcf0b9b93602a0a1",
+      "customer_zip_code_prefix": 55500
+    },
+    {
+      "customer_city": "ribeirao pires",
+      "customer_id": "213c1279a8968f4d1b8c277c499a09b9",
+      "customer_state": "SP",
+      "customer_unique_id": "10d08b0815e9440e864261196046b3e6",
+      "customer_zip_code_prefix": 9425
+    },
+    {
+      "customer_city": "nova bassano",
+      "customer_id": "b509ac0ac5749b7e1b81b48de8fe7236",
+      "customer_state": "RS",
+      "customer_unique_id": "b405e15c616b885b8aea6cb6a3019404",
+      "customer_zip_code_prefix": 95340
+    },
+    {
+      "customer_city": "sao paulo",
+      "customer_id": "55b50a4395d1cb6e966a0c9604c4a1cd",
+      "customer_state": "SP",
+      "customer_unique_id": "25aa83940eb1e732623f8f398c08a3ac",
+      "customer_zip_code_prefix": 4736
+    }
+  ]
+}

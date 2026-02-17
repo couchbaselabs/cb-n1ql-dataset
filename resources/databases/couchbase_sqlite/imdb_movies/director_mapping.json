@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "movie_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt5706876",
+              "tt5740806",
+              "tt6039372",
+              "tt6055450",
+              "tt6314766"
+            ],
+            "type": "string"
+          },
+          "name_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "nm1953143",
+              "nm2035204",
+              "nm3380955",
+              "nm4286760",
+              "nm4332422"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "director_mapping::1445",
+                  "director_mapping::1471",
+                  "director_mapping::1718",
+                  "director_mapping::1734",
+                  "director_mapping::1999"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "director_mapping::1445"
+              },
+              {
+                "id": "director_mapping::1471"
+              },
+              {
+                "id": "director_mapping::1718"
+              },
+              {
+                "id": "director_mapping::1734"
+              },
+              {
+                "id": "director_mapping::1999"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "movie_id": "tt5109784",
+      "name_id": "nm0004716"
+    },
+    {
+      "movie_id": "tt5110386",
+      "name_id": "nm0870920"
+    },
+    {
+      "movie_id": "tt5121816",
+      "name_id": "nm0407067"
+    },
+    {
+      "movie_id": "tt5161058",
+      "name_id": "nm4069291"
+    },
+    {
+      "movie_id": "tt5195412",
+      "name_id": "nm0842523"
+    }
+  ]
+}

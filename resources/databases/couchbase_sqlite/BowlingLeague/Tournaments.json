@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 20,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "TourneyDate": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-11-27",
+              "2017-12-04",
+              "2018-07-12",
+              "2018-08-09",
+              "2018-08-16"
+            ],
+            "type": "string"
+          },
+          "TourneyID": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              14,
+              15,
+              19,
+              20
+            ],
+            "type": "number"
+          },
+          "TourneyLocation": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Acapulco Lanes",
+              "Bolero Lanes",
+              "Imperial Lanes",
+              "Red Rooster Lanes",
+              "Totem Lanes"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 20,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Tournaments::12",
+                  "Tournaments::13",
+                  "Tournaments::14",
+                  "Tournaments::18",
+                  "Tournaments::19"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Tournaments::12"
+              },
+              {
+                "id": "Tournaments::13"
+              },
+              {
+                "id": "Tournaments::14"
+              },
+              {
+                "id": "Tournaments::18"
+              },
+              {
+                "id": "Tournaments::19"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "TourneyDate": "2017-09-11",
+      "TourneyID": 2,
+      "TourneyLocation": "Thunderbird Lanes"
+    },
+    {
+      "TourneyDate": "2018-08-09",
+      "TourneyID": 19,
+      "TourneyLocation": "Imperial Lanes"
+    },
+    {
+      "TourneyDate": "2017-09-18",
+      "TourneyID": 3,
+      "TourneyLocation": "Bolero Lanes"
+    },
+    {
+      "TourneyDate": "2017-12-04",
+      "TourneyID": 14,
+      "TourneyLocation": "Acapulco Lanes"
+    },
+    {
+      "TourneyDate": "2017-10-23",
+      "TourneyID": 8,
+      "TourneyLocation": "Red Rooster Lanes"
+    }
+  ]
+}

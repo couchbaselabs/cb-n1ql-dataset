@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 113,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 113,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1232,
+              1235,
+              1238,
+              1241,
+              1271
+            ],
+            "type": "number"
+          },
+          "location_id": {
+            "#docs": 113,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              25,
+              102,
+              197,
+              219,
+              234
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 113,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4040,
+              4160,
+              7790,
+              7870,
+              7950
+            ],
+            "type": "number"
+          },
+          "purchase_id": {
+            "#docs": 113,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              734,
+              735,
+              736,
+              741,
+              750
+            ],
+            "type": "number"
+          },
+          "qty": {
+            "#docs": 113,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              21,
+              31,
+              44,
+              48
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 113,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 113,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "inventory::28",
+                  "inventory::29",
+                  "inventory::30",
+                  "inventory::31",
+                  "inventory::41"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "inventory::28"
+              },
+              {
+                "id": "inventory::29"
+              },
+              {
+                "id": "inventory::30"
+              },
+              {
+                "id": "inventory::31"
+              },
+              {
+                "id": "inventory::41"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 1433,
+      "location_id": 165,
+      "product_id": 6520,
+      "purchase_id": 729,
+      "qty": 14
+    },
+    {
+      "id": 1409,
+      "location_id": 125,
+      "product_id": 7950,
+      "purchase_id": 765,
+      "qty": 48
+    },
+    {
+      "id": 1472,
+      "location_id": 143,
+      "product_id": 5430,
+      "purchase_id": 778,
+      "qty": 6
+    },
+    {
+      "id": 1478,
+      "location_id": 64,
+      "product_id": 6520,
+      "purchase_id": 779,
+      "qty": 43
+    },
+    {
+      "id": 1307,
+      "location_id": 163,
+      "product_id": 4280,
+      "purchase_id": 747,
+      "qty": 35
+    }
+  ]
+}

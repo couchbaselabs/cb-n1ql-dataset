@@ -1,0 +1,210 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 603,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`district` = \" \", `phone` = \" \"",
+        "properties": {
+          "address": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1079 Tel Aviv-Jaffa Boulevard",
+              "1785 So Bernardo do Campo Stre...",
+              "1987 Coacalco de Berriozbal Lo...",
+              "446 Kirovo-Tepetsk Lane",
+              "786 Stara Zagora Way"
+            ],
+            "type": "string"
+          },
+          "address2": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "address_id": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              117,
+              123,
+              254,
+              269,
+              487
+            ],
+            "type": "number"
+          },
+          "city_id": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              125,
+              132,
+              203,
+              390,
+              476
+            ],
+            "type": "number"
+          },
+          "district": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " "
+            ],
+            "type": "string"
+          },
+          "last_update": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:51:54",
+              "2021-03-06 15:51:55",
+              "2021-03-06 15:51:56",
+              "2021-03-06 15:51:57",
+              "2021-03-06 15:51:58"
+            ],
+            "type": "string"
+          },
+          "phone": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " "
+            ],
+            "type": "string"
+          },
+          "postal_code": {
+            "#docs": [
+              4,
+              599
+            ],
+            "%docs": [
+              0.66,
+              99.33
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "10885",
+                "19428",
+                "71182",
+                "96065",
+                "98332"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 603,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "address::116",
+                  "address::122",
+                  "address::253",
+                  "address::267",
+                  "address::485"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "address::116"
+              },
+              {
+                "id": "address::122"
+              },
+              {
+                "id": "address::253"
+              },
+              {
+                "id": "address::267"
+              },
+              {
+                "id": "address::485"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "454 Nakhon Sawan Boulevard",
+      "address2": null,
+      "address_id": 109,
+      "city_id": 173,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:55",
+      "phone": " ",
+      "postal_code": "76383"
+    },
+    {
+      "address": "1532 Dzerzinsk Way",
+      "address2": null,
+      "address_id": 111,
+      "city_id": 334,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:55",
+      "phone": " ",
+      "postal_code": "9599"
+    },
+    {
+      "address": "211 Chiayi Drive",
+      "address2": null,
+      "address_id": 125,
+      "city_id": 164,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:55",
+      "phone": " ",
+      "postal_code": "58186"
+    },
+    {
+      "address": "1497 Yuzhou Drive",
+      "address2": null,
+      "address_id": 256,
+      "city_id": 312,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:56",
+      "phone": " ",
+      "postal_code": "3433"
+    },
+    {
+      "address": "532 Toulon Street",
+      "address2": null,
+      "address_id": 263,
+      "city_id": 460,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:56",
+      "phone": " ",
+      "postal_code": "69517"
+    }
+  ]
+}

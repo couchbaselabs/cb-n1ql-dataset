@@ -1,0 +1,284 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`language_id` = 1, `release_year` = \"2006\"",
+        "properties": {
+          "description": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A Amazing Epistle of a Boy And...",
+              "A Epic Display of a Hunter And...",
+              "A Lacklusture Display of a Exp...",
+              "A Taut Character Study of a Wo...",
+              "A Taut Documentary of a Databa..."
+            ],
+            "type": "string"
+          },
+          "film_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              186,
+              349,
+              351,
+              365,
+              417
+            ],
+            "type": "number"
+          },
+          "language_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:52:02",
+              "2021-03-06 15:52:03",
+              "2021-03-06 15:52:04",
+              "2021-03-06 15:52:05",
+              "2021-03-06 15:52:06"
+            ],
+            "type": "string"
+          },
+          "length": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              64,
+              93,
+              106,
+              154,
+              185
+            ],
+            "type": "number"
+          },
+          "original_language_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "rating": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "G",
+              "NC-17",
+              "PG",
+              "PG-13",
+              "R"
+            ],
+            "type": "string"
+          },
+          "release_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2006"
+            ],
+            "type": "string"
+          },
+          "rental_duration": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "rental_rate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.99,
+              2.99,
+              4.99
+            ],
+            "type": "number"
+          },
+          "replacement_cost": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10.99,
+              17.99,
+              21.99,
+              27.99,
+              29.99
+            ],
+            "type": "number"
+          },
+          "special_features": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Behind the Scenes",
+              "Deleted Scenes,Behind the Scen...",
+              "Trailers,Behind the Scenes",
+              "Trailers,Commentaries,Deleted ...",
+              "Trailers,Deleted Scenes"
+            ],
+            "type": "string"
+          },
+          "title": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CRAFT OUTFIELD",
+              "GANGS PRIDE",
+              "GASLIGHT CRUSADE",
+              "GOLD RIVER",
+              "HILLS NEIGHBORS"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "film::185",
+                  "film::348",
+                  "film::350",
+                  "film::364",
+                  "film::416"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "film::185"
+              },
+              {
+                "id": "film::348"
+              },
+              {
+                "id": "film::350"
+              },
+              {
+                "id": "film::364"
+              },
+              {
+                "id": "film::416"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "description": "A Emotional Drama of a Womanizer And a Squirrel who must Vanquish a Crocodile in Ancient India",
+      "film_id": 189,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:02",
+      "length": 139,
+      "original_language_id": null,
+      "rating": "NC-17",
+      "release_year": "2006",
+      "rental_duration": 3,
+      "rental_rate": 0.99,
+      "replacement_cost": 23.99,
+      "special_features": "Trailers,Deleted Scenes",
+      "title": "CREATURES SHAKESPEARE"
+    },
+    {
+      "description": "A Unbelieveable Drama of a Hunter And a Database Administrator who must Battle a Crocodile in An Abandoned Amusement Park",
+      "film_id": 191,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:02",
+      "length": 143,
+      "original_language_id": null,
+      "rating": "PG-13",
+      "release_year": "2006",
+      "rental_duration": 6,
+      "rental_rate": 0.99,
+      "replacement_cost": 27.99,
+      "special_features": "Commentaries,Deleted Scenes,Behind the Scenes",
+      "title": "CROOKED FROGMEN"
+    },
+    {
+      "description": "A Emotional Reflection of a Womanizer And a Pioneer who must Face a Squirrel in Berlin",
+      "film_id": 346,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:03",
+      "length": 128,
+      "original_language_id": null,
+      "rating": "R",
+      "release_year": "2006",
+      "rental_duration": 4,
+      "rental_rate": 4.99,
+      "replacement_cost": 13.99,
+      "special_features": "Deleted Scenes",
+      "title": "GALAXY SWEETHEARTS"
+    },
+    {
+      "description": "A Action-Packed Display of a Sumo Wrestler And a Car who must Overcome a Waitress in A Baloon Factory",
+      "film_id": 370,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:03",
+      "length": 108,
+      "original_language_id": null,
+      "rating": "R",
+      "release_year": "2006",
+      "rental_duration": 4,
+      "rental_rate": 2.99,
+      "replacement_cost": 26.99,
+      "special_features": "Deleted Scenes,Behind the Scenes",
+      "title": "GORGEOUS BINGO"
+    },
+    {
+      "description": "A Taut Display of a Cat And a Girl who must Overcome a Database Administrator in New Orleans",
+      "film_id": 372,
+      "language_id": 1,
+      "last_update": "2021-03-06 15:52:03",
+      "length": 140,
+      "original_language_id": null,
+      "rating": "R",
+      "release_year": "2006",
+      "rental_duration": 5,
+      "rental_rate": 4.99,
+      "replacement_cost": 26.99,
+      "special_features": "Trailers,Commentaries",
+      "title": "GRACELAND DYNAMITE"
+    }
+  ]
+}

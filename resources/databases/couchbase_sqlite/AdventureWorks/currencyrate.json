@@ -1,0 +1,186 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`fromcurrencycode` = \"USD\"",
+        "properties": {
+          "averagerate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              1.0235,
+              8.2804,
+              9.32,
+              130.8199
+            ],
+            "type": "number"
+          },
+          "currencyratedate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-09-19 00:00:00",
+              "2011-10-10 00:00:00",
+              "2012-01-31 00:00:00",
+              "2012-04-02 00:00:00",
+              "2013-10-25 00:00:00"
+            ],
+            "type": "string"
+          },
+          "currencyrateid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1454,
+              1723,
+              3068,
+              10034,
+              12743
+            ],
+            "type": "number"
+          },
+          "endofdayrate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              1.0243,
+              8.2797,
+              9.3119,
+              130.8839
+            ],
+            "type": "number"
+          },
+          "fromcurrencycode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "USD"
+            ],
+            "type": "string"
+          },
+          "modifieddate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-09-19 00:00:00",
+              "2011-10-10 00:00:00",
+              "2012-01-31 00:00:00",
+              "2013-10-25 00:00:00",
+              "2014-01-02 17:39:45.26"
+            ],
+            "type": "string"
+          },
+          "tocurrencycode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CNY",
+              "EUR",
+              "JPY",
+              "MXN",
+              "USD"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "currencyrate::10033",
+                  "currencyrate::12742",
+                  "currencyrate::1453",
+                  "currencyrate::1722",
+                  "currencyrate::3067"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "currencyrate::10033"
+              },
+              {
+                "id": "currencyrate::12742"
+              },
+              {
+                "id": "currencyrate::1453"
+              },
+              {
+                "id": "currencyrate::1722"
+              },
+              {
+                "id": "currencyrate::3067"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "averagerate": 1.1434,
+      "currencyratedate": "2013-10-23 00:00:00",
+      "currencyrateid": 10010,
+      "endofdayrate": 1.1439,
+      "fromcurrencycode": "USD",
+      "modifieddate": "2013-10-23 00:00:00",
+      "tocurrencycode": "EUR"
+    },
+    {
+      "averagerate": 131.58,
+      "currencyratedate": "2013-10-23 00:00:00",
+      "currencyrateid": 10012,
+      "endofdayrate": 131.642,
+      "fromcurrencycode": "USD",
+      "modifieddate": "2013-10-23 00:00:00",
+      "tocurrencycode": "JPY"
+    },
+    {
+      "averagerate": 891,
+      "currencyratedate": "2013-10-24 00:00:00",
+      "currencyrateid": 10026,
+      "endofdayrate": 890.94,
+      "fromcurrencycode": "USD",
+      "modifieddate": "2013-10-24 00:00:00",
+      "tocurrencycode": "VEB"
+    },
+    {
+      "averagerate": 1.8404,
+      "currencyratedate": "2013-11-08 00:00:00",
+      "currencyrateid": 10182,
+      "endofdayrate": 1.8409,
+      "fromcurrencycode": "USD",
+      "modifieddate": "2013-11-08 00:00:00",
+      "tocurrencycode": "AUD"
+    },
+    {
+      "averagerate": 9.3646,
+      "currencyratedate": "2013-11-09 00:00:00",
+      "currencyrateid": 10200,
+      "endofdayrate": 9.362,
+      "fromcurrencycode": "USD",
+      "modifieddate": "2013-11-09 00:00:00",
+      "tocurrencycode": "MXN"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "aracaju",
+              "belo horizonte",
+              "coxim",
+              "guarulhos",
+              "votuporanga"
+            ],
+            "type": "string"
+          },
+          "customer_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "47904533b073544ff4554e7bf27003...",
+              "8d52d0165f53badec237c721bb2e13...",
+              "934dca5a58c68b147349a0ed86576a...",
+              "d90b0cdbc76f089f7aa17c6b5d3d56...",
+              "dcd6f19e0172cad2d541e453485ec5..."
+            ],
+            "type": "string"
+          },
+          "customer_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MG",
+              "MS",
+              "RJ",
+              "SE",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "customer_unique_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "08634c8b4eb69f90baacc97a295788...",
+              "22dab429c0bfcf456d9a05f9e2b509...",
+              "2c9b90e4031ad62bd8aaaada1fe70c...",
+              "d9f68ddf6447c3192acfef75203bf3...",
+              "f483e92c95c352c32547925219237c..."
+            ],
+            "type": "string"
+          },
+          "customer_zip_code_prefix": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7240,
+              15505,
+              30140,
+              49025,
+              79400
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1243,
+              10074,
+              12440,
+              13973,
+              17638
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customers::10074",
+                  "customers::1243",
+                  "customers::12440",
+                  "customers::13973",
+                  "customers::17638"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customers::10074"
+              },
+              {
+                "id": "customers::1243"
+              },
+              {
+                "id": "customers::12440"
+              },
+              {
+                "id": "customers::13973"
+              },
+              {
+                "id": "customers::17638"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_city": "cuiaba",
+      "customer_id": "591cb16ea1a6d8f7eebd0a349593bea2",
+      "customer_state": "MT",
+      "customer_unique_id": "0019e8c501c85848ac0966d45226fa1d",
+      "customer_zip_code_prefix": 78015,
+      "index": 1000
+    },
+    {
+      "customer_city": "campinas",
+      "customer_id": "0c5f776f27bd2e3d271019993998b0d7",
+      "customer_state": "SP",
+      "customer_unique_id": "83fd2e966327fb235dba7f279badb8e9",
+      "customer_zip_code_prefix": 13060,
+      "index": 10146
+    },
+    {
+      "customer_city": "piracicaba",
+      "customer_id": "f2d2a15afadd3bfc3c421fa219387bed",
+      "customer_state": "SP",
+      "customer_unique_id": "64506e4eff925200d674430e79ffdc22",
+      "customer_zip_code_prefix": 13426,
+      "index": 10172
+    },
+    {
+      "customer_city": "santo andre",
+      "customer_id": "939c6ecf27d8c32e7956b4a2a468326d",
+      "customer_state": "SP",
+      "customer_unique_id": "fe362d146a84f9000664211ac929b9d5",
+      "customer_zip_code_prefix": 9240,
+      "index": 1018
+    },
+    {
+      "customer_city": "valparaiso de goias",
+      "customer_id": "aee060003327eefcbb5721a40a3e4144",
+      "customer_state": "GO",
+      "customer_unique_id": "280bd40787648bfaa6756e2013520c13",
+      "customer_zip_code_prefix": 72876,
+      "index": 10203
+    }
+  ]
+}

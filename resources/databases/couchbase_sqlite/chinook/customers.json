@@ -1,0 +1,366 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 59,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Address": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "11, Place Bellecour",
+              "3,Raj Bhavan Road",
+              "9, Place Louis Barthou",
+              "Rotenturmstra\u00dfe 4, 1010 Inner...",
+              "Tauentzienstra\u00dfe 8"
+            ],
+            "type": "string"
+          },
+          "City": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bangalore",
+              "Berlin",
+              "Bordeaux",
+              "Lyon",
+              "Vienne"
+            ],
+            "type": "string"
+          },
+          "Company": {
+            "#docs": [
+              50,
+              9
+            ],
+            "%docs": [
+              84.74,
+              15.25
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Banco do Brasil S.A.",
+                "Embraer - Empresa Brasileira d...",
+                "Google Inc.",
+                "Rogers Canada",
+                "Woodstock Discos"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Country": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Austria",
+              "France",
+              "Germany",
+              "India",
+              "Norway"
+            ],
+            "type": "string"
+          },
+          "CustomerId": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7,
+              36,
+              41,
+              42,
+              59
+            ],
+            "type": "number"
+          },
+          "Email": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "astrid.gruber@apple.at",
+              "hannah.schneider@yahoo.de",
+              "marc.dubois@hotmail.com",
+              "puja_srivastava@yahoo.in",
+              "wyatt.girard@yahoo.fr"
+            ],
+            "type": "string"
+          },
+          "Fax": {
+            "#docs": [
+              50,
+              9
+            ],
+            "%docs": [
+              84.74,
+              15.25
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "+1 (604) 688-8756",
+                "+1 (650) 253-0000",
+                "+55 (11) 3033-4564",
+                "+55 (11) 3055-8131",
+                "+55 (12) 3923-5566"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "FirstName": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Astrid",
+              "Hannah",
+              "Marc",
+              "Puja",
+              "Wyatt"
+            ],
+            "type": "string"
+          },
+          "LastName": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Dubois",
+              "Girard",
+              "Gruber",
+              "Schneider",
+              "Srivastava"
+            ],
+            "type": "string"
+          },
+          "Phone": {
+            "#docs": [
+              1,
+              58
+            ],
+            "%docs": [
+              1.69,
+              98.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "+33 04 78 30 30 30",
+                "+33 05 56 96 96 96",
+                "+43 01 5134505",
+                "+49 030 26550280",
+                "+91 080 22289999"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "PostalCode": {
+            "#docs": [
+              3,
+              56
+            ],
+            "%docs": [
+              5.08,
+              94.91
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1010",
+                "10789",
+                "33000",
+                "560001",
+                "69002"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "State": {
+            "#docs": [
+              41,
+              18
+            ],
+            "%docs": [
+              69.49,
+              30.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "CA",
+                "MB",
+                "NS",
+                "NT",
+                "ON"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "SupportRepId": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 59,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 59,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customers::35",
+                  "customers::40",
+                  "customers::41",
+                  "customers::58",
+                  "customers::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customers::35"
+              },
+              {
+                "id": "customers::40"
+              },
+              {
+                "id": "customers::41"
+              },
+              {
+                "id": "customers::58"
+              },
+              {
+                "id": "customers::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Address": "S\u00f8nder Boulevard 51",
+      "City": "Copenhagen",
+      "Company": null,
+      "Country": "Denmark",
+      "CustomerId": 9,
+      "Email": "kara.nielsen@jubii.dk",
+      "Fax": null,
+      "FirstName": "Kara",
+      "LastName": "Nielsen",
+      "Phone": "+453 3331 9991",
+      "PostalCode": "1720",
+      "State": null,
+      "SupportRepId": 4
+    },
+    {
+      "Address": "12,Community Centre",
+      "City": "Delhi",
+      "Company": null,
+      "Country": "India",
+      "CustomerId": 58,
+      "Email": "manoj.pareek@rediff.com",
+      "Fax": null,
+      "FirstName": "Manoj",
+      "LastName": "Pareek",
+      "Phone": "+91 0124 39883988",
+      "PostalCode": "110017",
+      "State": null,
+      "SupportRepId": 3
+    },
+    {
+      "Address": "Qe 7 Bloco G",
+      "City": "Bras\u00edlia",
+      "Company": null,
+      "Country": "Brazil",
+      "CustomerId": 13,
+      "Email": "fernadaramos4@uol.com.br",
+      "Fax": "+55 (61) 3363-7855",
+      "FirstName": "Fernanda",
+      "LastName": "Ramos",
+      "Phone": "+55 (61) 3363-5547",
+      "PostalCode": "71020-677",
+      "State": "DF",
+      "SupportRepId": 4
+    },
+    {
+      "Address": "1033 N Park Ave",
+      "City": "Tucson",
+      "Company": null,
+      "Country": "USA",
+      "CustomerId": 27,
+      "Email": "patrick.gray@aol.com",
+      "Fax": null,
+      "FirstName": "Patrick",
+      "LastName": "Gray",
+      "Phone": "+1 (520) 622-4200",
+      "PostalCode": "85719",
+      "State": "AZ",
+      "SupportRepId": 4
+    },
+    {
+      "Address": "8210 111 ST NW",
+      "City": "Edmonton",
+      "Company": "Telus",
+      "Country": "Canada",
+      "CustomerId": 14,
+      "Email": "mphilips12@shaw.ca",
+      "Fax": "+1 (780) 434-5565",
+      "FirstName": "Mark",
+      "LastName": "Philips",
+      "Phone": "+1 (780) 434-4554",
+      "PostalCode": "T6G 2C7",
+      "State": "AB",
+      "SupportRepId": 5
+    }
+  ]
+}

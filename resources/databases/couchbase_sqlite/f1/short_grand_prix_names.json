@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 40,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "full_name": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Abu Dhabi Grand Prix",
+              "Australian Grand Prix",
+              "Austrian Grand Prix",
+              "Brazilian Grand Prix",
+              "Miami Grand Prix"
+            ],
+            "type": "string"
+          },
+          "short_name": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Abu Dhabi",
+              "Australia",
+              "Austria",
+              "Brazil",
+              "Miami"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 40,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 40,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "short_grand_prix_names::0",
+                  "short_grand_prix_names::15",
+                  "short_grand_prix_names::16",
+                  "short_grand_prix_names::21",
+                  "short_grand_prix_names::39"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "short_grand_prix_names::0"
+              },
+              {
+                "id": "short_grand_prix_names::15"
+              },
+              {
+                "id": "short_grand_prix_names::16"
+              },
+              {
+                "id": "short_grand_prix_names::21"
+              },
+              {
+                "id": "short_grand_prix_names::39"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "full_name": "Hungarian Grand Prix",
+      "short_name": "Hungary"
+    },
+    {
+      "full_name": "Italian Grand Prix",
+      "short_name": "Italy"
+    },
+    {
+      "full_name": "Azerbaijan Grand Prix",
+      "short_name": "Azerbaijan"
+    },
+    {
+      "full_name": "European Grand Prix",
+      "short_name": "Europe"
+    },
+    {
+      "full_name": "Russian Grand Prix",
+      "short_name": "Russia"
+    }
+  ]
+}

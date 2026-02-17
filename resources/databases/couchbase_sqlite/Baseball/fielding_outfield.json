@@ -1,0 +1,213 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "gcf": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                0,
+                1,
+                3,
+                8,
+                11
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "glf": {
+            "#docs": [
+              998,
+              2
+            ],
+            "%docs": [
+              99.8,
+              0.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                0,
+                1,
+                6,
+                7,
+                139
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "grf": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                0,
+                1,
+                2,
+                15,
+                27
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "bradlge01",
+              "carpehi01",
+              "eversho01",
+              "mcbrito01",
+              "richake01"
+            ],
+            "type": "string"
+          },
+          "stint": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1883,
+              1884,
+              1942,
+              1947,
+              1950
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "fielding_outfield::10184",
+                  "fielding_outfield::1060",
+                  "fielding_outfield::10843",
+                  "fielding_outfield::11202",
+                  "fielding_outfield::1309"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "fielding_outfield::10184"
+              },
+              {
+                "id": "fielding_outfield::1060"
+              },
+              {
+                "id": "fielding_outfield::10843"
+              },
+              {
+                "id": "fielding_outfield::11202"
+              },
+              {
+                "id": "fielding_outfield::1309"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "gcf": 0,
+      "glf": 137,
+      "grf": 0,
+      "player_id": "kellech01",
+      "stint": 1,
+      "year": 1941
+    },
+    {
+      "gcf": 3,
+      "glf": 1,
+      "grf": 0,
+      "player_id": "lamanfr02",
+      "stint": 1,
+      "year": 1941
+    },
+    {
+      "gcf": 0,
+      "glf": 0,
+      "grf": 109,
+      "player_id": "moseswa01",
+      "stint": 1,
+      "year": 1941
+    },
+    {
+      "gcf": 0,
+      "glf": 1,
+      "grf": 2,
+      "player_id": "richake01",
+      "stint": 1,
+      "year": 1942
+    },
+    {
+      "gcf": 6,
+      "glf": 5,
+      "grf": 9,
+      "player_id": "wyrosjo01",
+      "stint": 1,
+      "year": 1943
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 18,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Name": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "90\u2019s Music",
+              "Audiobooks",
+              "Heavy Metal Classic",
+              "On-The-Go 1",
+              "TV Shows"
+            ],
+            "type": "string"
+          },
+          "PlaylistId": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              10,
+              17,
+              18
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 18,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Playlist::16",
+                  "Playlist::17",
+                  "Playlist::4",
+                  "Playlist::5",
+                  "Playlist::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Playlist::16"
+              },
+              {
+                "id": "Playlist::17"
+              },
+              {
+                "id": "Playlist::4"
+              },
+              {
+                "id": "Playlist::5"
+              },
+              {
+                "id": "Playlist::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Name": "Brazilian Music",
+      "PlaylistId": 11
+    },
+    {
+      "Name": "TV Shows",
+      "PlaylistId": 3
+    },
+    {
+      "Name": "Classical 101 - The Basics",
+      "PlaylistId": 15
+    },
+    {
+      "Name": "Movies",
+      "PlaylistId": 7
+    },
+    {
+      "Name": "Grunge",
+      "PlaylistId": 16
+    }
+  ]
+}

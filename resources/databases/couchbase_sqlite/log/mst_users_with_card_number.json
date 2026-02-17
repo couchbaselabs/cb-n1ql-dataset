@@ -1,0 +1,93 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 3,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "card_number": {
+            "#docs": [
+              1,
+              2
+            ],
+            "%docs": [
+              33.33,
+              66.66
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1234-xxxx-xxxx-xxxx",
+                "5678-xxxx-xxxx-xxxx"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "user_id": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U001",
+              "U002",
+              "U003"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 3,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mst_users_with_card_number::0",
+                  "mst_users_with_card_number::1",
+                  "mst_users_with_card_number::2"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mst_users_with_card_number::0"
+              },
+              {
+                "id": "mst_users_with_card_number::1"
+              },
+              {
+                "id": "mst_users_with_card_number::2"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "card_number": "5678-xxxx-xxxx-xxxx",
+      "user_id": "U003"
+    },
+    {
+      "card_number": "1234-xxxx-xxxx-xxxx",
+      "user_id": "U001"
+    },
+    {
+      "card_number": null,
+      "user_id": "U002"
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 241,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`created_on` = \"2024-07-18\"",
+        "properties": {
+          "country_code_2": {
+            "#docs": 241,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ad",
+              "au",
+              "lk",
+              "md",
+              "pt"
+            ],
+            "type": "string"
+          },
+          "country_code_3": {
+            "#docs": 241,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "and",
+              "aus",
+              "lka",
+              "mda",
+              "prt"
+            ],
+            "type": "string"
+          },
+          "country_id": {
+            "#docs": 241,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              15,
+              153,
+              188,
+              222
+            ],
+            "type": "number"
+          },
+          "country_name": {
+            "#docs": 241,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "andorra",
+              "australia",
+              "moldova republic of",
+              "portugal",
+              "sri lanka"
+            ],
+            "type": "string"
+          },
+          "created_on": {
+            "#docs": 241,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2024-07-18"
+            ],
+            "type": "string"
+          },
+          "intermediate_region": {
+            "#docs": [
+              135,
+              106
+            ],
+            "%docs": [
+              56.01,
+              43.98
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "caribbean",
+                "central america",
+                "eastern africa",
+                "south america",
+                "western africa"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "region": {
+            "#docs": 241,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "africa",
+              "americas",
+              "asia",
+              "europe",
+              "oceania"
+            ],
+            "type": "string"
+          },
+          "sub_region": {
+            "#docs": [
+              1,
+              240
+            ],
+            "%docs": [
+              0.41,
+              99.58
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "australia and new zealand",
+                "eastern europe",
+                "melanesia",
+                "southern asia",
+                "southern europe"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 241,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 241,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cities_countries::13",
+                  "cities_countries::142",
+                  "cities_countries::176",
+                  "cities_countries::207",
+                  "cities_countries::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cities_countries::13"
+              },
+              {
+                "id": "cities_countries::142"
+              },
+              {
+                "id": "cities_countries::176"
+              },
+              {
+                "id": "cities_countries::207"
+              },
+              {
+                "id": "cities_countries::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code_2": "mf",
+      "country_code_3": "maf",
+      "country_id": 200,
+      "country_name": "saint martin french part",
+      "created_on": "2024-07-18",
+      "intermediate_region": "caribbean",
+      "region": "americas",
+      "sub_region": "latin america and the caribbean"
+    },
+    {
+      "country_code_2": "cv",
+      "country_code_3": "cpv",
+      "country_id": 40,
+      "country_name": "cabo verde",
+      "created_on": "2024-07-18",
+      "intermediate_region": "western africa",
+      "region": "africa",
+      "sub_region": "subsaharan africa"
+    },
+    {
+      "country_code_2": "np",
+      "country_code_3": "npl",
+      "country_id": 163,
+      "country_name": "nepal",
+      "created_on": "2024-07-18",
+      "intermediate_region": null,
+      "region": "asia",
+      "sub_region": "southern asia"
+    },
+    {
+      "country_code_2": "om",
+      "country_code_3": "omn",
+      "country_id": 178,
+      "country_name": "oman",
+      "created_on": "2024-07-18",
+      "intermediate_region": null,
+      "region": "asia",
+      "sub_region": "western asia"
+    },
+    {
+      "country_code_2": "tl",
+      "country_code_3": "tls",
+      "country_id": 232,
+      "country_name": "timorleste",
+      "created_on": "2024-07-18",
+      "intermediate_region": null,
+      "region": "asia",
+      "sub_region": "southeastern asia"
+    }
+  ]
+}

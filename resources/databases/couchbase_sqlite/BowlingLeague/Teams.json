@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CaptainID": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              12,
+              20,
+              24,
+              32
+            ],
+            "type": "number"
+          },
+          "TeamID": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              5,
+              6,
+              8
+            ],
+            "type": "number"
+          },
+          "TeamName": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Dolphins",
+              "Orcas",
+              "Sharks",
+              "Swordfish",
+              "Terrapins"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Teams::1",
+                  "Teams::2",
+                  "Teams::4",
+                  "Teams::5",
+                  "Teams::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Teams::1"
+              },
+              {
+                "id": "Teams::2"
+              },
+              {
+                "id": "Teams::4"
+              },
+              {
+                "id": "Teams::5"
+              },
+              {
+                "id": "Teams::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CaptainID": 2,
+      "TeamID": 1,
+      "TeamName": "Marlins"
+    },
+    {
+      "CaptainID": 5,
+      "TeamID": 2,
+      "TeamName": "Sharks"
+    },
+    {
+      "CaptainID": 12,
+      "TeamID": 3,
+      "TeamName": "Terrapins"
+    },
+    {
+      "CaptainID": 24,
+      "TeamID": 6,
+      "TeamName": "Orcas"
+    },
+    {
+      "CaptainID": 16,
+      "TeamID": 4,
+      "TeamName": "Barracudas"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11311,
+              36790,
+              60300,
+              89721,
+              96123
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "02a96c679e6086ecd026c42a831360...",
+              "3e209a35ca9fb429434e538d9a015d...",
+              "4b71930df17d95315e7217a05cff3c...",
+              "6be224d0725475f57e2f090a937987...",
+              "c614a7bb512bf1ddf2571743587c8c..."
+            ],
+            "type": "string"
+          },
+          "review_answer_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-07-05 00:05:04",
+              "2017-07-19 01:07:29",
+              "2017-12-27 19:21:22",
+              "2018-01-25 02:13:19",
+              "2018-02-21 02:13:26"
+            ],
+            "type": "string"
+          },
+          "review_comment_message": {
+            "#docs": [
+              585,
+              415
+            ],
+            "%docs": [
+              58.5,
+              41.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "A mesa que recebi n\u00e3o \u00e9 nem ...",
+                "Ainda n\u00e3o recebi o produto ",
+                "Feito de material bem resisten...",
+                "Gostei de comprar nesta loja.",
+                "Produto \u00f3timo e entrega corre..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "review_comment_title": {
+            "#docs": [
+              914,
+              86
+            ],
+            "%docs": [
+              91.4,
+              8.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Bom,, \u00f3timo produto",
+                "Otima",
+                "Recebi incompleto",
+                "recomendo",
+                "super recomendado"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "review_creation_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-07-04 00:00:00",
+              "2017-07-18 00:00:00",
+              "2017-12-27 00:00:00",
+              "2018-01-24 00:00:00",
+              "2018-02-20 00:00:00"
+            ],
+            "type": "string"
+          },
+          "review_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "8ca20343768523e9ca3d863c7ac5a5...",
+              "b29ec579b68c5daee5aeb530d67667...",
+              "d8ba6043b5da6a5f0f1e523ee63408...",
+              "db9c93c3929446c9e997ed7e691cd4...",
+              "dc3dd227c744ec9b728cd440e27222..."
+            ],
+            "type": "string"
+          },
+          "review_score": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "order_reviews::11311",
+                  "order_reviews::36790",
+                  "order_reviews::60300",
+                  "order_reviews::89721",
+                  "order_reviews::96123"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "order_reviews::11311"
+              },
+              {
+                "id": "order_reviews::36790"
+              },
+              {
+                "id": "order_reviews::60300"
+              },
+              {
+                "id": "order_reviews::89721"
+              },
+              {
+                "id": "order_reviews::96123"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "index": 0,
+      "order_id": "73fc7af87114b39712e6da79b0a377eb",
+      "review_answer_timestamp": "2018-01-18 21:46:59",
+      "review_comment_message": null,
+      "review_comment_title": null,
+      "review_creation_date": "2018-01-18 00:00:00",
+      "review_id": "7bc2406110b926393aa56f80a40eba40",
+      "review_score": 4
+    },
+    {
+      "index": 10144,
+      "order_id": "18905a8655f8255bf50d2eeadce2641e",
+      "review_answer_timestamp": "2018-02-10 20:47:53",
+      "review_comment_message": null,
+      "review_comment_title": null,
+      "review_creation_date": "2018-02-08 00:00:00",
+      "review_id": "6b0ee404c3451680916ad2a38ec91522",
+      "review_score": 5
+    },
+    {
+      "index": 10168,
+      "order_id": "fd4907109f6bac23f07064af84bec02d",
+      "review_answer_timestamp": "2018-05-10 14:21:25",
+      "review_comment_message": "Comprei um rel\u00f3gio por ORIGINAL, al\u00e9m de vir falsificado veio com defeito, n\u00e3o funciona, e ainda me cobraram garantia estendida ",
+      "review_comment_title": "Enganada",
+      "review_creation_date": "2018-05-09 00:00:00",
+      "review_id": "810e185ae9a3f28e28b7e71c2f301ac6",
+      "review_score": 1
+    },
+    {
+      "index": 10170,
+      "order_id": "252ef1beb7783414b687c8191cb6bc02",
+      "review_answer_timestamp": "2018-07-29 20:46:30",
+      "review_comment_message": null,
+      "review_comment_title": null,
+      "review_creation_date": "2018-07-27 00:00:00",
+      "review_id": "744c887a0e5fe702b849f6ee065484bb",
+      "review_score": 5
+    },
+    {
+      "index": 10201,
+      "order_id": "d85e7bfbf3642aa30c49c490a914d140",
+      "review_answer_timestamp": "2018-05-04 12:10:55",
+      "review_comment_message": "n\u00e3o veio uma NF com o valor total da compra.",
+      "review_comment_title": "tomar cuidado",
+      "review_creation_date": "2018-05-01 00:00:00",
+      "review_id": "859aa93d0c75ba706d381b03f563884d",
+      "review_score": 2
+    }
+  ]
+}

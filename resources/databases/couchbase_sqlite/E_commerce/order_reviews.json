@@ -1,0 +1,218 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "80242ba2ebddeb4f86af40cd158ff6...",
+              "b55194d272b7e65501f2d19906f380...",
+              "e37a0ddb7818d37e517904371d679c...",
+              "e991f50bb727c1894e1f74527af4ed...",
+              "fc2fce216ba47a84e54367275351c6..."
+            ],
+            "type": "string"
+          },
+          "review_answer_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-05-22 10:34:19",
+              "2017-12-15 21:08:15",
+              "2017-12-22 19:01:12",
+              "2018-01-27 08:10:02",
+              "2018-04-06 02:35:01"
+            ],
+            "type": "string"
+          },
+          "review_comment_message": {
+            "#docs": [
+              681,
+              319
+            ],
+            "%docs": [
+              68.1,
+              31.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Bom",
+                "Esperava mais do produto, cobr...",
+                "Gostei",
+                "Produto chegou com embalagem t...",
+                "Produto entregue bem antes do ..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "review_comment_title": {
+            "#docs": [
+              891,
+              109
+            ],
+            "%docs": [
+              89.1,
+              10.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "ENTREGA R\u00c1PIDA",
+                "Horr\u00edvel ",
+                "Perfeito",
+                "T",
+                "\u00d3timo produto "
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "review_creation_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-05-19 00:00:00",
+              "2017-12-13 00:00:00",
+              "2017-12-19 00:00:00",
+              "2018-01-26 00:00:00",
+              "2018-04-05 00:00:00"
+            ],
+            "type": "string"
+          },
+          "review_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2261f3cf3544482f2a7d03de2df879...",
+              "4639478846178fef0f983f09249133...",
+              "78558a30a710f287e37ff65000b691...",
+              "a47b9017e02ba31655caf84db47f3f...",
+              "fcaaa60cd585b61124ab26226dc0d3..."
+            ],
+            "type": "string"
+          },
+          "review_score": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "order_reviews::33716",
+                  "order_reviews::35354",
+                  "order_reviews::40307",
+                  "order_reviews::44190",
+                  "order_reviews::60815"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "order_reviews::33716"
+              },
+              {
+                "id": "order_reviews::35354"
+              },
+              {
+                "id": "order_reviews::40307"
+              },
+              {
+                "id": "order_reviews::44190"
+              },
+              {
+                "id": "order_reviews::60815"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "order_id": "4d0f637afbd692c3e9fbffbc338de497",
+      "review_answer_timestamp": "2018-08-25 03:40:58",
+      "review_comment_message": null,
+      "review_comment_title": null,
+      "review_creation_date": "2018-08-24 00:00:00",
+      "review_id": "95edb17752e068f9b03d0ba9927abe36",
+      "review_score": 4
+    },
+    {
+      "order_id": "a64c6d4c6a92082d56ab95ea8115f26c",
+      "review_answer_timestamp": "2018-07-18 16:36:48",
+      "review_comment_message": null,
+      "review_comment_title": null,
+      "review_creation_date": "2018-07-17 00:00:00",
+      "review_id": "8fec57094e580dee75890dd80119c041",
+      "review_score": 5
+    },
+    {
+      "order_id": "19171b9b900193fe84dc711a2dffe56d",
+      "review_answer_timestamp": "2017-10-18 00:37:23",
+      "review_comment_message": "Gostei muito",
+      "review_comment_title": null,
+      "review_creation_date": "2017-10-17 00:00:00",
+      "review_id": "fcb494aba0b219a21e5f076cc149fb1c",
+      "review_score": 5
+    },
+    {
+      "order_id": "e5476d1c0a9bcc909b2f4bc24559bdde",
+      "review_answer_timestamp": "2017-03-19 09:44:34",
+      "review_comment_message": null,
+      "review_comment_title": null,
+      "review_creation_date": "2017-03-18 00:00:00",
+      "review_id": "72ec0f869f0fd599ce09812ffb685dfa",
+      "review_score": 1
+    },
+    {
+      "order_id": "a87ff224eacb96fb31136e921f9c322d",
+      "review_answer_timestamp": "2017-05-10 17:16:47",
+      "review_comment_message": null,
+      "review_comment_title": null,
+      "review_creation_date": "2017-05-08 00:00:00",
+      "review_id": "008063d46c44de84c231bb4d2d17f677",
+      "review_score": 3
+    }
+  ]
+}

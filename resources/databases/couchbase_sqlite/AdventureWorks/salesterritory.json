@@ -1,0 +1,230 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`costlastyear` = 0, `costytd` = 0, `modifieddate` = \"2008-04-30 00:00:00\"",
+        "properties": {
+          "costlastyear": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "costytd": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "countryregioncode": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AU",
+              "CA",
+              "FR",
+              "GB",
+              "US"
+            ],
+            "type": "string"
+          },
+          "group": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Europe",
+              "North America",
+              "Pacific"
+            ],
+            "type": "string"
+          },
+          "modifieddate": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2008-04-30 00:00:00"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Australia",
+              "Canada",
+              "Central",
+              "France",
+              "Southeast"
+            ],
+            "type": "string"
+          },
+          "rowguid": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "06b4af8a-1639-476e-9266-110461...",
+              "602e612e-dfe9-41d9-b894-27e489...",
+              "6dc4165a-5e4c-42d2-809d-4344e0...",
+              "bf806804-9b4c-4b07-9d19-706f2e...",
+              "df6e7fd8-1a8d-468c-b103-ed8add..."
+            ],
+            "type": "string"
+          },
+          "saleslastyear": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2278548.9776,
+              2396539.7601,
+              3205014.0767,
+              3925071.4318,
+              5693988.86
+            ],
+            "type": "number"
+          },
+          "salesytd": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2538667.2515,
+              3072175.118,
+              4772398.3078,
+              5977814.9154,
+              6771829.1376
+            ],
+            "type": "number"
+          },
+          "territoryid": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              5,
+              6,
+              7,
+              9
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "salesterritory::2",
+                  "salesterritory::4",
+                  "salesterritory::5",
+                  "salesterritory::6",
+                  "salesterritory::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "salesterritory::2"
+              },
+              {
+                "id": "salesterritory::4"
+              },
+              {
+                "id": "salesterritory::5"
+              },
+              {
+                "id": "salesterritory::6"
+              },
+              {
+                "id": "salesterritory::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "costlastyear": 0,
+      "costytd": 0,
+      "countryregioncode": "GB",
+      "group": "Europe",
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "United Kingdom",
+      "rowguid": "05fc7e1f-2dea-414e-9ecd-09d150516fb5",
+      "saleslastyear": 1635823.3967,
+      "salesytd": 5012905.3656,
+      "territoryid": 10
+    },
+    {
+      "costlastyear": 0,
+      "costytd": 0,
+      "countryregioncode": "US",
+      "group": "North America",
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Southwest",
+      "rowguid": "dc3e9ea0-7950-4431-9428-99dbcbc33865",
+      "saleslastyear": 5366575.7098,
+      "salesytd": 10510853.8739,
+      "territoryid": 4
+    },
+    {
+      "costlastyear": 0,
+      "costytd": 0,
+      "countryregioncode": "FR",
+      "group": "Europe",
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "France",
+      "rowguid": "bf806804-9b4c-4b07-9d19-706f2e689552",
+      "saleslastyear": 2396539.7601,
+      "salesytd": 4772398.3078,
+      "territoryid": 7
+    },
+    {
+      "costlastyear": 0,
+      "costytd": 0,
+      "countryregioncode": "US",
+      "group": "North America",
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Northeast",
+      "rowguid": "00fb7309-96cc-49e2-8363-0a1ba72486f2",
+      "saleslastyear": 3607148.9371,
+      "salesytd": 2402176.8476,
+      "territoryid": 2
+    },
+    {
+      "costlastyear": 0,
+      "costytd": 0,
+      "countryregioncode": "US",
+      "group": "North America",
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Southeast",
+      "rowguid": "6dc4165a-5e4c-42d2-809d-4344e0ac75e7",
+      "saleslastyear": 3925071.4318,
+      "salesytd": 2538667.2515,
+      "territoryid": 5
+    }
+  ]
+}

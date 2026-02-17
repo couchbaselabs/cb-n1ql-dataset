@@ -1,0 +1,300 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11051,
+              11687,
+              11723,
+              12962,
+              15868
+            ],
+            "type": "number"
+          },
+          "product_category_name": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "cama_mesa_banho",
+                "cool_stuff",
+                "esporte_lazer",
+                "moveis_decoracao",
+                "utilidades_domesticas"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "product_description_lenght": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                105,
+                207,
+                513,
+                627,
+                826
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "product_height_cm": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              8,
+              10,
+              29
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "315c6373ff469f7b7f60bbb36c319f...",
+              "448cbeba9628acd8b5b8bd6c8a5018...",
+              "5c3eaf54e8ee5d5378765ff16df764...",
+              "932a7e18ea9bb845420c70707362e0...",
+              "9707e3409376d631f1044f987d63bd..."
+            ],
+            "type": "string"
+          },
+          "product_length_cm": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20,
+              25,
+              28,
+              40,
+              105
+            ],
+            "type": "number"
+          },
+          "product_name_lenght": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                43,
+                51,
+                54,
+                56,
+                60
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "product_photos_qty": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1,
+                2,
+                4,
+                6,
+                8
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "product_weight_g": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              200,
+              450,
+              550,
+              900,
+              24450
+            ],
+            "type": "number"
+          },
+          "product_width_cm": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15,
+              16,
+              19,
+              23,
+              40
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "products::11051",
+                  "products::11687",
+                  "products::11723",
+                  "products::12962",
+                  "products::15868"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "products::11051"
+              },
+              {
+                "id": "products::11687"
+              },
+              {
+                "id": "products::11723"
+              },
+              {
+                "id": "products::12962"
+              },
+              {
+                "id": "products::15868"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "index": 10093,
+      "product_category_name": "beleza_saude",
+      "product_description_lenght": 2110,
+      "product_height_cm": 25,
+      "product_id": "29d405763934f77ce87d3cdad21b7805",
+      "product_length_cm": 33,
+      "product_name_lenght": 58,
+      "product_photos_qty": 1,
+      "product_weight_g": 2000,
+      "product_width_cm": 33
+    },
+    {
+      "index": 10103,
+      "product_category_name": "moveis_sala",
+      "product_description_lenght": 469,
+      "product_height_cm": 65,
+      "product_id": "d23f2f3a0d52d3cb9effc0e11bae4bff",
+      "product_length_cm": 50,
+      "product_name_lenght": 57,
+      "product_photos_qty": 4,
+      "product_weight_g": 18700,
+      "product_width_cm": 50
+    },
+    {
+      "index": 10137,
+      "product_category_name": "moveis_decoracao",
+      "product_description_lenght": 540,
+      "product_height_cm": 20,
+      "product_id": "cd6141650f23cd9f6bd573a52d7af39a",
+      "product_length_cm": 30,
+      "product_name_lenght": 52,
+      "product_photos_qty": 4,
+      "product_weight_g": 1100,
+      "product_width_cm": 30
+    },
+    {
+      "index": 10246,
+      "product_category_name": "fashion_bolsas_e_acessorios",
+      "product_description_lenght": 114,
+      "product_height_cm": 16,
+      "product_id": "b121f98815a33782f552005a2f39c6a1",
+      "product_length_cm": 16,
+      "product_name_lenght": 42,
+      "product_photos_qty": 1,
+      "product_weight_g": 300,
+      "product_width_cm": 11
+    },
+    {
+      "index": 10272,
+      "product_category_name": "ferramentas_jardim",
+      "product_description_lenght": 205,
+      "product_height_cm": 5,
+      "product_id": "4bc694564c0e9e411942047bec1c0515",
+      "product_length_cm": 25,
+      "product_name_lenght": 50,
+      "product_photos_qty": 1,
+      "product_weight_g": 350,
+      "product_width_cm": 16
+    }
+  ]
+}

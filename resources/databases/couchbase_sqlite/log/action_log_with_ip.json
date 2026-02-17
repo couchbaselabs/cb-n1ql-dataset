@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 12,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`action` = \"view\"",
+        "properties": {
+          "action": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "view"
+            ],
+            "type": "string"
+          },
+          "ip": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10.0.0.3",
+              "172.16.0.5",
+              "192.168.0.23",
+              "210.154.149.63",
+              "216.58.220.238"
+            ],
+            "type": "string"
+          },
+          "session": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "111f2996",
+              "5d5b0997",
+              "87b5725f",
+              "989004ea",
+              "fe05e1d8"
+            ],
+            "type": "string"
+          },
+          "stamp": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-11-03 18:00:00",
+              "2016-11-04 18:00:00",
+              "2016-11-04 19:00:00",
+              "2016-11-04 20:00:00",
+              "2016-11-04 21:00:00"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U001",
+              "U003",
+              "U005",
+              "U006",
+              "U007"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 12,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 12,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "action_log_with_ip::10",
+                  "action_log_with_ip::3",
+                  "action_log_with_ip::7",
+                  "action_log_with_ip::8",
+                  "action_log_with_ip::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "action_log_with_ip::10"
+              },
+              {
+                "id": "action_log_with_ip::3"
+              },
+              {
+                "id": "action_log_with_ip::7"
+              },
+              {
+                "id": "action_log_with_ip::8"
+              },
+              {
+                "id": "action_log_with_ip::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "action": "view",
+      "ip": "216.58.220.238",
+      "session": "fe05e1d8",
+      "stamp": "2016-11-04 18:00:00",
+      "user_id": "U001"
+    },
+    {
+      "action": "view",
+      "ip": "210.154.149.63",
+      "session": "1cf7678e",
+      "stamp": "2016-11-03 20:00:00",
+      "user_id": "U003"
+    },
+    {
+      "action": "view",
+      "ip": "172.16.0.5",
+      "session": "5d5b0997",
+      "stamp": "2016-11-04 20:00:00",
+      "user_id": "U006"
+    },
+    {
+      "action": "view",
+      "ip": "98.139.183.24",
+      "session": "47db0370",
+      "stamp": "2016-11-03 19:00:00",
+      "user_id": "U002"
+    },
+    {
+      "action": "view",
+      "ip": "10.0.0.3",
+      "session": "87b5725f",
+      "stamp": "2016-11-04 19:00:00",
+      "user_id": "U005"
+    }
+  ]
+}

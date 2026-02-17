@@ -1,0 +1,164 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 21,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "line_no": {
+            "#docs": 21,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              4,
+              5,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "location_id": {
+            "#docs": 21,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              16,
+              65,
+              114,
+              163,
+              165
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 21,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              421,
+              422,
+              423
+            ],
+            "type": "number"
+          },
+          "picklist_id": {
+            "#docs": 21,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              841,
+              842
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 21,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4280,
+              6520
+            ],
+            "type": "number"
+          },
+          "qty": {
+            "#docs": 21,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              14,
+              36,
+              39,
+              42
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 21,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 21,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "picking_line::0",
+                  "picking_line::12",
+                  "picking_line::15",
+                  "picking_line::16",
+                  "picking_line::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "picking_line::0"
+              },
+              {
+                "id": "picking_line::12"
+              },
+              {
+                "id": "picking_line::15"
+              },
+              {
+                "id": "picking_line::16"
+              },
+              {
+                "id": "picking_line::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "line_no": 1,
+      "location_id": 16,
+      "order_id": 421,
+      "picklist_id": 841,
+      "product_id": 6520,
+      "qty": 42
+    },
+    {
+      "line_no": 8,
+      "location_id": 163,
+      "order_id": 422,
+      "picklist_id": 842,
+      "product_id": 4280,
+      "qty": 5
+    },
+    {
+      "line_no": 2,
+      "location_id": 29,
+      "order_id": 421,
+      "picklist_id": 841,
+      "product_id": 6520,
+      "qty": 14
+    },
+    {
+      "line_no": 9,
+      "location_id": 163,
+      "order_id": 423,
+      "picklist_id": 842,
+      "product_id": 4280,
+      "qty": 30
+    },
+    {
+      "line_no": 1,
+      "location_id": 16,
+      "order_id": 423,
+      "picklist_id": 842,
+      "product_id": 6520,
+      "qty": 22
+    }
+  ]
+}

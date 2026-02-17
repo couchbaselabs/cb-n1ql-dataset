@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 256,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "aisle": {
+            "#docs": 256,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "#docs": 256,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              153,
+              167,
+              187,
+              218
+            ],
+            "type": "number"
+          },
+          "position": {
+            "#docs": 256,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7,
+              12,
+              25,
+              26,
+              27
+            ],
+            "type": "number"
+          },
+          "warehouse": {
+            "#docs": 256,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 256,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 256,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "locations::11",
+                  "locations::152",
+                  "locations::166",
+                  "locations::186",
+                  "locations::217"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "locations::11"
+              },
+              {
+                "id": "locations::152"
+              },
+              {
+                "id": "locations::166"
+              },
+              {
+                "id": "locations::186"
+              },
+              {
+                "id": "locations::217"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aisle": "B",
+      "id": 183,
+      "position": 23,
+      "warehouse": 2
+    },
+    {
+      "aisle": "C",
+      "id": 82,
+      "position": 18,
+      "warehouse": 1
+    },
+    {
+      "aisle": "D",
+      "id": 100,
+      "position": 4,
+      "warehouse": 1
+    },
+    {
+      "aisle": "B",
+      "id": 188,
+      "position": 28,
+      "warehouse": 2
+    },
+    {
+      "aisle": "D",
+      "id": 117,
+      "position": 21,
+      "warehouse": 1
+    }
+  ]
+}

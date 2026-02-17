@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 44,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "constructor_ref": {
+            "#docs": 44,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "alpine",
+              "cooper-ford",
+              "eagle-climax",
+              "mclaren-brm",
+              "mclaren-seren"
+            ],
+            "type": "string"
+          },
+          "short_name": {
+            "#docs": 44,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alpine",
+              "Cooper",
+              "Eagle",
+              "Lotus",
+              "McLaren"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 44,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 44,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "short_constructor_names::1",
+                  "short_constructor_names::15",
+                  "short_constructor_names::21",
+                  "short_constructor_names::37",
+                  "short_constructor_names::39"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "short_constructor_names::1"
+              },
+              {
+                "id": "short_constructor_names::15"
+              },
+              {
+                "id": "short_constructor_names::21"
+              },
+              {
+                "id": "short_constructor_names::37"
+              },
+              {
+                "id": "short_constructor_names::39"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "constructor_ref": "team_lotus",
+      "short_name": "Lotus"
+    },
+    {
+      "constructor_ref": "mclaren-brm",
+      "short_name": "McLaren"
+    },
+    {
+      "constructor_ref": "mclaren-alfa_romeo",
+      "short_name": "McLaren"
+    },
+    {
+      "constructor_ref": "cooper-ats",
+      "short_name": "Cooper"
+    },
+    {
+      "constructor_ref": "brabham-ford",
+      "short_name": "Brabham"
+    }
+  ]
+}

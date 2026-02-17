@@ -1,0 +1,153 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "6907ea7150759a085c8ed75a55aeb9...",
+              "73a516c7297dcd6a809778fd0cb8bd...",
+              "c30a47a0dddaa5e8b49d103368bcca...",
+              "d592b82802bd7cdce8d3e8b48e07cd...",
+              "e01371016351ae4493ecbd7a8c5a33..."
+            ],
+            "type": "string"
+          },
+          "payment_installments": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              7,
+              10
+            ],
+            "type": "number"
+          },
+          "payment_sequential": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              10,
+              11
+            ],
+            "type": "number"
+          },
+          "payment_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "boleto",
+              "credit_card",
+              "debit_card",
+              "voucher"
+            ],
+            "type": "string"
+          },
+          "payment_value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12.59,
+              68.43,
+              110,
+              193.46,
+              350.81
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "olist_order_payments::102289",
+                  "olist_order_payments::15309",
+                  "olist_order_payments::19979",
+                  "olist_order_payments::2368",
+                  "olist_order_payments::27121"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "olist_order_payments::102289"
+              },
+              {
+                "id": "olist_order_payments::15309"
+              },
+              {
+                "id": "olist_order_payments::19979"
+              },
+              {
+                "id": "olist_order_payments::2368"
+              },
+              {
+                "id": "olist_order_payments::27121"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "order_id": "3349d5fc8a511315de279fcce11049f6",
+      "payment_installments": 1,
+      "payment_sequential": 3,
+      "payment_type": "voucher",
+      "payment_value": 42.06
+    },
+    {
+      "order_id": "8ca359188415aaef358f04e23e462a43",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_value": 65
+    },
+    {
+      "order_id": "748959bbfc92b5990235c6b93d114475",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_value": 15
+    },
+    {
+      "order_id": "36acd0e7abb8ba0ac7fba360e09c5451",
+      "payment_installments": 8,
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_value": 153.17
+    },
+    {
+      "order_id": "45a641de1ae2ac645aa11afeb528e0c9",
+      "payment_installments": 3,
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_value": 86.99
+    }
+  ]
+}

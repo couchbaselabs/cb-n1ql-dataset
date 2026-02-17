@@ -1,0 +1,148 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 11,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`action` = \"click\"",
+        "properties": {
+          "action": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "click"
+            ],
+            "type": "string"
+          },
+          "products": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A001",
+              "D001",
+              "D002"
+            ],
+            "type": "string"
+          },
+          "session": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "111f2996",
+              "3efe001c",
+              "47db0370",
+              "5d5b0997",
+              "fe05e1d8"
+            ],
+            "type": "string"
+          },
+          "stamp": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-11-03 19:00:00",
+              "2016-11-03 21:00:00",
+              "2016-11-04 20:00:00",
+              "2016-11-04 21:00:00",
+              "2016-11-04 22:00:10"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U002",
+              "U004",
+              "U006",
+              "U007",
+              "U008"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 11,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dup_action_log::1",
+                  "dup_action_log::10",
+                  "dup_action_log::4",
+                  "dup_action_log::7",
+                  "dup_action_log::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "dup_action_log::1"
+              },
+              {
+                "id": "dup_action_log::10"
+              },
+              {
+                "id": "dup_action_log::4"
+              },
+              {
+                "id": "dup_action_log::7"
+              },
+              {
+                "id": "dup_action_log::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "action": "click",
+      "products": "A001",
+      "session": "1cf7678e",
+      "stamp": "2016-11-03 20:00:00",
+      "user_id": "U003"
+    },
+    {
+      "action": "click",
+      "products": "A001",
+      "session": "3efe001c",
+      "stamp": "2016-11-04 22:00:00",
+      "user_id": "U008"
+    },
+    {
+      "action": "click",
+      "products": "D001",
+      "session": "87b5725f",
+      "stamp": "2016-11-04 18:00:00",
+      "user_id": "U001"
+    },
+    {
+      "action": "click",
+      "products": "A001",
+      "session": "eee2bb21",
+      "stamp": "2016-11-04 19:00:00",
+      "user_id": "U005"
+    },
+    {
+      "action": "click",
+      "products": "A001",
+      "session": "3efe001c",
+      "stamp": "2016-11-04 22:00:10",
+      "user_id": "U008"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CID": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1,
+                2,
+                15,
+                16
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "ID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              172,
+              1608,
+              1624,
+              1780
+            ],
+            "type": "number"
+          },
+          "MID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt0101432",
+              "tt0405046",
+              "tt1728239",
+              "tt1934231",
+              "tt5164214"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              172,
+              1608,
+              1624,
+              1780
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "M_Country::1",
+                  "M_Country::1608",
+                  "M_Country::1624",
+                  "M_Country::172",
+                  "M_Country::1780"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "M_Country::1"
+              },
+              {
+                "id": "M_Country::1608"
+              },
+              {
+                "id": "M_Country::1624"
+              },
+              {
+                "id": "M_Country::172"
+              },
+              {
+                "id": "M_Country::1780"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CID": 2,
+      "ID": 1054,
+      "MID": "tt0214832",
+      "index": 1054
+    },
+    {
+      "CID": 2,
+      "ID": 1060,
+      "MID": "tt1637691",
+      "index": 1060
+    },
+    {
+      "CID": 2,
+      "ID": 1078,
+      "MID": "tt0416120",
+      "index": 1078
+    },
+    {
+      "CID": 2,
+      "ID": 1281,
+      "MID": "tt4596814",
+      "index": 1281
+    },
+    {
+      "CID": 2,
+      "ID": 1299,
+      "MID": "tt0361436",
+      "index": 1299
+    }
+  ]
+}

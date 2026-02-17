@@ -1,0 +1,135 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1010,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "date": {
+            "#docs": 1010,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-07-17 00:00:00",
+              "2020-08-10 00:00:00",
+              "2020-08-12 00:00:00",
+              "2020-09-12 00:00:00",
+              "2020-09-30 00:00:00"
+            ],
+            "type": "string"
+          },
+          "state": {
+            "#docs": 1010,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CO",
+              "FL",
+              "MA",
+              "NC"
+            ],
+            "type": "string"
+          },
+          "total_cases": {
+            "#docs": 1010,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              39344,
+              51039,
+              51756,
+              60907,
+              70536
+            ],
+            "type": "number"
+          },
+          "total_deaths": {
+            "#docs": 1010,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1751,
+              1863,
+              1875,
+              1988,
+              2051
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1010,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1010,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "statistics::144",
+                  "statistics::168",
+                  "statistics::170",
+                  "statistics::201",
+                  "statistics::219"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "statistics::144"
+              },
+              {
+                "id": "statistics::168"
+              },
+              {
+                "id": "statistics::170"
+              },
+              {
+                "id": "statistics::201"
+              },
+              {
+                "id": "statistics::219"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "date": "2020-09-21 00:00:00",
+      "state": "NC",
+      "total_cases": 194381,
+      "total_deaths": 3247
+    },
+    {
+      "date": "2020-06-05 00:00:00",
+      "state": "CO",
+      "total_cases": 27615,
+      "total_deaths": 1524
+    },
+    {
+      "date": "2020-07-09 00:00:00",
+      "state": "CO",
+      "total_cases": 35525,
+      "total_deaths": 1706
+    },
+    {
+      "date": "2020-03-11 00:00:00",
+      "state": "CO",
+      "total_cases": 34,
+      "total_deaths": 0
+    },
+    {
+      "date": "2020-03-17 00:00:00",
+      "state": "CO",
+      "total_cases": 183,
+      "total_deaths": 2
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 11,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4769,
+              7809,
+              10257,
+              17642,
+              19694
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "France",
+              "Germany",
+              "Italy",
+              "Portugal",
+              "Scotland"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 11,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 11,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Country::2",
+                  "Country::3",
+                  "Country::4",
+                  "Country::7",
+                  "Country::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Country::2"
+              },
+              {
+                "id": "Country::3"
+              },
+              {
+                "id": "Country::4"
+              },
+              {
+                "id": "Country::7"
+              },
+              {
+                "id": "Country::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 15722,
+      "name": "Poland"
+    },
+    {
+      "id": 17642,
+      "name": "Portugal"
+    },
+    {
+      "id": 13274,
+      "name": "Netherlands"
+    },
+    {
+      "id": 1729,
+      "name": "England"
+    },
+    {
+      "id": 1,
+      "name": "Belgium"
+    }
+  ]
+}

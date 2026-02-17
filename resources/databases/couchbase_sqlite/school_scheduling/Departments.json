@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "DepartmentID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "DeptChair": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              98005,
+              98007,
+              98010,
+              98012,
+              98059
+            ],
+            "type": "number"
+          },
+          "DeptName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Business Administration",
+              "Humanities",
+              "Information Technology",
+              "Sciences",
+              "Social Sciences"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Departments::0",
+                  "Departments::1",
+                  "Departments::2",
+                  "Departments::3",
+                  "Departments::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Departments::0"
+              },
+              {
+                "id": "Departments::1"
+              },
+              {
+                "id": "Departments::2"
+              },
+              {
+                "id": "Departments::3"
+              },
+              {
+                "id": "Departments::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "DepartmentID": 1,
+      "DeptChair": 98012,
+      "DeptName": "Business Administration"
+    },
+    {
+      "DepartmentID": 2,
+      "DeptChair": 98010,
+      "DeptName": "Sciences"
+    },
+    {
+      "DepartmentID": 3,
+      "DeptChair": 98005,
+      "DeptName": "Humanities"
+    },
+    {
+      "DepartmentID": 5,
+      "DeptChair": 98007,
+      "DeptName": "Information Technology"
+    },
+    {
+      "DepartmentID": 4,
+      "DeptChair": 98059,
+      "DeptName": "Social Sciences"
+    }
+  ]
+}

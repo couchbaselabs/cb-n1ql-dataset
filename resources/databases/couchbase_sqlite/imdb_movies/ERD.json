@@ -1,0 +1,301 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 25,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Unnamed: 10": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Unnamed: 11": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Unnamed: 12": {
+            "#docs": [
+              23,
+              2
+            ],
+            "%docs": [
+              92,
+              8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "median_rating",
+                "total_votes"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Unnamed: 2": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Unnamed: 3": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Unnamed: 4": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Unnamed: 5": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Unnamed: 6": {
+            "#docs": [
+              24,
+              1
+            ],
+            "%docs": [
+              96,
+              4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "category"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Unnamed: 7": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Unnamed: 8": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Unnamed: 9": {
+            "#docs": [
+              2,
+              23
+            ],
+            "%docs": [
+              8,
+              92
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "* id",
+                "date_of_birth",
+                "date_published",
+                "known_for_movies",
+                "production_company"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "column": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "avg_rating",
+              "id",
+              "movie_id",
+              "production_company",
+              "total_votes"
+            ],
+            "type": "string"
+          },
+          "table": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "director_mapping",
+              "genre",
+              "movie",
+              "names",
+              "ratings"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 25,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 25,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ERD::11",
+                  "ERD::16",
+                  "ERD::22",
+                  "ERD::23",
+                  "ERD::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ERD::11"
+              },
+              {
+                "id": "ERD::16"
+              },
+              {
+                "id": "ERD::22"
+              },
+              {
+                "id": "ERD::23"
+              },
+              {
+                "id": "ERD::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Unnamed: 10": null,
+      "Unnamed: 11": null,
+      "Unnamed: 12": null,
+      "Unnamed: 2": null,
+      "Unnamed: 3": null,
+      "Unnamed: 4": null,
+      "Unnamed: 5": null,
+      "Unnamed: 6": "category",
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Unnamed: 9": "languages",
+      "column": "category",
+      "table": "role_mapping"
+    },
+    {
+      "Unnamed: 10": null,
+      "Unnamed: 11": null,
+      "Unnamed: 12": null,
+      "Unnamed: 2": null,
+      "Unnamed: 3": null,
+      "Unnamed: 4": null,
+      "Unnamed: 5": null,
+      "Unnamed: 6": null,
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Unnamed: 9": "height",
+      "column": "movie_id",
+      "table": "ratings"
+    },
+    {
+      "Unnamed: 10": null,
+      "Unnamed: 11": null,
+      "Unnamed: 12": null,
+      "Unnamed: 2": null,
+      "Unnamed: 3": null,
+      "Unnamed: 4": null,
+      "Unnamed: 5": null,
+      "Unnamed: 6": null,
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Unnamed: 9": "year",
+      "column": "genre",
+      "table": "genre"
+    },
+    {
+      "Unnamed: 10": null,
+      "Unnamed: 11": null,
+      "Unnamed: 12": null,
+      "Unnamed: 2": null,
+      "Unnamed: 3": null,
+      "Unnamed: 4": null,
+      "Unnamed: 5": null,
+      "Unnamed: 6": null,
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Unnamed: 9": null,
+      "column": "median_rating",
+      "table": "ratings"
+    },
+    {
+      "Unnamed: 10": null,
+      "Unnamed: 11": null,
+      "Unnamed: 12": null,
+      "Unnamed: 2": null,
+      "Unnamed: 3": null,
+      "Unnamed: 4": null,
+      "Unnamed: 5": null,
+      "Unnamed: 6": null,
+      "Unnamed: 7": null,
+      "Unnamed: 8": null,
+      "Unnamed: 9": "date_published",
+      "column": "movie_id",
+      "table": "director_mapping"
+    }
+  ]
+}

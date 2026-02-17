@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 275,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ArtistId": {
+            "#docs": 275,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              82,
+              100,
+              158,
+              184
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 275,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Battlestar Galactica (Classic)",
+              "Black Sabbath",
+              "Faith No More",
+              "Lenny Kravitz",
+              "Rodox"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 275,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 275,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "artists::11",
+                  "artists::157",
+                  "artists::183",
+                  "artists::81",
+                  "artists::99"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "artists::11"
+              },
+              {
+                "id": "artists::157"
+              },
+              {
+                "id": "artists::183"
+              },
+              {
+                "id": "artists::81"
+              },
+              {
+                "id": "artists::99"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ArtistId": 145,
+      "Name": "Tim Maia"
+    },
+    {
+      "ArtistId": 169,
+      "Name": "Black Eyed Peas"
+    },
+    {
+      "ArtistId": 171,
+      "Name": "Ben Harper"
+    },
+    {
+      "ArtistId": 202,
+      "Name": "Aaron Goldberg"
+    },
+    {
+      "ArtistId": 220,
+      "Name": "Chicago Symphony Chorus, Chicago Symphony Orchestra & Sir Georg Solti"
+    }
+  ]
+}

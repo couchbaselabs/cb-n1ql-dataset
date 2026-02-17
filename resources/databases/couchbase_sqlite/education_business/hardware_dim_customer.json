@@ -1,0 +1,211 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 209,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "channel": {
+            "#docs": 209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Direct",
+              "Distributor",
+              "Retailer"
+            ],
+            "type": "string"
+          },
+          "customer": {
+            "#docs": 209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Amazon",
+              "Atliq e Store",
+              "Circuit City",
+              "Ebay",
+              "Staples"
+            ],
+            "type": "string"
+          },
+          "customer_code": {
+            "#docs": 209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              70023032,
+              90022076,
+              90022083,
+              90023023,
+              90023029
+            ],
+            "type": "number"
+          },
+          "market": {
+            "#docs": 209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Canada",
+              "France",
+              "India",
+              "Indonesia",
+              "USA"
+            ],
+            "type": "string"
+          },
+          "platform": {
+            "#docs": 209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Brick & Mortar",
+              "E-Commerce"
+            ],
+            "type": "string"
+          },
+          "region": {
+            "#docs": [
+              26,
+              183
+            ],
+            "%docs": [
+              12.44,
+              87.55
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "APAC",
+                "EU",
+                "LATAM"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sub_zone": {
+            "#docs": [
+              26,
+              183
+            ],
+            "%docs": [
+              12.44,
+              87.55
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "ANZ",
+                "India",
+                "NE",
+                "ROA",
+                "SE"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 209,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 209,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "hardware_dim_customer::187",
+                  "hardware_dim_customer::194",
+                  "hardware_dim_customer::196",
+                  "hardware_dim_customer::202",
+                  "hardware_dim_customer::37"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "hardware_dim_customer::187"
+              },
+              {
+                "id": "hardware_dim_customer::194"
+              },
+              {
+                "id": "hardware_dim_customer::196"
+              },
+              {
+                "id": "hardware_dim_customer::202"
+              },
+              {
+                "id": "hardware_dim_customer::37"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "channel": "Retailer",
+      "customer": "Mbit",
+      "customer_code": 90017058,
+      "market": "Portugal",
+      "platform": "Brick & Mortar",
+      "region": "EU",
+      "sub_zone": "SE"
+    },
+    {
+      "channel": "Retailer",
+      "customer": "Integration Stores",
+      "customer_code": 90018105,
+      "market": "Spain",
+      "platform": "Brick & Mortar",
+      "region": "EU",
+      "sub_zone": "SE"
+    },
+    {
+      "channel": "Retailer",
+      "customer": "Atlas Stores",
+      "customer_code": 90020097,
+      "market": "Austria",
+      "platform": "Brick & Mortar",
+      "region": "EU",
+      "sub_zone": "NE"
+    },
+    {
+      "channel": "Retailer",
+      "customer": "Girias",
+      "customer_code": 90002007,
+      "market": "India",
+      "platform": "Brick & Mortar",
+      "region": "APAC",
+      "sub_zone": "India"
+    },
+    {
+      "channel": "Retailer",
+      "customer": "Electricalsbea Stores",
+      "customer_code": 90004063,
+      "market": "Japan",
+      "platform": "Brick & Mortar",
+      "region": "APAC",
+      "sub_zone": "ROA"
+    }
+  ]
+}

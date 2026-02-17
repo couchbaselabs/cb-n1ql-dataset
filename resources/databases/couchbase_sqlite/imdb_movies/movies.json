@@ -1,0 +1,280 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "China",
+                "Japan",
+                "Palestine, Germany, Netherland...",
+                "South Korea",
+                "Turkey"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "date_published": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-04-10 00:00:00",
+              "2017-12-27 00:00:00",
+              "2018-04-04 00:00:00",
+              "2018-07-27 00:00:00",
+              "2018-09-06 00:00:00"
+            ],
+            "type": "string"
+          },
+          "duration": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              85,
+              120,
+              127,
+              129,
+              220
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt6389316",
+              "tt6493286",
+              "tt6679498",
+              "tt7158582",
+              "tt7731512"
+            ],
+            "type": "string"
+          },
+          "languages": {
+            "#docs": [
+              8,
+              992
+            ],
+            "%docs": [
+              0.8,
+              99.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Arabic, Hebrew, English",
+                "Japanese",
+                "Korean",
+                "Mandarin",
+                "Turkish"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "production_company": {
+            "#docs": [
+              41,
+              959
+            ],
+            "%docs": [
+              4.1,
+              95.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Bingchi Pictures",
+                "FNR Film",
+                "Fuji Television Network",
+                "KeyFilm",
+                "Woojeung Film"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "title": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1987",
+              "Bao lie wu sheng",
+              "Code Blue the Movie",
+              "Sari sicak",
+              "The Reports on Sarah and Salee..."
+            ],
+            "type": "string"
+          },
+          "worlwide_gross_income": {
+            "#docs": [
+              410,
+              590
+            ],
+            "%docs": [
+              41,
+              59
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "$ 12313",
+                "$ 53833618",
+                "$ 607206",
+                "$ 78778562",
+                "$ 8512220"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2017,
+              2018,
+              2019
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "movies::2333",
+                  "movies::2459",
+                  "movies::3526",
+                  "movies::4854",
+                  "movies::5221"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "movies::2333"
+              },
+              {
+                "id": "movies::2459"
+              },
+              {
+                "id": "movies::3526"
+              },
+              {
+                "id": "movies::4854"
+              },
+              {
+                "id": "movies::5221"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country": "USA",
+      "date_published": "2017-11-07 00:00:00",
+      "duration": 88,
+      "id": "tt4765870",
+      "languages": "English",
+      "production_company": "BrighterMoon Entertainment",
+      "title": "Sightings",
+      "worlwide_gross_income": null,
+      "year": 2017
+    },
+    {
+      "country": "Lithuania",
+      "date_published": "2017-02-16 00:00:00",
+      "duration": 120,
+      "id": "tt4836110",
+      "languages": "Lithuanian",
+      "production_company": "Fralita Films",
+      "title": "Emilija",
+      "worlwide_gross_income": "$ 669037",
+      "year": 2017
+    },
+    {
+      "country": "India",
+      "date_published": "2017-02-24 00:00:00",
+      "duration": 170,
+      "id": "tt4909752",
+      "languages": "Hindi",
+      "production_company": "Viacom18 Motion Pictures",
+      "title": "Rangoon",
+      "worlwide_gross_income": "$ 104174",
+      "year": 2017
+    },
+    {
+      "country": "USA",
+      "date_published": "2017-01-10 00:00:00",
+      "duration": 91,
+      "id": "tt4985854",
+      "languages": null,
+      "production_company": "Magnify Entertainment",
+      "title": "Painted Horses",
+      "worlwide_gross_income": null,
+      "year": 2017
+    },
+    {
+      "country": "USA, Canada",
+      "date_published": "2017-07-28 00:00:00",
+      "duration": 90,
+      "id": "tt5322012",
+      "languages": "English",
+      "production_company": "Broad Green Pictures",
+      "title": "Wish Upon",
+      "worlwide_gross_income": "$ 23468586",
+      "year": 2017
+    }
+  ]
+}

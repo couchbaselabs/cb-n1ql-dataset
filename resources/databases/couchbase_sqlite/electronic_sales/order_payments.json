@@ -1,0 +1,171 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14007,
+              21726,
+              24145,
+              30071,
+              42497
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0b382db57a557ff7703eaba5e991e7...",
+              "405700c657d0b6fb125f7507a0bce1...",
+              "617b88590cdd5883e40eedd5ecc480...",
+              "a900c7725ebcac4b0f0ec847dc7153...",
+              "b296d036b48495bce7720844aeb3fc..."
+            ],
+            "type": "string"
+          },
+          "payment_installments": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              4,
+              7,
+              10
+            ],
+            "type": "number"
+          },
+          "payment_sequential": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              6,
+              8
+            ],
+            "type": "number"
+          },
+          "payment_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "boleto",
+              "credit_card",
+              "debit_card",
+              "voucher"
+            ],
+            "type": "string"
+          },
+          "payment_value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              33.35,
+              39.63,
+              63.11,
+              120.78,
+              704.51
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "order_payments::14007",
+                  "order_payments::21726",
+                  "order_payments::24145",
+                  "order_payments::30071",
+                  "order_payments::42497"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "order_payments::14007"
+              },
+              {
+                "id": "order_payments::21726"
+              },
+              {
+                "id": "order_payments::24145"
+              },
+              {
+                "id": "order_payments::30071"
+              },
+              {
+                "id": "order_payments::42497"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "index": 100147,
+      "order_id": "7f99c35e1289684c803ee00ca1d2b05f",
+      "payment_installments": 4,
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_value": 95.21
+    },
+    {
+      "index": 100173,
+      "order_id": "0115d160c5fbd758a139ff90821db60d",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "boleto",
+      "payment_value": 411.63
+    },
+    {
+      "index": 100202,
+      "order_id": "87cb6bc6178f0a340e40123b7b042243",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "boleto",
+      "payment_value": 79.04
+    },
+    {
+      "index": 100236,
+      "order_id": "626a8ff56da018438dd2249de58f0014",
+      "payment_installments": 8,
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_value": 196.17
+    },
+    {
+      "index": 100392,
+      "order_id": "75e0647c26de647eca3421e9cc66c9da",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_value": 66.78
+    }
+  ]
+}

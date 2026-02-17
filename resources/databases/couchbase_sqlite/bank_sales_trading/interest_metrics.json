@@ -1,0 +1,261 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "_month": {
+            "#docs": [
+              96,
+              904
+            ],
+            "%docs": [
+              9.6,
+              90.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                6,
+                7,
+                8,
+                10,
+                11
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "_year": {
+            "#docs": [
+              96,
+              904
+            ],
+            "%docs": [
+              9.6,
+              90.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                2018,
+                2019
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "composition": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2.11,
+              3.15,
+              3.72,
+              4.17,
+              5.57
+            ],
+            "type": "number"
+          },
+          "index_value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1.1,
+              1.3,
+              1.68,
+              2.15,
+              2.96
+            ],
+            "type": "number"
+          },
+          "interest_id": {
+            "#docs": [
+              96,
+              904
+            ],
+            "%docs": [
+              9.6,
+              90.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                99,
+                10010,
+                19295,
+                21292,
+                34465
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "month_year": {
+            "#docs": [
+              96,
+              904
+            ],
+            "%docs": [
+              9.6,
+              90.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "06-2019",
+                "07-2019",
+                "08-2018",
+                "10-2018",
+                "11-2018"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "percentile_ranking": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              29.47,
+              53.06,
+              77.48,
+              82.18,
+              96.97
+            ],
+            "type": "number"
+          },
+          "ranking": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              25,
+              154,
+              193,
+              360,
+              541
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "interest_metrics::10283",
+                  "interest_metrics::1098",
+                  "interest_metrics::11240",
+                  "interest_metrics::1279",
+                  "interest_metrics::2477"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "interest_metrics::10283"
+              },
+              {
+                "id": "interest_metrics::1098"
+              },
+              {
+                "id": "interest_metrics::11240"
+              },
+              {
+                "id": "interest_metrics::1279"
+              },
+              {
+                "id": "interest_metrics::2477"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "_month": 5,
+      "_year": 2019,
+      "composition": 1.66,
+      "index_value": 1.24,
+      "interest_id": 22401,
+      "month_year": "05-2019",
+      "percentile_ranking": 13.77,
+      "ranking": 739
+    },
+    {
+      "_month": 5,
+      "_year": 2019,
+      "composition": 2.47,
+      "index_value": 1.23,
+      "interest_id": 123,
+      "month_year": "05-2019",
+      "percentile_ranking": 12.6,
+      "ranking": 749
+    },
+    {
+      "_month": 5,
+      "_year": 2019,
+      "composition": 1.9,
+      "index_value": 1.21,
+      "interest_id": 6226,
+      "month_year": "05-2019",
+      "percentile_ranking": 11.09,
+      "ranking": 762
+    },
+    {
+      "_month": 8,
+      "_year": 2018,
+      "composition": 2.67,
+      "index_value": 1.38,
+      "interest_id": 10870,
+      "month_year": "08-2018",
+      "percentile_ranking": 63.1,
+      "ranking": 283
+    },
+    {
+      "_month": 5,
+      "_year": 2019,
+      "composition": 1.59,
+      "index_value": 1.1,
+      "interest_id": 37882,
+      "month_year": "05-2019",
+      "percentile_ranking": 5.25,
+      "ranking": 812
+    }
+  ]
+}

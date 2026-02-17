@@ -1,0 +1,60 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`id` = 542, `name` = \"Webshop\"",
+        "properties": {
+          "id": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              542
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Webshop"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_apps::0"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_apps::0"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 542,
+      "name": "Webshop"
+    }
+  ]
+}

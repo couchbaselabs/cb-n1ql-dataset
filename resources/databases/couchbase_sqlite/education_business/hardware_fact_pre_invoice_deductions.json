@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 418,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_code": {
+            "#docs": 418,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              70005163,
+              90002005,
+              90017050,
+              90018110,
+              90019202
+            ],
+            "type": "number"
+          },
+          "fiscal_year": {
+            "#docs": 418,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2020,
+              2021
+            ],
+            "type": "number"
+          },
+          "pre_invoice_discount_pct": {
+            "#docs": 418,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.2053,
+              0.2054,
+              0.2505,
+              0.2578,
+              0.2702
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 418,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 418,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "hardware_fact_pre_invoice_dedu...",
+                  "hardware_fact_pre_invoice_dedu...",
+                  "hardware_fact_pre_invoice_dedu...",
+                  "hardware_fact_pre_invoice_dedu...",
+                  "hardware_fact_pre_invoice_dedu..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "hardware_fact_pre_invoice_deductions::103"
+              },
+              {
+                "id": "hardware_fact_pre_invoice_deductions::12"
+              },
+              {
+                "id": "hardware_fact_pre_invoice_deductions::283"
+              },
+              {
+                "id": "hardware_fact_pre_invoice_deductions::313"
+              },
+              {
+                "id": "hardware_fact_pre_invoice_deductions::327"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_code": 90011188,
+      "fiscal_year": 2021,
+      "pre_invoice_discount_pct": 0.2996
+    },
+    {
+      "customer_code": 90020102,
+      "fiscal_year": 2020,
+      "pre_invoice_discount_pct": 0.2997
+    },
+    {
+      "customer_code": 90021093,
+      "fiscal_year": 2020,
+      "pre_invoice_discount_pct": 0.2516
+    },
+    {
+      "customer_code": 90022076,
+      "fiscal_year": 2020,
+      "pre_invoice_discount_pct": 0.288
+    },
+    {
+      "customer_code": 90023030,
+      "fiscal_year": 2020,
+      "pre_invoice_discount_pct": 0.3048
+    }
+  ]
+}

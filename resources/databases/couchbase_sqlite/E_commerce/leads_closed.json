@@ -1,0 +1,419 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 842,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "average_stock": {
+            "#docs": [
+              825,
+              17
+            ],
+            "%docs": [
+              97.98,
+              2.01
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "20-50",
+                "200+",
+                "5-20",
+                "50-200"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "business_segment": {
+            "#docs": [
+              1,
+              841
+            ],
+            "%docs": [
+              0.11,
+              99.88
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "books",
+                "car_accessories",
+                "household_utilities",
+                "pet",
+                "sports_leisure"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "business_type": {
+            "#docs": [
+              9,
+              833
+            ],
+            "%docs": [
+              1.06,
+              98.93
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "manufacturer",
+                "other",
+                "reseller"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "declared_monthly_revenue": {
+            "#docs": 842,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1000,
+              5000,
+              25000,
+              30000
+            ],
+            "type": "number"
+          },
+          "declared_product_catalog_size": {
+            "#docs": [
+              804,
+              38
+            ],
+            "%docs": [
+              95.48,
+              4.51
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                10,
+                12,
+                30,
+                300,
+                500
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "has_company": {
+            "#docs": [
+              825,
+              17
+            ],
+            "%docs": [
+              97.98,
+              2.01
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "has_gtin": {
+            "#docs": [
+              825,
+              17
+            ],
+            "%docs": [
+              97.98,
+              2.01
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "lead_behaviour_profile": {
+            "#docs": [
+              168,
+              674
+            ],
+            "%docs": [
+              19.95,
+              80.04
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "cat",
+                "cat, wolf",
+                "eagle",
+                "shark",
+                "wolf"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lead_type": {
+            "#docs": [
+              2,
+              840
+            ],
+            "%docs": [
+              0.23,
+              99.76
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "industry",
+                "offline",
+                "online_beginner",
+                "online_big",
+                "online_medium"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "mql_id": {
+            "#docs": 842,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "42e452a93e736373dd9281c113eff2...",
+              "a555fb36b9368110ede0f043dfc3b9...",
+              "a562fd35af2738ce6d88f785ef4eb1...",
+              "ab1417ecaf41d8fb741fade9be0b8a...",
+              "f63f7107398c54c17b5d14eadfa768..."
+            ],
+            "type": "string"
+          },
+          "sdr_id": {
+            "#docs": 842,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "09285259593c61296eef10c734121d...",
+              "0a0fb2b07d841f84fb6714e35c7230...",
+              "34d40cdaf94010a1d05b0d6212f9e9...",
+              "9e4d1098a3b0f5da39b0bc48f98766...",
+              "a8387c01a09e99ce014107505b9238..."
+            ],
+            "type": "string"
+          },
+          "seller_id": {
+            "#docs": 842,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "b16d3dadc47d4eb18be3d88bad0775...",
+              "bbb7d7893a450660432ea6652310eb...",
+              "bc2579cde838eb0fa8477f7efb1298...",
+              "da6a60cc8cc724fe51be021ff8be77...",
+              "dd5450b022b2d00a2145a66331e1ae..."
+            ],
+            "type": "string"
+          },
+          "sr_id": {
+            "#docs": 842,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "068066e24f0c643eb1d089c7dd20cd...",
+              "495d4e95a8cf8bbf8b432b612a2aa3...",
+              "85fc447d336637ba1df43e793199fb...",
+              "d3d1e91a157ea7f90548eef82f1955...",
+              "fbf4aef3f6915dc0c3c97d6812522f..."
+            ],
+            "type": "string"
+          },
+          "won_date": {
+            "#docs": 842,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-02-19 17:26:54",
+              "2018-03-28 16:11:25",
+              "2018-05-08 20:17:59",
+              "2018-05-10 20:10:08",
+              "2018-05-14 16:06:59"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 842,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 842,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "leads_closed::1",
+                  "leads_closed::105",
+                  "leads_closed::129",
+                  "leads_closed::131",
+                  "leads_closed::240"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "leads_closed::1"
+              },
+              {
+                "id": "leads_closed::105"
+              },
+              {
+                "id": "leads_closed::129"
+              },
+              {
+                "id": "leads_closed::131"
+              },
+              {
+                "id": "leads_closed::240"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "average_stock": null,
+      "business_segment": "construction_tools_house_garden",
+      "business_type": "reseller",
+      "declared_monthly_revenue": 0,
+      "declared_product_catalog_size": null,
+      "has_company": null,
+      "has_gtin": null,
+      "lead_behaviour_profile": "cat",
+      "lead_type": "online_big",
+      "mql_id": "408a9c4a79800232ac656249af3162eb",
+      "sdr_id": "de63de0d10a6012430098db33c679b0b",
+      "seller_id": "b566ab0ef88016e00422755e305103c6",
+      "sr_id": "d3d1e91a157ea7f90548eef82f1955e3",
+      "won_date": "2018-02-23 13:54:40"
+    },
+    {
+      "average_stock": null,
+      "business_segment": "home_decor",
+      "business_type": "manufacturer",
+      "declared_monthly_revenue": 0,
+      "declared_product_catalog_size": null,
+      "has_company": null,
+      "has_gtin": null,
+      "lead_behaviour_profile": null,
+      "lead_type": "industry",
+      "mql_id": "4151b0029636a1c55afcce9283ac7902",
+      "sdr_id": "068066e24f0c643eb1d089c7dd20cd73",
+      "seller_id": "e819bcfade7b5d88a27325eb6cfd62c5",
+      "sr_id": "9ae085775a198122c5586fa830ff7f2b",
+      "won_date": "2018-02-12 13:18:13"
+    },
+    {
+      "average_stock": null,
+      "business_segment": "phone_mobile",
+      "business_type": "reseller",
+      "declared_monthly_revenue": 0,
+      "declared_product_catalog_size": null,
+      "has_company": null,
+      "has_gtin": null,
+      "lead_behaviour_profile": "eagle",
+      "lead_type": "online_medium",
+      "mql_id": "0c28423a88b5dbffd0d1ee2aec41efd0",
+      "sdr_id": "4b339f9567d060bcea4f5136b9f5949e",
+      "seller_id": "c0199604c0ca0863cd20b95aadd24427",
+      "sr_id": "85fc447d336637ba1df43e793199fbc8",
+      "won_date": "2018-04-06 21:43:37"
+    },
+    {
+      "average_stock": null,
+      "business_segment": "pet",
+      "business_type": "reseller",
+      "declared_monthly_revenue": 0,
+      "declared_product_catalog_size": null,
+      "has_company": null,
+      "has_gtin": null,
+      "lead_behaviour_profile": "cat",
+      "lead_type": "online_big",
+      "mql_id": "85fb7822c0e202d4b3bb8c1ad5e0280c",
+      "sdr_id": "a8387c01a09e99ce014107505b92388c",
+      "seller_id": "43037711a5c131786d1633e96185d278",
+      "sr_id": "c638112b43f1d1b86dcabb0da720c901",
+      "won_date": "2018-03-15 15:12:53"
+    },
+    {
+      "average_stock": null,
+      "business_segment": "health_beauty",
+      "business_type": "reseller",
+      "declared_monthly_revenue": 0,
+      "declared_product_catalog_size": null,
+      "has_company": null,
+      "has_gtin": null,
+      "lead_behaviour_profile": "cat",
+      "lead_type": "online_big",
+      "mql_id": "1024cf4dc7f44bc2296769309fcfb4e5",
+      "sdr_id": "34d40cdaf94010a1d05b0d6212f9e909",
+      "seller_id": "a63bfbaa882c8f4542891b4e2246cc7f",
+      "sr_id": "4ef15afb4b2723d8f3d81e51ec7afefe",
+      "won_date": "2018-05-24 16:11:06"
+    }
+  ]
+}

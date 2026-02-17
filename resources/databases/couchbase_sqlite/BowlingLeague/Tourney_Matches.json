@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 57,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "EvenLaneTeamID": {
+            "#docs": 57,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              6,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "Lanes": {
+            "#docs": 57,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "05-06",
+              "13-14",
+              "15-16",
+              "17-18",
+              "27-28"
+            ],
+            "type": "string"
+          },
+          "MatchID": {
+            "#docs": 57,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              15,
+              21,
+              34,
+              44
+            ],
+            "type": "number"
+          },
+          "OddLaneTeamID": {
+            "#docs": 57,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              4,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "TourneyID": {
+            "#docs": 57,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              4,
+              6,
+              9,
+              11
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 57,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 57,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Tourney_Matches::14",
+                  "Tourney_Matches::20",
+                  "Tourney_Matches::33",
+                  "Tourney_Matches::43",
+                  "Tourney_Matches::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Tourney_Matches::14"
+              },
+              {
+                "id": "Tourney_Matches::20"
+              },
+              {
+                "id": "Tourney_Matches::33"
+              },
+              {
+                "id": "Tourney_Matches::43"
+              },
+              {
+                "id": "Tourney_Matches::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "EvenLaneTeamID": 8,
+      "Lanes": "21-22",
+      "MatchID": 12,
+      "OddLaneTeamID": 5,
+      "TourneyID": 3
+    },
+    {
+      "EvenLaneTeamID": 2,
+      "Lanes": "15-16",
+      "MatchID": 26,
+      "OddLaneTeamID": 7,
+      "TourneyID": 7
+    },
+    {
+      "EvenLaneTeamID": 6,
+      "Lanes": "11-12",
+      "MatchID": 14,
+      "OddLaneTeamID": 2,
+      "TourneyID": 4
+    },
+    {
+      "EvenLaneTeamID": 4,
+      "Lanes": "19-20",
+      "MatchID": 28,
+      "OddLaneTeamID": 5,
+      "TourneyID": 7
+    },
+    {
+      "EvenLaneTeamID": 3,
+      "Lanes": "21-22",
+      "MatchID": 29,
+      "OddLaneTeamID": 1,
+      "TourneyID": 8
+    }
+  ]
+}

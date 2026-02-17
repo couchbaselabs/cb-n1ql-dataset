@@ -1,0 +1,190 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "driver_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              178,
+              226,
+              231,
+              232,
+              341
+            ],
+            "type": "number"
+          },
+          "driver_standings_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              53450,
+              56356,
+              56754,
+              57926,
+              59344
+            ],
+            "type": "number"
+          },
+          "points": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              2,
+              3,
+              9,
+              98
+            ],
+            "type": "number"
+          },
+          "position": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              16,
+              18,
+              39,
+              42
+            ],
+            "type": "number"
+          },
+          "position_text": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "16",
+              "18",
+              "39",
+              "42",
+              "6"
+            ],
+            "type": "string"
+          },
+          "race_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              510,
+              549,
+              567,
+              587,
+              641
+            ],
+            "type": "number"
+          },
+          "wins": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "driver_standings::13154",
+                  "driver_standings::14471",
+                  "driver_standings::15248",
+                  "driver_standings::16069",
+                  "driver_standings::18098"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "driver_standings::13154"
+              },
+              {
+                "id": "driver_standings::14471"
+              },
+              {
+                "id": "driver_standings::15248"
+              },
+              {
+                "id": "driver_standings::16069"
+              },
+              {
+                "id": "driver_standings::18098"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "driver_id": 123,
+      "driver_standings_id": 20411,
+      "points": 0,
+      "position": 20,
+      "position_text": "20",
+      "race_id": 419,
+      "wins": 0
+    },
+    {
+      "driver_id": 117,
+      "driver_standings_id": 20413,
+      "points": 72,
+      "position": 1,
+      "position_text": "1",
+      "race_id": 419,
+      "wins": 4
+    },
+    {
+      "driver_id": 118,
+      "driver_standings_id": 20427,
+      "points": 0,
+      "position": 21,
+      "position_text": "21",
+      "race_id": 419,
+      "wins": 0
+    },
+    {
+      "driver_id": 177,
+      "driver_standings_id": 20478,
+      "points": 0,
+      "position": 24,
+      "position_text": "24",
+      "race_id": 421,
+      "wins": 0
+    },
+    {
+      "driver_id": 156,
+      "driver_standings_id": 20484,
+      "points": 0,
+      "position": 27,
+      "position_text": "27",
+      "race_id": 421,
+      "wins": 0
+    }
+  ]
+}

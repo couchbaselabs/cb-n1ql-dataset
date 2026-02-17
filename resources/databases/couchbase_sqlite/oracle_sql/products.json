@@ -1,0 +1,117 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "group_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              142,
+              152,
+              202,
+              232
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4040,
+              4280,
+              5310,
+              5430,
+              6520
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Coalminers Sweat",
+              "Der Helle Kumpel",
+              "Hercule Trippel",
+              "Hoppy Crude Oil",
+              "Monks and Nuns"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "products::0",
+                  "products::2",
+                  "products::3",
+                  "products::4",
+                  "products::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "products::0"
+              },
+              {
+                "id": "products::2"
+              },
+              {
+                "id": "products::3"
+              },
+              {
+                "id": "products::4"
+              },
+              {
+                "id": "products::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "group_id": 142,
+      "id": 4040,
+      "name": "Coalminers Sweat"
+    },
+    {
+      "group_id": 232,
+      "id": 7870,
+      "name": "Ghost of Hops"
+    },
+    {
+      "group_id": 232,
+      "id": 7790,
+      "name": "Summer in India"
+    },
+    {
+      "group_id": 142,
+      "id": 4280,
+      "name": "Hoppy Crude Oil"
+    },
+    {
+      "group_id": 152,
+      "id": 5310,
+      "name": "Monks and Nuns"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 139,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "status": {
+            "#docs": 139,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Collision",
+              "Oil line",
+              "Spun off",
+              "Wheel",
+              "Wheel rim"
+            ],
+            "type": "string"
+          },
+          "status_id": {
+            "#docs": 139,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              20,
+              36,
+              46,
+              70
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 139,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 139,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "status::19",
+                  "status::3",
+                  "status::35",
+                  "status::45",
+                  "status::69"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "status::19"
+              },
+              {
+                "id": "status::3"
+              },
+              {
+                "id": "status::35"
+              },
+              {
+                "id": "status::45"
+              },
+              {
+                "id": "status::69"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "status": "+3 Laps",
+      "status_id": 13
+    },
+    {
+      "status": "Tyre",
+      "status_id": 27
+    },
+    {
+      "status": "Hydraulics",
+      "status_id": 9
+    },
+    {
+      "status": "Heat shield fire",
+      "status_id": 42
+    },
+    {
+      "status": "Out of fuel",
+      "status_id": 60
+    }
+  ]
+}

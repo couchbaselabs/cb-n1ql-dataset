@@ -1,0 +1,251 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 17,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "bonus": {
+            "#docs": 17,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              75,
+              2000,
+              3500,
+              5150,
+              6700
+            ],
+            "type": "number"
+          },
+          "businessentityid": {
+            "#docs": 17,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              276,
+              279,
+              283,
+              288,
+              289
+            ],
+            "type": "number"
+          },
+          "commissionpct": {
+            "#docs": 17,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.01,
+              0.012,
+              0.015,
+              0.018,
+              0.02
+            ],
+            "type": "number"
+          },
+          "modifieddate": {
+            "#docs": 17,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-05-24 00:00:00",
+              "2012-04-09 00:00:00",
+              "2012-05-23 00:00:00",
+              "2012-09-23 00:00:00",
+              "2013-05-23 00:00:00"
+            ],
+            "type": "string"
+          },
+          "rowguid": {
+            "#docs": 17,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "224bb25a-62e3-493e-acaf-4f8f5c...",
+              "25f6838d-9db4-4833-9ddc-7a2428...",
+              "4dd9eee4-8e81-4f8c-af97-683394...",
+              "52a5179d-3239-4157-ae29-17e868...",
+              "6bac15b2-8ffb-45a9-b6d5-040e16..."
+            ],
+            "type": "string"
+          },
+          "saleslastyear": {
+            "#docs": 17,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1307949.7917,
+              1371635.3158,
+              1439156.0291,
+              1635823.3967,
+              1849640.9418
+            ],
+            "type": "number"
+          },
+          "salesquota": {
+            "#docs": [
+              14,
+              3
+            ],
+            "%docs": [
+              82.35,
+              17.64
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                250000,
+                300000
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "salesytd": {
+            "#docs": 17,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1573012.9383,
+              1827066.7118,
+              2315185.611,
+              4116871.2277,
+              4251368.5497
+            ],
+            "type": "number"
+          },
+          "territoryid": {
+            "#docs": [
+              14,
+              3
+            ],
+            "%docs": [
+              82.35,
+              17.64
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                1,
+                4,
+                5,
+                8,
+                10
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 17,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 17,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "salesperson::14",
+                  "salesperson::15",
+                  "salesperson::2",
+                  "salesperson::5",
+                  "salesperson::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "salesperson::14"
+              },
+              {
+                "id": "salesperson::15"
+              },
+              {
+                "id": "salesperson::2"
+              },
+              {
+                "id": "salesperson::5"
+              },
+              {
+                "id": "salesperson::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "bonus": 0,
+      "businessentityid": 285,
+      "commissionpct": 0,
+      "modifieddate": "2013-03-07 00:00:00",
+      "rowguid": "cfdbef27-b1f7-4a56-a878-0221c73bae67",
+      "saleslastyear": 0,
+      "salesquota": "",
+      "salesytd": 172524.4512,
+      "territoryid": ""
+    },
+    {
+      "bonus": 6700,
+      "businessentityid": 279,
+      "commissionpct": 0.01,
+      "modifieddate": "2011-05-24 00:00:00",
+      "rowguid": "52a5179d-3239-4157-ae29-17e868296dc0",
+      "saleslastyear": 1849640.9418,
+      "salesquota": 300000,
+      "salesytd": 2315185.611,
+      "territoryid": 5
+    },
+    {
+      "bonus": 75,
+      "businessentityid": 288,
+      "commissionpct": 0.018,
+      "modifieddate": "2013-05-23 00:00:00",
+      "rowguid": "224bb25a-62e3-493e-acaf-4f8f5c72396a",
+      "saleslastyear": 1307949.7917,
+      "salesquota": 250000,
+      "salesytd": 1827066.7118,
+      "territoryid": 8
+    },
+    {
+      "bonus": 5650,
+      "businessentityid": 286,
+      "commissionpct": 0.018,
+      "modifieddate": "2013-05-23 00:00:00",
+      "rowguid": "9b968777-75dc-45bd-a8df-9cdaa72839e1",
+      "saleslastyear": 2278548.9776,
+      "salesquota": 250000,
+      "salesytd": 1421810.9242,
+      "territoryid": 9
+    },
+    {
+      "bonus": 5000,
+      "businessentityid": 282,
+      "commissionpct": 0.015,
+      "modifieddate": "2011-05-24 00:00:00",
+      "rowguid": "31fd7fc1-dc84-4f05-b9a0-762519eacacc",
+      "saleslastyear": 2038234.6549,
+      "salesquota": 250000,
+      "salesytd": 2604540.7172,
+      "territoryid": 6
+    }
+  ]
+}

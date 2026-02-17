@@ -1,0 +1,160 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`channel_total` = \"Channel total\", `channel_total_id` = 1",
+        "properties": {
+          "channel_class": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Direct",
+              "Indirect",
+              "Others"
+            ],
+            "type": "string"
+          },
+          "channel_class_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              13,
+              14
+            ],
+            "type": "number"
+          },
+          "channel_desc": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Catalog",
+              "Direct Sales",
+              "Internet",
+              "Partners",
+              "Tele Sales"
+            ],
+            "type": "string"
+          },
+          "channel_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              9
+            ],
+            "type": "number"
+          },
+          "channel_total": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Channel total"
+            ],
+            "type": "string"
+          },
+          "channel_total_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "channels::0",
+                  "channels::1",
+                  "channels::2",
+                  "channels::3",
+                  "channels::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "channels::0"
+              },
+              {
+                "id": "channels::1"
+              },
+              {
+                "id": "channels::2"
+              },
+              {
+                "id": "channels::3"
+              },
+              {
+                "id": "channels::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "channel_class": "Direct",
+      "channel_class_id": 12,
+      "channel_desc": "Direct Sales",
+      "channel_id": 3,
+      "channel_total": "Channel total",
+      "channel_total_id": 1
+    },
+    {
+      "channel_class": "Direct",
+      "channel_class_id": 12,
+      "channel_desc": "Tele Sales",
+      "channel_id": 9,
+      "channel_total": "Channel total",
+      "channel_total_id": 1
+    },
+    {
+      "channel_class": "Others",
+      "channel_class_id": 14,
+      "channel_desc": "Partners",
+      "channel_id": 2,
+      "channel_total": "Channel total",
+      "channel_total_id": 1
+    },
+    {
+      "channel_class": "Indirect",
+      "channel_class_id": 13,
+      "channel_desc": "Internet",
+      "channel_id": 4,
+      "channel_total": "Channel total",
+      "channel_total_id": 1
+    },
+    {
+      "channel_class": "Indirect",
+      "channel_class_id": 13,
+      "channel_desc": "Catalog",
+      "channel_id": 5,
+      "channel_total": "Channel total",
+      "channel_total_id": 1
+    }
+  ]
+}

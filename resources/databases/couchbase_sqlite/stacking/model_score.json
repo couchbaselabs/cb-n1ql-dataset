@@ -1,0 +1,170 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "model": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DTRA",
+              "DTRF",
+              "MLPR1",
+              "RFRA",
+              "Stack"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Franck-Hertz",
+              "Solar Power Generation",
+              "Tunnel diode",
+              "concrete",
+              "survey lung cancer"
+            ],
+            "type": "string"
+          },
+          "step": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "test_score": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.39586931818181814,
+              0.6172737606465106,
+              0.8518099287404607,
+              0.8709737051792829,
+              0.9655172413793104
+            ],
+            "type": "number"
+          },
+          "train_score": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.5668528752436648,
+              0.7060758211423152,
+              0.9574098179812466,
+              0.9971830985915493,
+              1
+            ],
+            "type": "number"
+          },
+          "version": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "model_score::1056",
+                  "model_score::1283",
+                  "model_score::142",
+                  "model_score::1461",
+                  "model_score::1698"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "model_score::1056"
+              },
+              {
+                "id": "model_score::1283"
+              },
+              {
+                "id": "model_score::142"
+              },
+              {
+                "id": "model_score::1461"
+              },
+              {
+                "id": "model_score::1698"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "model": "DTRP",
+      "name": "Franck-Hertz",
+      "step": 1,
+      "test_score": 0.39586931818181814,
+      "train_score": 0.5668528752436648,
+      "version": 4
+    },
+    {
+      "model": "MLPR2",
+      "name": "Franck-Hertz",
+      "step": 1,
+      "test_score": 0.46929699248120293,
+      "train_score": 0.38113162768031206,
+      "version": 4
+    },
+    {
+      "model": "KNRD",
+      "name": "Franck-Hertz",
+      "step": 1,
+      "test_score": 0.39586931818181814,
+      "train_score": 0.5668528752436648,
+      "version": 5
+    },
+    {
+      "model": "KNCD",
+      "name": "iris",
+      "step": 1,
+      "test_score": 0.74,
+      "train_score": 0.96,
+      "version": 1
+    },
+    {
+      "model": "GPRQ",
+      "name": "Tunnel diode",
+      "step": 1,
+      "test_score": 0.941733622559653,
+      "train_score": 0.9594120141342756,
+      "version": 4
+    }
+  ]
+}

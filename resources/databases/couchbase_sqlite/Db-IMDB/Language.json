@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 32,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "LAID": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              16,
+              22,
+              28,
+              30
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Gujarati",
+              "Italian",
+              "Japanese",
+              "Swiss German",
+              "Tibetan"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              16,
+              22,
+              28,
+              30
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 32,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Language::13",
+                  "Language::16",
+                  "Language::22",
+                  "Language::28",
+                  "Language::30"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Language::13"
+              },
+              {
+                "id": "Language::16"
+              },
+              {
+                "id": "Language::22"
+              },
+              {
+                "id": "Language::28"
+              },
+              {
+                "id": "Language::30"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LAID": 10,
+      "Name": "Spanish",
+      "index": 10
+    },
+    {
+      "LAID": 24,
+      "Name": "Himachali",
+      "index": 24
+    },
+    {
+      "LAID": 11,
+      "Name": "Arabic",
+      "index": 11
+    },
+    {
+      "LAID": 25,
+      "Name": "Zulu",
+      "index": 25
+    },
+    {
+      "LAID": 9,
+      "Name": "Korean",
+      "index": 9
+    }
+  ]
+}

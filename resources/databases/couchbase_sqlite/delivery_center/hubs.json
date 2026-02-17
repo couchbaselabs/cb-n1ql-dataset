@@ -1,0 +1,170 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 32,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "hub_city": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CURITIBA",
+              "PORTO ALEGRE",
+              "RIO DE JANEIRO",
+              "S\u00c3O PAULO"
+            ],
+            "type": "string"
+          },
+          "hub_id": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20,
+              27,
+              36,
+              75,
+              86
+            ],
+            "type": "number"
+          },
+          "hub_latitude": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -30.085743,
+              -25.477073,
+              -23.622995,
+              -23.54150197,
+              -22.996848
+            ],
+            "type": "number"
+          },
+          "hub_longitude": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -51.245997,
+              -49.28966,
+              -46.699204,
+              -46.5766182,
+              -43.359636
+            ],
+            "type": "number"
+          },
+          "hub_name": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BLACK SHOPPING",
+              "PURPLE SHOPPING",
+              "PYTHON SHOPPING",
+              "R SHOPPING",
+              "SAMPA SHOPPING"
+            ],
+            "type": "string"
+          },
+          "hub_state": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PR",
+              "RJ",
+              "RS",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 32,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 32,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "hubs::14",
+                  "hubs::20",
+                  "hubs::28",
+                  "hubs::30",
+                  "hubs::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "hubs::14"
+              },
+              {
+                "id": "hubs::20"
+              },
+              {
+                "id": "hubs::28"
+              },
+              {
+                "id": "hubs::30"
+              },
+              {
+                "id": "hubs::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "hub_city": "S\u00c3O PAULO",
+      "hub_id": 27,
+      "hub_latitude": -23.622995,
+      "hub_longitude": -46.699204,
+      "hub_name": "SAMPA SHOPPING",
+      "hub_state": "SP"
+    },
+    {
+      "hub_city": "PORTO ALEGRE",
+      "hub_id": 36,
+      "hub_latitude": -30.085743,
+      "hub_longitude": -51.245997,
+      "hub_name": "BLACK SHOPPING",
+      "hub_state": "RS"
+    },
+    {
+      "hub_city": "RIO DE JANEIRO",
+      "hub_id": 20,
+      "hub_latitude": -22.996848,
+      "hub_longitude": -43.359636,
+      "hub_name": "PURPLE SHOPPING",
+      "hub_state": "RJ"
+    },
+    {
+      "hub_city": "PORTO ALEGRE",
+      "hub_id": 4,
+      "hub_latitude": -30.0219481,
+      "hub_longitude": -51.2083816,
+      "hub_name": "RED SHOPPING",
+      "hub_state": "RS"
+    },
+    {
+      "hub_city": "RIO DE JANEIRO",
+      "hub_id": 16,
+      "hub_latitude": -23.0174723,
+      "hub_longitude": -43.4799389,
+      "hub_name": "PEOPLE SHOPPING",
+      "hub_state": "RJ"
+    }
+  ]
+}

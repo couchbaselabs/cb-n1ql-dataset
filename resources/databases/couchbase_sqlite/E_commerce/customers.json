@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "belo horizonte",
+              "flores da cunha",
+              "jundiai",
+              "maringa",
+              "rio de janeiro"
+            ],
+            "type": "string"
+          },
+          "customer_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "58c021d7a27ccda0f20f3c1658b054...",
+              "5ee90522743d960d6a969dab82bb6a...",
+              "91ea92a2f5eca959c7b4260f5537be...",
+              "9f889b9d8259f664571ce0080a5f54...",
+              "cc0dc6660942e0b9ba94d4ef6e6a18..."
+            ],
+            "type": "string"
+          },
+          "customer_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MG",
+              "PR",
+              "RJ",
+              "RS",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "customer_unique_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "751ce23d1333f5f094b90bcf634c7c...",
+              "d37c518966baf0f218a0cd6cecc389...",
+              "f9cb5dc7e731ae82e0575be2255c14...",
+              "fe40c8ed5d902c8ec1032044a223b2...",
+              "ff0053f211cda47ef0b3c139e7c07d..."
+            ],
+            "type": "string"
+          },
+          "customer_zip_code_prefix": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13212,
+              22780,
+              30516,
+              87083,
+              95270
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customers::15775",
+                  "customers::16900",
+                  "customers::17028",
+                  "customers::26015",
+                  "customers::43953"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customers::15775"
+              },
+              {
+                "id": "customers::16900"
+              },
+              {
+                "id": "customers::17028"
+              },
+              {
+                "id": "customers::26015"
+              },
+              {
+                "id": "customers::43953"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_city": "aruja",
+      "customer_id": "629202920f3647c33d7e92c7d1934961",
+      "customer_state": "SP",
+      "customer_unique_id": "10f81d995f501b771c106a902d6ca4dd",
+      "customer_zip_code_prefix": 7428
+    },
+    {
+      "customer_city": "florianopolis",
+      "customer_id": "07cb5cf601f1745ecbed82fb6f887516",
+      "customer_state": "SC",
+      "customer_unique_id": "ea1a7388080d7d3e8559459f39d2cc92",
+      "customer_zip_code_prefix": 88025
+    },
+    {
+      "customer_city": "itajai",
+      "customer_id": "4711995e1965964543c97df6cbb3e23f",
+      "customer_state": "SC",
+      "customer_unique_id": "1d5f0643cf2568434743cb9ff674feb3",
+      "customer_zip_code_prefix": 88303
+    },
+    {
+      "customer_city": "sao paulo",
+      "customer_id": "66e651cfce68db9739dc0cc641872eab",
+      "customer_state": "SP",
+      "customer_unique_id": "775d0889568d2ab623769e6f242f9387",
+      "customer_zip_code_prefix": 2960
+    },
+    {
+      "customer_city": "belo horizonte",
+      "customer_id": "92dc2362ac5619266eeed4ec88234e1c",
+      "customer_state": "MG",
+      "customer_unique_id": "0bad4fcf13b5df627666c2f510782b66",
+      "customer_zip_code_prefix": 31140
+    }
+  ]
+}

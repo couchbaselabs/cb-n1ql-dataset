@@ -1,0 +1,219 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 307,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "league_id_loser": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AA",
+              "AL",
+              "NL"
+            ],
+            "type": "string"
+          },
+          "league_id_winner": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AA",
+              "AL",
+              "NL"
+            ],
+            "type": "string"
+          },
+          "losses": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            "type": "number"
+          },
+          "round": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ALCS",
+              "ALDS1",
+              "ALDS2",
+              "NLCS",
+              "WS"
+            ],
+            "type": "string"
+          },
+          "team_id_loser": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BAL",
+              "BOS",
+              "BRO",
+              "MIN",
+              "SEA"
+            ],
+            "type": "string"
+          },
+          "team_id_winner": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CHA",
+              "CIN",
+              "CLE",
+              "LAN",
+              "NYA"
+            ],
+            "type": "string"
+          },
+          "ties": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "wins": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1953,
+              1995,
+              1997,
+              2004,
+              2005
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 307,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 307,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "postseason::152",
+                  "postseason::166",
+                  "postseason::217",
+                  "postseason::223",
+                  "postseason::57"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "postseason::152"
+              },
+              {
+                "id": "postseason::166"
+              },
+              {
+                "id": "postseason::217"
+              },
+              {
+                "id": "postseason::223"
+              },
+              {
+                "id": "postseason::57"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "league_id_loser": "AL",
+      "league_id_winner": "AL",
+      "losses": 1,
+      "round": "ALCS",
+      "team_id_loser": "BOS",
+      "team_id_winner": "NYA",
+      "ties": 0,
+      "wins": 4,
+      "year": 1999
+    },
+    {
+      "league_id_loser": "NL",
+      "league_id_winner": "NL",
+      "losses": 0,
+      "round": "NLDS1",
+      "team_id_loser": "HOU",
+      "team_id_winner": "ATL",
+      "ties": 0,
+      "wins": 3,
+      "year": 2001
+    },
+    {
+      "league_id_loser": "AL",
+      "league_id_winner": "AL",
+      "losses": 2,
+      "round": "ALCS",
+      "team_id_loser": "BAL",
+      "team_id_winner": "OAK",
+      "ties": 0,
+      "wins": 3,
+      "year": 1973
+    },
+    {
+      "league_id_loser": "AL",
+      "league_id_winner": "AL",
+      "losses": 1,
+      "round": "ALCS",
+      "team_id_loser": "KCA",
+      "team_id_winner": "NYA",
+      "ties": 0,
+      "wins": 3,
+      "year": 1978
+    },
+    {
+      "league_id_loser": "AL",
+      "league_id_winner": "NL",
+      "losses": 3,
+      "round": "WS",
+      "team_id_loser": "ML4",
+      "team_id_winner": "SLN",
+      "ties": 0,
+      "wins": 4,
+      "year": 1982
+    }
+  ]
+}

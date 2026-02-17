@@ -1,0 +1,195 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "cancellation": {
+            "#docs": [
+              8,
+              2
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Customer Cancellation",
+                "Restaurant Cancellation"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "distance": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              13.4,
+              20,
+              23.4,
+              25
+            ],
+            "type": "number"
+          },
+          "duration": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              20,
+              27,
+              32,
+              40
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              10
+            ],
+            "type": "number"
+          },
+          "pickup_time": {
+            "#docs": [
+              2,
+              8
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-01-01 18:15:34",
+                "2021-01-01 19:10:54",
+                "2021-01-03 00:12:37",
+                "2021-01-04 13:53:03",
+                "2021-01-11 18:50:20"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "runner_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pizza_clean_runner_orders::0",
+                  "pizza_clean_runner_orders::1",
+                  "pizza_clean_runner_orders::2",
+                  "pizza_clean_runner_orders::3",
+                  "pizza_clean_runner_orders::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pizza_clean_runner_orders::0"
+              },
+              {
+                "id": "pizza_clean_runner_orders::1"
+              },
+              {
+                "id": "pizza_clean_runner_orders::2"
+              },
+              {
+                "id": "pizza_clean_runner_orders::3"
+              },
+              {
+                "id": "pizza_clean_runner_orders::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "cancellation": null,
+      "distance": 20,
+      "duration": 27,
+      "order_id": 2,
+      "pickup_time": "2021-01-01 19:10:54",
+      "runner_id": 1
+    },
+    {
+      "cancellation": "Restaurant Cancellation",
+      "distance": 0,
+      "duration": 0,
+      "order_id": 6,
+      "pickup_time": null,
+      "runner_id": 3
+    },
+    {
+      "cancellation": null,
+      "distance": 10,
+      "duration": 15,
+      "order_id": 5,
+      "pickup_time": "2021-01-08 21:10:57",
+      "runner_id": 3
+    },
+    {
+      "cancellation": null,
+      "distance": 13.4,
+      "duration": 20,
+      "order_id": 3,
+      "pickup_time": "2021-01-03 00:12:37",
+      "runner_id": 1
+    },
+    {
+      "cancellation": null,
+      "distance": 23.4,
+      "duration": 40,
+      "order_id": 4,
+      "pickup_time": "2021-01-04 13:53:03",
+      "runner_id": 2
+    }
+  ]
+}

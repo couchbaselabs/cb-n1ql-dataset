@@ -1,0 +1,736 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "calendar_month_desc": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04",
+              "2022-01",
+              "2022-04",
+              "2023-02",
+              "2023-03"
+            ],
+            "type": "string"
+          },
+          "calendar_month_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1675,
+              1708,
+              1711,
+              1851,
+              1885
+            ],
+            "type": "number"
+          },
+          "calendar_month_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "April",
+              "February",
+              "January",
+              "July",
+              "March"
+            ],
+            "type": "string"
+          },
+          "calendar_month_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            "type": "number"
+          },
+          "calendar_quarter_desc": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-02",
+              "2022-01",
+              "2022-02",
+              "2023-01",
+              "2023-03"
+            ],
+            "type": "string"
+          },
+          "calendar_quarter_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1770,
+              1781,
+              1782,
+              1814,
+              2034
+            ],
+            "type": "number"
+          },
+          "calendar_quarter_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "calendar_week_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              9,
+              16,
+              17,
+              30
+            ],
+            "type": "number"
+          },
+          "calendar_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023
+            ],
+            "type": "number"
+          },
+          "calendar_year_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1802,
+              1803,
+              1804,
+              1805,
+              1813
+            ],
+            "type": "number"
+          },
+          "day_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Saturday",
+              "Sunday",
+              "Thursday",
+              "Tuesday",
+              "Wednesday"
+            ],
+            "type": "string"
+          },
+          "day_number_in_month": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              5,
+              17,
+              26,
+              28
+            ],
+            "type": "number"
+          },
+          "day_number_in_week": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "days_in_cal_month": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              28,
+              29,
+              30,
+              31
+            ],
+            "type": "number"
+          },
+          "days_in_cal_quarter": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              90,
+              91,
+              92
+            ],
+            "type": "number"
+          },
+          "days_in_cal_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              365,
+              366
+            ],
+            "type": "number"
+          },
+          "days_in_fis_month": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              25,
+              28,
+              35
+            ],
+            "type": "number"
+          },
+          "days_in_fis_quarter": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              84,
+              88,
+              91,
+              98
+            ],
+            "type": "number"
+          },
+          "days_in_fis_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              361,
+              364,
+              371
+            ],
+            "type": "number"
+          },
+          "end_of_cal_month": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04-30",
+              "2022-01-31",
+              "2022-04-30",
+              "2023-02-28",
+              "2023-03-31"
+            ],
+            "type": "string"
+          },
+          "end_of_cal_quarter": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-06-30",
+              "2022-03-31",
+              "2022-06-30",
+              "2023-03-31",
+              "2023-09-30"
+            ],
+            "type": "string"
+          },
+          "end_of_cal_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-12-31",
+              "2020-12-31",
+              "2021-12-31",
+              "2022-12-31",
+              "2023-12-31"
+            ],
+            "type": "string"
+          },
+          "end_of_fis_month": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04-26",
+              "2022-01-28",
+              "2022-04-29",
+              "2023-03-31",
+              "2023-07-28"
+            ],
+            "type": "string"
+          },
+          "end_of_fis_quarter": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-06-28",
+              "2022-03-25",
+              "2022-06-24",
+              "2022-12-31",
+              "2023-09-29"
+            ],
+            "type": "string"
+          },
+          "end_of_fis_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-12-27",
+              "2020-12-26",
+              "2021-12-31",
+              "2022-12-30",
+              "2023-12-29"
+            ],
+            "type": "string"
+          },
+          "fiscal_month_desc": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04",
+              "2022-01",
+              "2022-04",
+              "2023-03",
+              "2023-07"
+            ],
+            "type": "string"
+          },
+          "fiscal_month_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1723,
+              1756,
+              1759,
+              1880,
+              2036
+            ],
+            "type": "number"
+          },
+          "fiscal_month_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "April",
+              "January",
+              "July",
+              "March",
+              "May"
+            ],
+            "type": "string"
+          },
+          "fiscal_month_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              4,
+              5,
+              7
+            ],
+            "type": "number"
+          },
+          "fiscal_quarter_desc": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-02",
+              "2022-01",
+              "2022-02",
+              "2023-01",
+              "2023-03"
+            ],
+            "type": "string"
+          },
+          "fiscal_quarter_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1786,
+              1797,
+              1798,
+              1801,
+              2037
+            ],
+            "type": "number"
+          },
+          "fiscal_quarter_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "fiscal_week_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              9,
+              16,
+              17,
+              30
+            ],
+            "type": "number"
+          },
+          "fiscal_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023
+            ],
+            "type": "number"
+          },
+          "fiscal_year_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1806,
+              1807,
+              1808,
+              1809,
+              1810
+            ],
+            "type": "number"
+          },
+          "time_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04-17",
+              "2022-01-05",
+              "2022-04-28",
+              "2023-02-26",
+              "2023-03-04"
+            ],
+            "type": "string"
+          },
+          "week_ending_day": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04-21",
+              "2022-01-09",
+              "2022-05-01",
+              "2023-02-26",
+              "2023-03-05"
+            ],
+            "type": "string"
+          },
+          "week_ending_day_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1505,
+              1587,
+              1655,
+              1879,
+              1889
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "times::1138",
+                  "times::1251",
+                  "times::144",
+                  "times::1517",
+                  "times::1523"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "times::1138"
+              },
+              {
+                "id": "times::1251"
+              },
+              {
+                "id": "times::144"
+              },
+              {
+                "id": "times::1517"
+              },
+              {
+                "id": "times::1523"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "calendar_month_desc": "2022-01",
+      "calendar_month_id": 1708,
+      "calendar_month_name": "January",
+      "calendar_month_number": 1,
+      "calendar_quarter_desc": "2022-01",
+      "calendar_quarter_id": 1781,
+      "calendar_quarter_number": 1,
+      "calendar_week_number": 2,
+      "calendar_year": 2022,
+      "calendar_year_id": 1805,
+      "day_name": "Thursday",
+      "day_number_in_month": 13,
+      "day_number_in_week": 4,
+      "days_in_cal_month": 31,
+      "days_in_cal_quarter": 90,
+      "days_in_cal_year": 365,
+      "days_in_fis_month": 28,
+      "days_in_fis_quarter": 84,
+      "days_in_fis_year": 364,
+      "end_of_cal_month": "2022-01-31",
+      "end_of_cal_quarter": "2022-03-31",
+      "end_of_cal_year": "2022-12-31",
+      "end_of_fis_month": "2022-01-28",
+      "end_of_fis_quarter": "2022-03-25",
+      "end_of_fis_year": "2022-12-30",
+      "fiscal_month_desc": "2022-01",
+      "fiscal_month_id": 1756,
+      "fiscal_month_name": "January",
+      "fiscal_month_number": 1,
+      "fiscal_quarter_desc": "2022-01",
+      "fiscal_quarter_id": 1797,
+      "fiscal_quarter_number": 1,
+      "fiscal_week_number": 2,
+      "fiscal_year": 2022,
+      "fiscal_year_id": 1809,
+      "time_id": "2022-01-13",
+      "week_ending_day": "2022-01-16",
+      "week_ending_day_id": 1553
+    },
+    {
+      "calendar_month_desc": "2019-03",
+      "calendar_month_id": 1674,
+      "calendar_month_name": "March",
+      "calendar_month_number": 3,
+      "calendar_quarter_desc": "2019-01",
+      "calendar_quarter_id": 1769,
+      "calendar_quarter_number": 1,
+      "calendar_week_number": 12,
+      "calendar_year": 2019,
+      "calendar_year_id": 1802,
+      "day_name": "Wednesday",
+      "day_number_in_month": 20,
+      "day_number_in_week": 3,
+      "days_in_cal_month": 31,
+      "days_in_cal_quarter": 90,
+      "days_in_cal_year": 365,
+      "days_in_fis_month": 35,
+      "days_in_fis_quarter": 88,
+      "days_in_fis_year": 361,
+      "end_of_cal_month": "2019-03-31",
+      "end_of_cal_quarter": "2019-03-31",
+      "end_of_cal_year": "2019-12-31",
+      "end_of_fis_month": "2019-03-29",
+      "end_of_fis_quarter": "2019-03-29",
+      "end_of_fis_year": "2019-12-27",
+      "fiscal_month_desc": "2019-03",
+      "fiscal_month_id": 1722,
+      "fiscal_month_name": "March",
+      "fiscal_month_number": 3,
+      "fiscal_quarter_desc": "2019-01",
+      "fiscal_quarter_id": 1785,
+      "fiscal_quarter_number": 1,
+      "fiscal_week_number": 12,
+      "fiscal_year": 2019,
+      "fiscal_year_id": 1806,
+      "time_id": "2019-03-20",
+      "week_ending_day": "2019-03-24",
+      "week_ending_day_id": 1611
+    },
+    {
+      "calendar_month_desc": "2022-02",
+      "calendar_month_id": 1709,
+      "calendar_month_name": "February",
+      "calendar_month_number": 2,
+      "calendar_quarter_desc": "2022-01",
+      "calendar_quarter_id": 1781,
+      "calendar_quarter_number": 1,
+      "calendar_week_number": 6,
+      "calendar_year": 2022,
+      "calendar_year_id": 1805,
+      "day_name": "Tuesday",
+      "day_number_in_month": 8,
+      "day_number_in_week": 2,
+      "days_in_cal_month": 28,
+      "days_in_cal_quarter": 90,
+      "days_in_cal_year": 365,
+      "days_in_fis_month": 28,
+      "days_in_fis_quarter": 84,
+      "days_in_fis_year": 364,
+      "end_of_cal_month": "2022-02-28",
+      "end_of_cal_quarter": "2022-03-31",
+      "end_of_cal_year": "2022-12-31",
+      "end_of_fis_month": "2022-02-25",
+      "end_of_fis_quarter": "2022-03-25",
+      "end_of_fis_year": "2022-12-30",
+      "fiscal_month_desc": "2022-02",
+      "fiscal_month_id": 1757,
+      "fiscal_month_name": "February",
+      "fiscal_month_number": 2,
+      "fiscal_quarter_desc": "2022-01",
+      "fiscal_quarter_id": 1797,
+      "fiscal_quarter_number": 1,
+      "fiscal_week_number": 6,
+      "fiscal_year": 2022,
+      "fiscal_year_id": 1809,
+      "time_id": "2022-02-08",
+      "week_ending_day": "2022-02-13",
+      "week_ending_day_id": 1532
+    },
+    {
+      "calendar_month_desc": "2022-03",
+      "calendar_month_id": 1710,
+      "calendar_month_name": "March",
+      "calendar_month_number": 3,
+      "calendar_quarter_desc": "2022-01",
+      "calendar_quarter_id": 1781,
+      "calendar_quarter_number": 1,
+      "calendar_week_number": 10,
+      "calendar_year": 2022,
+      "calendar_year_id": 1805,
+      "day_name": "Friday",
+      "day_number_in_month": 11,
+      "day_number_in_week": 5,
+      "days_in_cal_month": 31,
+      "days_in_cal_quarter": 90,
+      "days_in_cal_year": 365,
+      "days_in_fis_month": 28,
+      "days_in_fis_quarter": 84,
+      "days_in_fis_year": 364,
+      "end_of_cal_month": "2022-03-31",
+      "end_of_cal_quarter": "2022-03-31",
+      "end_of_cal_year": "2022-12-31",
+      "end_of_fis_month": "2022-03-25",
+      "end_of_fis_quarter": "2022-03-25",
+      "end_of_fis_year": "2022-12-30",
+      "fiscal_month_desc": "2022-03",
+      "fiscal_month_id": 1758,
+      "fiscal_month_name": "March",
+      "fiscal_month_number": 3,
+      "fiscal_quarter_desc": "2022-01",
+      "fiscal_quarter_id": 1797,
+      "fiscal_quarter_number": 1,
+      "fiscal_week_number": 10,
+      "fiscal_year": 2022,
+      "fiscal_year_id": 1809,
+      "time_id": "2022-03-11",
+      "week_ending_day": "2022-03-13",
+      "week_ending_day_id": 1536
+    },
+    {
+      "calendar_month_desc": "2019-03",
+      "calendar_month_id": 1674,
+      "calendar_month_name": "March",
+      "calendar_month_number": 3,
+      "calendar_quarter_desc": "2019-01",
+      "calendar_quarter_id": 1769,
+      "calendar_quarter_number": 1,
+      "calendar_week_number": 13,
+      "calendar_year": 2019,
+      "calendar_year_id": 1802,
+      "day_name": "Tuesday",
+      "day_number_in_month": 26,
+      "day_number_in_week": 2,
+      "days_in_cal_month": 31,
+      "days_in_cal_quarter": 90,
+      "days_in_cal_year": 365,
+      "days_in_fis_month": 35,
+      "days_in_fis_quarter": 88,
+      "days_in_fis_year": 361,
+      "end_of_cal_month": "2019-03-31",
+      "end_of_cal_quarter": "2019-03-31",
+      "end_of_cal_year": "2019-12-31",
+      "end_of_fis_month": "2019-03-29",
+      "end_of_fis_quarter": "2019-03-29",
+      "end_of_fis_year": "2019-12-27",
+      "fiscal_month_desc": "2019-03",
+      "fiscal_month_id": 1722,
+      "fiscal_month_name": "March",
+      "fiscal_month_number": 3,
+      "fiscal_quarter_desc": "2019-01",
+      "fiscal_quarter_id": 1785,
+      "fiscal_quarter_number": 1,
+      "fiscal_week_number": 13,
+      "fiscal_year": 2019,
+      "fiscal_year_id": 1806,
+      "time_id": "2019-03-26",
+      "week_ending_day": "2019-03-31",
+      "week_ending_day_id": 1658
+    }
+  ]
+}

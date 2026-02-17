@@ -1,0 +1,60 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`company` = \"Good Beer Trading Co\", `symbol` = \"BEER\"",
+        "properties": {
+          "company": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Good Beer Trading Co"
+            ],
+            "type": "string"
+          },
+          "symbol": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BEER"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "stock::0"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "stock::0"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "company": "Good Beer Trading Co",
+      "symbol": "BEER"
+    }
+  ]
+}

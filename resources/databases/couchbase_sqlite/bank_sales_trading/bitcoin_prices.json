@@ -1,0 +1,205 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "change": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "-0.12%",
+              "-2.30%",
+              "-2.68%",
+              "1.00%",
+              "7.56%"
+            ],
+            "type": "string"
+          },
+          "high": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              50.27,
+              113.67,
+              310.69,
+              718.06,
+              737
+            ],
+            "type": "number"
+          },
+          "low": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              48.88,
+              102.84,
+              297.75,
+              651.76,
+              694.07
+            ],
+            "type": "number"
+          },
+          "market_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "17-04-2017",
+              "21-05-2018",
+              "25-12-2017",
+              "27-11-2018",
+              "28-09-2017"
+            ],
+            "type": "string"
+          },
+          "open": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              49.58,
+              110.08,
+              309.75,
+              659.89,
+              716.02
+            ],
+            "type": "number"
+          },
+          "price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              49.52,
+              111.18,
+              302.63,
+              696.85,
+              709.81
+            ],
+            "type": "number"
+          },
+          "ticker": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BTC",
+              "ETH"
+            ],
+            "type": "string"
+          },
+          "volume": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "170.64K",
+              "491.02K",
+              "5.42M",
+              "590.69K",
+              "764.73K"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "bitcoin_prices::1006",
+                  "bitcoin_prices::1196",
+                  "bitcoin_prices::1343",
+                  "bitcoin_prices::1431",
+                  "bitcoin_prices::1595"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "bitcoin_prices::1006"
+              },
+              {
+                "id": "bitcoin_prices::1196"
+              },
+              {
+                "id": "bitcoin_prices::1343"
+              },
+              {
+                "id": "bitcoin_prices::1431"
+              },
+              {
+                "id": "bitcoin_prices::1595"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "change": "-0.94%",
+      "high": 3601.59,
+      "low": 3380.6,
+      "market_date": "06-05-2021",
+      "open": 3522.74,
+      "price": 3489.52,
+      "ticker": "ETH",
+      "volume": "1.51M"
+    },
+    {
+      "change": "-2.90%",
+      "high": 483.93,
+      "low": 460.63,
+      "market_date": "03-07-2018",
+      "open": 475.73,
+      "price": 461.89,
+      "ticker": "ETH",
+      "volume": "1.72M"
+    },
+    {
+      "change": "3.92%",
+      "high": 547.5,
+      "low": 514.88,
+      "market_date": "19-06-2018",
+      "open": 517.91,
+      "price": 538.22,
+      "ticker": "ETH",
+      "volume": "985.96K"
+    },
+    {
+      "change": "0.56%",
+      "high": 2797.61,
+      "low": 2726.03,
+      "market_date": "30-04-2021",
+      "open": 2757.02,
+      "price": 2772.78,
+      "ticker": "ETH",
+      "volume": "1.52M"
+    },
+    {
+      "change": "0.18%",
+      "high": 674.36,
+      "low": 630.33,
+      "market_date": "01-05-2018",
+      "open": 670.12,
+      "price": 671.26,
+      "ticker": "ETH",
+      "volume": "1.03M"
+    }
+  ]
+}

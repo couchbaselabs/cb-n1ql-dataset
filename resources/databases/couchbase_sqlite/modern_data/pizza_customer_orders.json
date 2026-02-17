@@ -1,0 +1,190 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 14,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_id": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              101,
+              102,
+              103,
+              104,
+              105
+            ],
+            "type": "number"
+          },
+          "exclusions": {
+            "#docs": [
+              11,
+              3
+            ],
+            "%docs": [
+              78.57,
+              21.42
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "4"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "extras": {
+            "#docs": [
+              12,
+              2
+            ],
+            "%docs": [
+              85.71,
+              14.28
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1,4",
+                "1,5"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_id": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              8,
+              10
+            ],
+            "type": "number"
+          },
+          "order_time": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-01-01 18:05:02",
+              "2021-01-01 19:00:52",
+              "2021-01-02 23:51:23",
+              "2021-01-09 23:54:33",
+              "2021-01-11 18:34:49"
+            ],
+            "type": "string"
+          },
+          "pizza_id": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 14,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pizza_customer_orders::0",
+                  "pizza_customer_orders::10",
+                  "pizza_customer_orders::12",
+                  "pizza_customer_orders::2",
+                  "pizza_customer_orders::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pizza_customer_orders::0"
+              },
+              {
+                "id": "pizza_customer_orders::10"
+              },
+              {
+                "id": "pizza_customer_orders::12"
+              },
+              {
+                "id": "pizza_customer_orders::2"
+              },
+              {
+                "id": "pizza_customer_orders::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_id": 104,
+      "exclusions": "2,6",
+      "extras": "1,4",
+      "order_id": 10,
+      "order_time": "2021-01-11 18:34:49",
+      "pizza_id": 1
+    },
+    {
+      "customer_id": 104,
+      "exclusions": null,
+      "extras": null,
+      "order_id": 10,
+      "order_time": "2021-01-11 18:34:49",
+      "pizza_id": 1
+    },
+    {
+      "customer_id": 103,
+      "exclusions": "4",
+      "extras": null,
+      "order_id": 4,
+      "order_time": "2021-01-04 13:23:46",
+      "pizza_id": 1
+    },
+    {
+      "customer_id": 103,
+      "exclusions": "4",
+      "extras": null,
+      "order_id": 4,
+      "order_time": "2021-01-04 13:23:46",
+      "pizza_id": 1
+    },
+    {
+      "customer_id": 105,
+      "exclusions": null,
+      "extras": "1",
+      "order_id": 7,
+      "order_time": "2021-01-08 21:20:29",
+      "pizza_id": 2
+    }
+  ]
+}

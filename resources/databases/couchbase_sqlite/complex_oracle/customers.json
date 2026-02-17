@@ -1,0 +1,466 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`cust_eff_from` = \"2019-01-01\", `cust_total` = \"Customer total\", `cust_total_id` = 52772",
+        "properties": {
+          "country_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              52770,
+              52776,
+              52778,
+              52789,
+              52790
+            ],
+            "type": "number"
+          },
+          "cust_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Altrincham",
+              "Bradford",
+              "Krefeld",
+              "Lakeside",
+              "Wakefield"
+            ],
+            "type": "string"
+          },
+          "cust_city_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              51061,
+              51212,
+              51738,
+              51783,
+              52493
+            ],
+            "type": "number"
+          },
+          "cust_credit_limit": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1500,
+              3000,
+              7000,
+              9000,
+              10000
+            ],
+            "type": "number"
+          },
+          "cust_eff_from": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-01-01"
+            ],
+            "type": "string"
+          },
+          "cust_eff_to": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "cust_email": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Eubank@company.example.com",
+              "Kish@company.example.com",
+              "Polk@company.example.com",
+              "Stocks@company.example.com",
+              "Zhang@company.example.com"
+            ],
+            "type": "string"
+          },
+          "cust_first_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Deanna",
+              "Eva",
+              "Marvin",
+              "Radley",
+              "Ruford"
+            ],
+            "type": "string"
+          },
+          "cust_gender": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "F",
+              "M"
+            ],
+            "type": "string"
+          },
+          "cust_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2542,
+              2922,
+              4669,
+              18817,
+              43909
+            ],
+            "type": "number"
+          },
+          "cust_income_level": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A: Below 30,000",
+              "C: 50,000 - 69,999",
+              "D: 70,000 - 89,999",
+              "E: 90,000 - 109,999",
+              "F: 110,000 - 129,999"
+            ],
+            "type": "string"
+          },
+          "cust_last_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Eubank",
+              "Kish",
+              "Polk",
+              "Stocks",
+              "Zhang"
+            ],
+            "type": "string"
+          },
+          "cust_main_phone_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "153-120-1682",
+              "173-178-1661",
+              "326-673-8943",
+              "422-695-4586",
+              "616-555-3895"
+            ],
+            "type": "string"
+          },
+          "cust_marital_status": {
+            "#docs": [
+              318,
+              682
+            ],
+            "%docs": [
+              31.8,
+              68.19
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "divorced",
+                "married",
+                "never married",
+                "single",
+                "widowed"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "cust_postal_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "50385",
+              "51527",
+              "74800",
+              "79889",
+              "92070"
+            ],
+            "type": "string"
+          },
+          "cust_src_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "cust_state_province": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "England - Greater Manchester",
+              "England - West Yorkshire",
+              "Nordrhein-Westfalen",
+              "OR",
+              "SC"
+            ],
+            "type": "string"
+          },
+          "cust_state_province_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              52590,
+              52594,
+              52684,
+              52690,
+              52722
+            ],
+            "type": "number"
+          },
+          "cust_street_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "117 North Alexander Avenue",
+              "37 East Ontario Street",
+              "37 West Anson Street",
+              "67 West Vigo Avenue",
+              "7 South Calhoun Circle"
+            ],
+            "type": "string"
+          },
+          "cust_total": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Customer total"
+            ],
+            "type": "string"
+          },
+          "cust_total_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              52772
+            ],
+            "type": "number"
+          },
+          "cust_valid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A",
+              "I"
+            ],
+            "type": "string"
+          },
+          "cust_year_of_birth": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1951,
+              1968,
+              1977,
+              1980,
+              1988
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customers::18816",
+                  "customers::2541",
+                  "customers::2921",
+                  "customers::43908",
+                  "customers::4668"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customers::18816"
+              },
+              {
+                "id": "customers::2541"
+              },
+              {
+                "id": "customers::2921"
+              },
+              {
+                "id": "customers::43908"
+              },
+              {
+                "id": "customers::4668"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_id": 52790,
+      "cust_city": "Noma",
+      "cust_city_id": 51985,
+      "cust_credit_limit": 9000,
+      "cust_eff_from": "2019-01-01",
+      "cust_eff_to": null,
+      "cust_email": "Lanston@company.example.com",
+      "cust_first_name": "Pam",
+      "cust_gender": "F",
+      "cust_id": 1015,
+      "cust_income_level": "L: 300,000 and above",
+      "cust_last_name": "Lanston",
+      "cust_main_phone_number": "272-312-8136",
+      "cust_marital_status": "married",
+      "cust_postal_code": "48346",
+      "cust_src_id": null,
+      "cust_state_province": "FL",
+      "cust_state_province_id": 52595,
+      "cust_street_address": "37 Colfax Street",
+      "cust_total": "Customer total",
+      "cust_total_id": 52772,
+      "cust_valid": "A",
+      "cust_year_of_birth": 1989
+    },
+    {
+      "country_id": 52770,
+      "cust_city": "Bergen op Zoom",
+      "cust_city_id": 51181,
+      "cust_credit_limit": 9000,
+      "cust_eff_from": "2019-01-01",
+      "cust_eff_to": null,
+      "cust_email": "Knalls@company.example.com",
+      "cust_first_name": "Tallula",
+      "cust_gender": "F",
+      "cust_id": 10153,
+      "cust_income_level": "G: 130,000 - 149,999",
+      "cust_last_name": "Knalls",
+      "cust_main_phone_number": "611-110-1597",
+      "cust_marital_status": null,
+      "cust_postal_code": "33866",
+      "cust_src_id": null,
+      "cust_state_province": "Noord-Brabant",
+      "cust_state_province_id": 52682,
+      "cust_street_address": "47 South Dewey Road",
+      "cust_total": "Customer total",
+      "cust_total_id": 52772,
+      "cust_valid": "I",
+      "cust_year_of_birth": 1954
+    },
+    {
+      "country_id": 52790,
+      "cust_city": "Montara",
+      "cust_city_id": 51919,
+      "cust_credit_limit": 5000,
+      "cust_eff_from": "2019-01-01",
+      "cust_eff_to": null,
+      "cust_email": "Eppling@company.example.com",
+      "cust_first_name": "Tesia",
+      "cust_gender": "F",
+      "cust_id": 10167,
+      "cust_income_level": "B: 30,000 - 49,999",
+      "cust_last_name": "Eppling",
+      "cust_main_phone_number": "617-689-8862",
+      "cust_marital_status": "married",
+      "cust_postal_code": "55787",
+      "cust_src_id": null,
+      "cust_state_province": "CA",
+      "cust_state_province_id": 52567,
+      "cust_street_address": "47 South Dooly Road",
+      "cust_total": "Customer total",
+      "cust_total_id": 52772,
+      "cust_valid": "A",
+      "cust_year_of_birth": 1954
+    },
+    {
+      "country_id": 52776,
+      "cust_city": "Erfurt",
+      "cust_city_id": 51455,
+      "cust_credit_limit": 3000,
+      "cust_eff_from": "2019-01-01",
+      "cust_eff_to": null,
+      "cust_email": "radburn.rodgers@company2.example.com",
+      "cust_first_name": "Radburn",
+      "cust_gender": "M",
+      "cust_id": 1021,
+      "cust_income_level": "C: 50,000 - 69,999",
+      "cust_last_name": "Rodgers",
+      "cust_main_phone_number": "(472) 391-1077",
+      "cust_marital_status": "widowed",
+      "cust_postal_code": "73872",
+      "cust_src_id": null,
+      "cust_state_province": "Thueringen",
+      "cust_state_province_id": 52746,
+      "cust_street_address": "6750 Garrisoned Street",
+      "cust_total": "Customer total",
+      "cust_total_id": 52772,
+      "cust_valid": "I",
+      "cust_year_of_birth": 1980
+    },
+    {
+      "country_id": 52776,
+      "cust_city": "Heilbronn",
+      "cust_city_id": 51656,
+      "cust_credit_limit": 1500,
+      "cust_eff_from": "2019-01-01",
+      "cust_eff_to": null,
+      "cust_email": "Nappier@company.example.com",
+      "cust_first_name": "Trevor",
+      "cust_gender": "M",
+      "cust_id": 10218,
+      "cust_income_level": "A: Below 30,000",
+      "cust_last_name": "Nappier",
+      "cust_main_phone_number": "262-460-6392",
+      "cust_marital_status": "single",
+      "cust_postal_code": "57929",
+      "cust_src_id": null,
+      "cust_state_province": "Baden-Wuerttemberg",
+      "cust_state_province_id": 52559,
+      "cust_street_address": "47 South Garden Road",
+      "cust_total": "Customer total",
+      "cust_total_id": 52772,
+      "cust_valid": "I",
+      "cust_year_of_birth": 1980
+    }
+  ]
+}

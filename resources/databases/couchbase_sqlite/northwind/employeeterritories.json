@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 49,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "employeeid": {
+            "#docs": 49,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              4,
+              6,
+              9
+            ],
+            "type": "number"
+          },
+          "territoryid": {
+            "#docs": 49,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "06897",
+              "19713",
+              "31406",
+              "48084",
+              "85251"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 49,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 49,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "employeeterritories::0",
+                  "employeeterritories::1",
+                  "employeeterritories::10",
+                  "employeeterritories::24",
+                  "employeeterritories::45"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "employeeterritories::0"
+              },
+              {
+                "id": "employeeterritories::1"
+              },
+              {
+                "id": "employeeterritories::10"
+              },
+              {
+                "id": "employeeterritories::24"
+              },
+              {
+                "id": "employeeterritories::45"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "employeeid": 9,
+      "territoryid": "48084"
+    },
+    {
+      "employeeid": 1,
+      "territoryid": "19713"
+    },
+    {
+      "employeeid": 3,
+      "territoryid": "30346"
+    },
+    {
+      "employeeid": 4,
+      "territoryid": "27403"
+    },
+    {
+      "employeeid": 5,
+      "territoryid": "10038"
+    }
+  ]
+}

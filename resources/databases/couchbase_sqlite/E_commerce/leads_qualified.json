@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "first_contact_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-11-09",
+              "2017-12-26",
+              "2018-01-16",
+              "2018-03-01",
+              "2018-03-03"
+            ],
+            "type": "string"
+          },
+          "landing_page_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "22c29808c4f815213303f893303060...",
+              "313edefdee4adcd34e8cbec1854ba5...",
+              "40dec9f3d5259a3d2dbcdab2114fae...",
+              "88740e65d5d6b056e0cda098e1ea63...",
+              "b6cd08ac77c501fd6857f7916d2c24..."
+            ],
+            "type": "string"
+          },
+          "mql_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "5738ac7801a7ea5896a95bba26b30c...",
+              "b128623086957955b92331ca412595...",
+              "bf7526b5d27b25b06b99a95e1e690f...",
+              "cf685b623ec061901728d5f731b765...",
+              "d334c7dfa96b5fd5cc4f23e76e8b41..."
+            ],
+            "type": "string"
+          },
+          "origin": {
+            "#docs": [
+              3,
+              997
+            ],
+            "%docs": [
+              0.3,
+              99.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "direct_traffic",
+                "email",
+                "paid_search",
+                "social",
+                "unknown"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "leads_qualified::1390",
+                  "leads_qualified::1882",
+                  "leads_qualified::2348",
+                  "leads_qualified::2842",
+                  "leads_qualified::2876"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "leads_qualified::1390"
+              },
+              {
+                "id": "leads_qualified::1882"
+              },
+              {
+                "id": "leads_qualified::2348"
+              },
+              {
+                "id": "leads_qualified::2842"
+              },
+              {
+                "id": "leads_qualified::2876"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "first_contact_date": "2018-01-27",
+      "landing_page_id": "22c29808c4f815213303f8933030604c",
+      "mql_id": "e909f4555009667712db532a9b58f118",
+      "origin": "organic_search"
+    },
+    {
+      "first_contact_date": "2018-01-12",
+      "landing_page_id": "ce1a65abd0973638f1c887a6efcfa82d",
+      "mql_id": "d00ee48c45cc306b2b1db3385024a6b6",
+      "origin": "organic_search"
+    },
+    {
+      "first_contact_date": "2017-10-24",
+      "landing_page_id": "f017be4dbf86243af5c1ebed0cff36a2",
+      "mql_id": "35f27037d233966a4a849da1e3123cb9",
+      "origin": "organic_search"
+    },
+    {
+      "first_contact_date": "2018-04-27",
+      "landing_page_id": "22c29808c4f815213303f8933030604c",
+      "mql_id": "5874f1b550c0d4cf4a1774b46b8d5398",
+      "origin": "paid_search"
+    },
+    {
+      "first_contact_date": "2017-09-21",
+      "landing_page_id": "c2f7f172d3275d27cba772ab70ac3052",
+      "mql_id": "5b92e4945eb3a04990671a4da604ff17",
+      "origin": "organic_search"
+    }
+  ]
+}

@@ -1,0 +1,1902 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`bicyclist_killed_count` = 0, `not_private_property` = 1",
+        "properties": {
+          "alcohol_involved": {
+            "#docs": [
+              996,
+              4
+            ],
+            "%docs": [
+              99.6,
+              0.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "beat_number": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "014",
+                "063",
+                "12A31",
+                "2A12",
+                "4T43"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "beat_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "chp county roadarea",
+              "chp county roadline",
+              "chp state highway",
+              "not chp",
+              "schoolbus on city roadway"
+            ],
+            "type": "string"
+          },
+          "bicycle_collision": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "bicyclist_injured_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              3
+            ],
+            "type": "number"
+          },
+          "bicyclist_killed_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "caltrans_county": {
+            "#docs": [
+              986,
+              14
+            ],
+            "%docs": [
+              98.6,
+              1.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "alameda",
+                "los angeles",
+                "san diego",
+                "san francisco",
+                "tulare"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "caltrans_district": {
+            "#docs": [
+              986,
+              14
+            ],
+            "%docs": [
+              98.6,
+              1.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                4,
+                6,
+                7,
+                11,
+                12
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "case_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1581089,
+              3256291,
+              5122172,
+              8586182,
+              9073300
+            ],
+            "type": "number"
+          },
+          "chp_beat_class": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "chp other",
+                "chp primary",
+                "not chp"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "chp_beat_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "county road line",
+              "interstate",
+              "not chp",
+              "state route",
+              "us highway"
+            ],
+            "type": "string"
+          },
+          "chp_road_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "0.0",
+              "1",
+              "5",
+              "6"
+            ],
+            "type": "string"
+          },
+          "chp_shift": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0600 thru 1359",
+              "1400 thru 2159",
+              "2200 thru 0559",
+              "chp not stated",
+              "not chp"
+            ],
+            "type": "string"
+          },
+          "chp_vehicle_type_at_fault": {
+            "#docs": [
+              12,
+              988
+            ],
+            "%docs": [
+              1.2,
+              98.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "mini-vans",
+                "motorcycle",
+                "passenger car, station",
+                "pickups & panels",
+                "unknown hit and run vehicle in..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "city_division_lapd": {
+            "#docs": [
+              14,
+              986
+            ],
+            "%docs": [
+              1.4,
+              98.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "B",
+                "C",
+                "K",
+                "M",
+                "Q"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "collision_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2004-08-12",
+              "2007-07-06",
+              "2011-03-08",
+              "2018-02-07",
+              "2020-05-05"
+            ],
+            "type": "string"
+          },
+          "collision_severity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "fatal",
+              "other injury",
+              "pain",
+              "property damage only",
+              "severe injury"
+            ],
+            "type": "string"
+          },
+          "collision_time": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "11:30:00",
+                "12:12:00",
+                "14:10:00",
+                "15:15:00",
+                "22:05:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "complaint_of_pain_injury_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "control_device": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "functioning",
+                "none",
+                "not functioning"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "county_city_location": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              111,
+              1942,
+              3711,
+              3801,
+              5400
+            ],
+            "type": "number"
+          },
+          "county_location": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "alameda",
+              "los angeles",
+              "san diego",
+              "san francisco",
+              "tulare"
+            ],
+            "type": "string"
+          },
+          "direction": {
+            "#docs": [
+              20,
+              980
+            ],
+            "%docs": [
+              2,
+              98
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "east",
+                "north",
+                "south",
+                "west"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "distance": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              25,
+              50,
+              160,
+              200,
+              300
+            ],
+            "type": "number"
+          },
+          "hit_and_run": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "felony",
+              "misdemeanor",
+              "not hit and run"
+            ],
+            "type": "string"
+          },
+          "injured_victims": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "intersection": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "jurisdiction": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1942,
+                9335,
+                9390,
+                9565,
+                9645
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "killed_victims": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "latitude": {
+            "#docs": [
+              897,
+              103
+            ],
+            "%docs": [
+              89.7,
+              10.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                34.06588,
+                34.10157,
+                34.99205,
+                37.83304,
+                39.20657
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "lighting": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "dark with no street lights",
+                "dark with street lights",
+                "dark with street lights not fu...",
+                "daylight",
+                "dusk or dawn"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "location_type": {
+            "#docs": [
+              986,
+              14
+            ],
+            "%docs": [
+              98.6,
+              1.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "highway"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "longitude": {
+            "#docs": [
+              897,
+              103
+            ],
+            "%docs": [
+              89.7,
+              10.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -122.48146,
+                -121.04089,
+                -118.30503,
+                -118.20294,
+                -118.01725
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "motor_vehicle_involved_with": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "fixed object",
+                "non-collision",
+                "other motor vehicle",
+                "parked motor vehicle",
+                "pedestrian"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "motorcycle_collision": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "motorcyclist_injured_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "motorcyclist_killed_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "not_private_property": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "officer_id": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "018477",
+                "16914",
+                "30810",
+                "33950",
+                "42836"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "other_visible_injury_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "party_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "pcf_violation": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                21460,
+                21658,
+                22350,
+                23114,
+                29004
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "pcf_violation_category": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "other equipment",
+                "other hazardous violation",
+                "speeding",
+                "unsafe lane change",
+                "wrong side of road"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pcf_violation_code": {
+            "#docs": [
+              983,
+              17
+            ],
+            "%docs": [
+              98.3,
+              1.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "vehicle"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pcf_violation_subsection": {
+            "#docs": [
+              986,
+              14
+            ],
+            "%docs": [
+              98.6,
+              1.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pedestrian_action": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "crossing in intersection cross...",
+                "crossing not in crosswalk",
+                "in road",
+                "no pedestrian involved",
+                "not in road"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pedestrian_collision": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "pedestrian_injured_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "pedestrian_killed_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "population": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "100000 to 250000",
+              "25000 to 50000",
+              "50000 to 100000",
+              ">250000",
+              "unincorporated"
+            ],
+            "type": "string"
+          },
+          "postmile": {
+            "#docs": [
+              986,
+              14
+            ],
+            "%docs": [
+              98.6,
+              1.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                3.31,
+                3.47,
+                3.51,
+                20.82,
+                31.61
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "postmile_prefix": {
+            "#docs": [
+              983,
+              17
+            ],
+            "%docs": [
+              98.3,
+              1.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "B",
+                "R"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "primary_collision_factor": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "fell asleep",
+                "other improper driving",
+                "other than driver",
+                "unknown",
+                "vehicle code violation"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "primary_ramp": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "TO"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "primary_road": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ALGER ST",
+              "CRENSHAW BL",
+              "RT 101",
+              "RT 405",
+              "SILVER LAKE BL"
+            ],
+            "type": "string"
+          },
+          "process_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2004-11-03",
+              "2007-12-20",
+              "2012-08-15",
+              "2018-05-15",
+              "2020-08-11"
+            ],
+            "type": "string"
+          },
+          "ramp_intersection": {
+            "#docs": [
+              983,
+              17
+            ],
+            "%docs": [
+              98.3,
+              1.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "highway",
+                "mid-ramp"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "reporting_district": {
+            "#docs": [
+              14,
+              986
+            ],
+            "%docs": [
+              1.4,
+              98.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0215",
+                "0333",
+                "1102",
+                "1323",
+                "1345"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "road_condition_1": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "construction",
+                "normal",
+                "obstruction",
+                "other",
+                "reduced width"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "road_condition_2": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "normal"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "road_surface": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "dry",
+                "slippery",
+                "snowy",
+                "wet"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "route_suffix": {
+            "#docs": [
+              983,
+              17
+            ],
+            "%docs": [
+              98.3,
+              1.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "B"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "secondary_ramp": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "westbound off-ramp"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "secondary_road": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "23RD ST",
+              "EXPOSITION BL",
+              "GOODWIN AV",
+              "LONDON ST",
+              "WILSHIRE BL"
+            ],
+            "type": "string"
+          },
+          "severe_injury_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "side_of_highway": {
+            "#docs": [
+              986,
+              14
+            ],
+            "%docs": [
+              98.6,
+              1.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "northbound",
+                "southbound",
+                "westbound"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "special_condition": {
+            "#docs": [
+              17,
+              983
+            ],
+            "%docs": [
+              1.7,
+              98.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "state_highway_indicator": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "state_route": {
+            "#docs": [
+              986,
+              14
+            ],
+            "%docs": [
+              98.6,
+              1.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                101,
+                110,
+                163,
+                405,
+                580
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "statewide_vehicle_type_at_fault": {
+            "#docs": [
+              986,
+              14
+            ],
+            "%docs": [
+              98.6,
+              1.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "motorcycle or scooter",
+                "other vehicle",
+                "passenger car",
+                "pickup or panel truck"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tow_away": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "truck_collision": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "type_of_collision": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "head-on",
+                "hit object",
+                "other",
+                "rear end",
+                "sideswipe"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "weather_1": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "clear",
+                "cloudy",
+                "fog",
+                "raining"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "weather_2": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "raining"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "collisions::14233",
+                  "collisions::18752",
+                  "collisions::2314",
+                  "collisions::77493",
+                  "collisions::8581"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "collisions::14233"
+              },
+              {
+                "id": "collisions::18752"
+              },
+              {
+                "id": "collisions::2314"
+              },
+              {
+                "id": "collisions::77493"
+              },
+              {
+                "id": "collisions::8581"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "alcohol_involved": null,
+      "beat_number": "070",
+      "beat_type": "chp county roadarea",
+      "bicycle_collision": 0,
+      "bicyclist_injured_count": 0,
+      "bicyclist_killed_count": 0,
+      "caltrans_county": null,
+      "caltrans_district": null,
+      "case_id": 2226451,
+      "chp_beat_class": "chp other",
+      "chp_beat_type": "county road area",
+      "chp_road_type": "0",
+      "chp_shift": "1400 thru 2159",
+      "chp_vehicle_type_at_fault": "pickups & panels",
+      "city_division_lapd": null,
+      "collision_date": "2005-08-09",
+      "collision_severity": "property damage only",
+      "collision_time": "21:30:00",
+      "complaint_of_pain_injury_count": 0,
+      "control_device": "none",
+      "county_city_location": 3400,
+      "county_location": "sacramento",
+      "direction": "east",
+      "distance": 145,
+      "hit_and_run": "misdemeanor",
+      "injured_victims": 0,
+      "intersection": 0,
+      "jurisdiction": 9252,
+      "killed_victims": 0,
+      "latitude": null,
+      "lighting": "dark with street lights",
+      "location_type": null,
+      "longitude": null,
+      "motor_vehicle_involved_with": "other motor vehicle",
+      "motorcycle_collision": 0,
+      "motorcyclist_injured_count": 0,
+      "motorcyclist_killed_count": 0,
+      "not_private_property": 1,
+      "officer_id": "14956",
+      "other_visible_injury_count": 0,
+      "party_count": 2,
+      "pcf_violation": 21804,
+      "pcf_violation_category": "automobile right of way",
+      "pcf_violation_code": null,
+      "pcf_violation_subsection": "A",
+      "pedestrian_action": "no pedestrian involved",
+      "pedestrian_collision": 0,
+      "pedestrian_injured_count": 0,
+      "pedestrian_killed_count": 0,
+      "population": "unincorporated",
+      "postmile": null,
+      "postmile_prefix": null,
+      "primary_collision_factor": "vehicle code violation",
+      "primary_ramp": null,
+      "primary_road": "ELDER CREEK RD",
+      "process_date": "2005-12-28",
+      "ramp_intersection": null,
+      "reporting_district": null,
+      "road_condition_1": "normal",
+      "road_condition_2": null,
+      "road_surface": "dry",
+      "route_suffix": null,
+      "secondary_ramp": null,
+      "secondary_road": "SOUTH WATT AV",
+      "severe_injury_count": 0,
+      "side_of_highway": null,
+      "special_condition": 0,
+      "state_highway_indicator": 0,
+      "state_route": null,
+      "statewide_vehicle_type_at_fault": "pickup or panel truck",
+      "tow_away": 1,
+      "truck_collision": 0,
+      "type_of_collision": "broadside",
+      "weather_1": "clear",
+      "weather_2": null
+    },
+    {
+      "alcohol_involved": null,
+      "beat_number": "060",
+      "beat_type": "chp state highway",
+      "bicycle_collision": 0,
+      "bicyclist_injured_count": 0,
+      "bicyclist_killed_count": 0,
+      "caltrans_county": "los angeles",
+      "caltrans_district": 7,
+      "case_id": 3046448,
+      "chp_beat_class": "chp other",
+      "chp_beat_type": "interstate",
+      "chp_road_type": "1",
+      "chp_shift": "1400 thru 2159",
+      "chp_vehicle_type_at_fault": "passenger car, station",
+      "city_division_lapd": null,
+      "collision_date": "2007-02-13",
+      "collision_severity": "property damage only",
+      "collision_time": "17:00:00",
+      "complaint_of_pain_injury_count": 0,
+      "control_device": "none",
+      "county_city_location": 1942,
+      "county_location": "los angeles",
+      "direction": "west",
+      "distance": 100,
+      "hit_and_run": "not hit and run",
+      "injured_victims": 0,
+      "intersection": 0,
+      "jurisdiction": 9590,
+      "killed_victims": 0,
+      "latitude": null,
+      "lighting": "daylight",
+      "location_type": "highway",
+      "longitude": null,
+      "motor_vehicle_involved_with": "other motor vehicle",
+      "motorcycle_collision": 0,
+      "motorcyclist_injured_count": 0,
+      "motorcyclist_killed_count": 0,
+      "not_private_property": 1,
+      "officer_id": "11420",
+      "other_visible_injury_count": 0,
+      "party_count": 3,
+      "pcf_violation": 22350,
+      "pcf_violation_category": "speeding",
+      "pcf_violation_code": null,
+      "pcf_violation_subsection": null,
+      "pedestrian_action": "no pedestrian involved",
+      "pedestrian_collision": 0,
+      "pedestrian_injured_count": 0,
+      "pedestrian_killed_count": 0,
+      "population": ">250000",
+      "postmile": 13.28,
+      "postmile_prefix": "R",
+      "primary_collision_factor": "vehicle code violation",
+      "primary_ramp": null,
+      "primary_road": "RT 10",
+      "process_date": "2007-07-03",
+      "ramp_intersection": null,
+      "reporting_district": null,
+      "road_condition_1": "normal",
+      "road_condition_2": null,
+      "road_surface": "dry",
+      "route_suffix": null,
+      "secondary_ramp": null,
+      "secondary_road": "NORMANDIE AV",
+      "severe_injury_count": 0,
+      "side_of_highway": "eastbound",
+      "special_condition": 0,
+      "state_highway_indicator": 1,
+      "state_route": 10,
+      "statewide_vehicle_type_at_fault": "passenger car",
+      "tow_away": 0,
+      "truck_collision": 0,
+      "type_of_collision": "rear end",
+      "weather_1": "cloudy",
+      "weather_2": null
+    },
+    {
+      "alcohol_involved": null,
+      "beat_number": "601",
+      "beat_type": "chp state highway",
+      "bicycle_collision": 0,
+      "bicyclist_injured_count": 0,
+      "bicyclist_killed_count": 0,
+      "caltrans_county": "los angeles",
+      "caltrans_district": 7,
+      "case_id": 4339603,
+      "chp_beat_class": "chp other",
+      "chp_beat_type": "state route",
+      "chp_road_type": "1",
+      "chp_shift": "1400 thru 2159",
+      "chp_vehicle_type_at_fault": "passenger car, station",
+      "city_division_lapd": null,
+      "collision_date": "2009-07-29",
+      "collision_severity": "property damage only",
+      "collision_time": "21:35:00",
+      "complaint_of_pain_injury_count": 0,
+      "control_device": "none",
+      "county_city_location": 1900,
+      "county_location": "los angeles",
+      "direction": "west",
+      "distance": 500,
+      "hit_and_run": "not hit and run",
+      "injured_victims": 0,
+      "intersection": 0,
+      "jurisdiction": 9550,
+      "killed_victims": 0,
+      "latitude": 33.9974,
+      "lighting": "dark with no street lights",
+      "location_type": "highway",
+      "longitude": -117.93398,
+      "motor_vehicle_involved_with": "fixed object",
+      "motorcycle_collision": 0,
+      "motorcyclist_injured_count": 0,
+      "motorcyclist_killed_count": 0,
+      "not_private_property": 1,
+      "officer_id": "17521",
+      "other_visible_injury_count": 0,
+      "party_count": 1,
+      "pcf_violation": 22107,
+      "pcf_violation_category": "improper turning",
+      "pcf_violation_code": null,
+      "pcf_violation_subsection": null,
+      "pedestrian_action": "no pedestrian involved",
+      "pedestrian_collision": 0,
+      "pedestrian_injured_count": 0,
+      "pedestrian_killed_count": 0,
+      "population": "unincorporated",
+      "postmile": 17.88,
+      "postmile_prefix": null,
+      "primary_collision_factor": "vehicle code violation",
+      "primary_ramp": null,
+      "primary_road": "RT 60",
+      "process_date": "2010-08-04",
+      "ramp_intersection": null,
+      "reporting_district": null,
+      "road_condition_1": "normal",
+      "road_condition_2": null,
+      "road_surface": "dry",
+      "route_suffix": null,
+      "secondary_ramp": null,
+      "secondary_road": "AZUSA AV",
+      "severe_injury_count": 0,
+      "side_of_highway": "eastbound",
+      "special_condition": 0,
+      "state_highway_indicator": 1,
+      "state_route": 60,
+      "statewide_vehicle_type_at_fault": "passenger car",
+      "tow_away": 1,
+      "truck_collision": 0,
+      "type_of_collision": "hit object",
+      "weather_1": "clear",
+      "weather_2": null
+    },
+    {
+      "alcohol_involved": null,
+      "beat_number": "011",
+      "beat_type": "not chp",
+      "bicycle_collision": 0,
+      "bicyclist_injured_count": 0,
+      "bicyclist_killed_count": 0,
+      "caltrans_county": null,
+      "caltrans_district": null,
+      "case_id": 6317056,
+      "chp_beat_class": "not chp",
+      "chp_beat_type": "not chp",
+      "chp_road_type": "0",
+      "chp_shift": "not chp",
+      "chp_vehicle_type_at_fault": "mini-vans",
+      "city_division_lapd": null,
+      "collision_date": "2013-12-25",
+      "collision_severity": "pain",
+      "collision_time": "06:05:00",
+      "complaint_of_pain_injury_count": 1,
+      "control_device": "functioning",
+      "county_city_location": 3009,
+      "county_location": "orange",
+      "direction": null,
+      "distance": 0,
+      "hit_and_run": "felony",
+      "injured_victims": 1,
+      "intersection": 1,
+      "jurisdiction": 3009,
+      "killed_victims": 0,
+      "latitude": null,
+      "lighting": "dark with street lights",
+      "location_type": null,
+      "longitude": null,
+      "motor_vehicle_involved_with": "fixed object",
+      "motorcycle_collision": 0,
+      "motorcyclist_injured_count": 0,
+      "motorcyclist_killed_count": 0,
+      "not_private_property": 1,
+      "officer_id": "1604",
+      "other_visible_injury_count": 0,
+      "party_count": 1,
+      "pcf_violation": 22107,
+      "pcf_violation_category": "improper turning",
+      "pcf_violation_code": null,
+      "pcf_violation_subsection": null,
+      "pedestrian_action": "no pedestrian involved",
+      "pedestrian_collision": 0,
+      "pedestrian_injured_count": 0,
+      "pedestrian_killed_count": 0,
+      "population": "100000 to 250000",
+      "postmile": null,
+      "postmile_prefix": null,
+      "primary_collision_factor": "vehicle code violation",
+      "primary_ramp": null,
+      "primary_road": "MAGNOLIA ST",
+      "process_date": "2014-05-30",
+      "ramp_intersection": null,
+      "reporting_district": "074",
+      "road_condition_1": "normal",
+      "road_condition_2": null,
+      "road_surface": "dry",
+      "route_suffix": null,
+      "secondary_ramp": null,
+      "secondary_road": "STANFORD AV",
+      "severe_injury_count": 0,
+      "side_of_highway": null,
+      "special_condition": 0,
+      "state_highway_indicator": 0,
+      "state_route": null,
+      "statewide_vehicle_type_at_fault": "passenger car",
+      "tow_away": 1,
+      "truck_collision": 0,
+      "type_of_collision": "hit object",
+      "weather_1": "clear",
+      "weather_2": null
+    },
+    {
+      "alcohol_involved": null,
+      "beat_number": "020",
+      "beat_type": "chp county roadline",
+      "bicycle_collision": 0,
+      "bicyclist_injured_count": 0,
+      "bicyclist_killed_count": 0,
+      "caltrans_county": null,
+      "caltrans_district": null,
+      "case_id": 5801406,
+      "chp_beat_class": "chp primary",
+      "chp_beat_type": "county road line",
+      "chp_road_type": "0",
+      "chp_shift": "1400 thru 2159",
+      "chp_vehicle_type_at_fault": "passenger car, station",
+      "city_division_lapd": null,
+      "collision_date": "2012-09-13",
+      "collision_severity": "other injury",
+      "collision_time": "16:10:00",
+      "complaint_of_pain_injury_count": 0,
+      "control_device": "none",
+      "county_city_location": 1200,
+      "county_location": "humboldt",
+      "direction": "east",
+      "distance": 70,
+      "hit_and_run": "not hit and run",
+      "injured_victims": 1,
+      "intersection": 0,
+      "jurisdiction": 9125,
+      "killed_victims": 0,
+      "latitude": null,
+      "lighting": "daylight",
+      "location_type": null,
+      "longitude": null,
+      "motor_vehicle_involved_with": "fixed object",
+      "motorcycle_collision": 0,
+      "motorcyclist_injured_count": 0,
+      "motorcyclist_killed_count": 0,
+      "not_private_property": 1,
+      "officer_id": "017539",
+      "other_visible_injury_count": 1,
+      "party_count": 1,
+      "pcf_violation": 22107,
+      "pcf_violation_category": "improper turning",
+      "pcf_violation_code": null,
+      "pcf_violation_subsection": null,
+      "pedestrian_action": "no pedestrian involved",
+      "pedestrian_collision": 0,
+      "pedestrian_injured_count": 0,
+      "pedestrian_killed_count": 0,
+      "population": "unincorporated",
+      "postmile": null,
+      "postmile_prefix": null,
+      "primary_collision_factor": "vehicle code violation",
+      "primary_ramp": null,
+      "primary_road": "MYRTLE AV",
+      "process_date": "2013-12-12",
+      "ramp_intersection": null,
+      "reporting_district": null,
+      "road_condition_1": "normal",
+      "road_condition_2": null,
+      "road_surface": "dry",
+      "route_suffix": null,
+      "secondary_ramp": null,
+      "secondary_road": "HALL AV",
+      "severe_injury_count": 0,
+      "side_of_highway": null,
+      "special_condition": 0,
+      "state_highway_indicator": 0,
+      "state_route": null,
+      "statewide_vehicle_type_at_fault": "passenger car",
+      "tow_away": 1,
+      "truck_collision": 0,
+      "type_of_collision": "hit object",
+      "weather_1": "clear",
+      "weather_2": null
+    }
+  ]
+}

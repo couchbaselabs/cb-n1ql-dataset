@@ -1,0 +1,133 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 236,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "EventDate": {
+            "#docs": 236,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-10",
+              "2013-01-24",
+              "2013-01-28",
+              "2013-01-29",
+              "2013-02-15"
+            ],
+            "type": "string"
+          },
+          "EventTime": {
+            "#docs": 236,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "09:30",
+              "11:00",
+              "12:45",
+              "14:35",
+              "18:15"
+            ],
+            "type": "string"
+          },
+          "EventType": {
+            "#docs": 236,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Enter",
+              "Exit"
+            ],
+            "type": "string"
+          },
+          "StaffMember": {
+            "#docs": 236,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "H",
+              "J",
+              "S",
+              "V",
+              "X"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 236,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 236,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "StaffHours::10",
+                  "StaffHours::153",
+                  "StaffHours::167",
+                  "StaffHours::216",
+                  "StaffHours::24"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "StaffHours::10"
+              },
+              {
+                "id": "StaffHours::153"
+              },
+              {
+                "id": "StaffHours::167"
+              },
+              {
+                "id": "StaffHours::216"
+              },
+              {
+                "id": "StaffHours::24"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "EventDate": "2013-01-12",
+      "EventTime": "08:15",
+      "EventType": "Enter",
+      "StaffMember": "M"
+    },
+    {
+      "EventDate": "2013-03-02",
+      "EventTime": "08:25",
+      "EventType": "Enter",
+      "StaffMember": "S"
+    },
+    {
+      "EventDate": "2013-01-11",
+      "EventTime": "09:10",
+      "EventType": "Enter",
+      "StaffMember": "K"
+    },
+    {
+      "EventDate": "2013-02-28",
+      "EventTime": "10:00",
+      "EventType": "Enter",
+      "StaffMember": "Q"
+    },
+    {
+      "EventDate": "2013-03-12",
+      "EventTime": "09:55",
+      "EventType": "Enter",
+      "StaffMember": "I"
+    }
+  ]
+}

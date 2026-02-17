@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 14,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              144,
+              145,
+              146,
+              149,
+              150
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Axel de Proef",
+              "Kurt Zollman",
+              "Laura Jensen",
+              "Lim Tok Lo",
+              "Zoe Thorston"
+            ],
+            "type": "string"
+          },
+          "supervisor_id": {
+            "#docs": [
+              1,
+              13
+            ],
+            "%docs": [
+              7.14,
+              92.85
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                142,
+                143,
+                146,
+                147,
+                151
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "title": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bulk Salesman",
+              "Forklift Operator",
+              "IT Developer",
+              "Product Director",
+              "Warehouse Manager"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 14,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "employees::2",
+                  "employees::3",
+                  "employees::4",
+                  "employees::7",
+                  "employees::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "employees::2"
+              },
+              {
+                "id": "employees::3"
+              },
+              {
+                "id": "employees::4"
+              },
+              {
+                "id": "employees::7"
+              },
+              {
+                "id": "employees::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 143,
+      "name": "Mogens Juel",
+      "supervisor_id": 147,
+      "title": "IT Manager"
+    },
+    {
+      "id": 150,
+      "name": "Laura Jensen",
+      "supervisor_id": 151,
+      "title": "Bulk Salesman"
+    },
+    {
+      "id": 149,
+      "name": "Kurt Zollman",
+      "supervisor_id": 146,
+      "title": "Forklift Operator"
+    },
+    {
+      "id": 154,
+      "name": "Simon Chang",
+      "supervisor_id": 151,
+      "title": "Retail Salesman"
+    },
+    {
+      "id": 152,
+      "name": "Evelyn Smith",
+      "supervisor_id": 146,
+      "title": "Forklift Operator"
+    }
+  ]
+}

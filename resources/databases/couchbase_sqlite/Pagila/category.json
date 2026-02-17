@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 16,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`last_update` = \"2021-03-06 15:52:00\"",
+        "properties": {
+          "category_id": {
+            "#docs": 16,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              11,
+              13,
+              14
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 16,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:52:00"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 16,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Action",
+              "Animation",
+              "Horror",
+              "New",
+              "Sci-Fi"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 16,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 16,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "category::0",
+                  "category::1",
+                  "category::10",
+                  "category::12",
+                  "category::13"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "category::0"
+              },
+              {
+                "id": "category::1"
+              },
+              {
+                "id": "category::10"
+              },
+              {
+                "id": "category::12"
+              },
+              {
+                "id": "category::13"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "category_id": 1,
+      "last_update": "2021-03-06 15:52:00",
+      "name": "Action"
+    },
+    {
+      "category_id": 14,
+      "last_update": "2021-03-06 15:52:00",
+      "name": "Sci-Fi"
+    },
+    {
+      "category_id": 10,
+      "last_update": "2021-03-06 15:52:00",
+      "name": "Games"
+    },
+    {
+      "category_id": 16,
+      "last_update": "2021-03-06 15:52:00",
+      "name": "Travel"
+    },
+    {
+      "category_id": 7,
+      "last_update": "2021-03-06 15:52:00",
+      "name": "Drama"
+    }
+  ]
+}

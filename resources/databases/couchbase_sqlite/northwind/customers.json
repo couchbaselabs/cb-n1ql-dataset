@@ -1,0 +1,304 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 91,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "address": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1900 Oak St.",
+              "23 Tsawassen Blvd.",
+              "55 Grizzly Peak Rd.",
+              "89 Chiaroscuro Rd.",
+              "Ave. 5 de Mayo Porlamar"
+            ],
+            "type": "string"
+          },
+          "city": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Butte",
+              "I. de Margarita",
+              "Portland",
+              "Tsawassen",
+              "Vancouver"
+            ],
+            "type": "string"
+          },
+          "companyname": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bottom-Dollar Markets",
+              "LINO-Delicateses",
+              "Laughing Bacchus Wine Cellars",
+              "Lonesome Pine Restaurant",
+              "The Cracker Box"
+            ],
+            "type": "string"
+          },
+          "contactname": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Elizabeth Lincoln",
+              "Felipe Izquierdo",
+              "Fran Wilson",
+              "Liu Wong",
+              "Yoshi Tannamuri"
+            ],
+            "type": "string"
+          },
+          "contacttitle": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Accounting Manager",
+              "Marketing Assistant",
+              "Marketing Manager",
+              "Owner",
+              "Sales Manager"
+            ],
+            "type": "string"
+          },
+          "country": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Brazil",
+              "Canada",
+              "Denmark",
+              "USA",
+              "Venezuela"
+            ],
+            "type": "string"
+          },
+          "customerid": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BOTTM",
+              "LAUGB",
+              "LINOD",
+              "LONEP",
+              "THECR"
+            ],
+            "type": "string"
+          },
+          "fax": {
+            "#docs": [
+              11,
+              80
+            ],
+            "%docs": [
+              12.08,
+              87.91
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "(406) 555-8083",
+                "(503) 555-9646",
+                "(604) 555-3745",
+                "(604) 555-7293",
+                "(8) 34-93-93"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "phone": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(406) 555-5834",
+              "(503) 555-9573",
+              "(604) 555-3392",
+              "(604) 555-4729",
+              "(8) 34-56-12"
+            ],
+            "type": "string"
+          },
+          "postalcode": {
+            "#docs": [
+              1,
+              90
+            ],
+            "%docs": [
+              1.09,
+              98.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "4980",
+                "59801",
+                "97219",
+                "T2F 8M4",
+                "V3F 2K1"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "region": {
+            "#docs": [
+              49,
+              42
+            ],
+            "%docs": [
+              53.84,
+              46.15
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "BC",
+                "DF",
+                "MT",
+                "Nueva Esparta",
+                "OR"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 91,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 91,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customers::41",
+                  "customers::46",
+                  "customers::47",
+                  "customers::77",
+                  "customers::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customers::41"
+              },
+              {
+                "id": "customers::46"
+              },
+              {
+                "id": "customers::47"
+              },
+              {
+                "id": "customers::77"
+              },
+              {
+                "id": "customers::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "Walserweg 21",
+      "city": "Aachen",
+      "companyname": "Drachenblut Delikatessen",
+      "contactname": "Sven Ottlieb",
+      "contacttitle": "Order Administrator",
+      "country": "Germany",
+      "customerid": "DRACD",
+      "fax": "0241-059428",
+      "phone": "0241-039123",
+      "postalcode": "52066",
+      "region": null
+    },
+    {
+      "address": "184, chauss\u00e9e de Tournai",
+      "city": "Lille",
+      "companyname": "Folies gourmandes",
+      "contactname": "Martine Ranc\u00e9",
+      "contacttitle": "Assistant Sales Agent",
+      "country": "France",
+      "customerid": "FOLIG",
+      "fax": "20.16.10.17",
+      "phone": "20.16.10.16",
+      "postalcode": "59000",
+      "region": null
+    },
+    {
+      "address": "Adenauerallee 900",
+      "city": "Stuttgart",
+      "companyname": "Die Wandernde Kuh",
+      "contactname": "Rita M\u00fcller",
+      "contacttitle": "Sales Representative",
+      "country": "Germany",
+      "customerid": "WANDK",
+      "fax": "0711-035428",
+      "phone": "0711-020361",
+      "postalcode": "70563",
+      "region": null
+    },
+    {
+      "address": "Berkeley Gardens 12  Brewery",
+      "city": "London",
+      "companyname": "Consolidated Holdings",
+      "contactname": "Elizabeth Brown",
+      "contacttitle": "Sales Representative",
+      "country": "UK",
+      "customerid": "CONSH",
+      "fax": "(171) 555-9199",
+      "phone": "(171) 555-2282",
+      "postalcode": "WX1 6LT",
+      "region": null
+    },
+    {
+      "address": "C/ Moralzarzal, 86",
+      "city": "Madrid",
+      "companyname": "FISSA Fabrica Inter. Salchichas S.A.",
+      "contactname": "Diego Roel",
+      "contacttitle": "Accounting Manager",
+      "country": "Spain",
+      "customerid": "FISSA",
+      "fax": "(91) 555 55 93",
+      "phone": "(91) 555 94 44",
+      "postalcode": "28034",
+      "region": null
+    }
+  ]
+}

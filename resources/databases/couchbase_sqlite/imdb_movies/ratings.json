@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "avg_rating": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4.5,
+              5.6,
+              5.7,
+              5.9,
+              6.2
+            ],
+            "type": "number"
+          },
+          "median_rating": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "movie_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt1458169",
+              "tt4536768",
+              "tt4547194",
+              "tt5189828",
+              "tt5503688"
+            ],
+            "type": "string"
+          },
+          "total_votes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1087,
+              5282,
+              6637,
+              24859,
+              30305
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ratings::1650",
+                  "ratings::1664",
+                  "ratings::2337",
+                  "ratings::2690",
+                  "ratings::341"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ratings::1650"
+              },
+              {
+                "id": "ratings::1664"
+              },
+              {
+                "id": "ratings::2337"
+              },
+              {
+                "id": "ratings::2690"
+              },
+              {
+                "id": "ratings::341"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "avg_rating": 2.8,
+      "median_rating": 3,
+      "movie_id": "tt3769038",
+      "total_votes": 133
+    },
+    {
+      "avg_rating": 8,
+      "median_rating": 8,
+      "movie_id": "tt3783958",
+      "total_votes": 453695
+    },
+    {
+      "avg_rating": 7,
+      "median_rating": 8,
+      "movie_id": "tt3815424",
+      "total_votes": 419
+    },
+    {
+      "avg_rating": 6.3,
+      "median_rating": 7,
+      "movie_id": "tt3860916",
+      "total_votes": 29727
+    },
+    {
+      "avg_rating": 6.3,
+      "median_rating": 7,
+      "movie_id": "tt3861390",
+      "total_votes": 49317
+    }
+  ]
+}

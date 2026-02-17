@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 15,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`symbol` = \"BEER\"",
+        "properties": {
+          "day": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04-01",
+              "2019-04-05",
+              "2019-04-08",
+              "2019-04-11",
+              "2019-04-15"
+            ],
+            "type": "string"
+          },
+          "price": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14.4,
+              14.8,
+              14.9,
+              15,
+              15.6
+            ],
+            "type": "number"
+          },
+          "symbol": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BEER"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 15,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ticker::0",
+                  "ticker::10",
+                  "ticker::4",
+                  "ticker::5",
+                  "ticker::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ticker::0"
+              },
+              {
+                "id": "ticker::10"
+              },
+              {
+                "id": "ticker::4"
+              },
+              {
+                "id": "ticker::5"
+              },
+              {
+                "id": "ticker::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "day": "2019-04-18",
+      "price": 14.3,
+      "symbol": "BEER"
+    },
+    {
+      "day": "2019-04-11",
+      "price": 14.4,
+      "symbol": "BEER"
+    },
+    {
+      "day": "2019-04-08",
+      "price": 14.8,
+      "symbol": "BEER"
+    },
+    {
+      "day": "2019-04-16",
+      "price": 13.7,
+      "symbol": "BEER"
+    },
+    {
+      "day": "2019-04-09",
+      "price": 14.8,
+      "symbol": "BEER"
+    }
+  ]
+}

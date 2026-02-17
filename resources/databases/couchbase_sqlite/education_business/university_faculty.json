@@ -1,0 +1,265 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 8,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`FacState` = \"WA\"",
+        "properties": {
+          "FacCity": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BELLEVUE",
+              "BOTHELL",
+              "REDMOND",
+              "SEATTLE"
+            ],
+            "type": "string"
+          },
+          "FacDept": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CS",
+              "FIN",
+              "MS"
+            ],
+            "type": "string"
+          },
+          "FacFirstName": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CRISTOPHER",
+              "JANE",
+              "JOHN",
+              "JULIA",
+              "LEONARD"
+            ],
+            "type": "string"
+          },
+          "FacHireDate": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1996-05-01",
+              "1997-04-10",
+              "2001-03-01",
+              "2002-03-15",
+              "2005-06-15"
+            ],
+            "type": "string"
+          },
+          "FacLastName": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "COLAN",
+              "DOE",
+              "FIBON",
+              "MILLS",
+              "VINCE"
+            ],
+            "type": "string"
+          },
+          "FacNo": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              98765432,
+              123456789,
+              654321098,
+              876543210,
+              987654321
+            ],
+            "type": "number"
+          },
+          "FacRank": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ASSC",
+              "ASST",
+              "PROF"
+            ],
+            "type": "string"
+          },
+          "FacSalary": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              35000,
+              40000,
+              55000,
+              70000,
+              75000
+            ],
+            "type": "number"
+          },
+          "FacState": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WA"
+            ],
+            "type": "string"
+          },
+          "FacSupervisor": {
+            "#docs": [
+              2,
+              6
+            ],
+            "%docs": [
+              25,
+              75
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                543210987,
+                654321098,
+                765432109
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "FacZipCode": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "98111-1234",
+              "98111-9921",
+              "98114-1332",
+              "98114-9954",
+              "98121-0094"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 8,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "university_faculty::0",
+                  "university_faculty::2",
+                  "university_faculty::4",
+                  "university_faculty::5",
+                  "university_faculty::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "university_faculty::0"
+              },
+              {
+                "id": "university_faculty::2"
+              },
+              {
+                "id": "university_faculty::4"
+              },
+              {
+                "id": "university_faculty::5"
+              },
+              {
+                "id": "university_faculty::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "FacCity": "REDMOND",
+      "FacDept": "CS",
+      "FacFirstName": "JANE",
+      "FacHireDate": "2007-08-20",
+      "FacLastName": "SMITH",
+      "FacNo": 987654322,
+      "FacRank": "PROF",
+      "FacSalary": 110000,
+      "FacState": "WA",
+      "FacSupervisor": 543210987,
+      "FacZipCode": "98052-1234"
+    },
+    {
+      "FacCity": "SEATTLE",
+      "FacDept": "CS",
+      "FacFirstName": "JOHN",
+      "FacHireDate": "2005-06-15",
+      "FacLastName": "DOE",
+      "FacNo": 123456789,
+      "FacRank": "ASST",
+      "FacSalary": 55000,
+      "FacState": "WA",
+      "FacSupervisor": 543210987,
+      "FacZipCode": "98111-1234"
+    },
+    {
+      "FacCity": "SEATTLE",
+      "FacDept": "FIN",
+      "FacFirstName": "JULIA",
+      "FacHireDate": "2002-03-15",
+      "FacLastName": "MILLS",
+      "FacNo": 987654321,
+      "FacRank": "ASSC",
+      "FacSalary": 75000,
+      "FacState": "WA",
+      "FacSupervisor": 765432109,
+      "FacZipCode": "98114-9954"
+    },
+    {
+      "FacCity": "BELLEVUE",
+      "FacDept": "FIN",
+      "FacFirstName": "NICKI",
+      "FacHireDate": "1999-04-11",
+      "FacLastName": "MACON",
+      "FacNo": 765432109,
+      "FacRank": "PROF",
+      "FacSalary": 65000,
+      "FacState": "WA",
+      "FacSupervisor": null,
+      "FacZipCode": "98015-9945"
+    },
+    {
+      "FacCity": "BOTHELL",
+      "FacDept": "MS",
+      "FacFirstName": "VICTORIA",
+      "FacHireDate": "1998-04-15",
+      "FacLastName": "EMMANUEL",
+      "FacNo": 543210987,
+      "FacRank": "PROF",
+      "FacSalary": 120000,
+      "FacState": "WA",
+      "FacSupervisor": null,
+      "FacZipCode": "98011-2242"
+    }
+  ]
+}

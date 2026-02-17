@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 559,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "LID": {
+            "#docs": 559,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              17,
+              23,
+              292,
+              302,
+              336
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 559,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bangalore, Karnataka, India",
+              "Bara Hall Park, Hayes, Middles...",
+              "Burghley House, Stamford, Linc...",
+              "Mangalore, Karnataka, India",
+              "Pondicherry, India"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 559,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              17,
+              23,
+              292,
+              302,
+              336
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 559,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 559,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Location::17",
+                  "Location::23",
+                  "Location::292",
+                  "Location::302",
+                  "Location::336"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Location::17"
+              },
+              {
+                "id": "Location::23"
+              },
+              {
+                "id": "Location::292"
+              },
+              {
+                "id": "Location::302"
+              },
+              {
+                "id": "Location::336"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LID": 19,
+      "Name": "Lincoln Memorial, National Mall, Washington, District of Columbia, USA",
+      "index": 19
+    },
+    {
+      "LID": 284,
+      "Name": "Uttarakhand, India",
+      "index": 284
+    },
+    {
+      "LID": 314,
+      "Name": "Gwalior, Madhya Pradesh, India",
+      "index": 314
+    },
+    {
+      "LID": 320,
+      "Name": "Gateshead, Tyne & Wear, England, UK",
+      "index": 320
+    },
+    {
+      "LID": 338,
+      "Name": "Wai, Maharashtra, India",
+      "index": 338
+    }
+  ]
+}

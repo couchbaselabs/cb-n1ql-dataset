@@ -1,0 +1,169 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 468,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "batting_hand": {
+            "#docs": 468,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Left-hand bat",
+              "Right-hand bat"
+            ],
+            "type": "string"
+          },
+          "bowling_skill": {
+            "#docs": 468,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Left-arm fast-medium",
+              "Right-arm fast",
+              "Right-arm fast-medium",
+              "Right-arm medium",
+              "Right-arm medium-fast"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 468,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Australia",
+              "India",
+              "New Zealand",
+              "South Africa",
+              "Sri Lanka"
+            ],
+            "type": "string"
+          },
+          "dob": {
+            "#docs": 468,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1984-06-22",
+              "1984-08-25",
+              "1990-04-29",
+              "1990-09-28",
+              "1992-05-03"
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 468,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              282,
+              300,
+              310,
+              312,
+              326
+            ],
+            "type": "number"
+          },
+          "player_name": {
+            "#docs": 468,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DAJ Bracewell",
+              "JE Taylor",
+              "JP Faulkner",
+              "V Pratap Singh",
+              "Y Gnaneswara Rao"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 468,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 468,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "player::280",
+                  "player::298",
+                  "player::308",
+                  "player::310",
+                  "player::324"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "player::280"
+              },
+              {
+                "id": "player::298"
+              },
+              {
+                "id": "player::308"
+              },
+              {
+                "id": "player::310"
+              },
+              {
+                "id": "player::324"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "batting_hand": "Right-hand bat",
+      "bowling_skill": "Left-arm fast-medium",
+      "country_name": "India",
+      "dob": "1978-10-07",
+      "player_id": 15,
+      "player_name": "Z Khan"
+    },
+    {
+      "batting_hand": "Right-hand bat",
+      "bowling_skill": "Right-arm fast-medium",
+      "country_name": "Australia",
+      "dob": "1981-06-05",
+      "player_id": 198,
+      "player_name": "AB McDonald"
+    },
+    {
+      "batting_hand": "Left-hand bat",
+      "bowling_skill": "Right-arm offbreak",
+      "country_name": "India",
+      "dob": "1986-11-27",
+      "player_id": 21,
+      "player_name": "SK Raina"
+    },
+    {
+      "batting_hand": "Right-hand bat",
+      "bowling_skill": "Right-arm medium",
+      "country_name": "India",
+      "dob": "1993-07-18",
+      "player_id": 345,
+      "player_name": "M Vohra"
+    },
+    {
+      "batting_hand": "Left-hand bat",
+      "bowling_skill": "Right-arm medium",
+      "country_name": "Australia",
+      "dob": "1987-03-11",
+      "player_id": 379,
+      "player_name": "BR Dunk"
+    }
+  ]
+}

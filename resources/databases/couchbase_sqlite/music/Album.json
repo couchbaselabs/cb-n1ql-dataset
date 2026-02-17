@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 347,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "AlbumId": {
+            "#docs": 347,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              194,
+              293,
+              303,
+              337,
+              347
+            ],
+            "type": "number"
+          },
+          "ArtistId": {
+            "#docs": 347,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              127,
+              227,
+              237,
+              266,
+              275
+            ],
+            "type": "number"
+          },
+          "Title": {
+            "#docs": 347,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "By The Way",
+              "Koyaanisqatsi (Soundtrack from...",
+              "Pavarotti's Opera Made Easy",
+              "Sibelius: Finlandia",
+              "Szymanowski: Piano Works, Vol...."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 347,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 347,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Album::193",
+                  "Album::292",
+                  "Album::302",
+                  "Album::336",
+                  "Album::346"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Album::193"
+              },
+              {
+                "id": "Album::292"
+              },
+              {
+                "id": "Album::302"
+              },
+              {
+                "id": "Album::336"
+              },
+              {
+                "id": "Album::346"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AlbumId": 195,
+      "ArtistId": 127,
+      "Title": "Californication"
+    },
+    {
+      "AlbumId": 342,
+      "ArtistId": 271,
+      "Title": "Locatelli: Concertos for Violin, Strings and Continuo, Vol. 3"
+    },
+    {
+      "AlbumId": 87,
+      "ArtistId": 27,
+      "Title": "Quanta Gente Veio ver--B\u00f4nus De Carnaval"
+    },
+    {
+      "AlbumId": 290,
+      "ArtistId": 224,
+      "Title": "The Last Night of the Proms"
+    },
+    {
+      "AlbumId": 292,
+      "ArtistId": 226,
+      "Title": "Holst: The Planets, Op. 32 & Vaughan Williams: Fantasies"
+    }
+  ]
+}

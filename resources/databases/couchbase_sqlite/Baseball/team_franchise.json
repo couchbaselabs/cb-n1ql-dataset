@@ -1,0 +1,134 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 120,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "active": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Y",
+              "N",
+              ""
+            ],
+            "type": "string"
+          },
+          "franchise_id": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BRG",
+              "CBL",
+              "KCP",
+              "STP",
+              "WSN"
+            ],
+            "type": "string"
+          },
+          "franchise_name": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Brooklyn Gladiators",
+              "Cleveland Blues",
+              "Kansas City Packers",
+              "St. Paul Apostles",
+              "Washington Nationals"
+            ],
+            "type": "string"
+          },
+          "na_assoc": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SNA",
+              "ATH",
+              "CHC",
+              "CNA",
+              ""
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 120,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 120,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "team_franchise::100",
+                  "team_franchise::118",
+                  "team_franchise::16",
+                  "team_franchise::22",
+                  "team_franchise::52"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "team_franchise::100"
+              },
+              {
+                "id": "team_franchise::118"
+              },
+              {
+                "id": "team_franchise::16"
+              },
+              {
+                "id": "team_franchise::22"
+              },
+              {
+                "id": "team_franchise::52"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "active": "N",
+      "franchise_id": "BTT",
+      "franchise_name": "Brooklyn Tip-Tops",
+      "na_assoc": ""
+    },
+    {
+      "active": "N",
+      "franchise_id": "CLV",
+      "franchise_name": "Cleveland Spiders",
+      "na_assoc": ""
+    },
+    {
+      "active": "",
+      "franchise_id": "WNT",
+      "franchise_name": "Washington Nationals",
+      "na_assoc": ""
+    },
+    {
+      "active": "Y",
+      "franchise_id": "ATL",
+      "franchise_name": "Atlanta Braves",
+      "na_assoc": "BNA"
+    },
+    {
+      "active": "N",
+      "franchise_id": "HAR",
+      "franchise_name": "Hartford Dark Blues",
+      "na_assoc": "HNA"
+    }
+  ]
+}

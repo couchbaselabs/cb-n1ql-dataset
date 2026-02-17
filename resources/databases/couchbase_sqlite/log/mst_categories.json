@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 8,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "food",
+              "game",
+              "ladys_fashion",
+              "mens_fashion",
+              "supplement"
+            ],
+            "type": "string"
+          },
+          "stamp": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-01-01 10:00:00",
+              "2016-02-01 10:00:00"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 8,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mst_categories::0",
+                  "mst_categories::1",
+                  "mst_categories::3",
+                  "mst_categories::5",
+                  "mst_categories::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mst_categories::0"
+              },
+              {
+                "id": "mst_categories::1"
+              },
+              {
+                "id": "mst_categories::3"
+              },
+              {
+                "id": "mst_categories::5"
+              },
+              {
+                "id": "mst_categories::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 6,
+      "name": "food",
+      "stamp": "2016-01-01 10:00:00"
+    },
+    {
+      "id": 1,
+      "name": "ladys_fashion",
+      "stamp": "2016-01-01 10:00:00"
+    },
+    {
+      "id": 2,
+      "name": "mens_fashion",
+      "stamp": "2016-01-01 10:00:00"
+    },
+    {
+      "id": 6,
+      "name": "cooking",
+      "stamp": "2016-02-01 10:00:00"
+    },
+    {
+      "id": 3,
+      "name": "book",
+      "stamp": "2016-01-01 10:00:00"
+    }
+  ]
+}

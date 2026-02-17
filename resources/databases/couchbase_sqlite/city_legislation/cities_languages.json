@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 608,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code_2": {
+            "#docs": 608,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "de",
+              "mv",
+              "mz",
+              "ng",
+              "ph"
+            ],
+            "type": "string"
+          },
+          "language": {
+            "#docs": 608,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "cebuano",
+              "dhivehi",
+              "english",
+              "makhuwameetto",
+              "tyap"
+            ],
+            "type": "string"
+          },
+          "language_id": {
+            "#docs": 608,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              197,
+              344,
+              378,
+              406,
+              430
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 608,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 608,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cities_languages::196",
+                  "cities_languages::343",
+                  "cities_languages::377",
+                  "cities_languages::405",
+                  "cities_languages::429"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cities_languages::196"
+              },
+              {
+                "id": "cities_languages::343"
+              },
+              {
+                "id": "cities_languages::377"
+              },
+              {
+                "id": "cities_languages::405"
+              },
+              {
+                "id": "cities_languages::429"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code_2": "ao",
+      "language": "lingala",
+      "language_id": 12
+    },
+    {
+      "country_code_2": "dk",
+      "language": "faroese",
+      "language_id": 141
+    },
+    {
+      "country_code_2": "er",
+      "language": "tigre",
+      "language_id": 159
+    },
+    {
+      "country_code_2": "fi",
+      "language": "english",
+      "language_id": 175
+    },
+    {
+      "country_code_2": "gh",
+      "language": "ga",
+      "language_id": 206
+    }
+  ]
+}

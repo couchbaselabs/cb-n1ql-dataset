@@ -1,0 +1,82 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "created": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-01-16 14:03:41",
+              "2019-01-19 15:57:42"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              841,
+              842
+            ],
+            "type": "number"
+          },
+          "picker_emp_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              149,
+              152
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "picking_list::0",
+                  "picking_list::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "picking_list::0"
+              },
+              {
+                "id": "picking_list::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "created": "2019-01-16 14:03:41",
+      "id": 841,
+      "picker_emp_id": 149
+    },
+    {
+      "created": "2019-01-19 15:57:42",
+      "id": 842,
+      "picker_emp_id": 152
+    }
+  ]
+}

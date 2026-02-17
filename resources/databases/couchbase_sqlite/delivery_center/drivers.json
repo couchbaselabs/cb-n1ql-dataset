@@ -1,0 +1,112 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "driver_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10666,
+              20500,
+              26188,
+              30876,
+              36420
+            ],
+            "type": "number"
+          },
+          "driver_modal": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BIKER",
+              "MOTOBOY"
+            ],
+            "type": "string"
+          },
+          "driver_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "FREELANCE",
+              "LOGISTIC OPERATOR"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "drivers::1050",
+                  "drivers::1716",
+                  "drivers::2100",
+                  "drivers::2537",
+                  "drivers::2963"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "drivers::1050"
+              },
+              {
+                "id": "drivers::1716"
+              },
+              {
+                "id": "drivers::2100"
+              },
+              {
+                "id": "drivers::2537"
+              },
+              {
+                "id": "drivers::2963"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "driver_id": 11869,
+      "driver_modal": "MOTOBOY",
+      "driver_type": "LOGISTIC OPERATOR"
+    },
+    {
+      "driver_id": 11960,
+      "driver_modal": "MOTOBOY",
+      "driver_type": "FREELANCE"
+    },
+    {
+      "driver_id": 12620,
+      "driver_modal": "MOTOBOY",
+      "driver_type": "FREELANCE"
+    },
+    {
+      "driver_id": 12695,
+      "driver_modal": "MOTOBOY",
+      "driver_type": "FREELANCE"
+    },
+    {
+      "driver_id": 15338,
+      "driver_modal": "BIKER",
+      "driver_type": "FREELANCE"
+    }
+  ]
+}

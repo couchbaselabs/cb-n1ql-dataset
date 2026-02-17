@@ -1,0 +1,386 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`state` = \"New York\"",
+        "properties": {
+          "address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2002 BEVERLY ROAD",
+              "26 ROWAN AVENUE",
+              "364 SACKMAN STREET",
+              "437 WEST 43 STREET",
+              "441 2 AVENUE"
+            ],
+            "type": "string"
+          },
+          "borocode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "boroname": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bronx",
+              "Brooklyn",
+              "Manhattan",
+              "Queens",
+              "Staten Island"
+            ],
+            "type": "string"
+          },
+          "health": {
+            "#docs": [
+              55,
+              945
+            ],
+            "%docs": [
+              5.5,
+              94.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Fair",
+                "Good",
+                "Poor"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "idx": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14829,
+              97229,
+              207781,
+              228513,
+              253464
+            ],
+            "type": "number"
+          },
+          "latitude": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              40.58009872,
+              40.6449431,
+              40.66862058,
+              40.73935327,
+              40.75966887
+            ],
+            "type": "number"
+          },
+          "longitude": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -74.09396016,
+              -73.99364651,
+              -73.97966956,
+              -73.95976325,
+              -73.90469411
+            ],
+            "type": "number"
+          },
+          "nta_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Brownsville",
+              "Clinton",
+              "Flatbush",
+              "Murray Hill-Kips Bay",
+              "Old Town-Dongan Hills-South Be..."
+            ],
+            "type": "string"
+          },
+          "spc_common": {
+            "#docs": [
+              55,
+              945
+            ],
+            "%docs": [
+              5.5,
+              94.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Callery pear",
+                "Japanese zelkova",
+                "Norway maple",
+                "swamp white oak",
+                "sycamore maple"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "spc_latin": {
+            "#docs": [
+              55,
+              945
+            ],
+            "%docs": [
+              5.5,
+              94.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Acer platanoides",
+                "Acer pseudoplatanus",
+                "Pyrus calleryana",
+                "Quercus bicolor",
+                "Zelkova serrata"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "New York"
+            ],
+            "type": "string"
+          },
+          "status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alive",
+              "Dead",
+              "Stump"
+            ],
+            "type": "string"
+          },
+          "stump_diam": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5,
+              11,
+              23,
+              31
+            ],
+            "type": "number"
+          },
+          "tree_dbh": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              5,
+              6,
+              11,
+              23
+            ],
+            "type": "number"
+          },
+          "tree_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              155421,
+              308589,
+              310797,
+              423220,
+              444813
+            ],
+            "type": "number"
+          },
+          "zipcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10010,
+              10036,
+              10306,
+              11212,
+              11226
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "trees::104067",
+                  "trees::214619",
+                  "trees::21667",
+                  "trees::235351",
+                  "trees::260302"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "trees::104067"
+              },
+              {
+                "id": "trees::214619"
+              },
+              {
+                "id": "trees::21667"
+              },
+              {
+                "id": "trees::235351"
+              },
+              {
+                "id": "trees::260302"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "3625 RICHMOND ROAD",
+      "borocode": 5,
+      "boroname": "Staten Island",
+      "health": "Fair",
+      "idx": 93214,
+      "latitude": 40.5723422,
+      "longitude": -74.14212813,
+      "nta_name": "Todt Hill-Emerson Hill-Heartland Village-Lighthous",
+      "spc_common": "Callery pear",
+      "spc_latin": "Pyrus calleryana",
+      "state": "New York",
+      "status": "Alive",
+      "stump_diam": 0,
+      "tree_dbh": 11,
+      "tree_id": 295167,
+      "zipcode": 10306
+    },
+    {
+      "address": "219-009 113 AVENUE",
+      "borocode": 4,
+      "boroname": "Queens",
+      "health": "Good",
+      "idx": 93228,
+      "latitude": 40.70410001,
+      "longitude": -73.73754821,
+      "nta_name": "Queens Village",
+      "spc_common": "Sophora",
+      "spc_latin": "Styphnolobium japonicum",
+      "state": "New York",
+      "status": "Alive",
+      "stump_diam": 0,
+      "tree_dbh": 7,
+      "tree_id": 286891,
+      "zipcode": 11429
+    },
+    {
+      "address": "304 SANDALWOOD DRIVE",
+      "borocode": 5,
+      "boroname": "Staten Island",
+      "health": "Good",
+      "idx": 93449,
+      "latitude": 40.55852588,
+      "longitude": -74.14323258,
+      "nta_name": "Great Kills",
+      "spc_common": "sweetgum",
+      "spc_latin": "Liquidambar styraciflua",
+      "state": "New York",
+      "status": "Alive",
+      "stump_diam": 0,
+      "tree_dbh": 14,
+      "tree_id": 48700,
+      "zipcode": 10308
+    },
+    {
+      "address": "64 BERKELEY PLACE",
+      "borocode": 3,
+      "boroname": "Brooklyn",
+      "health": "Good",
+      "idx": 93479,
+      "latitude": 40.67635141,
+      "longitude": -73.97813071,
+      "nta_name": "Park Slope-Gowanus",
+      "spc_common": "hedge maple",
+      "spc_latin": "Acer campestre",
+      "state": "New York",
+      "status": "Alive",
+      "stump_diam": 0,
+      "tree_dbh": 7,
+      "tree_id": 294757,
+      "zipcode": 11217
+    },
+    {
+      "address": "91-019 219 STREET",
+      "borocode": 4,
+      "boroname": "Queens",
+      "health": "Fair",
+      "idx": 93485,
+      "latitude": 40.72473796,
+      "longitude": -73.74042629,
+      "nta_name": "Queens Village",
+      "spc_common": "Callery pear",
+      "spc_latin": "Pyrus calleryana",
+      "state": "New York",
+      "status": "Alive",
+      "stump_diam": 0,
+      "tree_dbh": 26,
+      "tree_id": 285234,
+      "zipcode": 11428
+    }
+  ]
+}

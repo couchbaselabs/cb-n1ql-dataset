@@ -1,0 +1,177 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 320,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "birth_date": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1972-05-21",
+              "1976-05-26",
+              "1988-02-09",
+              "1994-04-07",
+              "2009-10-12"
+            ],
+            "type": "string"
+          },
+          "register_date": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-10-01",
+              "2016-10-02",
+              "2016-10-05",
+              "2016-10-10",
+              "2016-10-15"
+            ],
+            "type": "string"
+          },
+          "register_device": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "app",
+              "pc",
+              "sp"
+            ],
+            "type": "string"
+          },
+          "sex": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "F",
+              "M"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U013",
+              "U014",
+              "U017",
+              "U018",
+              "U028"
+            ],
+            "type": "string"
+          },
+          "withdraw_date": {
+            "#docs": [
+              288,
+              32
+            ],
+            "%docs": [
+              90,
+              10
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2016-10-10"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 320,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mst_users::142",
+                  "mst_users::176",
+                  "mst_users::207",
+                  "mst_users::297",
+                  "mst_users::307"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mst_users::142"
+              },
+              {
+                "id": "mst_users::176"
+              },
+              {
+                "id": "mst_users::207"
+              },
+              {
+                "id": "mst_users::297"
+              },
+              {
+                "id": "mst_users::307"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "birth_date": "1954-05-21",
+      "register_date": "2016-10-01",
+      "register_device": "pc",
+      "sex": "F",
+      "user_id": "U004",
+      "withdraw_date": null
+    },
+    {
+      "birth_date": "1954-05-21",
+      "register_date": "2016-10-05",
+      "register_device": "pc",
+      "sex": "F",
+      "user_id": "U004",
+      "withdraw_date": null
+    },
+    {
+      "birth_date": "1965-01-06",
+      "register_date": "2016-10-01",
+      "register_device": "pc",
+      "sex": "M",
+      "user_id": "U003",
+      "withdraw_date": null
+    },
+    {
+      "birth_date": "1950-07-18",
+      "register_date": "2016-10-01",
+      "register_device": "app",
+      "sex": "F",
+      "user_id": "U007",
+      "withdraw_date": null
+    },
+    {
+      "birth_date": "2004-10-23",
+      "register_date": "2016-10-15",
+      "register_device": "pc",
+      "sex": "M",
+      "user_id": "U009",
+      "withdraw_date": null
+    }
+  ]
+}

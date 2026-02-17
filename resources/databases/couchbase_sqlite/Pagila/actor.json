@@ -1,0 +1,133 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 200,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "actor_id": {
+            "#docs": 200,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              84,
+              149,
+              151,
+              153,
+              167
+            ],
+            "type": "number"
+          },
+          "first_name": {
+            "#docs": 200,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GEOFFREY",
+              "JAMES",
+              "LAURENCE",
+              "MINNIE",
+              "RUSSELL"
+            ],
+            "type": "string"
+          },
+          "last_name": {
+            "#docs": 200,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BULLOCK",
+              "HESTON",
+              "KILMER",
+              "PITT",
+              "TEMPLE"
+            ],
+            "type": "string"
+          },
+          "last_update": {
+            "#docs": 200,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:51:59",
+              "2021-03-06 15:52:00"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 200,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 200,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "actor::148",
+                  "actor::150",
+                  "actor::152",
+                  "actor::166",
+                  "actor::83"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "actor::148"
+              },
+              {
+                "id": "actor::150"
+              },
+              {
+                "id": "actor::152"
+              },
+              {
+                "id": "actor::166"
+              },
+              {
+                "id": "actor::83"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "actor_id": 118,
+      "first_name": "CUBA",
+      "last_name": "ALLEN",
+      "last_update": "2021-03-06 15:51:59"
+    },
+    {
+      "actor_id": 124,
+      "first_name": "SCARLETT",
+      "last_name": "BENING",
+      "last_update": "2021-03-06 15:52:00"
+    },
+    {
+      "actor_id": 145,
+      "first_name": "KIM",
+      "last_name": "ALLEN",
+      "last_update": "2021-03-06 15:52:00"
+    },
+    {
+      "actor_id": 169,
+      "first_name": "KENNETH",
+      "last_name": "HOFFMAN",
+      "last_update": "2021-03-06 15:52:00"
+    },
+    {
+      "actor_id": 171,
+      "first_name": "OLYMPIA",
+      "last_name": "PFEIFFER",
+      "last_update": "2021-03-06 15:52:00"
+    }
+  ]
+}

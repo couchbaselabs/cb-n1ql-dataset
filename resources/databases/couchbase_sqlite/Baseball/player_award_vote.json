@@ -1,0 +1,200 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "award_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cy Young",
+              "MVP",
+              "Rookie of the Year"
+            ],
+            "type": "string"
+          },
+          "league_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AL",
+              "ML",
+              "NL"
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "barrere01",
+              "demarfr02",
+              "gossari01",
+              "harrebu01",
+              "pepitjo01"
+            ],
+            "type": "string"
+          },
+          "points_max": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              80,
+              120,
+              280,
+              336,
+              392
+            ],
+            "type": "number"
+          },
+          "points_won": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              7,
+              10,
+              17,
+              151
+            ],
+            "type": "number"
+          },
+          "votes_first": {
+            "#docs": [
+              946,
+              54
+            ],
+            "%docs": [
+              94.6,
+              5.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                0,
+                1,
+                4,
+                8,
+                28
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1936,
+              1945,
+              1963,
+              1970,
+              1984
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "player_award_vote::1483",
+                  "player_award_vote::2040",
+                  "player_award_vote::283",
+                  "player_award_vote::3083",
+                  "player_award_vote::3524"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "player_award_vote::1483"
+              },
+              {
+                "id": "player_award_vote::2040"
+              },
+              {
+                "id": "player_award_vote::283"
+              },
+              {
+                "id": "player_award_vote::3083"
+              },
+              {
+                "id": "player_award_vote::3524"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "award_id": "MVP",
+      "league_id": "AL",
+      "player_id": "pennohe01",
+      "points_max": 64,
+      "points_won": 4,
+      "votes_first": 0,
+      "year": 1925
+    },
+    {
+      "award_id": "MVP",
+      "league_id": "NL",
+      "player_id": "hargrbu01",
+      "points_max": 80,
+      "points_won": 4,
+      "votes_first": 0,
+      "year": 1925
+    },
+    {
+      "award_id": "MVP",
+      "league_id": "AL",
+      "player_id": "flagsir01",
+      "points_max": 64,
+      "points_won": 2,
+      "votes_first": 0,
+      "year": 1926
+    },
+    {
+      "award_id": "MVP",
+      "league_id": "NL",
+      "player_id": "grimmch01",
+      "points_max": 80,
+      "points_won": 13,
+      "votes_first": "",
+      "year": 1929
+    },
+    {
+      "award_id": "MVP",
+      "league_id": "NL",
+      "player_id": "hornsro01",
+      "points_max": 80,
+      "points_won": 60,
+      "votes_first": 3,
+      "year": 1929
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "company_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              437,
+              2602,
+              119259,
+              227646,
+              275261
+            ],
+            "type": "number"
+          },
+          "job_country": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Australia",
+                "India",
+                "South Africa",
+                "Spain",
+                "Switzerland"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "job_health_insurance": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "job_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              371900,
+              554334,
+              655134,
+              827558,
+              1425157
+            ],
+            "type": "number"
+          },
+          "job_location": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Gurugram, Haryana, India",
+                "K\u00f6niz, Switzerland",
+                "Madrid, Spain",
+                "Melbourne VIC, Australia",
+                "South Africa"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "job_no_degree_mention": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "job_posted_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2023-06-25 23:52:15",
+              "2023-08-26 07:46:40",
+              "2023-09-25 18:51:25",
+              "2023-10-23 13:45:27",
+              "2023-11-05 17:09:40"
+            ],
+            "type": "string"
+          },
+          "job_schedule_type": {
+            "#docs": [
+              14,
+              986
+            ],
+            "%docs": [
+              1.4,
+              98.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Contractor",
+                "Full-time",
+                "Full-time and Contractor",
+                "Full-time and Part-time",
+                "Internship"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "job_title": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Data Analyst",
+              "Data Steward/Data Scientist (n...",
+              "EHS Data Analytics, Tools and ...",
+              "GCP Engineer",
+              "IT Servicedesk engineer"
+            ],
+            "type": "string"
+          },
+          "job_title_short": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cloud Engineer",
+              "Data Analyst",
+              "Data Engineer",
+              "Data Scientist",
+              "Software Engineer"
+            ],
+            "type": "string"
+          },
+          "job_via": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "via BeBee",
+              "via Jobs Trabajo.org",
+              "via LinkedIn",
+              "via Trabajo.org",
+              "via Trabajo.org - Vacantes De ..."
+            ],
+            "type": "string"
+          },
+          "job_work_from_home": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "salary_hour_avg": {
+            "#docs": [
+              981,
+              19
+            ],
+            "%docs": [
+              98.1,
+              1.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                20,
+                40.81500244140625,
+                55.5,
+                70,
+                78.54499816894531
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "salary_rate": {
+            "#docs": [
+              974,
+              26
+            ],
+            "%docs": [
+              97.4,
+              2.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "year"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "salary_year_avg": {
+            "#docs": [
+              974,
+              26
+            ],
+            "%docs": [
+              97.4,
+              2.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                83500,
+                110000,
+                125000,
+                172500,
+                182000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "search_location": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Australia",
+              "India",
+              "South Africa",
+              "Spain",
+              "Switzerland"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "job_postings_fact::12204",
+                  "job_postings_fact::13425",
+                  "job_postings_fact::1368",
+                  "job_postings_fact::18710",
+                  "job_postings_fact::20369"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "job_postings_fact::12204"
+              },
+              {
+                "id": "job_postings_fact::13425"
+              },
+              {
+                "id": "job_postings_fact::1368"
+              },
+              {
+                "id": "job_postings_fact::18710"
+              },
+              {
+                "id": "job_postings_fact::20369"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "company_id": 1710,
+      "job_country": "Germany",
+      "job_health_insurance": 0,
+      "job_id": 721497,
+      "job_location": "Leipzig, Germany",
+      "job_no_degree_mention": 0,
+      "job_posted_date": "2023-04-17 14:14:21",
+      "job_schedule_type": "Full-time",
+      "job_title": "(Senior) Data Scientist | Analyst, Python, R, SAS, SPSS...",
+      "job_title_short": "Senior Data Scientist",
+      "job_via": "via XING",
+      "job_work_from_home": 0,
+      "salary_hour_avg": null,
+      "salary_rate": null,
+      "salary_year_avg": null,
+      "search_location": "Germany"
+    },
+    {
+      "company_id": 27260,
+      "job_country": "Chile",
+      "job_health_insurance": 0,
+      "job_id": 987403,
+      "job_location": "Estaci\u00f3n Central, Chile",
+      "job_no_degree_mention": 1,
+      "job_posted_date": "2022-12-31 18:16:22",
+      "job_schedule_type": "Full-time",
+      "job_title": "Data Platform Tech Lead",
+      "job_title_short": "Cloud Engineer",
+      "job_via": "via Trabajo.org - Vacantes De Empleo, Trabajo",
+      "job_work_from_home": 0,
+      "salary_hour_avg": null,
+      "salary_rate": null,
+      "salary_year_avg": null,
+      "search_location": "Chile"
+    },
+    {
+      "company_id": 52668,
+      "job_country": "South Korea",
+      "job_health_insurance": 0,
+      "job_id": 1803692,
+      "job_location": "South Korea",
+      "job_no_degree_mention": 1,
+      "job_posted_date": "2023-07-10 15:49:34",
+      "job_schedule_type": "Contractor",
+      "job_title": "Junior Software Engineer, Data Infrastructure (Contract)",
+      "job_title_short": "Software Engineer",
+      "job_via": "via LinkedIn",
+      "job_work_from_home": 0,
+      "salary_hour_avg": null,
+      "salary_rate": null,
+      "salary_year_avg": null,
+      "search_location": "South Korea"
+    },
+    {
+      "company_id": 30048,
+      "job_country": "Belgium",
+      "job_health_insurance": 0,
+      "job_id": 1243677,
+      "job_location": "Brussels, Belgium",
+      "job_no_degree_mention": 0,
+      "job_posted_date": "2023-04-26 03:33:57",
+      "job_schedule_type": "Full-time",
+      "job_title": "Job | Data Engineer Data Development & Operations | Bruxelles",
+      "job_title_short": "Data Engineer",
+      "job_via": "via LinkedIn",
+      "job_work_from_home": 0,
+      "salary_hour_avg": null,
+      "salary_rate": null,
+      "salary_year_avg": null,
+      "search_location": "Belgium"
+    },
+    {
+      "company_id": 352037,
+      "job_country": "Italy",
+      "job_health_insurance": 0,
+      "job_id": 828159,
+      "job_location": "Rome, Metropolitan City of Rome Capital, Italy",
+      "job_no_degree_mention": 0,
+      "job_posted_date": "2023-11-13 08:57:50",
+      "job_schedule_type": "Full-time and Temp work",
+      "job_title": "Data Engineer",
+      "job_title_short": "Data Engineer",
+      "job_via": "via Indeed",
+      "job_work_from_home": 0,
+      "salary_hour_avg": null,
+      "salary_rate": null,
+      "salary_year_avg": null,
+      "search_location": "Italy"
+    }
+  ]
+}

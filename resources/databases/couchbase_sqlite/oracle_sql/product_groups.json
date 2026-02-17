@@ -1,0 +1,90 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 4,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              142,
+              152,
+              202,
+              232
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Belgian",
+              "IPA",
+              "Stout",
+              "Wheat"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 4,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "product_groups::0",
+                  "product_groups::1",
+                  "product_groups::2",
+                  "product_groups::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "product_groups::0"
+              },
+              {
+                "id": "product_groups::1"
+              },
+              {
+                "id": "product_groups::2"
+              },
+              {
+                "id": "product_groups::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 232,
+      "name": "IPA"
+    },
+    {
+      "id": 142,
+      "name": "Stout"
+    },
+    {
+      "id": 202,
+      "name": "Wheat"
+    },
+    {
+      "id": 152,
+      "name": "Belgian"
+    }
+  ]
+}

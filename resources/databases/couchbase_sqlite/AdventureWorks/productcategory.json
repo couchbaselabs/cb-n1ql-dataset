@@ -1,0 +1,119 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 4,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`modifieddate` = \"2008-04-30 00:00:00\"",
+        "properties": {
+          "modifieddate": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2008-04-30 00:00:00"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Accessories",
+              "Bikes",
+              "Clothing",
+              "Components"
+            ],
+            "type": "string"
+          },
+          "productcategoryid": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "rowguid": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10a7c342-ca82-48d4-8a38-46a2eb...",
+              "2be3be36-d9a2-4eee-b593-ed895d...",
+              "c657828d-d808-4aba-91a3-af2ce0...",
+              "cfbda25c-df71-47a7-b81b-64ee16..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 4,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "productcategory::0",
+                  "productcategory::1",
+                  "productcategory::2",
+                  "productcategory::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "productcategory::0"
+              },
+              {
+                "id": "productcategory::1"
+              },
+              {
+                "id": "productcategory::2"
+              },
+              {
+                "id": "productcategory::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Clothing",
+      "productcategoryid": 3,
+      "rowguid": "10a7c342-ca82-48d4-8a38-46a2eb089b74"
+    },
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Accessories",
+      "productcategoryid": 4,
+      "rowguid": "2be3be36-d9a2-4eee-b593-ed895d97c2a6"
+    },
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Bikes",
+      "productcategoryid": 1,
+      "rowguid": "cfbda25c-df71-47a7-b81b-64ee161aa37c"
+    },
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Components",
+      "productcategoryid": 2,
+      "rowguid": "c657828d-d808-4aba-91a3-af2ce02300e9"
+    }
+  ]
+}

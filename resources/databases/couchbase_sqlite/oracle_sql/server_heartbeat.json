@@ -1,0 +1,97 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 14,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "beat_time": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-04-10 13:20",
+              "2019-04-10 13:25",
+              "2019-04-10 13:40",
+              "2019-04-10 13:50",
+              "2019-04-10 13:55"
+            ],
+            "type": "string"
+          },
+          "server": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10.0.0.100",
+              "10.0.0.142"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 14,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "server_heartbeat::11",
+                  "server_heartbeat::12",
+                  "server_heartbeat::4",
+                  "server_heartbeat::6",
+                  "server_heartbeat::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "server_heartbeat::11"
+              },
+              {
+                "id": "server_heartbeat::12"
+              },
+              {
+                "id": "server_heartbeat::4"
+              },
+              {
+                "id": "server_heartbeat::6"
+              },
+              {
+                "id": "server_heartbeat::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "beat_time": "2019-04-10 13:05",
+      "server": "10.0.0.100"
+    },
+    {
+      "beat_time": "2019-04-10 13:35",
+      "server": "10.0.0.100"
+    },
+    {
+      "beat_time": "2019-04-10 13:55",
+      "server": "10.0.0.100"
+    },
+    {
+      "beat_time": "2019-04-10 13:10",
+      "server": "10.0.0.100"
+    },
+    {
+      "beat_time": "2019-04-10 13:20",
+      "server": "10.0.0.100"
+    }
+  ]
+}

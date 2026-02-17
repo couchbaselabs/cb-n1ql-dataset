@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 600,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "city": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Carmen",
+              "Daugavpils",
+              "Juiz de Fora",
+              "Kolpino",
+              "Sorocaba"
+            ],
+            "type": "string"
+          },
+          "city_id": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              103,
+              137,
+              248,
+              274,
+              490
+            ],
+            "type": "number"
+          },
+          "country_id": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15,
+              54,
+              60,
+              80,
+              96
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:51:50",
+              "2021-03-06 15:51:51",
+              "2021-03-06 15:51:52",
+              "2021-03-06 15:51:53",
+              "2021-03-06 15:51:54"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 600,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 600,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "city::102",
+                  "city::136",
+                  "city::247",
+                  "city::273",
+                  "city::489"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "city::102"
+              },
+              {
+                "id": "city::136"
+              },
+              {
+                "id": "city::247"
+              },
+              {
+                "id": "city::273"
+              },
+              {
+                "id": "city::489"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "city": "Goinia",
+      "city_id": 183,
+      "country_id": 15,
+      "last_update": "2021-03-06 15:51:51"
+    },
+    {
+      "city": "Nakhon Sawan",
+      "city_id": 358,
+      "country_id": 94,
+      "last_update": "2021-03-06 15:51:52"
+    },
+    {
+      "city": "Newcastle",
+      "city_id": 364,
+      "country_id": 85,
+      "last_update": "2021-03-06 15:51:52"
+    },
+    {
+      "city": "Po",
+      "city_id": 410,
+      "country_id": 15,
+      "last_update": "2021-03-06 15:51:52"
+    },
+    {
+      "city": "Pontianak",
+      "city_id": 412,
+      "country_id": 45,
+      "last_update": "2021-03-06 15:51:52"
+    }
+  ]
+}

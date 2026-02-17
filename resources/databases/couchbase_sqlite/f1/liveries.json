@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 64,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "constructor_ref": {
+            "#docs": 64,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "benneton",
+              "hrt",
+              "mclaren",
+              "renault",
+              "sauber"
+            ],
+            "type": "string"
+          },
+          "end_year": {
+            "#docs": [
+              10,
+              54
+            ],
+            "%docs": [
+              15.62,
+              84.37
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1993,
+                2001,
+                2014,
+                2017,
+                2018
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "primary_hex_code": {
+            "#docs": 64,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "#000000",
+              "#01B2DA",
+              "#900000",
+              "#FC5D00",
+              "#FCD133"
+            ],
+            "type": "string"
+          },
+          "start_year": {
+            "#docs": 64,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1992,
+              1994,
+              2010,
+              2017,
+              2018
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 64,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 64,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "liveries::33",
+                  "liveries::49",
+                  "liveries::51",
+                  "liveries::7",
+                  "liveries::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "liveries::33"
+              },
+              {
+                "id": "liveries::49"
+              },
+              {
+                "id": "liveries::51"
+              },
+              {
+                "id": "liveries::7"
+              },
+              {
+                "id": "liveries::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "constructor_ref": "spyker_mf1",
+      "end_year": 2006,
+      "primary_hex_code": "#EA5D16",
+      "start_year": 2006
+    },
+    {
+      "constructor_ref": "renault",
+      "end_year": 2010,
+      "primary_hex_code": "#EDB200",
+      "start_year": 2010
+    },
+    {
+      "constructor_ref": "renault",
+      "end_year": 2011,
+      "primary_hex_code": "#C1A43E",
+      "start_year": 2011
+    },
+    {
+      "constructor_ref": "hrt",
+      "end_year": 2010,
+      "primary_hex_code": "#2D3741",
+      "start_year": 2010
+    },
+    {
+      "constructor_ref": "mercedes",
+      "end_year": null,
+      "primary_hex_code": "#00D2BE",
+      "start_year": 2010
+    }
+  ]
+}

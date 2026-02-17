@@ -1,0 +1,241 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 77,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "categoryid": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              5,
+              6,
+              8
+            ],
+            "type": "number"
+          },
+          "discontinued": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "productid": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              17,
+              20,
+              23,
+              44
+            ],
+            "type": "number"
+          },
+          "productname": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alice Mutton",
+              "Chef Anton's Cajun Seasoning",
+              "Gula Malacca",
+              "Sir Rodney's Marmalade",
+              "Tunnbr\u00f6d"
+            ],
+            "type": "string"
+          },
+          "quantityperunit": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "12 - 250 g pkgs.",
+              "20 - 1 kg tins",
+              "20 - 2 kg bags",
+              "30 gift boxes",
+              "48 - 6 oz jars"
+            ],
+            "type": "string"
+          },
+          "reorderlevel": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              10,
+              15,
+              20,
+              25
+            ],
+            "type": "number"
+          },
+          "supplierid": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              7,
+              8,
+              9,
+              20
+            ],
+            "type": "number"
+          },
+          "unitprice": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9,
+              19.4500008,
+              22,
+              39,
+              81
+            ],
+            "type": "number"
+          },
+          "unitsinstock": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              27,
+              40,
+              53,
+              61
+            ],
+            "type": "number"
+          },
+          "unitsonorder": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              10,
+              30,
+              50,
+              70
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 77,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "products::16",
+                  "products::19",
+                  "products::22",
+                  "products::3",
+                  "products::43"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "products::16"
+              },
+              {
+                "id": "products::19"
+              },
+              {
+                "id": "products::22"
+              },
+              {
+                "id": "products::3"
+              },
+              {
+                "id": "products::43"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "categoryid": 2,
+      "discontinued": 0,
+      "productid": 8,
+      "productname": "Northwoods Cranberry Sauce",
+      "quantityperunit": "12 - 12 oz jars",
+      "reorderlevel": 0,
+      "supplierid": 3,
+      "unitprice": 40,
+      "unitsinstock": 6,
+      "unitsonorder": 0
+    },
+    {
+      "categoryid": 7,
+      "discontinued": 0,
+      "productid": 7,
+      "productname": "Uncle Bob's Organic Dried Pears",
+      "quantityperunit": "12 - 1 lb pkgs.",
+      "reorderlevel": 10,
+      "supplierid": 3,
+      "unitprice": 30,
+      "unitsinstock": 15,
+      "unitsonorder": 0
+    },
+    {
+      "categoryid": 6,
+      "discontinued": 1,
+      "productid": 17,
+      "productname": "Alice Mutton",
+      "quantityperunit": "20 - 1 kg tins",
+      "reorderlevel": 0,
+      "supplierid": 7,
+      "unitprice": 39,
+      "unitsinstock": 0,
+      "unitsonorder": 0
+    },
+    {
+      "categoryid": 5,
+      "discontinued": 0,
+      "productid": 23,
+      "productname": "Tunnbr\u00f6d",
+      "quantityperunit": "12 - 250 g pkgs.",
+      "reorderlevel": 25,
+      "supplierid": 9,
+      "unitprice": 9,
+      "unitsinstock": 61,
+      "unitsonorder": 0
+    },
+    {
+      "categoryid": 3,
+      "discontinued": 0,
+      "productid": 48,
+      "productname": "Chocolade",
+      "quantityperunit": "10 pkgs.",
+      "reorderlevel": 25,
+      "supplierid": 22,
+      "unitprice": 12.75,
+      "unitsinstock": 15,
+      "unitsonorder": 70
+    }
+  ]
+}

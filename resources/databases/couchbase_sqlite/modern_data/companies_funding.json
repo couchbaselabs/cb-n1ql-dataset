@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1085,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "company_id": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              201,
+              249,
+              644,
+              701,
+              834
+            ],
+            "type": "number"
+          },
+          "funding": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              125000000,
+              154000000,
+              169000000,
+              210000000,
+              1000000000
+            ],
+            "type": "number"
+          },
+          "select_investors": {
+            "#docs": [
+              1,
+              1084
+            ],
+            "%docs": [
+              0.09,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "\"Day One Ventures, Coinbase Ve...",
+                "\"India Quotient, Elevation Cap...",
+                "\"New Enterprise Associates, CR...",
+                "\"Shenzhen Capital Group, Rober...",
+                "\"Zeev Ventures, Group11, Chica..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "valuation": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1000000000,
+              2000000000,
+              3000000000,
+              4000000000,
+              5000000000
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1085,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "companies_funding::106",
+                  "companies_funding::132",
+                  "companies_funding::243",
+                  "companies_funding::277",
+                  "companies_funding::46"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "companies_funding::106"
+              },
+              {
+                "id": "companies_funding::132"
+              },
+              {
+                "id": "companies_funding::243"
+              },
+              {
+                "id": "companies_funding::277"
+              },
+              {
+                "id": "companies_funding::46"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "company_id": 783,
+      "funding": 161000000,
+      "select_investors": "\"Index Ventures, Sequoia Capital, Bezos Expeditions\"",
+      "valuation": 1000000000
+    },
+    {
+      "company_id": 750,
+      "funding": 165000000,
+      "select_investors": "\"Sequoia Capital, Y Combinator, Accel\"",
+      "valuation": 1000000000
+    },
+    {
+      "company_id": 828,
+      "funding": 200000000,
+      "select_investors": "\"GGV Capital, Lightspeed Venture Partners, ICONIQ Capital\"",
+      "valuation": 1000000000
+    },
+    {
+      "company_id": 583,
+      "funding": 202000000,
+      "select_investors": "\"Andreessen Horowitz, Kleiner Perkins Caufield & Byers, EQT Ventures\"",
+      "valuation": 2000000000
+    },
+    {
+      "company_id": 789,
+      "funding": 300000000,
+      "select_investors": "\"IDG Capital, ZhenFund, Sequoia Capital China\"",
+      "valuation": 1000000000
+    }
+  ]
+}

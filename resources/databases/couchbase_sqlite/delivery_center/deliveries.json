@@ -1,0 +1,165 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "delivery_distance_meters": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              176,
+              1353,
+              1841,
+              1947,
+              2020
+            ],
+            "type": "number"
+          },
+          "delivery_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2175098,
+              2213470,
+              2601363,
+              2695985,
+              2701209
+            ],
+            "type": "number"
+          },
+          "delivery_order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              68432718,
+              70009858,
+              82217940,
+              84601367,
+              84758806
+            ],
+            "type": "number"
+          },
+          "delivery_status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CANCELLED",
+              "DELIVERED"
+            ],
+            "type": "string"
+          },
+          "driver_id": {
+            "#docs": [
+              33,
+              967
+            ],
+            "%docs": [
+              3.3,
+              96.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                409,
+                2519,
+                5250,
+                26223,
+                29077
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "deliveries::16126",
+                  "deliveries::168",
+                  "deliveries::175142",
+                  "deliveries::213783",
+                  "deliveries::216044"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "deliveries::16126"
+              },
+              {
+                "id": "deliveries::168"
+              },
+              {
+                "id": "deliveries::175142"
+              },
+              {
+                "id": "deliveries::213783"
+              },
+              {
+                "id": "deliveries::216044"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "delivery_distance_meters": 1242,
+      "delivery_id": 2418941,
+      "delivery_order_id": 76794177,
+      "delivery_status": "DELIVERED",
+      "driver_id": 22115
+    },
+    {
+      "delivery_distance_meters": 2006,
+      "delivery_id": 2418948,
+      "delivery_order_id": 76794620,
+      "delivery_status": "DELIVERED",
+      "driver_id": 32149
+    },
+    {
+      "delivery_distance_meters": 769,
+      "delivery_id": 2419073,
+      "delivery_order_id": 76789775,
+      "delivery_status": "DELIVERED",
+      "driver_id": 28913
+    },
+    {
+      "delivery_distance_meters": 2170,
+      "delivery_id": 2419109,
+      "delivery_order_id": 76795763,
+      "delivery_status": "DELIVERED",
+      "driver_id": 27464
+    },
+    {
+      "delivery_distance_meters": 3329,
+      "delivery_id": 2419459,
+      "delivery_order_id": 76808382,
+      "delivery_status": "DELIVERED",
+      "driver_id": 378
+    }
+  ]
+}

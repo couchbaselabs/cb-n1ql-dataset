@@ -1,0 +1,190 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "driver_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              57,
+              68,
+              813,
+              831
+            ],
+            "type": "number"
+          },
+          "lap": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              27,
+              48,
+              58,
+              63
+            ],
+            "type": "number"
+          },
+          "milliseconds": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              73814,
+              79551,
+              82112,
+              90715,
+              123130
+            ],
+            "type": "number"
+          },
+          "position": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              6,
+              12,
+              14,
+              19
+            ],
+            "type": "number"
+          },
+          "race_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              169,
+              195,
+              848,
+              933,
+              944
+            ],
+            "type": "number"
+          },
+          "seconds": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              73.814,
+              79.551,
+              82.112,
+              90.715,
+              123.13
+            ],
+            "type": "number"
+          },
+          "time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1:13.814",
+              "1:19.551",
+              "1:22.112",
+              "1:30.715",
+              "2:03.130"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "lap_times::100330",
+                  "lap_times::10371",
+                  "lap_times::110246",
+                  "lap_times::150500",
+                  "lap_times::189312"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "lap_times::100330"
+              },
+              {
+                "id": "lap_times::10371"
+              },
+              {
+                "id": "lap_times::110246"
+              },
+              {
+                "id": "lap_times::150500"
+              },
+              {
+                "id": "lap_times::189312"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "driver_id": 831,
+      "lap": 48,
+      "milliseconds": 73923,
+      "position": 11,
+      "race_id": 933,
+      "seconds": 73.923,
+      "time": "1:13.923"
+    },
+    {
+      "driver_id": 831,
+      "lap": 66,
+      "milliseconds": 74041,
+      "position": 11,
+      "race_id": 933,
+      "seconds": 74.041,
+      "time": "1:14.041"
+    },
+    {
+      "driver_id": 832,
+      "lap": 12,
+      "milliseconds": 73796,
+      "position": 9,
+      "race_id": 933,
+      "seconds": 73.796,
+      "time": "1:13.796"
+    },
+    {
+      "driver_id": 154,
+      "lap": 6,
+      "milliseconds": 104361,
+      "position": 10,
+      "race_id": 933,
+      "seconds": 104.361,
+      "time": "1:44.361"
+    },
+    {
+      "driver_id": 154,
+      "lap": 30,
+      "milliseconds": 72992,
+      "position": 12,
+      "race_id": 933,
+      "seconds": 72.992,
+      "time": "1:12.992"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 111,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "AgentID": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              5,
+              6,
+              8
+            ],
+            "type": "number"
+          },
+          "ContractPrice": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              140,
+              500,
+              590,
+              770,
+              1130
+            ],
+            "type": "number"
+          },
+          "CustomerID": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10001,
+              10003,
+              10004,
+              10006,
+              10010
+            ],
+            "type": "number"
+          },
+          "EndDate": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-09-15",
+              "2017-09-16",
+              "2017-10-06",
+              "2017-10-22",
+              "2018-03-01"
+            ],
+            "type": "string"
+          },
+          "EngagementNumber": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              5,
+              22,
+              43,
+              127
+            ],
+            "type": "number"
+          },
+          "EntertainerID": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1001,
+              1002,
+              1003,
+              1005,
+              1006
+            ],
+            "type": "number"
+          },
+          "StartDate": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-09-11",
+              "2017-09-12",
+              "2017-10-01",
+              "2017-10-22",
+              "2018-02-25"
+            ],
+            "type": "string"
+          },
+          "StartTime": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "12:00:00",
+              "13:00:00",
+              "14:00:00",
+              "16:00:00",
+              "20:00:00"
+            ],
+            "type": "string"
+          },
+          "StopTime": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "15:00:00",
+              "16:00:00",
+              "18:00:00",
+              "19:00:00",
+              "22:00:00"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 111,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 111,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Engagements::1",
+                  "Engagements::107",
+                  "Engagements::18",
+                  "Engagements::3",
+                  "Engagements::34"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Engagements::1"
+              },
+              {
+                "id": "Engagements::107"
+              },
+              {
+                "id": "Engagements::18"
+              },
+              {
+                "id": "Engagements::3"
+              },
+              {
+                "id": "Engagements::34"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AgentID": 6,
+      "ContractPrice": 410,
+      "CustomerID": 10010,
+      "EndDate": "2017-12-27",
+      "EngagementNumber": 70,
+      "EntertainerID": 1001,
+      "StartDate": "2017-12-24",
+      "StartTime": "13:00:00",
+      "StopTime": "15:00:00"
+    },
+    {
+      "AgentID": 7,
+      "ContractPrice": 500,
+      "CustomerID": 10005,
+      "EndDate": "2018-01-04",
+      "EngagementNumber": 76,
+      "EntertainerID": 1012,
+      "StartDate": "2017-12-31",
+      "StartTime": "16:00:00",
+      "StopTime": "22:00:00"
+    },
+    {
+      "AgentID": 8,
+      "ContractPrice": 110,
+      "CustomerID": 10012,
+      "EndDate": "2018-01-20",
+      "EngagementNumber": 97,
+      "EntertainerID": 1004,
+      "StartDate": "2018-01-20",
+      "StartTime": "17:00:00",
+      "StopTime": "21:00:00"
+    },
+    {
+      "AgentID": 4,
+      "ContractPrice": 200,
+      "CustomerID": 10007,
+      "EndDate": "2018-01-31",
+      "EngagementNumber": 107,
+      "EntertainerID": 1004,
+      "StartDate": "2018-01-30",
+      "StartTime": "16:00:00",
+      "StopTime": "21:00:00"
+    },
+    {
+      "AgentID": 5,
+      "ContractPrice": 1850,
+      "CustomerID": 10014,
+      "EndDate": "2018-02-16",
+      "EngagementNumber": 109,
+      "EntertainerID": 1010,
+      "StartDate": "2018-02-12",
+      "StartTime": "13:00:00",
+      "StopTime": "19:00:00"
+    }
+  ]
+}

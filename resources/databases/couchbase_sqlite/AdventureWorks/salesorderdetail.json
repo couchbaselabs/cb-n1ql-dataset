@@ -1,0 +1,244 @@
+{ 
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "carriertrackingnumber": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "654B-484B-8F",
+              "80CF-4941-99",
+              "8B97-4CC6-8A",
+              "EBBF-4B16-99",
+              "FF5E-417D-8D"
+            ],
+            "type": "string"
+          },
+          "modifieddate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-05-30 00:00:00",
+              "2013-06-18 00:00:00",
+              "2013-06-30 00:00:00",
+              "2014-03-31 00:00:00",
+              "2014-05-01 00:00:00"
+            ],
+            "type": "string"
+          },
+          "orderqty": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              5,
+              7,
+              12
+            ],
+            "type": "number"
+          },
+          "productid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              782,
+              940,
+              959,
+              961,
+              962
+            ],
+            "type": "number"
+          },
+          "rowguid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "02410266-f8bd-4b0c-b19f-c77468...",
+              "706d4fb9-babb-4159-99a9-a3885b...",
+              "8e51f070-9e66-4124-9275-b8f8c4...",
+              "b049b2ab-e82a-4bf3-8fc7-b71f31...",
+              "cfde743a-1cb9-4a38-bc5c-f7ef38..."
+            ],
+            "type": "string"
+          },
+          "salesorderdetailid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              35951,
+              103591,
+              104100,
+              104261,
+              111886
+            ],
+            "type": "number"
+          },
+          "salesorderid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              51099,
+              69466,
+              69511,
+              69520,
+              71835
+            ],
+            "type": "number"
+          },
+          "specialofferid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              7,
+              13
+            ],
+            "type": "number"
+          },
+          "unitprice": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              48.594,
+              334.0575,
+              445.41,
+              539.99,
+              1376.994
+            ],
+            "type": "number"
+          },
+          "unitpricediscount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              0.02,
+              0.05,
+              0.15,
+              0.35
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "salesorderdetail::103590",
+                  "salesorderdetail::104099",
+                  "salesorderdetail::104260",
+                  "salesorderdetail::111885",
+                  "salesorderdetail::35950"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "salesorderdetail::103590"
+              },
+              {
+                "id": "salesorderdetail::104099"
+              },
+              {
+                "id": "salesorderdetail::104260"
+              },
+              {
+                "id": "salesorderdetail::111885"
+              },
+              {
+                "id": "salesorderdetail::35950"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "carriertrackingnumber": "",
+      "modifieddate": "2014-03-19 00:00:00",
+      "orderqty": 1,
+      "productid": 921,
+      "rowguid": "b35bd7b7-fe78-4ec2-a208-9e6987e2ab66",
+      "salesorderdetailid": 100149,
+      "salesorderid": 68576,
+      "specialofferid": 1,
+      "unitprice": 4.99,
+      "unitpricediscount": 0
+    },
+    {
+      "carriertrackingnumber": "30BA-40DA-B4",
+      "modifieddate": "2012-04-30 00:00:00",
+      "orderqty": 2,
+      "productid": 764,
+      "rowguid": "cc8485da-a13a-4bc7-88c4-3d9d102c3f59",
+      "salesorderdetailid": 10016,
+      "salesorderid": 46356,
+      "specialofferid": 1,
+      "unitprice": 419.4589,
+      "unitpricediscount": 0
+    },
+    {
+      "carriertrackingnumber": "",
+      "modifieddate": "2014-03-19 00:00:00",
+      "orderqty": 1,
+      "productid": 878,
+      "rowguid": "bb440990-a7f5-4c21-91be-1cb1dd1624cc",
+      "salesorderdetailid": 100151,
+      "salesorderid": 68577,
+      "specialofferid": 1,
+      "unitprice": 21.98,
+      "unitpricediscount": 0
+    },
+    {
+      "carriertrackingnumber": "",
+      "modifieddate": "2014-03-19 00:00:00",
+      "orderqty": 1,
+      "productid": 859,
+      "rowguid": "5512c25e-b3cb-4f0f-9d96-50eb9a297744",
+      "salesorderdetailid": 100165,
+      "salesorderid": 68581,
+      "specialofferid": 1,
+      "unitprice": 24.49,
+      "unitpricediscount": 0
+    },
+    {
+      "carriertrackingnumber": "30BA-40DA-B4",
+      "modifieddate": "2012-04-30 00:00:00",
+      "orderqty": 2,
+      "productid": 768,
+      "rowguid": "1f7f8560-90af-4476-afc0-1456ed8caefe",
+      "salesorderdetailid": 10022,
+      "salesorderid": 46356,
+      "specialofferid": 1,
+      "unitprice": 419.4589,
+      "unitpricediscount": 0
+    }
+  ]
+}

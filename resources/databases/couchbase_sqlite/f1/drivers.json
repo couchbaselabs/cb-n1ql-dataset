@@ -1,0 +1,272 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 859,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "code": {
+            "#docs": [
+              802,
+              57
+            ],
+            "%docs": [
+              93.36,
+              6.63
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "AIT",
+                "BOT",
+                "HAM",
+                "HAR",
+                "MAZ"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dob": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1934-04-10",
+              "1937-10-12",
+              "1942-05-27",
+              "1944-05-26",
+              "1946-07-10"
+            ],
+            "type": "string"
+          },
+          "driver_id": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              197,
+              344,
+              378,
+              406,
+              430
+            ],
+            "type": "number"
+          },
+          "driver_ref": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "beaufort",
+              "hawkins",
+              "jarier",
+              "posey",
+              "widdows"
+            ],
+            "type": "string"
+          },
+          "forename": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Carel Godin",
+              "Jean-Pierre",
+              "Paul",
+              "Robin",
+              "Sam"
+            ],
+            "type": "string"
+          },
+          "full_name": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Carel Godin de Beaufort",
+              "Jean-Pierre Jarier",
+              "Paul Hawkins",
+              "Robin Widdows",
+              "Sam Posey"
+            ],
+            "type": "string"
+          },
+          "nationality": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "American",
+              "Australian",
+              "British",
+              "Dutch",
+              "French"
+            ],
+            "type": "string"
+          },
+          "number": {
+            "#docs": [
+              802,
+              57
+            ],
+            "%docs": [
+              93.36,
+              6.63
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                9,
+                44,
+                77,
+                88,
+                89
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "surname": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Hawkins",
+              "Jarier",
+              "Posey",
+              "Widdows",
+              "de Beaufort"
+            ],
+            "type": "string"
+          },
+          "url": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "http://en.wikipedia.org/wiki/C...",
+              "http://en.wikipedia.org/wiki/J...",
+              "http://en.wikipedia.org/wiki/P...",
+              "http://en.wikipedia.org/wiki/R...",
+              "http://en.wikipedia.org/wiki/S..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 859,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "drivers::196",
+                  "drivers::343",
+                  "drivers::377",
+                  "drivers::405",
+                  "drivers::429"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "drivers::196"
+              },
+              {
+                "id": "drivers::343"
+              },
+              {
+                "id": "drivers::377"
+              },
+              {
+                "id": "drivers::405"
+              },
+              {
+                "id": "drivers::429"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "code": null,
+      "dob": "1949-02-22",
+      "driver_id": 182,
+      "driver_ref": "lauda",
+      "forename": "Niki",
+      "full_name": "Niki Lauda",
+      "nationality": "Austrian",
+      "number": null,
+      "surname": "Lauda",
+      "url": "http://en.wikipedia.org/wiki/Niki_Lauda"
+    },
+    {
+      "code": null,
+      "dob": "1946-09-30",
+      "driver_id": 200,
+      "driver_ref": "mass",
+      "forename": "Jochen",
+      "full_name": "Jochen Mass",
+      "nationality": "German",
+      "number": null,
+      "surname": "Mass",
+      "url": "http://en.wikipedia.org/wiki/Jochen_Mass"
+    },
+    {
+      "code": null,
+      "dob": "1933-06-21",
+      "driver_id": 355,
+      "driver_ref": "Cannoc",
+      "forename": "John",
+      "full_name": "John Cannon",
+      "nationality": "Canadian",
+      "number": null,
+      "surname": "Cannon",
+      "url": "http://en.wikipedia.org/wiki/John_Cannon_(auto_racer)"
+    },
+    {
+      "code": null,
+      "dob": "1942-05-27",
+      "driver_id": 361,
+      "driver_ref": "courage",
+      "forename": "Piers",
+      "full_name": "Piers Courage",
+      "nationality": "British",
+      "number": null,
+      "surname": "Courage",
+      "url": "http://en.wikipedia.org/wiki/Piers_Courage"
+    },
+    {
+      "code": null,
+      "dob": "1940-04-19",
+      "driver_id": 379,
+      "driver_ref": "ahrens",
+      "forename": "Kurt",
+      "full_name": "Kurt Ahrens",
+      "nationality": "German",
+      "number": null,
+      "surname": "Ahrens",
+      "url": "http://en.wikipedia.org/wiki/Kurt_Ahrens,_Jr."
+    }
+  ]
+}

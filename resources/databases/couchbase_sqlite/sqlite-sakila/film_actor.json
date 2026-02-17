@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "actor_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              41,
+              49,
+              69,
+              94
+            ],
+            "type": "number"
+          },
+          "film_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15,
+              521,
+              567,
+              674,
+              729
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:52:47",
+              "2021-03-06 15:52:53",
+              "2021-03-06 15:52:55",
+              "2021-03-06 15:52:59",
+              "2021-03-06 15:53:05"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "film_actor::1069",
+                  "film_actor::1290",
+                  "film_actor::1826",
+                  "film_actor::246",
+                  "film_actor::2516"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "film_actor::1069"
+              },
+              {
+                "id": "film_actor::1290"
+              },
+              {
+                "id": "film_actor::1826"
+              },
+              {
+                "id": "film_actor::246"
+              },
+              {
+                "id": "film_actor::2516"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "actor_id": 42,
+      "film_id": 502,
+      "last_update": "2021-03-06 15:52:53"
+    },
+    {
+      "actor_id": 43,
+      "film_id": 276,
+      "last_update": "2021-03-06 15:52:53"
+    },
+    {
+      "actor_id": 43,
+      "film_id": 462,
+      "last_update": "2021-03-06 15:52:54"
+    },
+    {
+      "actor_id": 44,
+      "film_id": 273,
+      "last_update": "2021-03-06 15:52:54"
+    },
+    {
+      "actor_id": 48,
+      "film_id": 245,
+      "last_update": "2021-03-06 15:52:55"
+    }
+  ]
+}

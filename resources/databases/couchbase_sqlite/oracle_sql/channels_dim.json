@@ -1,0 +1,82 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              42,
+              44
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Facebook",
+              "Twitter"
+            ],
+            "type": "string"
+          },
+          "shortcut": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "fb",
+              "tw"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "channels_dim::0",
+                  "channels_dim::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "channels_dim::0"
+              },
+              {
+                "id": "channels_dim::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "id": 42,
+      "name": "Twitter",
+      "shortcut": "tw"
+    },
+    {
+      "id": 44,
+      "name": "Facebook",
+      "shortcut": "fb"
+    }
+  ]
+}

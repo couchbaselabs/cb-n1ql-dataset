@@ -1,0 +1,147 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Quantity` = 1",
+        "properties": {
+          "InvoiceId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              243,
+              312,
+              333,
+              339,
+              395
+            ],
+            "type": "number"
+          },
+          "InvoiceLineId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1321,
+              1688,
+              1807,
+              1833,
+              2136
+            ],
+            "type": "number"
+          },
+          "Quantity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "TrackId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              485,
+              651,
+              1044,
+              2503,
+              3262
+            ],
+            "type": "number"
+          },
+          "UnitPrice": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.99,
+              1.99
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "InvoiceLine::1320",
+                  "InvoiceLine::1687",
+                  "InvoiceLine::1806",
+                  "InvoiceLine::1832",
+                  "InvoiceLine::2135"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "InvoiceLine::1320"
+              },
+              {
+                "id": "InvoiceLine::1687"
+              },
+              {
+                "id": "InvoiceLine::1806"
+              },
+              {
+                "id": "InvoiceLine::1832"
+              },
+              {
+                "id": "InvoiceLine::2135"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "InvoiceId": 187,
+      "InvoiceLineId": 1018,
+      "Quantity": 1,
+      "TrackId": 2700,
+      "UnitPrice": 0.99
+    },
+    {
+      "InvoiceId": 188,
+      "InvoiceLineId": 1024,
+      "Quantity": 1,
+      "TrackId": 2759,
+      "UnitPrice": 0.99
+    },
+    {
+      "InvoiceId": 220,
+      "InvoiceLineId": 1188,
+      "Quantity": 1,
+      "TrackId": 214,
+      "UnitPrice": 0.99
+    },
+    {
+      "InvoiceId": 250,
+      "InvoiceLineId": 1353,
+      "Quantity": 1,
+      "TrackId": 1222,
+      "UnitPrice": 0.99
+    },
+    {
+      "InvoiceId": 252,
+      "InvoiceLineId": 1367,
+      "Quantity": 1,
+      "TrackId": 1345,
+      "UnitPrice": 0.99
+    }
+  ]
+}

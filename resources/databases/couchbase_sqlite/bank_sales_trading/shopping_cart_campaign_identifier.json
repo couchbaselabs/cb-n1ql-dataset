@@ -1,0 +1,122 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 3,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "campaign_id": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "campaign_name": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "25% Off - Living The Lux Life",
+              "BOGOF - Fishing For Compliment...",
+              "Half Off - Treat Your Shellf(i..."
+            ],
+            "type": "string"
+          },
+          "end_date": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-01-14",
+              "2020-01-28",
+              "2020-03-31"
+            ],
+            "type": "string"
+          },
+          "products": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1-3",
+              "4-5",
+              "6-8"
+            ],
+            "type": "string"
+          },
+          "start_date": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-01-01",
+              "2020-01-15",
+              "2020-02-01"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 3,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "shopping_cart_campaign_identif...",
+                  "shopping_cart_campaign_identif...",
+                  "shopping_cart_campaign_identif..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "shopping_cart_campaign_identifier::0"
+              },
+              {
+                "id": "shopping_cart_campaign_identifier::1"
+              },
+              {
+                "id": "shopping_cart_campaign_identifier::2"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "campaign_id": 2,
+      "campaign_name": "25% Off - Living The Lux Life",
+      "end_date": "2020-01-28",
+      "products": "4-5",
+      "start_date": "2020-01-15"
+    },
+    {
+      "campaign_id": 3,
+      "campaign_name": "Half Off - Treat Your Shellf(ish)",
+      "end_date": "2020-03-31",
+      "products": "6-8",
+      "start_date": "2020-02-01"
+    },
+    {
+      "campaign_id": 1,
+      "campaign_name": "BOGOF - Fishing For Compliments",
+      "end_date": "2020-01-14",
+      "products": "1-3",
+      "start_date": "2020-01-01"
+    }
+  ]
+}

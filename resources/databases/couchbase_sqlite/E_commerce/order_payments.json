@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "40bf40ed29a5bbdb73aaeb5eb13416...",
+              "44dda2cb3f0a0d9e29546d8afcb6c2...",
+              "753356c741c466246c76d087610811...",
+              "a05ae67f6ad2b945b17caa9fde78c4...",
+              "fe9ada7f3e7d6b80fdc7ef06df7559..."
+            ],
+            "type": "string"
+          },
+          "payment_installments": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              4,
+              5,
+              10
+            ],
+            "type": "number"
+          },
+          "payment_sequential": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            "type": "number"
+          },
+          "payment_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "boleto",
+              "credit_card",
+              "debit_card",
+              "not_defined",
+              "voucher"
+            ],
+            "type": "string"
+          },
+          "payment_value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              48.44,
+              59.09,
+              82.73,
+              135.49,
+              162.81
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "order_payments::102782",
+                  "order_payments::103775",
+                  "order_payments::19842",
+                  "order_payments::23329",
+                  "order_payments::36755"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "order_payments::102782"
+              },
+              {
+                "id": "order_payments::103775"
+              },
+              {
+                "id": "order_payments::19842"
+              },
+              {
+                "id": "order_payments::23329"
+              },
+              {
+                "id": "order_payments::36755"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "order_id": "dadb8dd1ec0c5e2a6e53a6e4121d7938",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "boleto",
+      "payment_value": 49.09
+    },
+    {
+      "order_id": "d32aae18f0f7dfd247193137870ecf0a",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "boleto",
+      "payment_value": 96.49
+    },
+    {
+      "order_id": "80c3447167bed567a8646b0802408d48",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "boleto",
+      "payment_value": 76.78
+    },
+    {
+      "order_id": "c733bae44f0aa970fb902baf713a1372",
+      "payment_installments": 1,
+      "payment_sequential": 1,
+      "payment_type": "boleto",
+      "payment_value": 179.01
+    },
+    {
+      "order_id": "a3a81e0b3771258744b5002e1ab03ee6",
+      "payment_installments": 2,
+      "payment_sequential": 1,
+      "payment_type": "credit_card",
+      "payment_value": 27.42
+    }
+  ]
+}

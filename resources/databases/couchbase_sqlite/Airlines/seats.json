@@ -1,0 +1,116 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "aircraft_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "319",
+              "321",
+              "773",
+              "CN1",
+              "CR2"
+            ],
+            "type": "string"
+          },
+          "fare_conditions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Business",
+              "Comfort",
+              "Economy"
+            ],
+            "type": "string"
+          },
+          "seat_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20B",
+              "20D",
+              "22B",
+              "2A",
+              "50A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "seats::1153",
+                  "seats::1167",
+                  "seats::1216",
+                  "seats::1222",
+                  "seats::189"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "seats::1153"
+              },
+              {
+                "id": "seats::1167"
+              },
+              {
+                "id": "seats::1216"
+              },
+              {
+                "id": "seats::1222"
+              },
+              {
+                "id": "seats::189"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aircraft_code": "773",
+      "fare_conditions": "Economy",
+      "seat_no": "36F"
+    },
+    {
+      "aircraft_code": "773",
+      "fare_conditions": "Economy",
+      "seat_no": "40D"
+    },
+    {
+      "aircraft_code": "320",
+      "fare_conditions": "Economy",
+      "seat_no": "9C"
+    },
+    {
+      "aircraft_code": "320",
+      "fare_conditions": "Economy",
+      "seat_no": "9E"
+    },
+    {
+      "aircraft_code": "320",
+      "fare_conditions": "Economy",
+      "seat_no": "12A"
+    }
+  ]
+}

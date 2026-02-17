@@ -1,0 +1,116 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 36,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CustomerID": {
+            "#docs": 36,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10003,
+              10004,
+              10007,
+              10010,
+              10015
+            ],
+            "type": "number"
+          },
+          "PreferenceSeq": {
+            "#docs": 36,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "StyleID": {
+            "#docs": 36,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              15,
+              19,
+              21,
+              24
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 36,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 36,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Musical_Preferences::14",
+                  "Musical_Preferences::20",
+                  "Musical_Preferences::33",
+                  "Musical_Preferences::5",
+                  "Musical_Preferences::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Musical_Preferences::14"
+              },
+              {
+                "id": "Musical_Preferences::20"
+              },
+              {
+                "id": "Musical_Preferences::33"
+              },
+              {
+                "id": "Musical_Preferences::5"
+              },
+              {
+                "id": "Musical_Preferences::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CustomerID": 10003,
+      "PreferenceSeq": 2,
+      "StyleID": 17
+    },
+    {
+      "CustomerID": 10009,
+      "PreferenceSeq": 2,
+      "StyleID": 6
+    },
+    {
+      "CustomerID": 10011,
+      "PreferenceSeq": 2,
+      "StyleID": 1
+    },
+    {
+      "CustomerID": 10009,
+      "PreferenceSeq": 3,
+      "StyleID": 18
+    },
+    {
+      "CustomerID": 10015,
+      "PreferenceSeq": 1,
+      "StyleID": 21
+    }
+  ]
+}

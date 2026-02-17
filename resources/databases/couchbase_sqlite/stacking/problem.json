@@ -1,0 +1,133 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 20,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Franck-Hertz",
+              "Hospital Mortality Prediction",
+              "concrete",
+              "kindey stone urine analysis",
+              "water quality 2"
+            ],
+            "type": "string"
+          },
+          "path": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "https://www.kaggle.com/dataset...",
+              "https://www.kaggle.com/dataset...",
+              "https://www.kaggle.com/dataset...",
+              "https://www.kaggle.com/dataset...",
+              "https://www.kaggle.com/dataset..."
+            ],
+            "type": "string"
+          },
+          "target": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Concrete compressive strength(...",
+              "I",
+              "Water_Quality",
+              "outcome",
+              "target"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "classification",
+              "regression"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 20,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 20,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "problem::1",
+                  "problem::15",
+                  "problem::16",
+                  "problem::17",
+                  "problem::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "problem::1"
+              },
+              {
+                "id": "problem::15"
+              },
+              {
+                "id": "problem::16"
+              },
+              {
+                "id": "problem::17"
+              },
+              {
+                "id": "problem::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "concrete",
+      "path": "https://www.kaggle.com/datasets/prathamtripathi/regression-with-neural-networking",
+      "target": "Concrete compressive strength(MPa, megapascals) ",
+      "type": "regression"
+    },
+    {
+      "name": "lithium ion batteries",
+      "path": "https://www.kaggle.com/datasets/divyansh22/crystal-system-properties-for-liion-batteries",
+      "target": "Crystal System",
+      "type": "classification"
+    },
+    {
+      "name": "water quality 2",
+      "path": "https://www.kaggle.com/datasets/saraharsh/water-quality",
+      "target": "Water_Quality",
+      "type": "classification"
+    },
+    {
+      "name": "kindey stone urine analysis",
+      "path": "https://www.kaggle.com/datasets/vuppalaadithyasairam/kidney-stone-prediction-based-on-urine-analysis",
+      "target": "target",
+      "type": "classification"
+    },
+    {
+      "name": "Critical Heat Flux",
+      "path": "https://www.kaggle.com/datasets/saurabhshahane/predicting-heat-flux",
+      "target": "chf_exp [MW/m2]",
+      "type": "regression"
+    }
+  ]
+}

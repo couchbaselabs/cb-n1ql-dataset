@@ -1,0 +1,229 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 951,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "hub_id": {
+            "#docs": 951,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              13,
+              25,
+              28,
+              35
+            ],
+            "type": "number"
+          },
+          "store_id": {
+            "#docs": 951,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              294,
+              809,
+              879,
+              1279,
+              1293
+            ],
+            "type": "number"
+          },
+          "store_latitude": {
+            "#docs": [
+              10,
+              941
+            ],
+            "%docs": [
+              1.05,
+              98.94
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -23.595775,
+                -23.570765,
+                -22.97315,
+                -22.921475,
+                -22.8858199
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "store_longitude": {
+            "#docs": [
+              10,
+              941
+            ],
+            "%docs": [
+              1.05,
+              98.94
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -46.685984,
+                -46.642043,
+                -43.370811,
+                -43.2792183,
+                -43.234822
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "store_name": {
+            "#docs": 951,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GARPI ",
+              "PAPA CILMIOUS ",
+              "PAPA SUCIS ",
+              "RISIRA ",
+              "SIRSUMG "
+            ],
+            "type": "string"
+          },
+          "store_plan_price": {
+            "#docs": [
+              105,
+              846
+            ],
+            "%docs": [
+              11.04,
+              88.95
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                29,
+                29.9,
+                49,
+                49.9
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "store_segment": {
+            "#docs": 951,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "FOOD",
+              "GOOD"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 951,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 951,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "stores::181",
+                  "stores::199",
+                  "stores::33",
+                  "stores::354",
+                  "stores::360"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "stores::181"
+              },
+              {
+                "id": "stores::199"
+              },
+              {
+                "id": "stores::33"
+              },
+              {
+                "id": "stores::354"
+              },
+              {
+                "id": "stores::360"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "hub_id": 8,
+      "store_id": 85,
+      "store_latitude": -22.921475,
+      "store_longitude": -43.234822,
+      "store_name": "PRISMAURAI ",
+      "store_plan_price": 0,
+      "store_segment": "FOOD"
+    },
+    {
+      "hub_id": 31,
+      "store_id": 875,
+      "store_latitude": -23.631835,
+      "store_longitude": -46.735203,
+      "store_name": "RIRURIMUA ",
+      "store_plan_price": 49.9,
+      "store_segment": "FOOD"
+    },
+    {
+      "hub_id": 13,
+      "store_id": 189,
+      "store_latitude": -22.8858199,
+      "store_longitude": -43.2792183,
+      "store_name": "USPUMUI CIRAICI ",
+      "store_plan_price": 49,
+      "store_segment": "FOOD"
+    },
+    {
+      "hub_id": 31,
+      "store_id": 1246,
+      "store_latitude": -23.631835,
+      "store_longitude": -46.735203,
+      "store_name": "PUGUM ",
+      "store_plan_price": 29,
+      "store_segment": "GOOD"
+    },
+    {
+      "hub_id": 29,
+      "store_id": 1345,
+      "store_latitude": -23.561053,
+      "store_longitude": -46.558976,
+      "store_name": "CAI RIRAMARI ",
+      "store_plan_price": 29,
+      "store_segment": "GOOD"
+    }
+  ]
+}

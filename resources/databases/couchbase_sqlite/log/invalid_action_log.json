@@ -1,0 +1,229 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 7,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "action": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "add_cart",
+              "favorite",
+              "purchase",
+              "view"
+            ],
+            "type": "string"
+          },
+          "amount": {
+            "#docs": [
+              5,
+              2
+            ],
+            "%docs": [
+              71.42,
+              28.57
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1000,
+                2000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "category": {
+            "#docs": [
+              5,
+              2
+            ],
+            "%docs": [
+              71.42,
+              28.57
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "drama"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "products": {
+            "#docs": [
+              5,
+              2
+            ],
+            "%docs": [
+              71.42,
+              28.57
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "D001,D002",
+                "D002"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "session": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0CVKaz",
+              "1QceiB"
+            ],
+            "type": "string"
+          },
+          "stamp": {
+            "#docs": [
+              1,
+              6
+            ],
+            "%docs": [
+              14.28,
+              85.71
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2016-11-03 18:00:00",
+                "2016-11-03 18:01:00",
+                "2016-11-03 18:02:00",
+                "2016-11-03 18:10:00",
+                "2016-11-04 13:00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "user_id": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U001",
+              "U002"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 7,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "invalid_action_log::0",
+                  "invalid_action_log::2",
+                  "invalid_action_log::3",
+                  "invalid_action_log::5",
+                  "invalid_action_log::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "invalid_action_log::0"
+              },
+              {
+                "id": "invalid_action_log::2"
+              },
+              {
+                "id": "invalid_action_log::3"
+              },
+              {
+                "id": "invalid_action_log::5"
+              },
+              {
+                "id": "invalid_action_log::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "action": "purchase",
+      "amount": 2000,
+      "category": "drama",
+      "products": "D001,D002",
+      "session": "0CVKaz",
+      "stamp": "2016-11-03 18:10:00",
+      "user_id": "U001"
+    },
+    {
+      "action": "view",
+      "amount": null,
+      "category": null,
+      "products": null,
+      "session": "0CVKaz",
+      "stamp": "2016-11-03 18:00:00",
+      "user_id": "U001"
+    },
+    {
+      "action": "add_cart",
+      "amount": null,
+      "category": "drama",
+      "products": "D002",
+      "session": "0CVKaz",
+      "stamp": "2016-11-03 18:01:00",
+      "user_id": "U001"
+    },
+    {
+      "action": "add_cart",
+      "amount": null,
+      "category": "drama",
+      "products": null,
+      "session": "0CVKaz",
+      "stamp": "2016-11-03 18:02:00",
+      "user_id": "U001"
+    },
+    {
+      "action": "favorite",
+      "amount": null,
+      "category": "drama",
+      "products": "D001",
+      "session": "0CVKaz",
+      "stamp": "2016-11-03 18:00:00",
+      "user_id": "U001"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CompanyName": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AXA",
+              "EarlySalary.com",
+              "KrazyBee",
+              "Sandvik",
+              "Sanofi"
+            ],
+            "type": "string"
+          },
+          "JobTitle": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Data Analyst",
+              "Data Engineer",
+              "Data Science",
+              "Data Scientist",
+              "Machine Learning Engineer"
+            ],
+            "type": "string"
+          },
+          "Location": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bangalore",
+              "Hyderabad",
+              "Mumbai",
+              "New Delhi",
+              "Pune"
+            ],
+            "type": "string"
+          },
+          "SalariesReported": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              10
+            ],
+            "type": "number"
+          },
+          "Salary": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "\u20b910,70,000/yr",
+              "\u20b911,49,607/yr",
+              "\u20b93,00,000/yr",
+              "\u20b935,268/mo",
+              "\u20b98,38,593/yr"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              173,
+              1109,
+              1125,
+              1260,
+              1946
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "SalaryDataset::1109",
+                  "SalaryDataset::1125",
+                  "SalaryDataset::1260",
+                  "SalaryDataset::173",
+                  "SalaryDataset::1946"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "SalaryDataset::1109"
+              },
+              {
+                "id": "SalaryDataset::1125"
+              },
+              {
+                "id": "SalaryDataset::1260"
+              },
+              {
+                "id": "SalaryDataset::173"
+              },
+              {
+                "id": "SalaryDataset::1946"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CompanyName": "Asquared IoT",
+      "JobTitle": "Data Scientist",
+      "Location": "Pune",
+      "SalariesReported": 2,
+      "Salary": "\u20b96,37,645/yr",
+      "index": 1049
+    },
+    {
+      "CompanyName": "Jash Data Sciences",
+      "JobTitle": "Data Scientist",
+      "Location": "Pune",
+      "SalariesReported": 2,
+      "Salary": "\u20b96,69,083/yr",
+      "index": 1051
+    },
+    {
+      "CompanyName": "Honeywell",
+      "JobTitle": "Data Scientist",
+      "Location": "Pune",
+      "SalariesReported": 1,
+      "Salary": "\u20b914,38,481/yr",
+      "index": 1065
+    },
+    {
+      "CompanyName": "Fiserv",
+      "JobTitle": "Data Science",
+      "Location": "Pune",
+      "SalariesReported": 1,
+      "Salary": "\u20b910,36,984/yr",
+      "index": 1284
+    },
+    {
+      "CompanyName": "Brainwave Consulting",
+      "JobTitle": "Data Science",
+      "Location": "Pune",
+      "SalariesReported": 1,
+      "Salary": "\u20b95,070/mo",
+      "index": 1314
+    }
+  ]
+}

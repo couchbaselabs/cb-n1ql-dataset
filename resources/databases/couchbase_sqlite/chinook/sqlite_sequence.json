@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "artists",
+              "genres",
+              "invoice_items",
+              "media_types",
+              "tracks"
+            ],
+            "type": "string"
+          },
+          "seq": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              25,
+              275,
+              2240,
+              3503
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sqlite_sequence::0",
+                  "sqlite_sequence::1",
+                  "sqlite_sequence::2",
+                  "sqlite_sequence::4",
+                  "sqlite_sequence::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sqlite_sequence::0"
+              },
+              {
+                "id": "sqlite_sequence::1"
+              },
+              {
+                "id": "sqlite_sequence::2"
+              },
+              {
+                "id": "sqlite_sequence::4"
+              },
+              {
+                "id": "sqlite_sequence::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "tracks",
+      "seq": 3503
+    },
+    {
+      "name": "employees",
+      "seq": 8
+    },
+    {
+      "name": "genres",
+      "seq": 25
+    },
+    {
+      "name": "customers",
+      "seq": 59
+    },
+    {
+      "name": "albums",
+      "seq": 347
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "words": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "animist",
+              "hotelhood",
+              "incantational",
+              "interrenalism",
+              "javelins"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "word_list::147969",
+                  "word_list::153363",
+                  "word_list::159496",
+                  "word_list::164333",
+                  "word_list::16928"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "word_list::147969"
+              },
+              {
+                "id": "word_list::153363"
+              },
+              {
+                "id": "word_list::159496"
+              },
+              {
+                "id": "word_list::164333"
+              },
+              {
+                "id": "word_list::16928"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "words": "agnations"
+    },
+    {
+      "words": "eyedrop"
+    },
+    {
+      "words": "eyelash"
+    },
+    {
+      "words": "eyeletted"
+    },
+    {
+      "words": "eyeletting"
+    }
+  ]
+}

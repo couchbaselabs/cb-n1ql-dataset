@@ -1,0 +1,342 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "case_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              731492,
+              1095265,
+              2533872,
+              9550010705174516000,
+              9580010819003015000
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              750889,
+              1127414,
+              2654706,
+              8694203,
+              8713901
+            ],
+            "type": "number"
+          },
+          "party_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            "type": "number"
+          },
+          "victim_age": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                10,
+                20,
+                35,
+                45,
+                73
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "victim_degree_of_injury": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "complaint of pain",
+              "killed",
+              "no injury",
+              "other visible injury",
+              "severe injury"
+            ],
+            "type": "string"
+          },
+          "victim_ejected": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "fully ejected",
+                "not ejected",
+                "partially ejected",
+                "unknown"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "victim_role": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "bicyclist",
+              "driver",
+              "non-injured party",
+              "passenger",
+              "pedestrian"
+            ],
+            "type": "string"
+          },
+          "victim_safety_equipment_1": {
+            "#docs": [
+              37,
+              963
+            ],
+            "%docs": [
+              3.7,
+              96.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "air bag deployed",
+                "driver, motorcycle helmet not ...",
+                "driver, motorcycle helmet used",
+                "lap/shoulder harness not used",
+                "lap/shoulder harness used"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "victim_safety_equipment_2": {
+            "#docs": [
+              372,
+              628
+            ],
+            "%docs": [
+              37.2,
+              62.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "child restraint in vehicle use...",
+                "lap/shoulder harness not used",
+                "lap/shoulder harness used",
+                "none in vehicle",
+                "unknown"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "victim_seating_position": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "driver",
+                "passenger seat 3",
+                "passenger seat 4",
+                "passenger seat 6",
+                "position unknown"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "victim_sex": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "female",
+                "male"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "victims::15621",
+                  "victims::19440",
+                  "victims::19866",
+                  "victims::74371",
+                  "victims::9390"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "victims::15621"
+              },
+              {
+                "id": "victims::19440"
+              },
+              {
+                "id": "victims::19866"
+              },
+              {
+                "id": "victims::74371"
+              },
+              {
+                "id": "victims::9390"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "case_id": 4912761,
+      "id": 782584,
+      "party_number": 2,
+      "victim_age": 45,
+      "victim_degree_of_injury": "complaint of pain",
+      "victim_ejected": "not ejected",
+      "victim_role": "driver",
+      "victim_safety_equipment_1": "air bag not deployed",
+      "victim_safety_equipment_2": "lap/shoulder harness used",
+      "victim_seating_position": "driver",
+      "victim_sex": "female"
+    },
+    {
+      "case_id": 7032915,
+      "id": 2895401,
+      "party_number": 2,
+      "victim_age": 53,
+      "victim_degree_of_injury": "complaint of pain",
+      "victim_ejected": "not ejected",
+      "victim_role": "driver",
+      "victim_safety_equipment_1": "air bag not deployed",
+      "victim_safety_equipment_2": "lap/shoulder harness used",
+      "victim_seating_position": "driver",
+      "victim_sex": "female"
+    },
+    {
+      "case_id": 6431084,
+      "id": 2267398,
+      "party_number": 2,
+      "victim_age": 24,
+      "victim_degree_of_injury": "complaint of pain",
+      "victim_ejected": "not ejected",
+      "victim_role": "driver",
+      "victim_safety_equipment_1": "air bag not deployed",
+      "victim_safety_equipment_2": "lap/shoulder harness used",
+      "victim_seating_position": "driver",
+      "victim_sex": "male"
+    },
+    {
+      "case_id": 90013325,
+      "id": 4014652,
+      "party_number": 1,
+      "victim_age": 3,
+      "victim_degree_of_injury": "no injury",
+      "victim_ejected": "not ejected",
+      "victim_role": "passenger",
+      "victim_safety_equipment_1": "air bag not deployed",
+      "victim_safety_equipment_2": "child restraint in vehicle used",
+      "victim_seating_position": "passenger seat 4",
+      "victim_sex": "female"
+    },
+    {
+      "case_id": 3548563,
+      "id": 4595,
+      "party_number": 2,
+      "victim_age": 33,
+      "victim_degree_of_injury": "complaint of pain",
+      "victim_ejected": "unknown",
+      "victim_role": "driver",
+      "victim_safety_equipment_1": "air bag not deployed",
+      "victim_safety_equipment_2": "lap/shoulder harness used",
+      "victim_seating_position": "driver",
+      "victim_sex": "male"
+    }
+  ]
+}

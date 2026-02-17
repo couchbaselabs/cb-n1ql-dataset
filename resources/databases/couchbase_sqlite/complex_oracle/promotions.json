@@ -1,0 +1,254 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 503,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`promo_total` = \"Promotion total\", `promo_total_id` = 1",
+        "properties": {
+          "promo_begin_date": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-07-16",
+              "2020-03-27",
+              "2020-04-06",
+              "2021-05-31",
+              "2021-08-06"
+            ],
+            "type": "string"
+          },
+          "promo_category": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TV",
+              "flyer",
+              "internet",
+              "newspaper",
+              "radio"
+            ],
+            "type": "string"
+          },
+          "promo_category_id": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              5,
+              6,
+              8,
+              10
+            ],
+            "type": "number"
+          },
+          "promo_cost": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7600,
+              22400,
+              25700,
+              46700,
+              50400
+            ],
+            "type": "number"
+          },
+          "promo_end_date": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-09-16",
+              "2020-06-27",
+              "2020-07-06",
+              "2021-06-30",
+              "2021-09-06"
+            ],
+            "type": "string"
+          },
+          "promo_id": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              34,
+              48,
+              182,
+              184,
+              198
+            ],
+            "type": "number"
+          },
+          "promo_name": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "internet promotion #14-198",
+              "internet promotion #29-182",
+              "newspaper promotion #19-34",
+              "newspaper promotion #19-48",
+              "radio promotion #32-184"
+            ],
+            "type": "string"
+          },
+          "promo_subcategory": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TV program sponsorship",
+              "ad",
+              "coupon news",
+              "online discount",
+              "radio program sponsorship"
+            ],
+            "type": "string"
+          },
+          "promo_subcategory_id": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              14,
+              19,
+              29,
+              32
+            ],
+            "type": "number"
+          },
+          "promo_total": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Promotion total"
+            ],
+            "type": "string"
+          },
+          "promo_total_id": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 503,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 503,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "promotions::1",
+                  "promotions::149",
+                  "promotions::15",
+                  "promotions::151",
+                  "promotions::165"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "promotions::1"
+              },
+              {
+                "id": "promotions::149"
+              },
+              {
+                "id": "promotions::15"
+              },
+              {
+                "id": "promotions::151"
+              },
+              {
+                "id": "promotions::165"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "promo_begin_date": "2020-03-27",
+      "promo_category": "magazine",
+      "promo_category_id": 7,
+      "promo_cost": 60100,
+      "promo_end_date": "2020-06-27",
+      "promo_id": 317,
+      "promo_name": "magazine promotion #18-317",
+      "promo_subcategory": "coupon magazine",
+      "promo_subcategory_id": 18,
+      "promo_total": "Promotion total",
+      "promo_total_id": 1
+    },
+    {
+      "promo_begin_date": "2020-10-05",
+      "promo_category": "magazine",
+      "promo_category_id": 7,
+      "promo_cost": 30000,
+      "promo_end_date": "2021-01-05",
+      "promo_id": 347,
+      "promo_name": "magazine promotion #15-347",
+      "promo_subcategory": "ad magazine",
+      "promo_subcategory_id": 15,
+      "promo_total": "Promotion total",
+      "promo_total_id": 1
+    },
+    {
+      "promo_begin_date": "2020-04-24",
+      "promo_category": "magazine",
+      "promo_category_id": 7,
+      "promo_cost": 84200,
+      "promo_end_date": "2020-07-24",
+      "promo_id": 353,
+      "promo_name": "magazine promotion #26-353",
+      "promo_subcategory": "manufacture rebate magazine",
+      "promo_subcategory_id": 26,
+      "promo_total": "Promotion total",
+      "promo_total_id": 1
+    },
+    {
+      "promo_begin_date": "2020-03-30",
+      "promo_category": "post",
+      "promo_category_id": 9,
+      "promo_cost": 71400,
+      "promo_end_date": "2020-06-30",
+      "promo_id": 371,
+      "promo_name": "post promotion #20-371",
+      "promo_subcategory": "downtown billboard",
+      "promo_subcategory_id": 20,
+      "promo_total": "Promotion total",
+      "promo_total_id": 1
+    },
+    {
+      "promo_begin_date": "2021-05-07",
+      "promo_category": "internet",
+      "promo_category_id": 6,
+      "promo_cost": 67400,
+      "promo_end_date": "2021-06-07",
+      "promo_id": 485,
+      "promo_name": "internet promotion #14-485",
+      "promo_subcategory": "ad",
+      "promo_subcategory_id": 14,
+      "promo_total": "Promotion total",
+      "promo_total_id": 1
+    }
+  ]
+}

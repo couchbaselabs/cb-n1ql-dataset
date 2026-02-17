@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "category": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "actor",
+              "actress"
+            ],
+            "type": "string"
+          },
+          "movie_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt7112162",
+              "tt7246718",
+              "tt7504496",
+              "tt7768800",
+              "tt8176578"
+            ],
+            "type": "string"
+          },
+          "name_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "nm0089710",
+              "nm0532458",
+              "nm1125989",
+              "nm3690698",
+              "nm5337560"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "role_mapping::10501",
+                  "role_mapping::10961",
+                  "role_mapping::11806",
+                  "role_mapping::12492",
+                  "role_mapping::13451"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "role_mapping::10501"
+              },
+              {
+                "id": "role_mapping::10961"
+              },
+              {
+                "id": "role_mapping::11806"
+              },
+              {
+                "id": "role_mapping::12492"
+              },
+              {
+                "id": "role_mapping::13451"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "category": "actor",
+      "movie_id": "tt6967980",
+      "name_id": "nm4731677"
+    },
+    {
+      "category": "actress",
+      "movie_id": "tt6981702",
+      "name_id": "nm1071554"
+    },
+    {
+      "category": "actress",
+      "movie_id": "tt6982254",
+      "name_id": "nm5975306"
+    },
+    {
+      "category": "actor",
+      "movie_id": "tt6984530",
+      "name_id": "nm0130429"
+    },
+    {
+      "category": "actor",
+      "movie_id": "tt7023500",
+      "name_id": "nm5990227"
+    }
+  ]
+}

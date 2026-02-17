@@ -1,0 +1,116 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 168,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "GameNumber": {
+            "#docs": 168,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "MatchID": {
+            "#docs": 168,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              34,
+              40,
+              46,
+              49,
+              50
+            ],
+            "type": "number"
+          },
+          "WinningTeamID": {
+            "#docs": 168,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              4,
+              5,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 168,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 168,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Match_Games::101",
+                  "Match_Games::119",
+                  "Match_Games::135",
+                  "Match_Games::145",
+                  "Match_Games::147"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Match_Games::101"
+              },
+              {
+                "id": "Match_Games::119"
+              },
+              {
+                "id": "Match_Games::135"
+              },
+              {
+                "id": "Match_Games::145"
+              },
+              {
+                "id": "Match_Games::147"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "GameNumber": 3,
+      "MatchID": 16,
+      "WinningTeamID": 4
+    },
+    {
+      "GameNumber": 2,
+      "MatchID": 25,
+      "WinningTeamID": 1
+    },
+    {
+      "GameNumber": 2,
+      "MatchID": 5,
+      "WinningTeamID": 1
+    },
+    {
+      "GameNumber": 1,
+      "MatchID": 10,
+      "WinningTeamID": 1
+    },
+    {
+      "GameNumber": 1,
+      "MatchID": 20,
+      "WinningTeamID": 7
+    }
+  ]
+}

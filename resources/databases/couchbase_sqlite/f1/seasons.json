@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 75,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "url": {
+            "#docs": 75,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "http://en.wikipedia.org/wiki/1...",
+              "http://en.wikipedia.org/wiki/1...",
+              "http://en.wikipedia.org/wiki/1...",
+              "http://en.wikipedia.org/wiki/2...",
+              "http://en.wikipedia.org/wiki/2..."
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 75,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1964,
+              1966,
+              1974,
+              2018,
+              2020
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 75,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 75,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "seasons::36",
+                  "seasons::44",
+                  "seasons::46",
+                  "seasons::68",
+                  "seasons::70"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "seasons::36"
+              },
+              {
+                "id": "seasons::44"
+              },
+              {
+                "id": "seasons::46"
+              },
+              {
+                "id": "seasons::68"
+              },
+              {
+                "id": "seasons::70"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "url": "http://en.wikipedia.org/wiki/1977_Formula_One_season",
+      "year": 1977
+    },
+    {
+      "url": "http://en.wikipedia.org/wiki/1958_Formula_One_season",
+      "year": 1958
+    },
+    {
+      "url": "http://en.wikipedia.org/wiki/2016_Formula_One_season",
+      "year": 2016
+    },
+    {
+      "url": "http://en.wikipedia.org/wiki/2006_Formula_One_season",
+      "year": 2006
+    },
+    {
+      "url": "http://en.wikipedia.org/wiki/1956_Formula_One_season",
+      "year": 1956
+    }
+  ]
+}

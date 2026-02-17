@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 579,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "fiscal_year": {
+            "#docs": 579,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2020,
+              2021
+            ],
+            "type": "number"
+          },
+          "gross_price": {
+            "#docs": 579,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14.5677,
+              299.4172,
+              310.0885,
+              474.3154,
+              506.2689
+            ],
+            "type": "number"
+          },
+          "product_code": {
+            "#docs": 579,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A2520150506",
+              "A4419110405",
+              "A4520110504",
+              "A5119110303",
+              "A5119110307"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 579,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 579,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "hardware_fact_gross_price::187",
+                  "hardware_fact_gross_price::352",
+                  "hardware_fact_gross_price::366",
+                  "hardware_fact_gross_price::414",
+                  "hardware_fact_gross_price::420"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "hardware_fact_gross_price::187"
+              },
+              {
+                "id": "hardware_fact_gross_price::352"
+              },
+              {
+                "id": "hardware_fact_gross_price::366"
+              },
+              {
+                "id": "hardware_fact_gross_price::414"
+              },
+              {
+                "id": "hardware_fact_gross_price::420"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "fiscal_year": 2020,
+      "gross_price": 7.4345,
+      "product_code": "A2219150204"
+    },
+    {
+      "fiscal_year": 2020,
+      "gross_price": 9.7363,
+      "product_code": "A2319150305"
+    },
+    {
+      "fiscal_year": 2020,
+      "gross_price": 11.4191,
+      "product_code": "A3018150203"
+    },
+    {
+      "fiscal_year": 2020,
+      "gross_price": 12.8819,
+      "product_code": "A3019150206"
+    },
+    {
+      "fiscal_year": 2020,
+      "gross_price": 410.7825,
+      "product_code": "A4918110102"
+    }
+  ]
+}

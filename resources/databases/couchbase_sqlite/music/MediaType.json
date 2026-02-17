@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "MediaTypeId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AAC audio file",
+              "MPEG audio file",
+              "Protected AAC audio file",
+              "Protected MPEG-4 video file",
+              "Purchased AAC audio file"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "MediaType::0",
+                  "MediaType::1",
+                  "MediaType::2",
+                  "MediaType::3",
+                  "MediaType::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "MediaType::0"
+              },
+              {
+                "id": "MediaType::1"
+              },
+              {
+                "id": "MediaType::2"
+              },
+              {
+                "id": "MediaType::3"
+              },
+              {
+                "id": "MediaType::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "MediaTypeId": 3,
+      "Name": "Protected MPEG-4 video file"
+    },
+    {
+      "MediaTypeId": 1,
+      "Name": "MPEG audio file"
+    },
+    {
+      "MediaTypeId": 5,
+      "Name": "AAC audio file"
+    },
+    {
+      "MediaTypeId": 2,
+      "Name": "Protected AAC audio file"
+    },
+    {
+      "MediaTypeId": 4,
+      "Name": "Purchased AAC audio file"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 6,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AAA",
+              "AAB",
+              "BBD",
+              "CCA",
+              "DAA"
+            ],
+            "type": "string"
+          },
+          "price": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3000,
+              4000,
+              5000
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A001",
+              "A002",
+              "B002",
+              "C001",
+              "D001"
+            ],
+            "type": "string"
+          },
+          "updated_at": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-11-03 18:00:00",
+              "2016-11-03 19:00:00",
+              "2016-11-03 21:00:00",
+              "2016-11-04 18:00:00",
+              "2016-11-04 19:00:00"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 6,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mst_products_20161201::0",
+                  "mst_products_20161201::1",
+                  "mst_products_20161201::3",
+                  "mst_products_20161201::4",
+                  "mst_products_20161201::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mst_products_20161201::0"
+              },
+              {
+                "id": "mst_products_20161201::1"
+              },
+              {
+                "id": "mst_products_20161201::3"
+              },
+              {
+                "id": "mst_products_20161201::4"
+              },
+              {
+                "id": "mst_products_20161201::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "BBB",
+      "price": 5000,
+      "product_id": "B001",
+      "updated_at": "2016-11-03 20:00:00"
+    },
+    {
+      "name": "CCA",
+      "price": 4000,
+      "product_id": "C001",
+      "updated_at": "2016-11-04 18:00:00"
+    },
+    {
+      "name": "AAA",
+      "price": 3000,
+      "product_id": "A001",
+      "updated_at": "2016-11-03 18:00:00"
+    },
+    {
+      "name": "DAA",
+      "price": 5000,
+      "product_id": "D001",
+      "updated_at": "2016-11-04 19:00:00"
+    },
+    {
+      "name": "BBD",
+      "price": 3000,
+      "product_id": "B002",
+      "updated_at": "2016-11-03 21:00:00"
+    }
+  ]
+}

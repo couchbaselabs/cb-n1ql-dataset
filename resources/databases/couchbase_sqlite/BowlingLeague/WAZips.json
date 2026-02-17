@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 523,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`State` = \"WA\"",
+        "properties": {
+          "City": {
+            "#docs": 523,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bellevue",
+              "East Wenatchee",
+              "Grays River",
+              "Ocean Park",
+              "Renton"
+            ],
+            "type": "string"
+          },
+          "State": {
+            "#docs": 523,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WA"
+            ],
+            "type": "string"
+          },
+          "ZIP": {
+            "#docs": 523,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "98005",
+              "98056",
+              "98621",
+              "98640",
+              "98802"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 523,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 523,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "WAZips::296",
+                  "WAZips::306",
+                  "WAZips::332",
+                  "WAZips::4",
+                  "WAZips::40"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "WAZips::296"
+              },
+              {
+                "id": "WAZips::306"
+              },
+              {
+                "id": "WAZips::332"
+              },
+              {
+                "id": "WAZips::4"
+              },
+              {
+                "id": "WAZips::40"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "City": "Bellingham",
+      "State": "WA",
+      "ZIP": "98226"
+    },
+    {
+      "City": "Greenbank",
+      "State": "WA",
+      "ZIP": "98253"
+    },
+    {
+      "City": "Olga",
+      "State": "WA",
+      "ZIP": "98279"
+    },
+    {
+      "City": "Cosmopolis",
+      "State": "WA",
+      "ZIP": "98537"
+    },
+    {
+      "City": "Salkum",
+      "State": "WA",
+      "ZIP": "98582"
+    }
+  ]
+}

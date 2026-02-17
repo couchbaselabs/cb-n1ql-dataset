@@ -1,0 +1,168 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ball_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "extra_runs": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "extra_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "byes",
+              "legbyes",
+              "noballs",
+              "wides"
+            ],
+            "type": "string"
+          },
+          "innings_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "match_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              336012,
+              419111,
+              598033,
+              598034,
+              598047
+            ],
+            "type": "number"
+          },
+          "over_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              7,
+              16,
+              19,
+              20
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "extra_runs::1479",
+                  "extra_runs::1819",
+                  "extra_runs::1835",
+                  "extra_runs::192",
+                  "extra_runs::1989"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "extra_runs::1479"
+              },
+              {
+                "id": "extra_runs::1819"
+              },
+              {
+                "id": "extra_runs::1835"
+              },
+              {
+                "id": "extra_runs::192"
+              },
+              {
+                "id": "extra_runs::1989"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ball_id": 4,
+      "extra_runs": 1,
+      "extra_type": "legbyes",
+      "innings_no": 1,
+      "match_id": 392208,
+      "over_id": 17
+    },
+    {
+      "ball_id": 6,
+      "extra_runs": 1,
+      "extra_type": "legbyes",
+      "innings_no": 1,
+      "match_id": 733996,
+      "over_id": 1
+    },
+    {
+      "ball_id": 2,
+      "extra_runs": 4,
+      "extra_type": "legbyes",
+      "innings_no": 2,
+      "match_id": 392209,
+      "over_id": 18
+    },
+    {
+      "ball_id": 2,
+      "extra_runs": 1,
+      "extra_type": "legbyes",
+      "innings_no": 1,
+      "match_id": 829758,
+      "over_id": 15
+    },
+    {
+      "ball_id": 2,
+      "extra_runs": 1,
+      "extra_type": "legbyes",
+      "innings_no": 2,
+      "match_id": 419149,
+      "over_id": 14
+    }
+  ]
+}

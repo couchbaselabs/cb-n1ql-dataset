@@ -1,0 +1,258 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 859,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "code": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CRA",
+              "SAT",
+              "TIN",
+              "WAT",
+              "WUR"
+            ],
+            "type": "string"
+          },
+          "dob": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1921-08-24",
+              "1939-11-17",
+              "1946-05-04",
+              "1974-02-15",
+              "1977-01-28"
+            ],
+            "type": "string"
+          },
+          "driver_id": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              25,
+              187,
+              354,
+              368
+            ],
+            "type": "number"
+          },
+          "driver_ref": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "craft",
+              "sato",
+              "tingle",
+              "watson",
+              "wurz"
+            ],
+            "type": "string"
+          },
+          "forename": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alexander",
+              "Chris",
+              "John",
+              "Sam",
+              "Takuma"
+            ],
+            "type": "string"
+          },
+          "full_name": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alexander Wurz",
+              "Chris Craft",
+              "John Watson",
+              "Sam Tingle",
+              "Takuma Sato"
+            ],
+            "type": "string"
+          },
+          "nationality": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Austrian",
+              "British",
+              "Japanese",
+              "Rhodesian",
+              "South African"
+            ],
+            "type": "string"
+          },
+          "number": {
+            "#docs": [
+              802,
+              57
+            ],
+            "%docs": [
+              93.36,
+              6.63
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                14,
+                28,
+                30,
+                33,
+                55
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "surname": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Craft",
+              "Sato",
+              "Tingle",
+              "Watson",
+              "Wurz"
+            ],
+            "type": "string"
+          },
+          "url": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "http://en.wikipedia.org/wiki/A...",
+              "http://en.wikipedia.org/wiki/C...",
+              "http://en.wikipedia.org/wiki/J...",
+              "http://en.wikipedia.org/wiki/S...",
+              "http://en.wikipedia.org/wiki/T..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 859,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 859,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "drivers_ext::10",
+                  "drivers_ext::186",
+                  "drivers_ext::24",
+                  "drivers_ext::353",
+                  "drivers_ext::367"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "drivers_ext::10"
+              },
+              {
+                "id": "drivers_ext::186"
+              },
+              {
+                "id": "drivers_ext::24"
+              },
+              {
+                "id": "drivers_ext::353"
+              },
+              {
+                "id": "drivers_ext::367"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "code": "GUE",
+      "dob": "1958-11-16",
+      "driver_id": 195,
+      "driver_ref": "guerrero",
+      "forename": "Roberto",
+      "full_name": "Roberto Guerrero",
+      "nationality": "Colombian",
+      "number": null,
+      "surname": "Guerrero",
+      "url": "http://en.wikipedia.org/wiki/Roberto_Guerrero"
+    },
+    {
+      "code": "BAR",
+      "dob": "1936-11-16",
+      "driver_id": 342,
+      "driver_ref": "barber",
+      "forename": "Skip",
+      "full_name": "Skip Barber",
+      "nationality": "American",
+      "number": null,
+      "surname": "Barber",
+      "url": "http://en.wikipedia.org/wiki/Skip_Barber"
+    },
+    {
+      "code": "MCL",
+      "dob": "1937-08-30",
+      "driver_id": 360,
+      "driver_ref": "mclaren",
+      "forename": "Bruce",
+      "full_name": "Bruce McLaren",
+      "nationality": "New Zealander",
+      "number": null,
+      "surname": "McLaren",
+      "url": "http://en.wikipedia.org/wiki/Bruce_McLaren"
+    },
+    {
+      "code": "DLR",
+      "dob": "1971-02-24",
+      "driver_id": 37,
+      "driver_ref": "rosa",
+      "forename": "Pedro",
+      "full_name": "Pedro de la Rosa",
+      "nationality": "Spanish",
+      "number": null,
+      "surname": "de la Rosa",
+      "url": "http://en.wikipedia.org/wiki/Pedro_de_la_Rosa"
+    },
+    {
+      "code": "BIA",
+      "dob": "1934-11-10",
+      "driver_id": 376,
+      "driver_ref": "bianchi",
+      "forename": "Lucien",
+      "full_name": "Lucien Bianchi",
+      "nationality": "Belgian",
+      "number": null,
+      "surname": "Bianchi",
+      "url": "http://en.wikipedia.org/wiki/Lucien_Bianchi"
+    }
+  ]
+}

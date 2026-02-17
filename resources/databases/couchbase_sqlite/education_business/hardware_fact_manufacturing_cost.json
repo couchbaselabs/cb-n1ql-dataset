@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 579,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "cost_year": {
+            "#docs": 579,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2020,
+              2021
+            ],
+            "type": "number"
+          },
+          "manufacturing_cost": {
+            "#docs": 579,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2.2,
+              2.9609,
+              3.5655,
+              3.8582,
+              124.1188
+            ],
+            "type": "number"
+          },
+          "product_code": {
+            "#docs": 579,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A2219150204",
+              "A2319150305",
+              "A3018150203",
+              "A3019150206",
+              "A4918110102"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 579,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 579,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "hardware_fact_manufacturing_co...",
+                  "hardware_fact_manufacturing_co...",
+                  "hardware_fact_manufacturing_co...",
+                  "hardware_fact_manufacturing_co...",
+                  "hardware_fact_manufacturing_co..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "hardware_fact_manufacturing_cost::152"
+              },
+              {
+                "id": "hardware_fact_manufacturing_cost::166"
+              },
+              {
+                "id": "hardware_fact_manufacturing_cost::217"
+              },
+              {
+                "id": "hardware_fact_manufacturing_cost::223"
+              },
+              {
+                "id": "hardware_fact_manufacturing_cost::387"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "cost_year": 2021,
+      "manufacturing_cost": 7.8161,
+      "product_code": "A0321150302"
+    },
+    {
+      "cost_year": 2020,
+      "manufacturing_cost": 3.567,
+      "product_code": "A2420150406"
+    },
+    {
+      "cost_year": 2021,
+      "manufacturing_cost": 5.977,
+      "product_code": "A2721150705"
+    },
+    {
+      "cost_year": 2020,
+      "manufacturing_cost": 5.649,
+      "product_code": "A0418150104"
+    },
+    {
+      "cost_year": 2021,
+      "manufacturing_cost": 88.659,
+      "product_code": "A4419110406"
+    }
+  ]
+}

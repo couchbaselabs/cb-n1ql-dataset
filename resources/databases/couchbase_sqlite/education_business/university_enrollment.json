@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 37,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "EnrGrade": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3.3,
+              3.4,
+              3.5,
+              3.8,
+              4
+            ],
+            "type": "number"
+          },
+          "OfferNo": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1234,
+              4321,
+              5678,
+              5679,
+              9876
+            ],
+            "type": "number"
+          },
+          "StdNo": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              234567890,
+              345678901,
+              456789012,
+              789012345,
+              901234567
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 37,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "university_enrollment::1",
+                  "university_enrollment::16",
+                  "university_enrollment::22",
+                  "university_enrollment::33",
+                  "university_enrollment::36"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "university_enrollment::1"
+              },
+              {
+                "id": "university_enrollment::16"
+              },
+              {
+                "id": "university_enrollment::22"
+              },
+              {
+                "id": "university_enrollment::33"
+              },
+              {
+                "id": "university_enrollment::36"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "EnrGrade": 3.5,
+      "OfferNo": 1234,
+      "StdNo": 234567890
+    },
+    {
+      "EnrGrade": 3.3,
+      "OfferNo": 5678,
+      "StdNo": 345678901
+    },
+    {
+      "EnrGrade": 3.8,
+      "OfferNo": 5679,
+      "StdNo": 789012345
+    },
+    {
+      "EnrGrade": 4,
+      "OfferNo": 9876,
+      "StdNo": 901234567
+    },
+    {
+      "EnrGrade": 3.2,
+      "OfferNo": 5678,
+      "StdNo": 123456789
+    }
+  ]
+}

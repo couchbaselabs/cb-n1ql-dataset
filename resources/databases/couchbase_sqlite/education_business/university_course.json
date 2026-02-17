@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 7,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`CrsUnits` = 4",
+        "properties": {
+          "CourseNo": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "FIN450",
+              "IS320",
+              "IS460",
+              "IS470",
+              "IS480"
+            ],
+            "type": "string"
+          },
+          "CrsDesc": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BUSINESS DATA COMMUNICATIONS",
+              "FUNDAMENTALS OF BUSINESS PROGR...",
+              "FUNDAMENTALS OF DATABASE MANAG...",
+              "PRINCIPLES OF INVESTMENTS",
+              "SYSTEMS ANALYSIS"
+            ],
+            "type": "string"
+          },
+          "CrsUnits": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 7,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 7,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "university_course::1",
+                  "university_course::3",
+                  "university_course::4",
+                  "university_course::5",
+                  "university_course::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "university_course::1"
+              },
+              {
+                "id": "university_course::3"
+              },
+              {
+                "id": "university_course::4"
+              },
+              {
+                "id": "university_course::5"
+              },
+              {
+                "id": "university_course::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CourseNo": "IS320",
+      "CrsDesc": "FUNDAMENTALS OF BUSINESS PROGRAMMING",
+      "CrsUnits": 4
+    },
+    {
+      "CourseNo": "FIN450",
+      "CrsDesc": "PRINCIPLES OF INVESTMENTS",
+      "CrsUnits": 4
+    },
+    {
+      "CourseNo": "IS470",
+      "CrsDesc": "BUSINESS DATA COMMUNICATIONS",
+      "CrsUnits": 4
+    },
+    {
+      "CourseNo": "FIN300",
+      "CrsDesc": "FUNDAMENTALS OF FINANCE",
+      "CrsUnits": 4
+    },
+    {
+      "CourseNo": "FIN480",
+      "CrsDesc": "CORPORATE FINANCE",
+      "CrsUnits": 4
+    }
+  ]
+}

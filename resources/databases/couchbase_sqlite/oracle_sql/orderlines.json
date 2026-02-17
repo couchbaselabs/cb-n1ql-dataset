@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 18,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "amount": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              320,
+              480,
+              960,
+              1275,
+              2250
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9122,
+              9234,
+              9287,
+              9296,
+              9299
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              421,
+              422,
+              426,
+              428,
+              430
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4280,
+              5430,
+              6520,
+              6600,
+              7950
+            ],
+            "type": "number"
+          },
+          "qty": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              16,
+              50,
+              80,
+              100,
+              140
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 18,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 18,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "orderlines::1",
+                  "orderlines::11",
+                  "orderlines::14",
+                  "orderlines::17",
+                  "orderlines::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "orderlines::1"
+              },
+              {
+                "id": "orderlines::11"
+              },
+              {
+                "id": "orderlines::14"
+              },
+              {
+                "id": "orderlines::17"
+              },
+              {
+                "id": "orderlines::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "amount": 480,
+      "id": 9282,
+      "order_id": 425,
+      "product_id": 6600,
+      "qty": 24
+    },
+    {
+      "amount": 875,
+      "id": 9298,
+      "order_id": 429,
+      "product_id": 5430,
+      "qty": 40
+    },
+    {
+      "amount": 1150,
+      "id": 9280,
+      "order_id": 425,
+      "product_id": 5430,
+      "qty": 60
+    },
+    {
+      "amount": 2400,
+      "id": 9120,
+      "order_id": 421,
+      "product_id": 4280,
+      "qty": 110
+    },
+    {
+      "amount": 2250,
+      "id": 9122,
+      "order_id": 421,
+      "product_id": 6520,
+      "qty": 140
+    }
+  ]
+}

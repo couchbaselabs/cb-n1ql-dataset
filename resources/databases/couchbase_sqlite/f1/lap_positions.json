@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "driver_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              18,
+              20,
+              31,
+              41
+            ],
+            "type": "number"
+          },
+          "lap": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              9,
+              31,
+              34,
+              43
+            ],
+            "type": "number"
+          },
+          "lap_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Race",
+              "Starting Position - Grid Incre...",
+              "Starting Position - No Qualifi...",
+              "Starting Position - Pit Lane S...",
+              "Starting Position - Qualifying"
+            ],
+            "type": "string"
+          },
+          "position": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              7,
+              9,
+              12
+            ],
+            "type": "number"
+          },
+          "race_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              146,
+              159,
+              350,
+              870,
+              872
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "lap_positions::156748",
+                  "lap_positions::170057",
+                  "lap_positions::170478",
+                  "lap_positions::273932",
+                  "lap_positions::338128"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "lap_positions::156748"
+              },
+              {
+                "id": "lap_positions::170057"
+              },
+              {
+                "id": "lap_positions::170478"
+              },
+              {
+                "id": "lap_positions::273932"
+              },
+              {
+                "id": "lap_positions::338128"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "driver_id": 18,
+      "lap": 46,
+      "lap_type": "Race",
+      "position": 4,
+      "race_id": 92
+    },
+    {
+      "driver_id": 18,
+      "lap": 48,
+      "lap_type": "Race",
+      "position": 4,
+      "race_id": 92
+    },
+    {
+      "driver_id": 21,
+      "lap": 4,
+      "lap_type": "Race",
+      "position": 11,
+      "race_id": 92
+    },
+    {
+      "driver_id": 21,
+      "lap": 55,
+      "lap_type": "Race",
+      "position": 12,
+      "race_id": 92
+    },
+    {
+      "driver_id": 22,
+      "lap": 4,
+      "lap_type": "Race",
+      "position": 2,
+      "race_id": 92
+    }
+  ]
+}

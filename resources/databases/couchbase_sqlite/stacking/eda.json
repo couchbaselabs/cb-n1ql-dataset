@@ -1,0 +1,224 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "drop_correlation": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "drop_user": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "feature": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Blast Furnace Slag (component ...",
+              "RDW",
+              "Raw Ethanol",
+              "atrialfibrillation",
+              "deficiencyanemias"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Hospital Mortality Prediction",
+              "concrete",
+              "lithium ion batteries",
+              "smoke detection iot",
+              "water quality"
+            ],
+            "type": "string"
+          },
+          "range": {
+            "#docs": [
+              199,
+              801
+            ],
+            "%docs": [
+              19.9,
+              80.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "[0, 1]",
+                "[0.0, 359.4]",
+                "[1, 0]",
+                "[12.08888889, 29.05]",
+                "[15317, 21410]"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "target": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "type": {
+            "#docs": [
+              199,
+              801
+            ],
+            "%docs": [
+              19.9,
+              80.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "cat",
+                "num"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "version": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "eda::1149",
+                  "eda::1151",
+                  "eda::1165",
+                  "eda::1384",
+                  "eda::25"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "eda::1149"
+              },
+              {
+                "id": "eda::1151"
+              },
+              {
+                "id": "eda::1165"
+              },
+              {
+                "id": "eda::1384"
+              },
+              {
+                "id": "eda::25"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "drop_correlation": 0,
+      "drop_user": 1,
+      "feature": "id",
+      "name": "Critical Heat Flux",
+      "range": null,
+      "target": 0,
+      "type": null,
+      "version": 2
+    },
+    {
+      "drop_correlation": 0,
+      "drop_user": 0,
+      "feature": "ph",
+      "name": "kindey stone urine analysis",
+      "range": "[4.76, 7.94]",
+      "target": 0,
+      "type": "num",
+      "version": 4
+    },
+    {
+      "drop_correlation": 0,
+      "drop_user": 0,
+      "feature": "calc",
+      "name": "kindey stone urine analysis",
+      "range": "[0.17, 14.34]",
+      "target": 0,
+      "type": "num",
+      "version": 6
+    },
+    {
+      "drop_correlation": 0,
+      "drop_user": 1,
+      "feature": "ID",
+      "name": "Hospital Mortality Prediction",
+      "range": null,
+      "target": 0,
+      "type": null,
+      "version": 1
+    },
+    {
+      "drop_correlation": 0,
+      "drop_user": 0,
+      "feature": "length [mm]",
+      "name": "Critical Heat Flux",
+      "range": "[10, 3048]",
+      "target": 0,
+      "type": "num",
+      "version": 3
+    }
+  ]
+}

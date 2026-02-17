@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 30,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "action": {
+            "#docs": 30,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1CwlSX",
+              "6SN6DD",
+              "EFnoNR",
+              "KBlKgT",
+              "view"
+            ],
+            "type": "string"
+          },
+          "session": {
+            "#docs": 30,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-10-01 17:00:00",
+              "2016-10-02 16:00:00",
+              "2016-10-03 14:00:00",
+              "87b575",
+              "98900e"
+            ],
+            "type": "string"
+          },
+          "stamp": {
+            "#docs": 30,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "/search",
+              "/top",
+              "2016-01-03 22:00:00",
+              "2016-01-04 23:00:00",
+              "2016-01-08 04:00:00"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 30,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2bGs3i",
+              "3cv4gm",
+              "AAuoEU",
+              "U001",
+              "U002"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 30,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 30,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "access_log::17",
+                  "access_log::2",
+                  "access_log::23",
+                  "access_log::28",
+                  "access_log::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "access_log::17"
+              },
+              {
+                "id": "access_log::2"
+              },
+              {
+                "id": "access_log::23"
+              },
+              {
+                "id": "access_log::28"
+              },
+              {
+                "id": "access_log::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "action": "view",
+      "session": "98900e",
+      "stamp": "2016-01-01 18:00:00",
+      "user_id": "U001"
+    },
+    {
+      "action": "6SN6DD",
+      "session": "2016-10-01 16:00:00",
+      "stamp": "/detail",
+      "user_id": "1hI43A"
+    },
+    {
+      "action": "1CwlSX",
+      "session": "2016-10-02 15:00:00",
+      "stamp": "/detail",
+      "user_id": "3Gv8vO"
+    },
+    {
+      "action": "7Dn99b",
+      "session": "2016-10-01 18:00:00",
+      "stamp": "/search",
+      "user_id": "2is8PX"
+    },
+    {
+      "action": "view",
+      "session": "eee2b2",
+      "stamp": "2016-01-11 15:00:00",
+      "user_id": "U001"
+    }
+  ]
+}

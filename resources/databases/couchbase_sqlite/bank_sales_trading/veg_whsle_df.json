@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10745,
+              15678,
+              19289,
+              20916,
+              24490
+            ],
+            "type": "number"
+          },
+          "item_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              102900005118824,
+              102900011000328,
+              102900011008164,
+              102900011016701,
+              102900011018095
+            ],
+            "type": "number"
+          },
+          "whsle_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-02-28 00:00:00",
+              "2021-06-10 00:00:00",
+              "2021-08-21 00:00:00",
+              "2021-09-23 00:00:00",
+              "2021-11-25 00:00:00"
+            ],
+            "type": "string"
+          },
+          "whsle_px_rmb-kg": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1.8,
+              3.73,
+              4.99,
+              6.22,
+              9.82
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "veg_whsle_df::10745",
+                  "veg_whsle_df::15678",
+                  "veg_whsle_df::19289",
+                  "veg_whsle_df::20916",
+                  "veg_whsle_df::24490"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "veg_whsle_df::10745"
+              },
+              {
+                "id": "veg_whsle_df::15678"
+              },
+              {
+                "id": "veg_whsle_df::19289"
+              },
+              {
+                "id": "veg_whsle_df::20916"
+              },
+              {
+                "id": "veg_whsle_df::24490"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "index": 10142,
+      "item_code": 102900011021842,
+      "whsle_date": "2021-02-15 00:00:00",
+      "whsle_px_rmb-kg": 8.5
+    },
+    {
+      "index": 10176,
+      "item_code": 102900011006689,
+      "whsle_date": "2021-02-16 00:00:00",
+      "whsle_px_rmb-kg": 4
+    },
+    {
+      "index": 10207,
+      "item_code": 102900005116790,
+      "whsle_date": "2021-02-17 00:00:00",
+      "whsle_px_rmb-kg": 2.75
+    },
+    {
+      "index": 10233,
+      "item_code": 102900051004294,
+      "whsle_date": "2021-02-17 00:00:00",
+      "whsle_px_rmb-kg": 18.89
+    },
+    {
+      "index": 103,
+      "item_code": 102900011001219,
+      "whsle_date": "2020-07-03 00:00:00",
+      "whsle_px_rmb-kg": 7
+    }
+  ]
+}

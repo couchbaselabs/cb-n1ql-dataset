@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "amount": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              200,
+              400,
+              500,
+              800
+            ],
+            "type": "number"
+          },
+          "purchase_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10001,
+              10002,
+              10003,
+              10004,
+              10005
+            ],
+            "type": "number"
+          },
+          "stamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-01-30 10:00:00",
+              "2017-02-10 10:00:00",
+              "2017-02-12 10:00:00",
+              "2017-03-01 10:00:00",
+              "2017-03-02 10:00:00"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U001",
+              "U002"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "purchase_log::0",
+                  "purchase_log::1",
+                  "purchase_log::2",
+                  "purchase_log::3",
+                  "purchase_log::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "purchase_log::0"
+              },
+              {
+                "id": "purchase_log::1"
+              },
+              {
+                "id": "purchase_log::2"
+              },
+              {
+                "id": "purchase_log::3"
+              },
+              {
+                "id": "purchase_log::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "amount": 200,
+      "purchase_id": 10001,
+      "stamp": "2017-01-30 10:00:00",
+      "user_id": "U001"
+    },
+    {
+      "amount": 200,
+      "purchase_id": 10003,
+      "stamp": "2017-02-12 10:00:00",
+      "user_id": "U001"
+    },
+    {
+      "amount": 500,
+      "purchase_id": 10002,
+      "stamp": "2017-02-10 10:00:00",
+      "user_id": "U001"
+    },
+    {
+      "amount": 400,
+      "purchase_id": 10005,
+      "stamp": "2017-03-02 10:00:00",
+      "user_id": "U002"
+    },
+    {
+      "amount": 800,
+      "purchase_id": 10004,
+      "stamp": "2017-03-01 10:00:00",
+      "user_id": "U002"
+    }
+  ]
+}

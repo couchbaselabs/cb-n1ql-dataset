@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "college_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "alabama",
+              "azmescc",
+              "mcneese",
+              "nicholls",
+              "swarthmore"
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "brousbe01",
+              "mohlemi01",
+              "patebo01",
+              "phillan01",
+              "twinitw01"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1914,
+              1974,
+              1988,
+              1996,
+              1997
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "player_college::10624",
+                  "player_college::11852",
+                  "player_college::12155",
+                  "player_college::15808",
+                  "player_college::1811"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "player_college::10624"
+              },
+              {
+                "id": "player_college::11852"
+              },
+              {
+                "id": "player_college::12155"
+              },
+              {
+                "id": "player_college::15808"
+              },
+              {
+                "id": "player_college::1811"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "college_id": "auburn",
+      "player_id": "bellhma01",
+      "year": 1993
+    },
+    {
+      "college_id": "scarolina",
+      "player_id": "mcjamdo01",
+      "year": 1892
+    },
+    {
+      "college_id": "washst",
+      "player_id": "mclarar01",
+      "year": 1932
+    },
+    {
+      "college_id": "colgate",
+      "player_id": "mclauki01",
+      "year": 1913
+    },
+    {
+      "college_id": "california",
+      "player_id": "melvibo01",
+      "year": 1980
+    }
+  ]
+}

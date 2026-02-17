@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1207,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`country` = \"USA\"",
+        "properties": {
+          "city": {
+            "#docs": 1207,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Longview",
+              "Newport News",
+              "Salt Lake City",
+              "Ukiah",
+              "Winston-Salem"
+            ],
+            "type": "string"
+          },
+          "college_id": {
+            "#docs": 1207,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "camendo",
+              "utah",
+              "vaappre",
+              "wake",
+              "walower"
+            ],
+            "type": "string"
+          },
+          "country": {
+            "#docs": 1207,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "USA"
+            ],
+            "type": "string"
+          },
+          "name_full": {
+            "#docs": 1207,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Lower Columbia College",
+              "Mendocino College",
+              "Newport News Apprentice School",
+              "University of Utah",
+              "Wake Forest University"
+            ],
+            "type": "string"
+          },
+          "state": {
+            "#docs": 1207,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CA",
+              "NC",
+              "UT",
+              "VA",
+              "WA"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1207,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1207,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "college::1095",
+                  "college::1105",
+                  "college::1129",
+                  "college::1131",
+                  "college::154"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "college::1095"
+              },
+              {
+                "id": "college::1105"
+              },
+              {
+                "id": "college::1129"
+              },
+              {
+                "id": "college::1131"
+              },
+              {
+                "id": "college::154"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "city": "San Antonio",
+      "college_id": "trinitytx",
+      "country": "USA",
+      "name_full": "Trinity University",
+      "state": "TX"
+    },
+    {
+      "city": "Venus",
+      "college_id": "txburne",
+      "country": "USA",
+      "name_full": "Burnetta College",
+      "state": "TX"
+    },
+    {
+      "city": "Springfield",
+      "college_id": "wittnbrgoh",
+      "country": "USA",
+      "name_full": "Wittenberg University",
+      "state": "OH"
+    },
+    {
+      "city": "Emporia",
+      "college_id": "emporiast",
+      "country": "USA",
+      "name_full": "Emporia State University",
+      "state": "KS"
+    },
+    {
+      "city": "Fayetteville",
+      "college_id": "fayetvilst",
+      "country": "USA",
+      "name_full": "Fayetteville State University",
+      "state": "NC"
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3c3652ffccad55c942f2f2f2f67a6d...",
+              "8c9b0172c7793cf0798ce58ee3bfb9...",
+              "943ffeba4ca00dd9979a19d8647435...",
+              "97d60c4bdc2028096d7750589b412a...",
+              "9a6e18e7ee795e46395603eb78abf0..."
+            ],
+            "type": "string"
+          },
+          "order_approved_at": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2017-06-30 02:43:49",
+                "2017-10-26 08:49:13",
+                "2018-03-09 03:00:36",
+                "2018-05-16 16:14:39",
+                "2018-08-20 17:10:39"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_delivered_carrier_date": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2017-07-10 12:32:42",
+                "2017-10-26 18:28:02",
+                "2018-03-09 19:51:44",
+                "2018-05-18 08:56:00",
+                "2018-08-27 13:25:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_delivered_customer_date": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2017-07-21 19:21:54",
+                "2017-11-01 23:02:43",
+                "2018-03-19 19:19:51",
+                "2018-06-05 17:56:40",
+                "2018-08-28 21:33:03"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_estimated_delivery_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-07-20 00:00:00",
+              "2017-11-23 00:00:00",
+              "2018-04-10 00:00:00",
+              "2018-06-07 00:00:00",
+              "2018-08-27 00:00:00"
+            ],
+            "type": "string"
+          },
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10d68bf5b2b29ed413ad7b19c7c601...",
+              "16fd7497db9ad42ca340acfda623c1...",
+              "64a364c5de0cfda3d0621b433b5162...",
+              "eb5158d41f671648c1c954d8330b2f...",
+              "fc6fa7fa7977262db8df0b27a56474..."
+            ],
+            "type": "string"
+          },
+          "order_purchase_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-06-28 17:55:08",
+              "2017-10-25 10:14:46",
+              "2018-03-07 18:34:51",
+              "2018-05-16 15:46:44",
+              "2018-08-20 16:50:24"
+            ],
+            "type": "string"
+          },
+          "order_status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "canceled",
+              "delivered",
+              "processing",
+              "shipped",
+              "unavailable"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "orders::16433",
+                  "orders::21837",
+                  "orders::31975",
+                  "orders::35178",
+                  "orders::40133"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "orders::16433"
+              },
+              {
+                "id": "orders::21837"
+              },
+              {
+                "id": "orders::31975"
+              },
+              {
+                "id": "orders::35178"
+              },
+              {
+                "id": "orders::40133"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_id": "0f5e161db26d065ff8926895975c0ca6",
+      "order_approved_at": "2018-07-05 16:07:07",
+      "order_delivered_carrier_date": "2018-07-06 11:29:00",
+      "order_delivered_customer_date": "2018-07-10 14:51:31",
+      "order_estimated_delivery_date": "2018-07-25 00:00:00",
+      "order_id": "7289e899d9083d1c93469d36a42d1dea",
+      "order_purchase_timestamp": "2018-07-04 15:15:27",
+      "order_status": "delivered"
+    },
+    {
+      "customer_id": "696487dfa3e237407a7fc1e381da0a45",
+      "order_approved_at": "2017-09-26 10:49:12",
+      "order_delivered_carrier_date": "2017-09-27 22:45:59",
+      "order_delivered_customer_date": "2017-10-03 21:36:04",
+      "order_estimated_delivery_date": "2017-10-23 00:00:00",
+      "order_id": "acd788596773fb4328703c9ea80a1913",
+      "order_purchase_timestamp": "2017-09-26 10:30:40",
+      "order_status": "delivered"
+    },
+    {
+      "customer_id": "474d5d500a35f32517fa588d587eff2c",
+      "order_approved_at": "2018-07-07 14:05:41",
+      "order_delivered_carrier_date": "2018-07-10 15:21:00",
+      "order_delivered_customer_date": "2018-07-13 17:12:32",
+      "order_estimated_delivery_date": "2018-07-19 00:00:00",
+      "order_id": "eaa2404af4c709b5ed9127f802ee4eb8",
+      "order_purchase_timestamp": "2018-07-06 14:09:35",
+      "order_status": "delivered"
+    },
+    {
+      "customer_id": "0be3b3c1bd5eb9d58a57b0bda7d72ec2",
+      "order_approved_at": "2017-09-14 11:30:14",
+      "order_delivered_carrier_date": "2017-09-14 18:22:15",
+      "order_delivered_customer_date": "2017-10-13 20:52:37",
+      "order_estimated_delivery_date": "2017-10-06 00:00:00",
+      "order_id": "5188f7ae18cdf7538841648a7e49bbbf",
+      "order_purchase_timestamp": "2017-09-14 11:16:49",
+      "order_status": "delivered"
+    },
+    {
+      "customer_id": "0d0a49286a8610cff0b0ca481ac5d14b",
+      "order_approved_at": "2018-02-17 22:46:57",
+      "order_delivered_carrier_date": "2018-02-26 11:49:00",
+      "order_delivered_customer_date": "2018-04-02 22:32:10",
+      "order_estimated_delivery_date": "2018-03-23 00:00:00",
+      "order_id": "07e2a9d486a8394f2700230396e8d5f0",
+      "order_purchase_timestamp": "2018-02-17 22:29:16",
+      "order_status": "delivered"
+    }
+  ]
+}

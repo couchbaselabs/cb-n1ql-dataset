@@ -1,0 +1,129 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 24,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "StaffID": {
+            "#docs": 24,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              98036,
+              98048,
+              98052,
+              98063,
+              98064
+            ],
+            "type": "number"
+          },
+          "Status": {
+            "#docs": 24,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Full Time",
+              "On Leave",
+              "Part Time"
+            ],
+            "type": "string"
+          },
+          "Tenured": {
+            "#docs": 24,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "Title": {
+            "#docs": 24,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Associate Professor",
+              "Instructor",
+              "Professor"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 24,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 24,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Faculty::12",
+                  "Faculty::16",
+                  "Faculty::17",
+                  "Faculty::22",
+                  "Faculty::23"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Faculty::12"
+              },
+              {
+                "id": "Faculty::16"
+              },
+              {
+                "id": "Faculty::17"
+              },
+              {
+                "id": "Faculty::22"
+              },
+              {
+                "id": "Faculty::23"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "StaffID": 98019,
+      "Status": "Full Time",
+      "Tenured": 1,
+      "Title": "Instructor"
+    },
+    {
+      "StaffID": 98045,
+      "Status": "Full Time",
+      "Tenured": 1,
+      "Title": "Professor"
+    },
+    {
+      "StaffID": 98062,
+      "Status": "Full Time",
+      "Tenured": 0,
+      "Title": "Associate Professor"
+    },
+    {
+      "StaffID": 98036,
+      "Status": "Full Time",
+      "Tenured": 1,
+      "Title": "Professor"
+    },
+    {
+      "StaffID": 98020,
+      "Status": "Full Time",
+      "Tenured": 1,
+      "Title": "Instructor"
+    }
+  ]
+}

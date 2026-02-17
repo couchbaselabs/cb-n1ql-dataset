@@ -1,0 +1,226 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "event_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1994-08-02",
+              "1994-08-15",
+              "1997-08-23",
+              "2015-02-18",
+              "2017-11-30"
+            ],
+            "type": "string"
+          },
+          "event_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              353,
+              1403,
+              1928,
+              11382,
+              12398
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1403,
+              1922,
+              1928,
+              11827,
+              12398
+            ],
+            "type": "number"
+          },
+          "info_html": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "<table border=\"0\" width=\"100%\"...",
+              "<table border=\"0\" width=\"100%\"...",
+              "<table border=\"0\" width=\"100%\"...",
+              "<table border=\"0\" width=\"100%\"...",
+              "<table border=\"0\" width=\"100%\"..."
+            ],
+            "type": "string"
+          },
+          "location_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              172,
+              404,
+              1233,
+              1329,
+              4255
+            ],
+            "type": "number"
+          },
+          "match_html": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "<table cellpadding=\"0\" cellspa...",
+              "<table cellpadding=\"0\" cellspa...",
+              "<table cellpadding=\"0\" cellspa...",
+              "<table cellpadding=\"0\" cellspa...",
+              "<table cellpadding=\"0\" cellspa..."
+            ],
+            "type": "string"
+          },
+          "promotion_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              230,
+              3211,
+              9876,
+              10963
+            ],
+            "type": "number"
+          },
+          "table_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1400,
+              1920,
+              3591,
+              11823,
+              12393
+            ],
+            "type": "number"
+          },
+          "url": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "http://www.profightdb.com/card...",
+              "http://www.profightdb.com/card...",
+              "http://www.profightdb.com/card...",
+              "http://www.profightdb.com/card...",
+              "http://www.profightdb.com/card..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Cards::11693",
+                  "Cards::12264",
+                  "Cards::1396",
+                  "Cards::1914",
+                  "Cards::1920"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Cards::11693"
+              },
+              {
+                "id": "Cards::12264"
+              },
+              {
+                "id": "Cards::1396"
+              },
+              {
+                "id": "Cards::1914"
+              },
+              {
+                "id": "Cards::1920"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "event_date": "1999-04-15",
+      "event_id": 9877,
+      "id": 10266,
+      "info_html": "<table border=\"0\" width=\"100%\">\n <tr>\n  <td align=\"left\" height=\"23\" width=\"40%\">\n   <strong>\n    Date:\n   </strong>\n   <a href=\"/this-day-in-history/04-15-1999.html\">\n    Thu, Apr 15th 1999\n   </a>\n  </td>\n  <td align=\"left\" width=\"52%\">\n   <strong>\n    Pay Per View:\n   </strong>\n   no\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Venue:\n   </strong>\n   <img alt=\"United States\" height=\"11\" src=\"/img/flags/us.gif\" width=\"16\"/>\n   <a href=\"/locations/united-states/florida/orlando/orlando-arena-10.html\">\n    Orlando Arena\n   </a>\n   ,\n   <a href=\"/locations/united-states/florida/orlando-76.html\">\n    Orlando\n   </a>\n   ,\n   <a href=\"/locations/united-states/florida-9.html\">\n    Florida\n   </a>\n  </td>\n  <td align=\"left\">\n   <strong>\n    Promotion:\n   </strong>\n   WCW\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Attendance:\n   </strong>\n   9,429\n  </td>\n  <td align=\"left\">\n   &nbsp;\n  </td>\n </tr>\n</table>\n",
+      "location_id": 351,
+      "match_html": "<table cellpadding=\"0\" cellspacing=\"1\" width=\"100%\">\n <tr class=\"head\">\n  <th width=\"3%\">\n   no.\n  </th>\n  <th colspan=\"3\" width=\"50%\">\n   match\n  </th>\n  <th width=\"5%\">\n   duration\n  </th>\n  <th width=\"19%\">\n   match type\n  </th>\n  <th width=\"18%\">\n   title(s)\n  </th>\n  <th width=\"5%\">\n   rating\n  </th>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   1\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/the-sandman-429.html\">\n    Hak\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/bill-demott-336.html\">\n    Hugh Morrus\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   2\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/konnan-151.html\">\n    Konnan\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/scotty-riggs-659.html\">\n    Scotty Riggs\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   3\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/vampiro-806.html\">\n    Vampiro\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/al-green-550.html\">\n    Al Green\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   4\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/booker-t-341.html\">\n    Booker T.\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/bobby-duncum-jr-735.html\">\n    Bobby Duncum, Jr.\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   5\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/buff-bagwell-601.html\">\n    Buff Bagwell\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/fit-finlay-441.html\">\n    Fit Finlay\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   6\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/rick-steiner-145.html\">\n    Rick Steiner\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/glenn-gilberti-658.html\">\n    Disco Inferno\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   7\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/goldberg-365.html\">\n    Goldberg\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/ernest-the-cat-miller-391.html\">\n    Ernest Miller\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   8\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-benoit-305.html\">\n    Chris Benoit\n   </a>\n   &amp;\n   <a href=\"/wrestlers/dean-malenko-306.html\">\n    Dean Malenko\n   </a>\n   &amp;\n   <a href=\"/wrestlers/billy-kidman-333.html\">\n    Kidman\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/perry-saturn-307.html\">\n    Perry Saturn\n   </a>\n   &amp;\n   <a href=\"/wrestlers/raven-315.html\">\n    Raven\n   </a>\n   &amp;\n   <a href=\"/wrestlers/rey-mysterio-351.html\">\n    Rey Misterio, Jr.\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   6-person tag\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n</table>\n",
+      "promotion_id": 9876,
+      "table_id": 10266,
+      "url": "http://www.profightdb.com/cards/wcw/thunder-taping-4649.html"
+    },
+    {
+      "event_date": "1999-03-04",
+      "event_id": 9877,
+      "id": 10300,
+      "info_html": "<table border=\"0\" width=\"100%\">\n <tr>\n  <td align=\"left\" height=\"23\" width=\"40%\">\n   <strong>\n    Date:\n   </strong>\n   <a href=\"/this-day-in-history/03-04-1999.html\">\n    Thu, Mar 4th 1999\n   </a>\n  </td>\n  <td align=\"left\" width=\"52%\">\n   <strong>\n    Pay Per View:\n   </strong>\n   no\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Venue:\n   </strong>\n   <img alt=\"United States\" height=\"11\" src=\"/img/flags/us.gif\" width=\"16\"/>\n   <a href=\"/locations/united-states/north-carolina/winston-salem/lawrence-joel-veterans-memorial-coliseum-164.html\">\n    Lawrence Joel Veterans Memorial Coliseum\n   </a>\n   ,\n   <a href=\"/locations/united-states/north-carolina/winston-salem-121.html\">\n    Winston-Salem\n   </a>\n   ,\n   <a href=\"/locations/united-states/north-carolina-27.html\">\n    North Carolina\n   </a>\n  </td>\n  <td align=\"left\">\n   <strong>\n    Promotion:\n   </strong>\n   WCW\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Attendance:\n   </strong>\n   unknown\n  </td>\n  <td align=\"left\">\n   &nbsp;\n  </td>\n </tr>\n</table>\n",
+      "location_id": 2888,
+      "match_html": "<table cellpadding=\"0\" cellspacing=\"1\" width=\"100%\">\n <tr class=\"head\">\n  <th width=\"3%\">\n   no.\n  </th>\n  <th colspan=\"3\" width=\"50%\">\n   match\n  </th>\n  <th width=\"5%\">\n   duration\n  </th>\n  <th width=\"19%\">\n   match type\n  </th>\n  <th width=\"18%\">\n   title(s)\n  </th>\n  <th width=\"5%\">\n   rating\n  </th>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   1\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/raven-315.html\">\n    Raven\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/dave-taylor-468.html\">\n    Dave Taylor\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   2\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-benoit-305.html\">\n    Chris Benoit\n   </a>\n   &amp;\n   <a href=\"/wrestlers/dean-malenko-306.html\">\n    Dean Malenko\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/mike-tatum-1509.html\">\n    Mean Mike\n   </a>\n   &amp;\n   <a href=\"/wrestlers/tom-benninghaus-4662.html\">\n    Tough Tom\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   3\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/the-sandman-429.html\">\n    Hak\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/the-barbarian-93.html\">\n    The Barbarian\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   4\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/booker-t-341.html\">\n    Booker T.\n   </a>\n   &amp;\n   <a href=\"/wrestlers/rey-mysterio-351.html\">\n    Rey Misterio, Jr.\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/buff-bagwell-601.html\">\n    Buff Bagwell\n   </a>\n   &amp;\n   <a href=\"/wrestlers/scott-steiner-146.html\">\n    Scott Steiner\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   5\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/ric-flair-138.html\">\n    Ric Flair\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/glenn-gilberti-658.html\">\n    Disco Inferno\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n</table>\n",
+      "promotion_id": 9876,
+      "table_id": 10296,
+      "url": "http://www.profightdb.com/cards/wcw/thunder-taping-4643.html"
+    },
+    {
+      "event_date": "1999-01-24",
+      "event_id": 9884,
+      "id": 10331,
+      "info_html": "<table border=\"0\" width=\"100%\">\n <tr>\n  <td align=\"left\" height=\"23\" width=\"40%\">\n   <strong>\n    Date:\n   </strong>\n   <a href=\"/this-day-in-history/01-24-1999.html\">\n    Sun, Jan 24th 1999\n   </a>\n  </td>\n  <td align=\"left\" width=\"52%\">\n   <strong>\n    Pay Per View:\n   </strong>\n   no\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Venue:\n   </strong>\n   <img alt=\"United States\" height=\"11\" src=\"/img/flags/us.gif\" width=\"16\"/>\n   <a href=\"/locations/united-states/texas/college-station/reed-arena-402.html\">\n    Reed Arena\n   </a>\n   ,\n   <a href=\"/locations/united-states/texas/college-station-756.html\">\n    College Station\n   </a>\n   ,\n   <a href=\"/locations/united-states/texas-43.html\">\n    Texas\n   </a>\n  </td>\n  <td align=\"left\">\n   <strong>\n    Promotion:\n   </strong>\n   WCW\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Attendance:\n   </strong>\n   unknown\n  </td>\n  <td align=\"left\">\n   &nbsp;\n  </td>\n </tr>\n</table>\n",
+      "location_id": 248,
+      "match_html": "<table cellpadding=\"0\" cellspacing=\"1\" width=\"100%\">\n <tr class=\"head\">\n  <th width=\"3%\">\n   no.\n  </th>\n  <th colspan=\"3\" width=\"50%\">\n   match\n  </th>\n  <th width=\"5%\">\n   duration\n  </th>\n  <th width=\"19%\">\n   match type\n  </th>\n  <th width=\"18%\">\n   title(s)\n  </th>\n  <th width=\"5%\">\n   rating\n  </th>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   1\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-adams-558.html\">\n    Chris Adams\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/glacier-695.html\">\n    Glacier\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   2\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/ernest-the-cat-miller-391.html\">\n    Ernest \"The Cat\" Miller\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/van-hammer-589.html\">\n    Van Hammer\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   3\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-benoit-305.html\">\n    Chris Benoit\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (sub)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/dave-taylor-468.html\">\n    Dave Taylor\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   4\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/bobby-duncum-jr-735.html\">\n    Bobby Duncum, Jr.\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-kanyon-334.html\">\n    Kanyon\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   5\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/raven-315.html\">\n    Raven\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/scotty-riggs-659.html\">\n    Scotty Riggs\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   6\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/diamond-dallas-page-342.html\">\n    Diamond Dallas Page\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/bam-bam-bigelow-86.html\">\n    Bam Bam Bigelow\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   7\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/sting-494.html\">\n    Sting\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/bret-hart-52.html\">\n    Bret Hart\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n</table>\n",
+      "promotion_id": 9876,
+      "table_id": 10326,
+      "url": "http://www.profightdb.com/cards/wcw/wcw-live-24760.html"
+    },
+    {
+      "event_date": "1998-12-19",
+      "event_id": 9884,
+      "id": 10359,
+      "info_html": "<table border=\"0\" width=\"100%\">\n <tr>\n  <td align=\"left\" height=\"23\" width=\"40%\">\n   <strong>\n    Date:\n   </strong>\n   <a href=\"/this-day-in-history/12-19-1998.html\">\n    Sat, Dec 19th 1998\n   </a>\n  </td>\n  <td align=\"left\" width=\"52%\">\n   <strong>\n    Pay Per View:\n   </strong>\n   no\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Venue:\n   </strong>\n   <img alt=\"United States\" height=\"11\" src=\"/img/flags/us.gif\" width=\"16\"/>\n   <a href=\"/locations/united-states/missouri/springfield/shrine-mosque-auditorium-3006.html\">\n    Shrine Mosque Auditorium\n   </a>\n   ,\n   <a href=\"/locations/united-states/missouri/springfield-2990.html\">\n    Springfield\n   </a>\n   ,\n   <a href=\"/locations/united-states/missouri-24.html\">\n    Missouri\n   </a>\n  </td>\n  <td align=\"left\">\n   <strong>\n    Promotion:\n   </strong>\n   WCW\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Attendance:\n   </strong>\n   unknown\n  </td>\n  <td align=\"left\">\n   &nbsp;\n  </td>\n </tr>\n</table>\n",
+      "location_id": 307,
+      "match_html": "<table cellpadding=\"0\" cellspacing=\"1\" width=\"100%\">\n <tr class=\"head\">\n  <th width=\"3%\">\n   no.\n  </th>\n  <th colspan=\"3\" width=\"50%\">\n   match\n  </th>\n  <th width=\"5%\">\n   duration\n  </th>\n  <th width=\"19%\">\n   match type\n  </th>\n  <th width=\"18%\">\n   title(s)\n  </th>\n  <th width=\"5%\">\n   rating\n  </th>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   1\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-adams-558.html\">\n    Chris Adams\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/virgil-122.html\">\n    Vincent\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   2\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/perry-saturn-307.html\">\n    Saturn\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (sub)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/fit-finlay-441.html\">\n    Fit Finlay\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   3\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-benoit-305.html\">\n    Chris Benoit\n   </a>\n   &amp;\n   <a href=\"/wrestlers/dean-malenko-306.html\">\n    Dean Malenko\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/alex-wright-647.html\">\n    Alex Wright\n   </a>\n   &amp;\n   <a href=\"/wrestlers/glenn-gilberti-658.html\">\n    Disco Inferno\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   4\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/booker-t-341.html\">\n    Booker T.\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-jericho-296.html\">\n    Chris Jericho\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   5\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/konnan-151.html\">\n    Konnan\n   </a>\n   &nbsp;(c)\n  </td>\n  <td width=\"6%\">\n   def. (DQ)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/eddie-guerrero-309.html\">\n    Eddy Guerrero\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n   WCW World Television Title\n   <br/>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   6\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/konnan-151.html\">\n    Konnan\n   </a>\n   &amp;\n   <a href=\"/wrestlers/lex-luger-156.html\">\n    Lex Luger\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/brian-adams-128.html\">\n    Brian Adams\n   </a>\n   &amp;\n   <a href=\"/wrestlers/eddie-guerrero-309.html\">\n    Eddy Guerrero\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   7\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/goldberg-365.html\">\n    Goldberg\n   </a>\n   &nbsp;(c)\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/paul-wight-283.html\">\n    The Giant\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n   WCW World Heavyweight Title\n   <br/>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n</table>\n",
+      "promotion_id": 9876,
+      "table_id": 10356,
+      "url": "http://www.profightdb.com/cards/wcw/wcw-live-24799.html"
+    },
+    {
+      "event_date": "1998-01-31",
+      "event_id": 10523,
+      "id": 10523,
+      "info_html": "<table border=\"0\" width=\"100%\">\n <tr>\n  <td align=\"left\" height=\"23\" width=\"40%\">\n   <strong>\n    Date:\n   </strong>\n   <a href=\"/this-day-in-history/01-31-1998.html\">\n    Sat, Jan 31st 1998\n   </a>\n  </td>\n  <td align=\"left\" width=\"52%\">\n   <strong>\n    Pay Per View:\n   </strong>\n   yes\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Venue:\n   </strong>\n   <img alt=\"United States\" height=\"11\" src=\"/img/flags/us.gif\" width=\"16\"/>\n   <a href=\"/locations/united-states/massachusetts/boston/fleetcenter-61.html\">\n    FleetCenter\n   </a>\n   ,\n   <a href=\"/locations/united-states/massachusetts/boston-16.html\">\n    Boston\n   </a>\n   ,\n   <a href=\"/locations/united-states/massachusetts-19.html\">\n    Massachusetts\n   </a>\n  </td>\n  <td align=\"left\">\n   <strong>\n    Promotion:\n   </strong>\n   WCW\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Attendance:\n   </strong>\n   18,759\n  </td>\n  <td align=\"left\">\n   &nbsp;\n  </td>\n </tr>\n</table>\n",
+      "location_id": 81,
+      "match_html": "<table cellpadding=\"0\" cellspacing=\"1\" width=\"100%\">\n <tr class=\"head\">\n  <th width=\"3%\">\n   no.\n  </th>\n  <th colspan=\"3\" width=\"50%\">\n   match\n  </th>\n  <th width=\"5%\">\n   duration\n  </th>\n  <th width=\"19%\">\n   match type\n  </th>\n  <th width=\"18%\">\n   title(s)\n  </th>\n  <th width=\"5%\">\n   rating\n  </th>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   1\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/goldberg-365.html\">\n    Goldberg\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/sgt-buddy-lee-parker-568.html\">\n    Buddy Lee Parker\n   </a>\n  </td>\n  <td>\n   01:20\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   2\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/booker-t-341.html\">\n    Booker T.\n   </a>\n   &nbsp;(c)\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/mike-rotundo-13.html\">\n    V. K. Wallstreet\n   </a>\n  </td>\n  <td>\n   06:06\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n   WCW World Television Title\n   <br/>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   3\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-jericho-296.html\">\n    Chris Jericho\n   </a>\n   &nbsp;(c)\n  </td>\n  <td width=\"6%\">\n   def. (sub)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/dean-malenko-306.html\">\n    Dean Malenko\n   </a>\n  </td>\n  <td>\n   15:28\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n   WCW Cruiserweight Championship\n   <br/>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   4\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/steve-mcmichael-674.html\">\n    Steve McMichael\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/greg-valentine-10.html\">\n    Greg Valentine\n   </a>\n  </td>\n  <td>\n   08:59\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   5\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/rick-steiner-145.html\">\n    Rick Steiner\n   </a>\n   &amp;\n   <a href=\"/wrestlers/scott-steiner-146.html\">\n    Scott Steiner\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/raven-315.html\">\n    Raven\n   </a>\n   &amp;\n   <a href=\"/wrestlers/perry-saturn-307.html\">\n    Saturn\n   </a>\n  </td>\n  <td>\n   08:15\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   6\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chris-benoit-305.html\">\n    Chris Benoit\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (sub)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/eddie-guerrero-309.html\">\n    Eddy Guerrero\n   </a>\n  </td>\n  <td>\n   15:32\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   7\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/bret-hart-52.html\">\n    Bret Hart\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (sub)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/ric-flair-138.html\">\n    Ric Flair\n   </a>\n  </td>\n  <td>\n   13:32\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   8\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/diamond-dallas-page-342.html\">\n    Diamond Dallas Page\n   </a>\n   &amp;\n   <a href=\"/wrestlers/larry-zbyszko-497.html\">\n    Larry Zbyszko\n   </a>\n   &amp;\n   <a href=\"/wrestlers/lex-luger-156.html\">\n    Lex Luger\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (sub)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/kevin-nash-167.html\">\n    Kevin Nash\n   </a>\n   &amp;\n   <a href=\"/wrestlers/randy-savage-27.html\">\n    Randy Savage\n   </a>\n   &amp;\n   <a href=\"/wrestlers/scott-hall-147.html\">\n    Scott Hall\n   </a>\n  </td>\n  <td>\n   10:31\n  </td>\n  <td>\n   6-person tag\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   9\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/sting-494.html\">\n    Sting\n   </a>\n  </td>\n  <td width=\"6%\">\n   def. (pin)\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/hulk-hogan-19.html\">\n    Hulk Hogan\n   </a>\n  </td>\n  <td>\n   12:33\n  </td>\n  <td>\n   steel cage\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n</table>\n",
+      "promotion_id": 9876,
+      "table_id": 10516,
+      "url": "http://www.profightdb.com/cards/wcw/boston-brawl-internet-event-3547.html"
+    }
+  ]
+}

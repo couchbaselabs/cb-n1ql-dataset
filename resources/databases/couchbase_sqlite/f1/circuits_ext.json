@@ -1,0 +1,262 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 77,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "alt": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              19,
+              20,
+              88,
+              139,
+              161
+            ],
+            "type": "number"
+          },
+          "circuit_id": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              50,
+              55,
+              58,
+              64,
+              69
+            ],
+            "type": "number"
+          },
+          "circuit_ref": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ain-diab",
+              "aintree",
+              "americas",
+              "nivelles",
+              "reims"
+            ],
+            "type": "string"
+          },
+          "country": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Belgium",
+              "France",
+              "Morocco",
+              "UK",
+              "USA"
+            ],
+            "type": "string"
+          },
+          "last_race_year": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1958,
+              1962,
+              1966,
+              1974,
+              2024
+            ],
+            "type": "number"
+          },
+          "lat": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30.1328,
+              33.5786,
+              49.2542,
+              50.6211,
+              53.4769
+            ],
+            "type": "number"
+          },
+          "lng": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -97.6411,
+              -7.6875,
+              -2.94056,
+              3.93083,
+              4.32694
+            ],
+            "type": "number"
+          },
+          "location": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Austin",
+              "Brussels",
+              "Casablanca",
+              "Liverpool",
+              "Reims"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Ain Diab",
+              "Aintree",
+              "Circuit of the Americas",
+              "Nivelles-Baulers",
+              "Reims-Gueux"
+            ],
+            "type": "string"
+          },
+          "number_of_races": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              5,
+              11,
+              12
+            ],
+            "type": "number"
+          },
+          "url": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "http://en.wikipedia.org/wiki/A...",
+              "http://en.wikipedia.org/wiki/A...",
+              "http://en.wikipedia.org/wiki/C...",
+              "http://en.wikipedia.org/wiki/N...",
+              "http://en.wikipedia.org/wiki/R..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 77,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 77,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "circuits_ext::48",
+                  "circuits_ext::53",
+                  "circuits_ext::56",
+                  "circuits_ext::62",
+                  "circuits_ext::67"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "circuits_ext::48"
+              },
+              {
+                "id": "circuits_ext::53"
+              },
+              {
+                "id": "circuits_ext::56"
+              },
+              {
+                "id": "circuits_ext::62"
+              },
+              {
+                "id": "circuits_ext::67"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "alt": 88,
+      "circuit_id": 55,
+      "circuit_ref": "reims",
+      "country": "France",
+      "last_race_year": 1966,
+      "lat": 49.2542,
+      "lng": 3.93083,
+      "location": "Reims",
+      "name": "Reims-Gueux",
+      "number_of_races": 11,
+      "url": "http://en.wikipedia.org/wiki/Reims-Gueux"
+    },
+    {
+      "alt": 161,
+      "circuit_id": 69,
+      "circuit_ref": "americas",
+      "country": "USA",
+      "last_race_year": 2024,
+      "lat": 30.1328,
+      "lng": -97.6411,
+      "location": "Austin",
+      "name": "Circuit of the Americas",
+      "number_of_races": 12,
+      "url": "http://en.wikipedia.org/wiki/Circuit_of_the_Americas"
+    },
+    {
+      "alt": 332,
+      "circuit_id": 48,
+      "circuit_ref": "mosport",
+      "country": "Canada",
+      "last_race_year": 1977,
+      "lat": 44.0481,
+      "lng": -78.6756,
+      "location": "Ontario",
+      "name": "Mosport International Raceway",
+      "number_of_races": 8,
+      "url": "http://en.wikipedia.org/wiki/Mosport"
+    },
+    {
+      "alt": 255,
+      "circuit_id": 76,
+      "circuit_ref": "mugello",
+      "country": "Italy",
+      "last_race_year": 2020,
+      "lat": 43.9975,
+      "lng": 11.3719,
+      "location": "Mugello",
+      "name": "Autodromo Internazionale del Mugello",
+      "number_of_races": 1,
+      "url": "http://en.wikipedia.org/wiki/Mugello_Circuit"
+    },
+    {
+      "alt": 162,
+      "circuit_id": 14,
+      "circuit_ref": "monza",
+      "country": "Italy",
+      "last_race_year": 2024,
+      "lat": 45.6156,
+      "lng": 9.28111,
+      "location": "Monza",
+      "name": "Autodromo Nazionale di Monza",
+      "number_of_races": 74,
+      "url": "http://en.wikipedia.org/wiki/Autodromo_Nazionale_Monza"
+    }
+  ]
+}

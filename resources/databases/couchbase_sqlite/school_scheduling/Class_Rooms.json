@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 47,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "BuildingCode": {
+            "#docs": 47,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AS",
+              "CC",
+              "IB",
+              "LB",
+              "TB"
+            ],
+            "type": "string"
+          },
+          "ClassRoomID": {
+            "#docs": 47,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1642,
+              3343,
+              3346,
+              3353,
+              3422
+            ],
+            "type": "number"
+          },
+          "PhoneAvailable": {
+            "#docs": 47,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 47,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 47,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Class_Rooms::16",
+                  "Class_Rooms::29",
+                  "Class_Rooms::31",
+                  "Class_Rooms::33",
+                  "Class_Rooms::40"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Class_Rooms::16"
+              },
+              {
+                "id": "Class_Rooms::29"
+              },
+              {
+                "id": "Class_Rooms::31"
+              },
+              {
+                "id": "Class_Rooms::33"
+              },
+              {
+                "id": "Class_Rooms::40"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BuildingCode": "TB",
+      "ClassRoomID": 1640,
+      "PhoneAvailable": 0
+    },
+    {
+      "BuildingCode": "IB",
+      "ClassRoomID": 3305,
+      "PhoneAvailable": 1
+    },
+    {
+      "BuildingCode": "IB",
+      "ClassRoomID": 3415,
+      "PhoneAvailable": 1
+    },
+    {
+      "BuildingCode": "AS",
+      "ClassRoomID": 1519,
+      "PhoneAvailable": 0
+    },
+    {
+      "BuildingCode": "LB",
+      "ClassRoomID": 1142,
+      "PhoneAvailable": 0
+    }
+  ]
+}

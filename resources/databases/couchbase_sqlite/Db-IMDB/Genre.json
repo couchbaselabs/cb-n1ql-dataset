@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 328,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "GID": {
+            "#docs": 328,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              25,
+              140,
+              158,
+              194
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 328,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Action, Romance, Comedy       ...",
+              "Adventure, Comedy            ",
+              "Drama, Sci-Fi            ",
+              "Romance, Drama            ",
+              "Romance, Musical, Drama       ..."
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 328,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              25,
+              140,
+              158,
+              194
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 328,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 328,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Genre::11",
+                  "Genre::140",
+                  "Genre::158",
+                  "Genre::194",
+                  "Genre::25"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Genre::11"
+              },
+              {
+                "id": "Genre::140"
+              },
+              {
+                "id": "Genre::158"
+              },
+              {
+                "id": "Genre::194"
+              },
+              {
+                "id": "Genre::25"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "GID": 292,
+      "Name": "Mystery, Musical, Romance            ",
+      "index": 292
+    },
+    {
+      "GID": 302,
+      "Name": "Family, Romance, Drama            ",
+      "index": 302
+    },
+    {
+      "GID": 52,
+      "Name": "Drama, Musical, Romance            ",
+      "index": 52
+    },
+    {
+      "GID": 66,
+      "Name": "Horror            ",
+      "index": 66
+    },
+    {
+      "GID": 117,
+      "Name": "Comedy, Horror, Mystery            ",
+      "index": 117
+    }
+  ]
+}

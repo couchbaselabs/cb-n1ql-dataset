@@ -1,0 +1,98 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 9,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Events",
+              "Locations",
+              "Promotions",
+              "Tables",
+              "Wrestlers"
+            ],
+            "type": "string"
+          },
+          "seq": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14431,
+              540800,
+              1081600
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 9,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 9,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sqlite_sequence::0",
+                  "sqlite_sequence::1",
+                  "sqlite_sequence::2",
+                  "sqlite_sequence::3",
+                  "sqlite_sequence::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sqlite_sequence::0"
+              },
+              {
+                "id": "sqlite_sequence::1"
+              },
+              {
+                "id": "sqlite_sequence::2"
+              },
+              {
+                "id": "sqlite_sequence::3"
+              },
+              {
+                "id": "sqlite_sequence::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "Wrestlers",
+      "seq": 1081600
+    },
+    {
+      "name": "Locations",
+      "seq": 14431
+    },
+    {
+      "name": "Match_Types",
+      "seq": 540800
+    },
+    {
+      "name": "Promotions",
+      "seq": 14431
+    },
+    {
+      "name": "Matches",
+      "seq": 540800
+    }
+  ]
+}

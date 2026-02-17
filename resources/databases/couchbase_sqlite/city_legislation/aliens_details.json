@@ -1,0 +1,133 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "aggressive": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "detail_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14038,
+              17549,
+              21286,
+              38225,
+              39741
+            ],
+            "type": "number"
+          },
+          "favorite_food": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Dragon, komodo",
+              "Gecko (unidentified)",
+              "Honey badger",
+              "Rattlesnake, eastern diamondba...",
+              "Whale, southern right"
+            ],
+            "type": "string"
+          },
+          "feeding_frequency": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Monthly",
+              "Often",
+              "Once",
+              "Seldom",
+              "Weekly"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "aliens_details::14037",
+                  "aliens_details::17548",
+                  "aliens_details::21285",
+                  "aliens_details::38224",
+                  "aliens_details::39740"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "aliens_details::14037"
+              },
+              {
+                "id": "aliens_details::17548"
+              },
+              {
+                "id": "aliens_details::21285"
+              },
+              {
+                "id": "aliens_details::38224"
+              },
+              {
+                "id": "aliens_details::39740"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aggressive": 0,
+      "detail_id": 10043,
+      "favorite_food": "Badger, european",
+      "feeding_frequency": "Often"
+    },
+    {
+      "aggressive": 0,
+      "detail_id": 10077,
+      "favorite_food": "Currasow (unidentified)",
+      "feeding_frequency": "Monthly"
+    },
+    {
+      "aggressive": 0,
+      "detail_id": 10298,
+      "favorite_food": "Macaw, scarlet",
+      "feeding_frequency": "Yearly"
+    },
+    {
+      "aggressive": 1,
+      "detail_id": 10308,
+      "favorite_food": "Stork, european",
+      "feeding_frequency": "Once"
+    },
+    {
+      "aggressive": 1,
+      "detail_id": 10334,
+      "favorite_food": "Greater blue-eared starling",
+      "feeding_frequency": "Often"
+    }
+  ]
+}

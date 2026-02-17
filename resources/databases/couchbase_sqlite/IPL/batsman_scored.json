@@ -1,0 +1,151 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ball_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              4,
+              5,
+              7
+            ],
+            "type": "number"
+          },
+          "innings_no": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "match_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              336043,
+              734036,
+              734046,
+              980918,
+              980934
+            ],
+            "type": "number"
+          },
+          "over_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              9,
+              14,
+              15,
+              19
+            ],
+            "type": "number"
+          },
+          "runs_scored": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              4,
+              6
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "batsman_scored::102849",
+                  "batsman_scored::103892",
+                  "batsman_scored::119090",
+                  "batsman_scored::120852",
+                  "batsman_scored::12366"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "batsman_scored::102849"
+              },
+              {
+                "id": "batsman_scored::103892"
+              },
+              {
+                "id": "batsman_scored::119090"
+              },
+              {
+                "id": "batsman_scored::120852"
+              },
+              {
+                "id": "batsman_scored::12366"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ball_id": 3,
+      "innings_no": 1,
+      "match_id": 734014,
+      "over_id": 1,
+      "runs_scored": 0
+    },
+    {
+      "ball_id": 7,
+      "innings_no": 1,
+      "match_id": 734014,
+      "over_id": 1,
+      "runs_scored": 0
+    },
+    {
+      "ball_id": 1,
+      "innings_no": 1,
+      "match_id": 336032,
+      "over_id": 3,
+      "runs_scored": 0
+    },
+    {
+      "ball_id": 3,
+      "innings_no": 2,
+      "match_id": 734014,
+      "over_id": 15,
+      "runs_scored": 0
+    },
+    {
+      "ball_id": 2,
+      "innings_no": 1,
+      "match_id": 336032,
+      "over_id": 5,
+      "runs_scored": 4
+    }
+  ]
+}

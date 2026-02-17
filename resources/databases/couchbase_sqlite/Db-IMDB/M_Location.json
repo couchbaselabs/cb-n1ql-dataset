@@ -1,0 +1,150 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1116,
+              1485,
+              2293,
+              2469,
+              2471
+            ],
+            "type": "number"
+          },
+          "LID": {
+            "#docs": [
+              451,
+              549
+            ],
+            "%docs": [
+              45.1,
+              54.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                111,
+                124,
+                212,
+                388,
+                402
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "MID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt0215338",
+              "tt0300980",
+              "tt0311413",
+              "tt0368400",
+              "tt0989725"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1116,
+              1485,
+              2293,
+              2469,
+              2471
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "M_Location::1116",
+                  "M_Location::1485",
+                  "M_Location::2293",
+                  "M_Location::2469",
+                  "M_Location::2471"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "M_Location::1116"
+              },
+              {
+                "id": "M_Location::1485"
+              },
+              {
+                "id": "M_Location::2293"
+              },
+              {
+                "id": "M_Location::2469"
+              },
+              {
+                "id": "M_Location::2471"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ID": 1094,
+      "LID": 71,
+      "MID": "tt2727028",
+      "index": 1094
+    },
+    {
+      "ID": 1104,
+      "LID": null,
+      "MID": "tt3547616",
+      "index": 1104
+    },
+    {
+      "ID": 1128,
+      "LID": 111,
+      "MID": "tt0060689",
+      "index": 1128
+    },
+    {
+      "ID": 1130,
+      "LID": 101,
+      "MID": "tt0983990",
+      "index": 1130
+    },
+    {
+      "ID": 1241,
+      "LID": 344,
+      "MID": "tt0770214",
+      "index": 1241
+    }
+  ]
+}

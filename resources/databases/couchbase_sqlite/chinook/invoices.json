@@ -1,0 +1,254 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 412,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "BillingAddress": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "120 S Orange Ave",
+              "2211 W Berry Street",
+              "302 S 700 E",
+              "69 Salem Street",
+              "Via Degli Scipioni, 43"
+            ],
+            "type": "string"
+          },
+          "BillingCity": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Boston",
+              "Fort Worth",
+              "Orlando",
+              "Rome",
+              "Salt Lake City"
+            ],
+            "type": "string"
+          },
+          "BillingCountry": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Australia",
+              "Canada",
+              "Italy",
+              "Netherlands",
+              "USA"
+            ],
+            "type": "string"
+          },
+          "BillingPostalCode": {
+            "#docs": [
+              21,
+              391
+            ],
+            "%docs": [
+              5.09,
+              94.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "00192",
+                "2113",
+                "32801",
+                "76110",
+                "84102"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "BillingState": {
+            "#docs": [
+              181,
+              231
+            ],
+            "%docs": [
+              43.93,
+              56.06
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "FL",
+                "MA",
+                "RM",
+                "TX",
+                "UT"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "CustomerId": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              22,
+              23,
+              26,
+              28,
+              47
+            ],
+            "type": "number"
+          },
+          "InvoiceDate": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2010-05-13 00:00:00",
+              "2012-05-25 00:00:00",
+              "2012-08-05 00:00:00",
+              "2012-09-26 00:00:00",
+              "2012-09-28 00:00:00"
+            ],
+            "type": "string"
+          },
+          "InvoiceId": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              114,
+              281,
+              299,
+              309,
+              311
+            ],
+            "type": "number"
+          },
+          "Total": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1.98,
+              3.96,
+              3.98,
+              11.94,
+              23.86
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 412,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "invoices::113",
+                  "invoices::280",
+                  "invoices::298",
+                  "invoices::308",
+                  "invoices::310"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "invoices::113"
+              },
+              {
+                "id": "invoices::280"
+              },
+              {
+                "id": "invoices::298"
+              },
+              {
+                "id": "invoices::308"
+              },
+              {
+                "id": "invoices::310"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BillingAddress": "3 Chatham Street",
+      "BillingCity": "Dublin",
+      "BillingCountry": "Ireland",
+      "BillingPostalCode": null,
+      "BillingState": "Dublin",
+      "CustomerId": 46,
+      "InvoiceDate": "2011-04-28 00:00:00",
+      "InvoiceId": 194,
+      "Total": 21.86
+    },
+    {
+      "BillingAddress": "Via Degli Scipioni, 43",
+      "BillingCity": "Rome",
+      "BillingCountry": "Italy",
+      "BillingPostalCode": "00192",
+      "BillingState": "RM",
+      "CustomerId": 47,
+      "InvoiceDate": "2013-03-05 00:00:00",
+      "InvoiceId": 347,
+      "Total": 8.91
+    },
+    {
+      "BillingAddress": "Pra\u00e7a Pio X, 119",
+      "BillingCity": "Rio de Janeiro",
+      "BillingCountry": "Brazil",
+      "BillingPostalCode": "20040-020",
+      "BillingState": "RJ",
+      "CustomerId": 12,
+      "InvoiceDate": "2013-07-03 00:00:00",
+      "InvoiceId": 373,
+      "Total": 3.96
+    },
+    {
+      "BillingAddress": "3 Chatham Street",
+      "BillingCity": "Dublin",
+      "BillingCountry": "Ireland",
+      "BillingPostalCode": null,
+      "BillingState": "Dublin",
+      "CustomerId": 46,
+      "InvoiceDate": "2013-11-04 00:00:00",
+      "InvoiceId": 401,
+      "Total": 3.96
+    },
+    {
+      "BillingAddress": "120 S Orange Ave",
+      "BillingCity": "Orlando",
+      "BillingCountry": "USA",
+      "BillingPostalCode": "32801",
+      "BillingState": "FL",
+      "CustomerId": 22,
+      "InvoiceDate": "2010-05-13 00:00:00",
+      "InvoiceId": 114,
+      "Total": 3.96
+    }
+  ]
+}

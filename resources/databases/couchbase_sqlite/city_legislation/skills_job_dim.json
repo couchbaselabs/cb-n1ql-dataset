@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "job_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              232303,
+              511158,
+              890158,
+              1530623,
+              1785802
+            ],
+            "type": "number"
+          },
+          "skill_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              13,
+              74,
+              92,
+              94
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "skills_job_dim::100522",
+                  "skills_job_dim::136016",
+                  "skills_job_dim::151130",
+                  "skills_job_dim::195266",
+                  "skills_job_dim::202923"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "skills_job_dim::100522"
+              },
+              {
+                "id": "skills_job_dim::136016"
+              },
+              {
+                "id": "skills_job_dim::151130"
+              },
+              {
+                "id": "skills_job_dim::195266"
+              },
+              {
+                "id": "skills_job_dim::202923"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "job_id": 792471,
+      "skill_id": 78
+    },
+    {
+      "job_id": 1292524,
+      "skill_id": 74
+    },
+    {
+      "job_id": 1649563,
+      "skill_id": 106
+    },
+    {
+      "job_id": 528381,
+      "skill_id": 137
+    },
+    {
+      "job_id": 1436303,
+      "skill_id": 235
+    }
+  ]
+}

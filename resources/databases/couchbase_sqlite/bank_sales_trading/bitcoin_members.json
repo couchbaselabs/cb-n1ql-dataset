@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 14,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "first_name": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alex",
+              "Ben",
+              "Danny",
+              "Enoch",
+              "Pavan"
+            ],
+            "type": "string"
+          },
+          "member_id": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "45c48c",
+              "8f14e4",
+              "c4ca42",
+              "c51ce4",
+              "d3d944"
+            ],
+            "type": "string"
+          },
+          "region": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Africa",
+              "Asia",
+              "Australia",
+              "India",
+              "United States"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 14,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 14,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "bitcoin_members::0",
+                  "bitcoin_members::12",
+                  "bitcoin_members::6",
+                  "bitcoin_members::8",
+                  "bitcoin_members::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "bitcoin_members::0"
+              },
+              {
+                "id": "bitcoin_members::12"
+              },
+              {
+                "id": "bitcoin_members::6"
+              },
+              {
+                "id": "bitcoin_members::8"
+              },
+              {
+                "id": "bitcoin_members::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "first_name": "Alex",
+      "member_id": "8f14e4",
+      "region": "United States"
+    },
+    {
+      "first_name": "Charlie",
+      "member_id": "eccbc8",
+      "region": "United States"
+    },
+    {
+      "first_name": "Abe",
+      "member_id": "c9f0f8",
+      "region": "United States"
+    },
+    {
+      "first_name": "Rowan",
+      "member_id": "e4da3b",
+      "region": "United States"
+    },
+    {
+      "first_name": "Ben",
+      "member_id": "45c48c",
+      "region": "Australia"
+    }
+  ]
+}

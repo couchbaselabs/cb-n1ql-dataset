@@ -1,0 +1,149 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 37,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`modifieddate` = \"2008-04-30 00:00:00\"",
+        "properties": {
+          "modifieddate": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2008-04-30 00:00:00"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bike Racks",
+              "Cranksets",
+              "Mountain Bikes",
+              "Mountain Frames",
+              "Road Frames"
+            ],
+            "type": "string"
+          },
+          "productcategoryid": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "productsubcategoryid": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              8,
+              12,
+              14,
+              26
+            ],
+            "type": "number"
+          },
+          "rowguid": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2d364ade-264a-433c-b092-4fcbf3...",
+              "4624b5ce-66d6-496b-9201-c053df...",
+              "4f644521-422b-4f19-974a-e3df61...",
+              "5515f857-075b-4f9a-87b7-43b499...",
+              "61b21b65-e16a-4be7-9300-4d8e9d..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 37,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 37,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "productsubcategory::0",
+                  "productsubcategory::11",
+                  "productsubcategory::13",
+                  "productsubcategory::25",
+                  "productsubcategory::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "productsubcategory::0"
+              },
+              {
+                "id": "productsubcategory::11"
+              },
+              {
+                "id": "productsubcategory::13"
+              },
+              {
+                "id": "productsubcategory::25"
+              },
+              {
+                "id": "productsubcategory::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Road Bikes",
+      "productcategoryid": 1,
+      "productsubcategoryid": 2,
+      "rowguid": "000310c0-bcc8-42c4-b0c3-45ae611af06b"
+    },
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Lights",
+      "productcategoryid": 4,
+      "productsubcategoryid": 33,
+      "rowguid": "954178ba-624f-42db-95f6-ca035f36d130"
+    },
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Saddles",
+      "productcategoryid": 2,
+      "productsubcategoryid": 15,
+      "rowguid": "049fffa3-9d30-46df-82f7-f20730ec02b3"
+    },
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Jerseys",
+      "productcategoryid": 3,
+      "productsubcategoryid": 21,
+      "rowguid": "09e91437-ba4f-4b1a-8215-74184fd95db8"
+    },
+    {
+      "modifieddate": "2008-04-30 00:00:00",
+      "name": "Cleaners",
+      "productcategoryid": 4,
+      "productsubcategoryid": 29,
+      "rowguid": "9ad3bcf0-244d-4ec4-a6a0-fb701351c6a3"
+    }
+  ]
+}

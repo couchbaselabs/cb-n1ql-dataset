@@ -1,0 +1,226 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "attendance": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              403906,
+              531768,
+              802848,
+              960027
+            ],
+            "type": "number"
+          },
+          "games": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              59,
+              77,
+              78,
+              81
+            ],
+            "type": "number"
+          },
+          "league_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NL",
+              "AA",
+              "AL",
+              "FL",
+              ""
+            ],
+            "type": "string"
+          },
+          "openings": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              62,
+              64,
+              65,
+              68
+            ],
+            "type": "number"
+          },
+          "park_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ATL01",
+              "NYC04",
+              "NYC14",
+              "PHI11",
+              "PIT06"
+            ],
+            "type": "string"
+          },
+          "span_first": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1883-05-30",
+              "1942-04-17",
+              "1952-04-16",
+              "1953-04-16",
+              "1973-04-06"
+            ],
+            "type": "string"
+          },
+          "span_last": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1883-09-04",
+              "1942-09-20",
+              "1952-09-28",
+              "1953-09-20",
+              "1973-09-30"
+            ],
+            "type": "string"
+          },
+          "team_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ATL",
+              "NY1",
+              "NY4",
+              "PHA",
+              "PIT"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1883,
+              1942,
+              1952,
+              1953,
+              1973
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "home_game::1199",
+                  "home_game::1360",
+                  "home_game::1378",
+                  "home_game::153",
+                  "home_game::1757"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "home_game::1199"
+              },
+              {
+                "id": "home_game::1360"
+              },
+              {
+                "id": "home_game::1378"
+              },
+              {
+                "id": "home_game::153"
+              },
+              {
+                "id": "home_game::1757"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "attendance": 53800,
+      "games": 76,
+      "league_id": "AL",
+      "openings": 16,
+      "park_id": "STL07",
+      "span_first": "1935-04-16",
+      "span_last": "1935-08-31",
+      "team_id": "SLA",
+      "year": 1935
+    },
+    {
+      "attendance": 290255,
+      "games": 77,
+      "league_id": "NL",
+      "openings": 25,
+      "park_id": "STL07",
+      "span_first": "1936-04-14",
+      "span_last": "1936-09-27",
+      "team_id": "SLN",
+      "year": 1936
+    },
+    {
+      "attendance": 569950,
+      "games": 77,
+      "league_id": "AL",
+      "openings": 28,
+      "park_id": "DET04",
+      "span_first": "1937-04-20",
+      "span_last": "1937-10-03",
+      "team_id": "DET",
+      "year": 1937
+    },
+    {
+      "attendance": 1039111,
+      "games": 79,
+      "league_id": "AL",
+      "openings": 55,
+      "park_id": "NYC16",
+      "span_first": "1937-04-20",
+      "span_last": "1937-10-03",
+      "team_id": "NYA",
+      "year": 1937
+    },
+    {
+      "attendance": 288062,
+      "games": 18,
+      "league_id": "AL",
+      "openings": 6,
+      "park_id": "CLE07",
+      "span_first": "1938-04-19",
+      "span_last": "1938-10-02",
+      "team_id": "CLE",
+      "year": 1938
+    }
+  ]
+}

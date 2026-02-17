@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 76,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CategoryID": {
+            "#docs": 76,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ART",
+              "BUS",
+              "CIS",
+              "MAT",
+              "MUS"
+            ],
+            "type": "string"
+          },
+          "StaffID": {
+            "#docs": 76,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              98007,
+              98025,
+              98028,
+              98040,
+              98053
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 76,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 76,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Faculty_Categories::29",
+                  "Faculty_Categories::31",
+                  "Faculty_Categories::33",
+                  "Faculty_Categories::43",
+                  "Faculty_Categories::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Faculty_Categories::29"
+              },
+              {
+                "id": "Faculty_Categories::31"
+              },
+              {
+                "id": "Faculty_Categories::33"
+              },
+              {
+                "id": "Faculty_Categories::43"
+              },
+              {
+                "id": "Faculty_Categories::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CategoryID": "MAT",
+      "StaffID": 98012
+    },
+    {
+      "CategoryID": "HIS",
+      "StaffID": 98014
+    },
+    {
+      "CategoryID": "ENG",
+      "StaffID": 98036
+    },
+    {
+      "CategoryID": "MUS",
+      "StaffID": 98045
+    },
+    {
+      "CategoryID": "ECO",
+      "StaffID": 98048
+    }
+  ]
+}

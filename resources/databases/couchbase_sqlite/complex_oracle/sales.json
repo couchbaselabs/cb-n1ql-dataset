@@ -1,0 +1,184 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`quantity_sold` = 1",
+        "properties": {
+          "amount_sold": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12.18,
+              47,
+              52.22,
+              58.21,
+              210.8
+            ],
+            "type": "number"
+          },
+          "channel_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              9
+            ],
+            "type": "number"
+          },
+          "cust_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              293,
+              791,
+              1699,
+              5871,
+              7517
+            ],
+            "type": "number"
+          },
+          "prod_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              28,
+              43,
+              48,
+              123,
+              127
+            ],
+            "type": "number"
+          },
+          "promo_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              33,
+              350,
+              351,
+              999
+            ],
+            "type": "number"
+          },
+          "quantity_sold": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "time_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-03-11",
+              "2020-05-13",
+              "2020-07-24",
+              "2021-04-08",
+              "2021-06-18"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales::222641",
+                  "sales::293147",
+                  "sales::327033",
+                  "sales::518464",
+                  "sales::537061"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales::222641"
+              },
+              {
+                "id": "sales::293147"
+              },
+              {
+                "id": "sales::327033"
+              },
+              {
+                "id": "sales::518464"
+              },
+              {
+                "id": "sales::537061"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "amount_sold": 46.95,
+      "channel_id": 4,
+      "cust_id": 14044,
+      "prod_id": 45,
+      "promo_id": 999,
+      "quantity_sold": 1,
+      "time_id": "2019-07-07"
+    },
+    {
+      "amount_sold": 46.79,
+      "channel_id": 4,
+      "cust_id": 10006,
+      "prod_id": 45,
+      "promo_id": 999,
+      "quantity_sold": 1,
+      "time_id": "2019-07-10"
+    },
+    {
+      "amount_sold": 47.45,
+      "channel_id": 3,
+      "cust_id": 13318,
+      "prod_id": 45,
+      "promo_id": 350,
+      "quantity_sold": 1,
+      "time_id": "2019-08-04"
+    },
+    {
+      "amount_sold": 47.45,
+      "channel_id": 4,
+      "cust_id": 49048,
+      "prod_id": 45,
+      "promo_id": 350,
+      "quantity_sold": 1,
+      "time_id": "2019-08-10"
+    },
+    {
+      "amount_sold": 47.45,
+      "channel_id": 3,
+      "cust_id": 1159,
+      "prod_id": 45,
+      "promo_id": 350,
+      "quantity_sold": 1,
+      "time_id": "2019-08-15"
+    }
+  ]
+}

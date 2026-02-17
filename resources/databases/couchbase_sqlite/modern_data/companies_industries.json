@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1085,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "company_id": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              252,
+              287,
+              340,
+              513,
+              579
+            ],
+            "type": "number"
+          },
+          "industry": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "\"Supply chain, logistics, & de...",
+              "E-commerce & direct-to-consume...",
+              "Fintech",
+              "Mobile & telecommunications",
+              "Other"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1085,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1085,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "companies_industries::155",
+                  "companies_industries::161",
+                  "companies_industries::179",
+                  "companies_industries::208",
+                  "companies_industries::210"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "companies_industries::155"
+              },
+              {
+                "id": "companies_industries::161"
+              },
+              {
+                "id": "companies_industries::179"
+              },
+              {
+                "id": "companies_industries::208"
+              },
+              {
+                "id": "companies_industries::210"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "company_id": 1027,
+      "industry": "Fintech"
+    },
+    {
+      "company_id": 635,
+      "industry": "Internet software & services"
+    },
+    {
+      "company_id": 1031,
+      "industry": "Internet software & services"
+    },
+    {
+      "company_id": 239,
+      "industry": "Internet software & services"
+    },
+    {
+      "company_id": 938,
+      "industry": "Artificial intelligence"
+    }
+  ]
+}

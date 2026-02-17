@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "account_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1161,
+              1321,
+              1401,
+              3361,
+              4191
+            ],
+            "type": "number"
+          },
+          "channel": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "adwords",
+              "direct",
+              "facebook",
+              "organic",
+              "twitter"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              137,
+              490,
+              3119,
+              4013,
+              4779
+            ],
+            "type": "number"
+          },
+          "occurred_at": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2015-12-10T16:24:18.000Z",
+              "2016-01-29T23:01:32.000Z",
+              "2016-03-06T02:51:21.000Z",
+              "2016-10-14T13:07:24.000Z",
+              "2016-11-15T09:11:33.000Z"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "web_events::136",
+                  "web_events::3118",
+                  "web_events::4012",
+                  "web_events::4778",
+                  "web_events::489"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "web_events::136"
+              },
+              {
+                "id": "web_events::3118"
+              },
+              {
+                "id": "web_events::4012"
+              },
+              {
+                "id": "web_events::4778"
+              },
+              {
+                "id": "web_events::489"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "account_id": 1701,
+      "channel": "direct",
+      "id": 1046,
+      "occurred_at": "2015-02-28T05:55:56.000Z"
+    },
+    {
+      "account_id": 1711,
+      "channel": "direct",
+      "id": 1070,
+      "occurred_at": "2015-08-08T02:17:17.000Z"
+    },
+    {
+      "account_id": 1711,
+      "channel": "direct",
+      "id": 1072,
+      "occurred_at": "2015-10-05T12:04:53.000Z"
+    },
+    {
+      "account_id": 1871,
+      "channel": "direct",
+      "id": 1289,
+      "occurred_at": "2016-03-26T10:16:46.000Z"
+    },
+    {
+      "account_id": 1871,
+      "channel": "direct",
+      "id": 1291,
+      "occurred_at": "2016-05-24T21:50:24.000Z"
+    }
+  ]
+}

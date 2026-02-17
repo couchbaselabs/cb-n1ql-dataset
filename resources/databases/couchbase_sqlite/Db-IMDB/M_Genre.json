@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "GID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              16,
+              54,
+              84,
+              95
+            ],
+            "type": "number"
+          },
+          "ID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              243,
+              1053,
+              1448,
+              2093,
+              2272
+            ],
+            "type": "number"
+          },
+          "MID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "tt0071730",
+              "tt0148266",
+              "tt0287111",
+              "tt2190820",
+              "tt5358948"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              243,
+              1053,
+              1448,
+              2093,
+              2272
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "M_Genre::1053",
+                  "M_Genre::1448",
+                  "M_Genre::2093",
+                  "M_Genre::2272",
+                  "M_Genre::243"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "M_Genre::1053"
+              },
+              {
+                "id": "M_Genre::1448"
+              },
+              {
+                "id": "M_Genre::2093"
+              },
+              {
+                "id": "M_Genre::2272"
+              },
+              {
+                "id": "M_Genre::243"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "GID": 16,
+      "ID": 1093,
+      "MID": "tt2814372",
+      "index": 1093
+    },
+    {
+      "GID": 57,
+      "ID": 1103,
+      "MID": "tt3636776",
+      "index": 1103
+    },
+    {
+      "GID": 190,
+      "ID": 1137,
+      "MID": "tt0476550",
+      "index": 1137
+    },
+    {
+      "GID": 54,
+      "ID": 1246,
+      "MID": "tt0230347",
+      "index": 1246
+    },
+    {
+      "GID": 23,
+      "ID": 1272,
+      "MID": "tt0083820",
+      "index": 1272
+    }
+  ]
+}

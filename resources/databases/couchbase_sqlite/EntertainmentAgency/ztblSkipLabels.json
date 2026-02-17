@@ -1,0 +1,82 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 60,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "LabelCount": {
+            "#docs": 60,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              34,
+              44,
+              47,
+              57
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 60,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 60,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ztblSkipLabels::0",
+                  "ztblSkipLabels::33",
+                  "ztblSkipLabels::43",
+                  "ztblSkipLabels::46",
+                  "ztblSkipLabels::56"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ztblSkipLabels::0"
+              },
+              {
+                "id": "ztblSkipLabels::33"
+              },
+              {
+                "id": "ztblSkipLabels::43"
+              },
+              {
+                "id": "ztblSkipLabels::46"
+              },
+              {
+                "id": "ztblSkipLabels::56"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LabelCount": 53
+    },
+    {
+      "LabelCount": 12
+    },
+    {
+      "LabelCount": 26
+    },
+    {
+      "LabelCount": 4
+    },
+    {
+      "LabelCount": 11
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 250,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "city": {
+            "#docs": 250,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Buffalo",
+              "Indianapolis",
+              "Ludlow",
+              "Milwaukee",
+              "Rockford"
+            ],
+            "type": "string"
+          },
+          "country": {
+            "#docs": 250,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AU",
+              "CA",
+              "JP",
+              "PR",
+              "US"
+            ],
+            "type": "string"
+          },
+          "park_alias": {
+            "#docs": 250,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Pastime Park",
+              "Dunn Field",
+              "Federal League Park",
+              "Navin Field; Briggs Stadium",
+              ""
+            ],
+            "type": "string"
+          },
+          "park_id": {
+            "#docs": 250,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BUF03",
+              "IND04",
+              "LUD01",
+              "MIL02",
+              "RCK01"
+            ],
+            "type": "string"
+          },
+          "park_name": {
+            "#docs": 250,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Agricultural Society Fair Grou...",
+              "Ludlow Baseball Park",
+              "Olympic Park II",
+              "Seventh Street Park II",
+              "Wright Street Grounds"
+            ],
+            "type": "string"
+          },
+          "state": {
+            "#docs": 250,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IL",
+              "IN",
+              "KY",
+              "NY",
+              "WI"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 250,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 250,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "park::117",
+                  "park::123",
+                  "park::187",
+                  "park::28",
+                  "park::94"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "park::117"
+              },
+              {
+                "id": "park::123"
+              },
+              {
+                "id": "park::187"
+              },
+              {
+                "id": "park::28"
+              },
+              {
+                "id": "park::94"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "city": "Baltimore",
+      "country": "US",
+      "park_alias": "",
+      "park_id": "BAL06",
+      "park_name": "Oriole Park II",
+      "state": "MD"
+    },
+    {
+      "city": "Richmond",
+      "country": "US",
+      "park_alias": "",
+      "park_id": "RIC02",
+      "park_name": "Allens Pasture",
+      "state": "VA"
+    },
+    {
+      "city": "Rochester",
+      "country": "US",
+      "park_alias": "",
+      "park_id": "ROC02",
+      "park_name": "Culver Field II",
+      "state": "NY"
+    },
+    {
+      "city": "Anaheim",
+      "country": "US",
+      "park_alias": "Edison Field; Anaheim Stadium",
+      "park_id": "ANA01",
+      "park_name": "Angel Stadium of Anaheim",
+      "state": "CA"
+    },
+    {
+      "city": "Buffalo",
+      "country": "US",
+      "park_alias": "",
+      "park_id": "BUF01",
+      "park_name": "Riverside Grounds",
+      "state": "NY"
+    }
+  ]
+}

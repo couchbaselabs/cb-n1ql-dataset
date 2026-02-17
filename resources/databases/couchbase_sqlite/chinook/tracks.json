@@ -1,0 +1,237 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "AlbumId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              93,
+              106,
+              110,
+              114,
+              129
+            ],
+            "type": "number"
+          },
+          "Bytes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3543040,
+              9552829,
+              12511939,
+              14249000,
+              23711872
+            ],
+            "type": "number"
+          },
+          "Composer": {
+            "#docs": [
+              274,
+              726
+            ],
+            "%docs": [
+              27.4,
+              72.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Allen Story/George Gordy/Rober...",
+                "J.Hetfield/L.Ulrich",
+                "Jimmy Page/Jimmy Page & Robert...",
+                "Maxton Gig Beesley Jnr.",
+                "Steve Harris"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "GenreId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              8,
+              14
+            ],
+            "type": "number"
+          },
+          "MediaTypeId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "Milliseconds": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              221309,
+              290089,
+              379167,
+              592744,
+              593580
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Millenium",
+              "Over The Hills And Far Away",
+              "Quest For Fire",
+              "Seventh Son of a Seventh Son",
+              "The Angel And The Gambler"
+            ],
+            "type": "string"
+          },
+          "TrackId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1196,
+              1341,
+              1375,
+              1407,
+              1597
+            ],
+            "type": "number"
+          },
+          "UnitPrice": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.99,
+              1.99
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "tracks::1195",
+                  "tracks::1340",
+                  "tracks::1374",
+                  "tracks::1406",
+                  "tracks::1596"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "tracks::1195"
+              },
+              {
+                "id": "tracks::1340"
+              },
+              {
+                "id": "tracks::1374"
+              },
+              {
+                "id": "tracks::1406"
+              },
+              {
+                "id": "tracks::1596"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AlbumId": 2,
+      "Bytes": 5510424,
+      "Composer": null,
+      "GenreId": 1,
+      "MediaTypeId": 2,
+      "Milliseconds": 342562,
+      "Name": "Balls to the Wall",
+      "TrackId": 2,
+      "UnitPrice": 0.99
+    },
+    {
+      "AlbumId": 81,
+      "Bytes": 9678073,
+      "Composer": "Foo Fighters",
+      "GenreId": 4,
+      "MediaTypeId": 1,
+      "Milliseconds": 298396,
+      "Name": "Burn Away",
+      "TrackId": 1018,
+      "UnitPrice": 0.99
+    },
+    {
+      "AlbumId": 82,
+      "Bytes": 4950667,
+      "Composer": "Dave, Taylor, Nate, Chris",
+      "GenreId": 1,
+      "MediaTypeId": 1,
+      "Milliseconds": 152163,
+      "Name": "Wind Up",
+      "TrackId": 1024,
+      "UnitPrice": 0.99
+    },
+    {
+      "AlbumId": 93,
+      "Bytes": 12055329,
+      "Composer": "Richard Bull",
+      "GenreId": 2,
+      "MediaTypeId": 1,
+      "Milliseconds": 361012,
+      "Name": "Colibri",
+      "TrackId": 1188,
+      "UnitPrice": 0.99
+    },
+    {
+      "AlbumId": 108,
+      "Bytes": 11272320,
+      "Composer": "Adrian Smith/Bruce Dickinson/Steve Harris",
+      "GenreId": 3,
+      "MediaTypeId": 1,
+      "Milliseconds": 281782,
+      "Name": "The Wicker Man",
+      "TrackId": 1353,
+      "UnitPrice": 0.99
+    }
+  ]
+}

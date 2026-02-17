@@ -1,0 +1,201 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customer_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              178,
+              200,
+              366,
+              413,
+              596
+            ],
+            "type": "number"
+          },
+          "inventory_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              825,
+              829,
+              1339,
+              2542,
+              3830
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:55:24",
+              "2021-03-06 15:55:28",
+              "2021-03-06 15:55:35",
+              "2021-03-06 15:55:39",
+              "2021-03-06 15:55:54"
+            ],
+            "type": "string"
+          },
+          "rental_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2005-08-18 14:54:19.000",
+              "2005-08-19 07:52:21.000",
+              "2005-08-20 14:50:06.000",
+              "2005-08-21 05:52:57.000",
+              "2005-08-23 12:11:37.000"
+            ],
+            "type": "string"
+          },
+          "rental_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12560,
+              13010,
+              13857,
+              14257,
+              15742
+            ],
+            "type": "number"
+          },
+          "return_date": {
+            "#docs": [
+              9,
+              991
+            ],
+            "%docs": [
+              0.9,
+              99.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2005-08-24 10:38:06.000",
+                "2005-08-27 12:51:21.000",
+                "2005-08-27 13:39:19.000",
+                "2005-08-29 03:18:57.000",
+                "2005-08-31 07:28:37.000"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "staff_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "rental::12555",
+                  "rental::13005",
+                  "rental::13852",
+                  "rental::14252",
+                  "rental::15736"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "rental::12555"
+              },
+              {
+                "id": "rental::13005"
+              },
+              {
+                "id": "rental::13852"
+              },
+              {
+                "id": "rental::14252"
+              },
+              {
+                "id": "rental::15736"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customer_id": 533,
+      "inventory_id": 4023,
+      "last_update": "2021-03-06 15:55:04",
+      "rental_date": "2005-07-31 20:22:01.000",
+      "rental_id": 10090,
+      "return_date": "2005-08-04 17:30:01.000",
+      "staff_id": 1
+    },
+    {
+      "customer_id": 396,
+      "inventory_id": 1709,
+      "last_update": "2021-03-06 15:55:04",
+      "rental_date": "2005-07-31 21:24:24.000",
+      "rental_id": 10120,
+      "return_date": "2005-08-03 17:44:24.000",
+      "staff_id": 2
+    },
+    {
+      "customer_id": 39,
+      "inventory_id": 3,
+      "last_update": "2021-03-06 15:55:04",
+      "rental_date": "2005-07-31 21:36:07.000",
+      "rental_id": 10126,
+      "return_date": "2005-08-03 23:59:07.000",
+      "staff_id": 1
+    },
+    {
+      "customer_id": 49,
+      "inventory_id": 3011,
+      "last_update": "2021-03-06 15:55:04",
+      "rental_date": "2005-07-31 22:13:52.000",
+      "rental_id": 10144,
+      "return_date": "2005-08-05 19:27:52.000",
+      "staff_id": 1
+    },
+    {
+      "customer_id": 101,
+      "inventory_id": 1406,
+      "last_update": "2021-03-06 15:55:05",
+      "rental_date": "2005-08-01 02:39:49.000",
+      "rental_id": 10253,
+      "return_date": "2005-08-08 04:28:49.000",
+      "staff_id": 2
+    }
+  ]
+}

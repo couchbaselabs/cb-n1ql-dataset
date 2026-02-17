@@ -1,0 +1,152 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "importance": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              0.0053099684905764865,
+              0.03461171367533742,
+              0.04791884997165543,
+              0.10293369728021808
+            ],
+            "type": "number"
+          },
+          "model": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GPCQ",
+              "GPCR",
+              "KNRU",
+              "RFCE",
+              "RFRP"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Hospital Mortality Prediction",
+              "Tunnel diode",
+              "concrete",
+              "kindey stone urine analysis",
+              "oil spill"
+            ],
+            "type": "string"
+          },
+          "step": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "version": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "model_importance::115",
+                  "model_importance::1190",
+                  "model_importance::1403",
+                  "model_importance::1437",
+                  "model_importance::1857"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "model_importance::115"
+              },
+              {
+                "id": "model_importance::1190"
+              },
+              {
+                "id": "model_importance::1403"
+              },
+              {
+                "id": "model_importance::1437"
+              },
+              {
+                "id": "model_importance::1857"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "importance": 0.0009864614977951414,
+      "model": "GPRR",
+      "name": "Tunnel diode",
+      "step": 1,
+      "version": 5
+    },
+    {
+      "importance": 0.0030382924735839287,
+      "model": "DTRP",
+      "name": "Tunnel diode",
+      "step": 1,
+      "version": 6
+    },
+    {
+      "importance": 0.031359043273031614,
+      "model": "GPCR",
+      "name": "survey lung cancer",
+      "step": 1,
+      "version": 1
+    },
+    {
+      "importance": 0.07955148935336266,
+      "model": "KNCD",
+      "name": "survey lung cancer",
+      "step": 1,
+      "version": 2
+    },
+    {
+      "importance": 0.36321133875875367,
+      "model": "RFCG",
+      "name": "oil spill",
+      "step": 3,
+      "version": 2
+    }
+  ]
+}

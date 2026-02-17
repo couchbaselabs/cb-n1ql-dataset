@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 104,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "airport_code": {
+            "#docs": 104,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OSW",
+              "PES",
+              "SKX",
+              "SVO",
+              "USK"
+            ],
+            "type": "string"
+          },
+          "airport_name": {
+            "#docs": 104,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "{\"en\": \"Orsk Airport\", \"ru\": \"...",
+              "{\"en\": \"Petrozavodsk Airport\",...",
+              "{\"en\": \"Saransk Airport\", \"ru\"...",
+              "{\"en\": \"Sheremetyevo Internati...",
+              "{\"en\": \"Usinsk Airport\", \"ru\":..."
+            ],
+            "type": "string"
+          },
+          "city": {
+            "#docs": 104,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "{\"en\": \"Moscow\", \"ru\": \"\u041c\u043e\u0441...",
+              "{\"en\": \"Orsk\", \"ru\": \"\u041e\u0440\u0441\u043a...",
+              "{\"en\": \"Petrozavodsk\", \"ru\": \"...",
+              "{\"en\": \"Saransk\", \"ru\": \"\u0421\u0430\ufffd...",
+              "{\"en\": \"Usinsk\", \"ru\": \"\u0423\u0441\u0438..."
+            ],
+            "type": "string"
+          },
+          "coordinates": {
+            "#docs": 104,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(34.1547012329101562,61.885200...",
+              "(37.4146000000000001,55.972599...",
+              "(45.2122573852539062,54.125129...",
+              "(57.3671989440917969,66.004699...",
+              "(58.5956001281738281,51.072498..."
+            ],
+            "type": "string"
+          },
+          "timezone": {
+            "#docs": 104,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Asia/Irkutsk",
+              "Asia/Krasnoyarsk",
+              "Asia/Omsk",
+              "Asia/Yekaterinburg",
+              "Europe/Moscow"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 104,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 104,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "airports_data::19",
+                  "airports_data::35",
+                  "airports_data::45",
+                  "airports_data::69",
+                  "airports_data::71"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "airports_data::19"
+              },
+              {
+                "id": "airports_data::35"
+              },
+              {
+                "id": "airports_data::45"
+              },
+              {
+                "id": "airports_data::69"
+              },
+              {
+                "id": "airports_data::71"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "airport_code": "PKV",
+      "airport_name": "{\"en\": \"Pskov Airport\", \"ru\": \"\u041f\u0441\u043a\u043e\u0432\"}",
+      "city": "{\"en\": \"Pskov\", \"ru\": \"\u041f\u0441\u043a\u043e\u0432\"}",
+      "coordinates": "(28.395599365234375,57.7839012145996094)",
+      "timezone": "Europe/Moscow"
+    },
+    {
+      "airport_code": "KRR",
+      "airport_name": "{\"en\": \"Krasnodar Pashkovsky International Airport\", \"ru\": \"\u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\"}",
+      "city": "{\"en\": \"Krasnodar\", \"ru\": \"\u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\"}",
+      "coordinates": "(39.1705017089839984,45.0346984863279971)",
+      "timezone": "Europe/Moscow"
+    },
+    {
+      "airport_code": "MCX",
+      "airport_name": "{\"en\": \"Uytash Airport\", \"ru\": \"\u0423\u0439\u0442\u0430\u0448\"}",
+      "city": "{\"en\": \"Makhachkala\", \"ru\": \"\u041c\u0430\u0445\u0430\u0447\u043a\u0430\u043b\u0430\"}",
+      "coordinates": "(47.6523017883300781,42.8167991638183594)",
+      "timezone": "Europe/Moscow"
+    },
+    {
+      "airport_code": "KZN",
+      "airport_name": "{\"en\": \"Kazan International Airport\", \"ru\": \"\u041a\u0430\u0437\u0430\u043d\u044c\"}",
+      "city": "{\"en\": \"Kazan\", \"ru\": \"\u041a\u0430\u0437\u0430\u043d\u044c\"}",
+      "coordinates": "(49.278701782227003,55.606201171875)",
+      "timezone": "Europe/Moscow"
+    },
+    {
+      "airport_code": "IWA",
+      "airport_name": "{\"en\": \"Ivanovo South Airport\", \"ru\": \"\u0418\u0432\u0430\u043d\u043e\u0432\u043e-\u042e\u0436\u043d\u044b\u0439\"}",
+      "city": "{\"en\": \"Ivanovo\", \"ru\": \"\u0418\u0432\u0430\u043d\u043e\u0432\u043e\"}",
+      "coordinates": "(40.9407997131347656,56.9393997192382812)",
+      "timezone": "Europe/Moscow"
+    }
+  ]
+}

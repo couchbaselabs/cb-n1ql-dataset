@@ -1,0 +1,93 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`last_update` = \"2021-03-06 15:52:00\"",
+        "properties": {
+          "address_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:52:00"
+            ],
+            "type": "string"
+          },
+          "manager_staff_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "store_id": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "store::0",
+                  "store::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "store::0"
+              },
+              {
+                "id": "store::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address_id": 1,
+      "last_update": "2021-03-06 15:52:00",
+      "manager_staff_id": 1,
+      "store_id": 1
+    },
+    {
+      "address_id": 2,
+      "last_update": "2021-03-06 15:52:00",
+      "manager_staff_id": 2,
+      "store_id": 2
+    }
+  ]
+}

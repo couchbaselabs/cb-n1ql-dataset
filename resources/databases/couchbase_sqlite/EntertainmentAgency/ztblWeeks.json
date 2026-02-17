@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 156,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "WeekEnd": {
+            "#docs": 156,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-09-01",
+              "2018-12-08",
+              "2019-04-13",
+              "2019-08-03",
+              "2019-10-26"
+            ],
+            "type": "string"
+          },
+          "WeekStart": {
+            "#docs": 156,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-08-26",
+              "2018-12-02",
+              "2019-04-07",
+              "2019-07-28",
+              "2019-10-20"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 156,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 156,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ztblWeeks::100",
+                  "ztblWeeks::118",
+                  "ztblWeeks::134",
+                  "ztblWeeks::146",
+                  "ztblWeeks::86"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ztblWeeks::100"
+              },
+              {
+                "id": "ztblWeeks::118"
+              },
+              {
+                "id": "ztblWeeks::134"
+              },
+              {
+                "id": "ztblWeeks::146"
+              },
+              {
+                "id": "ztblWeeks::86"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "WeekEnd": "2019-01-12",
+      "WeekStart": "2019-01-06"
+    },
+    {
+      "WeekEnd": "2019-06-29",
+      "WeekStart": "2019-06-23"
+    },
+    {
+      "WeekEnd": "2019-07-13",
+      "WeekStart": "2019-07-07"
+    },
+    {
+      "WeekEnd": "2018-08-11",
+      "WeekStart": "2018-08-05"
+    },
+    {
+      "WeekEnd": "2019-02-09",
+      "WeekStart": "2019-02-03"
+    }
+  ]
+}

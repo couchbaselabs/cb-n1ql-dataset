@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "geolocation_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "jundiai",
+              "santana de parnaiba",
+              "santo andre",
+              "sao paulo",
+              "taubate"
+            ],
+            "type": "string"
+          },
+          "geolocation_lat": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -23.678983256737208,
+              -23.569471802383312,
+              -23.41247189039813,
+              -23.21680428671585,
+              -23.030140494393343
+            ],
+            "type": "number"
+          },
+          "geolocation_lng": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -46.886056885536206,
+              -46.86606946531816,
+              -46.75705828074324,
+              -46.538310096716536,
+              -45.55963419005976
+            ],
+            "type": "number"
+          },
+          "geolocation_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MG",
+              "MT",
+              "PR",
+              "RJ",
+              "SP"
+            ],
+            "type": "string"
+          },
+          "geolocation_zip_code_prefix": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5379,
+              6530,
+              9190,
+              12010,
+              13203
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "olist_geolocation::125617",
+                  "olist_geolocation::164855",
+                  "olist_geolocation::221169",
+                  "olist_geolocation::269065",
+                  "olist_geolocation::297017"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "olist_geolocation::125617"
+              },
+              {
+                "id": "olist_geolocation::164855"
+              },
+              {
+                "id": "olist_geolocation::221169"
+              },
+              {
+                "id": "olist_geolocation::269065"
+              },
+              {
+                "id": "olist_geolocation::297017"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "geolocation_city": "tapejara",
+      "geolocation_lat": -28.07343831270623,
+      "geolocation_lng": -52.01666438696413,
+      "geolocation_state": "RS",
+      "geolocation_zip_code_prefix": 99950
+    },
+    {
+      "geolocation_city": "s\u00e3o paulo",
+      "geolocation_lat": -23.62159501387846,
+      "geolocation_lng": -46.672435121011006,
+      "geolocation_state": "SP",
+      "geolocation_zip_code_prefix": 4617
+    },
+    {
+      "geolocation_city": "sao paulo",
+      "geolocation_lat": -23.62343660996594,
+      "geolocation_lng": -46.6754768181167,
+      "geolocation_state": "SP",
+      "geolocation_zip_code_prefix": 4619
+    },
+    {
+      "geolocation_city": "s\u00e3o paulo",
+      "geolocation_lat": -23.641365140558527,
+      "geolocation_lng": -46.67133487613658,
+      "geolocation_state": "SP",
+      "geolocation_zip_code_prefix": 4635
+    },
+    {
+      "geolocation_city": "sao paulo",
+      "geolocation_lat": -23.663284597813057,
+      "geolocation_lng": -46.68359333971952,
+      "geolocation_state": "SP",
+      "geolocation_zip_code_prefix": 4674
+    }
+  ]
+}

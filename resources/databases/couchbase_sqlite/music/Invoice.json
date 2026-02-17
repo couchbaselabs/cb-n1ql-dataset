@@ -1,0 +1,254 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 412,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "BillingAddress": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "110 Raeburn Pl",
+              "12,Community Centre",
+              "4, Rue Milton",
+              "9, Place Louis Barthou",
+              "Berger Stra\u00dfe 10"
+            ],
+            "type": "string"
+          },
+          "BillingCity": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bordeaux",
+              "Delhi",
+              "Edinburgh ",
+              "Frankfurt",
+              "Paris"
+            ],
+            "type": "string"
+          },
+          "BillingCountry": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Czech Republic",
+              "France",
+              "Germany",
+              "India",
+              "United Kingdom"
+            ],
+            "type": "string"
+          },
+          "BillingPostalCode": {
+            "#docs": [
+              7,
+              405
+            ],
+            "%docs": [
+              1.69,
+              98.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "110017",
+                "33000",
+                "60316",
+                "75009",
+                "EH4 1HH"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "BillingState": {
+            "#docs": [
+              209,
+              203
+            ],
+            "%docs": [
+              50.72,
+              49.27
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "IL",
+                "NSW",
+                "NV",
+                "RJ",
+                "WI"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "CustomerId": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37,
+              39,
+              42,
+              54,
+              58
+            ],
+            "type": "number"
+          },
+          "InvoiceDate": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2009-01-19 00:00:00",
+              "2010-10-16 00:00:00",
+              "2010-10-24 00:00:00",
+              "2011-03-23 00:00:00",
+              "2011-07-30 00:00:00"
+            ],
+            "type": "string"
+          },
+          "InvoiceId": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              150,
+              152,
+              186,
+              215
+            ],
+            "type": "number"
+          },
+          "Total": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.99,
+              1.98,
+              5.94,
+              8.91,
+              13.86
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 412,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 412,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Invoice::149",
+                  "Invoice::151",
+                  "Invoice::185",
+                  "Invoice::214",
+                  "Invoice::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Invoice::149"
+              },
+              {
+                "id": "Invoice::151"
+              },
+              {
+                "id": "Invoice::185"
+              },
+              {
+                "id": "Invoice::214"
+              },
+              {
+                "id": "Invoice::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BillingAddress": "Rua dos Campe\u00f5es Europeus de Viena, 4350",
+      "BillingCity": "Porto",
+      "BillingCountry": "Portugal",
+      "BillingPostalCode": null,
+      "BillingState": null,
+      "CustomerId": 35,
+      "InvoiceDate": "2010-10-15 00:00:00",
+      "InvoiceId": 149,
+      "Total": 3.96
+    },
+    {
+      "BillingAddress": "Erzs\u00e9bet krt. 58.",
+      "BillingCity": "Budapest",
+      "BillingCountry": "Hungary",
+      "BillingPostalCode": "H-1073",
+      "BillingState": null,
+      "CustomerId": 45,
+      "InvoiceDate": "2010-10-19 00:00:00",
+      "InvoiceId": 151,
+      "Total": 8.91
+    },
+    {
+      "BillingAddress": "1498 rue B\u00e9langer",
+      "BillingCity": "Montr\u00e9al",
+      "BillingCountry": "Canada",
+      "BillingPostalCode": "H2G 1A7",
+      "BillingState": "QC",
+      "CustomerId": 3,
+      "InvoiceDate": "2010-12-20 00:00:00",
+      "InvoiceId": 165,
+      "Total": 8.91
+    },
+    {
+      "BillingAddress": "307 Macacha G\u00fcemes",
+      "BillingCity": "Buenos Aires",
+      "BillingCountry": "Argentina",
+      "BillingPostalCode": "1106",
+      "BillingState": null,
+      "CustomerId": 56,
+      "InvoiceDate": "2011-08-07 00:00:00",
+      "InvoiceId": 216,
+      "Total": 0.99
+    },
+    {
+      "BillingAddress": "801 W 4th Street",
+      "BillingCity": "Reno",
+      "BillingCountry": "USA",
+      "BillingPostalCode": "89503",
+      "BillingState": "NV",
+      "CustomerId": 21,
+      "InvoiceDate": "2011-08-30 00:00:00",
+      "InvoiceId": 222,
+      "Total": 13.86
+    }
+  ]
+}

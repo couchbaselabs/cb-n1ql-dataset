@@ -1,0 +1,305 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`golf` = 1",
+        "properties": {
+          "affinity_card": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "baseball": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "comments": {
+            "#docs": [
+              49,
+              951
+            ],
+            "%docs": [
+              4.9,
+              95.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "A great idea.  Thank you!  Sig...",
+                "I love shopping with my Affini...",
+                "I purchased a new item from yo...",
+                "Shopping at your store is a ha...",
+                "Thank you! But I am very unhap..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "cricket": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "cust_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              101694,
+              101813,
+              102249,
+              102487,
+              102523
+            ],
+            "type": "number"
+          },
+          "education": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "11th",
+              "12th",
+              "< Bach.",
+              "HS-grad",
+              "Masters"
+            ],
+            "type": "string"
+          },
+          "golf": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "household_size": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "2",
+              "3",
+              "4-5",
+              "9+"
+            ],
+            "type": "string"
+          },
+          "misc": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "occupation": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cleric.",
+              "Crafts",
+              "Other",
+              "Sales",
+              "TechSup"
+            ],
+            "type": "string"
+          },
+          "soccer": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "tennis": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "unknown": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "yrs_residence": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              4,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "supplementary_demographics::16...",
+                  "supplementary_demographics::18...",
+                  "supplementary_demographics::22...",
+                  "supplementary_demographics::24...",
+                  "supplementary_demographics::25..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "supplementary_demographics::1693"
+              },
+              {
+                "id": "supplementary_demographics::1812"
+              },
+              {
+                "id": "supplementary_demographics::2248"
+              },
+              {
+                "id": "supplementary_demographics::2486"
+              },
+              {
+                "id": "supplementary_demographics::2522"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "affinity_card": 1,
+      "baseball": 1,
+      "comments": "I run a small convenience store. Any chance that I would be eligible for larger discounts if I purchase a large quantity of items (bulk purchase)?",
+      "cricket": 1,
+      "cust_id": 101047,
+      "education": "Bach.",
+      "golf": 1,
+      "household_size": "3",
+      "misc": 0,
+      "occupation": "Sales",
+      "soccer": 1,
+      "tennis": 1,
+      "unknown": 0,
+      "yrs_residence": 3
+    },
+    {
+      "affinity_card": 0,
+      "baseball": 1,
+      "comments": "I used to shop at your store, but have stopped now. I tried to return some electronic items and your store manager was a pain to deal with.",
+      "cricket": 1,
+      "cust_id": 101073,
+      "education": "HS-grad",
+      "golf": 1,
+      "household_size": "3",
+      "misc": 0,
+      "occupation": "Other",
+      "soccer": 1,
+      "tennis": 1,
+      "unknown": 0,
+      "yrs_residence": 4
+    },
+    {
+      "affinity_card": 0,
+      "baseball": 1,
+      "comments": "The more times that I shop at your store, the more times I am impressed.  Don't change anything",
+      "cricket": 1,
+      "cust_id": 101294,
+      "education": "HS-grad",
+      "golf": 1,
+      "household_size": "9+",
+      "misc": 0,
+      "occupation": "Handler",
+      "soccer": 1,
+      "tennis": 1,
+      "unknown": 0,
+      "yrs_residence": 6
+    },
+    {
+      "affinity_card": 0,
+      "baseball": 1,
+      "comments": "Affinity card is a great idea. But your store is still too expensive. I am tired of your lousy junk mail.",
+      "cricket": 1,
+      "cust_id": 101304,
+      "education": "< Bach.",
+      "golf": 1,
+      "household_size": "9+",
+      "misc": 0,
+      "occupation": "Exec.",
+      "soccer": 1,
+      "tennis": 1,
+      "unknown": 0,
+      "yrs_residence": 5
+    },
+    {
+      "affinity_card": 0,
+      "baseball": 1,
+      "comments": "I used to shop at your store, but have stopped now. I tried to return some electronic items and your store manager was a pain to deal with.",
+      "cricket": 1,
+      "cust_id": 101338,
+      "education": "< Bach.",
+      "golf": 1,
+      "household_size": "6-8",
+      "misc": 0,
+      "occupation": "TechSup",
+      "soccer": 1,
+      "tennis": 0,
+      "unknown": 1,
+      "yrs_residence": 2
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "category_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              8,
+              13,
+              14,
+              15
+            ],
+            "type": "number"
+          },
+          "film_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              193,
+              348,
+              374,
+              402,
+              420
+            ],
+            "type": "number"
+          },
+          "last_update": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:53:28",
+              "2021-03-06 15:53:29",
+              "2021-03-06 15:53:30",
+              "2021-03-06 15:53:31",
+              "2021-03-06 15:53:32"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "film_category::192",
+                  "film_category::347",
+                  "film_category::373",
+                  "film_category::401",
+                  "film_category::419"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "film_category::192"
+              },
+              {
+                "id": "film_category::347"
+              },
+              {
+                "id": "film_category::373"
+              },
+              {
+                "id": "film_category::401"
+              },
+              {
+                "id": "film_category::419"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "category_id": 2,
+      "film_id": 193,
+      "last_update": "2021-03-06 15:53:29"
+    },
+    {
+      "category_id": 8,
+      "film_id": 348,
+      "last_update": "2021-03-06 15:53:30"
+    },
+    {
+      "category_id": 14,
+      "film_id": 374,
+      "last_update": "2021-03-06 15:53:31"
+    },
+    {
+      "category_id": 2,
+      "film_id": 402,
+      "last_update": "2021-03-06 15:53:31"
+    },
+    {
+      "category_id": 15,
+      "film_id": 420,
+      "last_update": "2021-03-06 15:53:31"
+    }
+  ]
+}

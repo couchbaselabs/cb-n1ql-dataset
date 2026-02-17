@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 275,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ArtistId": {
+            "#docs": 275,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              81,
+              147,
+              173,
+              204,
+              238
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 275,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Battlestar Galactica",
+              "Eric Clapton",
+              "Matisyahu",
+              "Maurizio Pollini",
+              "Temple of the Dog"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 275,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 275,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Artist::146",
+                  "Artist::172",
+                  "Artist::203",
+                  "Artist::237",
+                  "Artist::80"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "Artist::146"
+              },
+              {
+                "id": "Artist::172"
+              },
+              {
+                "id": "Artist::203"
+              },
+              {
+                "id": "Artist::237"
+              },
+              {
+                "id": "Artist::80"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ArtistId": 188,
+      "Name": "Mundo Livre S/A"
+    },
+    {
+      "ArtistId": 42,
+      "Name": "Milton Nascimento"
+    },
+    {
+      "ArtistId": 60,
+      "Name": "Santana Feat. Dave Matthews"
+    },
+    {
+      "ArtistId": 76,
+      "Name": "Creedence Clearwater Revival"
+    },
+    {
+      "ArtistId": 181,
+      "Name": "Xis"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 599,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "active": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "1"
+            ],
+            "type": "string"
+          },
+          "address_id": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              287,
+              305,
+              315,
+              317,
+              331
+            ],
+            "type": "number"
+          },
+          "create_date": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2006-02-14 22:04:36.000",
+              "2006-02-14 22:04:37.000"
+            ],
+            "type": "string"
+          },
+          "customer_id": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              282,
+              300,
+              310,
+              312,
+              326
+            ],
+            "type": "number"
+          },
+          "email": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DANIEL.CABRAL@sakilacustomer.o...",
+              "JENNY.CASTRO@sakilacustomer.or...",
+              "JOHN.FARNSWORTH@sakilacustomer...",
+              "JOSE.ANDREW@sakilacustomer.org",
+              "MARK.RINEHART@sakilacustomer.o..."
+            ],
+            "type": "string"
+          },
+          "first_name": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DANIEL",
+              "JENNY",
+              "JOHN",
+              "JOSE",
+              "MARK"
+            ],
+            "type": "string"
+          },
+          "last_name": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ANDREW",
+              "CABRAL",
+              "CASTRO",
+              "FARNSWORTH",
+              "RINEHART"
+            ],
+            "type": "string"
+          },
+          "last_update": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:53:36",
+              "2021-03-06 15:53:37",
+              "2021-03-06 15:53:38",
+              "2021-03-06 15:53:39",
+              "2021-03-06 15:53:41"
+            ],
+            "type": "string"
+          },
+          "store_id": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 599,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 599,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "customer::281",
+                  "customer::299",
+                  "customer::309",
+                  "customer::311",
+                  "customer::325"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "customer::281"
+              },
+              {
+                "id": "customer::299"
+              },
+              {
+                "id": "customer::309"
+              },
+              {
+                "id": "customer::311"
+              },
+              {
+                "id": "customer::325"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "active": "1",
+      "address_id": 303,
+      "create_date": "2006-02-14 22:04:37.000",
+      "customer_id": 298,
+      "email": "ERIKA.PENA@sakilacustomer.org",
+      "first_name": "ERIKA",
+      "last_name": "PENA",
+      "last_update": "2021-03-06 15:53:38",
+      "store_id": 1
+    },
+    {
+      "active": "1",
+      "address_id": 313,
+      "create_date": "2006-02-14 22:04:37.000",
+      "customer_id": 308,
+      "email": "THOMAS.GRIGSBY@sakilacustomer.org",
+      "first_name": "THOMAS",
+      "last_name": "GRIGSBY",
+      "last_update": "2021-03-06 15:53:38",
+      "store_id": 1
+    },
+    {
+      "active": "1",
+      "address_id": 339,
+      "create_date": "2006-02-14 22:04:37.000",
+      "customer_id": 334,
+      "email": "RAYMOND.MCWHORTER@sakilacustomer.org",
+      "first_name": "RAYMOND",
+      "last_name": "MCWHORTER",
+      "last_update": "2021-03-06 15:53:38",
+      "store_id": 2
+    },
+    {
+      "active": "1",
+      "address_id": 447,
+      "create_date": "2006-02-14 22:04:37.000",
+      "customer_id": 442,
+      "email": "LEROY.BUSTAMANTE@sakilacustomer.org",
+      "first_name": "LEROY",
+      "last_name": "BUSTAMANTE",
+      "last_update": "2021-03-06 15:53:39",
+      "store_id": 1
+    },
+    {
+      "active": "1",
+      "address_id": 465,
+      "create_date": "2006-02-14 22:04:37.000",
+      "customer_id": 460,
+      "email": "LEON.BOSTIC@sakilacustomer.org",
+      "first_name": "LEON",
+      "last_name": "BOSTIC",
+      "last_update": "2021-03-06 15:53:39",
+      "store_id": 1
+    }
+  ]
+}

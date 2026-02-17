@@ -1,0 +1,210 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 603,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`district` = \" \", `phone` = \" \"",
+        "properties": {
+          "address": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1050 Garden Grove Avenue",
+              "127 Iwakuni Boulevard",
+              "1666 Qomsheh Drive",
+              "647 A Corua (La Corua) Street",
+              "659 Vaduz Drive"
+            ],
+            "type": "string"
+          },
+          "address2": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "address_id": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              106,
+              130,
+              132,
+              241,
+              260
+            ],
+            "type": "number"
+          },
+          "city_id": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              34,
+              192,
+              236,
+              357,
+              410
+            ],
+            "type": "number"
+          },
+          "district": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " "
+            ],
+            "type": "string"
+          },
+          "last_update": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-06 15:51:54",
+              "2021-03-06 15:51:55",
+              "2021-03-06 15:51:56",
+              "2021-03-06 15:51:57",
+              "2021-03-06 15:51:58"
+            ],
+            "type": "string"
+          },
+          "phone": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " "
+            ],
+            "type": "string"
+          },
+          "postal_code": {
+            "#docs": [
+              4,
+              599
+            ],
+            "%docs": [
+              0.66,
+              99.33
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "20777",
+                "36971",
+                "49708",
+                "4999",
+                "66255"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 603,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 603,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "address::105",
+                  "address::129",
+                  "address::131",
+                  "address::240",
+                  "address::258"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "address::105"
+              },
+              {
+                "id": "address::129"
+              },
+              {
+                "id": "address::131"
+              },
+              {
+                "id": "address::240"
+              },
+              {
+                "id": "address::258"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "1386 Yangor Avenue",
+      "address2": null,
+      "address_id": 108,
+      "city_id": 543,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:55",
+      "phone": " ",
+      "postal_code": "80720"
+    },
+    {
+      "address": "758 Junan Lane",
+      "address2": null,
+      "address_id": 134,
+      "city_id": 190,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:55",
+      "phone": " ",
+      "postal_code": "82639"
+    },
+    {
+      "address": "47 Syktyvkar Lane",
+      "address2": null,
+      "address_id": 243,
+      "city_id": 118,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:56",
+      "phone": " ",
+      "postal_code": "22236"
+    },
+    {
+      "address": "144 South Hill Loop",
+      "address2": null,
+      "address_id": 278,
+      "city_id": 445,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:56",
+      "phone": " ",
+      "postal_code": "2012"
+    },
+    {
+      "address": "775 ostka Drive",
+      "address2": null,
+      "address_id": 496,
+      "city_id": 337,
+      "district": " ",
+      "last_update": "2021-03-06 15:51:58",
+      "phone": " ",
+      "postal_code": "22358"
+    }
+  ]
+}

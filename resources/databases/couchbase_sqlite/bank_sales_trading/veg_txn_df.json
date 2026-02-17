@@ -1,0 +1,218 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`discount(%)` = 1, `sale/return` = \"sale\"",
+        "properties": {
+          "day_of_week": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Friday",
+              "Monday",
+              "Saturday",
+              "Sunday",
+              "Wednesday"
+            ],
+            "type": "string"
+          },
+          "discount(%)": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              124039,
+              151293,
+              174382,
+              212606,
+              252606
+            ],
+            "type": "number"
+          },
+          "item_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              102900005115250,
+              102900005115960,
+              102900005116530,
+              102900005116790,
+              102900051010455
+            ],
+            "type": "number"
+          },
+          "qty_sold(kg)": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.169,
+              0.184,
+              0.435,
+              0.619,
+              1.111
+            ],
+            "type": "number"
+          },
+          "sale/return": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "sale"
+            ],
+            "type": "string"
+          },
+          "txn_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-10-24 00:00:00",
+              "2020-11-23 00:00:00",
+              "2020-12-19 00:00:00",
+              "2021-01-30 00:00:00",
+              "2021-03-06 00:00:00"
+            ],
+            "type": "string"
+          },
+          "txn_time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "09:54:51",
+              "10:09:56",
+              "11:47:32",
+              "17:53:58",
+              "19:35:02"
+            ],
+            "type": "string"
+          },
+          "unit_selling_px_rmb/kg": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              6,
+              8,
+              16,
+              21.8
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "veg_txn_df::124039",
+                  "veg_txn_df::151293",
+                  "veg_txn_df::174382",
+                  "veg_txn_df::212606",
+                  "veg_txn_df::252606"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "veg_txn_df::124039"
+              },
+              {
+                "id": "veg_txn_df::151293"
+              },
+              {
+                "id": "veg_txn_df::174382"
+              },
+              {
+                "id": "veg_txn_df::212606"
+              },
+              {
+                "id": "veg_txn_df::252606"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "day_of_week": "Friday",
+      "discount(%)": 1,
+      "index": 100000,
+      "item_code": 102900005118817,
+      "qty_sold(kg)": 0.526,
+      "sale/return": "sale",
+      "txn_date": "2020-10-02 00:00:00",
+      "txn_time": "11:04:14",
+      "unit_selling_px_rmb/kg": 12
+    },
+    {
+      "day_of_week": "Friday",
+      "discount(%)": 1,
+      "index": 100018,
+      "item_code": 102900005123880,
+      "qty_sold(kg)": 0.413,
+      "sale/return": "sale",
+      "txn_date": "2020-10-02 00:00:00",
+      "txn_time": "11:10:19",
+      "unit_selling_px_rmb/kg": 16
+    },
+    {
+      "day_of_week": "Friday",
+      "discount(%)": 1,
+      "index": 10003,
+      "item_code": 102900005116530,
+      "qty_sold(kg)": 0.131,
+      "sale/return": "sale",
+      "txn_date": "2020-07-10 00:00:00",
+      "txn_time": "20:08:33",
+      "unit_selling_px_rmb/kg": 16
+    },
+    {
+      "day_of_week": "Friday",
+      "discount(%)": 1,
+      "index": 100034,
+      "item_code": 102900005116257,
+      "qty_sold(kg)": 0.518,
+      "sale/return": "sale",
+      "txn_date": "2020-10-02 00:00:00",
+      "txn_time": "11:14:19",
+      "unit_selling_px_rmb/kg": 6
+    },
+    {
+      "day_of_week": "Friday",
+      "discount(%)": 1,
+      "index": 100188,
+      "item_code": 102900005115960,
+      "qty_sold(kg)": 1.181,
+      "sale/return": "sale",
+      "txn_date": "2020-10-02 00:00:00",
+      "txn_time": "12:19:34",
+      "unit_selling_px_rmb/kg": 4
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 830,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "customerid": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ERNSH",
+              "GALED",
+              "LAMAI",
+              "NORTS",
+              "WANDK"
+            ],
+            "type": "string"
+          },
+          "employeeid": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              4,
+              6,
+              8
+            ],
+            "type": "number"
+          },
+          "freight": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.779999971,
+              10.1400003,
+              10.6400003,
+              32.0699997,
+              94.7699966
+            ],
+            "type": "number"
+          },
+          "orderdate": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1996-11-07",
+              "1996-11-28",
+              "1996-12-13",
+              "1997-04-02",
+              "1997-04-24"
+            ],
+            "type": "string"
+          },
+          "orderid": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10348,
+              10366,
+              10382,
+              10493,
+              10517
+            ],
+            "type": "number"
+          },
+          "requireddate": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1996-12-05",
+              "1997-01-09",
+              "1997-01-10",
+              "1997-04-30",
+              "1997-05-22"
+            ],
+            "type": "string"
+          },
+          "shipaddress": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1 rue Alsace-Lorraine",
+              "Adenauerallee 900",
+              "Kirchgasse 6",
+              "Rambla de Catalu\u00f1a, 23",
+              "South House 300 Queensbridge"
+            ],
+            "type": "string"
+          },
+          "shipcity": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Barcelona",
+              "Graz",
+              "London",
+              "Stuttgart",
+              "Toulouse"
+            ],
+            "type": "string"
+          },
+          "shipcountry": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Austria",
+              "France",
+              "Germany",
+              "Spain",
+              "UK"
+            ],
+            "type": "string"
+          },
+          "shipname": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Die Wandernde Kuh",
+              "Ernst Handel",
+              "Galer\u00eda del gastron\u00f3mo",
+              "La maison d'Asie",
+              "North/South"
+            ],
+            "type": "string"
+          },
+          "shippeddate": {
+            "#docs": [
+              12,
+              818
+            ],
+            "%docs": [
+              1.44,
+              98.55
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1996-11-15",
+                "1996-12-16",
+                "1996-12-30",
+                "1997-04-10",
+                "1997-04-29"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "shippostalcode": {
+            "#docs": [
+              19,
+              811
+            ],
+            "%docs": [
+              2.28,
+              97.71
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "31000",
+                "70563",
+                "8010",
+                "8022",
+                "SW7 1RZ"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "shipregion": {
+            "#docs": [
+              535,
+              295
+            ],
+            "%docs": [
+              64.45,
+              35.54
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "DF",
+                "Essex",
+                "ID",
+                "RJ",
+                "SP"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "shipvia": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 830,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 830,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "orders::100",
+                  "orders::118",
+                  "orders::134",
+                  "orders::245",
+                  "orders::269"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "orders::100"
+              },
+              {
+                "id": "orders::118"
+              },
+              {
+                "id": "orders::134"
+              },
+              {
+                "id": "orders::245"
+              },
+              {
+                "id": "orders::269"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "customerid": "FURIB",
+      "employeeid": 3,
+      "freight": 1.29999995,
+      "orderdate": "1996-11-12",
+      "orderid": 10352,
+      "requireddate": "1996-11-26",
+      "shipaddress": "Jardim das rosas n. 32",
+      "shipcity": "Lisboa",
+      "shipcountry": "Portugal",
+      "shipname": "Furia Bacalhau e Frutos do Mar",
+      "shippeddate": "1996-11-18",
+      "shippostalcode": "1675",
+      "shipregion": null,
+      "shipvia": 3
+    },
+    {
+      "customerid": "MEREP",
+      "employeeid": 1,
+      "freight": 20.3899994,
+      "orderdate": "1996-12-09",
+      "orderid": 10376,
+      "requireddate": "1997-01-06",
+      "shipaddress": "43 rue St. Laurent",
+      "shipcity": "Montr\u00e9al",
+      "shipcountry": "Canada",
+      "shipname": "M\u00e8re Paillarde",
+      "shippeddate": "1996-12-13",
+      "shippostalcode": "H1J 1C3",
+      "shipregion": "Qu\u00e9bec",
+      "shipvia": 2
+    },
+    {
+      "customerid": "FOLKO",
+      "employeeid": 5,
+      "freight": 5.44000006,
+      "orderdate": "1996-12-10",
+      "orderid": 10378,
+      "requireddate": "1997-01-07",
+      "shipaddress": "\u00c5kergatan 24",
+      "shipcity": "Br\u00e4cke",
+      "shipcountry": "Sweden",
+      "shipname": "Folk och f\u00e4 HB",
+      "shippeddate": "1996-12-19",
+      "shippostalcode": "S-844 67",
+      "shipregion": null,
+      "shipvia": 3
+    },
+    {
+      "customerid": "BLONP",
+      "employeeid": 2,
+      "freight": 55.2799988,
+      "orderdate": "1996-07-25",
+      "orderid": 10265,
+      "requireddate": "1996-08-22",
+      "shipaddress": "24, place Kl\u00e9ber",
+      "shipcity": "Strasbourg",
+      "shipcountry": "France",
+      "shipname": "Blondel p\u00e8re et fils",
+      "shippeddate": "1996-08-12",
+      "shippostalcode": "67000",
+      "shipregion": null,
+      "shipvia": 1
+    },
+    {
+      "customerid": "SPLIR",
+      "employeeid": 6,
+      "freight": 4.53999996,
+      "orderdate": "1996-08-01",
+      "orderid": 10271,
+      "requireddate": "1996-08-29",
+      "shipaddress": "P.O. Box 555",
+      "shipcity": "Lander",
+      "shipcountry": "USA",
+      "shipname": "Split Rail Beer & Ale",
+      "shippeddate": "1996-08-30",
+      "shippostalcode": "82520",
+      "shipregion": "WY",
+      "shipvia": 2
+    }
+  ]
+}

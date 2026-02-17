@@ -1,0 +1,228 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "game_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ALS195607100",
+              "ALS196707110",
+              "ALS197307240",
+              "NLS194007090",
+              "NLS200207090"
+            ],
+            "type": "string"
+          },
+          "game_num": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "gp": {
+            "#docs": [
+              994,
+              6
+            ],
+            "%docs": [
+              99.4,
+              0.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                0,
+                1
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "league_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AL",
+              "NL"
+            ],
+            "type": "string"
+          },
+          "player_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "campabe01",
+              "mcmilro01",
+              "olivato01",
+              "soriaal01",
+              "willite01"
+            ],
+            "type": "string"
+          },
+          "starting_pos": {
+            "#docs": [
+              322,
+              678
+            ],
+            "%docs": [
+              32.2,
+              67.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                4,
+                6,
+                7,
+                8,
+                9
+              ],
+              [
+                ""
+              ]
+            ],
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "team_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BOS",
+              "CIN",
+              "MIN",
+              "NYA",
+              "OAK"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1940,
+              1956,
+              1967,
+              1973,
+              2002
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "all_star::1174",
+                  "all_star::1967",
+                  "all_star::2311",
+                  "all_star::314",
+                  "all_star::4051"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "all_star::1174"
+              },
+              {
+                "id": "all_star::1967"
+              },
+              {
+                "id": "all_star::2311"
+              },
+              {
+                "id": "all_star::314"
+              },
+              {
+                "id": "all_star::4051"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "game_id": "ALS195407130",
+      "game_num": 0,
+      "gp": 1,
+      "league_id": "NL",
+      "player_id": "hodgegi01",
+      "starting_pos": "",
+      "team_id": "BRO",
+      "year": 1954
+    },
+    {
+      "game_id": "NLS195507120",
+      "game_num": 0,
+      "gp": 1,
+      "league_id": "AL",
+      "player_id": "sullifr01",
+      "starting_pos": "",
+      "team_id": "BOS",
+      "year": 1955
+    },
+    {
+      "game_id": "NLS195507120",
+      "game_num": 0,
+      "gp": 0,
+      "league_id": "NL",
+      "player_id": "arroylu01",
+      "starting_pos": "",
+      "team_id": "SLN",
+      "year": 1955
+    },
+    {
+      "game_id": "ALS195807080",
+      "game_num": 0,
+      "gp": 0,
+      "league_id": "AL",
+      "player_id": "durenry01",
+      "starting_pos": "",
+      "team_id": "NYA",
+      "year": 1958
+    },
+    {
+      "game_id": "ALS195807080",
+      "game_num": 0,
+      "gp": 0,
+      "league_id": "AL",
+      "player_id": "lollash01",
+      "starting_pos": "",
+      "team_id": "CHA",
+      "year": 1958
+    }
+  ]
+}

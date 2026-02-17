@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 15,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "idx": {
+            "#docs": [
+              4,
+              11
+            ],
+            "%docs": [
+              26.66,
+              73.33
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "IFK_AlbumArtistId",
+                "IFK_CustomerSupportRepId",
+                "IFK_EmployeeReportsTo",
+                "IFK_TrackAlbumId",
+                "IFK_TrackGenreId"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "stat": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "18",
+              "25",
+              "275",
+              "5",
+              "8 2"
+            ],
+            "type": "string"
+          },
+          "tbl": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "artists",
+              "employees",
+              "genres",
+              "media_types",
+              "playlists"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 15,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 15,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sqlite_stat1::10",
+                  "sqlite_stat1::12",
+                  "sqlite_stat1::6",
+                  "sqlite_stat1::8",
+                  "sqlite_stat1::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sqlite_stat1::10"
+              },
+              {
+                "id": "sqlite_stat1::12"
+              },
+              {
+                "id": "sqlite_stat1::6"
+              },
+              {
+                "id": "sqlite_stat1::8"
+              },
+              {
+                "id": "sqlite_stat1::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "idx": null,
+      "stat": "25",
+      "tbl": "genres"
+    },
+    {
+      "idx": "IFK_InvoiceLineTrackId",
+      "stat": "2240 2",
+      "tbl": "invoice_items"
+    },
+    {
+      "idx": null,
+      "stat": "18",
+      "tbl": "playlists"
+    },
+    {
+      "idx": "IFK_EmployeeReportsTo",
+      "stat": "8 2",
+      "tbl": "employees"
+    },
+    {
+      "idx": "IFK_TrackAlbumId",
+      "stat": "3503 11",
+      "tbl": "tracks"
+    }
+  ]
+}

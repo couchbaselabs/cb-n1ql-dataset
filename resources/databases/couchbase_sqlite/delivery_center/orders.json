@@ -1,0 +1,784 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`order_created_year` = 2021",
+        "properties": {
+          "channel_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              5,
+              13,
+              21
+            ],
+            "type": "number"
+          },
+          "delivery_order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              70083844,
+              79005706,
+              79172200,
+              79942027,
+              80036658
+            ],
+            "type": "number"
+          },
+          "order_amount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20.9,
+              25,
+              29.9,
+              41.7,
+              113.8
+            ],
+            "type": "number"
+          },
+          "order_created_day": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              20,
+              21,
+              25,
+              28
+            ],
+            "type": "number"
+          },
+          "order_created_hour": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14,
+              15,
+              17,
+              21,
+              22
+            ],
+            "type": "number"
+          },
+          "order_created_minute": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              30,
+              44,
+              46,
+              59
+            ],
+            "type": "number"
+          },
+          "order_created_month": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "order_created_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2021
+            ],
+            "type": "number"
+          },
+          "order_delivery_cost": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                5.11,
+                6,
+                8.56,
+                8.72,
+                9.65
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "order_delivery_fee": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              4.9,
+              6.9,
+              10.49,
+              11.9
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              70083844,
+              79005706,
+              79172200,
+              79942027,
+              80036658
+            ],
+            "type": "number"
+          },
+          "order_metric_collected_time": {
+            "#docs": [
+              65,
+              935
+            ],
+            "%docs": [
+              6.5,
+              93.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                2.67,
+                3.07,
+                3.65,
+                3.83,
+                6.98
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "order_metric_cycle_time": {
+            "#docs": [
+              28,
+              972
+            ],
+            "%docs": [
+              2.8,
+              97.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                29.63,
+                37.95,
+                51.53,
+                70.77,
+                79.45
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "order_metric_expediton_speed_time": {
+            "#docs": [
+              11,
+              989
+            ],
+            "%docs": [
+              1.1,
+              98.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                8.43,
+                8.57,
+                12.5,
+                13.42,
+                23.37
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "order_metric_paused_time": {
+            "#docs": [
+              65,
+              935
+            ],
+            "%docs": [
+              6.5,
+              93.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                2.25,
+                4.43,
+                4.68,
+                9.82,
+                13.68
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "order_metric_production_time": {
+            "#docs": [
+              11,
+              989
+            ],
+            "%docs": [
+              1.1,
+              98.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                5.03,
+                10.68,
+                13.82,
+                33.83,
+                42.9
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "order_metric_transit_time": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                12.12,
+                13.57,
+                13.85,
+                28,
+                29.28
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "order_metric_walking_time": {
+            "#docs": [
+              65,
+              935
+            ],
+            "%docs": [
+              6.5,
+              93.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                2.68,
+                4.13,
+                6.17,
+                8.73,
+                9.67
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "order_moment_accepted": {
+            "#docs": [
+              28,
+              972
+            ],
+            "%docs": [
+              2.8,
+              97.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1/8/2021 9:44:53 PM",
+                "2/20/2021 5:13:53 PM",
+                "2/21/2021 2:55:06 PM",
+                "2/25/2021 11:01:04 PM",
+                "2/25/2021 2:47:25 PM"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_moment_collected": {
+            "#docs": [
+              65,
+              935
+            ],
+            "%docs": [
+              6.5,
+              93.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1/8/2021 9:51:54 PM",
+                "2/20/2021 5:50:31 PM",
+                "2/21/2021 3:17:23 PM",
+                "2/25/2021 11:16:45 PM",
+                "2/25/2021 3:03:57 PM"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_moment_created": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1/8/2021 9:44:12 PM",
+              "2/20/2021 5:13:37 PM",
+              "2/21/2021 2:30:50 PM",
+              "2/25/2021 10:59:05 PM",
+              "2/25/2021 2:46:18 PM"
+            ],
+            "type": "string"
+          },
+          "order_moment_delivered": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "3/22/2021 4:54:23 PM"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_moment_delivering": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1/8/2021 10:01:44 PM",
+                "2/20/2021 6:10:49 PM",
+                "2/21/2021 3:22:17 PM",
+                "2/25/2021 11:23:11 PM",
+                "2/25/2021 3:08:32 PM"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_moment_finished": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1/8/2021 10:13:51 PM",
+                "2/20/2021 6:24:23 PM",
+                "2/21/2021 3:50:17 PM",
+                "2/25/2021 11:37:02 PM",
+                "2/25/2021 3:37:49 PM"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_moment_in_expedition": {
+            "#docs": [
+              65,
+              935
+            ],
+            "%docs": [
+              6.5,
+              93.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1/8/2021 9:51:55 PM",
+                "2/20/2021 5:57:07 PM",
+                "2/21/2021 3:17:52 PM",
+                "2/25/2021 11:18:30 PM",
+                "2/25/2021 3:06:17 PM"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_moment_ready": {
+            "#docs": [
+              11,
+              989
+            ],
+            "%docs": [
+              1.1,
+              98.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1/8/2021 9:49:14 PM",
+                "2/20/2021 5:47:27 PM",
+                "2/21/2021 3:13:44 PM",
+                "2/25/2021 11:09:46 PM",
+                "2/25/2021 3:00:07 PM"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "order_status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CANCELED",
+              "FINISHED"
+            ],
+            "type": "string"
+          },
+          "payment_order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              70083844,
+              79005706,
+              79172200,
+              79942027,
+              80036658
+            ],
+            "type": "number"
+          },
+          "store_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              53,
+              886,
+              955,
+              961,
+              2980
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "orders::123897",
+                  "orders::125972",
+                  "orders::135830",
+                  "orders::137467",
+                  "orders::16554"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "orders::123897"
+              },
+              {
+                "id": "orders::125972"
+              },
+              {
+                "id": "orders::135830"
+              },
+              {
+                "id": "orders::137467"
+              },
+              {
+                "id": "orders::16554"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "channel_id": 5,
+      "delivery_order_id": 77001587,
+      "order_amount": 120.91,
+      "order_created_day": 11,
+      "order_created_hour": 14,
+      "order_created_minute": 38,
+      "order_created_month": 2,
+      "order_created_year": 2021,
+      "order_delivery_cost": 18,
+      "order_delivery_fee": 0,
+      "order_id": 77001587,
+      "order_metric_collected_time": 8.4,
+      "order_metric_cycle_time": 75.4,
+      "order_metric_expediton_speed_time": 15.18,
+      "order_metric_paused_time": 6.22,
+      "order_metric_production_time": 38.25,
+      "order_metric_transit_time": 21.97,
+      "order_metric_walking_time": 8.97,
+      "order_moment_accepted": "2/11/2021 2:49:25 PM",
+      "order_moment_collected": "2/11/2021 3:24:42 PM",
+      "order_moment_created": "2/11/2021 2:38:02 PM",
+      "order_moment_delivered": null,
+      "order_moment_delivering": "2/11/2021 3:31:29 PM",
+      "order_moment_finished": "2/11/2021 3:53:27 PM",
+      "order_moment_in_expedition": "2/11/2021 3:25:16 PM",
+      "order_moment_ready": "2/11/2021 3:16:18 PM",
+      "order_status": "FINISHED",
+      "payment_order_id": 77001587,
+      "store_id": 624
+    },
+    {
+      "channel_id": 5,
+      "delivery_order_id": 77001922,
+      "order_amount": 43.69,
+      "order_created_day": 11,
+      "order_created_hour": 14,
+      "order_created_minute": 38,
+      "order_created_month": 2,
+      "order_created_year": 2021,
+      "order_delivery_cost": 6,
+      "order_delivery_fee": 0,
+      "order_id": 77001922,
+      "order_metric_collected_time": 0.68,
+      "order_metric_cycle_time": 29.82,
+      "order_metric_expediton_speed_time": 5.82,
+      "order_metric_paused_time": 0.62,
+      "order_metric_production_time": 13.4,
+      "order_metric_transit_time": 10.6,
+      "order_metric_walking_time": 5.2,
+      "order_moment_accepted": "2/11/2021 2:43:20 PM",
+      "order_moment_collected": "2/11/2021 2:52:56 PM",
+      "order_moment_created": "2/11/2021 2:38:51 PM",
+      "order_moment_delivered": null,
+      "order_moment_delivering": "2/11/2021 2:58:04 PM",
+      "order_moment_finished": "2/11/2021 3:08:40 PM",
+      "order_moment_in_expedition": "2/11/2021 2:57:27 PM",
+      "order_moment_ready": "2/11/2021 2:52:15 PM",
+      "order_status": "FINISHED",
+      "payment_order_id": 77001922,
+      "store_id": 3097
+    },
+    {
+      "channel_id": 5,
+      "delivery_order_id": 77009166,
+      "order_amount": 68.8,
+      "order_created_day": 11,
+      "order_created_hour": 15,
+      "order_created_minute": 6,
+      "order_created_month": 2,
+      "order_created_year": 2021,
+      "order_delivery_cost": 6,
+      "order_delivery_fee": 11.9,
+      "order_id": 77009166,
+      "order_metric_collected_time": 0.37,
+      "order_metric_cycle_time": 45.57,
+      "order_metric_expediton_speed_time": 3.7,
+      "order_metric_paused_time": 2.35,
+      "order_metric_production_time": 16.88,
+      "order_metric_transit_time": 24.98,
+      "order_metric_walking_time": 1.35,
+      "order_moment_accepted": "2/11/2021 3:06:54 PM",
+      "order_moment_collected": "2/11/2021 3:23:45 PM",
+      "order_moment_created": "2/11/2021 3:06:30 PM",
+      "order_moment_delivered": null,
+      "order_moment_delivering": "2/11/2021 3:27:05 PM",
+      "order_moment_finished": "2/11/2021 3:52:04 PM",
+      "order_moment_in_expedition": "2/11/2021 3:24:44 PM",
+      "order_moment_ready": "2/11/2021 3:23:23 PM",
+      "order_status": "FINISHED",
+      "payment_order_id": 77009166,
+      "store_id": 631
+    },
+    {
+      "channel_id": 15,
+      "delivery_order_id": 77017502,
+      "order_amount": 31,
+      "order_created_day": 11,
+      "order_created_hour": 15,
+      "order_created_minute": 32,
+      "order_created_month": 2,
+      "order_created_year": 2021,
+      "order_delivery_cost": 9.82,
+      "order_delivery_fee": 9.9,
+      "order_id": 77017502,
+      "order_metric_collected_time": 4.72,
+      "order_metric_cycle_time": 29.7,
+      "order_metric_expediton_speed_time": 5.32,
+      "order_metric_paused_time": 0.58,
+      "order_metric_production_time": 14.58,
+      "order_metric_transit_time": 9.78,
+      "order_metric_walking_time": 4.75,
+      "order_moment_accepted": "2/11/2021 3:33:27 PM",
+      "order_moment_collected": "2/11/2021 3:51:55 PM",
+      "order_moment_created": "2/11/2021 3:32:37 PM",
+      "order_moment_delivered": null,
+      "order_moment_delivering": "2/11/2021 3:52:31 PM",
+      "order_moment_finished": "2/11/2021 4:02:18 PM",
+      "order_moment_in_expedition": "2/11/2021 3:51:57 PM",
+      "order_moment_ready": "2/11/2021 3:47:12 PM",
+      "order_status": "FINISHED",
+      "payment_order_id": 77017502,
+      "store_id": 787
+    },
+    {
+      "channel_id": 5,
+      "delivery_order_id": 77018391,
+      "order_amount": 44.59,
+      "order_created_day": 11,
+      "order_created_hour": 15,
+      "order_created_minute": 35,
+      "order_created_month": 2,
+      "order_created_year": 2021,
+      "order_delivery_cost": 8,
+      "order_delivery_fee": 0,
+      "order_id": 77018391,
+      "order_metric_collected_time": 3.17,
+      "order_metric_cycle_time": 44.22,
+      "order_metric_expediton_speed_time": 4.65,
+      "order_metric_paused_time": 1.45,
+      "order_metric_production_time": 30.17,
+      "order_metric_transit_time": 9.42,
+      "order_metric_walking_time": 3.18,
+      "order_moment_accepted": "2/11/2021 3:35:37 PM",
+      "order_moment_collected": "2/11/2021 4:08:43 PM",
+      "order_moment_created": "2/11/2021 3:35:23 PM",
+      "order_moment_delivered": null,
+      "order_moment_delivering": "2/11/2021 4:10:12 PM",
+      "order_moment_finished": "2/11/2021 4:19:36 PM",
+      "order_moment_in_expedition": "2/11/2021 4:08:44 PM",
+      "order_moment_ready": "2/11/2021 4:05:33 PM",
+      "order_status": "FINISHED",
+      "payment_order_id": 77018391,
+      "store_id": 3091
+    }
+  ]
+}
