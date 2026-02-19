@@ -19,52 +19,21 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 FEW_SHOT_EXAMPLE = """
 /* Example question and corresponding Couchbase SQL++ query: */
-/* Question: Please help me find the top 3 bowlers who conceded the maximum runs in a single over, along with the corresponding matches. */
-/* Database: IPL — Keyspace: `ipl`.`ipl_scope`.`<collection>` */
+/* Question: Find the top 3 departments by average employee salary, showing the department name, average salary, and the number of employees in each. Only include departments with more than 5 employees. */
+/* Database: hr_company — Keyspace: `hr_company`.`hr_scope`.`<collection>` */
 /* SQL++ query: */
-WITH combined_runs AS (
-    SELECT cr.match_id, cr.over_id, cr.ball_id, cr.innings_no, cr.runs_scored AS runs
-    FROM `ipl`.`ipl_scope`.`batsman_scored` AS cr
-    UNION ALL
-    SELECT er.match_id, er.over_id, er.ball_id, er.innings_no, er.extra_runs AS runs
-    FROM `ipl`.`ipl_scope`.`extra_runs` AS er
-),
-over_runs AS (
-    SELECT orr.match_id, orr.innings_no, orr.over_id, SUM(orr.runs) AS runs_scored
-    FROM combined_runs AS orr
-    GROUP BY orr.match_id, orr.innings_no, orr.over_id
-),
-max_over_runs AS (
-    SELECT mor.match_id, MAX(mor.runs_scored) AS max_runs
-    FROM over_runs AS mor
-    GROUP BY mor.match_id
-),
-top_overs AS (
-    SELECT o.match_id, o.innings_no, o.over_id, o.runs_scored
-    FROM over_runs AS o
-    JOIN max_over_runs AS m ON o.match_id = m.match_id AND o.runs_scored = m.max_runs
-),
-top_bowlers AS (
-    SELECT
-        bb.match_id,
-        t.runs_scored AS maximum_runs,
-        bb.bowler
-    FROM `ipl`.`ipl_scope`.`ball_by_ball` AS bb
-    JOIN top_overs AS t ON bb.match_id = t.match_id
-        AND bb.innings_no = t.innings_no
-        AND bb.over_id = t.over_id
-    GROUP BY bb.match_id, t.runs_scored, bb.bowler
-)
 SELECT
-    b.match_id,
-    p.player_name
-FROM (
-    SELECT tb.*
-    FROM top_bowlers AS tb
-    ORDER BY tb.maximum_runs DESC
-    LIMIT 3
-) AS b
-JOIN `ipl`.`ipl_scope`.`player` AS p ON p.player_id = b.bowler;
+    d.department_name,
+    AVG(e.salary) AS avg_salary,
+    COUNT(e.employee_id) AS employee_count
+FROM `hr_company`.`hr_scope`.`employees` AS e
+JOIN `hr_company`.`hr_scope`.`departments` AS d
+    ON e.department_id = d.department_id
+WHERE e.status = 'active'
+GROUP BY d.department_name
+HAVING COUNT(e.employee_id) > 5
+ORDER BY avg_salary DESC
+LIMIT 3;
 """.strip()
 
 
@@ -74,16 +43,16 @@ JOIN `ipl`.`ipl_scope`.`player` AS p ON p.player_id = b.bowler;
 SYSTEM_INSTRUCTION = """You are a Couchbase SQL++ expert. Given a database schema and a natural language question, generate a valid Couchbase SQL++ query.
 
 Key Couchbase SQL++ rules:
-1. Use fully-qualified keyspace paths: `bucket`.`scope`.`collection`
-2. Always use explicit table aliases (e.g., FROM `bucket`.`scope`.`orders` AS o)
-3. Use ON (not USING) for JOIN conditions
+1. Use the EXACT fully-qualified keyspace paths shown in the schema(e.g., FROM `<bucket_name>`.`<scope_name>`.`<collection_name>` AS o). Do NOT use generic names — always copy the keyspace paths from the provided schema.
+2. Always use explicit table aliases after each keyspace reference.
+3. Use ON (not USING) for JOIN conditions.
 4. Use proper SQL++ functions instead of SQLite-specific ones:
    - IFNULL → COALESCE
    - GROUP_CONCAT → ARRAY_TO_STRING(ARRAY_AGG(...))
    - STRFTIME → DATE_PART_STR / DATE_FORMAT_STR
-5. String literals use single quotes, identifiers use backticks
-6. Couchbase 7.6+ supports window functions (ROW_NUMBER, NTILE, RANK, etc.)
-7. WITH RECURSIVE is NOT supported — rewrite recursive CTEs as iterative queries
+5. String literals use single quotes, identifiers use backticks.
+6. Couchbase 7.6+ supports window functions (ROW_NUMBER, NTILE, RANK, etc.).
+7. WITH RECURSIVE is NOT supported — rewrite recursive CTEs as iterative queries.
 
 Return ONLY the SQL++ query, no explanations."""
 
@@ -146,9 +115,17 @@ def build_prompt(instance: dict, use_few_shot: bool = True) -> dict:
     parts.append(schema_block)
 
     # External knowledge (if any)
-    ext_knowledge = instance.get("external_knowledge")
-    if ext_knowledge:
-        parts.append(f"/* External Knowledge Reference: {ext_knowledge} */")
+    ext_knowledge_content = instance.get("external_knowledge_content")
+    ext_knowledge_file = instance.get("external_knowledge")
+    if ext_knowledge_content:
+        parts.append(f"/* External Knowledge ({ext_knowledge_file}): */")
+        parts.append(f"/*")
+        parts.append(ext_knowledge_content.strip())
+        parts.append(f"*/")
+        parts.append("")
+    elif ext_knowledge_file:
+        # Fallback: just reference the filename if content wasn't loaded
+        parts.append(f"/* External Knowledge Reference: {ext_knowledge_file} */")
         parts.append("")
 
     # Few-shot example

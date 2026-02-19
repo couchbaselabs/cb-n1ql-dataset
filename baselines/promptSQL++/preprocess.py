@@ -95,6 +95,9 @@ def main():
     parser.add_argument("--schema_dir", type=str,
                         default="../../resources/databases/couchbase_sqlite",
                         help="Path to Couchbase schema directory")
+    parser.add_argument("--docs_dir", type=str,
+                        default="../../Spider2/spider2-lite/resource/documents",
+                        help="Path to external knowledge documents directory")
     parser.add_argument("--output_dir", type=str, default="preprocessed",
                         help="Output directory")
     parser.add_argument("--prefix", type=str, default="local",
@@ -105,23 +108,43 @@ def main():
     script_dir = Path(__file__).parent
     jsonl_path = (script_dir / args.spider2_jsonl).resolve()
     schema_dir = (script_dir / args.schema_dir).resolve()
+    docs_dir = (script_dir / args.docs_dir).resolve()
     output_dir = (script_dir / args.output_dir).resolve()
 
     print(f"Loading instances from: {jsonl_path}")
+    print(f"External knowledge dir: {docs_dir}")
     instances = load_spider2_instances(str(jsonl_path), prefix=args.prefix)
     print(f"Found {len(instances)} '{args.prefix}*' instances")
 
-    # Enrich each instance with schema
+    # Enrich each instance with schema + external knowledge content
     enriched = []
+    ext_knowledge_count = 0
+    ext_knowledge_missing = []
+
     for item in tqdm(instances, desc="Loading schemas"):
         db_name = item["db"]
         schema = load_couchbase_schema(str(schema_dir), db_name)
+
+        # Load external knowledge content if referenced
+        ext_knowledge_file = item.get("external_knowledge")
+        ext_knowledge_content = None
+        if ext_knowledge_file:
+            doc_path = docs_dir / ext_knowledge_file
+            if doc_path.exists():
+                try:
+                    ext_knowledge_content = doc_path.read_text(encoding="utf-8")
+                    ext_knowledge_count += 1
+                except IOError as e:
+                    ext_knowledge_missing.append(f"{item['instance_id']}: read error - {e}")
+            else:
+                ext_knowledge_missing.append(f"{item['instance_id']}: {ext_knowledge_file} not found")
 
         enriched.append({
             "instance_id": item["instance_id"],
             "db": db_name,
             "question": item["question"],
-            "external_knowledge": item.get("external_knowledge"),
+            "external_knowledge": ext_knowledge_file,
+            "external_knowledge_content": ext_knowledge_content,
             "schema": schema,
         })
 
@@ -132,11 +155,16 @@ def main():
         json.dump(enriched, f, indent=2, ensure_ascii=False)
 
     print(f"\nSaved {len(enriched)} instances to: {output_path}")
+    print(f"External knowledge loaded: {ext_knowledge_count} instances")
 
     # Quick stats
     no_schema = sum(1 for item in enriched if len(item["schema"]) == 0)
     if no_schema > 0:
         print(f"Warning: {no_schema} instances have no schema (missing db in couchbase_sqlite)")
+    if ext_knowledge_missing:
+        print(f"Warning: {len(ext_knowledge_missing)} external knowledge files missing:")
+        for msg in ext_knowledge_missing:
+            print(f"  - {msg}")
 
 
 if __name__ == "__main__":
