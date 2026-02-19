@@ -1,0 +1,41 @@
+SELECT DISTINCT d.full_name
+FROM `f1`.`f1_scope`.`lap_positions` AS lp1
+JOIN `f1`.`f1_scope`.`lap_positions` AS lp2
+  ON lp1.race_id = lp2.race_id
+  AND lp1.lap = lp2.lap
+  AND lp1.driver_id != lp2.driver_id
+JOIN `f1`.`f1_scope`.`drivers` AS d
+  ON d.driver_id = lp1.driver_id
+LEFT JOIN `f1`.`f1_scope`.`pit_stops` AS ps
+  ON ps.driver_id = lp1.driver_id
+  AND ps.race_id = lp1.race_id
+  AND ps.lap = lp1.lap
+LEFT JOIN `f1`.`f1_scope`.`retirements` AS r
+  ON r.driver_id = lp1.driver_id
+  AND r.race_id = lp1.race_id
+WHERE lp1.lap > 1
+  AND ps.driver_id IS NULL
+  AND r.driver_id IS NULL
+  AND lp1.position > lp2.position
+GROUP BY d.full_name
+LET overtaken_count = COUNT(*)
+HAVING overtaken_count > (
+  SELECT COUNT(*)
+  FROM `f1`.`f1_scope`.`lap_positions` AS lp3
+  JOIN `f1`.`f1_scope`.`lap_positions` AS lp4
+    ON lp3.race_id = lp4.race_id
+    AND lp3.lap = lp4.lap
+    AND lp3.driver_id != lp4.driver_id
+  LEFT JOIN `f1`.`f1_scope`.`pit_stops` AS ps2
+    ON ps2.driver_id = lp3.driver_id
+    AND ps2.race_id = lp3.race_id
+    AND ps2.lap = lp3.lap
+  LEFT JOIN `f1`.`f1_scope`.`retirements` AS r2
+    ON r2.driver_id = lp3.driver_id
+    AND r2.race_id = lp3.race_id
+  WHERE lp3.lap > 1
+    AND ps2.driver_id IS NULL
+    AND r2.driver_id IS NULL
+    AND lp3.position < lp4.position
+    AND lp3.driver_id = lp1.driver_id
+)

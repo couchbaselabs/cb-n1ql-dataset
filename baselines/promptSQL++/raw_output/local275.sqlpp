@@ -1,0 +1,61 @@
+WITH monthly_sales_with_row AS (
+  SELECT
+    ms.product_id,
+    ms.mth,
+    ms.qty,
+    DATE_PART_STR(ms.mth, 'year') AS year,
+    DATE_PART_STR(ms.mth, 'month') AS month,
+    ROW_NUMBER() OVER (PARTITION BY ms.product_id ORDER BY ms.mth) AS rn
+  FROM `oracle_sql`.`oracle_sql_scope`.`monthly_sales` AS ms
+  WHERE ms.mth >= '2016-01-01'
+),
+cma_calc AS (
+  SELECT
+    a.product_id,
+    a.mth,
+    a.qty,
+    -- First window: 5 months before to 6 months after (12 months total)
+    AVG(b.qty) AS window1_avg,
+    -- Second window: 6 months before to 5 months after (12 months total)
+    AVG(c.qty) AS window2_avg
+  FROM monthly_sales_with_row AS a
+  JOIN monthly_sales_with_row AS b
+    ON a.product_id = b.product_id
+    AND b.rn BETWEEN a.rn - 5 AND a.rn + 6
+  JOIN monthly_sales_with_row AS c
+    ON a.product_id = c.product_id
+    AND c.rn BETWEEN a.rn - 6 AND a.rn + 5
+  GROUP BY a.product_id, a.mth, a.qty, a.rn
+),
+cma_final AS (
+  SELECT
+    product_id,
+    mth,
+    qty,
+    (window1_avg + window2_avg) / 2.0 AS cma
+  FROM cma_calc
+  WHERE ROW_NUMBER() OVER (PARTITION BY product_id ORDER BY mth) BETWEEN 7 AND 30
+),
+sales_ratio AS (
+  SELECT
+    product_id,
+    mth,
+    qty,
+    cma,
+    qty / NULLIF(cma, 0) AS sales_to_cma_ratio,
+    DATE_PART_STR(mth, 'year') AS year
+  FROM cma_final
+  WHERE cma IS NOT NULL
+),
+filtered_2017 AS (
+  SELECT product_id
+  FROM sales_ratio
+  WHERE year = 2017
+  GROUP BY product_id
+  HAVING MIN(sales_to_cma_ratio) > 2
+)
+SELECT p.id AS product_id, p.name AS product_name
+FROM filtered_2017 AS f
+JOIN `oracle_sql`.`oracle_sql_scope`.`products` AS p
+  ON f.product_id = p.id
+ORDER BY p.id;

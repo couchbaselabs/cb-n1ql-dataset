@@ -1,0 +1,23 @@
+SELECT
+    YEAR(STR_TO_MILLIS(w.whsle_date)) AS year,
+    v.category_name,
+    ROUND(AVG(w.`whsle_px_rmb-kg`), 2) AS avg_whsle_price,
+    ROUND(MAX(w.`whsle_px_rmb-kg`), 2) AS max_whsle_price,
+    ROUND(MIN(w.`whsle_px_rmb-kg`), 2) AS min_whsle_price,
+    ROUND(MAX(w.`whsle_px_rmb-kg`) - MIN(w.`whsle_px_rmb-kg`), 2) AS whsle_price_diff,
+    ROUND(SUM(w.`whsle_px_rmb-kg`), 2) AS total_whsle_price,
+    ROUND(SUM(t.`unit_selling_px_rmb/kg` * t.`qty_sold(kg)`), 2) AS total_selling_price,
+    ROUND(AVG(l.`loss_rate_%`), 2) AS avg_loss_rate,
+    ROUND(SUM(l.`loss_rate_%` * t.`qty_sold(kg)`), 2) AS total_loss,
+    ROUND(SUM(t.`unit_selling_px_rmb/kg` * t.`qty_sold(kg)`) - SUM(l.`loss_rate_%` * t.`qty_sold(kg)`), 2) AS profit
+FROM `bank_sales_trading`.`bank_sales_trading_scope`.`veg_whsle_df` AS w
+JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`veg_cat` AS v
+    ON w.item_code = v.item_code
+JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`veg_txn_df` AS t
+    ON w.item_code = t.item_code
+    AND DATE_PART_STR(STR_TO_MILLIS(w.whsle_date), 'year') = DATE_PART_STR(STR_TO_MILLIS(t.txn_date), 'year')
+JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`veg_loss_rate_df` AS l
+    ON w.item_code = l.item_code
+WHERE YEAR(STR_TO_MILLIS(w.whsle_date)) BETWEEN 2020 AND 2023
+GROUP BY year, v.category_name
+ORDER BY year, v.category_name;

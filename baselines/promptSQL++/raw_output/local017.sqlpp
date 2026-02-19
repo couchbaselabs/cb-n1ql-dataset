@@ -1,0 +1,41 @@
+WITH yearly_top_causes AS (
+    SELECT
+        c.db_year,
+        c.primary_collision_factor,
+        COUNT(1) AS cause_count,
+        RANK() OVER (PARTITION BY c.db_year ORDER BY COUNT(1) DESC) AS cause_rank
+    FROM `california_traffic_collision`.`california_traffic_collision_scope`.`collisions` AS c
+    JOIN `california_traffic_collision`.`california_traffic_collision_scope`.`case_ids` AS ci
+        ON c.case_id = ci.case_id
+    GROUP BY c.db_year, c.primary_collision_factor
+),
+top_two_causes_per_year AS (
+    SELECT
+        db_year,
+        primary_collision_factor,
+        cause_count
+    FROM yearly_top_causes
+    WHERE cause_rank <= 2
+),
+cause_pairs AS (
+    SELECT
+        db_year,
+        ARRAY_AGG(primary_collision_factor ORDER BY cause_count DESC) AS top_causes
+    FROM top_two_causes_per_year
+    GROUP BY db_year
+),
+distinct_cause_pairs AS (
+    SELECT DISTINCT top_causes
+    FROM cause_pairs
+),
+years_with_unique_pairs AS (
+    SELECT
+        cp.db_year,
+        cp.top_causes,
+        COUNT(1) OVER (PARTITION BY cp.top_causes) AS pair_count
+    FROM cause_pairs AS cp
+)
+SELECT db_year
+FROM years_with_unique_pairs
+WHERE pair_count = 1
+ORDER BY db_year;

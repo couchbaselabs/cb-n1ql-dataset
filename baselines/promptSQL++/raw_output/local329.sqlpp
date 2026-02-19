@@ -1,0 +1,7 @@
+SELECT COUNT(DISTINCT r1.session) AS unique_sessions
+FROM `log`.`log_scope`.`access_log` AS r1
+JOIN `log`.`log_scope`.`access_log` AS r2
+  ON r1.session = r2.session
+WHERE r1.stamp = '/regist/input'
+  AND r2.stamp = '/regist/confirm'
+  AND r1.stamp < r2.stamp;

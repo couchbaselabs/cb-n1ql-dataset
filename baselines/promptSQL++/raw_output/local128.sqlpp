@@ -1,0 +1,40 @@
+WITH WinningGames AS (
+  SELECT
+    bs.BowlerID,
+    bs.GameNumber,
+    bs.HandiCapScore,
+    bs.MatchID,
+    tm.TourneyID,
+    t.TourneyLocation,
+    t.TourneyDate
+  FROM `bowlingleague`.`bowlingleague_scope`.`Bowler_Scores` AS bs
+  JOIN `bowlingleague`.`bowlingleague_scope`.`Tourney_Matches` AS tm
+    ON bs.MatchID = tm.MatchID
+  JOIN `bowlingleague`.`bowlingleague_scope`.`Tournaments` AS t
+    ON tm.TourneyID = t.TourneyID
+  WHERE bs.WonGame = 1
+    AND bs.HandiCapScore <= 190
+    AND t.TourneyLocation IN ['Thunderbird Lanes', 'Totem Lanes', 'Bolero Lanes']
+),
+BowlersWithAllVenues AS (
+  SELECT
+    wg.BowlerID
+  FROM WinningGames AS wg
+  GROUP BY wg.BowlerID
+  HAVING COUNT(DISTINCT wg.TourneyLocation) = 3
+)
+SELECT
+  b.BowlerID,
+  b.BowlerFirstName,
+  b.BowlerLastName,
+  wg.MatchID,
+  wg.GameNumber,
+  wg.HandiCapScore,
+  wg.TourneyDate,
+  wg.TourneyLocation
+FROM WinningGames AS wg
+JOIN BowlersWithAllVenues AS baw
+  ON wg.BowlerID = baw.BowlerID
+JOIN `bowlingleague`.`bowlingleague_scope`.`Bowlers` AS b
+  ON wg.BowlerID = b.BowlerID
+ORDER BY b.BowlerID, wg.TourneyDate, wg.MatchID, wg.GameNumber;

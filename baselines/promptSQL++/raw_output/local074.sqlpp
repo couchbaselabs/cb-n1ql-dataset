@@ -1,0 +1,54 @@
+WITH month_list AS (
+  SELECT DISTINCT
+    DATE_PART_STR(txn.txn_date, 'year') AS year,
+    DATE_PART_STR(txn.txn_date, 'month') AS month
+  FROM `bank_sales_trading`.`bank_sales_trading_scope`.`customer_transactions` AS txn
+),
+customer_months AS (
+  SELECT DISTINCT
+    c.customer_id,
+    m.year,
+    m.month
+  FROM `bank_sales_trading`.`bank_sales_trading_scope`.`customer_transactions` AS c
+  CROSS JOIN month_list AS m
+),
+monthly_txns AS (
+  SELECT
+    cm.customer_id,
+    cm.year,
+    cm.month,
+    COALESCE(SUM(CASE WHEN txn.txn_type = 'deposit' THEN txn.txn_amount ELSE 0 END), 0) AS total_deposit,
+    COALESCE(SUM(CASE WHEN txn.txn_type = 'withdrawal' THEN txn.txn_amount ELSE 0 END), 0) AS total_withdrawal,
+    COALESCE(SUM(CASE WHEN txn.txn_type = 'purchase' THEN txn.txn_amount ELSE 0 END), 0) AS total_purchase
+  FROM customer_months AS cm
+  LEFT JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`customer_transactions` AS txn
+    ON cm.customer_id = txn.customer_id
+    AND DATE_PART_STR(txn.txn_date, 'year') = cm.year
+    AND DATE_PART_STR(txn.txn_date, 'month') = cm.month
+  GROUP BY cm.customer_id, cm.year, cm.month
+),
+monthly_balances AS (
+  SELECT
+    customer_id,
+    year,
+    month,
+    (total_deposit - total_withdrawal - total_purchase) AS net_change
+  FROM monthly_txns
+),
+monthly_cumulative AS (
+  SELECT
+    customer_id,
+    year,
+    month,
+    net_change,
+    SUM(net_change) OVER (PARTITION BY customer_id ORDER BY year, month ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS cumulative_balance
+  FROM monthly_balances
+)
+SELECT
+  customer_id,
+  year,
+  month,
+  net_change AS monthly_change,
+  cumulative_balance AS monthly_cumulative_balance
+FROM monthly_cumulative
+ORDER BY customer_id, year, month;

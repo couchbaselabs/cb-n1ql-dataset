@@ -1,0 +1,33 @@
+WITH sales_periods AS (
+  SELECT
+    ws.calendar_year,
+    ws.week_date,
+    ws.sales,
+    CASE
+      WHEN STR_TO_MILLIS(ws.week_date) BETWEEN STR_TO_MILLIS(CONCAT(STR(ws.calendar_year), '-06-01')) AND STR_TO_MILLIS(CONCAT(STR(ws.calendar_year), '-06-14')) THEN 'before'
+      WHEN STR_TO_MILLIS(ws.week_date) BETWEEN STR_TO_MILLIS(CONCAT(STR(ws.calendar_year), '-06-15')) AND STR_TO_MILLIS(CONCAT(STR(ws.calendar_year), '-06-28')) THEN 'after'
+      ELSE NULL
+    END AS period
+  FROM `bank_sales_trading`.`bank_sales_trading_scope`.`cleaned_weekly_sales` AS ws
+  WHERE ws.calendar_year IN [2018, 2019, 2020]
+    AND ws.month_number = 6
+),
+aggregated_sales AS (
+  SELECT
+    calendar_year,
+    period,
+    SUM(sales) AS total_sales
+  FROM sales_periods
+  WHERE period IS NOT NULL
+  GROUP BY calendar_year, period
+)
+SELECT
+  a.calendar_year,
+  ((COALESCE(after.total_sales, 0) - COALESCE(before.total_sales, 0)) / NULLIF(before.total_sales, 0)) * 100 AS pct_change_sales
+FROM
+  (SELECT DISTINCT calendar_year FROM aggregated_sales) AS a
+LEFT JOIN aggregated_sales AS before
+  ON a.calendar_year = before.calendar_year AND before.period = 'before'
+LEFT JOIN aggregated_sales AS after
+  ON a.calendar_year = after.calendar_year AND after.period = 'after'
+ORDER BY a.calendar_year;

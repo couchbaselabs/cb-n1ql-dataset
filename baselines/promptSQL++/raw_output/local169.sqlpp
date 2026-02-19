@@ -1,0 +1,34 @@
+WITH cohort AS (
+    SELECT lt.id_bioguide, lt.term_start
+    FROM `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+    WHERE lt.term_number = 0
+      AND lt.term_start BETWEEN '1917-01-01' AND '1999-12-31'
+),
+years AS (
+    SELECT y.year_num
+    FROM ARRAY_RANGE(1, 21) AS y(year_num)
+),
+cohort_with_years AS (
+    SELECT c.id_bioguide, c.term_start, y.year_num,
+           DATE_ADD_STR(c.term_start, y.year_num, 'year') AS check_date
+    FROM cohort AS c
+    JOIN years AS y ON TRUE
+),
+retention AS (
+    SELECT cwy.year_num,
+           COUNT(DISTINCT cwy.id_bioguide) AS cohort_size,
+           COUNT(DISTINCT lt.id_bioguide) AS retained_count
+    FROM cohort_with_years AS cwy
+    LEFT JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+      ON lt.id_bioguide = cwy.id_bioguide
+     AND lt.term_start <= cwy.check_date
+     AND lt.term_end >= cwy.check_date
+    GROUP BY cwy.year_num
+)
+SELECT
+    r.year_num,
+    COALESCE(r.retained_count, 0) AS retained_count,
+    COALESCE(r.cohort_size, 0) AS cohort_size,
+    CASE WHEN r.cohort_size > 0 THEN (r.retained_count * 1.0) / r.cohort_size ELSE 0 END AS retention_rate
+FROM retention AS r
+ORDER BY r.year_num;

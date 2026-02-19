@@ -1,0 +1,49 @@
+WITH monthly_balances AS (
+  SELECT
+    ct.customer_id,
+    DATE_PART_STR(ct.txn_date, 'year') AS year,
+    DATE_PART_STR(ct.txn_date, 'month') AS month,
+    SUM(CASE WHEN ct.txn_type = 'deposit' THEN ct.txn_amount ELSE 0 END) -
+    SUM(CASE WHEN ct.txn_type = 'withdrawal' THEN ct.txn_amount ELSE 0 END) AS month_end_balance
+  FROM `bank_sales_trading`.`bank_sales_trading_scope`.`customer_transactions` AS ct
+  WHERE DATE_PART_STR(ct.txn_date, 'year') = 2020
+  GROUP BY ct.customer_id, year, month
+),
+positive_counts AS (
+  SELECT
+    month,
+    COUNT(CASE WHEN month_end_balance > 0 THEN 1 END) AS positive_customer_count
+  FROM monthly_balances
+  GROUP BY month
+),
+extremes AS (
+  SELECT
+    MIN(positive_customer_count) AS min_count,
+    MAX(positive_customer_count) AS max_count
+  FROM positive_counts
+),
+months_extremes AS (
+  SELECT
+    pc.month,
+    pc.positive_customer_count,
+    CASE WHEN pc.positive_customer_count = e.max_count THEN 'max'
+         WHEN pc.positive_customer_count = e.min_count THEN 'min'
+         ELSE NULL END AS extremity
+  FROM positive_counts AS pc
+  CROSS JOIN extremes AS e
+  WHERE pc.positive_customer_count = e.max_count OR pc.positive_customer_count = e.min_count
+),
+avg_balances AS (
+  SELECT
+    me.extremity,
+    AVG(mb.month_end_balance) AS avg_month_end_balance
+  FROM months_extremes AS me
+  JOIN monthly_balances AS mb
+    ON me.month = mb.month
+  WHERE (me.extremity = 'max' AND mb.month_end_balance > 0)
+     OR (me.extremity = 'min' AND mb.month_end_balance > 0)
+  GROUP BY me.extremity
+)
+SELECT
+  (SELECT avg_month_end_balance FROM avg_balances WHERE extremity = 'max') -
+  (SELECT avg_month_end_balance FROM avg_balances WHERE extremity = 'min') AS difference_between_avg_balances;

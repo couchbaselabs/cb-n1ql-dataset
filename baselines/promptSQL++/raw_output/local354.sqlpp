@@ -1,0 +1,20 @@
+SELECT DISTINCT d.driver_id, d.driver_ref, d.forename, d.surname, d.full_name
+FROM `f1`.`f1_scope`.`drives` AS dr
+JOIN `f1`.`f1_scope`.`drivers` AS d
+  ON dr.driver_id = d.driver_id
+WHERE dr.year BETWEEN 1950 AND 1959
+  AND dr.is_first_drive_of_season = 1
+  AND EXISTS (
+    SELECT 1
+    FROM `f1`.`f1_scope`.`drives` AS dr_last
+    WHERE dr_last.driver_id = dr.driver_id
+      AND dr_last.year = dr.year
+      AND dr_last.is_final_drive_of_season = 1
+      AND dr_last.constructor_id = dr.constructor_id
+  )
+  AND (
+    SELECT COUNT(DISTINCT dr2.first_round)
+    FROM `f1`.`f1_scope`.`drives` AS dr2
+    WHERE dr2.driver_id = dr.driver_id
+      AND dr2.year = dr.year
+  ) >= 2;

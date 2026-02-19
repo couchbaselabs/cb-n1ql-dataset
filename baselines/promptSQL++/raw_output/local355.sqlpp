@@ -1,0 +1,38 @@
+WITH driver_year_missed AS (
+  SELECT
+    d.driver_id,
+    d.year,
+    MIN(d.first_round) AS first_missed_round,
+    MAX(d.last_round) AS last_missed_round,
+    COUNT(1) AS missed_races
+  FROM `f1`.`f1_scope`.`drives` AS d
+  WHERE d.first_round > 1
+  GROUP BY d.driver_id, d.year
+  HAVING COUNT(1) < 3
+),
+driver_switches AS (
+  SELECT
+    dym.driver_id,
+    dym.year,
+    dym.first_missed_round,
+    dym.last_missed_round,
+    dym.missed_races,
+    prev_drive.constructor_id AS prev_constructor_id,
+    next_drive.constructor_id AS next_constructor_id
+  FROM driver_year_missed AS dym
+  LEFT JOIN `f1`.`f1_scope`.`drives` AS prev_drive
+    ON prev_drive.driver_id = dym.driver_id
+    AND prev_drive.year = dym.year
+    AND prev_drive.last_round = dym.first_missed_round - 1
+  LEFT JOIN `f1`.`f1_scope`.`drives` AS next_drive
+    ON next_drive.driver_id = dym.driver_id
+    AND next_drive.year = dym.year
+    AND next_drive.first_round = dym.last_missed_round + 1
+  WHERE prev_drive.constructor_id IS NOT MISSING
+    AND next_drive.constructor_id IS NOT MISSING
+    AND prev_drive.constructor_id != next_drive.constructor_id
+)
+SELECT
+  AVG(first_missed_round) AS avg_first_round_missed,
+  AVG(last_missed_round) AS avg_last_round_missed
+FROM driver_switches;

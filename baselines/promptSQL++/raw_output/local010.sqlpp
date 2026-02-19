@@ -1,0 +1,86 @@
+WITH city_pairs AS (
+  SELECT DISTINCT
+    CASE WHEN dep_city_en < arr_city_en THEN dep_city_en ELSE arr_city_en END AS city1,
+    CASE WHEN dep_city_en < arr_city_en THEN arr_city_en ELSE dep_city_en END AS city2
+  FROM (
+    SELECT
+      d.city.`en` AS dep_city_en,
+      a.city.`en` AS arr_city_en
+    FROM `airlines`.`airlines_scope`.`flights` AS f
+    JOIN `airlines`.`airlines_scope`.`airports_data` AS d
+      ON f.departure_airport = d.airport_code
+    JOIN `airlines`.`airlines_scope`.`airports_data` AS a
+      ON f.arrival_airport = a.airport_code
+    WHERE f.departure_airport IS NOT MISSING AND f.arrival_airport IS NOT MISSING
+  )
+),
+flight_distances AS (
+  SELECT
+    CASE WHEN dep.city.`en` < arr.city.`en` THEN dep.city.`en` ELSE arr.city.`en` END AS city1,
+    CASE WHEN dep.city.`en` < arr.city.`en` THEN arr.city.`en` ELSE dep.city.`en` END AS city2,
+    -- Extract coordinates
+    TO_NUMBER(TRIM(SPLIT(SPLIT(dep.coordinates, ',')[0], '(')[1])) AS dep_lon_deg,
+    TO_NUMBER(TRIM(SPLIT(SPLIT(dep.coordinates, ',')[1], ')')[0])) AS dep_lat_deg,
+    TO_NUMBER(TRIM(SPLIT(SPLIT(arr.coordinates, ',')[0], '(')[1])) AS arr_lon_deg,
+    TO_NUMBER(TRIM(SPLIT(SPLIT(arr.coordinates, ',')[1], ')')[0])) AS arr_lat_deg
+  FROM `airlines`.`airlines_scope`.`flights` AS f
+  JOIN `airlines`.`airlines_scope`.`airports_data` AS dep
+    ON f.departure_airport = dep.airport_code
+  JOIN `airlines`.`airlines_scope`.`airports_data` AS arr
+    ON f.arrival_airport = arr.airport_code
+  WHERE f.departure_airport IS NOT MISSING AND f.arrival_airport IS NOT MISSING
+),
+haversine_calc AS (
+  SELECT
+    city1,
+    city2,
+    2 * 6371 * ASIN(
+      SQRT(
+        POWER(SIN((RADIANS(arr_lat_deg) - RADIANS(dep_lat_deg)) / 2), 2) +
+        COS(RADIANS(dep_lat_deg)) * COS(RADIANS(arr_lat_deg)) *
+        POWER(SIN((RADIANS(arr_lon_deg) - RADIANS(dep_lon_deg)) / 2), 2)
+      )
+    ) AS distance_km
+  FROM flight_distances
+),
+avg_distances AS (
+  SELECT
+    city1,
+    city2,
+    AVG(distance_km) AS avg_distance
+  FROM haversine_calc
+  GROUP BY city1, city2
+),
+distance_ranges AS (
+  SELECT
+    city1,
+    city2,
+    avg_distance,
+    CASE
+      WHEN avg_distance < 1000 THEN 0
+      WHEN avg_distance < 2000 THEN 1000
+      WHEN avg_distance < 3000 THEN 2000
+      WHEN avg_distance < 4000 THEN 3000
+      WHEN avg_distance < 5000 THEN 4000
+      WHEN avg_distance < 6000 THEN 5000
+      ELSE 6000
+    END AS distance_range
+  FROM avg_distances
+),
+range_counts AS (
+  SELECT
+    distance_range,
+    COUNT(*) AS pair_count
+  FROM distance_ranges
+  GROUP BY distance_range
+),
+min_range AS (
+  SELECT MIN(pair_count) AS min_count FROM range_counts
+)
+SELECT
+  rc.distance_range,
+  rc.pair_count
+FROM range_counts AS rc
+JOIN min_range AS mr
+  ON rc.pair_count = mr.min_count
+LIMIT 1;

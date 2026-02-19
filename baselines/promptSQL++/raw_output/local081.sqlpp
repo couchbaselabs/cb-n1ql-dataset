@@ -1,0 +1,38 @@
+WITH CustomerTotals AS (
+    SELECT
+        o.customerid AS customerid,
+        SUM(od.unitprice * od.quantity) AS total_spent
+    FROM `northwind`.`northwind_scope`.`orders` AS o
+    JOIN `northwind`.`northwind_scope`.`order_details` AS od
+        ON o.orderid = od.orderid
+    WHERE DATE_PART_STR(o.orderdate, 'year') = 1998
+    GROUP BY o.customerid
+),
+CustomerGroups AS (
+    SELECT
+        ct.customerid,
+        ct.total_spent,
+        cgt.groupname
+    FROM CustomerTotals AS ct
+    JOIN `northwind`.`northwind_scope`.`customergroupthreshold` AS cgt
+        ON ct.total_spent >= cgt.rangebottom AND ct.total_spent <= cgt.rangetop
+),
+GroupCounts AS (
+    SELECT
+        groupname,
+        COUNT(customerid) AS customer_count
+    FROM CustomerGroups
+    GROUP BY groupname
+),
+TotalCustomers AS (
+    SELECT COUNT(DISTINCT customerid) AS total_customers
+    FROM `northwind`.`northwind_scope`.`orders` AS o
+    WHERE DATE_PART_STR(o.orderdate, 'year') = 1998
+)
+SELECT
+    gc.groupname,
+    gc.customer_count,
+    ROUND((gc.customer_count * 100.0) / tc.total_customers, 2) AS percentage_of_total
+FROM GroupCounts AS gc
+CROSS JOIN TotalCustomers AS tc
+ORDER BY gc.groupname;

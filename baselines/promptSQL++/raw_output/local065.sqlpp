@@ -1,0 +1,19 @@
+SELECT
+    SUM(
+        CASE pn.pizza_name
+            WHEN 'Meatlovers' THEN 12
+            WHEN 'Vegetarian' THEN 10
+            ELSE 0
+        END
+        + COALESCE(SUM(COALESCE(pge.extras_count, 0)), 0)
+    ) AS total_income
+FROM `modern_data`.`modern_data_scope`.`pizza_customer_orders` AS pco
+JOIN `modern_data`.`modern_data_scope`.`pizza_runner_orders` AS pro
+    ON pco.order_id = pro.order_id
+JOIN `modern_data`.`modern_data_scope`.`pizza_names` AS pn
+    ON pco.pizza_id = pn.pizza_id
+LEFT JOIN `modern_data`.`modern_data_scope`.`pizza_get_extras` AS pge
+    ON pco.order_id = pge.order_id
+WHERE pro.cancellation IS NULL
+  AND pn.pizza_name IN ('Meatlovers', 'Vegetarian')
+GROUP BY pco.order_id, pn.pizza_name;

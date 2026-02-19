@@ -1,0 +1,58 @@
+WITH customer_txn_bounds AS (
+    SELECT
+        ct.customer_id,
+        MIN(ct.txn_date) AS min_date,
+        MAX(ct.txn_date) AS max_date
+    FROM `bank_sales_trading`.`bank_sales_trading_scope`.`customer_transactions` AS ct
+    GROUP BY ct.customer_id
+),
+date_range AS (
+    SELECT DISTINCT
+        DATE_ADD_STR('day', seq.seq, '1970-01-01') AS date_str
+    FROM
+        (SELECT RAW SEQ FROM SEQ_0_TO_10000) AS seq
+),
+customer_dates AS (
+    SELECT
+        ctb.customer_id,
+        DATE_FORMAT_STR(DATE_ADD_STR('day', seq.seq, ctb.min_date), 'yyyy-MM-dd') AS txn_date
+    FROM customer_txn_bounds AS ctb
+    JOIN (SELECT RAW SEQ FROM SEQ_0_TO_10000) AS seq
+        ON DATE_ADD_STR('day', seq.seq, ctb.min_date) <= ctb.max_date
+),
+daily_balances_raw AS (
+    SELECT
+        cd.customer_id,
+        cd.txn_date,
+        COALESCE(SUM(ct.txn_amount), 0) AS daily_txn_amount
+    FROM customer_dates AS cd
+    LEFT JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`customer_transactions` AS ct
+        ON ct.customer_id = cd.customer_id AND ct.txn_date = cd.txn_date
+    GROUP BY cd.customer_id, cd.txn_date
+),
+daily_balances AS (
+    SELECT
+        db1.customer_id,
+        db1.txn_date,
+        CASE
+            WHEN SUM(db2.daily_txn_amount) OVER (PARTITION BY db1.customer_id ORDER BY db1.txn_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) < 0 THEN 0
+            ELSE SUM(db2.daily_txn_amount) OVER (PARTITION BY db1.customer_id ORDER BY db1.txn_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        END AS daily_balance
+    FROM daily_balances_raw AS db1
+    JOIN daily_balances_raw AS db2
+        ON db1.customer_id = db2.customer_id AND db2.txn_date <= db1.txn_date
+),
+monthly_max_balances AS (
+    SELECT
+        customer_id,
+        SUBSTR(txn_date, 0, 7) AS month,
+        MAX(daily_balance) AS max_daily_balance
+    FROM daily_balances
+    GROUP BY customer_id, SUBSTR(txn_date, 0, 7)
+)
+SELECT
+    month,
+    SUM(max_daily_balance) AS total_max_daily_balance
+FROM monthly_max_balances
+GROUP BY month
+ORDER BY month;

@@ -1,0 +1,29 @@
+WITH TopSkills AS (
+    SELECT
+        s.skill_id,
+        s.skills,
+        COUNT(*) AS skill_count
+    FROM `city_legislation`.`city_legislation_scope`.`job_postings_fact` AS jpf
+    JOIN `city_legislation`.`city_legislation_scope`.`skills_job_dim` AS sjd
+        ON jpf.job_id = sjd.job_id
+    JOIN `city_legislation`.`city_legislation_scope`.`skills_dim` AS s
+        ON sjd.skill_id = s.skill_id
+    WHERE jpf.job_title_short = 'Data Analyst'
+      AND jpf.salary_year_avg IS NOT NULL
+      AND jpf.job_work_from_home = 1
+    GROUP BY s.skill_id, s.skills
+    ORDER BY skill_count DESC
+    LIMIT 3
+),
+FilteredJobs AS (
+    SELECT DISTINCT jpf.job_id, jpf.salary_year_avg
+    FROM `city_legislation`.`city_legislation_scope`.`job_postings_fact` AS jpf
+    JOIN `city_legislation`.`city_legislation_scope`.`skills_job_dim` AS sjd
+        ON jpf.job_id = sjd.job_id
+    WHERE jpf.job_title_short = 'Data Analyst'
+      AND jpf.salary_year_avg IS NOT NULL
+      AND jpf.job_work_from_home = 1
+      AND sjd.skill_id IN (SELECT skill_id FROM TopSkills)
+)
+SELECT AVG(salary_year_avg) AS overall_avg_salary
+FROM FilteredJobs;

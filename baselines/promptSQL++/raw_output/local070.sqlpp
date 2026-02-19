@@ -1,0 +1,66 @@
+WITH FilteredDates AS (
+  SELECT DISTINCT ld.date, c.city_name
+  FROM `city_legislation`.`city_legislation_scope`.`legislation_date_dim` AS ld
+  JOIN `city_legislation`.`city_legislation_scope`.`cities` AS c
+    ON TRUE
+  WHERE c.country_code_2 = 'cn'
+    AND ld.date LIKE '2021-07-%'
+),
+NumberedDates AS (
+  SELECT
+    fd.date,
+    fd.city_name,
+    DATE_PART_STR(fd.date, 'day') AS day_num,
+    DATE_PART_STR(fd.date, 'month') AS month_num,
+    DATE_PART_STR(fd.date, 'year') AS year_num,
+    ROW_NUMBER() OVER (ORDER BY fd.date) AS rn
+  FROM FilteredDates AS fd
+),
+Groups AS (
+  SELECT
+    nd.date,
+    nd.city_name,
+    nd.rn,
+    nd.day_num,
+    nd.month_num,
+    nd.year_num,
+    DATE_ADD_STR(nd.date, -(nd.rn), 'day') AS grp
+  FROM NumberedDates AS nd
+),
+Streaks AS (
+  SELECT
+    grp,
+    MIN(date) AS start_date,
+    MAX(date) AS end_date,
+    COUNT(*) AS streak_length
+  FROM Groups
+  GROUP BY grp
+),
+MinMaxStreaks AS (
+  SELECT
+    MIN(streak_length) AS min_streak,
+    MAX(streak_length) AS max_streak
+  FROM Streaks
+),
+ShortestStreakDates AS (
+  SELECT g.date, g.city_name
+  FROM Groups AS g
+  JOIN Streaks AS s ON g.grp = s.grp
+  JOIN MinMaxStreaks AS mm ON s.streak_length = mm.min_streak
+),
+LongestStreakDates AS (
+  SELECT g.date, g.city_name
+  FROM Groups AS g
+  JOIN Streaks AS s ON g.grp = s.grp
+  JOIN MinMaxStreaks AS mm ON s.streak_length = mm.max_streak
+),
+Combined AS (
+  SELECT date, city_name FROM ShortestStreakDates
+  UNION ALL
+  SELECT date, city_name FROM LongestStreakDates
+)
+SELECT
+  date,
+  CONCAT(UPPER(SUBSTR(city_name, 0, 1)), LOWER(SUBSTR(city_name, 1))) AS city_name
+FROM Combined
+ORDER BY date;

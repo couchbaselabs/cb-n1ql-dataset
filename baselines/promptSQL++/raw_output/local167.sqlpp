@@ -1,0 +1,12 @@
+SELECT
+    lt.state,
+    COUNT(DISTINCT lt.id_bioguide) AS female_legislator_count
+FROM `city_legislation`.`city_legislation_scope`.`legislators` AS l
+JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+    ON l.id_bioguide = lt.id_bioguide
+WHERE l.gender = 'F'
+  AND DATE_PART_STR(lt.term_start, 'MM-DD') <= '12-31'
+  AND DATE_PART_STR(lt.term_end, 'MM-DD') >= '12-31'
+GROUP BY lt.state
+ORDER BY female_legislator_count DESC
+LIMIT 1;

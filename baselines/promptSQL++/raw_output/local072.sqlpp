@@ -1,0 +1,86 @@
+WITH jan2022_dates AS (
+    SELECT DISTINCT DATE_PART_STR(d.insert_date, 'day') AS day
+    FROM `city_legislation`.`city_legislation_scope`.`cities` AS d
+    WHERE DATE_PART_STR(d.insert_date, 'year') = '2022'
+      AND DATE_PART_STR(d.insert_date, 'month') = '01'
+),
+country_days AS (
+    SELECT d.country_code_2, COUNT(DISTINCT DATE_PART_STR(d.insert_date, 'day')) AS distinct_days
+    FROM `city_legislation`.`city_legislation_scope`.`cities` AS d
+    WHERE DATE_PART_STR(d.insert_date, 'year') = '2022'
+      AND DATE_PART_STR(d.insert_date, 'month') = '01'
+    GROUP BY d.country_code_2
+    HAVING COUNT(DISTINCT DATE_PART_STR(d.insert_date, 'day')) = 9
+    ORDER BY d.country_code_2
+    LIMIT 1
+),
+country_cities AS (
+    SELECT c.*
+    FROM `city_legislation`.`city_legislation_scope`.`cities` AS c
+    JOIN country_days AS cd ON c.country_code_2 = cd.country_code_2
+    WHERE DATE_PART_STR(c.insert_date, 'year') = '2022'
+      AND DATE_PART_STR(c.insert_date, 'month') = '01'
+),
+ranked_dates AS (
+    SELECT
+        c.insert_date,
+        c.city_id,
+        c.city_name,
+        c.capital,
+        DATE_PART_STR(c.insert_date, 'day') AS day,
+        ROW_NUMBER() OVER (ORDER BY c.insert_date) AS rn
+    FROM country_cities AS c
+),
+grouped_dates AS (
+    SELECT
+        insert_date,
+        city_id,
+        city_name,
+        capital,
+        day,
+        rn,
+        DATE_ADD_STR(insert_date, -(rn * 86400), 'second') AS grp -- subtract rn days to find consecutive groups
+    FROM ranked_dates
+),
+consecutive_groups AS (
+    SELECT
+        grp,
+        MIN(insert_date) AS start_date,
+        MAX(insert_date) AS end_date,
+        COUNT(*) AS consecutive_days
+    FROM grouped_dates
+    GROUP BY grp
+),
+longest_period AS (
+    SELECT grp, start_date, end_date, consecutive_days
+    FROM consecutive_groups
+    ORDER BY consecutive_days DESC
+    LIMIT 1
+),
+entries_in_longest_period AS (
+    SELECT c.*
+    FROM country_cities AS c
+    JOIN longest_period AS lp
+      ON c.insert_date BETWEEN lp.start_date AND lp.end_date
+),
+capital_entries_count AS (
+    SELECT COUNT(*) AS capital_count
+    FROM entries_in_longest_period AS e
+    WHERE e.capital = 1
+),
+total_entries_count AS (
+    SELECT COUNT(*) AS total_count
+    FROM entries_in_longest_period
+)
+SELECT
+    cd.country_code_2 AS country_code,
+    lp.start_date,
+    lp.end_date,
+    lp.consecutive_days,
+    capital_entries_count.capital_count,
+    total_entries_count.total_count,
+    (capital_entries_count.capital_count * 1.0) / total_entries_count.total_count AS capital_proportion
+FROM country_days AS cd
+JOIN longest_period AS lp ON TRUE
+JOIN capital_entries_count ON TRUE
+JOIN total_entries_count ON TRUE;

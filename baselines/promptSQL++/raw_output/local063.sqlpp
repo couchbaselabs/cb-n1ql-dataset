@@ -1,0 +1,131 @@
+WITH sales_us AS (
+  SELECT
+    s.prod_id,
+    s.cust_id,
+    s.amount_sold,
+    s.quantity_sold,
+    t.calendar_quarter_id,
+    c.cust_city,
+    c.country_id
+  FROM `complex_oracle`.`complex_oracle_scope`.`sales` AS s
+  JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS c
+    ON s.cust_id = c.cust_id
+  JOIN `complex_oracle`.`complex_oracle_scope`.`times` AS t
+    ON s.time_id = t.time_id
+  WHERE s.promo_id = 999
+    AND c.country_id IN (
+      SELECT country_id
+      FROM `complex_oracle`.`complex_oracle_scope`.`countries`
+      WHERE country_name = 'United States'
+    )
+    AND t.calendar_quarter_id IN [1772, 1776]
+),
+city_sales AS (
+  SELECT
+    cust_city,
+    calendar_quarter_id,
+    SUM(amount_sold) AS total_sales
+  FROM sales_us
+  GROUP BY cust_city, calendar_quarter_id
+),
+city_growth AS (
+  SELECT
+    c1.cust_city,
+    c1.total_sales AS sales_q4_2019,
+    c2.total_sales AS sales_q4_2020,
+    CASE WHEN c1.total_sales > 0 THEN ((c2.total_sales - c1.total_sales) / c1.total_sales) * 100 ELSE NULL END AS pct_growth
+  FROM city_sales AS c1
+  JOIN city_sales AS c2
+    ON c1.cust_city = c2.cust_city
+    AND c1.calendar_quarter_id = 1772
+    AND c2.calendar_quarter_id = 1776
+  WHERE c1.total_sales > 0
+),
+qualified_cities AS (
+  SELECT cust_city
+  FROM city_growth
+  WHERE pct_growth >= 20
+),
+prod_sales AS (
+  SELECT
+    s.prod_id,
+    s.calendar_quarter_id,
+    SUM(s.amount_sold) AS total_sales
+  FROM sales_us AS s
+  JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS c
+    ON s.cust_id = c.cust_id
+  WHERE c.cust_city IN (SELECT cust_city FROM qualified_cities)
+  GROUP BY s.prod_id, s.calendar_quarter_id
+),
+total_sales_per_quarter AS (
+  SELECT
+    calendar_quarter_id,
+    SUM(total_sales) AS total_sales_quarter
+  FROM prod_sales
+  GROUP BY calendar_quarter_id
+),
+prod_sales_with_share AS (
+  SELECT
+    p.prod_id,
+    p.calendar_quarter_id,
+    p.total_sales,
+    t.total_sales_quarter,
+    (p.total_sales / t.total_sales_quarter) * 100 AS sales_share_pct
+  FROM prod_sales AS p
+  JOIN total_sales_per_quarter AS t
+    ON p.calendar_quarter_id = t.calendar_quarter_id
+),
+prod_sales_pivot AS (
+  SELECT
+    ps1.prod_id,
+    ps1.sales_share_pct AS share_q4_2019,
+    ps2.sales_share_pct AS share_q4_2020,
+    (ABS(ps2.sales_share_pct - ps1.sales_share_pct)) AS share_change
+  FROM prod_sales_with_share AS ps1
+  JOIN prod_sales_with_share AS ps2
+    ON ps1.prod_id = ps2.prod_id
+    AND ps1.calendar_quarter_id = 1772
+    AND ps2.calendar_quarter_id = 1776
+),
+top_20_percent_threshold AS (
+  SELECT
+    MIN(sales_sum) AS threshold
+  FROM (
+    SELECT
+      prod_id,
+      SUM(total_sales) AS sales_sum,
+      NTILE(5) OVER (ORDER BY SUM(total_sales) DESC) AS quintile
+    FROM prod_sales
+    WHERE calendar_quarter_id = 1776
+    GROUP BY prod_id
+  ) AS ranked
+  WHERE quintile = 1
+),
+top_products AS (
+  SELECT
+    prod_id,
+    share_change
+  FROM prod_sales_pivot
+  WHERE prod_id IN (
+    SELECT prod_id
+    FROM (
+      SELECT
+        prod_id,
+        SUM(total_sales) AS sales_sum,
+        NTILE(5) OVER (ORDER BY SUM(total_sales) DESC) AS quintile
+      FROM prod_sales
+      WHERE calendar_quarter_id = 1776
+      GROUP BY prod_id
+    ) AS ranked
+    WHERE quintile = 1
+  )
+)
+SELECT
+  p.prod_id,
+  p.prod_name,
+  tp.share_change
+FROM top_products AS tp
+JOIN `complex_oracle`.`complex_oracle_scope`.`products` AS p
+  ON tp.prod_id = p.prod_id
+ORDER BY tp.share_change ASC
+LIMIT 1;

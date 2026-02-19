@@ -1,0 +1,43 @@
+WITH region_sales AS (
+    SELECT
+        r.id AS region_id,
+        r.name AS region_name,
+        COUNT(o.id) AS num_orders,
+        SUM(o.total_amt_usd) AS total_sales
+    FROM `education_business`.`education_business_scope`.`web_region` AS r
+    LEFT JOIN `education_business`.`education_business_scope`.`web_sales_reps` AS sr
+        ON sr.region_id = r.id
+    LEFT JOIN `education_business`.`education_business_scope`.`web_orders` AS o
+        ON o.account_id = sr.id
+    GROUP BY r.id, r.name
+),
+rep_sales AS (
+    SELECT
+        sr.region_id,
+        sr.name AS rep_name,
+        SUM(o.total_amt_usd) AS rep_total_sales
+    FROM `education_business`.`education_business_scope`.`web_sales_reps` AS sr
+    LEFT JOIN `education_business`.`education_business_scope`.`web_orders` AS o
+        ON o.account_id = sr.id
+    GROUP BY sr.region_id, sr.name
+),
+max_rep_sales AS (
+    SELECT
+        region_id,
+        MAX(rep_total_sales) AS max_sales
+    FROM rep_sales
+    GROUP BY region_id
+)
+SELECT
+    rs.region_name,
+    rs.num_orders,
+    rs.total_sales,
+    ARRAY_AGG({name: rps.rep_name, sales_amount: rps.rep_total_sales}) AS top_sales_reps
+FROM region_sales AS rs
+LEFT JOIN rep_sales AS rps
+    ON rps.region_id = rs.region_id
+LEFT JOIN max_rep_sales AS mrs
+    ON mrs.region_id = rs.region_id AND rps.rep_total_sales = mrs.max_sales
+WHERE rps.rep_total_sales IS NOT NULL
+GROUP BY rs.region_name, rs.num_orders, rs.total_sales
+ORDER BY rs.region_name;

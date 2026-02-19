@@ -1,0 +1,35 @@
+SELECT
+    c.constructor_ref,
+    c.name,
+    cs.year,
+    (COALESCE(ds.points, 0) + COALESCE(cs.points, 0)) AS combined_points
+FROM (
+    SELECT
+        constructor_id,
+        year,
+        MAX(points) AS points
+    FROM `f1`.`f1_scope`.`constructor_standings` AS cs
+    GROUP BY constructor_id, year
+) AS cs
+LEFT JOIN (
+    SELECT
+        ds.constructor_id,
+        ds.year,
+        MAX(ds.points) AS points
+    FROM (
+        SELECT
+            dtr.constructor_id,
+            dtr.driver_id,
+            dtr.year,
+            ds.points
+        FROM `f1`.`f1_scope`.`team_driver_ranks` AS dtr
+        JOIN `f1`.`f1_scope`.`driver_standings_ext` AS ds
+            ON dtr.driver_id = ds.driver_id AND dtr.year = ds.year
+    ) AS ds
+    GROUP BY ds.constructor_id, ds.year
+) AS ds
+    ON cs.constructor_id = ds.constructor_id AND cs.year = ds.year
+JOIN `f1`.`f1_scope`.`constructors` AS c
+    ON cs.constructor_id = c.constructor_id
+ORDER BY combined_points DESC
+LIMIT 3;

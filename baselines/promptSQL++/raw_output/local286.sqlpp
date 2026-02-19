@@ -1,0 +1,24 @@
+SELECT
+    s.seller_id,
+    s.seller_city,
+    s.seller_state,
+    SUM(oi.price) AS total_sales,
+    AVG(oi.price) AS avg_item_price,
+    AVG(COALESCE(orv.review_score, 0)) AS avg_review_score,
+    AVG(DATE_DIFF_STR(o.order_delivered_customer_date, o.order_approved_at, 'second')) AS avg_packing_time_seconds,
+    ARRAY_TO_STRING(ARRAY_AGG(DISTINCT pct.product_category_name_english ORDER BY SUM(oi.price) DESC LIMIT 1), ', ') AS top_product_category_english
+FROM `electronic_sales`.`electronic_sales_scope`.`sellers` AS s
+JOIN `electronic_sales`.`electronic_sales_scope`.`order_items` AS oi
+    ON s.seller_id = oi.seller_id
+JOIN `electronic_sales`.`electronic_sales_scope`.`orders` AS o
+    ON oi.order_id = o.order_id
+LEFT JOIN `electronic_sales`.`electronic_sales_scope`.`order_reviews` AS orv
+    ON oi.order_id = orv.order_id
+LEFT JOIN `electronic_sales`.`electronic_sales_scope`.`products` AS p
+    ON oi.product_id = p.product_id
+LEFT JOIN `electronic_sales`.`electronic_sales_scope`.`product_category_name_translation` AS pct
+    ON p.product_category_name = pct.product_category_name
+WHERE o.order_status = 'delivered'
+GROUP BY s.seller_id, s.seller_city, s.seller_state
+HAVING COUNT(oi.order_item_id) > 100
+ORDER BY total_sales DESC;

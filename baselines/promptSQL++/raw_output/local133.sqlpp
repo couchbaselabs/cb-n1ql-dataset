@@ -1,0 +1,25 @@
+WITH StyleScores AS (
+    SELECT
+        mp.StyleID,
+        SUM(
+            CASE mp.PreferenceSeq
+                WHEN 1 THEN 3
+                WHEN 2 THEN 2
+                WHEN 3 THEN 1
+                ELSE 0
+            END
+        ) AS TotalScore
+    FROM `entertainmentagency`.`entertainmentagency_scope`.`Musical_Preferences` AS mp
+    GROUP BY mp.StyleID
+),
+AvgScore AS (
+    SELECT AVG(TotalScore) AS AvgTotalScore
+    FROM StyleScores
+)
+SELECT
+    ss.StyleID,
+    ss.TotalScore,
+    ABS(ss.TotalScore - a.AvgTotalScore) AS AbsDifferenceFromAvg
+FROM StyleScores AS ss
+CROSS JOIN AvgScore AS a
+ORDER BY ss.StyleID;

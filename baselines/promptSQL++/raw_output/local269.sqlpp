@@ -1,0 +1,30 @@
+WITH RECURSIVE expanded_packaging AS (
+  SELECT
+    pr.packaging_id,
+    pr.contains_id,
+    pr.qty,
+    pr.contains_id AS leaf_id,
+    pr.qty AS leaf_qty
+  FROM `oracle_sql`.`oracle_sql_scope`.`packaging_relations` AS pr
+  WHERE NOT EXISTS (
+    SELECT 1 FROM `oracle_sql`.`oracle_sql_scope`.`packaging_relations` AS pr2
+    WHERE pr.contains_id = pr2.packaging_id
+  )
+  UNION ALL
+  SELECT
+    pr.packaging_id,
+    pr.contains_id,
+    pr.qty,
+    ep.leaf_id,
+    pr.qty * ep.leaf_qty
+  FROM `oracle_sql`.`oracle_sql_scope`.`packaging_relations` AS pr
+  JOIN expanded_packaging AS ep ON pr.contains_id = ep.packaging_id
+)
+SELECT AVG(total_qty) AS avg_total_qty
+FROM (
+  SELECT
+    packaging_id,
+    SUM(leaf_qty) AS total_qty
+  FROM expanded_packaging
+  GROUP BY packaging_id
+) AS totals;

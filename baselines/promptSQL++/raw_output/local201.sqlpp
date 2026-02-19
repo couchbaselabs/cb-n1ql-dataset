@@ -1,0 +1,21 @@
+WITH anagram_groups AS (
+  SELECT
+    w1.words AS word,
+    ARRAY_LENGTH(
+      ARRAY_FILTER w2 IN (
+        SELECT w.words FROM `modern_data`.`modern_data_scope`.`word_list` AS w
+        WHERE LENGTH(w.words) = LENGTH(w1.words)
+          AND w.words != w1.words
+          AND w.words LIKE w1.words[0] || '%'
+          AND ARRAY_SORT(ARRAY_DISTINCT(ARRAY_FLATTEN([ARRAY_TO_STRING(ARRAY_SORT(SPLIT(w.words, '')), ''), ARRAY_TO_STRING(ARRAY_SORT(SPLIT(w1.words, '')), '')], 1))) = ARRAY_TO_STRING(ARRAY_SORT(SPLIT(w1.words, '')), '')
+      ) SATISFIES TRUE END
+    ) AS anagram_count
+  FROM `modern_data`.`modern_data_scope`.`word_list` AS w1
+  WHERE LENGTH(w1.words) BETWEEN 4 AND 5
+    AND SUBSTR(w1.words, 0, 1) = 'r'
+)
+SELECT word, anagram_count
+FROM anagram_groups
+WHERE anagram_count > 0
+ORDER BY word
+LIMIT 10;

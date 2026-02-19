@@ -1,0 +1,45 @@
+WITH volume_converted AS (
+  SELECT
+    bp.ticker,
+    bp.market_date,
+    CASE
+      WHEN bp.volume = '-' THEN 0
+      WHEN RIGHT(bp.volume, 1) = 'K' THEN TO_NUMBER(LEFT(bp.volume, LENGTH(bp.volume) - 1)) * 1000
+      WHEN RIGHT(bp.volume, 1) = 'M' THEN TO_NUMBER(LEFT(bp.volume, LENGTH(bp.volume) - 1)) * 1000000
+      ELSE TO_NUMBER(bp.volume)
+    END AS volume_num
+  FROM `bank_sales_trading`.`bank_sales_trading_scope`.`bitcoin_prices` AS bp
+  WHERE STR_TO_MILLIS(STR_REPLACE(bp.market_date, '-', '/')) BETWEEN STR_TO_MILLIS('01/08/2021') AND STR_TO_MILLIS('10/08/2021')
+),
+filtered_volume AS (
+  SELECT
+    vc.ticker,
+    vc.market_date,
+    vc.volume_num
+  FROM volume_converted AS vc
+  WHERE vc.volume_num > 0
+),
+ranked_volume AS (
+  SELECT
+    fv.ticker,
+    fv.market_date,
+    fv.volume_num,
+    ROW_NUMBER() OVER (PARTITION BY fv.ticker ORDER BY STR_TO_MILLIS(STR_REPLACE(fv.market_date, '-', '/'))) AS rn
+  FROM filtered_volume AS fv
+),
+prev_volume AS (
+  SELECT
+    rv1.ticker,
+    rv1.market_date,
+    rv1.volume_num,
+    rv2.volume_num AS prev_volume_num
+  FROM ranked_volume AS rv1
+  LEFT JOIN ranked_volume AS rv2
+    ON rv1.ticker = rv2.ticker AND rv1.rn = rv2.rn + 1
+)
+SELECT
+  pv.ticker,
+  pv.market_date,
+  ROUND(((pv.volume_num - COALESCE(pv.prev_volume_num, pv.volume_num)) / COALESCE(pv.prev_volume_num, pv.volume_num)) * 100, 2) AS daily_volume_change_pct
+FROM prev_volume AS pv
+ORDER BY pv.ticker, STR_TO_MILLIS(STR_REPLACE(pv.market_date, '-', '/'));
