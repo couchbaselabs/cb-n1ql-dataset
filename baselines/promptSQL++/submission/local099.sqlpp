@@ -1,0 +1,26 @@
+SELECT COUNT(DISTINCT mc1.PID) AS num_actors
+FROM `db_imdb`.`db_imdb_scope`.`M_Director` AS md1
+JOIN `db_imdb`.`db_imdb_scope`.`M_Director` AS md2
+  ON md1.PID = md2.PID
+JOIN `db_imdb`.`db_imdb_scope`.`M_Cast` AS mc1
+  ON mc1.PID = md1.PID AND mc1.MID = md1.MID
+JOIN `db_imdb`.`db_imdb_scope`.`M_Cast` AS mc2
+  ON mc2.PID = md2.PID AND mc2.MID = md2.MID
+JOIN `db_imdb`.`db_imdb_scope`.`Person` AS p
+  ON p.PID = md1.PID
+JOIN `db_imdb`.`db_imdb_scope`.`Person` AS d
+  ON d.PID = md1.PID
+WHERE md1.PID IS NOT NULL
+GROUP BY mc1.PID
+HAVING 
+  SUM(CASE WHEN md1.PID = d.PID AND d.Name = 'Yash Chopra' THEN 1 ELSE 0 END) >
+  MAX(
+    (SELECT MAX(count_other)
+     FROM (
+       SELECT md_other.PID, COUNT(*) AS count_other
+       FROM `db_imdb`.`db_imdb_scope`.`M_Director` AS md_other
+       WHERE md_other.PID = mc1.PID AND md_other.PID != (SELECT PID FROM `db_imdb`.`db_imdb_scope`.`Person` WHERE Name = 'Yash Chopra' LIMIT 1)
+       GROUP BY md_other.PID
+     )
+    )
+  );

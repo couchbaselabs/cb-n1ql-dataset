@@ -1,0 +1,78 @@
+WITH overtakes AS (
+  SELECT
+    lp1.driver_id AS overtaking_driver_id,
+    lp1.position AS overtaking_position,
+    lp2.driver_id AS overtaken_driver_id,
+    lp2.position AS overtaken_position,
+    lp1.lap,
+    lp1.race_id
+  FROM `f1`.`f1_scope`.`lap_positions` AS lp1
+  JOIN `f1`.`f1_scope`.`lap_positions` AS lp2
+    ON lp1.race_id = lp2.race_id
+    AND lp1.lap = lp2.lap
+    AND lp1.position + 1 = lp2.position
+  WHERE lp1.lap <= 5
+    AND lp1.lap_type = 'Race'
+    AND lp2.lap_type = 'Race'
+),
+retirements AS (
+  SELECT
+    r.driver_id,
+    r.lap,
+    r.race_id
+  FROM `f1`.`f1_scope`.`retirements` AS r
+),
+pit_stops AS (
+  SELECT
+    p.driver_id,
+    p.lap,
+    p.race_id
+  FROM `f1`.`f1_scope`.`pit_stops` AS p
+),
+qualifying AS (
+  SELECT
+    q.driver_id,
+    q.race_id,
+    q.position AS grid_position
+  FROM `f1`.`f1_scope`.`qualifying` AS q
+),
+overtake_labels AS (
+  SELECT
+    o.race_id,
+    o.lap,
+    o.overtaking_driver_id,
+    o.overtaken_driver_id,
+    CASE
+      WHEN r.driver_id IS NOT NULL AND r.lap = o.lap AND r.race_id = o.race_id THEN 'R'
+      WHEN (p1.driver_id IS NOT NULL AND p1.lap = o.lap AND p1.race_id = o.race_id)
+         OR (p2.driver_id IS NOT NULL AND p2.lap = o.lap - 1 AND p2.race_id = o.race_id) THEN 'P'
+      WHEN o.lap = 1
+         AND ABS(q1.grid_position - q2.grid_position) <= 2 THEN 'S'
+      ELSE 'T'
+    END AS overtake_category
+  FROM overtakes AS o
+  LEFT JOIN retirements AS r
+    ON r.driver_id = o.overtaken_driver_id
+    AND r.lap = o.lap
+    AND r.race_id = o.race_id
+  LEFT JOIN pit_stops AS p1
+    ON p1.driver_id = o.overtaken_driver_id
+    AND p1.lap = o.lap
+    AND p1.race_id = o.race_id
+  LEFT JOIN pit_stops AS p2
+    ON p2.driver_id = o.overtaken_driver_id
+    AND p2.lap = o.lap - 1
+    AND p2.race_id = o.race_id
+  LEFT JOIN qualifying AS q1
+    ON q1.driver_id = o.overtaking_driver_id
+    AND q1.race_id = o.race_id
+  LEFT JOIN qualifying AS q2
+    ON q2.driver_id = o.overtaken_driver_id
+    AND q2.race_id = o.race_id
+)
+SELECT
+  overtake_category,
+  COUNT(1) AS overtakes_count
+FROM overtake_labels
+GROUP BY overtake_category
+ORDER BY overtakes_count DESC;

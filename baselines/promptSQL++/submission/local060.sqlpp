@@ -1,0 +1,120 @@
+WITH sales_filtered AS (
+  SELECT
+    s.cust_id,
+    s.prod_id,
+    s.amount_sold,
+    t.calendar_quarter_desc,
+    t.calendar_year
+  FROM `complex_oracle`.`complex_oracle_scope`.`sales` AS s
+  JOIN `complex_oracle`.`complex_oracle_scope`.`times` AS t
+    ON s.time_id = t.time_id
+  JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS c
+    ON s.cust_id = c.cust_id
+  JOIN `complex_oracle`.`complex_oracle_scope`.`countries` AS co
+    ON c.country_id = co.country_id
+  WHERE co.country_name = 'United States'
+    AND s.promo_id = 0
+    AND ((t.calendar_quarter_desc = '2019-04' AND t.calendar_year = 2019)
+      OR (t.calendar_quarter_desc = '2020-04' AND t.calendar_year = 2020))
+),
+city_sales AS (
+  SELECT
+    c.cust_city,
+    sf.calendar_quarter_desc,
+    SUM(sf.amount_sold) AS total_sales
+  FROM sales_filtered AS sf
+  JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS c
+    ON sf.cust_id = c.cust_id
+  GROUP BY c.cust_city, sf.calendar_quarter_desc
+),
+city_sales_pivot AS (
+  SELECT
+    cust_city,
+    MAX(CASE WHEN calendar_quarter_desc = '2019-04' THEN total_sales ELSE 0 END) AS sales_q4_2019,
+    MAX(CASE WHEN calendar_quarter_desc = '2020-04' THEN total_sales ELSE 0 END) AS sales_q4_2020
+  FROM city_sales
+  GROUP BY cust_city
+),
+cities_with_growth AS (
+  SELECT
+    cust_city,
+    sales_q4_2019,
+    sales_q4_2020,
+    CASE WHEN sales_q4_2019 > 0 THEN (sales_q4_2020 - sales_q4_2019) / sales_q4_2019 ELSE NULL END AS growth_rate
+  FROM city_sales_pivot
+  WHERE sales_q4_2019 > 0
+    AND (sales_q4_2020 - sales_q4_2019) / sales_q4_2019 >= 0.20
+),
+top_products AS (
+  SELECT
+    sf.prod_id,
+    SUM(sf.amount_sold) AS total_sales
+  FROM sales_filtered AS sf
+  JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS c
+    ON sf.cust_id = c.cust_id
+  JOIN cities_with_growth AS cwg
+    ON c.cust_city = cwg.cust_city
+  GROUP BY sf.prod_id
+),
+total_sales_all_products AS (
+  SELECT SUM(total_sales) AS total_sales_all FROM top_products
+),
+top_products_ranked AS (
+  SELECT
+    tp.prod_id,
+    tp.total_sales,
+    RANK() OVER (ORDER BY tp.total_sales DESC) AS rank,
+    NTILE(5) OVER (ORDER BY tp.total_sales DESC) AS quintile
+  FROM top_products AS tp
+),
+top_20_percent_products AS (
+  SELECT prod_id, total_sales
+  FROM top_products_ranked
+  WHERE quintile = 1
+),
+sales_by_product_quarter AS (
+  SELECT
+    sf.prod_id,
+    sf.calendar_quarter_desc,
+    SUM(sf.amount_sold) AS total_sales
+  FROM sales_filtered AS sf
+  JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS c
+    ON sf.cust_id = c.cust_id
+  JOIN cities_with_growth AS cwg
+    ON c.cust_city = cwg.cust_city
+  WHERE sf.prod_id IN (SELECT prod_id FROM top_20_percent_products)
+  GROUP BY sf.prod_id, sf.calendar_quarter_desc
+),
+total_sales_by_quarter AS (
+  SELECT
+    calendar_quarter_desc,
+    SUM(total_sales) AS total_sales_quarter
+  FROM sales_by_product_quarter
+  GROUP BY calendar_quarter_desc
+),
+product_shares AS (
+  SELECT
+    spq.prod_id,
+    spq.calendar_quarter_desc,
+    spq.total_sales,
+    tsq.total_sales_quarter,
+    spq.total_sales / tsq.total_sales_quarter AS share
+  FROM sales_by_product_quarter AS spq
+  JOIN total_sales_by_quarter AS tsq
+    ON spq.calendar_quarter_desc = tsq.calendar_quarter_desc
+),
+product_share_diff AS (
+  SELECT
+    p2019.prod_id,
+    COALESCE(p2020.share, 0) - COALESCE(p2019.share, 0) AS share_change
+  FROM
+    (SELECT prod_id, share FROM product_shares WHERE calendar_quarter_desc = '2019-04') AS p2019
+  LEFT JOIN
+    (SELECT prod_id, share FROM product_shares WHERE calendar_quarter_desc = '2020-04') AS p2020
+  ON p2019.prod_id = p2020.prod_id
+)
+SELECT
+  psd.prod_id,
+  psd.share_change
+FROM product_share_diff AS psd
+ORDER BY psd.share_change DESC;

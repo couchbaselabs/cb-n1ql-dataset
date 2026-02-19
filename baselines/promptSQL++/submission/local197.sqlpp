@@ -1,0 +1,43 @@
+WITH TopCustomers AS (
+    SELECT p.customer_id,
+           SUM(p.amount) AS total_amount
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` AS p
+    GROUP BY p.customer_id
+    ORDER BY total_amount DESC
+    LIMIT 10
+),
+MonthlyPayments AS (
+    SELECT p.customer_id,
+           DATE_PART_STR(p.payment_date, 'year') AS year,
+           DATE_PART_STR(p.payment_date, 'month') AS month,
+           SUM(p.amount) AS monthly_amount
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` AS p
+    WHERE p.customer_id IN (SELECT tc.customer_id FROM TopCustomers AS tc)
+    GROUP BY p.customer_id, year, month
+),
+MonthlyPaymentsWithNext AS (
+    SELECT mp.customer_id,
+           mp.year,
+           mp.month,
+           mp.monthly_amount,
+           LEAD(mp.monthly_amount) OVER (PARTITION BY mp.customer_id ORDER BY mp.year, mp.month) AS next_month_amount,
+           LEAD(mp.year) OVER (PARTITION BY mp.customer_id ORDER BY mp.year, mp.month) AS next_year,
+           LEAD(mp.month) OVER (PARTITION BY mp.customer_id ORDER BY mp.year, mp.month) AS next_month
+    FROM MonthlyPayments AS mp
+),
+MonthDiffs AS (
+    SELECT customer_id,
+           year,
+           month,
+           ABS(monthly_amount - next_month_amount) AS diff
+    FROM MonthlyPaymentsWithNext
+    WHERE next_month IS NOT MISSING
+      AND ((year = next_year AND month + 1 = next_month) OR (year + 1 = next_year AND month = 12 AND next_month = 1))
+)
+SELECT customer_id,
+       year,
+       month,
+       ROUND(diff, 2) AS max_monthly_diff
+FROM MonthDiffs
+ORDER BY diff DESC
+LIMIT 1;

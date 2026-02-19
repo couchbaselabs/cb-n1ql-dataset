@@ -1,0 +1,22 @@
+WITH product_counts AS (
+    SELECT
+        p.segment,
+        COUNT(DISTINCT CASE WHEN fgs.fiscal_year = 2020 THEN fgs.product_code END) AS unique_products_2020,
+        COUNT(DISTINCT CASE WHEN fgs.fiscal_year = 2021 THEN fgs.product_code END) AS unique_products_2021
+    FROM `education_business`.`education_business_scope`.`hardware_dim_product` AS p
+    LEFT JOIN `education_business`.`education_business_scope`.`hardware_fact_gross_price` AS fgs
+        ON p.product_code = fgs.product_code
+    WHERE fgs.fiscal_year IN [2020, 2021]
+    GROUP BY p.segment
+)
+SELECT
+    segment,
+    unique_products_2020,
+    unique_products_2021,
+    CASE
+        WHEN unique_products_2020 = 0 THEN NULL
+        ELSE ((unique_products_2021 - unique_products_2020) * 100.0) / unique_products_2020
+    END AS pct_increase
+FROM product_counts
+ORDER BY pct_increase DESC
+;

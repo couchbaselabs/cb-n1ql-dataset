@@ -1,0 +1,66 @@
+SELECT
+  t.calendar_month_desc,
+  ROUND(AVG(
+    CASE
+      WHEN s2019.total_sales IS NOT NULL AND s2019.total_sales != 0 THEN
+        (((s2020.total_sales - s2019.total_sales) / s2019.total_sales) * s2020.total_sales) + s2020.total_sales
+      ELSE
+        s2020.total_sales
+    END * COALESCE(cu.to_us, 1)
+  ), 2) AS avg_projected_sales_usd
+FROM
+  (
+    SELECT DISTINCT calendar_month_desc, calendar_month_number
+    FROM `complex_oracle`.`complex_oracle_scope`.`times`
+    WHERE calendar_year IN [2019, 2020, 2021]
+  ) AS t
+LEFT JOIN
+  (
+    SELECT
+      s.prod_id,
+      SUBSTR(s.time_id, 1, 7) AS month,
+      SUM(s.amount_sold) AS total_sales
+    FROM `complex_oracle`.`complex_oracle_scope`.`sales` AS s
+    JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS cu
+      ON s.cust_id = cu.cust_id
+    JOIN `complex_oracle`.`complex_oracle_scope`.`countries` AS co
+      ON cu.country_id = co.country_id
+    JOIN `complex_oracle`.`complex_oracle_scope`.`promotions` AS p
+      ON s.promo_id = p.promo_id
+    JOIN `complex_oracle`.`complex_oracle_scope`.`channels` AS ch
+      ON s.channel_id = ch.channel_id
+    WHERE co.country_name = 'France'
+      AND p.promo_total_id = 1
+      AND ch.channel_total_id = 1
+      AND SUBSTR(s.time_id, 1, 4) = '2019'
+    GROUP BY s.prod_id, month
+  ) AS s2019
+  ON s2019.month = t.calendar_month_desc
+LEFT JOIN
+  (
+    SELECT
+      s.prod_id,
+      SUBSTR(s.time_id, 1, 7) AS month,
+      SUM(s.amount_sold) AS total_sales
+    FROM `complex_oracle`.`complex_oracle_scope`.`sales` AS s
+    JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS cu
+      ON s.cust_id = cu.cust_id
+    JOIN `complex_oracle`.`complex_oracle_scope`.`countries` AS co
+      ON cu.country_id = co.country_id
+    JOIN `complex_oracle`.`complex_oracle_scope`.`promotions` AS p
+      ON s.promo_id = p.promo_id
+    JOIN `complex_oracle`.`complex_oracle_scope`.`channels` AS ch
+      ON s.channel_id = ch.channel_id
+    WHERE co.country_name = 'France'
+      AND p.promo_total_id = 1
+      AND ch.channel_total_id = 1
+      AND SUBSTR(s.time_id, 1, 4) = '2020'
+    GROUP BY s.prod_id, month
+  ) AS s2020
+  ON s2020.prod_id = s2019.prod_id AND s2020.month = t.calendar_month_desc
+LEFT JOIN
+  `complex_oracle`.`complex_oracle_scope`.`currency` AS cu
+  ON cu.country = 'France' AND cu.year = 2021 AND cu.month = t.calendar_month_number
+WHERE t.calendar_year = 2021
+GROUP BY t.calendar_month_desc, t.calendar_month_number
+ORDER BY t.calendar_month_number;

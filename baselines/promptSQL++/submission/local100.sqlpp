@@ -1,0 +1,27 @@
+WITH shahrukh AS (
+  SELECT DISTINCT mc1.PID AS shahrukh_pid
+  FROM `db_imdb`.`db_imdb_scope`.`Person` AS p
+  JOIN `db_imdb`.`db_imdb_scope`.`M_Cast` AS mc1 ON p.PID = mc1.PID
+  WHERE TRIM(p.Name) = 'Shahrukh Khan'
+),
+shahrukh_movies AS (
+  SELECT DISTINCT mc.MID
+  FROM `db_imdb`.`db_imdb_scope`.`M_Cast` AS mc
+  JOIN shahrukh AS s ON mc.PID = s.shahrukh_pid
+),
+direct_coactors AS (
+  SELECT DISTINCT mc2.PID AS pid
+  FROM `db_imdb`.`db_imdb_scope`.`M_Cast` AS mc2
+  JOIN shahrukh_movies AS sm ON mc2.MID = sm.MID
+  WHERE mc2.PID NOT IN (SELECT shahrukh_pid FROM shahrukh)
+),
+second_degree_coactors AS (
+  SELECT DISTINCT mc3.PID AS pid
+  FROM `db_imdb`.`db_imdb_scope`.`M_Cast` AS mc3
+  JOIN `db_imdb`.`db_imdb_scope`.`M_Cast` AS mc4 ON mc3.MID = mc4.MID
+  WHERE mc4.PID IN (SELECT pid FROM direct_coactors)
+    AND mc3.PID NOT IN (SELECT shahrukh_pid FROM shahrukh)
+    AND mc3.PID NOT IN (SELECT pid FROM direct_coactors)
+)
+SELECT COUNT(DISTINCT pid) AS actor_count
+FROM second_degree_coactors;

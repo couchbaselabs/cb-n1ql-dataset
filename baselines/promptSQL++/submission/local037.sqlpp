@@ -1,0 +1,21 @@
+WITH payment_counts AS (
+    SELECT
+        p.product_category_name,
+        op.payment_type,
+        COUNT(1) AS payment_count,
+        RANK() OVER (PARTITION BY p.product_category_name ORDER BY COUNT(1) DESC) AS payment_rank
+    FROM `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_order_items` AS oi
+    JOIN `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_products` AS p
+        ON oi.product_id = p.product_id
+    JOIN `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_order_payments` AS op
+        ON oi.order_id = op.order_id
+    GROUP BY p.product_category_name, op.payment_type
+)
+SELECT
+    pc.product_category_name,
+    pc.payment_type,
+    pc.payment_count
+FROM payment_counts AS pc
+WHERE pc.payment_rank = 1
+ORDER BY pc.payment_count DESC
+LIMIT 3;

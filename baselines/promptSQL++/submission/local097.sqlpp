@@ -1,0 +1,10 @@
+SELECT
+    m1.year AS start_year,
+    COUNT(m2.MID) AS movie_count
+FROM `db_imdb`.`db_imdb_scope`.`Movie` AS m1
+JOIN `db_imdb`.`db_imdb_scope`.`Movie` AS m2
+    ON TO_NUMBER(m2.year) >= TO_NUMBER(m1.year)
+    AND TO_NUMBER(m2.year) < TO_NUMBER(m1.year) + 10
+GROUP BY m1.year
+ORDER BY movie_count DESC
+LIMIT 1;

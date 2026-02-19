@@ -1,0 +1,17 @@
+WITH AvgSalaries AS (
+    SELECT
+        FacRank,
+        AVG(FacSalary) AS avg_salary
+    FROM `education_business`.`education_business_scope`.`university_faculty` AS uf
+    GROUP BY FacRank
+)
+SELECT
+    uf.FacRank,
+    uf.FacFirstName,
+    uf.FacLastName,
+    uf.FacSalary
+FROM `education_business`.`education_business_scope`.`university_faculty` AS uf
+JOIN AvgSalaries AS a
+    ON uf.FacRank = a.FacRank
+ORDER BY ABS(uf.FacSalary - a.avg_salary)
+LIMIT 10;

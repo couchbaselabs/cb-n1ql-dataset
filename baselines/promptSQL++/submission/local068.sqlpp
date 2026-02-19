@@ -1,0 +1,41 @@
+WITH monthly_counts AS (
+  SELECT
+    DATE_PART_STR(c.insert_date, 'year') AS year,
+    c.month_name,
+    COUNT(1) AS total_cities
+  FROM `city_legislation`.`city_legislation_scope`.`cities` AS c
+  LET c.month_name = DATE_FORMAT_STR(c.insert_date, 'MMMM')
+  WHERE DATE_PART_STR(c.insert_date, 'year') BETWEEN 2021 AND 2023
+    AND DATE_PART_STR(c.insert_date, 'month') IN [4, 5, 6]
+  GROUP BY year, month_name
+),
+running_totals AS (
+  SELECT
+    mc.year,
+    mc.month_name,
+    mc.total_cities,
+    SUM(mc.total_cities) OVER (PARTITION BY mc.month_name ORDER BY mc.year ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS running_total
+  FROM monthly_counts AS mc
+),
+growth_calculations AS (
+  SELECT
+    rt.year,
+    rt.month_name,
+    rt.total_cities,
+    rt.running_total,
+    CASE WHEN prev_year.total_cities IS NOT NULL AND prev_year.total_cities > 0 THEN ((rt.total_cities - prev_year.total_cities) / prev_year.total_cities) * 100 ELSE NULL END AS yoy_growth_total_cities,
+    CASE WHEN prev_year.running_total IS NOT NULL AND prev_year.running_total > 0 THEN ((rt.running_total - prev_year.running_total) / prev_year.running_total) * 100 ELSE NULL END AS yoy_growth_running_total
+  FROM running_totals AS rt
+  LEFT JOIN running_totals AS prev_year
+    ON rt.month_name = prev_year.month_name AND rt.year = prev_year.year + 1
+)
+SELECT
+  gc.year,
+  gc.month_name AS month,
+  gc.total_cities,
+  gc.running_total,
+  gc.yoy_growth_total_cities,
+  gc.yoy_growth_running_total
+FROM growth_calculations AS gc
+WHERE gc.year IN [2022, 2023]
+ORDER BY gc.month_name, gc.year;

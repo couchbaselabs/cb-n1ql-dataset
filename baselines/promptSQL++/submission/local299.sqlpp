@@ -1,0 +1,85 @@
+WITH daily_balances AS (
+  SELECT
+    ct.customer_id,
+    ct.txn_date,
+    SUM(
+      CASE WHEN ct.txn_type = 'deposit' THEN ct.txn_amount ELSE -ct.txn_amount END
+    ) AS daily_net_amount
+  FROM `bank_sales_trading`.`bank_sales_trading_scope`.`customer_transactions` AS ct
+  GROUP BY ct.customer_id, ct.txn_date
+),
+running_balances AS (
+  SELECT
+    db.customer_id,
+    db.txn_date,
+    SUM(db.daily_net_amount) OVER (
+      PARTITION BY db.customer_id
+      ORDER BY STR_TO_MILLIS(db.txn_date)
+      ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS running_balance
+  FROM daily_balances AS db
+),
+daily_running_balances AS (
+  SELECT
+    rb.customer_id,
+    rb.txn_date,
+    rb.running_balance
+  FROM running_balances AS rb
+),
+rolling_averages AS (
+  SELECT
+    drb.customer_id,
+    drb.txn_date,
+    COALESCE(
+      AVG(drb2.running_balance) OVER (
+        PARTITION BY drb.customer_id
+        ORDER BY STR_TO_MILLIS(drb.txn_date)
+        ROWS BETWEEN 29 PRECEDING AND CURRENT ROW
+      ),
+      0
+    ) AS rolling_avg_30d
+  FROM daily_running_balances AS drb
+  LEFT JOIN daily_running_balances AS drb2
+    ON drb.customer_id = drb2.customer_id
+    AND STR_TO_MILLIS(drb2.txn_date) BETWEEN STR_TO_MILLIS(drb.txn_date) - 29 * 86400000 AND STR_TO_MILLIS(drb.txn_date)
+),
+rolling_avg_nonnegative AS (
+  SELECT
+    ra.customer_id,
+    ra.txn_date,
+    CASE WHEN ra.rolling_avg_30d < 0 THEN 0 ELSE ra.rolling_avg_30d END AS rolling_avg_30d_nonneg,
+    DATE_PART_STR('month', STR_TO_MILLIS(ra.txn_date)) AS month,
+    DATE_PART_STR('year', STR_TO_MILLIS(ra.txn_date)) AS year,
+    CONCAT(DATE_PART_STR('year', STR_TO_MILLIS(ra.txn_date)), '-', LPAD(TO_STRING(DATE_PART_STR('month', STR_TO_MILLIS(ra.txn_date))), 2, '0')) AS year_month
+  FROM rolling_averages AS ra
+),
+customer_first_month AS (
+  SELECT
+    customer_id,
+    MIN(CONCAT(DATE_PART_STR('year', STR_TO_MILLIS(txn_date)), '-', LPAD(TO_STRING(DATE_PART_STR('month', STR_TO_MILLIS(txn_date))), 2, '0'))) AS first_year_month
+  FROM daily_balances
+  GROUP BY customer_id
+),
+max_rolling_avg_per_month AS (
+  SELECT
+    ran.customer_id,
+    ran.year_month,
+    MAX(ran.rolling_avg_30d_nonneg) AS max_rolling_avg_30d
+  FROM rolling_avg_nonnegative AS ran
+  JOIN customer_first_month AS cfm
+    ON ran.customer_id = cfm.customer_id
+  WHERE ran.year_month != cfm.first_year_month
+  GROUP BY ran.customer_id, ran.year_month
+),
+sum_max_rolling_avg_per_month AS (
+  SELECT
+    year_month,
+    SUM(max_rolling_avg_30d) AS total_max_rolling_avg_30d
+  FROM max_rolling_avg_per_month
+  GROUP BY year_month
+  ORDER BY year_month
+)
+SELECT
+  year_month,
+  total_max_rolling_avg_30d
+FROM sum_max_rolling_avg_per_month;

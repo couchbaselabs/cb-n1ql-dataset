@@ -1,0 +1,53 @@
+WITH FirstPayments AS (
+    SELECT
+        p.customer_id,
+        MIN(p.payment_date) AS first_payment_date
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` AS p
+    GROUP BY p.customer_id
+),
+FirstRentals AS (
+    SELECT
+        r.customer_id,
+        r.rental_id,
+        r.rental_date,
+        i.film_id
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`rental` AS r
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`inventory` AS i
+        ON r.inventory_id = i.inventory_id
+    JOIN FirstPayments AS fp
+        ON r.customer_id = fp.customer_id
+        AND r.rental_date = fp.first_payment_date
+),
+CustomerRentals AS (
+    SELECT
+        r.customer_id,
+        COUNT(r.rental_id) AS total_rentals
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`rental` AS r
+    GROUP BY r.customer_id
+),
+FirstRentalWithRating AS (
+    SELECT
+        fr.customer_id,
+        f.rating,
+        cr.total_rentals
+    FROM FirstRentals AS fr
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`film` AS f
+        ON fr.film_id = f.film_id
+    JOIN CustomerRentals AS cr
+        ON fr.customer_id = cr.customer_id
+),
+CustomerTotalPayments AS (
+    SELECT
+        p.customer_id,
+        SUM(p.amount) AS total_amount
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` AS p
+    GROUP BY p.customer_id
+)
+SELECT
+    frwr.rating,
+    AVG(ctp.total_amount) AS avg_total_amount_spent,
+    AVG(frwr.total_rentals - 1) AS avg_subsequent_rentals
+FROM FirstRentalWithRating AS frwr
+JOIN CustomerTotalPayments AS ctp
+    ON frwr.customer_id = ctp.customer_id
+GROUP BY frwr.rating;

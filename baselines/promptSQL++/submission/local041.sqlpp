@@ -1,0 +1,4 @@
+SELECT 
+    (100.0 * SUM(CASE WHEN t.health = 'Good' THEN 1 ELSE 0 END) / COUNT(t.tree_id)) AS percentage_good_health
+FROM `modern_data`.`modern_data_scope`.`trees` AS t
+WHERE t.boroname = 'Bronx';

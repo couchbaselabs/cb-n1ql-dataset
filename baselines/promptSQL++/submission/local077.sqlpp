@@ -1,0 +1,68 @@
+WITH monthly_compositions AS (
+  SELECT
+    im._year AS year,
+    im._month AS month,
+    im.interest_id,
+    AVG(im.composition / NULLIF(im.index_value, 0)) AS avg_composition
+  FROM `bank_sales_trading`.`bank_sales_trading_scope`.`interest_metrics` AS im
+  WHERE im._year IS NOT NULL
+    AND im._month IS NOT NULL
+    AND (im._year > 2018 OR (im._year = 2018 AND im._month >= 9))
+    AND (im._year < 2019 OR (im._year = 2019 AND im._month <= 8))
+  GROUP BY im._year, im._month, im.interest_id
+),
+monthly_max AS (
+  SELECT
+    mc.year,
+    mc.month,
+    mc.interest_id,
+    mc.avg_composition,
+    RANK() OVER (PARTITION BY mc.year, mc.month ORDER BY mc.avg_composition DESC) AS rank
+  FROM monthly_compositions AS mc
+),
+max_interests AS (
+  SELECT
+    mm.year,
+    mm.month,
+    mm.interest_id,
+    mm.avg_composition AS max_index_composition
+  FROM monthly_max AS mm
+  WHERE mm.rank = 1
+),
+max_interests_with_names AS (
+  SELECT
+    mi.year,
+    mi.month,
+    mi.max_index_composition,
+    im.interest_name
+  FROM max_interests AS mi
+  JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`interest_map` AS im
+    ON mi.interest_id = im.id
+),
+max_interests_lagged AS (
+  SELECT
+    miwn.year,
+    miwn.month,
+    miwn.interest_name,
+    miwn.max_index_composition,
+    LAG(miwn.interest_name, 1) OVER (ORDER BY miwn.year, miwn.month) AS interest_name_1_month_ago,
+    LAG(miwn.max_index_composition, 1) OVER (ORDER BY miwn.year, miwn.month) AS max_index_composition_1_month_ago,
+    LAG(miwn.interest_name, 2) OVER (ORDER BY miwn.year, miwn.month) AS interest_name_2_month_ago,
+    LAG(miwn.max_index_composition, 2) OVER (ORDER BY miwn.year, miwn.month) AS max_index_composition_2_month_ago,
+    AVG(miwn.max_index_composition) OVER (
+      ORDER BY miwn.year, miwn.month
+      ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+    ) AS rolling_avg_3_months
+  FROM max_interests_with_names AS miwn
+)
+SELECT
+  CONCAT(TO_STRING(year), '-', LPAD(TO_STRING(month), 2, '0')) AS date,
+  interest_name,
+  max_index_composition,
+  rolling_avg_3_months,
+  interest_name_1_month_ago,
+  max_index_composition_1_month_ago,
+  interest_name_2_month_ago,
+  max_index_composition_2_month_ago
+FROM max_interests_lagged
+ORDER BY year, month;

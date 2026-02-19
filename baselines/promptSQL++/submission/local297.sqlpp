@@ -1,0 +1,55 @@
+WITH monthly_nets AS (
+  SELECT
+    ct.customer_id,
+    DATE_PART_STR(ct.txn_date, 'year') AS year,
+    DATE_PART_STR(ct.txn_date, 'month') AS month,
+    SUM(
+      CASE WHEN ct.txn_type = 'deposit' THEN ct.txn_amount
+           WHEN ct.txn_type = 'withdrawal' THEN -ct.txn_amount
+           ELSE 0 END
+    ) AS net_amount
+  FROM `bank_sales_trading`.`bank_sales_trading_scope`.`customer_transactions` AS ct
+  GROUP BY ct.customer_id, year, month
+),
+monthly_balances AS (
+  SELECT
+    mn.customer_id,
+    mn.year,
+    mn.month,
+    mn.net_amount,
+    SUM(mn.net_amount) OVER (PARTITION BY mn.customer_id ORDER BY mn.year, mn.month ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS closing_balance
+  FROM monthly_nets AS mn
+),
+latest_months AS (
+  SELECT
+    mb.customer_id,
+    mb.year,
+    mb.month,
+    mb.closing_balance,
+    LAG(mb.closing_balance) OVER (PARTITION BY mb.customer_id ORDER BY mb.year, mb.month) AS prev_closing_balance
+  FROM monthly_balances AS mb
+),
+growth_rates AS (
+  SELECT
+    lm.customer_id,
+    lm.year,
+    lm.month,
+    lm.closing_balance,
+    lm.prev_closing_balance,
+    CASE
+      WHEN COALESCE(lm.prev_closing_balance, 0) = 0 THEN lm.closing_balance * 100
+      ELSE ((lm.closing_balance - lm.prev_closing_balance) / lm.prev_closing_balance) * 100
+    END AS growth_rate
+  FROM latest_months AS lm
+),
+most_recent_growth AS (
+  SELECT
+    gr.customer_id,
+    gr.growth_rate,
+    ROW_NUMBER() OVER (PARTITION BY gr.customer_id ORDER BY gr.year DESC, gr.month DESC) AS rn
+  FROM growth_rates AS gr
+)
+SELECT
+  100.0 * SUM(CASE WHEN mrg.growth_rate > 5 THEN 1 ELSE 0 END) / COUNT(*) AS pct_customers_growth_above_5
+FROM most_recent_growth AS mrg
+WHERE mrg.rn = 1;

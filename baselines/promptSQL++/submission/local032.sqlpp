@@ -1,0 +1,59 @@
+WITH delivered_orders AS (
+    SELECT o.order_id, o.customer_id
+    FROM `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_orders` AS o
+    WHERE o.order_status = 'delivered'
+),
+seller_customer_counts AS (
+    SELECT
+        oi.seller_id,
+        COUNT(DISTINCT c.customer_unique_id) AS distinct_customer_count
+    FROM `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_order_items` AS oi
+    JOIN delivered_orders AS do ON oi.order_id = do.order_id
+    JOIN `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_customers` AS c ON do.customer_id = c.customer_id
+    GROUP BY oi.seller_id
+    ORDER BY distinct_customer_count DESC
+    LIMIT 1
+),
+seller_profits AS (
+    SELECT
+        oi.seller_id,
+        SUM(oi.price - oi.freight_value) AS total_profit
+    FROM `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_order_items` AS oi
+    JOIN delivered_orders AS do ON oi.order_id = do.order_id
+    GROUP BY oi.seller_id
+    ORDER BY total_profit DESC
+    LIMIT 1
+),
+seller_order_counts AS (
+    SELECT
+        oi.seller_id,
+        COUNT(DISTINCT oi.order_id) AS distinct_order_count
+    FROM `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_order_items` AS oi
+    JOIN delivered_orders AS do ON oi.order_id = do.order_id
+    GROUP BY oi.seller_id
+    ORDER BY distinct_order_count DESC
+    LIMIT 1
+),
+seller_five_star_counts AS (
+    SELECT
+        oi.seller_id,
+        COUNT(DISTINCT r.review_id) AS five_star_review_count
+    FROM `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_order_items` AS oi
+    JOIN delivered_orders AS do ON oi.order_id = do.order_id
+    JOIN `brazilian_e_commerce`.`brazilian_e_commerce_scope`.`olist_order_reviews` AS r ON oi.order_id = r.order_id
+    WHERE r.review_score = 5
+    GROUP BY oi.seller_id
+    ORDER BY five_star_review_count DESC
+    LIMIT 1
+)
+SELECT 'Seller with highest number of distinct customer unique IDs' AS achievement, seller_id, distinct_customer_count AS value
+FROM seller_customer_counts
+UNION ALL
+SELECT 'Seller with highest profit (price minus freight value)', seller_id, total_profit
+FROM seller_profits
+UNION ALL
+SELECT 'Seller with highest number of distinct orders', seller_id, distinct_order_count
+FROM seller_order_counts
+UNION ALL
+SELECT 'Seller with most 5-star ratings', seller_id, five_star_review_count
+FROM seller_five_star_counts;

@@ -1,0 +1,21 @@
+SELECT
+    imc.month_year AS time,
+    im.interest_name,
+    imc.composition
+FROM `bank_sales_trading`.`bank_sales_trading_scope`.`interest_metrics` AS imc
+JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`interest_map` AS im
+    ON imc.interest_id = im.id
+WHERE imc.composition IS NOT NULL
+ORDER BY imc.composition DESC
+LIMIT 10
+UNION ALL
+SELECT
+    imc.month_year AS time,
+    im.interest_name,
+    imc.composition
+FROM `bank_sales_trading`.`bank_sales_trading_scope`.`interest_metrics` AS imc
+JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`interest_map` AS im
+    ON imc.interest_id = im.id
+WHERE imc.composition IS NOT NULL
+ORDER BY imc.composition ASC
+LIMIT 10;

@@ -1,0 +1,25 @@
+SELECT
+    p.name_given,
+    b.g AS games_played,
+    b.r AS runs,
+    b.h AS hits,
+    b.hr AS home_runs
+FROM `baseball`.`baseball_scope`.`batting` AS b
+JOIN `baseball`.`baseball_scope`.`player` AS p
+    ON b.player_id = p.player_id
+WHERE b.g = (
+        SELECT MAX(b2.g)
+        FROM `baseball`.`baseball_scope`.`batting` AS b2
+    )
+  AND b.r = (
+        SELECT MAX(b3.r)
+        FROM `baseball`.`baseball_scope`.`batting` AS b3
+    )
+  AND b.h = (
+        SELECT MAX(b4.h)
+        FROM `baseball`.`baseball_scope`.`batting` AS b4
+    )
+  AND b.hr = (
+        SELECT MAX(b5.hr)
+        FROM `baseball`.`baseball_scope`.`batting` AS b5
+    );

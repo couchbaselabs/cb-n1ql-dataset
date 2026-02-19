@@ -1,0 +1,10 @@
+SELECT
+    r.store_id,
+    DATE_PART_STR(r.rental_date, 'year') AS year,
+    DATE_PART_STR(r.rental_date, 'month') AS month,
+    COUNT(r.rental_id) AS total_rentals
+FROM `sqlite_sakila`.`sqlite_sakila_scope`.`rental` AS r
+JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`inventory` AS i
+    ON r.inventory_id = i.inventory_id
+GROUP BY r.store_id, year, month
+QUALIFY RANK() OVER (PARTITION BY r.store_id ORDER BY COUNT(r.rental_id) DESC) = 1;

@@ -1,0 +1,41 @@
+WITH RankedDates AS (
+  SELECT
+    cc.country_code_2 AS country_code,
+    cd.insert_date,
+    DATE_PART_STR(cd.insert_date, 'day') AS day,
+    DATE_PART_STR(cd.insert_date, 'month') AS month,
+    DATE_PART_STR(cd.insert_date, 'year') AS year,
+    ROW_NUMBER() OVER (PARTITION BY cc.country_code_2 ORDER BY cd.insert_date) AS rn
+  FROM `city_legislation`.`city_legislation_scope`.`cities` AS cd
+  JOIN `city_legislation`.`city_legislation_scope`.`cities_countries` AS cc
+    ON cd.country_code_2 = cc.country_code_2
+  WHERE DATE_PART_STR(cd.insert_date, 'year') = 2022
+    AND DATE_PART_STR(cd.insert_date, 'month') = 6
+),
+ConsecutiveGroups AS (
+  SELECT
+    country_code,
+    insert_date,
+    DATE_ADD_STR(insert_date, -(rn * 1), 'day') AS grp
+  FROM RankedDates
+),
+GroupCounts AS (
+  SELECT
+    country_code,
+    COUNT(*) AS streak_length
+  FROM ConsecutiveGroups
+  GROUP BY country_code, grp
+),
+MaxStreaks AS (
+  SELECT
+    country_code,
+    MAX(streak_length) AS max_streak
+  FROM GroupCounts
+  GROUP BY country_code
+),
+MaxOverall AS (
+  SELECT MAX(max_streak) AS longest_streak FROM MaxStreaks
+)
+SELECT ms.country_code
+FROM MaxStreaks AS ms
+JOIN MaxOverall AS mo ON ms.max_streak = mo.longest_streak;

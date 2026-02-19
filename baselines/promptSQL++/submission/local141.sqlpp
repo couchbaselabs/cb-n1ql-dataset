@@ -1,0 +1,14 @@
+SELECT
+    sp.BusinessEntityID AS salesperson_id,
+    YEAR(TO_TIMESTAMP_STR(spqh.QuotaDate)) AS year,
+    SUM(spqh.SalesQuota) AS annual_quota,
+    COALESCE(SUM(soh.totaldue), 0) AS annual_sales,
+    COALESCE(SUM(soh.totaldue), 0) - SUM(spqh.SalesQuota) AS sales_vs_quota_difference
+FROM `adventureworks`.`adventureworks_scope`.`SalesPersonQuotaHistory` AS spqh
+JOIN `adventureworks`.`adventureworks_scope`.`salesperson` AS sp
+    ON spqh.BusinessEntityID = sp.businessentityid
+LEFT JOIN `adventureworks`.`adventureworks_scope`.`salesorderheader` AS soh
+    ON spqh.BusinessEntityID = soh.salespersonid
+    AND YEAR(TO_TIMESTAMP_STR(spqh.QuotaDate)) = YEAR(TO_TIMESTAMP_STR(soh.orderdate))
+GROUP BY sp.BusinessEntityID, YEAR(TO_TIMESTAMP_STR(spqh.QuotaDate))
+ORDER BY sp.BusinessEntityID, year;

@@ -1,0 +1,85 @@
+WITH sales_agg AS (
+  SELECT
+    s.prod_id,
+    t.calendar_month_number,
+    t.calendar_year,
+    SUM(s.amount_sold) AS total_sales
+  FROM `complex_oracle`.`complex_oracle_scope`.`sales` AS s
+  JOIN `complex_oracle`.`complex_oracle_scope`.`customers` AS c
+    ON s.cust_id = c.cust_id
+  JOIN `complex_oracle`.`complex_oracle_scope`.`times` AS t
+    ON s.time_id = t.time_id
+  WHERE c.country_id = (
+    SELECT country_id FROM `complex_oracle`.`complex_oracle_scope`.`countries` AS co
+    WHERE co.country_name = 'France' LIMIT 1
+  )
+  AND s.promo_id IN (
+    SELECT promo_id FROM `complex_oracle`.`complex_oracle_scope`.`promotions` AS p
+    WHERE p.promo_total_id = 1
+  )
+  AND s.channel_id IN (
+    SELECT channel_id FROM `complex_oracle`.`complex_oracle_scope`.`channels` AS ch
+    WHERE ch.channel_total_id = 1
+  )
+  AND t.calendar_year IN [2019, 2020]
+  GROUP BY s.prod_id, t.calendar_month_number, t.calendar_year
+),
+sales_pivot AS (
+  SELECT
+    prod_id,
+    calendar_month_number,
+    MAX(CASE WHEN calendar_year = 2019 THEN total_sales ELSE 0 END) AS sales_2019,
+    MAX(CASE WHEN calendar_year = 2020 THEN total_sales ELSE 0 END) AS sales_2020
+  FROM sales_agg
+  GROUP BY prod_id, calendar_month_number
+),
+projected_sales AS (
+  SELECT
+    sp.prod_id,
+    sp.calendar_month_number,
+    -- Calculate projected sales for 2021 using the formula
+    CASE
+      WHEN sp.sales_2019 > 0 THEN
+        (( (sp.sales_2020 - sp.sales_2019) / sp.sales_2019 ) * sp.sales_2020) + sp.sales_2020
+      ELSE
+        sp.sales_2020
+    END AS projected_sales_2021
+  FROM sales_pivot AS sp
+),
+monthly_avg_sales AS (
+  SELECT
+    ps.calendar_month_number,
+    AVG(ps.projected_sales_2021) AS avg_projected_sales_2021
+  FROM projected_sales AS ps
+  GROUP BY ps.calendar_month_number
+),
+currency_rates AS (
+  SELECT
+    month,
+    to_us
+  FROM `complex_oracle`.`complex_oracle_scope`.`currency` AS cur
+  WHERE cur.country = 'France' AND cur.year = 2021
+),
+monthly_sales_usd AS (
+  SELECT
+    mas.calendar_month_number,
+    ROUND(AVG(mas.avg_projected_sales_2021 * COALESCE(cr.to_us, 1)), 2) AS avg_projected_sales_usd
+  FROM monthly_avg_sales AS mas
+  LEFT JOIN currency_rates AS cr
+    ON mas.calendar_month_number = cr.month
+  GROUP BY mas.calendar_month_number
+),
+ordered_sales AS (
+  SELECT
+    avg_projected_sales_usd,
+    ROW_NUMBER() OVER (ORDER BY avg_projected_sales_usd) AS rn,
+    COUNT(*) OVER () AS total_count
+  FROM monthly_sales_usd
+)
+SELECT
+  AVG(avg_projected_sales_usd) AS median_avg_monthly_projected_sales_usd
+FROM ordered_sales
+WHERE rn IN (
+  FLOOR((total_count + 1) / 2),
+  CEIL((total_count + 1) / 2)
+);

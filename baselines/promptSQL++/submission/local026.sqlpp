@@ -1,0 +1,41 @@
+WITH max_runs_per_over AS (
+  SELECT
+    b.match_id,
+    b.innings_no,
+    b.over_id,
+    b.bowler,
+    SUM(COALESCE(bs.runs_scored, 0) + COALESCE(er.extra_runs, 0)) AS total_runs
+  FROM `ipl`.`ipl_scope`.`ball_by_ball` AS b
+  LEFT JOIN `ipl`.`ipl_scope`.`batsman_scored` AS bs
+    ON b.match_id = bs.match_id AND b.innings_no = bs.innings_no AND b.over_id = bs.over_id AND b.ball_id = bs.ball_id
+  LEFT JOIN `ipl`.`ipl_scope`.`extra_runs` AS er
+    ON b.match_id = er.match_id AND b.innings_no = er.innings_no AND b.over_id = er.over_id AND b.ball_id = er.ball_id
+  GROUP BY b.match_id, b.innings_no, b.over_id, b.bowler
+),
+max_runs_per_match AS (
+  SELECT
+    match_id,
+    MAX(total_runs) AS max_runs
+  FROM max_runs_per_over
+  GROUP BY match_id
+),
+max_runs_overs AS (
+  SELECT
+    mro.match_id,
+    mro.innings_no,
+    mro.over_id,
+    mro.bowler,
+    mro.total_runs
+  FROM max_runs_per_over AS mro
+  JOIN max_runs_per_match AS mrm
+    ON mro.match_id = mrm.match_id AND mro.total_runs = mrm.max_runs
+)
+SELECT
+  p.player_name AS bowler_name,
+  mro.match_id,
+  mro.total_runs AS runs_conceded
+FROM max_runs_overs AS mro
+JOIN `ipl`.`ipl_scope`.`player` AS p
+  ON mro.bowler = p.player_id
+ORDER BY mro.total_runs DESC
+LIMIT 3;

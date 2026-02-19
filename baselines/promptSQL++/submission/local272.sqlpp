@@ -1,0 +1,53 @@
+WITH ordered_lines AS (
+  SELECT
+    pl.line_no,
+    pl.product_id,
+    pl.qty AS line_qty,
+    l.aisle,
+    l.position,
+    i.qty AS inventory_qty,
+    p.purchased,
+    SUM(pl.qty) OVER (PARTITION BY pl.product_id ORDER BY pl.line_no ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS cum_line_qty
+  FROM `oracle_sql`.`oracle_sql_scope`.`picking_line` AS pl
+  JOIN `oracle_sql`.`oracle_sql_scope`.`locations` AS l
+    ON pl.location_id = l.id
+  JOIN `oracle_sql`.`oracle_sql_scope`.`inventory` AS i
+    ON pl.location_id = i.location_id AND pl.product_id = i.product_id
+  JOIN `oracle_sql`.`oracle_sql_scope`.`purchases` AS p
+    ON i.purchase_id = p.id
+  WHERE pl.order_id = 423 AND l.warehouse = 1
+),
+ranked_inventory AS (
+  SELECT
+    ol.*,
+    ROW_NUMBER() OVER (PARTITION BY ol.product_id, ol.line_no ORDER BY ol.purchased ASC, ol.inventory_qty ASC) AS rn
+  FROM ordered_lines AS ol
+),
+cumulative_pick AS (
+  SELECT
+    ri.line_no,
+    ri.product_id,
+    ri.aisle,
+    ri.position,
+    ri.inventory_qty,
+    ri.cum_line_qty,
+    LEAST(
+      ri.inventory_qty,
+      ri.cum_line_qty - COALESCE(
+        SUM(ri2.inventory_qty) OVER (
+          PARTITION BY ri.product_id, ri.line_no
+          ORDER BY ri.rn
+          ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING
+        ), 0)
+    ) AS pick_qty
+  FROM ranked_inventory AS ri
+)
+SELECT
+  line_no,
+  product_id,
+  aisle,
+  position,
+  CASE WHEN pick_qty > 0 THEN pick_qty ELSE 0 END AS qty_to_pick
+FROM cumulative_pick
+WHERE pick_qty > 0
+ORDER BY product_id, line_no, aisle, position;

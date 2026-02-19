@@ -1,0 +1,59 @@
+WITH season_batsman_runs AS (
+    SELECT
+        m.season_id,
+        b.striker AS player_id,
+        SUM(bs.runs_scored) AS total_runs
+    FROM `ipl`.`ipl_scope`.`ball_by_ball` AS b
+    JOIN `ipl`.`ipl_scope`.`batsman_scored` AS bs
+        ON b.match_id = bs.match_id
+        AND b.innings_no = bs.innings_no
+        AND b.over_id = bs.over_id
+        AND b.ball_id = bs.ball_id
+    JOIN `ipl`.`ipl_scope`.`match` AS m
+        ON b.match_id = m.match_id
+    GROUP BY m.season_id, b.striker
+),
+top_batsmen AS (
+    SELECT
+        season_id,
+        player_id,
+        total_runs,
+        ROW_NUMBER() OVER (PARTITION BY season_id ORDER BY total_runs DESC, player_id ASC) AS rn
+    FROM season_batsman_runs
+),
+season_bowler_wickets AS (
+    SELECT
+        m.season_id,
+        b.bowler AS player_id,
+        COUNT(*) AS total_wickets
+    FROM `ipl`.`ipl_scope`.`wicket_taken` AS w
+    JOIN `ipl`.`ipl_scope`.`ball_by_ball` AS b
+        ON w.match_id = b.match_id
+        AND w.innings_no = b.innings_no
+        AND w.over_id = b.over_id
+        AND w.ball_id = b.ball_id
+    JOIN `ipl`.`ipl_scope`.`match` AS m
+        ON w.match_id = m.match_id
+    WHERE w.kind_out NOT IN ('run out', 'hit wicket', 'retired hurt')
+    GROUP BY m.season_id, b.bowler
+),
+top_bowlers AS (
+    SELECT
+        season_id,
+        player_id,
+        total_wickets,
+        ROW_NUMBER() OVER (PARTITION BY season_id ORDER BY total_wickets DESC, player_id ASC) AS rn
+    FROM season_bowler_wickets
+)
+SELECT
+    tb.season_id,
+    tb.player_id AS batsman_id,
+    tb.total_runs,
+    tw.player_id AS bowler_id,
+    tw.total_wickets
+FROM top_batsmen AS tb
+JOIN top_bowlers AS tw
+    ON tb.season_id = tw.season_id
+    AND tb.rn = tw.rn
+WHERE tb.rn <= 3
+ORDER BY tb.season_id ASC, tb.rn ASC;

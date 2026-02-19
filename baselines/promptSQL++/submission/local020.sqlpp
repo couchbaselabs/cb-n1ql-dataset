@@ -1,0 +1,25 @@
+SELECT
+    p.player_name,
+    (SUM(bs.runs_scored) + COALESCE(SUM(er.extra_runs), 0)) / COUNT(wt.ball_id) AS bowling_average
+FROM `ipl`.`ipl_scope`.`wicket_taken` AS wt
+JOIN `ipl`.`ipl_scope`.`ball_by_ball` AS bbb
+    ON wt.match_id = bbb.match_id
+    AND wt.innings_no = bbb.innings_no
+    AND wt.over_id = bbb.over_id
+    AND wt.ball_id = bbb.ball_id
+JOIN `ipl`.`ipl_scope`.`batsman_scored` AS bs
+    ON bs.match_id = bbb.match_id
+    AND bs.innings_no = bbb.innings_no
+    AND bs.over_id = bbb.over_id
+    AND bs.ball_id = bbb.ball_id
+LEFT JOIN `ipl`.`ipl_scope`.`extra_runs` AS er
+    ON er.match_id = bbb.match_id
+    AND er.innings_no = bbb.innings_no
+    AND er.over_id = bbb.over_id
+    AND er.ball_id = bbb.ball_id
+JOIN `ipl`.`ipl_scope`.`player` AS p
+    ON p.player_id = bbb.bowler
+GROUP BY p.player_name
+HAVING COUNT(wt.ball_id) > 0
+ORDER BY bowling_average ASC
+LIMIT 1;

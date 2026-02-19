@@ -1,0 +1,43 @@
+WITH factor_counts AS (
+    SELECT
+        c.primary_collision_factor AS factor,
+        COUNT(1) AS count_2021
+    FROM `california_traffic_collision`.`california_traffic_collision_scope`.`collisions` AS c
+    JOIN `california_traffic_collision`.`california_traffic_collision_scope`.`case_ids` AS ci
+        ON c.case_id = ci.case_id
+    WHERE ci.db_year = 2021 AND c.primary_collision_factor IS NOT NULL
+    GROUP BY c.primary_collision_factor
+    ORDER BY count_2021 DESC
+    LIMIT 1
+),
+total_2021 AS (
+    SELECT COUNT(1) AS total FROM `california_traffic_collision`.`california_traffic_collision_scope`.`collisions` AS c
+    JOIN `california_traffic_collision`.`california_traffic_collision_scope`.`case_ids` AS ci
+        ON c.case_id = ci.case_id
+    WHERE ci.db_year = 2021
+),
+shares AS (
+    SELECT
+        fc.factor,
+        fc.count_2021,
+        t21.total AS total_2021,
+        (fc.count_2021 * 100.0 / t21.total) AS share_2021
+    FROM factor_counts AS fc
+    CROSS JOIN total_2021 AS t21
+),
+counts_2011 AS (
+    SELECT
+        c.primary_collision_factor AS factor,
+        COUNT(1) AS count_2011
+    FROM `california_traffic_collision`.`california_traffic_collision_scope`.`collisions` AS c
+    JOIN `california_traffic_collision`.`california_traffic_collision_scope`.`case_ids` AS ci
+        ON c.case_id = ci.case_id
+    WHERE ci.db_year = 2011 AND c.primary_collision_factor IS NOT NULL
+    GROUP BY c.primary_collision_factor
+)
+SELECT
+    s.factor,
+    s.share_2021 - COALESCE((c2011.count_2011 * 100.0 / NULLIF((SELECT COUNT(1) FROM `california_traffic_collision`.`california_traffic_collision_scope`.`collisions` AS c2 JOIN `california_traffic_collision`.`california_traffic_collision_scope`.`case_ids` AS ci2 ON c2.case_id = ci2.case_id WHERE ci2.db_year = 2011), 0)), 0) AS percentage_point_decrease
+FROM shares AS s
+LEFT JOIN counts_2011 AS c2011
+    ON s.factor = c2011.factor;

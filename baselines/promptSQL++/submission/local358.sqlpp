@@ -1,0 +1,12 @@
+SELECT
+    CASE
+        WHEN DATE_PART_STR(CURRENT_DATE(), 'year') - DATE_PART_STR(u.birth_date, 'year') BETWEEN 20 AND 29 THEN '20s'
+        WHEN DATE_PART_STR(CURRENT_DATE(), 'year') - DATE_PART_STR(u.birth_date, 'year') BETWEEN 30 AND 39 THEN '30s'
+        WHEN DATE_PART_STR(CURRENT_DATE(), 'year') - DATE_PART_STR(u.birth_date, 'year') BETWEEN 40 AND 49 THEN '40s'
+        WHEN DATE_PART_STR(CURRENT_DATE(), 'year') - DATE_PART_STR(u.birth_date, 'year') BETWEEN 50 AND 59 THEN '50s'
+        ELSE 'others'
+    END AS age_category,
+    COUNT(u.user_id) AS user_count
+FROM `log`.`log_scope`.`mst_users` AS u
+GROUP BY age_category
+ORDER BY age_category;

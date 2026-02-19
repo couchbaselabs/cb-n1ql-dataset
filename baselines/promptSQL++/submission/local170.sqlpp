@@ -1,0 +1,52 @@
+WITH intervals AS (
+    SELECT 0 AS year_offset UNION ALL
+    SELECT 2 UNION ALL
+    SELECT 4 UNION ALL
+    SELECT 6 UNION ALL
+    SELECT 8 UNION ALL
+    SELECT 10
+),
+first_terms AS (
+    SELECT
+        lt.id_bioguide,
+        lt.gender,
+        lt.state,
+        MIN(lt.term_start) AS first_term_start
+    FROM `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+    GROUP BY lt.id_bioguide, lt.gender, lt.state
+),
+retention AS (
+    SELECT
+        ft.state,
+        ft.gender,
+        i.year_offset,
+        COUNT(DISTINCT lt.id_bioguide) AS retained_legislators
+    FROM first_terms AS ft
+    JOIN intervals AS i ON TRUE
+    JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+        ON lt.id_bioguide = ft.id_bioguide
+        AND DATE_PART_STR('year', ft.first_term_start) + i.year_offset BETWEEN DATE_PART_STR('year', lt.term_start) AND DATE_PART_STR('year', lt.term_end)
+        AND DATE_FORMAT_STR(lt.term_end, 'yyyy-MM-dd') >= CONCAT(TO_STRING(DATE_PART_STR('year', ft.first_term_start) + i.year_offset), '-12-31')
+    GROUP BY ft.state, ft.gender, i.year_offset
+),
+retention_summary AS (
+    SELECT
+        state,
+        gender,
+        ARRAY_AGG(retained_legislators ORDER BY year_offset) AS retention_counts
+    FROM retention
+    GROUP BY state, gender
+),
+valid_states AS (
+    SELECT
+        rs_m.state
+    FROM retention_summary AS rs_m
+    JOIN retention_summary AS rs_f ON rs_m.state = rs_f.state
+    WHERE rs_m.gender = 'M'
+      AND rs_f.gender = 'F'
+      AND EVERY x IN rs_m.retention_counts SATISFIES x > 0 END
+      AND EVERY x IN rs_f.retention_counts SATISFIES x > 0 END
+)
+SELECT DISTINCT state
+FROM valid_states
+ORDER BY state;
