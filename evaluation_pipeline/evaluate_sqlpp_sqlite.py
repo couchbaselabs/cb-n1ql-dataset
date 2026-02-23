@@ -184,13 +184,13 @@ def get_couchbase_sqlpp_result(
     except Exception as e:
         error_message = str(e)
         print(f"{prefix}Couchbase N1QL error: {error_message}")
-        return False, error_message
+        return False, error_message, None
 
     if not rows:
         if save_dir:
             os.makedirs(save_dir, exist_ok=True)
             pd.DataFrame().to_csv(os.path.join(save_dir, file_name), index=False)
-        return True, None
+        return True, None, []
 
     # Flatten JSON rows to flat list of dicts (same logic as flatten/flatten.py)
     flat_rows = flatten_process_json(rows)
@@ -198,14 +198,14 @@ def get_couchbase_sqlpp_result(
         if save_dir:
             os.makedirs(save_dir, exist_ok=True)
             pd.DataFrame().to_csv(os.path.join(save_dir, file_name), index=False)
-        return True, None
+        return True, None, []
 
     if save_dir:
         os.makedirs(save_dir, exist_ok=True)
         df = pd.DataFrame(flat_rows)
         df.to_csv(os.path.join(save_dir, file_name), index=False)
 
-    return True, None
+    return True, None, flat_rows
 
 
 def extract_sql_query(pred_sql_query: str) -> str:
@@ -269,16 +269,14 @@ def evaluate_single_sql_instance(
 
         bucket_name, scope_name = db_to_bucket_scope(db_name)
 
-        thread_temp_dir = Path(temp_dir) / f"thread_{threading.get_ident()}_{instance_id}"
-        thread_temp_dir.mkdir(parents=True, exist_ok=True)
         result_file = f"{instance_id}.csv"
 
-        exe_flag, dbms_error_info = get_couchbase_sqlpp_result(
+        exe_flag, dbms_error_info, flat_rows = get_couchbase_sqlpp_result(
             cluster,
             pred_sql_query,
             bucket_name,
             scope_name,
-            save_dir=str(thread_temp_dir),
+            save_dir=result_csv_dir,
             file_name=result_file,
             instance_id=instance_id,
             timeout_seconds=timeout,
@@ -288,12 +286,7 @@ def evaluate_single_sql_instance(
             score = 0
             error_info = dbms_error_info
         else:
-            pred_csv_path = thread_temp_dir / result_file
-            pred_pd = pd.read_csv(pred_csv_path)
-
-            if result_csv_dir:
-                os.makedirs(result_csv_dir, exist_ok=True)
-                shutil.copy2(pred_csv_path, Path(result_csv_dir) / result_file)
+            pred_pd = pd.DataFrame(flat_rows) if flat_rows else pd.DataFrame()
 
             gold_paths, is_single = resolve_gold_paths(instance_id, gold_result_dir)
             standard = eval_standard_dict.get(instance_id, {})
@@ -510,8 +503,8 @@ def evaluate_spider2sql_sqlpp(args, temp_dir: Path, cluster):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate Spider 2.0-lite SQL++ (N1QL) on Couchbase.")
     parser.add_argument("--mode", type=str, choices=["sql", "exec_result"], default="sql", help="Mode of submission results")
-    parser.add_argument("--result_dir", type=str, default="/Users/sanjana.jagadeesh/Downloads/Spider2/spider2-lite/evaluation_suite/submission", help="Result directory (contains .sql files)")
-    parser.add_argument("--gold_dir", type=str, default="gold", help="Gold directory (spider2lite_eval.jsonl + exec_result/*.csv)")
+    parser.add_argument("--result_dir", type=str, default="/Users/arjun.nr/Spider-dataset/baselines/promptSQL++/submission", help="Result directory (contains .sql files)")
+    parser.add_argument("--gold_dir", type=str, default="/Users/arjun.nr/Spider-dataset/evaluation_pipeline/gold", help="Gold directory (spider2lite_eval.jsonl + exec_result/*.csv)")
     parser.add_argument("--max_workers", type=int, default=20, help="Maximum number of worker threads")
     parser.add_argument("--timeout", type=int, default=6000, help="N1QL execution timeout in seconds")
     parser.add_argument("--temp_dir", type=str, default=None, help="Optional working directory for temporary files.")
