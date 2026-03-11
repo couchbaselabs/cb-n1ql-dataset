@@ -8,7 +8,7 @@ Unzip the file and restore the data to couchbase using:
 cbbackupmgr restore \
   --archive /path/to/cb_backups \
   --repo spider2_sqlite_repo \
-  --cluster couchbase://127.0.0.1 \
+  --cluster <target_cluster_address> \
   --username <username> \
   --password <password> \
   --auto-create-buckets
