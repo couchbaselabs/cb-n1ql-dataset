@@ -88,10 +88,10 @@ def load_couchbase_schema(schema_dir: str, db_name: str) -> list:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Preprocess spider2-lite instances with Couchbase schemas")
-    parser.add_argument("--spider2_jsonl", type=str,
-                        default="../../Spider2/spider2-lite/spider2-lite.jsonl",
-                        help="Path to spider2-lite.jsonl")
+    parser = argparse.ArgumentParser(description="Preprocess NL_questions instances with Couchbase schemas")
+    parser.add_argument("--NL_questions_jsonl", type=str,
+                        default="../../Spider2/evaluation_pipeline/NL_questions.jsonl",
+                        help="Path to NL_questions.jsonl")
     parser.add_argument("--schema_dir", type=str,
                         default="../../resources/databases/couchbase_sqlite",
                         help="Path to Couchbase schema directory")
