@@ -27,7 +27,7 @@ from couchbase.auth import PasswordAuthenticator
 
 # Flatten JSON -> flat rows (and CSV) for comparison
 _SCRIPT_DIR = Path(__file__).resolve().parent
-_REPO_ROOT = _SCRIPT_DIR.parent.parent
+_REPO_ROOT = _SCRIPT_DIR.parent
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 from flatten.flatten import process_json as flatten_process_json
@@ -184,13 +184,13 @@ def get_couchbase_sqlpp_result(
     except Exception as e:
         error_message = str(e)
         print(f"{prefix}Couchbase N1QL error: {error_message}")
-        return False, error_message, None
+        return False, error_message
 
     if not rows:
         if save_dir:
             os.makedirs(save_dir, exist_ok=True)
             pd.DataFrame().to_csv(os.path.join(save_dir, file_name), index=False)
-        return True, None, []
+        return True, None
 
     # Flatten JSON rows to flat list of dicts (same logic as flatten/flatten.py)
     flat_rows = flatten_process_json(rows)
@@ -198,14 +198,14 @@ def get_couchbase_sqlpp_result(
         if save_dir:
             os.makedirs(save_dir, exist_ok=True)
             pd.DataFrame().to_csv(os.path.join(save_dir, file_name), index=False)
-        return True, None, []
+        return True, None
 
     if save_dir:
         os.makedirs(save_dir, exist_ok=True)
         df = pd.DataFrame(flat_rows)
         df.to_csv(os.path.join(save_dir, file_name), index=False)
 
-    return True, None, flat_rows
+    return True, None
 
 
 def extract_sql_query(pred_sql_query: str) -> str:
@@ -269,14 +269,16 @@ def evaluate_single_sql_instance(
 
         bucket_name, scope_name = db_to_bucket_scope(db_name)
 
+        thread_temp_dir = Path(temp_dir) / f"thread_{threading.get_ident()}_{instance_id}"
+        thread_temp_dir.mkdir(parents=True, exist_ok=True)
         result_file = f"{instance_id}.csv"
 
-        exe_flag, dbms_error_info, flat_rows = get_couchbase_sqlpp_result(
+        exe_flag, dbms_error_info = get_couchbase_sqlpp_result(
             cluster,
             pred_sql_query,
             bucket_name,
             scope_name,
-            save_dir=result_csv_dir,
+            save_dir=str(thread_temp_dir),
             file_name=result_file,
             instance_id=instance_id,
             timeout_seconds=timeout,
@@ -286,7 +288,13 @@ def evaluate_single_sql_instance(
             score = 0
             error_info = dbms_error_info
         else:
-            pred_pd = pd.DataFrame(flat_rows) if flat_rows else pd.DataFrame()
+            pred_csv_path = thread_temp_dir / result_file
+            print(f"[{instance_id}] Successfully ran query and saved CSV to {pred_csv_path}")
+            pred_pd = pd.read_csv(pred_csv_path)
+
+            if result_csv_dir:
+                os.makedirs(result_csv_dir, exist_ok=True)
+                shutil.copy2(pred_csv_path, Path(result_csv_dir) / result_file)
 
             gold_paths, is_single = resolve_gold_paths(instance_id, gold_result_dir)
             standard = eval_standard_dict.get(instance_id, {})
@@ -323,6 +331,11 @@ def evaluate_single_sql_instance(
         error_info = f"Evaluation Error: {str(e)}"
         pred_sql_query = ""
 
+    if score == 1:
+        print(f" Comparison matched successfully.")
+    else:
+        print(f"Comparison did not match. Error: {error_info}")
+
     return {
         "instance_id": instance_id,
         "score": score,
@@ -338,6 +351,7 @@ def evaluate_single_exec_result_instance(
     gold_result_dir: str,
 ):
     error_info = None
+    score = 0
 
     try:
         pred_pd = pd.read_csv(Path(pred_result_dir) / f"{instance_id}.csv")
@@ -376,6 +390,11 @@ def evaluate_single_exec_result_instance(
         score = 0
         error_info = f"Evaluation Error: {str(e)}"
 
+    if score == 1:
+        print(f" Comparison matched successfully.")
+    else:
+        print(f" Comparison did not match. Error: {error_info}")
+
     return {
         "instance_id": instance_id,
         "score": score,
@@ -390,7 +409,7 @@ def save_correct_ids_to_csv(output_results, result_dir: str):
     transformed_ids = []
     for item in correct_ids:
         if item.startswith(("bq", "ga", "local")):
-            transformed_ids.append(f"sf_{item}")
+            transformed_ids.append(f"{item}")
         else:
             transformed_ids.append(item)
 
@@ -409,11 +428,15 @@ def evaluate_spider2sql_sqlpp(args, temp_dir: Path, cluster):
 
     root_dir = Path(__file__).resolve().parent.parent  # spider2-lite/
     # Questions / db mapping from spider2-lite-local.jsonl (Couchbase-loaded SQLite datasets)
-    spider2_local_jsonl = root_dir / "spider2-lite-local.jsonl"
+    spider2_local_jsonl = root_dir / "evaluation_pipeline/NL_questions.jsonl"
     if not spider2_local_jsonl.exists():
         print(f"Error: {spider2_local_jsonl} not found. Required for Couchbase evaluation.")
         return []
     spider2_local_metadata = load_jsonl_to_dict(str(spider2_local_jsonl))
+    # Only keep questions whose instance_id starts with "local" (exclude bq/snowflake)
+    spider2_local_metadata = {
+        k: v for k, v in spider2_local_metadata.items() if k.startswith("local")
+    }
 
     result_csv_dir = None
     if mode == "sql":
@@ -503,8 +526,8 @@ def evaluate_spider2sql_sqlpp(args, temp_dir: Path, cluster):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate Spider 2.0-lite SQL++ (N1QL) on Couchbase.")
     parser.add_argument("--mode", type=str, choices=["sql", "exec_result"], default="sql", help="Mode of submission results")
-    parser.add_argument("--result_dir", type=str, default="/Users/arjun.nr/Spider-dataset/baselines/promptSQL++/submission", help="Result directory (contains .sql files)")
-    parser.add_argument("--gold_dir", type=str, default="/Users/arjun.nr/Spider-dataset/evaluation_pipeline/gold", help="Gold directory (spider2lite_eval.jsonl + exec_result/*.csv)")
+    parser.add_argument("--result_dir", type=str, default="evaluation_pipeline/submission", help="Result directory (contains .sql files)")
+    parser.add_argument("--gold_dir", type=str, default="evaluation_pipeline/gold", help="Gold directory (spider2lite_eval.jsonl + exec_result/*.csv)")
     parser.add_argument("--max_workers", type=int, default=20, help="Maximum number of worker threads")
     parser.add_argument("--timeout", type=int, default=6000, help="N1QL execution timeout in seconds")
     parser.add_argument("--temp_dir", type=str, default=None, help="Optional working directory for temporary files.")
