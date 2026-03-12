@@ -5,6 +5,8 @@ Step 2: Build Prompts
 Constructs LLM prompts for each instance using a Code Representation (CR)
 format adapted for Couchbase SQL++.
 
+Supports --mode {sqlite,bigquery} for pipeline routing (both generate SQL++).
+
 Input:  preprocessed/instances.json
 Output: prompts/questions.json
 """
@@ -19,42 +21,31 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 FEW_SHOT_EXAMPLE = """
 /* Example question and corresponding Couchbase SQL++ query: */
-/* Question: Find the top 3 departments by average employee salary, showing the department name, average salary, and the number of employees in each. Only include departments with more than 5 employees. */
+/* Question: Find the top 3 departments by average employee salary, showing the department name, average salary, and employee count. Only include departments with more than 5 active employees. */
 /* Database: hr_company — Keyspace: `hr_company`.`hr_scope`.`<collection>` */
 /* SQL++ query: */
 SELECT
     d.department_name,
-    AVG(e.salary) AS avg_salary,
-    COUNT(e.employee_id) AS employee_count
+    AVG(TONUMBER(e.salary)) AS avg_salary,
+    COUNT(e.employee_id) AS employee_count,
+    COALESCE(d.`type`, 'Unknown') AS dept_type
 FROM `hr_company`.`hr_scope`.`employees` AS e
 JOIN `hr_company`.`hr_scope`.`departments` AS d
     ON e.department_id = d.department_id
-WHERE e.status = 'active'
-GROUP BY d.department_name
+WHERE e.status IN ['active', 'on_leave']
+  AND DATE_PART_STR(e.hire_date, 'year') >= 2015
+GROUP BY d.department_name, COALESCE(d.`type`, 'Unknown')
 HAVING COUNT(e.employee_id) > 5
 ORDER BY avg_salary DESC
 LIMIT 3;
 """.strip()
 
 
-# ---------------------------------------------------------------------------
-# System instruction
-# ---------------------------------------------------------------------------
-SYSTEM_INSTRUCTION = """You are a Couchbase SQL++ expert. Given a database schema and a natural language question, generate a valid Couchbase SQL++ query.
+SYSTEM_INSTRUCTION = """You are a Couchbase SQL++ (N1QL) expert. Given a database schema and a natural language question, generate a valid Couchbase SQL++ query that executes without errors.
 
-Key Couchbase SQL++ rules:
-1. Use the EXACT fully-qualified keyspace paths shown in the schema(e.g., FROM `<bucket_name>`.`<scope_name>`.`<collection_name>` AS o). Do NOT use generic names — always copy the keyspace paths from the provided schema.
-2. Always use explicit table aliases after each keyspace reference.
-3. Use ON (not USING) for JOIN conditions.
-4. Use proper SQL++ functions instead of SQLite-specific ones:
-   - IFNULL → COALESCE
-   - GROUP_CONCAT → ARRAY_TO_STRING(ARRAY_AGG(...))
-   - STRFTIME → DATE_PART_STR / DATE_FORMAT_STR
-5. String literals use single quotes, identifiers use backticks.
-6. Couchbase 7.6+ supports window functions (ROW_NUMBER, NTILE, RANK, etc.).
-7. WITH RECURSIVE is NOT supported — rewrite recursive CTEs as iterative queries.
-
-Return ONLY the SQL++ query, no explanations."""
+IMPORTANT:
+- Use fully-qualified keyspace paths from the schema (e.g., `bucket`.`scope`.`collection`).
+- Return ONLY the SQL++ query — no markdown, no explanations, no code fences."""
 
 
 def build_schema_block(schema: list) -> str:
@@ -101,6 +92,10 @@ def build_schema_block(schema: list) -> str:
 def build_prompt(instance: dict, use_few_shot: bool = True) -> dict:
     """
     Build a single prompt for an instance.
+
+    Args:
+        instance: The preprocessed instance dict.
+        use_few_shot: Whether to include the 1-shot example.
 
     Returns dict with: instance_id, prompt (str), system (str)
     """
@@ -156,6 +151,11 @@ def main():
                         help="Output directory for questions.json")
     parser.add_argument("--no_few_shot", action="store_true",
                         help="Disable the 1-shot example in prompts")
+    parser.add_argument("--prompt_mode", type=str, default="basic",
+                        help="Prompt mode (kept for CLI compatibility, uses basic)")
+    parser.add_argument("--mode", type=str, default="sqlite",
+                        choices=["sqlite", "bigquery"],
+                        help="Instance mode for pipeline routing (sqlite or bigquery)")
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent

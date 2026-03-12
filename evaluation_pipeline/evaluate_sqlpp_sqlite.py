@@ -5,21 +5,21 @@ flattens JSON results to CSV via flatten/flatten.py, then reuses CSV-vs-CSV comp
 """
 import argparse
 import json
+import logging
 import math
 import os
 import re
 import shutil
 import sys
 import tempfile
+import time
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
 from functools import lru_cache
 from pathlib import Path
-from threading import Lock
-
 import pandas as pd
 from tqdm import tqdm
-
 # Couchbase SDK
 from couchbase.cluster import Cluster
 from couchbase.options import ClusterOptions, QueryOptions
@@ -27,7 +27,7 @@ from couchbase.auth import PasswordAuthenticator
 
 # Flatten JSON -> flat rows (and CSV) for comparison
 _SCRIPT_DIR = Path(__file__).resolve().parent
-_REPO_ROOT = _SCRIPT_DIR.parent
+_REPO_ROOT = _SCRIPT_DIR.parent.parent
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 from flatten.flatten import process_json as flatten_process_json
@@ -39,32 +39,93 @@ CB_USER = os.environ.get("COUCHBASE_USER", "Administrator")
 CB_PASS = os.environ.get("COUCHBASE_PASS", "password")
 
 
-class TeeOutput:
-    """Mirror stdout/stderr to both console and a logfile with thread safety."""
+# ---------------------------------------------------------------------------
+# Structured logging setup
+# ---------------------------------------------------------------------------
+_LOG_JSONL_PATH = _SCRIPT_DIR / "log_sqlpp.jsonl"
 
-    def __init__(self, filename: str):
-        self.console = sys.stdout
-        self.file = open(filename, "w")
-        self.lock = Lock()
-
-    def write(self, message: str) -> None:
-        with self.lock:
-            self.console.write(message)
-            self.file.write(message)
-
-    def flush(self) -> None:
-        with self.lock:
-            self.console.flush()
-            self.file.flush()
-
-    def close(self) -> None:
-        self.file.close()
+logger = logging.getLogger("sqlpp_eval")
 
 
-sys.stdout = TeeOutput("log_sqlpp.txt")
-# _log_path = Path(__file__).resolve().parent / "evaluate_sqlpp_sqlite_logs.txt"
-# sys.stdout = TeeOutput(str(_log_path))
-sys.stderr = sys.stdout
+class _JsonlFormatter(logging.Formatter):
+    """Emit one JSON object per log line with structured extras."""
+
+    def format(self, record: logging.LogRecord) -> str:
+        entry = {
+            "timestamp": datetime.fromtimestamp(record.created, tz=timezone.utc).isoformat(),
+            "level": record.levelname,
+            "event": getattr(record, "event", None),
+            "message": record.getMessage(),
+        }
+        # Merge any structured extras passed via `extra={"extra_data": {...}}`
+        extra_data = getattr(record, "extra_data", None)
+        if extra_data and isinstance(extra_data, dict):
+            entry.update(extra_data)
+        return json.dumps(entry, default=str)
+
+
+def _setup_logging(level: int = logging.INFO) -> None:
+    """Configure console + JSONL file handlers for the sqlpp_eval logger."""
+    logger.setLevel(level)
+    logger.handlers.clear()
+
+    # Console: human-readable
+    console_handler = logging.StreamHandler(sys.stderr)
+    console_handler.setLevel(level)
+    console_fmt = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+    console_handler.setFormatter(console_fmt)
+    logger.addHandler(console_handler)
+
+    # File: structured JSONL
+    file_handler = logging.FileHandler(str(_LOG_JSONL_PATH), mode="w", encoding="utf-8")
+    file_handler.setLevel(level)
+    file_handler.setFormatter(_JsonlFormatter())
+    logger.addHandler(file_handler)
+
+
+def _log(level: int, message: str, *, event: str = None, **extras) -> None:
+    """Helper: log *message* at *level* with optional structured extras."""
+    logger.log(level, message, extra={"event": event, "extra_data": extras if extras else None})
+
+
+def _diff_summary(pred_pd: pd.DataFrame, gold_pd: pd.DataFrame, max_sample_rows: int = 5) -> dict:
+    """Return a structured diff dict between predicted and gold DataFrames."""
+    diff = {}
+    pred_cols = set(pred_pd.columns)
+    gold_cols = set(gold_pd.columns)
+    diff["pred_only_cols"] = sorted(pred_cols - gold_cols)
+    diff["gold_only_cols"] = sorted(gold_cols - pred_cols)
+    diff["common_cols"] = sorted(pred_cols & gold_cols)
+    diff["pred_shape"] = list(pred_pd.shape)
+    diff["gold_shape"] = list(gold_pd.shape)
+
+    # Head rows for quick visual inspection (as list-of-dicts)
+    diff["pred_head"] = pred_pd.head(max_sample_rows).fillna("NaN").astype(str).to_dict(orient="records")
+    diff["gold_head"] = gold_pd.head(max_sample_rows).fillna("NaN").astype(str).to_dict(orient="records")
+
+    # For common columns with same row count, show first few mismatched rows
+    if diff["common_cols"] and pred_pd.shape[0] == gold_pd.shape[0] and pred_pd.shape[0] > 0:
+        mismatches = []
+        for col in diff["common_cols"]:
+            p = pred_pd[col].reset_index(drop=True)
+            g = gold_pd[col].reset_index(drop=True)
+            for i in range(min(len(p), len(g))):
+                pv, gv = p.iloc[i], g.iloc[i]
+                if pd.isna(pv) and pd.isna(gv):
+                    continue
+                if pv != gv:
+                    mismatches.append({"row": i, "col": col, "pred": str(pv), "gold": str(gv)})
+                if len(mismatches) >= max_sample_rows:
+                    break
+            if len(mismatches) >= max_sample_rows:
+                break
+        diff["value_mismatches"] = mismatches
+
+    return diff
+
+
+# Initialise with defaults; reconfigured in __main__ after CLI parsing.
+_setup_logging()
 
 
 @lru_cache(maxsize=None)
@@ -171,7 +232,7 @@ def get_couchbase_sqlpp_result(
     Returns (success, error_message). On success, if save_dir is set, writes JSON then
     flattened CSV to save_dir/file_name.
     """
-    prefix = f"[{instance_id}] " if instance_id else ""
+    t0 = time.monotonic()
 
     try:
         query_context = f"`{bucket_name}`.{scope_name}"
@@ -182,30 +243,46 @@ def get_couchbase_sqlpp_result(
         result = cluster.query(sqlpp_query, opts)
         rows = list(result.rows())
     except Exception as e:
+        duration_s = round(time.monotonic() - t0, 3)
         error_message = str(e)
-        print(f"{prefix}Couchbase N1QL error: {error_message}")
-        return False, error_message
+        _log(logging.ERROR, f"[{instance_id}] Couchbase N1QL error: {error_message}",
+             event="query_error", instance_id=instance_id,
+             error_message=error_message, bucket=bucket_name, scope=scope_name,
+             query=sqlpp_query, duration_s=duration_s)
+        return False, error_message, None
+
+    duration_s = round(time.monotonic() - t0, 3)
 
     if not rows:
+        _log(logging.INFO, f"[{instance_id}] Query returned 0 rows",
+             event="query_empty", instance_id=instance_id,
+             rows_returned=0, duration_s=duration_s, bucket=bucket_name)
         if save_dir:
             os.makedirs(save_dir, exist_ok=True)
             pd.DataFrame().to_csv(os.path.join(save_dir, file_name), index=False)
-        return True, None
+        return True, None, []
 
     # Flatten JSON rows to flat list of dicts (same logic as flatten/flatten.py)
     flat_rows = flatten_process_json(rows)
     if not flat_rows:
+        _log(logging.WARNING, f"[{instance_id}] Flatten returned 0 rows from {len(rows)} raw rows",
+             event="flatten_empty", instance_id=instance_id,
+             raw_rows=len(rows), duration_s=duration_s, bucket=bucket_name)
         if save_dir:
             os.makedirs(save_dir, exist_ok=True)
             pd.DataFrame().to_csv(os.path.join(save_dir, file_name), index=False)
-        return True, None
+        return True, None, []
+
+    _log(logging.INFO, f"[{instance_id}] Query OK — {len(flat_rows)} rows in {duration_s}s",
+         event="query_success", instance_id=instance_id,
+         rows_returned=len(flat_rows), duration_s=duration_s, bucket=bucket_name)
 
     if save_dir:
         os.makedirs(save_dir, exist_ok=True)
         df = pd.DataFrame(flat_rows)
         df.to_csv(os.path.join(save_dir, file_name), index=False)
 
-    return True, None
+    return True, None, flat_rows
 
 
 def extract_sql_query(pred_sql_query: str) -> str:
@@ -260,6 +337,7 @@ def evaluate_single_sql_instance(
         if not db_name:
             score = 0
             error_info = f"Missing database mapping for {instance_id} in spider2-lite-local.jsonl"
+            _log(logging.WARNING, error_info, event="missing_db", instance_id=instance_id)
             return {
                 "instance_id": instance_id,
                 "score": score,
@@ -269,16 +347,14 @@ def evaluate_single_sql_instance(
 
         bucket_name, scope_name = db_to_bucket_scope(db_name)
 
-        thread_temp_dir = Path(temp_dir) / f"thread_{threading.get_ident()}_{instance_id}"
-        thread_temp_dir.mkdir(parents=True, exist_ok=True)
         result_file = f"{instance_id}.csv"
 
-        exe_flag, dbms_error_info = get_couchbase_sqlpp_result(
+        exe_flag, dbms_error_info, flat_rows = get_couchbase_sqlpp_result(
             cluster,
             pred_sql_query,
             bucket_name,
             scope_name,
-            save_dir=str(thread_temp_dir),
+            save_dir=result_csv_dir,
             file_name=result_file,
             instance_id=instance_id,
             timeout_seconds=timeout,
@@ -288,13 +364,7 @@ def evaluate_single_sql_instance(
             score = 0
             error_info = dbms_error_info
         else:
-            pred_csv_path = thread_temp_dir / result_file
-            print(f"[{instance_id}] Successfully ran query and saved CSV to {pred_csv_path}")
-            pred_pd = pd.read_csv(pred_csv_path)
-
-            if result_csv_dir:
-                os.makedirs(result_csv_dir, exist_ok=True)
-                shutil.copy2(pred_csv_path, Path(result_csv_dir) / result_file)
+            pred_pd = pd.DataFrame(flat_rows) if flat_rows else pd.DataFrame()
 
             gold_paths, is_single = resolve_gold_paths(instance_id, gold_result_dir)
             standard = eval_standard_dict.get(instance_id, {})
@@ -309,32 +379,62 @@ def evaluate_single_sql_instance(
                     gold_pd = load_gold_csv(str(gold_paths[0]))
                     score = compare_pandas_table(pred_pd, gold_pd, condition_cols, ignore_order)
                 except Exception as e:
-                    print(f"{instance_id}: compare against {gold_paths[0]} failed: {e}")
+                    _log(logging.ERROR, f"{instance_id}: compare against {gold_paths[0]} failed: {e}",
+                         event="compare_error", instance_id=instance_id, gold_path=str(gold_paths[0]))
                     score = 0
                     error_info = f"Python Script Error:{str(e)}"
                 if score == 0 and error_info is None:
                     error_info = "Result Error"
+                    diff = _diff_summary(pred_pd, gold_pd)
+                    _log(logging.WARNING,
+                         f"[{instance_id}] Result mismatch: pred({pred_pd.shape[0]}r x {pred_pd.shape[1]}c) vs gold({gold_pd.shape[0]}r x {gold_pd.shape[1]}c)",
+                         event="result_mismatch", instance_id=instance_id,
+                         pred_rows=pred_pd.shape[0], pred_cols=pred_pd.shape[1],
+                         gold_rows=gold_pd.shape[0], gold_cols=gold_pd.shape[1],
+                         pred_columns=list(pred_pd.columns),
+                         gold_columns=list(gold_pd.columns),
+                         diff=diff,
+                         query=pred_sql_query,
+                         db=db_name)
             else:
                 try:
                     gold_pds = [load_gold_csv(str(path)) for path in gold_paths]
                     score = compare_multi_pandas_table(pred_pd, gold_pds, condition_cols, ignore_order)
                 except Exception as e:
-                    print(f"{instance_id}: multi-compare against {gold_paths} failed: {e}")
+                    _log(logging.ERROR, f"{instance_id}: multi-compare against {gold_paths} failed: {e}",
+                         event="compare_error", instance_id=instance_id,
+                         gold_paths=[str(p) for p in gold_paths])
                     score = 0
                     error_info = f"Python Script Error:{str(e)}"
                 if score == 0 and error_info is None:
                     error_info = "Result Error"
+                    gold_shapes = [(gp.shape[0], gp.shape[1]) for gp in gold_pds]
+                    # Diff against the first gold file for a representative comparison
+                    diff = _diff_summary(pred_pd, gold_pds[0])
+                    _log(logging.WARNING,
+                         f"[{instance_id}] Result mismatch (multi-gold): pred({pred_pd.shape[0]}r x {pred_pd.shape[1]}c) vs {len(gold_pds)} gold files {gold_shapes}",
+                         event="result_mismatch", instance_id=instance_id,
+                         pred_rows=pred_pd.shape[0], pred_cols=pred_pd.shape[1],
+                         gold_shapes=gold_shapes,
+                         pred_columns=list(pred_pd.columns),
+                         diff=diff,
+                         query=pred_sql_query,
+                         db=db_name)
 
     except Exception as e:
-        print(f"Error evaluating {instance_id}: {e}")
+        _log(logging.ERROR, f"Error evaluating {instance_id}: {e}",
+             event="evaluation_error", instance_id=instance_id)
         score = 0
         error_info = f"Evaluation Error: {str(e)}"
         pred_sql_query = ""
 
+    # Log final result for this instance
     if score == 1:
-        print(f" Comparison matched successfully.")
+        _log(logging.INFO, f"[{instance_id}] PASS",
+             event="result", instance_id=instance_id, score=1)
     else:
-        print(f"Comparison did not match. Error: {error_info}")
+        _log(logging.WARNING, f"[{instance_id}] FAIL — {error_info}",
+             event="result", instance_id=instance_id, score=0, error_info=error_info)
 
     return {
         "instance_id": instance_id,
@@ -351,7 +451,6 @@ def evaluate_single_exec_result_instance(
     gold_result_dir: str,
 ):
     error_info = None
-    score = 0
 
     try:
         pred_pd = pd.read_csv(Path(pred_result_dir) / f"{instance_id}.csv")
@@ -369,31 +468,55 @@ def evaluate_single_exec_result_instance(
                 gold_pd = load_gold_csv(str(gold_paths[0]))
                 score = compare_pandas_table(pred_pd, gold_pd, condition_cols, ignore_order)
             except Exception as e:
-                print(f"{instance_id}: compare against {gold_paths[0]} failed: {e}")
+                _log(logging.ERROR, f"{instance_id}: compare against {gold_paths[0]} failed: {e}",
+                     event="compare_error", instance_id=instance_id, gold_path=str(gold_paths[0]))
                 score = 0
                 error_info = f"Python Script Error:{str(e)}"
             if score == 0 and error_info is None:
                 error_info = "Result Error"
+                diff = _diff_summary(pred_pd, gold_pd)
+                _log(logging.WARNING,
+                     f"[{instance_id}] Result mismatch: pred({pred_pd.shape[0]}r x {pred_pd.shape[1]}c) vs gold({gold_pd.shape[0]}r x {gold_pd.shape[1]}c)",
+                     event="result_mismatch", instance_id=instance_id,
+                     pred_rows=pred_pd.shape[0], pred_cols=pred_pd.shape[1],
+                     gold_rows=gold_pd.shape[0], gold_cols=gold_pd.shape[1],
+                     pred_columns=list(pred_pd.columns),
+                     gold_columns=list(gold_pd.columns),
+                     diff=diff)
         else:
             try:
                 gold_pds = [load_gold_csv(str(path)) for path in gold_paths]
                 score = compare_multi_pandas_table(pred_pd, gold_pds, condition_cols, ignore_order)
             except Exception as e:
-                print(f"{instance_id}: multi-compare against {gold_paths} failed: {e}")
+                _log(logging.ERROR, f"{instance_id}: multi-compare against {gold_paths} failed: {e}",
+                     event="compare_error", instance_id=instance_id,
+                     gold_paths=[str(p) for p in gold_paths])
                 score = 0
                 error_info = f"Python Script Error:{str(e)}"
             if score == 0 and error_info is None:
                 error_info = "Result Error"
+                gold_shapes = [(gp.shape[0], gp.shape[1]) for gp in gold_pds]
+                diff = _diff_summary(pred_pd, gold_pds[0])
+                _log(logging.WARNING,
+                     f"[{instance_id}] Result mismatch (multi-gold): pred({pred_pd.shape[0]}r x {pred_pd.shape[1]}c) vs {len(gold_pds)} gold files {gold_shapes}",
+                     event="result_mismatch", instance_id=instance_id,
+                     pred_rows=pred_pd.shape[0], pred_cols=pred_pd.shape[1],
+                     gold_shapes=gold_shapes,
+                     pred_columns=list(pred_pd.columns),
+                     diff=diff)
 
     except Exception as e:
-        print(f"{instance_id} ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! {e}")
+        _log(logging.ERROR, f"Error evaluating {instance_id}: {e}",
+             event="evaluation_error", instance_id=instance_id)
         score = 0
         error_info = f"Evaluation Error: {str(e)}"
 
     if score == 1:
-        print(f" Comparison matched successfully.")
+        _log(logging.INFO, f"[{instance_id}] PASS",
+             event="result", instance_id=instance_id, score=1)
     else:
-        print(f" Comparison did not match. Error: {error_info}")
+        _log(logging.WARNING, f"[{instance_id}] FAIL — {error_info}",
+             event="result", instance_id=instance_id, score=0, error_info=error_info)
 
     return {
         "instance_id": instance_id,
@@ -415,7 +538,8 @@ def save_correct_ids_to_csv(output_results, result_dir: str):
 
     csv_file = f"{result_dir}-ids.csv"
     pd.DataFrame({"instance_id": transformed_ids}).to_csv(csv_file, index=False)
-    print(f"Correct IDs saved to: {csv_file}")
+    _log(logging.INFO, f"Correct IDs saved to: {csv_file}",
+         event="ids_saved", csv_path=csv_file)
     return csv_file
 
 
@@ -430,13 +554,10 @@ def evaluate_spider2sql_sqlpp(args, temp_dir: Path, cluster):
     # Questions / db mapping from spider2-lite-local.jsonl (Couchbase-loaded SQLite datasets)
     spider2_local_jsonl = root_dir / "evaluation_pipeline/NL_questions.jsonl"
     if not spider2_local_jsonl.exists():
-        print(f"Error: {spider2_local_jsonl} not found. Required for Couchbase evaluation.")
+        _log(logging.CRITICAL, f"{spider2_local_jsonl} not found. Required for Couchbase evaluation.",
+             event="missing_jsonl", path=str(spider2_local_jsonl))
         return []
     spider2_local_metadata = load_jsonl_to_dict(str(spider2_local_jsonl))
-    # Only keep questions whose instance_id starts with "local" (exclude bq/snowflake)
-    spider2_local_metadata = {
-        k: v for k, v in spider2_local_metadata.items() if k.startswith("local")
-    }
 
     result_csv_dir = None
     if mode == "sql":
@@ -459,11 +580,13 @@ def evaluate_spider2sql_sqlpp(args, temp_dir: Path, cluster):
     eval_ids = sorted(set(gold_ids).intersection(pred_ids).intersection(local_ids))
 
     if not eval_ids:
-        print("No overlapping prediction IDs with gold set and spider2-lite-local.jsonl. Nothing to evaluate.")
+        _log(logging.WARNING, "No overlapping prediction IDs with gold set and spider2-lite-local.jsonl. Nothing to evaluate.",
+             event="no_eval_ids")
         return []
 
-    # Single query or many: both work (eval_ids can have 1 or more)
-    print(f"Evaluating {len(eval_ids)} prediction(s) (local Couchbase subset; {total_local_questions} total local questions in gold).")
+    _log(logging.INFO,
+         f"Evaluating {len(eval_ids)} prediction(s) (local Couchbase subset; {total_local_questions} total local questions in gold).",
+         event="eval_start", eval_count=len(eval_ids), total_local=total_local_questions)
 
     max_workers = getattr(args, "max_workers", 8)
     max_workers = min(max_workers, len(eval_ids)) or 1
@@ -509,14 +632,24 @@ def evaluate_spider2sql_sqlpp(args, temp_dir: Path, cluster):
 
     output_results.sort(key=lambda item: item["instance_id"])
 
-    print({item["instance_id"]: item["score"] for item in output_results})
+    score_map = {item["instance_id"]: item["score"] for item in output_results}
     correct_examples = sum(item["score"] for item in output_results)
+    final_score = correct_examples / len(output_results)
+    real_score = correct_examples / total_local_questions
 
-    print(f"Final score: {correct_examples / len(output_results)}, Correct examples: {correct_examples}, Total evaluated: {len(output_results)}")
-    print(f"Real score (local, out of {total_local_questions}): {correct_examples / total_local_questions}, Correct: {correct_examples}, Total local questions: {total_local_questions}")
+    _log(logging.INFO, f"Score map: {score_map}", event="score_map", scores=score_map)
+    _log(logging.INFO,
+         f"Final score: {final_score}, Correct: {correct_examples}, Evaluated: {len(output_results)}",
+         event="final_score", score=final_score, correct=correct_examples,
+         total_evaluated=len(output_results))
+    _log(logging.INFO,
+         f"Real score (local): {real_score}, Correct: {correct_examples}, Total local: {total_local_questions}",
+         event="real_score", score=real_score, correct=correct_examples,
+         total_local=total_local_questions)
 
     if mode == "sql" and result_csv_dir:
-        print(f"Execution results saved to: {result_csv_dir}")
+        _log(logging.INFO, f"Execution results saved to: {result_csv_dir}",
+             event="csv_saved", result_csv_dir=result_csv_dir)
 
     save_correct_ids_to_csv(output_results, pred_result_dir)
 
@@ -526,15 +659,21 @@ def evaluate_spider2sql_sqlpp(args, temp_dir: Path, cluster):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate Spider 2.0-lite SQL++ (N1QL) on Couchbase.")
     parser.add_argument("--mode", type=str, choices=["sql", "exec_result"], default="sql", help="Mode of submission results")
-    parser.add_argument("--result_dir", type=str, default="evaluation_pipeline/submission", help="Result directory (contains .sql files)")
+    parser.add_argument("--result_dir", type=str, default="baselines/promptSQL++/submission_test", help="Result directory (contains .sql files)")
     parser.add_argument("--gold_dir", type=str, default="evaluation_pipeline/gold", help="Gold directory (spider2lite_eval.jsonl + exec_result/*.csv)")
     parser.add_argument("--max_workers", type=int, default=20, help="Maximum number of worker threads")
-    parser.add_argument("--timeout", type=int, default=6000, help="N1QL execution timeout in seconds")
+    parser.add_argument("--timeout", type=int, default=1200, help="N1QL execution timeout in seconds")
     parser.add_argument("--temp_dir", type=str, default=None, help="Optional working directory for temporary files.")
     parser.add_argument("--cb_host", type=str, default="couchbase://127.0.0.1", help="Couchbase connection string (default: COUCHBASE_HOST or couchbase://127.0.0.1)")
     parser.add_argument("--cb_user", type=str, default="Administrator", help="Couchbase user (default: COUCHBASE_USER or Administrator)")
     parser.add_argument("--cb_pass", type=str, default="password", help="Couchbase password (default: COUCHBASE_PASS or password)")
+    parser.add_argument("--log_level", type=str, default="INFO",
+                        choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+                        help="Logging verbosity (default: INFO)")
     args = parser.parse_args()
+
+    # Reconfigure logging with user-chosen level
+    _setup_logging(getattr(logging, args.log_level))
 
     if args.cb_host is not None:
         CB_HOST = args.cb_host
@@ -543,15 +682,15 @@ if __name__ == "__main__":
     if args.cb_pass is not None:
         CB_PASS = args.cb_pass
 
-    print(f"Connecting to Couchbase at {CB_HOST}...")
+    _log(logging.INFO, f"Connecting to Couchbase at {CB_HOST}...", event="cb_connecting", host=CB_HOST)
     try:
         auth = PasswordAuthenticator(CB_USER, CB_PASS)
         cluster = Cluster(CB_HOST, ClusterOptions(auth))
         from datetime import timedelta
         cluster.wait_until_ready(timedelta(seconds=10))
-        print("Couchbase connected.")
+        _log(logging.INFO, "Couchbase connected.", event="cb_connected", host=CB_HOST)
     except Exception as e:
-        print(f"Couchbase connection failed: {e}")
+        _log(logging.CRITICAL, f"Couchbase connection failed: {e}", event="cb_connection_failed", host=CB_HOST)
         sys.exit(1)
 
     auto_temp = False

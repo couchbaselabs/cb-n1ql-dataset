@@ -51,16 +51,27 @@ class LLMClient:
             api_key = os.environ.get("OPENAI_API_KEY", "")
             if not api_key:
                 raise ValueError("OPENAI_API_KEY not set in .env or environment")
-            self._client = OpenAI(api_key=api_key)
+            base_url = os.environ.get("OPENAI_BASE_URL")
+            self._client = OpenAI(api_key=api_key, **({"base_url": base_url} if base_url else {}))
+
+        elif self.provider == "factory":
+            from openai import OpenAI
+            api_key = os.environ.get("FACTORY_API_KEY", "")
+            if not api_key:
+                raise ValueError("FACTORY_API_KEY not set in .env or environment")
+            self._client = OpenAI(
+                api_key=api_key,
+                base_url="https://api.factory.ai/api/v0/",
+            )
 
         else:
-            raise ValueError(f"Unsupported LLM provider: {self.provider}. Use 'gemini' or 'openai'.")
+            raise ValueError(f"Unsupported LLM provider: {self.provider}. Use 'gemini', 'openai', or 'factory'.")
 
     def generate(self, system: str, prompt: str) -> str:
         """Generate a response from the LLM. Returns the response text."""
         if self.provider == "gemini":
             return self._generate_gemini(system, prompt)
-        elif self.provider == "openai":
+        elif self.provider in ("openai", "factory"):
             return self._generate_openai(system, prompt)
 
     def _generate_gemini(self, system: str, prompt: str) -> str:

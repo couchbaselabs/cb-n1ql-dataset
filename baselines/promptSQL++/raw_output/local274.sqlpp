@@ -1,7 +1,0 @@
-SELECT
-    p.product_id,
-    AVG(p.qty) AS avg_qty_picked
-FROM `oracle_sql`.`oracle_sql_scope`.`picking_line` AS p
-WHERE p.order_id = 421
-GROUP BY p.product_id
-ORDER BY p.product_id;
