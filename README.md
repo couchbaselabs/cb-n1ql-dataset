@@ -17,5 +17,11 @@ cbbackupmgr restore \
   --password <password> \
   --auto-create-buckets
   ```
+
+# Running the end-to-end pipeline 
+```
+./run.sh
+```
+
 # Architecture
 ![Architecture](assets/spider2.0_sqlite.png)
