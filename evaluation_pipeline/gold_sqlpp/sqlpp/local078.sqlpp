@@ -1,0 +1,32 @@
+WITH max_comp AS (
+    SELECT 
+        m.interest_id,
+        m.composition,
+        m.month_year,
+        ROW_NUMBER() OVER (PARTITION BY m.interest_id ORDER BY m.composition DESC) AS rn
+    FROM bank_sales_trading.bank_sales_trading_scope.interest_metrics m
+    WHERE m.interest_id IS NOT NULL AND m._month IS NOT NULL
+),
+best_per_interest AS (
+    SELECT interest_id, composition, month_year
+    FROM max_comp
+    WHERE rn = 1
+),
+ranked AS (
+    SELECT 
+        b.month_year AS time,
+        im.interest_name,
+        b.composition,
+        ROW_NUMBER() OVER (ORDER BY b.composition DESC) AS rn_top,
+        ROW_NUMBER() OVER (ORDER BY b.composition ASC) AS rn_bottom
+    FROM best_per_interest b
+    JOIN bank_sales_trading.bank_sales_trading_scope.interest_map im ON b.interest_id = im.id
+)
+SELECT time, interest_name, composition
+FROM ranked
+WHERE rn_top <= 10
+UNION ALL
+SELECT time, interest_name, composition
+FROM ranked
+WHERE rn_bottom <= 10
+ORDER BY composition DESC;

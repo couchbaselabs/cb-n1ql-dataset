@@ -1,0 +1,42 @@
+WITH yearly AS (
+    SELECT 
+        SUBSTR(t.txn_date, 6, 4) AS txn_year,
+        m.region,
+        SUM(t.quantity * p.price) / SUM(t.quantity) AS avg_purchase_price
+    FROM bank_sales_trading.bank_sales_trading_scope.bitcoin_transactions t
+    JOIN bank_sales_trading.bank_sales_trading_scope.bitcoin_members m ON t.member_id = m.member_id
+    JOIN bank_sales_trading.bank_sales_trading_scope.bitcoin_prices p ON t.txn_date = p.market_date AND t.ticker = p.ticker
+    WHERE t.txn_type = 'BUY' AND t.ticker = 'BTC'
+    GROUP BY SUBSTR(t.txn_date, 6, 4), m.region
+),
+first_year AS (
+    SELECT region, MIN(txn_year) AS first_yr
+    FROM yearly
+    GROUP BY region
+),
+with_lag AS (
+    SELECT y.*,
+        LAG(y.avg_purchase_price) OVER (PARTITION BY y.region ORDER BY y.txn_year) AS prev_price
+    FROM yearly y
+),
+filtered AS (
+    SELECT wl.*
+    FROM with_lag wl
+    JOIN first_year f ON wl.region = f.region
+    WHERE wl.txn_year > f.first_yr
+),
+with_rank AS (
+    SELECT f.*,
+        RANK() OVER (PARTITION BY f.txn_year ORDER BY f.avg_purchase_price DESC) AS rk
+    FROM filtered f
+)
+SELECT 
+    txn_year,
+    region,
+    avg_purchase_price,
+    rk,
+    CASE WHEN prev_price IS NOT NULL 
+        THEN (avg_purchase_price - prev_price) * 100.0 / prev_price 
+        ELSE NULL END AS pct_change
+FROM with_rank
+ORDER BY txn_year, rk;

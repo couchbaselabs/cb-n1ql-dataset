@@ -1,0 +1,44 @@
+WITH top_cause_2021 AS (
+    SELECT
+        c.pcf_violation_category AS cause,
+        COUNT(*) AS cnt
+    FROM California_Traffic_Collision.California_Traffic_Collision_scope.collisions AS c
+    WHERE DATE_PART_STR(c.collision_date, "year") = 2021
+      AND c.pcf_violation_category IS NOT NULL
+    GROUP BY c.pcf_violation_category
+    ORDER BY cnt DESC
+    LIMIT 1
+),
+
+yearly_totals AS (
+    SELECT
+        DATE_PART_STR(c.collision_date, "year") AS collision_year,
+        COUNT(*) AS total
+    FROM California_Traffic_Collision.California_Traffic_Collision_scope.collisions AS c
+    WHERE DATE_PART_STR(c.collision_date, "year") IN [2011, 2021]
+    GROUP BY DATE_PART_STR(c.collision_date, "year")
+),
+
+cause_counts AS (
+    SELECT
+        DATE_PART_STR(c.collision_date, "year") AS collision_year,
+        COUNT(*) AS cause_cnt
+    FROM California_Traffic_Collision.California_Traffic_Collision_scope.collisions AS c
+    WHERE DATE_PART_STR(c.collision_date, "year") IN [2011, 2021]
+      AND c.pcf_violation_category = (SELECT RAW tc.cause FROM top_cause_2021 tc)[0]
+    GROUP BY DATE_PART_STR(c.collision_date, "year")
+),
+
+pct_shares AS (
+    SELECT
+        cc.collision_year AS COLLISION_YEAR,
+        cc.cause_cnt * 100.0 / yt.total AS PERCENTAGE_SHARE
+    FROM cause_counts cc
+    JOIN yearly_totals yt ON cc.collision_year = yt.collision_year
+)
+
+SELECT
+    MAX(CASE WHEN ps.COLLISION_YEAR = 2011 THEN ps.PERCENTAGE_SHARE END)
+    - MAX(CASE WHEN ps.COLLISION_YEAR = 2021 THEN ps.PERCENTAGE_SHARE END)
+    AS decrease_pct_points
+FROM pct_shares ps;

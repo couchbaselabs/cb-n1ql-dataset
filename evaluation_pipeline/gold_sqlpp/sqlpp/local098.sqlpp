@@ -1,0 +1,44 @@
+WITH movie_years AS (
+    SELECT
+        mc.PID,
+        TO_NUMBER(SUBSTR(TRIM(m.year), LENGTH(TRIM(m.year)) - 4)) AS yr
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`M_Cast` mc
+    JOIN `Db-IMDB`.`Db-IMDB_scope`.`Movie` m
+        ON mc.MID = m.MID
+),
+
+actor_years AS (
+    SELECT DISTINCT
+        PID,
+        yr
+    FROM movie_years
+),
+
+career_span AS (
+    SELECT
+        PID,
+        MIN(yr) AS first_year,
+        MAX(yr) AS last_year
+    FROM actor_years
+    GROUP BY PID
+),
+
+large_gaps AS (
+    SELECT
+        ay1.PID
+    FROM actor_years ay1
+    JOIN actor_years ay2
+        ON ay1.PID = ay2.PID
+       AND ay2.yr > ay1.yr
+    GROUP BY ay1.PID, ay1.yr
+    HAVING MIN(ay2.yr) - ay1.yr > 4
+),
+
+actors_with_large_gap AS (
+    SELECT DISTINCT PID
+    FROM large_gaps
+)
+
+SELECT COUNT(*) AS actors_without_four_year_gap
+FROM career_span cs
+WHERE cs.PID NOT IN (SELECT RAW PID FROM actors_with_large_gap);

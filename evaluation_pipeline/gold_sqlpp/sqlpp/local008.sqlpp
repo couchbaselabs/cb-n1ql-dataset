@@ -1,0 +1,64 @@
+WITH PlayerTotals AS (
+    SELECT
+        b.player_id,
+        SUM(b.g) AS total_games,
+        SUM(b.r) AS total_runs,
+        SUM(b.h) AS total_hits,
+        SUM(b.hr) AS total_hr
+    FROM Baseball.Baseball_scope.batting AS b
+    GROUP BY b.player_id
+),
+
+MaxValues AS (
+    SELECT
+        MAX(total_games) AS max_games,
+        MAX(total_runs) AS max_runs,
+        MAX(total_hits) AS max_hits,
+        MAX(total_hr) AS max_hr
+    FROM PlayerTotals
+),
+
+TopPlayers AS (
+    SELECT
+        pt.player_id,
+        "games played" AS category,
+        pt.total_games AS score
+    FROM PlayerTotals pt, MaxValues mv
+    WHERE pt.total_games = mv.max_games
+
+    UNION ALL
+
+    SELECT
+        pt.player_id,
+        "runs" AS category,
+        pt.total_runs AS score
+    FROM PlayerTotals pt, MaxValues mv
+    WHERE pt.total_runs = mv.max_runs
+
+    UNION ALL
+
+    SELECT
+        pt.player_id,
+        "hits" AS category,
+        pt.total_hits AS score
+    FROM PlayerTotals pt, MaxValues mv
+    WHERE pt.total_hits = mv.max_hits
+
+    UNION ALL
+
+    SELECT
+        pt.player_id,
+        "home_runs" AS category,
+        pt.total_hr AS score
+    FROM PlayerTotals pt, MaxValues mv
+    WHERE pt.total_hr = mv.max_hr
+)
+
+SELECT
+    p.name_given,
+    t.category,
+    t.score
+FROM TopPlayers t
+JOIN Baseball.Baseball_scope.player p
+ON t.player_id = p.player_id
+ORDER BY t.category;

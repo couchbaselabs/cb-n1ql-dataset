@@ -1,0 +1,94 @@
+WITH seller_sales AS (
+    SELECT 
+        oi.seller_id,
+        COUNT(*) AS total_quantity_sold,
+        SUM(oi.price) AS total_sales,
+        AVG(oi.price) AS average_item_price
+    FROM electronic_sales.electronic_sales_scope.order_items AS oi
+    GROUP BY oi.seller_id
+    HAVING COUNT(*) > 100
+),
+
+seller_reviews AS (
+    SELECT 
+        sub.seller_id,
+        AVG(orv.review_score) AS average_review_score
+    FROM (
+        SELECT DISTINCT oi.seller_id, oi.order_id
+        FROM electronic_sales.electronic_sales_scope.order_items AS oi
+    ) AS sub
+    JOIN electronic_sales.electronic_sales_scope.order_reviews AS orv
+        ON sub.order_id = orv.order_id
+    GROUP BY sub.seller_id
+),
+
+packing_times AS (
+    SELECT 
+        sub.seller_id,
+        AVG(sub.packing_hours) AS average_packing_time_hours
+    FROM (
+        SELECT 
+            oi.seller_id,
+            o.order_id,
+            (STR_TO_MILLIS(o.order_delivered_carrier_date) -
+             STR_TO_MILLIS(o.order_approved_at)) / 3600000.0 AS packing_hours
+        FROM electronic_sales.electronic_sales_scope.order_items AS oi
+        JOIN electronic_sales.electronic_sales_scope.orders AS o
+            ON oi.order_id = o.order_id
+        WHERE 
+            o.order_approved_at IS NOT NULL
+            AND o.order_delivered_carrier_date IS NOT NULL
+        GROUP BY 
+            oi.seller_id,
+            o.order_id,
+            o.order_delivered_carrier_date,
+            o.order_approved_at
+    ) AS sub
+    GROUP BY sub.seller_id
+),
+
+category_sales AS (
+    SELECT 
+        oi.seller_id,
+        p.product_category_name,
+        COUNT(*) AS cat_qty
+    FROM electronic_sales.electronic_sales_scope.order_items AS oi
+    JOIN electronic_sales.electronic_sales_scope.products AS p
+        ON oi.product_id = p.product_id
+    GROUP BY 
+        oi.seller_id,
+        p.product_category_name
+),
+
+top_categories AS (
+    SELECT 
+        cs.seller_id,
+        t.product_category_name_english AS top_category_english,
+        cs.cat_qty,
+        ROW_NUMBER() OVER (
+            PARTITION BY cs.seller_id
+            ORDER BY cs.cat_qty DESC, t.product_category_name_english ASC
+        ) AS rnk
+    FROM category_sales AS cs
+    LEFT JOIN electronic_sales.electronic_sales_scope.product_category_name_translation AS t
+        ON cs.product_category_name = t.product_category_name
+)
+
+SELECT
+    ss.seller_id,
+    ss.total_quantity_sold AS total_qty,
+    ss.total_sales AS total_sales_amount,
+    ss.average_item_price AS avg_item_price,
+    sr.average_review_score AS avg_review_score,
+    pt.average_packing_time_hours AS avg_packing_time_hours,
+    tc.top_category_english,
+    tc.cat_qty AS top_category_qty
+FROM seller_sales AS ss
+LEFT JOIN seller_reviews AS sr
+    ON ss.seller_id = sr.seller_id
+LEFT JOIN packing_times AS pt
+    ON ss.seller_id = pt.seller_id
+LEFT JOIN top_categories AS tc
+    ON ss.seller_id = tc.seller_id
+    AND tc.rnk = 1
+ORDER BY ss.total_sales DESC;

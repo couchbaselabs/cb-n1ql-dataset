@@ -1,0 +1,95 @@
+WITH ball_stats AS (
+    SELECT
+        b.match_id,
+        b.bowler,
+        COALESCE(bs.runs_scored,0) AS runs_scored,
+
+        CASE
+            WHEN er.extra_type IN ["wides","noballs"] THEN 0
+            ELSE 1
+        END AS legal_ball,
+
+        CASE
+            WHEN w.kind_out IS NOT NULL
+                 AND w.kind_out NOT IN ["run out","retired hurt","obstructing the field"]
+            THEN 1 ELSE 0
+        END AS wicket
+
+    FROM `IPL`.`IPL_scope`.`ball_by_ball` b
+
+    LEFT JOIN `IPL`.`IPL_scope`.`batsman_scored` bs
+      ON b.match_id = bs.match_id
+      AND b.innings_no = bs.innings_no
+      AND b.over_id = bs.over_id
+      AND b.ball_id = bs.ball_id
+
+    LEFT JOIN `IPL`.`IPL_scope`.`extra_runs` er
+      ON b.match_id = er.match_id
+      AND b.innings_no = er.innings_no
+      AND b.over_id = er.over_id
+      AND b.ball_id = er.ball_id
+
+    LEFT JOIN `IPL`.`IPL_scope`.`wicket_taken` w
+      ON b.match_id = w.match_id
+      AND b.innings_no = w.innings_no
+      AND b.over_id = w.over_id
+      AND b.ball_id = w.ball_id
+),
+
+bowler_match_stats AS (
+    SELECT
+        match_id,
+        bowler,
+        SUM(legal_ball) AS balls,
+        SUM(runs_scored) AS runs_conceded,
+        SUM(wicket) AS wickets
+    FROM ball_stats
+    GROUP BY match_id, bowler
+),
+
+best_match_ranked AS (
+    SELECT
+        match_id,
+        bowler,
+        wickets,
+        runs_conceded,
+        ROW_NUMBER() OVER (
+            PARTITION BY bowler
+            ORDER BY wickets DESC, runs_conceded ASC
+        ) AS rnk
+    FROM bowler_match_stats
+),
+
+career_stats AS (
+    SELECT
+        bowler,
+        SUM(balls) AS balls,
+        SUM(runs_conceded) AS runs_conceded,
+        SUM(wickets) AS wickets
+    FROM bowler_match_stats
+    GROUP BY bowler
+)
+
+SELECT
+    p.player_name AS bowler_name,
+    c.wickets AS total_wickets,
+
+    ROUND(c.runs_conceded / (c.balls / 6.0), 2) AS economy_rate,
+
+    CASE
+        WHEN c.wickets > 0
+        THEN ROUND(c.balls / c.wickets, 2)
+        ELSE MISSING
+    END AS strike_rate,
+
+    CONCAT(TOSTRING(b.wickets), "-", TOSTRING(b.runs_conceded)) AS best_bowling
+
+FROM career_stats c
+JOIN best_match_ranked b
+  ON c.bowler = b.bowler
+  AND b.rnk = 1
+
+LEFT JOIN `IPL`.`IPL_scope`.`player` p
+  ON c.bowler = p.player_id
+
+ORDER BY total_wickets DESC;

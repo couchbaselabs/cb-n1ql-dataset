@@ -1,0 +1,19 @@
+SELECT
+    d.driver_id,
+    AVG(daily_deliveries) AS avg_daily_deliveries
+FROM (
+    SELECT
+        del.driver_id,
+        o.order_created_year,
+        o.order_created_month,
+        o.order_created_day,
+        COUNT(del.delivery_id) AS daily_deliveries
+    FROM `delivery_center`.`delivery_center_scope`.`deliveries` AS del
+    JOIN `delivery_center`.`delivery_center_scope`.`orders` AS o
+        ON del.delivery_order_id = o.delivery_order_id
+    WHERE del.driver_id IS NOT NULL
+    GROUP BY del.driver_id, o.order_created_year, o.order_created_month, o.order_created_day
+) AS d
+GROUP BY d.driver_id
+ORDER BY avg_daily_deliveries DESC
+LIMIT 5;

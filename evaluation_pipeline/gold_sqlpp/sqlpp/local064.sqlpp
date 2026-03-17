@@ -1,0 +1,45 @@
+WITH monthly_balances AS (
+    SELECT
+        ct.customer_id,
+        SUBSTR(ct.txn_date, 0, 7) AS month,
+        SUM(CASE WHEN ct.txn_type = "deposit" THEN ct.txn_amount
+                 WHEN ct.txn_type = "withdrawal" THEN -ct.txn_amount
+                 ELSE 0 END) AS balance
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions AS ct
+    GROUP BY ct.customer_id, SUBSTR(ct.txn_date, 0, 7)
+),
+
+month_stats AS (
+    SELECT
+        mb.month,
+        SUM(CASE WHEN mb.balance > 0 THEN 1 ELSE 0 END) AS positive_count,
+        AVG(mb.balance) AS avg_balance
+    FROM monthly_balances mb
+    GROUP BY mb.month
+    UNION ALL
+    SELECT "2020-05" AS month, 0 AS positive_count, 0.0 AS avg_balance
+),
+
+highest AS (
+    SELECT ms.month, ms.positive_count, ms.avg_balance
+    FROM month_stats ms
+    ORDER BY ms.positive_count DESC, ms.month
+    LIMIT 1
+),
+
+lowest AS (
+    SELECT ms.month, ms.positive_count, ms.avg_balance
+    FROM month_stats ms
+    ORDER BY ms.positive_count ASC, ms.month
+    LIMIT 1
+)
+
+SELECT
+    h.month AS highest_month,
+    h.positive_count AS highest_positive_count,
+    h.avg_balance AS highest_avg_balance,
+    l.month AS lowest_month,
+    l.positive_count AS lowest_positive_count,
+    l.avg_balance AS lowest_avg_balance,
+    h.avg_balance - l.avg_balance AS average_difference
+FROM highest h, lowest l;

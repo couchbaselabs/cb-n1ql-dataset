@@ -1,0 +1,31 @@
+WITH before_after AS (
+    SELECT attr.t AS attribute_type, attr.v AS attribute_value,
+        SUM(CASE WHEN s.week_date >= '2020-03-23' AND s.week_date < '2020-06-15' THEN s.sales ELSE 0 END) AS before_sales,
+        SUM(CASE WHEN s.week_date >= '2020-06-15' AND s.week_date <= '2020-08-31' THEN s.sales ELSE 0 END) AS after_sales
+    FROM `bank_sales_trading`.`bank_sales_trading_scope`.`cleaned_weekly_sales` s
+    UNNEST [
+        {"t": "region", "v": s.region},
+        {"t": "platform", "v": s.platform},
+        {"t": "age_band", "v": s.age_band},
+        {"t": "demographic", "v": s.demographic},
+        {"t": "customer_type", "v": s.customer_type}
+    ] AS attr
+    WHERE s.week_date >= '2020-03-23' AND s.week_date <= '2020-08-31'
+    GROUP BY attr.t, attr.v
+),
+pct_changes AS (
+    SELECT ba.attribute_type,
+        (ba.after_sales - ba.before_sales) * 100.0 / ba.before_sales AS pct_change
+    FROM before_after ba
+    WHERE ba.before_sales > 0
+),
+avg_pcts AS (
+    SELECT pc.attribute_type AS ATTRIBUTE_NAME,
+        AVG(pc.pct_change) AS AVG_PCT_CHANGE
+    FROM pct_changes pc
+    GROUP BY pc.attribute_type
+)
+SELECT ap.ATTRIBUTE_NAME, ap.AVG_PCT_CHANGE
+FROM avg_pcts ap
+ORDER BY ap.AVG_PCT_CHANGE ASC
+LIMIT 1;

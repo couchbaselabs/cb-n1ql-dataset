@@ -1,0 +1,28 @@
+WITH DateParts AS (
+    SELECT
+        TO_NUMBER(SUBSTR(p.final_game,0,4)) -
+        TO_NUMBER(SUBSTR(p.debut,0,4)) AS years_part,
+
+        TO_NUMBER(SUBSTR(p.final_game,5,2)) -
+        TO_NUMBER(SUBSTR(p.debut,5,2)) AS months_part,
+
+        TO_NUMBER(SUBSTR(p.final_game,8,2)) -
+        TO_NUMBER(SUBSTR(p.debut,8,2)) AS days_part
+    FROM Baseball.Baseball_scope.player AS p
+    WHERE p.debut IS NOT MISSING
+      AND p.final_game IS NOT MISSING
+      AND p.debut != ""
+      AND p.final_game != ""
+),
+
+CareerSpan AS (
+    SELECT
+        ABS(ROUND(years_part,2)
+        + ROUND(months_part / 12,2)
+        + ROUND(days_part/ 365,2))
+        AS career_span
+    FROM DateParts
+)
+
+SELECT ROUND(AVG(career_span),2) AS avg_career_span
+FROM CareerSpan;

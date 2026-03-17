@@ -1,0 +1,44 @@
+WITH monthly_totals AS (
+    SELECT
+        p.customer_id,
+        SUBSTR(p.payment_date, 0, 8) AS pay_month,
+        SUM(p.amount) AS monthly_amount
+    FROM `sqlite-sakila`.`sqlite-sakila_scope`.payment AS p
+    GROUP BY p.customer_id, SUBSTR(p.payment_date, 0, 8)
+),
+
+monthly_with_lag AS (
+    SELECT
+        mt.customer_id,
+        mt.pay_month,
+        mt.monthly_amount,
+        LAG(mt.monthly_amount) OVER (
+            PARTITION BY mt.customer_id
+            ORDER BY mt.pay_month
+        ) AS prev_monthly_amount
+    FROM monthly_totals mt
+),
+
+monthly_changes AS (
+    SELECT
+        mwl.customer_id,
+        ABS(mwl.monthly_amount - mwl.prev_monthly_amount) AS abs_change
+    FROM monthly_with_lag mwl
+    WHERE mwl.prev_monthly_amount IS NOT NULL
+),
+
+avg_changes AS (
+    SELECT
+        mc.customer_id,
+        AVG(mc.abs_change) AS avg_monthly_change
+    FROM monthly_changes mc
+    GROUP BY mc.customer_id
+    ORDER BY avg_monthly_change DESC
+    LIMIT 1
+)
+
+SELECT
+    CONCAT(c.first_name, " ", c.last_name) AS CUSTOMER_FULL_NAME
+FROM avg_changes ac
+JOIN `sqlite-sakila`.`sqlite-sakila_scope`.customer AS c
+    ON ac.customer_id = c.customer_id;

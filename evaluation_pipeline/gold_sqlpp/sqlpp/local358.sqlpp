@@ -1,0 +1,23 @@
+SELECT age_category, COUNT(*) AS user_count
+FROM (
+    SELECT 
+        CASE
+            WHEN age BETWEEN 20 AND 29 THEN "20s"
+            WHEN age BETWEEN 30 AND 39 THEN "30s"
+            WHEN age BETWEEN 40 AND 49 THEN "40s"
+            WHEN age BETWEEN 50 AND 59 THEN "50s"
+            ELSE "others"
+        END AS age_category
+    FROM (
+        SELECT 
+            FLOOR(DATE_DIFF_STR(NOW_STR(), birth_date, "year") 
+                  - (CASE WHEN DATE_PART_STR(NOW_STR(), "month") < DATE_PART_STR(birth_date, "month")
+                           OR (DATE_PART_STR(NOW_STR(), "month") = DATE_PART_STR(birth_date, "month") 
+                               AND DATE_PART_STR(NOW_STR(), "day") < DATE_PART_STR(birth_date, "day"))
+                      THEN 1 ELSE 0 END)
+            ) AS age
+        FROM log.log_scope.mst_users
+    ) AS t
+) AS categorized
+GROUP BY age_category
+ORDER BY age_category;

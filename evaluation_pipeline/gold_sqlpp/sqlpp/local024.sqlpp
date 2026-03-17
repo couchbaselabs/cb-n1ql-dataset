@@ -1,0 +1,34 @@
+WITH player_match_runs AS (
+    SELECT
+        bbb.striker AS player_id,
+        bbb.match_id,
+        SUM(bsc.runs_scored) AS runs_in_match
+    FROM IPL.IPL_scope.ball_by_ball AS bbb
+    JOIN IPL.IPL_scope.batsman_scored AS bsc
+        ON bbb.match_id = bsc.match_id
+        AND bbb.over_id = bsc.over_id
+        AND bbb.ball_id = bsc.ball_id
+        AND bbb.innings_no = bsc.innings_no
+    GROUP BY bbb.striker, bbb.match_id
+),
+
+player_avg_runs AS (
+    SELECT
+        pm.player_id,
+        AVG(COALESCE(pmr.runs_in_match,0)) AS avg_runs_per_match
+    FROM IPL.IPL_scope.player_match AS pm
+    LEFT JOIN player_match_runs AS pmr
+        ON pm.player_id = pmr.player_id
+        AND pm.match_id = pmr.match_id
+    GROUP BY pm.player_id
+)
+
+SELECT
+    p.country_name,
+    AVG(par.avg_runs_per_match) AS country_batting_average
+FROM player_avg_runs AS par
+JOIN IPL.IPL_scope.player AS p
+    ON p.player_id = par.player_id
+GROUP BY p.country_name
+ORDER BY country_batting_average DESC
+LIMIT 5;

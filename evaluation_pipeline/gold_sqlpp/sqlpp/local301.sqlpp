@@ -1,0 +1,19 @@
+SELECT
+  calendar_year,
+  ROUND(
+    (
+      SUM(CASE WHEN week_date >= CONCAT(TOSTRING(calendar_year), '-06-15') AND week_date < DATE_ADD_STR(CONCAT(TOSTRING(calendar_year), '-06-15'), 4, "week") THEN sales ELSE 0 END) -
+      SUM(CASE WHEN week_date >= DATE_ADD_STR(CONCAT(TOSTRING(calendar_year), '-06-15'), -4, "week") AND week_date < CONCAT(TOSTRING(calendar_year), '-06-15') THEN sales ELSE 0 END)
+    ) * 100.0 /
+    NULLIF(
+      SUM(CASE WHEN week_date >= DATE_ADD_STR(CONCAT(TOSTRING(calendar_year), '-06-15'), -4, "week") AND week_date < CONCAT(TOSTRING(calendar_year), '-06-15') THEN sales ELSE 0 END),
+      0
+    ),
+    2
+  ) AS percentage_change_sales,
+  SUM(CASE WHEN week_date >= DATE_ADD_STR(CONCAT(TOSTRING(calendar_year), '-06-15'), -4, "week") AND week_date < CONCAT(TOSTRING(calendar_year), '-06-15') THEN sales ELSE 0 END) AS sales_4_weeks_before_june_15,
+  SUM(CASE WHEN week_date >= CONCAT(TOSTRING(calendar_year), '-06-15') AND week_date < DATE_ADD_STR(CONCAT(TOSTRING(calendar_year), '-06-15'), 4, "week") THEN sales ELSE 0 END) AS sales_4_weeks_after_june_15
+FROM `bank_sales_trading`.`bank_sales_trading_scope`.`cleaned_weekly_sales`
+WHERE calendar_year IN [2018, 2019, 2020]
+GROUP BY calendar_year
+ORDER BY calendar_year;

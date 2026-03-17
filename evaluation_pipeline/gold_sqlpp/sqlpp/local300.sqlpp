@@ -1,0 +1,53 @@
+WITH daily_txn AS (
+    SELECT ct.customer_id, ct.txn_date,
+           SUM(CASE WHEN ct.txn_type = 'deposit' THEN ct.txn_amount
+                    ELSE -ct.txn_amount END) AS daily_net
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions ct
+    GROUP BY ct.customer_id, ct.txn_date
+),
+date_ranges AS (
+    SELECT ct.customer_id,
+           MIN(ct.txn_date) AS min_date,
+           MAX(ct.txn_date) AS max_date,
+           DATE_DIFF_STR(MAX(ct.txn_date), MIN(ct.txn_date), 'day') AS num_days
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions ct
+    GROUP BY ct.customer_id
+),
+customer_dates AS (
+    SELECT dr.customer_id, DATE_ADD_STR(dr.min_date, i, 'day') AS dt
+    FROM date_ranges dr
+    UNNEST ARRAY_RANGE(0, dr.num_days + 1) AS i
+),
+daily_with_txn AS (
+    SELECT cd.customer_id, cd.dt,
+           COALESCE(dt2.daily_net, 0) AS daily_net
+    FROM customer_dates cd
+    LEFT JOIN daily_txn dt2
+      ON cd.customer_id = dt2.customer_id
+     AND cd.dt = dt2.txn_date
+),
+running_balance AS (
+    SELECT dw.customer_id, dw.dt,
+           SUM(dw.daily_net) OVER (
+               PARTITION BY dw.customer_id
+               ORDER BY dw.dt
+           ) AS balance
+    FROM daily_with_txn dw
+),
+adjusted AS (
+    SELECT rb.customer_id, rb.dt,
+           CASE WHEN rb.balance < 0 THEN 0 ELSE rb.balance END AS adj_balance,
+           DATE_TRUNC_STR(rb.dt,"month") AS month_key
+    FROM running_balance rb
+),
+max_per_cust_month AS (
+    SELECT a.customer_id, a.month_key, MAX(a.adj_balance) AS max_bal
+    FROM adjusted a
+    GROUP BY a.customer_id, a.month_key
+)
+
+SELECT mpcm.month_key AS MONTH,
+       SUM(mpcm.max_bal) AS TOTAL_MONTHLY_MAX_BALANCES
+FROM max_per_cust_month mpcm
+GROUP BY mpcm.month_key
+ORDER BY mpcm.month_key;

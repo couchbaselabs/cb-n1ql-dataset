@@ -1,0 +1,60 @@
+WITH yearly_cause_counts AS (
+    SELECT
+        DATE_PART_STR(c.collision_date, "year") AS yr,
+        c.pcf_violation_category AS cause,
+        COUNT(*) AS cnt
+    FROM California_Traffic_Collision.California_Traffic_Collision_scope.collisions AS c
+    WHERE c.pcf_violation_category IS NOT NULL
+    GROUP BY DATE_PART_STR(c.collision_date, "year"), c.pcf_violation_category
+),
+
+yearly_ranked AS (
+    SELECT
+        ycc.yr,
+        ycc.cause,
+        ycc.cnt,
+        ROW_NUMBER() OVER (
+            PARTITION BY ycc.yr
+            ORDER BY ycc.cnt DESC
+        ) AS rn
+    FROM yearly_cause_counts ycc
+),
+
+top1_per_year AS (
+    SELECT yr.yr, yr.cause AS cause1
+    FROM yearly_ranked yr
+    WHERE yr.rn = 1
+),
+
+top2_per_year AS (
+    SELECT yr.yr, yr.cause AS cause2
+    FROM yearly_ranked yr
+    WHERE yr.rn = 2
+),
+
+combined AS (
+    SELECT
+        t1.yr,
+        t1.cause1,
+        t2.cause2
+    FROM top1_per_year t1
+    JOIN top2_per_year t2 ON t1.yr = t2.yr
+),
+
+most_common_pair AS (
+    SELECT
+        c.cause1,
+        c.cause2,
+        COUNT(*) AS freq
+    FROM combined c
+    GROUP BY c.cause1, c.cause2
+    ORDER BY freq DESC
+    LIMIT 1
+)
+
+SELECT
+    cb.yr AS YEAR
+FROM combined cb
+WHERE cb.cause1 != (SELECT RAW mcp.cause1 FROM most_common_pair mcp)[0]
+   OR cb.cause2 != (SELECT RAW mcp.cause2 FROM most_common_pair mcp)[0]
+ORDER BY cb.yr;

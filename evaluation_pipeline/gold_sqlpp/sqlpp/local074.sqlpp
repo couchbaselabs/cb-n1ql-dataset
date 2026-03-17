@@ -1,0 +1,40 @@
+WITH months AS (
+    SELECT DISTINCT SUBSTR(ct.txn_date, 0, 8) AS month
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions AS ct
+),
+
+customers AS (
+    SELECT DISTINCT ct.customer_id
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions AS ct
+),
+
+all_combos AS (
+    SELECT c.customer_id, m.month
+    FROM customers c, months m
+),
+
+monthly_changes AS (
+    SELECT
+        ct.customer_id,
+        SUBSTR(ct.txn_date, 0, 8) AS month,
+        SUM(CASE WHEN ct.txn_type = "deposit" THEN ct.txn_amount ELSE -ct.txn_amount END) AS change_amt
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions AS ct
+    GROUP BY ct.customer_id, SUBSTR(ct.txn_date, 0, 8)
+),
+
+filled AS (
+    SELECT
+        ac.customer_id,
+        ac.month,
+        IFNULL(mc.change_amt, 0) AS MONTHLY_CHANGE
+    FROM all_combos ac
+    LEFT JOIN monthly_changes mc ON ac.customer_id = mc.customer_id AND ac.month = mc.month
+)
+
+SELECT
+    f.customer_id,
+    f.month AS MONTH,
+    f.MONTHLY_CHANGE,
+    SUM(f.MONTHLY_CHANGE) OVER (PARTITION BY f.customer_id ORDER BY f.month) AS CUMULATIVE_BALANCE
+FROM filled f
+ORDER BY f.customer_id, f.month;

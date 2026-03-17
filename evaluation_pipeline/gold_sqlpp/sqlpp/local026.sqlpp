@@ -1,0 +1,53 @@
+WITH OverRuns AS (
+    SELECT
+        bb.match_id,
+        bb.innings_no,
+        bb.over_id,
+        bb.bowler,
+        SUM(IFMISSING(bs.runs_scored,0) + IFMISSING(er.extra_runs,0)) AS runs_in_over
+    FROM IPL.IPL_scope.ball_by_ball AS bb
+    LEFT JOIN IPL.IPL_scope.batsman_scored AS bs
+        ON bb.match_id = bs.match_id
+        AND bb.innings_no = bs.innings_no
+        AND bb.over_id = bs.over_id
+        AND bb.ball_id = bs.ball_id
+    LEFT JOIN IPL.IPL_scope.extra_runs AS er
+        ON bb.match_id = er.match_id
+        AND bb.innings_no = er.innings_no
+        AND bb.over_id = er.over_id
+        AND bb.ball_id = er.ball_id
+    GROUP BY
+        bb.match_id,
+        bb.innings_no,
+        bb.over_id,
+        bb.bowler
+),
+
+MatchMaxOver AS (
+    SELECT
+        match_id,
+        MAX(runs_in_over) AS max_runs
+    FROM OverRuns
+    GROUP BY match_id
+),
+
+MatchMaxOvers AS (
+    SELECT
+        o.match_id,
+        o.bowler,
+        o.runs_in_over
+    FROM OverRuns AS o
+    JOIN MatchMaxOver AS m
+        ON o.match_id = m.match_id
+       AND o.runs_in_over = m.max_runs
+)
+
+SELECT
+    p.player_name AS bowler_name,
+    m.match_id,
+    m.runs_in_over
+FROM MatchMaxOvers AS m
+JOIN IPL.IPL_scope.player AS p
+    ON m.bowler = p.player_id
+ORDER BY m.runs_in_over DESC
+LIMIT 3;

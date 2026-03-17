@@ -1,0 +1,77 @@
+WITH france_customers AS (
+    SELECT cu.cust_id
+    FROM complex_oracle.complex_oracle_scope.customers AS cu
+    WHERE cu.country_id = (
+        SELECT RAW co.country_id
+        FROM complex_oracle.complex_oracle_scope.countries AS co
+        WHERE co.country_name = "France"
+    )[0]
+),
+
+valid_promos AS (
+    SELECT pr.promo_id
+    FROM complex_oracle.complex_oracle_scope.promotions AS pr
+    WHERE pr.promo_total_id = 1
+),
+
+valid_channels AS (
+    SELECT ch.channel_id
+    FROM complex_oracle.complex_oracle_scope.channels AS ch
+    WHERE ch.channel_total_id = 1
+),
+
+monthly_sales AS (
+    SELECT
+        s.prod_id,
+        t.calendar_month_number AS mn,
+        t.calendar_year AS yr,
+        SUM(s.amount_sold) AS total_sold
+    FROM complex_oracle.complex_oracle_scope.sales AS s
+    JOIN complex_oracle.complex_oracle_scope.times AS t ON s.time_id = t.time_id
+    WHERE s.cust_id IN (SELECT RAW fc.cust_id FROM france_customers fc)
+      AND s.promo_id IN (SELECT RAW vp.promo_id FROM valid_promos vp)
+      AND s.channel_id IN (SELECT RAW vc.channel_id FROM valid_channels vc)
+      AND t.calendar_year IN [2019, 2020]
+    GROUP BY s.prod_id, t.calendar_month_number, t.calendar_year
+),
+
+sales_2019 AS (
+    SELECT ms.prod_id, ms.mn, ms.total_sold
+    FROM monthly_sales ms
+    WHERE ms.yr = 2019 AND ms.total_sold > 0
+),
+
+sales_2020 AS (
+    SELECT ms.prod_id, ms.mn, ms.total_sold
+    FROM monthly_sales ms
+    WHERE ms.yr = 2020
+),
+
+projected AS (
+    SELECT
+        s19.prod_id,
+        s19.mn,
+        (((s20.total_sold - s19.total_sold) / s19.total_sold) * s20.total_sold) + s20.total_sold AS projected_2021
+    FROM sales_2019 s19
+    JOIN sales_2020 s20 ON s19.prod_id = s20.prod_id AND s19.mn = s20.mn
+),
+
+monthly_avgs AS (
+    SELECT
+        p.mn AS calendar_month_number,
+        AVG(p.projected_2021) AS avg_proj
+    FROM projected p
+    GROUP BY p.mn
+),
+
+ranked_avgs AS (
+    SELECT
+        ma.avg_proj,
+        ROW_NUMBER() OVER (ORDER BY ma.avg_proj) AS rn
+    FROM monthly_avgs ma
+)
+
+SELECT
+    AVG(ra.avg_proj) AS OUTPUT
+FROM ranked_avgs ra
+WHERE ra.rn IN [6, 7];

@@ -1,0 +1,202 @@
+WITH role_counts AS (
+SELECT
+    player_id,
+    `role`,
+    COUNT(*) AS role_count,
+    ROW_NUMBER() OVER (
+        PARTITION BY player_id
+        ORDER BY COUNT(*) DESC, `role` ASC
+    ) AS rnk
+FROM `IPL`.`IPL_scope`.`player_match`
+GROUP BY player_id, `role`
+),
+
+player_role AS (
+SELECT player_id, `role`
+FROM role_counts
+WHERE rnk = 1
+),
+
+matches_played AS (
+SELECT
+    player_id,
+    COUNT(DISTINCT match_id) AS total_matches_played
+FROM `IPL`.`IPL_scope`.`player_match`
+GROUP BY player_id
+),
+
+bat_ball AS (
+SELECT
+    b.match_id,
+    b.striker AS player_id,
+    IFMISSING(bs.runs_scored,0) AS runs
+FROM `IPL`.`IPL_scope`.`ball_by_ball` b
+
+LEFT JOIN `IPL`.`IPL_scope`.`batsman_scored` bs
+ON b.match_id = bs.match_id
+AND b.innings_no = bs.innings_no
+AND b.over_id = bs.over_id
+AND b.ball_id = bs.ball_id
+),
+
+bat_match_runs AS (
+SELECT
+    player_id,
+    match_id,
+    SUM(runs) AS match_runs,
+    COUNT(*) AS balls
+FROM bat_ball
+GROUP BY player_id, match_id
+),
+
+bat_totals AS (
+SELECT
+    player_id,
+    SUM(match_runs) AS total_runs,
+    SUM(balls) AS total_balls_faced,
+    MAX(match_runs) AS highest_score,
+    SUM(CASE WHEN match_runs >= 30 THEN 1 ELSE 0 END) AS matches_30_plus,
+    SUM(CASE WHEN match_runs >= 50 THEN 1 ELSE 0 END) AS matches_50_plus,
+    SUM(CASE WHEN match_runs >= 100 THEN 1 ELSE 0 END) AS matches_100_plus
+FROM bat_match_runs
+GROUP BY player_id
+),
+
+dismissals AS (
+SELECT
+    player_out AS player_id,
+    COUNT(*) AS total_times_dismissed
+FROM `IPL`.`IPL_scope`.`wicket_taken`
+GROUP BY player_out
+),
+
+bowl_ball AS (
+SELECT
+    b.match_id,
+    b.bowler AS player_id,
+
+    IFMISSING(bs.runs_scored,0) AS runs,
+
+    CASE
+        WHEN w.kind_out IS NOT NULL
+        AND w.kind_out NOT IN [
+            "run out",
+            "retired hurt",
+            "obstructing the field"
+        ]
+        THEN 1 ELSE 0
+    END AS wicket
+
+FROM `IPL`.`IPL_scope`.`ball_by_ball` b
+
+LEFT JOIN `IPL`.`IPL_scope`.`batsman_scored` bs
+ON b.match_id = bs.match_id
+AND b.innings_no = bs.innings_no
+AND b.over_id = bs.over_id
+AND b.ball_id = bs.ball_id
+
+LEFT JOIN `IPL`.`IPL_scope`.`wicket_taken` w
+ON b.match_id = w.match_id
+AND b.innings_no = w.innings_no
+AND b.over_id = w.over_id
+AND b.ball_id = w.ball_id
+),
+
+bowl_match_stats AS (
+SELECT
+    player_id,
+    match_id,
+    COUNT(*) AS balls,
+    SUM(runs) AS runs_given,
+    SUM(wicket) AS wickets
+FROM bowl_ball
+GROUP BY player_id, match_id
+),
+
+best_bowl_rank AS (
+SELECT
+    player_id,
+    wickets,
+    runs_given,
+    ROW_NUMBER() OVER (
+        PARTITION BY player_id
+        ORDER BY wickets DESC, runs_given ASC
+    ) AS rnk
+FROM bowl_match_stats
+),
+
+bowl_totals AS (
+SELECT
+    player_id,
+    SUM(wickets) AS total_wickets_taken,
+    SUM(runs_given) AS runs_given,
+    SUM(balls) AS balls
+FROM bowl_match_stats
+GROUP BY player_id
+)
+
+SELECT
+p.player_id,
+p.player_name,
+pr.`role` AS most_frequent_role,
+p.batting_hand,
+p.bowling_skill,
+
+COALESCE(bt.total_runs,0) AS total_runs,
+COALESCE(mp.total_matches_played,0) AS total_matches_played,
+COALESCE(d.total_times_dismissed,0) AS total_times_dismissed,
+
+CASE
+WHEN COALESCE(d.total_times_dismissed,0) > 0
+THEN IFMISSING(bt.total_runs, 0) / d.total_times_dismissed
+ELSE MISSING
+END AS batting_average,
+
+COALESCE(bt.highest_score,0) AS highest_score,
+COALESCE(bt.matches_30_plus,0) AS matches_30_plus,
+COALESCE(bt.matches_50_plus,0) AS matches_50_plus,
+COALESCE(bt.matches_100_plus,0) AS matches_100_plus,
+COALESCE(bt.total_balls_faced,0) AS total_balls_faced,
+
+CASE
+WHEN COALESCE(bt.total_balls_faced,0) > 0
+THEN (bt.total_runs / bt.total_balls_faced) * 100
+ELSE MISSING
+END AS strike_rate,
+
+COALESCE(bw.total_wickets_taken,0) AS total_wickets_taken,
+
+CASE
+WHEN COALESCE(bw.balls,0) > 0
+THEN (bw.runs_given / bw.balls) * 6
+ELSE MISSING
+END AS economy_rate,
+
+CASE
+WHEN bb.wickets IS NOT MISSING AND bb.wickets > 0
+THEN CONCAT(TOSTRING(bb.wickets), "-", TOSTRING(bb.runs_given))
+ELSE MISSING
+END AS best_bowling_performance
+
+FROM `IPL`.`IPL_scope`.`player` p
+
+LEFT JOIN player_role pr
+ON p.player_id = pr.player_id
+
+LEFT JOIN matches_played mp
+ON p.player_id = mp.player_id
+
+LEFT JOIN bat_totals bt
+ON p.player_id = bt.player_id
+
+LEFT JOIN dismissals d
+ON p.player_id = d.player_id
+
+LEFT JOIN bowl_totals bw
+ON p.player_id = bw.player_id
+
+LEFT JOIN best_bowl_rank bb
+ON p.player_id = bb.player_id
+AND bb.rnk = 1
+
+ORDER BY p.player_id;

@@ -1,0 +1,27 @@
+WITH CustomerData AS (
+    SELECT
+        c.customer_unique_id AS customer_unique_id,
+        COUNT(DISTINCT o.order_id) AS order_count,
+        SUM(p.payment_value) AS total_payment,
+        MIN(o.order_purchase_timestamp) AS first_order_time,
+        MAX(o.order_purchase_timestamp) AS last_order_time
+    FROM E_commerce.E_commerce_scope.customers AS c
+    JOIN E_commerce.E_commerce_scope.orders AS o
+        ON c.customer_id = o.customer_id
+    JOIN E_commerce.E_commerce_scope.order_payments AS p
+        ON o.order_id = p.order_id
+    GROUP BY c.customer_unique_id
+)
+
+SELECT
+    customer_unique_id,
+    order_count AS PF,
+    ROUND(total_payment / order_count, 2) AS AOV,
+    CASE
+        WHEN DATE_DIFF_STR(last_order_time, first_order_time, "day") < 7
+        THEN 1.0
+        ELSE DATE_DIFF_STR(last_order_time, first_order_time, "day") / 7.0
+    END AS ACL
+FROM CustomerData
+ORDER BY AOV DESC
+LIMIT 3;

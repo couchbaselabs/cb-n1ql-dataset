@@ -1,0 +1,40 @@
+WITH daily_sales AS (
+    SELECT SUBSTR(o.order_purchase_timestamp, 0, 10) AS sale_date,
+           SUM(oi.price) AS daily_total
+    FROM `E_commerce`.`E_commerce_scope`.`orders` o
+    JOIN `E_commerce`.`E_commerce_scope`.`order_items` oi ON o.order_id = oi.order_id
+    JOIN `E_commerce`.`E_commerce_scope`.`products` p ON oi.product_id = p.product_id
+    WHERE p.product_category_name = 'brinquedos'
+      AND SUBSTR(o.order_purchase_timestamp, 0, 10) >= '2017-01-01'
+      AND SUBSTR(o.order_purchase_timestamp, 0, 10) <= '2018-08-29'
+    GROUP BY SUBSTR(o.order_purchase_timestamp, 0, 10)
+),
+regression_input AS (
+    SELECT ds.daily_total AS y,
+           DATE_DIFF_STR(ds.sale_date, '2017-01-01', 'day') AS x
+    FROM daily_sales ds
+),
+regression_agg AS (
+    SELECT COUNT(*) AS n,
+           SUM(ri.x) AS sum_x,
+           SUM(ri.y) AS sum_y,
+           SUM(ri.x * ri.y) AS sum_xy,
+           SUM(ri.x * ri.x) AS sum_x2
+    FROM regression_input ri
+),
+coefficients AS (
+    SELECT (ra.sum_xy - ra.n * (ra.sum_x / ra.n) * (ra.sum_y / ra.n)) /
+           (ra.sum_x2 - ra.n * (ra.sum_x / ra.n) * (ra.sum_x / ra.n)) AS slope,
+           (ra.sum_y / ra.n) -
+           ((ra.sum_xy - ra.n * (ra.sum_x / ra.n) * (ra.sum_y / ra.n)) /
+            (ra.sum_x2 - ra.n * (ra.sum_x / ra.n) * (ra.sum_x / ra.n))) *
+           (ra.sum_x / ra.n) AS intercept
+    FROM regression_agg ra
+)
+SELECT (4 * co.intercept + co.slope * (
+           DATE_DIFF_STR('2018-12-05', '2017-01-01', 'day') +
+           DATE_DIFF_STR('2018-12-06', '2017-01-01', 'day') +
+           DATE_DIFF_STR('2018-12-07', '2017-01-01', 'day') +
+           DATE_DIFF_STR('2018-12-08', '2017-01-01', 'day')
+       )) AS total_sum_of_moving_averages
+FROM coefficients co;

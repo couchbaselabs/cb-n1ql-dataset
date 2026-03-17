@@ -1,0 +1,46 @@
+WITH numbered AS (
+    SELECT META(a).id AS doc_id, a.stamp, a.`session`, a.`path`, a.search_type,
+        ROW_NUMBER() OVER (PARTITION BY a.`session` ORDER BY a.stamp, META(a).id) AS rn
+    FROM `log`.`log_scope`.`activity_log` a
+),
+
+first_detail AS (
+    SELECT n.`session`, MIN(n.rn) AS first_detail_rn
+    FROM numbered n
+    WHERE n.`path` LIKE '/detail%' OR n.`path` LIKE '/complete%'
+    GROUP BY n.`session`
+),
+
+first_detail_row AS (
+    SELECT n.`session`, n.`path`, n.search_type
+    FROM numbered n
+    JOIN first_detail fd ON n.`session` = fd.`session` AND n.rn = fd.first_detail_rn
+),
+
+pre_events AS (
+    SELECT n.`session`, COUNT(*) AS pre_count
+    FROM numbered n
+    JOIN first_detail fd ON n.`session` = fd.`session`
+    WHERE n.rn < fd.first_detail_rn AND n.search_type != ""
+    GROUP BY n.`session`
+),
+
+all_detail_sessions AS (
+    SELECT DISTINCT fd.`session` FROM first_detail fd
+),
+
+counts AS (
+    SELECT ads.`session`, IFMISSING(pe.pre_count, 0) AS cnt
+    FROM all_detail_sessions ads
+    LEFT JOIN pre_events pe ON ads.`session` = pe.`session`
+),
+
+min_count AS (
+    SELECT MIN(cnt) AS min_cnt FROM counts
+)
+
+SELECT c.`session`, fdr.`path`, fdr.search_type
+FROM counts c
+JOIN min_count mc ON c.cnt = mc.min_cnt
+JOIN first_detail_row fdr ON c.`session` = fdr.`session`
+ORDER BY c.`session`;

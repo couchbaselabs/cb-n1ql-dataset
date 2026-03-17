@@ -1,0 +1,37 @@
+WITH MatchRuns AS (
+    SELECT
+        bb.striker AS striker_id,
+        bb.match_id,
+        SUM(bs.runs_scored) AS runs_in_match
+    FROM IPL.IPL_scope.ball_by_ball AS bb
+    JOIN IPL.IPL_scope.batsman_scored AS bs
+        ON bb.match_id = bs.match_id
+        AND bb.innings_no = bs.innings_no
+        AND bb.over_id = bs.over_id
+        AND bb.ball_id = bs.ball_id
+    GROUP BY bb.striker, bb.match_id
+),
+
+StrikersOver50 AS (
+    SELECT DISTINCT striker_id
+    FROM MatchRuns
+    WHERE runs_in_match > 50
+),
+
+CareerRuns AS (
+    SELECT
+        bb.striker AS striker_id,
+        SUM(bs.runs_scored) AS total_runs
+    FROM IPL.IPL_scope.ball_by_ball AS bb
+    JOIN IPL.IPL_scope.batsman_scored AS bs
+        ON bb.match_id = bs.match_id
+        AND bb.innings_no = bs.innings_no
+        AND bb.over_id = bs.over_id
+        AND bb.ball_id = bs.ball_id
+    WHERE bb.striker IN (SELECT RAW striker_id FROM StrikersOver50)
+    GROUP BY bb.striker
+)
+
+SELECT
+    AVG(total_runs) AS avg_total_runs
+FROM CareerRuns;

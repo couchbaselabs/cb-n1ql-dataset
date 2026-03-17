@@ -1,0 +1,113 @@
+WITH us_customers AS (
+    SELECT cu.cust_id, cu.cust_city
+    FROM complex_oracle.complex_oracle_scope.customers AS cu
+    WHERE cu.country_id = (
+        SELECT RAW co.country_id
+        FROM complex_oracle.complex_oracle_scope.countries AS co
+        WHERE co.country_name = "United States of America"
+    )[0]
+),
+
+q4_times AS (
+    SELECT t.time_id, t.calendar_quarter_id
+    FROM complex_oracle.complex_oracle_scope.times AS t
+    WHERE t.calendar_quarter_id IN [1772, 1776]
+),
+
+base_sales AS (
+    SELECT
+        s.prod_id,
+        s.amount_sold,
+        uc.cust_city,
+        qt.calendar_quarter_id AS qtr
+    FROM complex_oracle.complex_oracle_scope.sales AS s
+    JOIN us_customers uc ON s.cust_id = uc.cust_id
+    JOIN q4_times qt ON s.time_id = qt.time_id
+    WHERE s.promo_id = 999
+),
+
+city_q4_sales AS (
+    SELECT
+        bs.cust_city,
+        SUM(CASE WHEN bs.qtr = 1772 THEN bs.amount_sold ELSE 0 END) AS sales_2019,
+        SUM(CASE WHEN bs.qtr = 1776 THEN bs.amount_sold ELSE 0 END) AS sales_2020
+    FROM base_sales bs
+    GROUP BY bs.cust_city
+    HAVING SUM(CASE WHEN bs.qtr = 1772 THEN bs.amount_sold ELSE 0 END) > 0
+),
+
+qualified_cities AS (
+    SELECT cqs.cust_city
+    FROM city_q4_sales cqs
+    WHERE cqs.sales_2020 >= cqs.sales_2019 * 1.2
+),
+
+filtered_sales AS (
+    SELECT bs.prod_id, bs.amount_sold, bs.qtr
+    FROM base_sales bs
+    WHERE bs.cust_city IN (SELECT RAW qc.cust_city FROM qualified_cities qc)
+),
+
+product_total_sales AS (
+    SELECT
+        fs.prod_id,
+        pr.prod_name,
+        SUM(fs.amount_sold) AS total_sales
+    FROM filtered_sales fs
+    JOIN complex_oracle.complex_oracle_scope.products pr ON fs.prod_id = pr.prod_id
+    GROUP BY fs.prod_id, pr.prod_name
+),
+
+product_ranked AS (
+    SELECT
+        pts.prod_id,
+        pts.prod_name,
+        pts.total_sales,
+        PERCENT_RANK() OVER (ORDER BY pts.total_sales DESC) AS prank
+    FROM product_total_sales pts
+),
+
+top20pct_products AS (
+    SELECT pr.prod_id, pr.prod_name
+    FROM product_ranked pr
+    WHERE pr.prank < 0.2
+),
+
+quarter_totals AS (
+    SELECT
+        fs.qtr,
+        SUM(fs.amount_sold) AS qtr_total
+    FROM filtered_sales fs
+    GROUP BY fs.qtr
+),
+
+product_quarter_sales AS (
+    SELECT
+        fs.prod_id,
+        fs.qtr,
+        SUM(fs.amount_sold) AS prod_qtr_sales
+    FROM filtered_sales fs
+    WHERE fs.prod_id IN (SELECT RAW tp.prod_id FROM top20pct_products tp)
+    GROUP BY fs.prod_id, fs.qtr
+),
+
+product_shares AS (
+    SELECT
+        pqs.prod_id,
+        pqs.qtr,
+        pqs.prod_qtr_sales / qt.qtr_total AS share
+    FROM product_quarter_sales pqs
+    JOIN quarter_totals qt ON pqs.qtr = qt.qtr
+)
+
+SELECT
+    p.prod_id,
+    tp.prod_name,
+    MAX(CASE WHEN p.qtr = 1772 THEN p.share ELSE 0 END) AS SHARE_2019,
+    MAX(CASE WHEN p.qtr = 1776 THEN p.share ELSE 0 END) AS SHARE_2020,
+    MAX(CASE WHEN p.qtr = 1776 THEN p.share ELSE 0 END)
+    - MAX(CASE WHEN p.qtr = 1772 THEN p.share ELSE 0 END) AS SHARE_CHANGE
+FROM product_shares p
+JOIN top20pct_products tp ON p.prod_id = tp.prod_id
+GROUP BY p.prod_id, tp.prod_name
+ORDER BY SHARE_CHANGE DESC;

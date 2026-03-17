@@ -1,0 +1,71 @@
+WITH bat_over AS (
+    SELECT bs.match_id, bs.innings_no, bs.over_id, SUM(bs.runs_scored) AS bat_runs
+    FROM `IPL`.`IPL_scope`.`batsman_scored` bs
+    GROUP BY bs.match_id, bs.innings_no, bs.over_id
+),
+
+ext_over AS (
+    SELECT er.match_id, er.innings_no, er.over_id, SUM(er.extra_runs) AS ext_runs
+    FROM `IPL`.`IPL_scope`.`extra_runs` er
+    GROUP BY er.match_id, er.innings_no, er.over_id
+),
+
+over_totals AS (
+    SELECT b.match_id, b.innings_no, b.over_id,
+        b.bat_runs + IFMISSING(e.ext_runs, 0) AS total_runs
+    FROM bat_over b
+    LEFT JOIN ext_over e
+        ON b.match_id = e.match_id AND b.innings_no = e.innings_no AND b.over_id = e.over_id
+),
+
+max_per_match AS (
+    SELECT match_id, MAX(total_runs) AS max_runs
+    FROM over_totals
+    GROUP BY match_id
+),
+
+candidate_overs AS (
+    SELECT o.match_id, o.innings_no, o.over_id, o.total_runs
+    FROM over_totals o
+    JOIN max_per_match m ON o.match_id = m.match_id AND o.total_runs = m.max_runs
+),
+
+chosen_over AS (
+    SELECT match_id, MIN([innings_no, over_id]) AS tie_key
+    FROM candidate_overs
+    GROUP BY match_id
+),
+
+final_over AS (
+    SELECT c.match_id, c.innings_no, c.over_id, c.total_runs
+    FROM candidate_overs c
+    JOIN chosen_over t
+      ON c.match_id = t.match_id
+     AND [c.innings_no, c.over_id] = t.tie_key
+),
+
+over_bowler AS (
+    SELECT b.match_id, b.innings_no, b.over_id, MIN([b.ball_id, b.bowler]) AS min_pair
+    FROM `IPL`.`IPL_scope`.`ball_by_ball` b
+    GROUP BY b.match_id, b.innings_no, b.over_id
+)
+
+SELECT
+    f.match_id,
+    f.innings_no,
+    f.over_id,
+    ob.min_pair[1] AS bowler_id,
+    p.player_name AS bowler_name,
+    f.total_runs AS highest_over_runs,
+    (
+        SELECT RAW AVG(x.total_runs)
+        FROM final_over x
+    )[0] AS avg_highest_over_runs_across_matches
+FROM final_over f
+LEFT JOIN over_bowler ob
+  ON f.match_id = ob.match_id
+ AND f.innings_no = ob.innings_no
+ AND f.over_id = ob.over_id
+LEFT JOIN `IPL`.`IPL_scope`.`player` p
+  ON ob.min_pair[1] = p.player_id
+ORDER BY f.match_id;

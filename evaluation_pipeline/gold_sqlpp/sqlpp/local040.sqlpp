@@ -1,0 +1,23 @@
+WITH combined AS (
+    SELECT
+        t.boroname,
+        t.tree_id,
+        i.Estimate_Mean_income,
+        i.Estimate_Median_income
+    FROM modern_data.modern_data_scope.trees AS t
+    JOIN modern_data.modern_data_scope.income_trees AS i
+        ON t.zipcode = i.zipcode
+    WHERE i.Estimate_Median_income > 0
+      AND i.Estimate_Mean_income > 0
+      AND t.boroname IS NOT NULL
+      AND t.boroname != ""
+)
+
+SELECT
+    c.boroname,
+    COUNT(*) AS tree_count,
+    AVG(c.Estimate_Mean_income) AS avg_mean_income
+FROM combined c
+GROUP BY c.boroname
+ORDER BY tree_count DESC
+LIMIT 3;

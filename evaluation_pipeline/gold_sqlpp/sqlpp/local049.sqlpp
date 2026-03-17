@@ -1,0 +1,34 @@
+WITH unicorns_with_year AS (
+    SELECT
+        ci.company_id,
+        ci.industry,
+        DATE_PART_STR(cd.date_joined, "year") AS join_year
+    FROM modern_data.modern_data_scope.companies_industries AS ci
+    JOIN modern_data.modern_data_scope.companies_dates AS cd
+        ON ci.company_id = cd.company_id
+    WHERE DATE_PART_STR(cd.date_joined, "year") >= 2019
+      AND DATE_PART_STR(cd.date_joined, "year") <= 2021
+),
+
+industry_counts AS (
+    SELECT
+        u.industry,
+        COUNT(DISTINCT u.company_id) AS total_companies
+    FROM unicorns_with_year u
+    GROUP BY u.industry
+    ORDER BY total_companies DESC
+    LIMIT 1
+),
+
+yearly_counts AS (
+    SELECT
+        u.join_year,
+        COUNT(DISTINCT u.company_id) AS new_unicorns
+    FROM unicorns_with_year u
+    WHERE u.industry IN (SELECT RAW ic.industry FROM industry_counts ic)
+    GROUP BY u.join_year
+)
+
+SELECT
+    AVG(yc.new_unicorns) AS AVERAGE_NEW_UNICORNS_PER_YEAR
+FROM yearly_counts yc;

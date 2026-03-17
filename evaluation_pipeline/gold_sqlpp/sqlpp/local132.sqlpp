@@ -1,0 +1,28 @@
+SELECT DISTINCT
+    e.EntStageName,
+    c.CustLastName
+FROM `EntertainmentAgency`.`EntertainmentAgency_scope`.`Entertainers` AS e
+JOIN `EntertainmentAgency`.`EntertainmentAgency_scope`.`Customers` AS c ON 1=1
+LET es = (
+    SELECT RAW s.StyleID
+    FROM `EntertainmentAgency`.`EntertainmentAgency_scope`.`Entertainer_Styles` AS s
+    WHERE s.EntertainerID = e.EntertainerID
+      AND s.StyleStrength IN [1, 2, 3]
+    ORDER BY s.StyleStrength
+    LIMIT 3
+),
+cp = (
+    SELECT RAW p.StyleID
+    FROM `EntertainmentAgency`.`EntertainmentAgency_scope`.`Musical_Preferences` AS p
+    WHERE p.CustomerID = c.CustomerID
+      AND p.PreferenceSeq IN [1, 2, 3]
+    ORDER BY p.PreferenceSeq
+    LIMIT 3
+)
+WHERE ARRAY_LENGTH(es) >= 2
+  AND ARRAY_LENGTH(cp) >= 2
+  AND (
+        (es[0] = cp[0] AND es[1] = cp[1])
+        OR
+        (es[0] = cp[1] AND es[1] = cp[0])
+      );

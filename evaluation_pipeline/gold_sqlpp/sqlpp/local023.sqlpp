@@ -1,0 +1,59 @@
+WITH season_matches AS (
+    SELECT RAW m.match_id
+    FROM IPL.IPL_scope.`match` AS m
+    WHERE m.season_id = 5
+),
+
+player_match_runs AS (
+    SELECT
+        bb.striker AS player_id,
+        bb.match_id,
+        SUM(bs.runs_scored) AS runs_in_match
+    FROM IPL.IPL_scope.ball_by_ball AS bb
+    JOIN IPL.IPL_scope.batsman_scored AS bs
+        ON bb.match_id = bs.match_id
+        AND bb.over_id = bs.over_id
+        AND bb.ball_id = bs.ball_id
+        AND bb.innings_no = bs.innings_no
+    WHERE bb.match_id IN season_matches
+    GROUP BY bb.striker, bb.match_id
+),
+
+player_totals AS (
+    SELECT
+        player_id,
+        SUM(runs_in_match) AS total_runs,
+        COUNT(match_id) AS matches_played,
+        SUM(runs_in_match) / COUNT(match_id) AS avg_runs_per_match
+    FROM player_match_runs
+    GROUP BY player_id
+),
+
+player_dismissals AS (
+    SELECT
+        wt.player_out AS player_id,
+        COUNT(*) AS times_out
+    FROM IPL.IPL_scope.wicket_taken AS wt
+    WHERE wt.match_id IN season_matches
+    GROUP BY wt.player_out
+),
+
+player_stats AS (
+    SELECT
+        pt.player_id,
+        pt.avg_runs_per_match,
+        pt.total_runs / COALESCE(pd.times_out,1) AS batting_average
+    FROM player_totals AS pt
+    LEFT JOIN player_dismissals AS pd
+        ON pt.player_id = pd.player_id
+)
+
+SELECT
+    p.player_name,
+    ROUND(ps.avg_runs_per_match,4) AS avg_runs_per_match,
+    ROUND(ps.batting_average,4) AS batting_average
+FROM player_stats AS ps
+JOIN IPL.IPL_scope.player AS p
+    ON p.player_id = ps.player_id
+ORDER BY ps.avg_runs_per_match DESC
+LIMIT 5;

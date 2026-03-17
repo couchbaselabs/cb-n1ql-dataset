@@ -1,0 +1,36 @@
+WITH weighted_preferences AS (
+    SELECT
+        mp.StyleID,
+        CASE
+            WHEN mp.PreferenceSeq = 1 THEN 3
+            WHEN mp.PreferenceSeq = 2 THEN 2
+            WHEN mp.PreferenceSeq = 3 THEN 1
+            ELSE 0
+        END AS points
+    FROM `EntertainmentAgency`.`EntertainmentAgency_scope`.`Musical_Preferences` AS mp
+    WHERE mp.StyleID IS NOT NULL
+),
+
+style_scores AS (
+    SELECT
+        wp.StyleID,
+        SUM(wp.points) AS total_weighted_score
+    FROM weighted_preferences wp
+    GROUP BY wp.StyleID
+),
+
+avg_score AS (
+    SELECT AVG(ss.total_weighted_score) AS avg_total_score
+    FROM style_scores ss
+)
+
+SELECT
+    ms.StyleID,
+    ms.StyleName,
+    ss.total_weighted_score,
+    ABS(ss.total_weighted_score - a.avg_total_score) AS abs_difference_from_avg
+FROM style_scores ss
+JOIN `EntertainmentAgency`.`EntertainmentAgency_scope`.`Musical_Styles` AS ms
+    ON ss.StyleID = ms.StyleID,
+avg_score AS a
+ORDER BY ms.StyleID;

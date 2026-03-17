@@ -1,0 +1,23 @@
+WITH movie_cast_gender AS (
+    SELECT
+        m.MID,
+        TO_NUMBER(SUBSTR(TRIM(m.year), LENGTH(TRIM(m.year)) - 4)) AS YEAR,
+        MAX(CASE WHEN p.Gender = "Female" THEN 0 ELSE 1 END) AS has_non_female
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`Movie` AS m
+    JOIN `Db-IMDB`.`Db-IMDB_scope`.`M_Cast` AS mc
+        ON m.MID = mc.MID
+    LEFT JOIN `Db-IMDB`.`Db-IMDB_scope`.`Person` AS p
+        ON TRIM(mc.PID) = p.PID
+    GROUP BY m.MID, m.year
+)
+
+SELECT
+    mcg.YEAR,
+    COUNT(*) AS TOTAL_MOVIES,
+    ROUND(
+        100.0 * SUM(CASE WHEN mcg.has_non_female = 0 THEN 1 ELSE 0 END) / COUNT(*),
+        2
+    ) AS PERCENTAGE_EXCLUSIVELY_FEMALE
+FROM movie_cast_gender AS mcg
+GROUP BY mcg.YEAR
+ORDER BY mcg.YEAR;

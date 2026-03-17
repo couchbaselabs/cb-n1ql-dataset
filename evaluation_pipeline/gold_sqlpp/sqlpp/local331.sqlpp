@@ -1,0 +1,39 @@
+WITH ordered AS (
+    SELECT
+        session,
+        CASE 
+            WHEN `path` = "/" THEN "/"
+            ELSE RTRIM(`path`, "/")
+        END AS page,
+        ROW_NUMBER() OVER (
+            PARTITION BY session
+            ORDER BY STR_TO_MILLIS(stamp), META().id
+        ) AS rn
+    FROM log.log_scope.activity_log
+),
+
+triples AS (
+    SELECT
+        a.session,
+        c.page AS third_page
+    FROM ordered a
+    JOIN ordered b
+        ON a.session = b.session
+        AND b.rn = a.rn + 1
+    JOIN ordered c
+        ON a.session = c.session
+        AND c.rn = a.rn + 2
+    WHERE a.page = "/detail"
+      AND b.page = "/detail"
+)
+
+SELECT
+    CASE 
+        WHEN third_page = "" THEN "/"
+        ELSE third_page
+    END AS third_page,
+    COUNT(*) AS occurrences
+FROM triples
+GROUP BY third_page
+ORDER BY occurrences DESC
+LIMIT 3;

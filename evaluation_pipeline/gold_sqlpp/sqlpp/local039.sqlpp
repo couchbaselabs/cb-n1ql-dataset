@@ -1,0 +1,23 @@
+SELECT
+    c.name AS category_name,
+    SUM(f.length) AS total_rental_hours
+FROM `Pagila`.`Pagila_scope`.`rental` AS r
+JOIN `Pagila`.`Pagila_scope`.`inventory` AS i
+    ON r.inventory_id = i.inventory_id
+JOIN `Pagila`.`Pagila_scope`.`film` AS f
+    ON i.film_id = f.film_id
+JOIN `Pagila`.`Pagila_scope`.`film_category` AS fc
+    ON f.film_id = fc.film_id
+JOIN `Pagila`.`Pagila_scope`.`category` AS c
+    ON fc.category_id = c.category_id
+JOIN `Pagila`.`Pagila_scope`.`customer` AS cu
+    ON r.customer_id = cu.customer_id
+JOIN `Pagila`.`Pagila_scope`.`address` AS a
+    ON cu.address_id = a.address_id
+JOIN `Pagila`.`Pagila_scope`.`city` AS ci
+    ON a.city_id = ci.city_id
+WHERE ci.city LIKE "A%"
+   OR ci.city LIKE "%-%"
+GROUP BY c.name
+ORDER BY total_rental_hours DESC
+LIMIT 1;

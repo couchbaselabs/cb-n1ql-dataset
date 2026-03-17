@@ -1,0 +1,31 @@
+WITH parsed AS (
+    SELECT 
+        ticker,
+        SUBSTR(market_date, 6, 4) || '-' || SUBSTR(market_date, 3, 2) || '-' || SUBSTR(market_date, 0, 2) AS dt,
+        CASE 
+            WHEN volume = '-' THEN 0
+            WHEN volume LIKE '%M' THEN TONUMBER(REPLACE(volume, 'M', '')) * 1000000
+            WHEN volume LIKE '%K' THEN TONUMBER(REPLACE(volume, 'K', '')) * 1000
+            ELSE TONUMBER(volume)
+        END AS vol_num
+    FROM bank_sales_trading.bank_sales_trading_scope.bitcoin_prices
+    WHERE SUBSTR(market_date, 3, 2) = '08' 
+      AND SUBSTR(market_date, 6, 4) = '2021'
+      AND TONUMBER(SUBSTR(market_date, 0, 2)) BETWEEN 1 AND 10
+),
+with_prev AS (
+    SELECT 
+        ticker,
+        dt,
+        vol_num,
+        LAG(CASE WHEN vol_num > 0 THEN vol_num END) OVER (PARTITION BY ticker ORDER BY dt) AS prev_vol
+    FROM parsed
+)
+SELECT 
+    ticker,
+    dt,
+    CASE WHEN prev_vol IS NOT NULL AND prev_vol > 0 
+        THEN (vol_num - prev_vol) * 100.0 / prev_vol 
+        ELSE NULL END AS daily_pct_change
+FROM with_prev
+ORDER BY ticker, dt;

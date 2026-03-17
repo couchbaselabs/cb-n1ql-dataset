@@ -1,0 +1,40 @@
+WITH motorcycle_collisions AS (
+    SELECT
+        c.case_id,
+        c.motorcyclist_killed_count
+    FROM California_Traffic_Collision.California_Traffic_Collision_scope.collisions AS c
+    WHERE c.motorcycle_collision = 1
+),
+
+motorcycle_party_helmet AS (
+    SELECT
+        p.case_id,
+        MAX(CASE
+            WHEN (LOWER(TOSTRING(p.party_safety_equipment_1)) LIKE "%motorcycle helmet%"
+                  AND LOWER(TOSTRING(p.party_safety_equipment_1)) NOT LIKE "%not used%")
+                 OR (LOWER(TOSTRING(p.party_safety_equipment_2)) LIKE "%motorcycle helmet%"
+                     AND LOWER(TOSTRING(p.party_safety_equipment_2)) NOT LIKE "%not used%")
+            THEN 1
+            ELSE 0
+        END) AS helmet_worn
+    FROM California_Traffic_Collision.California_Traffic_Collision_scope.parties AS p
+    WHERE p.case_id IN (
+        SELECT RAW mc.case_id FROM motorcycle_collisions mc
+    )
+    AND LOWER(TOSTRING(p.statewide_vehicle_type)) LIKE "%motorcycle%"
+    GROUP BY p.case_id
+)
+
+SELECT
+    CASE
+        WHEN mph.helmet_worn = 1 THEN "helmet_worn"
+        ELSE "no_helmet"
+    END AS helmet_usage,
+    ROUND(
+        SUM(mc.motorcyclist_killed_count) * 100.0 / COUNT(*),
+        6
+    ) AS fatality_percentage
+FROM motorcycle_collisions mc
+JOIN motorcycle_party_helmet mph ON mc.case_id = mph.case_id
+GROUP BY mph.helmet_worn
+ORDER BY mph.helmet_worn DESC;

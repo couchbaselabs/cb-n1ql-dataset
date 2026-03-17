@@ -1,0 +1,27 @@
+WITH txn_agg AS (
+    SELECT t.item_code, t.txn_date,
+        COUNT(*) AS txn_count,
+        SUM(t.`qty_sold(kg)`) AS total_qty,
+        SUM(t.`qty_sold(kg)` * t.`unit_selling_px_rmb/kg`) AS total_selling
+    FROM `bank_sales_trading`.`bank_sales_trading_scope`.`veg_txn_df` t
+    WHERE t.`sale/return` = 'sale'
+    GROUP BY t.item_code, t.txn_date
+)
+SELECT 
+    SUBSTR(ta.txn_date, 0, 4) AS `YEAR`,
+    c.category_name,
+    ROUND(SUM(ta.txn_count * w.`whsle_px_rmb-kg`) / SUM(ta.txn_count), 2) AS AVG_WHOLESALE_PRICE,
+    ROUND(MAX(w.`whsle_px_rmb-kg`), 2) AS MAX_WHOLESALE_PRICE,
+    ROUND(MIN(w.`whsle_px_rmb-kg`), 2) AS MIN_WHOLESALE_PRICE,
+    ROUND(MAX(w.`whsle_px_rmb-kg`) - MIN(w.`whsle_px_rmb-kg`), 2) AS WHOLESALE_PRICE_DIFFERENCE,
+    ROUND(SUM(ta.total_qty * w.`whsle_px_rmb-kg`), 2) AS TOTAL_WHOLESALE_PRICE,
+    ROUND(SUM(ta.total_selling), 2) AS TOTAL_SELLING_PRICE,
+    ROUND(SUM(ta.txn_count * l.`loss_rate_%`) / SUM(ta.txn_count), 2) AS AVG_LOSS_RATE,
+    ROUND(SUM(ta.total_qty * w.`whsle_px_rmb-kg` * l.`loss_rate_%` / 100.0), 2) AS TOTAL_LOSS,
+    ROUND(SUM(ta.total_selling) - SUM(ta.total_qty * w.`whsle_px_rmb-kg`) - SUM(ta.total_qty * w.`whsle_px_rmb-kg` * l.`loss_rate_%` / 100.0), 2) AS PROFIT
+FROM txn_agg ta
+JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`veg_whsle_df` w ON ta.item_code = w.item_code AND ta.txn_date = w.whsle_date
+JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`veg_cat` c ON ta.item_code = c.item_code
+JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`veg_loss_rate_df` l ON ta.item_code = l.item_code
+GROUP BY SUBSTR(ta.txn_date, 0, 4), c.category_name
+ORDER BY SUBSTR(ta.txn_date, 0, 4), c.category_name;

@@ -1,0 +1,73 @@
+WITH batsman_runs AS (
+    SELECT
+        m.season_id,
+        b.striker AS player_id,
+        SUM(bs.runs_scored) AS total_runs
+    FROM `IPL`.`IPL_scope`.`ball_by_ball` b
+    JOIN `IPL`.`IPL_scope`.`batsman_scored` bs
+        ON b.match_id = bs.match_id
+        AND b.innings_no = bs.innings_no
+        AND b.over_id = bs.over_id
+        AND b.ball_id = bs.ball_id
+    JOIN `IPL`.`IPL_scope`.`match` m
+        ON b.match_id = m.match_id
+    GROUP BY m.season_id, b.striker
+),
+
+ranked_batsmen AS (
+    SELECT
+        season_id,
+        player_id,
+        total_runs,
+        ROW_NUMBER() OVER (
+            PARTITION BY season_id
+            ORDER BY total_runs DESC, player_id ASC
+        ) AS rnk
+    FROM batsman_runs
+),
+
+bowler_wickets AS (
+    SELECT
+        m.season_id,
+        b.bowler AS player_id,
+        COUNT(*) AS total_wickets
+    FROM `IPL`.`IPL_scope`.`ball_by_ball` b
+    JOIN `IPL`.`IPL_scope`.`wicket_taken` w
+        ON b.match_id = w.match_id
+        AND b.innings_no = w.innings_no
+        AND b.over_id = w.over_id
+        AND b.ball_id = w.ball_id
+    JOIN `IPL`.`IPL_scope`.`match` m
+        ON b.match_id = m.match_id
+    WHERE w.kind_out NOT IN ["run out","hit wicket","retired hurt"]
+    GROUP BY m.season_id, b.bowler
+),
+
+ranked_bowlers AS (
+    SELECT
+        season_id,
+        player_id,
+        total_wickets,
+        ROW_NUMBER() OVER (
+            PARTITION BY season_id
+            ORDER BY total_wickets DESC, player_id ASC
+        ) AS rnk
+    FROM bowler_wickets
+)
+
+SELECT
+    rb.season_id,
+    pb.player_name AS BATSMAN_NAME,
+    rb.total_runs AS TOTAL_RUNS,
+    pw.player_name AS BOWLER_NAME,
+    rw.total_wickets AS TOTAL_WICKETS
+FROM ranked_batsmen rb
+JOIN ranked_bowlers rw
+    ON rb.season_id = rw.season_id
+    AND rb.rnk = rw.rnk
+LEFT JOIN `IPL`.`IPL_scope`.`player` pb
+    ON rb.player_id = pb.player_id
+LEFT JOIN `IPL`.`IPL_scope`.`player` pw
+    ON rw.player_id = pw.player_id
+WHERE rb.rnk <= 3
+ORDER BY rb.season_id, rb.rnk;

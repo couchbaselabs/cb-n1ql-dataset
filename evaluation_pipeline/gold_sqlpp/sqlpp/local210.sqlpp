@@ -1,0 +1,35 @@
+SELECT
+    h.hub_id,
+    h.hub_name,
+    h.hub_city,
+    feb.finished_orders AS february_finished_orders,
+    mar.finished_orders AS march_finished_orders,
+    ROUND(((mar.finished_orders - feb.finished_orders) * 100.0) / feb.finished_orders, 2) AS percent_increase
+FROM (
+    SELECT
+        s.hub_id,
+        COUNT(o.order_id) AS finished_orders
+    FROM `delivery_center`.`delivery_center_scope`.`orders` AS o
+    JOIN `delivery_center`.`delivery_center_scope`.`stores` AS s
+        ON o.store_id = s.store_id
+    WHERE o.order_status = "FINISHED"
+      AND o.order_created_month = 2
+    GROUP BY s.hub_id
+) AS feb
+JOIN (
+    SELECT
+        s.hub_id,
+        COUNT(o.order_id) AS finished_orders
+    FROM `delivery_center`.`delivery_center_scope`.`orders` AS o
+    JOIN `delivery_center`.`delivery_center_scope`.`stores` AS s
+        ON o.store_id = s.store_id
+    WHERE o.order_status = "FINISHED"
+      AND o.order_created_month = 3
+    GROUP BY s.hub_id
+) AS mar
+    ON feb.hub_id = mar.hub_id
+JOIN `delivery_center`.`delivery_center_scope`.`hubs` AS h
+    ON h.hub_id = feb.hub_id
+WHERE feb.finished_orders > 0
+  AND ((mar.finished_orders - feb.finished_orders) * 1.0 / feb.finished_orders) > 0.20
+ORDER BY percent_increase DESC;

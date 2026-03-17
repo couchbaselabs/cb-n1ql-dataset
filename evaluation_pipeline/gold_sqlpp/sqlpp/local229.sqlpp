@@ -1,0 +1,88 @@
+WITH ball_runs AS (
+    SELECT
+        b.match_id,
+        LEAST(b.striker, b.non_striker) AS p_low,
+        GREATEST(b.striker, b.non_striker) AS p_high,
+        b.striker,
+        bs.runs_scored
+    FROM `IPL`.`IPL_scope`.`ball_by_ball` b
+    JOIN `IPL`.`IPL_scope`.`batsman_scored` bs
+      ON b.match_id = bs.match_id
+      AND b.innings_no = bs.innings_no
+      AND b.over_id = bs.over_id
+      AND b.ball_id = bs.ball_id
+),
+
+partnerships AS (
+    SELECT
+        match_id,
+        p_low,
+        p_high,
+        SUM(CASE WHEN striker = p_low THEN runs_scored ELSE 0 END) AS runs_low,
+        SUM(CASE WHEN striker = p_high THEN runs_scored ELSE 0 END) AS runs_high
+    FROM ball_runs
+    GROUP BY match_id, p_low, p_high
+),
+
+partnership_totals AS (
+    SELECT
+        match_id,
+        p_low,
+        p_high,
+        runs_low,
+        runs_high,
+        runs_low + runs_high AS total_runs
+    FROM partnerships
+),
+
+ranked_partnerships AS (
+    SELECT
+        match_id,
+        p_low,
+        p_high,
+        runs_low,
+        runs_high,
+        total_runs,
+        RANK() OVER (
+            PARTITION BY match_id
+            ORDER BY total_runs DESC
+        ) AS rnk
+    FROM partnership_totals
+)
+
+SELECT
+    match_id,
+
+    CASE
+        WHEN runs_high > runs_low THEN p_high
+        WHEN runs_high < runs_low THEN p_low
+        WHEN p_high > p_low THEN p_high
+        ELSE p_low
+    END AS player1_id,
+
+    CASE
+        WHEN runs_high > runs_low THEN runs_high
+        WHEN runs_high < runs_low THEN runs_low
+        WHEN p_high > p_low THEN runs_high
+        ELSE runs_low
+    END AS player1_runs,
+
+    CASE
+        WHEN runs_high > runs_low THEN p_low
+        WHEN runs_high < runs_low THEN p_high
+        WHEN p_high > p_low THEN p_low
+        ELSE p_high
+    END AS player2_id,
+
+    CASE
+        WHEN runs_high > runs_low THEN runs_low
+        WHEN runs_high < runs_low THEN runs_high
+        WHEN p_high > p_low THEN runs_low
+        ELSE runs_high
+    END AS player2_runs,
+
+    total_runs AS partnership_runs
+
+FROM ranked_partnerships
+WHERE rnk = 1
+ORDER BY match_id;

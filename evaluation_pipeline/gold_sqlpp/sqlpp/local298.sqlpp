@@ -1,0 +1,48 @@
+WITH all_months AS (
+    SELECT DISTINCT SUBSTR(ct.txn_date, 1, 7) AS month_key
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions ct
+),
+all_customers AS (
+    SELECT DISTINCT ct.customer_id
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions ct
+),
+customer_months AS (
+    SELECT c.customer_id, m.month_key
+    FROM all_customers c
+    INNER JOIN all_months m ON 1=1
+),
+monthly_net AS (
+    SELECT cm.customer_id, cm.month_key,
+           COALESCE(SUM(CASE WHEN ct.txn_type = 'deposit' THEN ct.txn_amount
+                             ELSE -ct.txn_amount END), 0) AS net_amount
+    FROM customer_months cm
+    LEFT JOIN bank_sales_trading.bank_sales_trading_scope.customer_transactions ct
+      ON cm.customer_id = ct.customer_id AND SUBSTR(ct.txn_date, 1, 7) = cm.month_key
+    GROUP BY cm.customer_id, cm.month_key
+),
+closing_balances AS (
+    SELECT mn.customer_id, mn.month_key,
+           SUM(mn.net_amount) OVER (PARTITION BY mn.customer_id ORDER BY mn.month_key) AS closing_balance
+    FROM monthly_net mn
+),
+adjusted AS (
+    SELECT cb.customer_id, cb.month_key,
+           CASE WHEN cb.closing_balance < 0 THEN 0 ELSE cb.closing_balance END AS adj_balance
+    FROM closing_balances cb
+),
+monthly_totals AS (
+    SELECT a.month_key, SUM(a.adj_balance) AS total_balance
+    FROM adjusted a
+    GROUP BY a.month_key
+),
+labeled AS (
+    SELECT mt.month_key,
+           mt.total_balance,
+           LEAD(mt.month_key) OVER (ORDER BY mt.month_key) AS next_month_key
+    FROM monthly_totals mt
+)
+SELECT lb.next_month_key || '-01' AS month,
+       lb.total_balance AS total_balance_prev_month
+FROM labeled lb
+WHERE lb.next_month_key IS NOT NULL
+ORDER BY lb.month_key;

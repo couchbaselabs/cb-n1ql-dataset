@@ -1,0 +1,62 @@
+WITH monthly_interest AS (
+    SELECT
+        im.month_year,
+        im._year,
+        im._month,
+        m.interest_name,
+        AVG(im.composition / NULLIF(im.index_value, 0)) AS avg_composition
+    FROM `bank_sales_trading`.`bank_sales_trading_scope`.`interest_metrics` AS im
+    JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`interest_map` AS m
+        ON im.interest_id = m.id
+    WHERE im._year IS NOT NULL
+      AND im._month IS NOT NULL
+      AND (
+            (im._year = 2018 AND im._month >= 9)
+            OR (im._year = 2019 AND im._month <= 8)
+          )
+      AND im.interest_id IS NOT NULL
+      AND im.index_value IS NOT NULL
+      AND im.composition IS NOT NULL
+    GROUP BY im.month_year, im._year, im._month, m.interest_name
+),
+ranked_monthly AS (
+    SELECT
+        mi.*,
+        ROW_NUMBER() OVER (
+            PARTITION BY mi._year, mi._month
+            ORDER BY mi.avg_composition DESC, mi.interest_name
+        ) AS rn
+    FROM monthly_interest AS mi
+),
+monthly_max AS (
+    SELECT
+        month_year,
+        _year,
+        _month,
+        interest_name,
+        avg_composition AS max_index_composition
+    FROM ranked_monthly
+    WHERE rn = 1
+)
+SELECT
+    month_year AS `date`,
+    interest_name,
+    max_index_composition,
+    AVG(max_index_composition) OVER (
+        ORDER BY _year, _month
+        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+    ) AS rolling_3_month_avg,
+    LAG(interest_name, 1) OVER (
+        ORDER BY _year, _month
+    ) AS one_month_ago_interest_name,
+    LAG(max_index_composition, 1) OVER (
+        ORDER BY _year, _month
+    ) AS one_month_ago_max_index_composition,
+    LAG(interest_name, 2) OVER (
+        ORDER BY _year, _month
+    ) AS two_months_ago_interest_name,
+    LAG(max_index_composition, 2) OVER (
+        ORDER BY _year, _month
+    ) AS two_months_ago_max_index_composition
+FROM monthly_max
+ORDER BY _year, _month;

@@ -1,0 +1,60 @@
+WITH italy_customers AS (
+    SELECT cu.cust_id
+    FROM complex_oracle.complex_oracle_scope.customers AS cu
+    WHERE cu.country_id = (
+        SELECT RAW co.country_id
+        FROM complex_oracle.complex_oracle_scope.countries AS co
+        WHERE co.country_name = "Italy"
+    )[0]
+),
+
+dec_2021_times AS (
+    SELECT t.time_id
+    FROM complex_oracle.complex_oracle_scope.times AS t
+    WHERE t.calendar_year = 2021 AND t.calendar_month_number = 12
+),
+
+customer_profits AS (
+    SELECT
+        s.cust_id,
+        SUM(s.quantity_sold * (co.unit_price - co.unit_cost)) AS total_profit
+    FROM complex_oracle.complex_oracle_scope.sales AS s
+    JOIN complex_oracle.complex_oracle_scope.costs AS co
+        ON s.prod_id = co.prod_id
+        AND s.time_id = co.time_id
+        AND s.channel_id = co.channel_id
+        AND s.promo_id = co.promo_id
+    WHERE s.cust_id IN (SELECT RAW ic.cust_id FROM italy_customers ic)
+      AND s.time_id IN (SELECT RAW dt.time_id FROM dec_2021_times dt)
+    GROUP BY s.cust_id
+),
+
+profit_range AS (
+    SELECT
+        MIN(cp.total_profit) AS min_p,
+        MAX(cp.total_profit) AS max_p,
+        (MAX(cp.total_profit) - MIN(cp.total_profit)) / 10.0 AS bucket_width
+    FROM customer_profits cp
+),
+
+bucketed AS (
+    SELECT
+        cp.cust_id,
+        cp.total_profit,
+        CASE
+            WHEN cp.total_profit = (SELECT RAW pr.max_p FROM profit_range pr)[0]
+            THEN 10
+            ELSE FLOOR((cp.total_profit - (SELECT RAW pr.min_p FROM profit_range pr)[0])
+                       / (SELECT RAW pr.bucket_width FROM profit_range pr)[0]) + 1
+        END AS bucket_num
+    FROM customer_profits cp
+)
+
+SELECT
+    b.bucket_num * 1.0 AS BUCKET_NUMBER,
+    COUNT(*) AS CUSTOMER_COUNT,
+    MIN(b.total_profit) AS MIN_PROFIT_IN_BUCKET,
+    MAX(b.total_profit) AS MAX_PROFIT_IN_BUCKET
+FROM bucketed b
+GROUP BY b.bucket_num
+ORDER BY b.bucket_num;

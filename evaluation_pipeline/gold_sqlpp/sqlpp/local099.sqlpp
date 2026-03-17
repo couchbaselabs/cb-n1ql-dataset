@@ -1,0 +1,36 @@
+WITH actor_director_counts AS (
+    SELECT
+        TRIM(mc.PID) AS actor_pid,
+        TRIM(md.PID) AS director_pid,
+        COUNT(DISTINCT mc.MID) AS film_count
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`M_Cast` AS mc
+    JOIN `Db-IMDB`.`Db-IMDB_scope`.`M_Director` AS md
+        ON mc.MID = md.MID
+    GROUP BY TRIM(mc.PID), TRIM(md.PID)
+),
+actor_max_counts AS (
+    SELECT
+        actor_pid,
+        MAX(film_count) AS max_film_count
+    FROM actor_director_counts
+    GROUP BY actor_pid
+),
+yash_chopra AS (
+    SELECT TRIM(PID) AS yash_pid
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`Person`
+    WHERE TRIM(Name) = "Yash Chopra"
+)
+SELECT COUNT(DISTINCT adc.actor_pid) AS actor_count
+FROM actor_director_counts AS adc
+JOIN actor_max_counts AS amc
+    ON adc.actor_pid = amc.actor_pid
+JOIN yash_chopra AS yc
+    ON adc.director_pid = yc.yash_pid
+WHERE adc.film_count = amc.max_film_count
+  AND NOT EXISTS (
+      SELECT 1
+      FROM actor_director_counts AS other
+      WHERE other.actor_pid = adc.actor_pid
+        AND other.director_pid != adc.director_pid
+        AND other.film_count = amc.max_film_count
+  );

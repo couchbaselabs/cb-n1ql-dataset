@@ -1,0 +1,44 @@
+WITH player_runs AS (
+    SELECT
+        bbb.striker AS player_id,
+        bbb.match_id,
+        SUM(bsc.runs_scored) AS total_runs
+    FROM IPL.IPL_scope.ball_by_ball AS bbb
+    JOIN IPL.IPL_scope.batsman_scored AS bsc
+        ON bbb.match_id = bsc.match_id
+        AND bbb.innings_no = bsc.innings_no
+        AND bbb.over_id = bsc.over_id
+        AND bbb.ball_id = bsc.ball_id
+    GROUP BY bbb.striker, bbb.match_id
+    HAVING SUM(bsc.runs_scored) >= 100
+),
+
+losing_teams AS (
+    SELECT
+        m.match_id,
+        CASE
+            WHEN m.match_winner = m.team_1 THEN m.team_2
+            ELSE m.team_1
+        END AS loser
+    FROM IPL.IPL_scope.`match` AS m
+),
+
+players_in_losing_teams AS (
+    SELECT
+        pr.player_id,
+        pr.match_id
+    FROM player_runs AS pr
+    JOIN losing_teams AS lt
+        ON pr.match_id = lt.match_id
+    JOIN IPL.IPL_scope.player_match AS pm
+        ON pr.player_id = pm.player_id
+        AND pr.match_id = pm.match_id
+        AND pm.team_id = lt.loser
+)
+
+SELECT DISTINCT
+    p.player_name
+FROM IPL.IPL_scope.player AS p
+JOIN players_in_losing_teams AS plt
+    ON p.player_id = plt.player_id
+ORDER BY p.player_name;

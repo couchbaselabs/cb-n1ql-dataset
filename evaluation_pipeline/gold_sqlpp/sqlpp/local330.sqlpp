@@ -1,0 +1,41 @@
+WITH session_bounds AS (
+    SELECT 
+        session,
+        MIN(STR_TO_MILLIS(stamp)) AS first_time,
+        MAX(STR_TO_MILLIS(stamp)) AS last_time
+    FROM log.log_scope.activity_log
+    GROUP BY session
+),
+
+landing_pages AS (
+    SELECT DISTINCT
+        a.session,
+        RTRIM(a.`path`, "/") AS `path`
+    FROM log.log_scope.activity_log AS a
+    JOIN session_bounds AS sb
+        ON a.session = sb.session
+    WHERE STR_TO_MILLIS(a.stamp) = sb.first_time
+),
+
+exit_pages AS (
+    SELECT DISTINCT
+        a.session,
+        RTRIM(a.`path`, "/") AS `path`
+    FROM log.log_scope.activity_log AS a
+    JOIN session_bounds AS sb
+        ON a.session = sb.session
+    WHERE STR_TO_MILLIS(a.stamp) = sb.last_time
+),
+
+all_pages AS (
+    SELECT session, `path` FROM landing_pages
+    UNION
+    SELECT session, `path` FROM exit_pages
+)
+
+SELECT 
+    `path`,
+    COUNT(DISTINCT session) AS session_count
+FROM all_pages
+GROUP BY `path`
+ORDER BY session_count DESC;

@@ -1,0 +1,27 @@
+WITH movie_years AS (
+    SELECT
+        SUBSTR(TRIM(m.year), LENGTH(TRIM(m.year)) - 3) AS yr
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`Movie` AS m
+),
+
+start_years AS (
+    SELECT DISTINCT yr
+    FROM movie_years
+),
+
+period_counts AS (
+    SELECT
+        sy.yr AS start_year,
+        COUNT(*) AS total_movies
+    FROM start_years sy
+    JOIN movie_years my
+        ON TO_NUMBER(my.yr) BETWEEN TO_NUMBER(sy.yr) AND TO_NUMBER(sy.yr) + 9
+    GROUP BY sy.yr
+)
+
+SELECT
+    start_year,
+    total_movies
+FROM period_counts
+ORDER BY total_movies DESC
+LIMIT 1;

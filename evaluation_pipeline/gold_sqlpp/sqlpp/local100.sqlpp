@@ -1,0 +1,35 @@
+WITH shahrukh AS (
+    SELECT p.PID
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`Person` AS p
+    WHERE LOWER(TRIM(p.Name)) = "shah rukh khan"
+),
+
+srk_movies AS (
+    SELECT mc.MID
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`M_Cast` AS mc
+    WHERE TRIM(mc.PID) IN (SELECT RAW PID FROM shahrukh)
+),
+
+srk_coactors AS (
+    SELECT DISTINCT TRIM(mc.PID) AS PID
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`M_Cast` AS mc
+    WHERE mc.MID IN (SELECT RAW MID FROM srk_movies)
+      AND TRIM(mc.PID) NOT IN (SELECT RAW PID FROM shahrukh)
+),
+
+coactor_movies AS (
+    SELECT DISTINCT mc.MID
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`M_Cast` AS mc
+    WHERE TRIM(mc.PID) IN (SELECT RAW PID FROM srk_coactors)
+),
+
+distance2 AS (
+    SELECT DISTINCT TRIM(mc.PID) AS PID
+    FROM `Db-IMDB`.`Db-IMDB_scope`.`M_Cast` AS mc
+    WHERE mc.MID IN (SELECT RAW MID FROM coactor_movies)
+)
+
+SELECT COUNT(DISTINCT d.PID) AS shahrukh_number_2
+FROM distance2 d
+WHERE d.PID NOT IN (SELECT RAW PID FROM srk_coactors)
+  AND d.PID NOT IN (SELECT RAW PID FROM shahrukh);

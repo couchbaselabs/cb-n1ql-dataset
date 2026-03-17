@@ -1,0 +1,12 @@
+SELECT
+    o.employeeid AS employee_id,
+    SUM(CASE WHEN o.shippeddate IS NOT NULL AND o.shippeddate >= o.requireddate THEN 1 ELSE 0 END) AS late_orders,
+    ROUND(
+        100.0 * SUM(CASE WHEN o.shippeddate IS NOT NULL AND o.shippeddate >= o.requireddate THEN 1 ELSE 0 END) / COUNT(1),
+        2
+    ) AS late_order_percentage
+FROM `northwind`.`northwind_scope`.`orders` AS o
+GROUP BY o.employeeid
+HAVING COUNT(1) > 50
+ORDER BY late_order_percentage DESC, late_orders DESC
+LIMIT 3;

@@ -1,0 +1,15 @@
+SELECT
+    s.store_id,
+    s.store_name,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    COUNT(DISTINCT CASE
+        WHEN d.delivery_status = "DELIVERED" THEN o.order_id
+    END) / COUNT(DISTINCT o.order_id) AS delivered_ratio
+FROM `delivery_center`.`delivery_center_scope`.`orders` AS o
+JOIN `delivery_center`.`delivery_center_scope`.`stores` AS s
+    ON o.store_id = s.store_id
+LEFT JOIN `delivery_center`.`delivery_center_scope`.`deliveries` AS d
+    ON o.delivery_order_id = d.delivery_order_id
+GROUP BY s.store_id, s.store_name
+ORDER BY total_orders DESC
+LIMIT 1;

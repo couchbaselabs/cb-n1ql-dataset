@@ -1,0 +1,29 @@
+WITH product_events AS (
+    SELECT 
+        ph.page_id,
+        ph.page_name,
+        e.visit_id,
+        e.cookie_id,
+        MAX(CASE WHEN e.event_type = 1 THEN 1 ELSE 0 END) AS viewed,
+        MAX(CASE WHEN e.event_type = 2 THEN 1 ELSE 0 END) AS added_to_cart
+    FROM bank_sales_trading.bank_sales_trading_scope.shopping_cart_events e
+    JOIN bank_sales_trading.bank_sales_trading_scope.shopping_cart_page_hierarchy ph ON e.page_id = ph.page_id
+    WHERE ph.page_id NOT IN [1, 2, 12, 13]
+    GROUP BY ph.page_id, ph.page_name, e.visit_id, e.cookie_id
+),
+visit_purchases AS (
+    SELECT DISTINCT cookie_id, visit_id
+    FROM bank_sales_trading.bank_sales_trading_scope.shopping_cart_events
+    WHERE event_type = 3
+)
+SELECT 
+    pe.page_id,
+    pe.page_name,
+    SUM(pe.viewed) AS product_views,
+    SUM(pe.added_to_cart) AS added_to_cart,
+    SUM(pe.added_to_cart) - SUM(CASE WHEN pe.added_to_cart = 1 AND vp.visit_id IS NOT NULL THEN 1 ELSE 0 END) AS left_in_cart,
+    SUM(CASE WHEN pe.added_to_cart = 1 AND vp.visit_id IS NOT NULL THEN 1 ELSE 0 END) AS purchases
+FROM product_events pe
+LEFT JOIN visit_purchases vp ON pe.cookie_id = vp.cookie_id AND pe.visit_id = vp.visit_id
+GROUP BY pe.page_id, pe.page_name
+ORDER BY pe.page_id;

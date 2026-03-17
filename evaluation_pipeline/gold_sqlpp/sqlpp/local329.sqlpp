@@ -1,0 +1,18 @@
+WITH input_times AS (
+    SELECT session, MIN(STR_TO_MILLIS(stamp)) AS input_time
+    FROM log.log_scope.form_log
+    WHERE `path` = "/regist/input"
+    GROUP BY session
+),
+confirm_times AS (
+    SELECT session, MIN(STR_TO_MILLIS(stamp)) AS confirm_time
+    FROM log.log_scope.form_log
+    WHERE `path` = "/regist/confirm"
+    GROUP BY session
+)
+
+SELECT COUNT(*) AS unique_sessions
+FROM input_times i
+JOIN confirm_times c
+ON i.session = c.session
+WHERE i.input_time < c.confirm_time;

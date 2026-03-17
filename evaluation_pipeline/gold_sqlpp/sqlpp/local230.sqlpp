@@ -1,0 +1,24 @@
+WITH top_genres AS (
+    SELECT g.genre, COUNT(DISTINCT g.movie_id) AS movie_count
+    FROM `imdb_movies`.`imdb_movies_scope`.`genre` AS g
+    JOIN `imdb_movies`.`imdb_movies_scope`.`ratings` AS r
+        ON g.movie_id = r.movie_id
+    WHERE r.avg_rating > 8
+    GROUP BY g.genre
+    ORDER BY movie_count DESC
+    LIMIT 3
+)
+SELECT n.name AS director_name, COUNT(DISTINCT dm.movie_id) AS movie_count
+FROM `imdb_movies`.`imdb_movies_scope`.`director_mapping` AS dm
+JOIN `imdb_movies`.`imdb_movies_scope`.`genre` AS g
+    ON dm.movie_id = g.movie_id
+JOIN `imdb_movies`.`imdb_movies_scope`.`ratings` AS r
+    ON dm.movie_id = r.movie_id
+JOIN top_genres AS tg
+    ON g.genre = tg.genre
+JOIN `imdb_movies`.`imdb_movies_scope`.`names` AS n
+    ON dm.name_id = n.id
+WHERE r.avg_rating > 8
+GROUP BY n.name
+ORDER BY movie_count DESC, director_name
+LIMIT 4;

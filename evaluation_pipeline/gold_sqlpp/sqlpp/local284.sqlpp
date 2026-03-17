@@ -1,0 +1,11 @@
+WITH stats AS (
+    SELECT AVG(v.`loss_rate_%`) AS avg_lr,
+        SQRT(AVG(POWER(v.`loss_rate_%`, 2)) - POWER(AVG(v.`loss_rate_%`), 2)) AS std_lr
+    FROM `bank_sales_trading`.`bank_sales_trading_scope`.`veg_loss_rate_df` v
+)
+SELECT s.avg_lr AS AVG_LOSS_RATE,
+    SUM(CASE WHEN v.`loss_rate_%` < s.avg_lr - s.std_lr THEN 1 ELSE 0 END) AS COUNT_BELOW,
+    SUM(CASE WHEN v.`loss_rate_%` >= s.avg_lr - s.std_lr AND v.`loss_rate_%` <= s.avg_lr + s.std_lr THEN 1 ELSE 0 END) AS COUNT_WITHIN,
+    SUM(CASE WHEN v.`loss_rate_%` > s.avg_lr + s.std_lr THEN 1 ELSE 0 END) AS COUNT_ABOVE
+FROM `bank_sales_trading`.`bank_sales_trading_scope`.`veg_loss_rate_df` v, stats s
+GROUP BY s.avg_lr;

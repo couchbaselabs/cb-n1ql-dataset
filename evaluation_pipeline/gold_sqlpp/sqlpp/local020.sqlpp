@@ -1,0 +1,50 @@
+WITH BowlerRuns AS (
+    SELECT
+        bb.bowler,
+        SUM(IFMISSING(bs.runs_scored,0) + IFMISSING(er.extra_runs,0)) AS runs_conceded
+    FROM IPL.IPL_scope.ball_by_ball AS bb
+    LEFT JOIN IPL.IPL_scope.batsman_scored AS bs
+        ON bb.match_id = bs.match_id
+        AND bb.innings_no = bs.innings_no
+        AND bb.over_id = bs.over_id
+        AND bb.ball_id = bs.ball_id
+    LEFT JOIN IPL.IPL_scope.extra_runs AS er
+        ON bb.match_id = er.match_id
+        AND bb.innings_no = er.innings_no
+        AND bb.over_id = er.over_id
+        AND bb.ball_id = er.ball_id
+    GROUP BY bb.bowler
+),
+
+BowlerWickets AS (
+    SELECT
+        bb.bowler,
+        COUNT(*) AS wickets
+    FROM IPL.IPL_scope.ball_by_ball AS bb
+    JOIN IPL.IPL_scope.wicket_taken AS wt
+        ON bb.match_id = wt.match_id
+        AND bb.innings_no = wt.innings_no
+        AND bb.over_id = wt.over_id
+        AND bb.ball_id = wt.ball_id
+    WHERE wt.kind_out NOT IN ["run out", "retired hurt", "obstructing the field"]
+    GROUP BY bb.bowler
+),
+
+BowlerAverage AS (
+    SELECT
+        r.bowler,
+        r.runs_conceded / w.wickets AS bowling_average
+    FROM BowlerRuns AS r
+    JOIN BowlerWickets AS w
+        ON r.bowler = w.bowler
+)
+
+SELECT
+    p.player_id AS bowler_id,
+    p.player_name AS bowler_name,
+    ba.bowling_average
+FROM BowlerAverage AS ba
+JOIN IPL.IPL_scope.player AS p
+    ON ba.bowler = p.player_id
+ORDER BY ba.bowling_average ASC
+LIMIT 1;

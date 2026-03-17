@@ -1,0 +1,31 @@
+WITH monthly_net AS (
+    SELECT ct.customer_id,
+           SUBSTR(ct.txn_date, 1, 7) AS month_key,
+           SUM(CASE WHEN ct.txn_type = 'deposit' THEN ct.txn_amount
+                    WHEN ct.txn_type = 'withdrawal' THEN -ct.txn_amount
+                    ELSE 0 END) AS net_amount
+    FROM bank_sales_trading.bank_sales_trading_scope.customer_transactions ct
+    GROUP BY ct.customer_id, SUBSTR(ct.txn_date, 1, 7)
+),
+closing_balances AS (
+    SELECT mn.customer_id, mn.month_key,
+           SUM(mn.net_amount) OVER (PARTITION BY mn.customer_id ORDER BY mn.month_key) AS closing_balance
+    FROM monthly_net mn
+),
+with_prev AS (
+    SELECT cb.customer_id, cb.month_key, cb.closing_balance,
+           LAG(cb.closing_balance) OVER (PARTITION BY cb.customer_id ORDER BY cb.month_key) AS prev_balance,
+           ROW_NUMBER() OVER (PARTITION BY cb.customer_id ORDER BY cb.month_key DESC) AS rn
+    FROM closing_balances cb
+),
+latest AS (
+    SELECT wp.customer_id, wp.closing_balance, wp.prev_balance,
+           CASE WHEN wp.prev_balance IS NULL THEN NULL
+                WHEN wp.prev_balance = 0 THEN wp.closing_balance * 100
+                ELSE (wp.closing_balance - wp.prev_balance) * 100.0 / wp.prev_balance END AS growth_rate
+    FROM with_prev wp
+    WHERE wp.rn = 1
+)
+SELECT 100.0 * SUM(CASE WHEN l.growth_rate > 5 THEN 1 ELSE 0 END) /
+       SUM(CASE WHEN l.growth_rate IS NOT NULL THEN 1 ELSE 0 END) AS pct_customers_growth_gt_5
+FROM latest l;
