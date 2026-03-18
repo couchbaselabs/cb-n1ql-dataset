@@ -1,0 +1,35 @@
+WITH match_score AS (
+    SELECT
+        M.id,
+        M.league_id,
+        M.home_team_api_id AS team_api_id,
+        CASE WHEN M.home_team_goal > M.away_team_goal THEN 1 ELSE 0 END AS win
+    FROM `EU_soccer`.`EU_soccer_scope`.`Match` M
+
+    UNION ALL
+
+    SELECT
+        M.id,
+        M.league_id,
+        M.away_team_api_id AS team_api_id,
+        CASE WHEN M.away_team_goal > M.home_team_goal THEN 1 ELSE 0 END AS win
+    FROM `EU_soccer`.`EU_soccer_scope`.`Match` M
+),
+team_wins AS (
+    SELECT
+        L.name AS league,
+        T.team_long_name AS team,
+        SUM(ms.win) AS wins,
+        ROW_NUMBER() OVER (PARTITION BY L.name ORDER BY SUM(ms.win) ASC) AS rn
+    FROM match_score ms
+    JOIN `EU_soccer`.`EU_soccer_scope`.`Team` T ON ms.team_api_id = T.team_api_id
+    JOIN `EU_soccer`.`EU_soccer_scope`.`League` L ON ms.league_id = L.id
+    GROUP BY L.name, T.team_long_name
+)
+SELECT
+    league,
+    team,
+    wins
+FROM team_wins
+WHERE rn = 1
+ORDER BY league;

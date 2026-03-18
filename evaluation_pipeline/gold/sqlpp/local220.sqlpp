@@ -1,0 +1,59 @@
+WITH match_results AS (
+    SELECT m.id AS match_id,
+           m.home_team_goal, m.away_team_goal,
+           m.home_player_1, m.home_player_2, m.home_player_3, m.home_player_4,
+           m.home_player_5, m.home_player_6, m.home_player_7, m.home_player_8,
+           m.home_player_9, m.home_player_10, m.home_player_11,
+           m.away_player_1, m.away_player_2, m.away_player_3, m.away_player_4,
+           m.away_player_5, m.away_player_6, m.away_player_7, m.away_player_8,
+           m.away_player_9, m.away_player_10, m.away_player_11
+    FROM `EU_soccer`.`EU_soccer_scope`.`Match` m
+    WHERE m.home_team_goal != m.away_team_goal
+),
+home_results AS (
+    SELECT hp AS player_api_id,
+           CASE WHEN mr.home_team_goal > mr.away_team_goal THEN 'win' ELSE 'loss' END AS result
+    FROM match_results mr
+    UNNEST [mr.home_player_1, mr.home_player_2, mr.home_player_3, mr.home_player_4,
+            mr.home_player_5, mr.home_player_6, mr.home_player_7, mr.home_player_8,
+            mr.home_player_9, mr.home_player_10, mr.home_player_11] AS hp
+    WHERE hp IS NOT NULL
+),
+away_results AS (
+    SELECT ap AS player_api_id,
+           CASE WHEN mr.away_team_goal > mr.home_team_goal THEN 'win' ELSE 'loss' END AS result
+    FROM match_results mr
+    UNNEST [mr.away_player_1, mr.away_player_2, mr.away_player_3, mr.away_player_4,
+            mr.away_player_5, mr.away_player_6, mr.away_player_7, mr.away_player_8,
+            mr.away_player_9, mr.away_player_10, mr.away_player_11] AS ap
+    WHERE ap IS NOT NULL
+),
+all_results AS (
+    SELECT player_api_id, result FROM home_results
+    UNION ALL
+    SELECT player_api_id, result FROM away_results
+),
+player_counts AS (
+    SELECT ar.player_api_id, ar.result, COUNT(1) AS match_count
+    FROM all_results ar
+    GROUP BY ar.player_api_id, ar.result
+),
+top_win AS (
+    SELECT p.player_name, pc.match_count
+    FROM player_counts pc
+    JOIN `EU_soccer`.`EU_soccer_scope`.`Player` p ON p.player_api_id = pc.player_api_id
+    WHERE pc.result = 'win'
+    ORDER BY pc.match_count DESC
+    LIMIT 1
+),
+top_loss AS (
+    SELECT p.player_name, pc.match_count
+    FROM player_counts pc
+    JOIN `EU_soccer`.`EU_soccer_scope`.`Player` p ON p.player_api_id = pc.player_api_id
+    WHERE pc.result = 'loss'
+    ORDER BY pc.match_count DESC
+    LIMIT 1
+)
+SELECT 'most_wins' AS category, tw.player_name, tw.match_count FROM top_win tw
+UNION ALL
+SELECT 'most_losses' AS category, tl.player_name, tl.match_count FROM top_loss tl;

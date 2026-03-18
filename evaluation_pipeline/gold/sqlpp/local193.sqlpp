@@ -1,0 +1,42 @@
+WITH customer_first_payment AS (
+    SELECT
+        p.customer_id,
+        MIN(p.payment_date) AS first_payment_date
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p
+    GROUP BY p.customer_id
+),
+customer_ltv AS (
+    SELECT
+        p.customer_id,
+        cfp.first_payment_date,
+        SUM(p.amount) AS lifetime_sales
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p
+    JOIN customer_first_payment cfp ON p.customer_id = cfp.customer_id
+    GROUP BY p.customer_id, cfp.first_payment_date
+    HAVING SUM(p.amount) > 0
+),
+customer_7day AS (
+    SELECT
+        p.customer_id,
+        SUM(p.amount) AS sales_7day
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p
+    JOIN customer_first_payment cfp ON p.customer_id = cfp.customer_id
+    WHERE (STR_TO_MILLIS(REPLACE(p.payment_date, ' ', 'T')) - STR_TO_MILLIS(REPLACE(cfp.first_payment_date, ' ', 'T'))) / 1000.0 <= 7 * 24 * 3600
+    GROUP BY p.customer_id
+),
+customer_30day AS (
+    SELECT
+        p.customer_id,
+        SUM(p.amount) AS sales_30day
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p
+    JOIN customer_first_payment cfp ON p.customer_id = cfp.customer_id
+    WHERE (STR_TO_MILLIS(REPLACE(p.payment_date, ' ', 'T')) - STR_TO_MILLIS(REPLACE(cfp.first_payment_date, ' ', 'T'))) / 1000.0 <= 30 * 24 * 3600
+    GROUP BY p.customer_id
+)
+SELECT
+    ROUND(AVG(IFNULL(c7.sales_7day, 0) * 100.0 / cl.lifetime_sales), 2) AS avg_pct_7day,
+    ROUND(AVG(IFNULL(c30.sales_30day, 0) * 100.0 / cl.lifetime_sales), 2) AS avg_pct_30day,
+    ROUND(AVG(cl.lifetime_sales), 2) AS avg_ltv
+FROM customer_ltv cl
+LEFT JOIN customer_7day c7 ON cl.customer_id = c7.customer_id
+LEFT JOIN customer_30day c30 ON cl.customer_id = c30.customer_id;

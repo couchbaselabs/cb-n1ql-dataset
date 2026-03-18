@@ -1,0 +1,32 @@
+WITH annual_sales AS (
+    SELECT
+        soh.salespersonid AS Salesperson,
+        DATE_PART_STR(soh.orderdate, 'year') AS sales_year,
+        SUM(soh.totaldue) AS annual_total_sales
+    FROM `AdventureWorks`.`AdventureWorks_scope`.`salesorderheader` AS soh
+    WHERE soh.salespersonid IS NOT MISSING
+      AND soh.salespersonid IS NOT NULL
+    GROUP BY soh.salespersonid, DATE_PART_STR(soh.orderdate, 'year')
+),
+annual_quota AS (
+    SELECT
+        sqh.BusinessEntityID AS Salesperson,
+        DATE_PART_STR(sqh.QuotaDate, 'year') AS quota_year,
+        SUM(sqh.SalesQuota) AS annual_sales_quota
+    FROM `AdventureWorks`.`AdventureWorks_scope`.`SalesPersonQuotaHistory` AS sqh
+    GROUP BY sqh.BusinessEntityID, DATE_PART_STR(sqh.QuotaDate, 'year')
+),
+all_combos AS (
+    SELECT Salesperson, sales_year AS yr FROM annual_sales
+    UNION
+    SELECT Salesperson, quota_year AS yr FROM annual_quota
+)
+SELECT
+    ac.Salesperson,
+    ac.yr AS Year,
+    IFMISSINGORNULL(s.annual_total_sales, 0) - IFMISSINGORNULL(q.annual_sales_quota, 0) AS Difference
+FROM all_combos ac
+LEFT JOIN annual_sales s ON ac.Salesperson = s.Salesperson AND ac.yr = s.sales_year
+LEFT JOIN annual_quota q ON ac.Salesperson = q.Salesperson AND ac.yr = q.quota_year
+WHERE q.annual_sales_quota IS NOT MISSING OR s.annual_total_sales IS NOT MISSING
+ORDER BY ac.Salesperson, ac.yr;

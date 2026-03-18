@@ -1,0 +1,67 @@
+WITH monthly_counts AS (
+    SELECT
+        DATE_PART_STR(c.insert_date, 'year') AS yr,
+        DATE_PART_STR(c.insert_date, 'month') AS mon_num,
+        CASE DATE_PART_STR(c.insert_date, 'month')
+            WHEN 4 THEN 'April'
+            WHEN 5 THEN 'May'
+            WHEN 6 THEN 'June'
+        END AS month_name,
+        COUNT(*) AS monthly_total
+    FROM `city_legislation`.`city_legislation_scope`.`cities` AS c
+    WHERE DATE_PART_STR(c.insert_date, 'year') BETWEEN 2021 AND 2023
+      AND DATE_PART_STR(c.insert_date, 'month') IN [4, 5, 6]
+    GROUP BY DATE_PART_STR(c.insert_date, 'year'),
+             DATE_PART_STR(c.insert_date, 'month')
+),
+with_running AS (
+    SELECT
+        mc1.yr,
+        mc1.mon_num,
+        mc1.month_name,
+        mc1.monthly_total,
+        (
+            SELECT RAW SUM(mc2.monthly_total)
+            FROM monthly_counts AS mc2
+            WHERE mc2.mon_num = mc1.mon_num
+              AND mc2.yr <= mc1.yr
+        )[0] AS running_total
+    FROM monthly_counts AS mc1
+),
+with_prev AS (
+    SELECT
+        wr.yr,
+        wr.mon_num,
+        wr.month_name,
+        wr.monthly_total,
+        wr.running_total,
+        (
+            SELECT RAW wp1.monthly_total
+            FROM with_running AS wp1
+            WHERE wp1.mon_num = wr.mon_num
+              AND wp1.yr = wr.yr - 1
+        )[0] AS prev_monthly_total,
+        (
+            SELECT RAW wp2.running_total
+            FROM with_running AS wp2
+            WHERE wp2.mon_num = wr.mon_num
+              AND wp2.yr = wr.yr - 1
+        )[0] AS prev_running_total
+    FROM with_running AS wr
+)
+SELECT
+    yr AS year,
+    month_name AS month,
+    monthly_total,
+    running_total,
+    CASE
+        WHEN prev_monthly_total IS NULL OR prev_monthly_total = 0 THEN NULL
+        ELSE ROUND(((monthly_total - prev_monthly_total) * 100.0) / prev_monthly_total, 2)
+    END AS monthly_total_yoy_growth_pct,
+    CASE
+        WHEN prev_running_total IS NULL OR prev_running_total = 0 THEN NULL
+        ELSE ROUND(((running_total - prev_running_total) * 100.0) / prev_running_total, 2)
+    END AS running_total_yoy_growth_pct
+FROM with_prev
+WHERE yr IN [2022, 2023]
+ORDER BY year, mon_num;

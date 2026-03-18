@@ -1,0 +1,33 @@
+WITH monthly_payments AS (
+    SELECT
+        p.customer_id,
+        SUBSTR(p.payment_date, 6, 2) AS pay_mon,
+        SUM(p.amount) AS pay_amount
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p
+    GROUP BY p.customer_id, SUBSTR(p.payment_date, 6, 2)
+),
+top10_customer AS (
+    SELECT
+        mp.customer_id,
+        SUM(mp.pay_amount) AS total_payments
+    FROM monthly_payments mp
+    GROUP BY mp.customer_id
+    ORDER BY total_payments DESC
+    LIMIT 10
+),
+top10_monthly AS (
+    SELECT
+        mp.customer_id,
+        mp.pay_mon,
+        mp.pay_amount,
+        ABS(mp.pay_amount - LAG(mp.pay_amount) OVER (PARTITION BY mp.customer_id ORDER BY mp.pay_mon)) AS diff
+    FROM monthly_payments mp
+    JOIN top10_customer tc ON mp.customer_id = tc.customer_id
+)
+SELECT
+    pay_mon AS month,
+    ROUND(diff, 2) AS max_diff
+FROM top10_monthly
+WHERE diff IS NOT NULL
+ORDER BY diff DESC
+LIMIT 1;

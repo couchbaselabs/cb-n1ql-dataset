@@ -1,0 +1,32 @@
+WITH product_totals AS (
+    SELECT
+        s.product_code,
+        SUM(s.sold_quantity) AS total_quantity
+    FROM `education_business`.`education_business_scope`.`hardware_fact_sales_monthly` AS s
+    WHERE s.`date` >= '2021-01-01' AND s.`date` < '2022-01-01'
+    GROUP BY s.product_code
+),
+product_with_div AS (
+    SELECT
+        pt.product_code,
+        pd.division,
+        pt.total_quantity
+    FROM product_totals AS pt
+    JOIN `education_business`.`education_business_scope`.`hardware_dim_product` AS pd
+        ON pt.product_code = pd.product_code
+),
+ranked_products AS (
+    SELECT
+        division,
+        product_code,
+        total_quantity,
+        ROW_NUMBER() OVER (PARTITION BY division ORDER BY total_quantity DESC) AS product_rank
+    FROM product_with_div
+)
+SELECT
+    division,
+    AVG(total_quantity) AS OVERALL_AVG_QUANTITY_SOLD
+FROM ranked_products
+WHERE product_rank <= 3
+GROUP BY division
+ORDER BY division

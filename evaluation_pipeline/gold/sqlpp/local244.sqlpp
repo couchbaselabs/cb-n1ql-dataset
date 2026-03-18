@@ -1,0 +1,34 @@
+WITH track_stats AS (
+    SELECT
+        (SELECT RAW MIN(t.Milliseconds) FROM `music`.`music_scope`.`Track` AS t)[0] AS min_ms,
+        (SELECT RAW AVG(t.Milliseconds) FROM `music`.`music_scope`.`Track` AS t)[0] AS avg_ms,
+        (SELECT RAW MAX(t.Milliseconds) FROM `music`.`music_scope`.`Track` AS t)[0] AS max_ms
+),
+classified_tracks AS (
+    SELECT
+        t.TrackId,
+        t.Milliseconds,
+        CASE
+            WHEN t.Milliseconds < ((s.min_ms + s.avg_ms) / 2) THEN 'short'
+            WHEN t.Milliseconds < ((s.avg_ms + s.max_ms) / 2) THEN 'medium'
+            ELSE 'long'
+        END AS CATEGORY
+    FROM `music`.`music_scope`.`Track` AS t
+    JOIN track_stats AS s
+        ON 1 = 1
+)
+SELECT
+    ct.CATEGORY,
+    MIN(ct.Milliseconds) / 60000.0 AS MIN_DURATION_MINUTES,
+    MAX(ct.Milliseconds) / 60000.0 AS MAX_DURATION_MINUTES,
+    SUM(il.UnitPrice * il.Quantity) AS TOTAL_REVENUE
+FROM classified_tracks AS ct
+JOIN `music`.`music_scope`.`InvoiceLine` AS il
+    ON il.TrackId = ct.TrackId
+GROUP BY ct.CATEGORY
+ORDER BY CASE ct.CATEGORY
+    WHEN 'long' THEN 1
+    WHEN 'medium' THEN 2
+    WHEN 'short' THEN 3 
+    ELSE 4
+END;

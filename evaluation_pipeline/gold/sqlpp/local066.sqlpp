@@ -1,0 +1,46 @@
+WITH delivered_pizzas AS (
+    SELECT co.order_id, co.pizza_id, co.exclusions, co.extras,
+        META(co).id AS doc_id
+    FROM `modern_data`.`modern_data_scope`.`pizza_clean_customer_orders` AS co
+    JOIN `modern_data`.`modern_data_scope`.`pizza_clean_runner_orders` AS ro
+        ON co.order_id = ro.order_id
+    WHERE ro.cancellation IS NULL
+),
+base_toppings AS (
+    SELECT d.doc_id, TONUMBER(t) AS topping_id
+    FROM delivered_pizzas AS d
+    JOIN `modern_data`.`modern_data_scope`.`pizza_recipes` AS pr
+        ON d.pizza_id = pr.pizza_id
+    UNNEST SPLIT(REPLACE(pr.toppings, ' ', ''), ',') AS t
+),
+exclusion_list AS (
+    SELECT d.doc_id, TONUMBER(e) AS exc_topping
+    FROM delivered_pizzas AS d
+    UNNEST SPLIT(REPLACE(d.exclusions, ' ', ''), ',') AS e
+    WHERE d.exclusions IS NOT NULL
+),
+filtered_base AS (
+    SELECT bt.topping_id
+    FROM base_toppings AS bt
+    WHERE NOT EXISTS (
+        SELECT 1 FROM exclusion_list AS el
+        WHERE el.doc_id = bt.doc_id AND el.exc_topping = bt.topping_id
+    )
+),
+extra_list AS (
+    SELECT TONUMBER(x) AS topping_id
+    FROM delivered_pizzas AS d
+    UNNEST SPLIT(REPLACE(d.extras, ' ', ''), ',') AS x
+    WHERE d.extras IS NOT NULL
+),
+all_toppings AS (
+    SELECT topping_id FROM filtered_base
+    UNION ALL
+    SELECT topping_id FROM extra_list
+)
+SELECT pt.topping_name, COUNT(1) AS TOTAL_QUANTITY
+FROM all_toppings AS alt
+JOIN `modern_data`.`modern_data_scope`.`pizza_toppings` AS pt
+    ON alt.topping_id = pt.topping_id
+GROUP BY pt.topping_name
+ORDER BY pt.topping_name

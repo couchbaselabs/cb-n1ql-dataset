@@ -1,0 +1,43 @@
+WITH english_completed AS (
+    SELECT
+        st.StudLastName,
+        ss.Grade
+    FROM `school_scheduling`.`school_scheduling_scope`.`Student_Schedules` AS ss
+    JOIN `school_scheduling`.`school_scheduling_scope`.`Students` AS st
+        ON ss.StudentID = st.StudentID
+    JOIN `school_scheduling`.`school_scheduling_scope`.`Classes` AS c
+        ON ss.ClassID = c.ClassID
+    JOIN `school_scheduling`.`school_scheduling_scope`.`Subjects` AS sub
+        ON c.SubjectID = sub.SubjectID
+    WHERE ss.ClassStatus = 2
+      AND sub.CategoryID = "ENG"
+),
+ranked AS (
+    SELECT
+        ec1.StudLastName,
+        ec1.Grade,
+        (SELECT RAW COUNT(1) FROM english_completed AS ec2 WHERE ec2.Grade >= ec1.Grade)[0] AS grade_rank,
+        (SELECT RAW COUNT(1) FROM english_completed)[0] AS total_students
+    FROM english_completed AS ec1
+)
+SELECT 
+    StudLastName,
+    Grade,
+    CASE
+        WHEN (grade_rank * 1.0 / total_students) <= 0.20 THEN "First"
+        WHEN (grade_rank * 1.0 / total_students) <= 0.40 THEN "Second"
+        WHEN (grade_rank * 1.0 / total_students) <= 0.60 THEN "Third"
+        WHEN (grade_rank * 1.0 / total_students) <= 0.80 THEN "Fourth"
+        ELSE "Fifth"
+    END AS QUINTILE
+FROM ranked
+ORDER BY
+    CASE
+        WHEN (grade_rank * 1.0 / total_students) <= 0.20 THEN 1
+        WHEN (grade_rank * 1.0 / total_students) <= 0.40 THEN 2
+        WHEN (grade_rank * 1.0 / total_students) <= 0.60 THEN 3
+        WHEN (grade_rank * 1.0 / total_students) <= 0.80 THEN 4
+        ELSE 5
+    END,
+    Grade DESC,
+    StudLastName;

@@ -1,0 +1,77 @@
+WITH orders AS (
+    SELECT
+        ROW_NUMBER() OVER (ORDER BY co.order_id, co.pizza_id, co.exclusions NULLS FIRST, co.extras NULLS FIRST) AS row_id,
+        co.order_id,
+        co.customer_id,
+        co.order_time,
+        co.pizza_id,
+        co.exclusions,
+        co.extras,
+        pn.pizza_name,
+        META(co).id AS doc_id
+    FROM `modern_data`.`modern_data_scope`.`pizza_clean_customer_orders` AS co
+    JOIN `modern_data`.`modern_data_scope`.`pizza_names` AS pn
+        ON pn.pizza_id = co.pizza_id
+),
+base_toppings AS (
+    SELECT o.row_id, o.doc_id, o.order_id, o.customer_id, o.pizza_name,
+        o.exclusions, o.extras, TONUMBER(t) AS topping_id
+    FROM orders AS o
+    JOIN `modern_data`.`modern_data_scope`.`pizza_recipes` AS pr
+        ON o.pizza_id = pr.pizza_id
+    UNNEST SPLIT(REPLACE(pr.toppings, ' ', ''), ',') AS t
+),
+exclusion_ids AS (
+    SELECT o.doc_id, TONUMBER(e) AS exc_id
+    FROM orders AS o
+    UNNEST SPLIT(REPLACE(o.exclusions, ' ', ''), ',') AS e
+    WHERE o.exclusions IS NOT NULL
+),
+filtered_base AS (
+    SELECT bt.row_id, bt.doc_id, bt.order_id, bt.customer_id, bt.pizza_name, bt.topping_id
+    FROM base_toppings AS bt
+    WHERE NOT EXISTS (
+        SELECT 1 FROM exclusion_ids AS ei
+        WHERE ei.doc_id = bt.doc_id AND ei.exc_id = bt.topping_id
+    )
+),
+extra_toppings AS (
+    SELECT o.row_id, o.doc_id, o.order_id, o.customer_id, o.pizza_name,
+        TONUMBER(x) AS topping_id
+    FROM orders AS o
+    UNNEST SPLIT(REPLACE(o.extras, ' ', ''), ',') AS x
+    WHERE o.extras IS NOT NULL
+),
+final_toppings AS (
+    SELECT row_id, order_id, customer_id, pizza_name, topping_id FROM filtered_base
+    UNION ALL
+    SELECT row_id, order_id, customer_id, pizza_name, topping_id FROM extra_toppings
+),
+topping_counts AS (
+    SELECT ft.row_id, ft.order_id, ft.customer_id, ft.pizza_name,
+        pt.topping_name, COUNT(1) AS cnt
+    FROM final_toppings AS ft
+    JOIN `modern_data`.`modern_data_scope`.`pizza_toppings` AS pt
+        ON ft.topping_id = pt.topping_id
+    GROUP BY ft.row_id, ft.order_id, ft.customer_id, ft.pizza_name, pt.topping_name
+),
+topping_display AS (
+    SELECT tc.row_id, tc.order_id, tc.customer_id, tc.pizza_name,
+        CASE WHEN tc.cnt > 1 THEN TOSTRING(tc.cnt) || 'x ' || tc.topping_name
+             ELSE tc.topping_name END AS display_topping
+    FROM topping_counts AS tc
+),
+ingredient_arrays AS (
+    SELECT td.row_id, td.order_id, td.customer_id, td.pizza_name,
+        ARRAY_AGG(td.display_topping) AS toppings_arr
+    FROM topping_display AS td
+    GROUP BY td.row_id, td.order_id, td.customer_id, td.pizza_name
+)
+SELECT
+    ia.row_id AS ROW_ID,
+    ia.order_id,
+    ia.customer_id,
+    ia.pizza_name,
+    ia.pizza_name || ': ' || CONCAT2(', ', ARRAY_SORT(ia.toppings_arr)) AS FINAL_INGREDIENTS
+FROM ingredient_arrays AS ia
+ORDER BY ia.row_id ASC

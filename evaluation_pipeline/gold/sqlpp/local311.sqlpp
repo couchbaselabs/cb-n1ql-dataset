@@ -1,0 +1,41 @@
+WITH year_driver_points AS (
+    SELECT
+        r.year,
+        res.driver_id,
+        res.constructor_id,
+        SUM(res.points) AS driver_points
+    FROM `f1`.`f1_scope`.`results` res
+    JOIN `f1`.`f1_scope`.`races` r ON res.race_id = r.race_id
+    GROUP BY r.year, res.driver_id, res.constructor_id
+),
+year_constructor_points AS (
+    SELECT
+        r.year,
+        res.constructor_id,
+        SUM(res.points) AS constructor_points
+    FROM `f1`.`f1_scope`.`results` res
+    JOIN `f1`.`f1_scope`.`races` r ON res.race_id = r.race_id
+    GROUP BY r.year, res.constructor_id
+),
+best_driver_per_constructor AS (
+    SELECT
+        ydp.year,
+        ydp.constructor_id,
+        MAX(ydp.driver_points) AS best_driver_pts
+    FROM year_driver_points ydp
+    GROUP BY ydp.year, ydp.constructor_id
+),
+combined AS (
+    SELECT
+        bd.year,
+        c.name AS constructor,
+        bd.best_driver_pts + ycp.constructor_points AS combined_points,
+        ROW_NUMBER() OVER (ORDER BY bd.best_driver_pts + ycp.constructor_points DESC) AS rn
+    FROM best_driver_per_constructor bd
+    JOIN year_constructor_points ycp ON bd.year = ycp.year AND bd.constructor_id = ycp.constructor_id
+    JOIN `f1`.`f1_scope`.`constructors` c ON bd.constructor_id = c.constructor_id
+)
+SELECT year, constructor, combined_points
+FROM combined
+WHERE rn <= 3
+ORDER BY combined_points DESC;

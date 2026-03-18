@@ -1,0 +1,24 @@
+SELECT AVG(category_top_payment_count) AS avg_top_payment_count
+FROM (
+    SELECT product_category_name, MAX(payment_count) AS category_top_payment_count
+    FROM (
+        SELECT
+            oc.product_category_name,
+            op.payment_type,
+            COUNT(1) AS payment_count
+        FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_payments` AS op
+        JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+            ON op.order_id = o.order_id
+        JOIN (
+            SELECT DISTINCT oi.order_id, p.product_category_name
+            FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_items` AS oi
+            JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_products` AS p
+                ON oi.product_id = p.product_id
+            WHERE p.product_category_name IS NOT NULL
+        ) AS oc
+            ON o.order_id = oc.order_id
+        WHERE op.payment_type IS NOT NULL
+        GROUP BY oc.product_category_name, op.payment_type
+    ) AS category_payment_counts
+    GROUP BY product_category_name
+) AS top_counts;

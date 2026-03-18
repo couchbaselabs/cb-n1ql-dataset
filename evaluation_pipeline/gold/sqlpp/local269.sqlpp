@@ -1,0 +1,57 @@
+WITH contained_ids AS (
+    SELECT DISTINCT pr.contains_id AS packaging_id
+    FROM `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr
+),
+container_ids AS (
+    SELECT DISTINCT pr.packaging_id
+    FROM `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr
+),
+root_packages AS (
+    SELECT p.id AS top_id, p.name AS top_name
+    FROM `oracle_sql`.`oracle_sql_scope`.`packaging` p
+    JOIN container_ids ci ON p.id = ci.packaging_id
+    LEFT JOIN contained_ids cid ON p.id = cid.packaging_id
+    WHERE cid.packaging_id IS MISSING
+),
+l1 AS (
+    SELECT rp.top_id, rp.top_name, pr.contains_id, pr.qty
+    FROM root_packages rp
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr ON rp.top_id = pr.packaging_id
+),
+l2 AS (
+    SELECT l1.top_id, l1.top_name, pr.contains_id, l1.qty * pr.qty AS qty
+    FROM l1
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr ON l1.contains_id = pr.packaging_id
+),
+l3 AS (
+    SELECT l2.top_id, l2.top_name, pr.contains_id, l2.qty * pr.qty AS qty
+    FROM l2
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr ON l2.contains_id = pr.packaging_id
+),
+l4 AS (
+    SELECT l3.top_id, l3.top_name, pr.contains_id, l3.qty * pr.qty AS qty
+    FROM l3
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr ON l3.contains_id = pr.packaging_id
+),
+all_expansion AS (
+    SELECT top_id, top_name, contains_id, qty FROM l1
+    UNION ALL
+    SELECT top_id, top_name, contains_id, qty FROM l2
+    UNION ALL
+    SELECT top_id, top_name, contains_id, qty FROM l3
+    UNION ALL
+    SELECT top_id, top_name, contains_id, qty FROM l4
+),
+leaf_items AS (
+    SELECT ae.top_id, ae.contains_id, ae.qty
+    FROM all_expansion ae
+    LEFT JOIN container_ids ci2 ON ae.contains_id = ci2.packaging_id
+    WHERE ci2.packaging_id IS MISSING
+),
+combo_totals AS (
+    SELECT top_id, SUM(qty) AS total_qty
+    FROM leaf_items
+    GROUP BY top_id
+)
+SELECT ROUND(AVG(total_qty), 6) AS AVERAGE_TOTAL_QUANTITY
+FROM combo_totals;

@@ -1,0 +1,18 @@
+SELECT
+    AVG(city_total_payment) AS avg_total_payments,
+    AVG(delivered_order_count) AS avg_delivered_order_count
+FROM (
+    SELECT
+        c.customer_city,
+        SUM(p.payment_value) AS city_total_payment,
+        COUNT(DISTINCT o.order_id) AS delivered_order_count
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_customers` AS c
+        ON o.customer_id = c.customer_id
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_payments` AS p
+        ON o.order_id = p.order_id
+    WHERE o.order_status = "delivered"
+    GROUP BY c.customer_city
+    ORDER BY city_total_payment ASC
+    LIMIT 5
+) AS lowest_five_cities;

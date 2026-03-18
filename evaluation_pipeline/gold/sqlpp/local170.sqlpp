@@ -1,0 +1,61 @@
+WITH first_terms AS (
+    SELECT
+        l.id_bioguide,
+        l.gender,
+        MIN(t.term_start) AS first_term_start
+    FROM `city_legislation`.`city_legislation_scope`.`legislators` AS l
+    JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS t
+        ON l.id_bioguide = t.id_bioguide
+    WHERE l.gender IN ['M', 'F']
+    GROUP BY l.id_bioguide, l.gender
+),
+cohort_info AS (
+    SELECT
+        ft.id_bioguide,
+        ft.gender,
+        TONUMBER(DATE_PART_STR(ft.first_term_start, 'year')) AS cohort_year,
+        t.state
+    FROM first_terms AS ft
+    JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS t
+        ON ft.id_bioguide = t.id_bioguide
+       AND t.term_start = ft.first_term_start
+),
+retained AS (
+    SELECT
+        ci.state,
+        ci.gender,
+        ci.id_bioguide,
+        MAX(CASE WHEN t.term_start <= TOSTRING(ci.cohort_year)     || '-12-31'
+                  AND t.term_end   >= TOSTRING(ci.cohort_year)     || '-12-31' THEN 1 ELSE 0 END) AS yr0,
+        MAX(CASE WHEN t.term_start <= TOSTRING(ci.cohort_year + 2) || '-12-31'
+                  AND t.term_end   >= TOSTRING(ci.cohort_year + 2) || '-12-31' THEN 1 ELSE 0 END) AS yr2,
+        MAX(CASE WHEN t.term_start <= TOSTRING(ci.cohort_year + 4) || '-12-31'
+                  AND t.term_end   >= TOSTRING(ci.cohort_year + 4) || '-12-31' THEN 1 ELSE 0 END) AS yr4,
+        MAX(CASE WHEN t.term_start <= TOSTRING(ci.cohort_year + 6) || '-12-31'
+                  AND t.term_end   >= TOSTRING(ci.cohort_year + 6) || '-12-31' THEN 1 ELSE 0 END) AS yr6,
+        MAX(CASE WHEN t.term_start <= TOSTRING(ci.cohort_year + 8) || '-12-31'
+                  AND t.term_end   >= TOSTRING(ci.cohort_year + 8) || '-12-31' THEN 1 ELSE 0 END) AS yr8,
+        MAX(CASE WHEN t.term_start <= TOSTRING(ci.cohort_year + 10) || '-12-31'
+                  AND t.term_end   >= TOSTRING(ci.cohort_year + 10) || '-12-31' THEN 1 ELSE 0 END) AS yr10
+    FROM cohort_info AS ci
+    JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS t
+        ON ci.id_bioguide = t.id_bioguide
+    GROUP BY ci.state, ci.gender, ci.id_bioguide, ci.cohort_year
+),
+gender_state AS (
+    SELECT state, gender
+    FROM retained
+    GROUP BY state, gender
+    HAVING
+        SUM(yr0) > 0
+        AND SUM(yr2) > 0
+        AND SUM(yr4) > 0
+        AND SUM(yr6) > 0
+        AND SUM(yr8) > 0
+        AND SUM(yr10) > 0
+)
+SELECT gs.state
+FROM gender_state AS gs
+GROUP BY gs.state
+HAVING COUNT(DISTINCT gs.gender) = 2
+ORDER BY gs.state;

@@ -1,0 +1,51 @@
+WITH rep_sales AS (
+    SELECT
+        r.id AS region_id,
+        r.name AS region_name,
+        sr.id AS sales_rep_id,
+        sr.name AS sales_rep_name,
+        SUM(o.total_amt_usd) AS rep_total_sales
+    FROM `education_business`.`education_business_scope`.`web_region` AS r
+    JOIN `education_business`.`education_business_scope`.`web_sales_reps` AS sr
+        ON sr.region_id = r.id
+    JOIN `education_business`.`education_business_scope`.`web_accounts` AS a
+        ON a.sales_rep_id = sr.id
+    JOIN `education_business`.`education_business_scope`.`web_orders` AS o
+        ON o.account_id = a.id
+    GROUP BY r.id, r.name, sr.id, sr.name
+),
+region_totals AS (
+    SELECT
+        r.id AS region_id,
+        r.name AS region_name,
+        COUNT(o.id) AS number_of_orders,
+        SUM(o.total_amt_usd) AS total_sales_amount
+    FROM `education_business`.`education_business_scope`.`web_region` AS r
+    JOIN `education_business`.`education_business_scope`.`web_sales_reps` AS sr
+        ON sr.region_id = r.id
+    JOIN `education_business`.`education_business_scope`.`web_accounts` AS a
+        ON a.sales_rep_id = sr.id
+    JOIN `education_business`.`education_business_scope`.`web_orders` AS o
+        ON o.account_id = a.id
+    GROUP BY r.id, r.name
+),
+region_max AS (
+    SELECT
+        region_id,
+        MAX(rep_total_sales) AS max_rep_total_sales
+    FROM rep_sales
+    GROUP BY region_id
+)
+SELECT
+    rt.region_name,
+    rt.number_of_orders,
+    rt.total_sales_amount,
+    rs.sales_rep_name,
+    rs.rep_total_sales AS sales_rep_total_sales
+FROM region_totals AS rt
+JOIN region_max AS rm
+    ON rt.region_id = rm.region_id
+JOIN rep_sales AS rs
+    ON rs.region_id = rm.region_id
+   AND rs.rep_total_sales = rm.max_rep_total_sales
+ORDER BY rt.region_name, rs.sales_rep_name;

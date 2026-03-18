@@ -1,0 +1,57 @@
+WITH route_cities AS (
+    SELECT
+        dep_a.city AS from_city,
+        dep_a.coordinates AS from_coords,
+        arr_a.city AS to_city,
+        arr_a.coordinates AS to_coords
+    FROM `Airlines`.`Airlines_scope`.`flights` AS f
+    JOIN `Airlines`.`Airlines_scope`.`airports_data` AS dep_a ON f.departure_airport = dep_a.airport_code
+    JOIN `Airlines`.`Airlines_scope`.`airports_data` AS arr_a ON f.arrival_airport = arr_a.airport_code
+    WHERE dep_a.city != arr_a.city
+),
+parsed AS (
+    SELECT
+        from_city,
+        to_city,
+        TONUMBER(SPLIT(LTRIM(RTRIM(from_coords, ')'), '('), ',')[0]) AS from_lon,
+        TONUMBER(SPLIT(LTRIM(RTRIM(from_coords, ')'), '('), ',')[1]) AS from_lat,
+        TONUMBER(SPLIT(LTRIM(RTRIM(to_coords, ')'), '('), ',')[0]) AS to_lon,
+        TONUMBER(SPLIT(LTRIM(RTRIM(to_coords, ')'), '('), ',')[1]) AS to_lat
+    FROM route_cities
+),
+distances AS (
+    SELECT
+        CASE WHEN from_city < to_city THEN from_city ELSE to_city END AS city1,
+        CASE WHEN from_city < to_city THEN to_city ELSE from_city END AS city2,
+        2 * 6371 * ASIN(SQRT(
+            POWER(SIN((to_lat - from_lat) * PI() / 180.0 / 2), 2) +
+            COS(from_lat * PI() / 180.0) * COS(to_lat * PI() / 180.0) *
+            POWER(SIN((to_lon - from_lon) * PI() / 180.0 / 2), 2)
+        )) AS distance_km
+    FROM parsed
+),
+avg_distances AS (
+    SELECT city1, city2, AVG(distance_km) AS avg_distance
+    FROM distances
+    GROUP BY city1, city2
+),
+bucketed AS (
+    SELECT
+        CASE
+            WHEN avg_distance >= 6000 THEN '6000+'
+            WHEN avg_distance >= 5000 THEN '5000'
+            WHEN avg_distance >= 4000 THEN '4000'
+            WHEN avg_distance >= 3000 THEN '3000'
+            WHEN avg_distance >= 2000 THEN '2000'
+            WHEN avg_distance >= 1000 THEN '1000'
+            ELSE '0'
+        END AS distance_range
+    FROM avg_distances
+),
+range_counts AS (
+    SELECT distance_range, COUNT(*) AS pair_count
+    FROM bucketed
+    GROUP BY distance_range
+)
+SELECT MIN(pair_count) AS output
+FROM range_counts

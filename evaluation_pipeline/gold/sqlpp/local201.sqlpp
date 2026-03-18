@@ -1,0 +1,12 @@
+SELECT w1.words, COUNT(w2.words) AS anagram_count
+FROM `modern_data`.`modern_data_scope`.`word_list` AS w1
+JOIN `modern_data`.`modern_data_scope`.`word_list` AS w2
+  ON LENGTH(w1.words) = LENGTH(w2.words)
+ AND w1.words != w2.words
+ AND ARRAY_SORT(SPLIT(w1.words, "")) = ARRAY_SORT(SPLIT(w2.words, ""))
+WHERE w1.words LIKE "r%"
+  AND LENGTH(w1.words) BETWEEN 4 AND 5
+GROUP BY w1.words
+HAVING COUNT(w2.words) >= 1
+ORDER BY w1.words ASC
+LIMIT 10;

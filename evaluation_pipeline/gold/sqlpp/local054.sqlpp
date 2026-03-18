@@ -1,0 +1,29 @@
+WITH artist_sales AS (
+    SELECT al.ArtistId, SUM(ii.UnitPrice * ii.Quantity) AS total_sales
+    FROM `chinook`.`chinook_scope`.`invoice_items` AS ii
+    JOIN `chinook`.`chinook_scope`.`tracks` AS t
+        ON ii.TrackId = t.TrackId
+    JOIN `chinook`.`chinook_scope`.`albums` AS al
+        ON t.AlbumId = al.AlbumId
+    GROUP BY al.ArtistId
+),
+best_selling_artist AS (
+    SELECT a.ArtistId
+    FROM artist_sales AS a
+    ORDER BY a.total_sales DESC
+    LIMIT 1
+)
+SELECT c.FirstName, SUM(ii.UnitPrice * ii.Quantity) AS amount_spent
+FROM `chinook`.`chinook_scope`.`customers` AS c
+JOIN `chinook`.`chinook_scope`.`invoices` AS i
+    ON c.CustomerId = i.CustomerId
+JOIN `chinook`.`chinook_scope`.`invoice_items` AS ii
+    ON i.InvoiceId = ii.InvoiceId
+JOIN `chinook`.`chinook_scope`.`tracks` AS t
+    ON ii.TrackId = t.TrackId
+JOIN `chinook`.`chinook_scope`.`albums` AS al
+    ON t.AlbumId = al.AlbumId
+WHERE al.ArtistId IN (SELECT RAW ArtistId FROM best_selling_artist)
+GROUP BY c.CustomerId, c.FirstName
+HAVING SUM(ii.UnitPrice * ii.Quantity) < 1
+ORDER BY amount_spent ASC, c.FirstName ASC;

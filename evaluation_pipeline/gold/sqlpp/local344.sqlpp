@@ -1,0 +1,96 @@
+WITH pr AS (
+    SELECT DISTINCT race_id FROM `f1`.`f1_scope`.`pit_stops`
+),
+pit_laps AS (
+    SELECT DISTINCT race_id, driver_id, lap FROM `f1`.`f1_scope`.`pit_stops`
+),
+main_stats AS (
+    SELECT
+        SUM(CASE WHEN IFMISSINGORNULL(ps1.driver_id, NULL) IS NOT NULL
+              OR IFMISSINGORNULL(ps2.driver_id, NULL) IS NOT NULL
+             THEN o.positions_lost ELSE 0 END) AS p_cnt,
+        SUM(CASE WHEN o.lap = 1
+              AND IFMISSINGORNULL(ps1.driver_id, NULL) IS NULL
+              AND IFMISSINGORNULL(ps2.driver_id, NULL) IS NULL
+             THEN o.positions_lost ELSE 0 END) AS s_cnt,
+        SUM(CASE WHEN o.lap > 1
+              AND IFMISSINGORNULL(ps1.driver_id, NULL) IS NULL
+              AND IFMISSINGORNULL(ps2.driver_id, NULL) IS NULL
+             THEN o.positions_lost ELSE 0 END) AS t_cnt
+    FROM (
+        SELECT c.race_id, c.driver_id, c.lap, c.position - p.position AS positions_lost
+        FROM `f1`.`f1_scope`.`lap_times` c
+        JOIN `f1`.`f1_scope`.`lap_times` p
+            ON p.race_id = c.race_id AND p.driver_id = c.driver_id AND p.lap = c.lap - 1
+        JOIN pr ON pr.race_id = c.race_id
+        WHERE c.lap > 1 AND c.position > p.position
+        UNION ALL
+        SELECT lt.race_id, lt.driver_id, 1, lt.position - r.grid
+        FROM `f1`.`f1_scope`.`lap_times` lt
+        JOIN `f1`.`f1_scope`.`results` r ON r.race_id = lt.race_id AND r.driver_id = lt.driver_id
+        JOIN pr ON pr.race_id = lt.race_id
+        WHERE lt.lap = 1 AND r.grid > 0 AND lt.position > r.grid
+    ) o
+    LEFT JOIN pit_laps ps1 ON o.race_id = ps1.race_id AND o.driver_id = ps1.driver_id AND o.lap = ps1.lap
+    LEFT JOIN pit_laps ps2 ON o.race_id = ps2.race_id AND o.driver_id = ps2.driver_id AND (o.lap - 1) = ps2.lap
+),
+ext_stats AS (
+    SELECT
+        SUM(CASE WHEN IFMISSINGORNULL(ps1.driver_id, NULL) IS NOT NULL
+              OR IFMISSINGORNULL(ps2.driver_id, NULL) IS NOT NULL
+             THEN o.positions_lost ELSE 0 END) AS p_cnt,
+        SUM(CASE WHEN o.lap = 1
+              AND IFMISSINGORNULL(ps1.driver_id, NULL) IS NULL
+              AND IFMISSINGORNULL(ps2.driver_id, NULL) IS NULL
+             THEN o.positions_lost ELSE 0 END) AS s_cnt,
+        SUM(CASE WHEN o.lap > 1
+              AND IFMISSINGORNULL(ps1.driver_id, NULL) IS NULL
+              AND IFMISSINGORNULL(ps2.driver_id, NULL) IS NULL
+             THEN o.positions_lost ELSE 0 END) AS t_cnt
+    FROM (
+        SELECT c.race_id, c.driver_id, c.lap, c.position - p.position AS positions_lost
+        FROM `f1`.`f1_scope`.`lap_times_ext` c
+        JOIN `f1`.`f1_scope`.`lap_times_ext` p
+            ON p.race_id = c.race_id AND p.driver_id = c.driver_id AND p.lap = c.lap - 1
+        JOIN pr ON pr.race_id = c.race_id
+        WHERE c.lap > 1 AND c.position > p.position
+        UNION ALL
+        SELECT lt.race_id, lt.driver_id, 1, lt.position - r.grid
+        FROM `f1`.`f1_scope`.`lap_times_ext` lt
+        JOIN `f1`.`f1_scope`.`results` r ON r.race_id = lt.race_id AND r.driver_id = lt.driver_id
+        JOIN pr ON pr.race_id = lt.race_id
+        WHERE lt.lap = 1 AND r.grid > 0 AND lt.position > r.grid
+    ) o
+    LEFT JOIN pit_laps ps1 ON o.race_id = ps1.race_id AND o.driver_id = ps1.driver_id AND o.lap = ps1.lap
+    LEFT JOIN pit_laps ps2 ON o.race_id = ps2.race_id AND o.driver_id = ps2.driver_id AND (o.lap - 1) = ps2.lap
+),
+r_gains AS (
+    SELECT COUNT(*) AS cnt FROM (
+        SELECT ret.race_id, bp.driver_id
+        FROM `f1`.`f1_scope`.`retirements` ret
+        JOIN pr ON pr.race_id = ret.race_id
+        JOIN `f1`.`f1_scope`.`lap_times` rp ON ret.race_id = rp.race_id AND ret.driver_id = rp.driver_id AND rp.lap = ret.lap - 1
+        JOIN `f1`.`f1_scope`.`lap_times` bp ON ret.race_id = bp.race_id AND bp.lap = ret.lap - 1 AND bp.position > rp.position AND bp.driver_id != ret.driver_id
+        JOIN `f1`.`f1_scope`.`lap_times` bc ON ret.race_id = bc.race_id AND bc.driver_id = bp.driver_id AND bc.lap = ret.lap
+        WHERE ret.lap > 1
+        UNION ALL
+        SELECT ret.race_id, bg.driver_id
+        FROM `f1`.`f1_scope`.`retirements` ret
+        JOIN pr ON pr.race_id = ret.race_id
+        JOIN `f1`.`f1_scope`.`results` rg ON ret.race_id = rg.race_id AND ret.driver_id = rg.driver_id AND rg.grid > 0
+        JOIN `f1`.`f1_scope`.`results` bg ON ret.race_id = bg.race_id AND bg.grid > rg.grid AND bg.grid > 0 AND bg.driver_id != ret.driver_id
+        JOIN `f1`.`f1_scope`.`lap_times` bl ON ret.race_id = bl.race_id AND bl.driver_id = bg.driver_id AND bl.lap = 1
+        WHERE ret.lap = 1
+    ) t
+)
+SELECT 'P' AS overtake_type, m.p_cnt + IFMISSINGORNULL(e.p_cnt, 0) AS num_overtakes
+FROM main_stats m, ext_stats e
+UNION ALL
+SELECT 'R', r.cnt FROM r_gains r
+UNION ALL
+SELECT 'S', m.s_cnt + IFMISSINGORNULL(e.s_cnt, 0)
+FROM main_stats m, ext_stats e
+UNION ALL
+SELECT 'T', m.t_cnt + IFMISSINGORNULL(e.t_cnt, 0)
+FROM main_stats m, ext_stats e
+ORDER BY overtake_type;

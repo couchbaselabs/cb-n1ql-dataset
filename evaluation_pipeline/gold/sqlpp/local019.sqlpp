@@ -1,0 +1,34 @@
+WITH match_details AS (
+    SELECT
+        b.name AS titles,
+        m.duration AS match_duration,
+        ww.name AS wrestler1,
+        ll.name AS wrestler2,
+        ROW_NUMBER() OVER (PARTITION BY b.name ORDER BY m.duration ASC) AS rnk
+    FROM `WWE`.`WWE_scope`.`Matches` AS m
+    JOIN `WWE`.`WWE_scope`.`Belts` AS b
+        ON TONUMBER(m.title_id) = b.id
+    JOIN `WWE`.`WWE_scope`.`Wrestlers` AS ww
+        ON TONUMBER(m.winner_id) = ww.id
+    JOIN `WWE`.`WWE_scope`.`Wrestlers` AS ll
+        ON TONUMBER(m.loser_id) = ll.id
+    JOIN `WWE`.`WWE_scope`.`Cards` AS c
+        ON TONUMBER(m.card_id) = c.id
+    JOIN `WWE`.`WWE_scope`.`Promotions` AS p
+        ON TONUMBER(c.promotion_id) = p.id
+    WHERE p.name = 'NXT'
+      AND m.duration IS NOT NULL
+      AND m.duration != ""
+      AND b.name IS NOT NULL
+      AND b.name != ""
+      AND b.name NOT IN (
+          SELECT RAW b2.name
+          FROM `WWE`.`WWE_scope`.`Belts` AS b2
+          WHERE b2.name LIKE '%title change%'
+      )
+)
+SELECT wrestler1 AS WRESTLER1, wrestler2 AS WRESTLER2
+FROM match_details
+WHERE rnk = 1
+ORDER BY match_duration ASC
+LIMIT 1;

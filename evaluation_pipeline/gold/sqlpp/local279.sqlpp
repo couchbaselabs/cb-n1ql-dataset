@@ -1,0 +1,148 @@
+WITH base_inv AS (
+    SELECT
+        pm.product_id,
+        IFMISSINGORNULL(SUM(i.qty), 0) AS inv_2018_12,
+        pm.qty_minimum,
+        pm.qty_purchase
+    FROM `oracle_sql`.`oracle_sql_scope`.`product_minimums` pm
+    LEFT JOIN `oracle_sql`.`oracle_sql_scope`.`inventory` i ON pm.product_id = i.product_id
+    GROUP BY pm.product_id, pm.qty_minimum, pm.qty_purchase
+),
+monthly_sales_flat AS (
+    SELECT product_id, mth, qty
+    FROM `oracle_sql`.`oracle_sql_scope`.`monthly_sales`
+    WHERE mth LIKE '2019-%'
+),
+s01 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-01-01'),
+s02 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-02-01'),
+s03 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-03-01'),
+s04 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-04-01'),
+s05 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-05-01'),
+s06 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-06-01'),
+s07 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-07-01'),
+s08 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-08-01'),
+s09 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-09-01'),
+s10 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-10-01'),
+s11 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-11-01'),
+s12 AS (SELECT product_id, qty FROM monthly_sales_flat WHERE mth = '2019-12-01'),
+m01 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN b.inv_2018_12 - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN b.inv_2018_12 - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE b.inv_2018_12 - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM base_inv b LEFT JOIN s01 s ON b.product_id = s.product_id
+),
+m02 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m01 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s02 s ON b.product_id = s.product_id
+),
+m03 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m02 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s03 s ON b.product_id = s.product_id
+),
+m04 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m03 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s04 s ON b.product_id = s.product_id
+),
+m05 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m04 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s05 s ON b.product_id = s.product_id
+),
+m06 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m05 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s06 s ON b.product_id = s.product_id
+),
+m07 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m06 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s07 s ON b.product_id = s.product_id
+),
+m08 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m07 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s08 s ON b.product_id = s.product_id
+),
+m09 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m08 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s09 s ON b.product_id = s.product_id
+),
+m10 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m09 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s10 s ON b.product_id = s.product_id
+),
+m11 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m10 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s11 s ON b.product_id = s.product_id
+),
+m12 AS (
+    SELECT b.product_id, b.qty_minimum, b.qty_purchase,
+           CASE WHEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) < b.qty_minimum
+                THEN pm.end_inv - IFMISSINGORNULL(s.qty, 0) + b.qty_purchase
+                ELSE pm.end_inv - IFMISSINGORNULL(s.qty, 0) END AS end_inv
+    FROM m11 pm JOIN base_inv b ON pm.product_id = b.product_id
+    LEFT JOIN s12 s ON b.product_id = s.product_id
+),
+all_months AS (
+    SELECT product_id, '2019-01-01' AS `month`, end_inv, qty_minimum FROM m01 UNION ALL
+    SELECT product_id, '2019-02-01' AS `month`, end_inv, qty_minimum FROM m02 UNION ALL
+    SELECT product_id, '2019-03-01' AS `month`, end_inv, qty_minimum FROM m03 UNION ALL
+    SELECT product_id, '2019-04-01' AS `month`, end_inv, qty_minimum FROM m04 UNION ALL
+    SELECT product_id, '2019-05-01' AS `month`, end_inv, qty_minimum FROM m05 UNION ALL
+    SELECT product_id, '2019-06-01' AS `month`, end_inv, qty_minimum FROM m06 UNION ALL
+    SELECT product_id, '2019-07-01' AS `month`, end_inv, qty_minimum FROM m07 UNION ALL
+    SELECT product_id, '2019-08-01' AS `month`, end_inv, qty_minimum FROM m08 UNION ALL
+    SELECT product_id, '2019-09-01' AS `month`, end_inv, qty_minimum FROM m09 UNION ALL
+    SELECT product_id, '2019-10-01' AS `month`, end_inv, qty_minimum FROM m10 UNION ALL
+    SELECT product_id, '2019-11-01' AS `month`, end_inv, qty_minimum FROM m11 UNION ALL
+    SELECT product_id, '2019-12-01' AS `month`, end_inv, qty_minimum FROM m12
+),
+ranked AS (
+    SELECT
+        product_id,
+        `month`,
+        ABS(end_inv - qty_minimum) AS `absolute_difference`,
+        ROW_NUMBER() OVER(PARTITION BY product_id ORDER BY ABS(end_inv - qty_minimum) ASC, `month` ASC) AS rn
+    FROM all_months
+)
+SELECT product_id, `month`, `absolute_difference`
+FROM ranked
+WHERE rn = 1
+ORDER BY product_id;

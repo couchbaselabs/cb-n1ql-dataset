@@ -1,0 +1,41 @@
+WITH first_terms AS (
+    SELECT
+        lt.id_bioguide,
+        MIN(lt.term_start) AS first_term_start
+    FROM `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+    GROUP BY lt.id_bioguide
+),
+first_states AS (
+    SELECT
+        ft.id_bioguide,
+        lt.state
+    FROM first_terms AS ft
+    JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+        ON ft.id_bioguide = lt.id_bioguide
+       AND ft.first_term_start = lt.term_start
+),
+dec31_legislators AS (
+    SELECT DISTINCT
+        lt.id_bioguide
+    FROM `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+    WHERE TONUMBER(DATE_PART_STR(lt.term_start, 'year')) < TONUMBER(DATE_PART_STR(lt.term_end, 'year'))
+       OR lt.term_end >= DATE_PART_STR(lt.term_start, 'year') || '-12-31'
+),
+eligible_legislators AS (
+    SELECT DISTINCT
+        l.id_bioguide,
+        fs.state
+    FROM `city_legislation`.`city_legislation_scope`.`legislators` AS l
+    JOIN first_states AS fs
+        ON l.id_bioguide = fs.id_bioguide
+    JOIN dec31_legislators AS dl
+        ON l.id_bioguide = dl.id_bioguide
+    WHERE l.gender = 'F'
+)
+SELECT
+    state,
+    COUNT(DISTINCT id_bioguide) AS NUMBER_OF_LEGISLATORS
+FROM eligible_legislators
+GROUP BY state
+ORDER BY NUMBER_OF_LEGISLATORS DESC, state
+LIMIT 1;

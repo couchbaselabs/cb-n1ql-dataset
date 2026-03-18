@@ -1,0 +1,44 @@
+WITH first_rental AS (
+    SELECT
+        p.customer_id,
+        MIN(p.payment_date) AS first_payment_date
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p
+    GROUP BY p.customer_id
+),
+first_rental_payments AS (
+    SELECT p.customer_id, p.payment_date, p.rental_id
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p
+    JOIN first_rental fr ON p.customer_id = fr.customer_id AND p.payment_date = fr.first_payment_date
+),
+first_film AS (
+    SELECT
+        frp.customer_id,
+        f.rating AS first_movie_rating,
+        ROW_NUMBER() OVER(PARTITION BY frp.customer_id ORDER BY frp.rental_id) AS rn
+    FROM first_rental_payments frp
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`rental` r ON frp.rental_id = r.rental_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`inventory` inv ON r.inventory_id = inv.inventory_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`film` f ON inv.film_id = f.film_id
+),
+customer_first_rating AS (
+    SELECT customer_id, first_movie_rating
+    FROM first_film
+    WHERE rn = 1
+),
+customer_stats AS (
+    SELECT
+        p.customer_id,
+        SUM(p.amount) AS total_spent,
+        COUNT(*) - 1 AS subsequent_rentals
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p
+    GROUP BY p.customer_id
+)
+SELECT
+    cfr.first_movie_rating AS rating,
+    AVG(cs.total_spent) AS avg_total_spent,
+    AVG(cs.subsequent_rentals) AS avg_subsequent_rentals
+FROM customer_first_rating cfr
+JOIN customer_stats cs ON cfr.customer_id = cs.customer_id
+WHERE cfr.first_movie_rating IS NOT NULL
+GROUP BY cfr.first_movie_rating
+ORDER BY cfr.first_movie_rating;

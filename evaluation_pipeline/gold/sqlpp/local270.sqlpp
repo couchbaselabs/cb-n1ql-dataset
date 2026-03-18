@@ -1,0 +1,63 @@
+WITH contained_items AS (
+    SELECT DISTINCT pr.contains_id
+    FROM `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr
+),
+container_children AS (
+    SELECT DISTINCT pr.packaging_id
+    FROM `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr
+),
+top_levels AS (
+    SELECT p.id, p.name
+    FROM `oracle_sql`.`oracle_sql_scope`.`packaging` p
+    LEFT JOIN contained_items ci ON p.id = ci.contains_id
+    WHERE ci.contains_id IS MISSING
+),
+l1 AS (
+    SELECT t.id AS top_id, t.name AS top_name, pr.contains_id, pr.qty
+    FROM top_levels t
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr ON t.id = pr.packaging_id
+),
+l2 AS (
+    SELECT l1.top_id, l1.top_name, pr.contains_id, l1.qty * pr.qty AS qty
+    FROM l1
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr ON l1.contains_id = pr.packaging_id
+),
+l3 AS (
+    SELECT l2.top_id, l2.top_name, pr.contains_id, l2.qty * pr.qty AS qty
+    FROM l2
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr ON l2.contains_id = pr.packaging_id
+),
+l4 AS (
+    SELECT l3.top_id, l3.top_name, pr.contains_id, l3.qty * pr.qty AS qty
+    FROM l3
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging_relations` pr ON l3.contains_id = pr.packaging_id
+),
+all_expansion AS (
+    SELECT top_id, top_name, contains_id, qty FROM l1
+    UNION ALL
+    SELECT top_id, top_name, contains_id, qty FROM l2
+    UNION ALL
+    SELECT top_id, top_name, contains_id, qty FROM l3
+    UNION ALL
+    SELECT top_id, top_name, contains_id, qty FROM l4
+),
+leaf_items AS (
+    SELECT ae.top_id, ae.top_name, ae.contains_id, ae.qty
+    FROM all_expansion ae
+    LEFT JOIN container_children cc ON ae.contains_id = cc.packaging_id
+    WHERE cc.packaging_id IS MISSING
+),
+total_qty_per_item AS (
+    SELECT li.top_id, li.top_name, li.contains_id, SUM(li.qty) AS sum_qty
+    FROM leaf_items li
+    GROUP BY li.top_id, li.top_name, li.contains_id
+),
+items_exceeding AS (
+    SELECT t.top_name AS CONTAINER_NAME, p.name AS ITEM_NAME
+    FROM total_qty_per_item t
+    JOIN `oracle_sql`.`oracle_sql_scope`.`packaging` p ON t.contains_id = p.id
+    WHERE t.sum_qty > 500
+)
+SELECT CONTAINER_NAME, ITEM_NAME
+FROM items_exceeding
+ORDER BY CONTAINER_NAME, ITEM_NAME;

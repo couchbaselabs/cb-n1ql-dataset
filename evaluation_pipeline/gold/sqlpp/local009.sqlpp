@@ -1,0 +1,59 @@
+WITH routes AS (
+    SELECT
+        f.departure_airport AS dep_code,
+        f.arrival_airport AS arr_code
+    FROM `Airlines`.`Airlines_scope`.`flights` f
+),
+route_cities AS (
+    SELECT
+        dep_a.city AS from_city,
+        dep_a.coordinates AS from_coords,
+        arr_a.city AS to_city,
+        arr_a.coordinates AS to_coords
+    FROM routes r
+    JOIN `Airlines`.`Airlines_scope`.`airports_data` dep_a ON r.dep_code = dep_a.airport_code
+    JOIN `Airlines`.`Airlines_scope`.`airports_data` arr_a ON r.arr_code = arr_a.airport_code
+),
+parsed AS (
+    SELECT
+        from_city,
+        to_city,
+        TONUMBER(SUBSTR(from_coords, 1, POSITION(from_coords, ',') - 1)) AS from_lon,
+        TONUMBER(REPLACE(SUBSTR(from_coords, POSITION(from_coords, ',') + 1), ')', '')) AS from_lat,
+        TONUMBER(SUBSTR(to_coords, 1, POSITION(to_coords, ',') - 1)) AS to_lon,
+        TONUMBER(REPLACE(SUBSTR(to_coords, POSITION(to_coords, ',') + 1), ')', '')) AS to_lat
+    FROM route_cities
+),
+distances AS (
+    SELECT
+        from_city,
+        to_city,
+        2 * 6371 * ASIN(SQRT(
+            POWER(SIN((to_lat - from_lat) * PI() / 180.0 / 2), 2) +
+            COS(from_lat * PI() / 180.0) * COS(to_lat * PI() / 180.0) *
+            POWER(SIN((to_lon - from_lon) * PI() / 180.0 / 2), 2)
+        )) AS distance_km
+    FROM parsed
+),
+city_pairs AS (
+    SELECT
+        CASE WHEN from_city < to_city THEN from_city ELSE to_city END AS city1,
+        CASE WHEN from_city < to_city THEN to_city ELSE from_city END AS city2,
+        distance_km
+    FROM distances
+),
+avg_distances AS (
+    SELECT
+        city1,
+        city2,
+        AVG(distance_km) AS avg_distance
+    FROM city_pairs
+    GROUP BY city1, city2
+),
+abakan_routes AS (
+    SELECT avg_distance
+    FROM avg_distances
+    WHERE CONTAINS(city1, 'Abakan') OR CONTAINS(city2, 'Abakan')
+)
+SELECT ROUND(MAX(avg_distance), 5) AS max_distance_km
+FROM abakan_routes;

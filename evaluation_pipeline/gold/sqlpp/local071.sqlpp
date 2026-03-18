@@ -1,0 +1,46 @@
+WITH city_dates AS (
+    SELECT DISTINCT
+        c.country_code_2,
+        c.insert_date
+    FROM `city_legislation`.`city_legislation_scope`.`cities` AS c
+    WHERE SUBSTR(c.insert_date, 0, 7) = "2022-06"
+),
+dated AS (
+    SELECT
+        cd.country_code_2,
+        cd.insert_date,
+        DATE_DIFF_STR(cd.insert_date, "2022-06-01", "day") AS day_num
+    FROM city_dates AS cd
+),
+sequenced AS (
+    SELECT
+        d.country_code_2,
+        d.insert_date,
+        d.day_num,
+        ROW_NUMBER() OVER (PARTITION BY d.country_code_2 ORDER BY d.insert_date) AS rn
+    FROM dated AS d
+),
+grouped_streaks AS (
+    SELECT
+        s.country_code_2,
+        s.day_num - s.rn AS streak_group
+    FROM sequenced AS s
+),
+streak_lengths AS (
+    SELECT
+        g.country_code_2,
+        COUNT(1) AS streak_length
+    FROM grouped_streaks AS g
+    GROUP BY g.country_code_2, g.streak_group
+),
+max_streaks AS (
+    SELECT
+        sl.country_code_2,
+        MAX(sl.streak_length) AS longest_streak
+    FROM streak_lengths AS sl
+    GROUP BY sl.country_code_2
+)
+SELECT ms.country_code_2
+FROM max_streaks AS ms
+WHERE ms.longest_streak = (SELECT RAW MAX(m2.longest_streak) FROM max_streaks AS m2)[0]
+ORDER BY ms.country_code_2; 

@@ -1,0 +1,48 @@
+WITH ordered_geo AS (
+    SELECT
+        g.geolocation_state,
+        g.geolocation_city,
+        g.geolocation_zip_code_prefix,
+        g.geolocation_lat,
+        g.geolocation_lng,
+        ROW_NUMBER() OVER (
+            ORDER BY g.geolocation_state, g.geolocation_city, g.geolocation_zip_code_prefix, g.geolocation_lat, g.geolocation_lng
+        ) AS rn
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_geolocation` AS g
+),
+paired_geo AS (
+    SELECT
+        prev_geo.geolocation_state AS previous_state,
+        prev_geo.geolocation_city AS previous_city,
+        prev_geo.geolocation_zip_code_prefix AS previous_zip_code_prefix,
+        prev_geo.geolocation_lat AS previous_lat,
+        prev_geo.geolocation_lng AS previous_lng,
+        curr_geo.geolocation_state AS current_state,
+        curr_geo.geolocation_city AS current_city,
+        curr_geo.geolocation_zip_code_prefix AS current_zip_code_prefix,
+        curr_geo.geolocation_lat AS current_lat,
+        curr_geo.geolocation_lng AS current_lng,
+        6371 * ACOS(
+            COS(RADIANS(prev_geo.geolocation_lat)) * COS(RADIANS(curr_geo.geolocation_lat)) *
+            COS(RADIANS(curr_geo.geolocation_lng) - RADIANS(prev_geo.geolocation_lng)) +
+            SIN(RADIANS(prev_geo.geolocation_lat)) * SIN(RADIANS(curr_geo.geolocation_lat))
+        ) AS distance_km
+    FROM ordered_geo AS curr_geo
+    JOIN ordered_geo AS prev_geo
+        ON curr_geo.rn = prev_geo.rn + 1
+)
+SELECT
+    previous_state,
+    previous_city,
+    previous_zip_code_prefix,
+    previous_lat,
+    previous_lng,
+    current_state,
+    current_city,
+    current_zip_code_prefix,
+    current_lat,
+    current_lng,
+    distance_km
+FROM paired_geo
+ORDER BY distance_km DESC
+LIMIT 1;

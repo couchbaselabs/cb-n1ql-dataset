@@ -1,0 +1,29 @@
+WITH yearly_delivered AS (
+    SELECT
+        TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'year')) AS order_year,
+        COUNT(1) AS annual_delivered_orders
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+    WHERE o.order_status = "delivered"
+      AND o.order_delivered_customer_date IS NOT NULL
+      AND TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'year')) IN [2016, 2017, 2018]
+    GROUP BY TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'year'))
+),
+lowest_year AS (
+    SELECT yd.order_year
+    FROM yearly_delivered AS yd
+    ORDER BY yd.annual_delivered_orders ASC, yd.order_year ASC
+    LIMIT 1
+),
+monthly_delivered AS (
+    SELECT
+        TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'month')) AS order_month,
+        COUNT(1) AS monthly_delivered_orders
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+    JOIN lowest_year AS ly
+      ON TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'year')) = ly.order_year
+    WHERE o.order_status = "delivered"
+      AND o.order_delivered_customer_date IS NOT NULL
+    GROUP BY TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'month'))
+)
+SELECT MAX(md.monthly_delivered_orders) AS HIGHEST_MONTHLY_VOLUME
+FROM monthly_delivered AS md;

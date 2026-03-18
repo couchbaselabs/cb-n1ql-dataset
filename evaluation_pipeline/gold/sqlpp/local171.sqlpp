@@ -1,0 +1,50 @@
+WITH years AS (
+    SELECT 31 AS years_elapsed UNION ALL
+    SELECT 32 AS years_elapsed UNION ALL
+    SELECT 33 AS years_elapsed UNION ALL
+    SELECT 34 AS years_elapsed UNION ALL
+    SELECT 35 AS years_elapsed UNION ALL
+    SELECT 36 AS years_elapsed UNION ALL
+    SELECT 37 AS years_elapsed UNION ALL
+    SELECT 38 AS years_elapsed UNION ALL
+    SELECT 39 AS years_elapsed UNION ALL
+    SELECT 40 AS years_elapsed UNION ALL
+    SELECT 41 AS years_elapsed UNION ALL
+    SELECT 42 AS years_elapsed UNION ALL
+    SELECT 43 AS years_elapsed UNION ALL
+    SELECT 44 AS years_elapsed UNION ALL
+    SELECT 45 AS years_elapsed UNION ALL
+    SELECT 46 AS years_elapsed UNION ALL
+    SELECT 47 AS years_elapsed UNION ALL
+    SELECT 48 AS years_elapsed UNION ALL
+    SELECT 49 AS years_elapsed
+),
+first_terms AS (
+    SELECT
+        id_bioguide,
+        MIN(term_start) AS first_term_start
+    FROM `city_legislation`.`city_legislation_scope`.`legislators_terms`
+    GROUP BY id_bioguide
+),
+active_counts AS (
+    SELECT
+        y.years_elapsed,
+        COUNT(DISTINCT lt.id_bioguide) AS distinct_legislators_active
+    FROM years AS y
+    JOIN first_terms AS ft
+        ON 1 = 1
+    JOIN `city_legislation`.`city_legislation_scope`.`legislators` AS l
+        ON l.id_bioguide = ft.id_bioguide
+    JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+        ON lt.id_bioguide = ft.id_bioguide
+       AND lt.state = 'LA'
+       AND lt.term_start <= TOSTRING(TONUMBER(DATE_PART_STR(ft.first_term_start, 'year')) + y.years_elapsed) || '-12-31'
+       AND lt.term_end >= TOSTRING(TONUMBER(DATE_PART_STR(ft.first_term_start, 'year')) + y.years_elapsed) || '-12-31'
+    WHERE l.gender = 'M'
+    GROUP BY y.years_elapsed
+)
+SELECT
+    ac.years_elapsed,
+    ac.distinct_legislators_active
+FROM active_counts AS ac
+ORDER BY ac.years_elapsed;

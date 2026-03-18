@@ -1,0 +1,44 @@
+WITH order_lines AS (
+    SELECT
+        ol.product_id,
+        ol.qty,
+        SUM(ol.qty) OVER (PARTITION BY ol.product_id ORDER BY ol.id) AS cum_qty
+    FROM `oracle_sql`.`oracle_sql_scope`.`orderlines` ol
+    WHERE ol.order_id = 423
+),
+inv_ranked AS (
+    SELECT
+        i.product_id,
+        i.id AS inv_id,
+        l.aisle,
+        l.position,
+        i.qty AS available_qty,
+        p.purchased,
+        SUM(i.qty) OVER (PARTITION BY i.product_id ORDER BY p.purchased, i.qty, i.id) AS cum_inv
+    FROM `oracle_sql`.`oracle_sql_scope`.`inventory` i
+    JOIN `oracle_sql`.`oracle_sql_scope`.`locations` l ON i.location_id = l.id
+    JOIN `oracle_sql`.`oracle_sql_scope`.`purchases` p ON i.purchase_id = p.id
+    WHERE l.warehouse = 1
+),
+order_needed AS (
+    SELECT product_id, MAX(cum_qty) AS total_needed
+    FROM order_lines
+    GROUP BY product_id
+),
+picks AS (
+    SELECT
+        ir.product_id,
+        ir.aisle,
+        TOSTRING(ir.position) AS position,
+        GREATEST(0,
+            LEAST(ir.cum_inv, on2.total_needed) -
+            (ir.cum_inv - ir.available_qty)
+        ) AS QUANTITY_TO_PICK
+    FROM inv_ranked ir
+    JOIN order_needed on2 ON ir.product_id = on2.product_id
+    WHERE ir.cum_inv - ir.available_qty < on2.total_needed
+)
+SELECT product_id, aisle, position, QUANTITY_TO_PICK
+FROM picks
+WHERE QUANTITY_TO_PICK > 0
+ORDER BY product_id, aisle, position;

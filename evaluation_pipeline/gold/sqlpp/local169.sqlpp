@@ -1,0 +1,67 @@
+WITH first_terms AS (
+    SELECT
+        lt.id_bioguide,
+        MIN(lt.term_start) AS first_term_start
+    FROM `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+    GROUP BY lt.id_bioguide
+),
+cohort AS (
+    SELECT
+        ft.id_bioguide,
+        ft.first_term_start
+    FROM first_terms AS ft
+    WHERE ft.first_term_start BETWEEN '1917-01-01' AND '1999-12-31'
+),
+years AS (
+    SELECT 1 AS year_num UNION ALL
+    SELECT 2 AS year_num UNION ALL
+    SELECT 3 AS year_num UNION ALL
+    SELECT 4 AS year_num UNION ALL
+    SELECT 5 AS year_num UNION ALL
+    SELECT 6 AS year_num UNION ALL
+    SELECT 7 AS year_num UNION ALL
+    SELECT 8 AS year_num UNION ALL
+    SELECT 9 AS year_num UNION ALL
+    SELECT 10 AS year_num UNION ALL
+    SELECT 11 AS year_num UNION ALL
+    SELECT 12 AS year_num UNION ALL
+    SELECT 13 AS year_num UNION ALL
+    SELECT 14 AS year_num UNION ALL
+    SELECT 15 AS year_num UNION ALL
+    SELECT 16 AS year_num UNION ALL
+    SELECT 17 AS year_num UNION ALL
+    SELECT 18 AS year_num UNION ALL
+    SELECT 19 AS year_num UNION ALL
+    SELECT 20 AS year_num
+),
+cohort_size AS (
+    SELECT COUNT(1) AS total_cohort
+    FROM cohort
+),
+retained_counts AS (
+    SELECT
+        y.year_num,
+        COUNT(DISTINCT lt.id_bioguide) AS legislators_retained
+    FROM years AS y
+    JOIN cohort AS c
+        ON 1 = 1
+    JOIN `city_legislation`.`city_legislation_scope`.`legislators_terms` AS lt
+        ON lt.id_bioguide = c.id_bioguide
+       AND lt.term_start <= TOSTRING(TONUMBER(DATE_PART_STR(c.first_term_start, 'year')) + y.year_num) || '-12-31'
+       AND lt.term_end >= TOSTRING(TONUMBER(DATE_PART_STR(c.first_term_start, 'year')) + y.year_num) || '-12-31'
+    GROUP BY y.year_num
+)
+SELECT
+    y.year_num AS YEAR_AFTER_FIRST_TERM,
+    cs.total_cohort AS TOTAL_COHORT,
+    IFMISSINGORNULL(rc.legislators_retained, 0) AS LEGISLATORS_RETAINED,
+    ROUND(
+        IFMISSINGORNULL(rc.legislators_retained, 0) * 100.0 / cs.total_cohort,
+        2
+    ) AS RETENTION_RATE_PERCENT
+FROM years AS y
+JOIN cohort_size AS cs
+    ON 1 = 1
+LEFT JOIN retained_counts AS rc
+    ON y.year_num = rc.year_num
+ORDER BY y.year_num;

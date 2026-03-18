@@ -1,0 +1,70 @@
+SELECT "highest number of distinct customer unique IDs" AS achievement,
+       seller_id,
+       distinct_customer_unique_ids AS achievement_value
+FROM (
+    SELECT oi.seller_id,
+           COUNT(DISTINCT c.customer_unique_id) AS distinct_customer_unique_ids
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_items` AS oi
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+        ON oi.order_id = o.order_id
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_customers` AS c
+        ON o.customer_id = c.customer_id
+    WHERE o.order_status = "delivered"
+    GROUP BY oi.seller_id
+    ORDER BY distinct_customer_unique_ids DESC
+    LIMIT 1
+) AS t1
+ 
+UNION ALL
+
+SELECT "highest profit" AS achievement,
+       seller_id,
+       profit AS achievement_value
+FROM (
+    SELECT oi.seller_id,
+           SUM(oi.price - oi.freight_value) AS profit
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_items` AS oi
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+        ON oi.order_id = o.order_id
+    WHERE o.order_status = "delivered"
+    GROUP BY oi.seller_id
+    ORDER BY profit DESC
+    LIMIT 1
+) AS t2
+
+UNION ALL
+
+SELECT "highest number of distinct orders" AS achievement,
+       seller_id,
+       distinct_orders AS achievement_value
+FROM (
+    SELECT oi.seller_id,
+           COUNT(DISTINCT oi.order_id) AS distinct_orders
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_items` AS oi
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+        ON oi.order_id = o.order_id
+    WHERE o.order_status = "delivered"
+    GROUP BY oi.seller_id
+    ORDER BY distinct_orders DESC
+    LIMIT 1
+) AS t3
+
+UNION ALL
+
+SELECT "most 5-star ratings" AS achievement,
+       seller_id,
+       five_star_ratings AS achievement_value
+FROM (
+    SELECT oi.seller_id,
+           COUNT(DISTINCT r.review_id) AS five_star_ratings
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_items` AS oi
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+        ON oi.order_id = o.order_id
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_reviews` AS r
+        ON oi.order_id = r.order_id
+    WHERE o.order_status = "delivered"
+      AND r.review_score = 5
+    GROUP BY oi.seller_id
+    ORDER BY five_star_ratings DESC
+    LIMIT 1
+) AS t4;

@@ -1,0 +1,53 @@
+WITH all_races AS (
+    SELECT race_id, year, round FROM `f1`.`f1_scope`.`races`
+    UNION
+    SELECT race_id, year, round FROM `f1`.`f1_scope`.`races_ext`
+),
+driver_race AS (
+    SELECT DISTINCT ar.year, ar.round, res.driver_id, res.constructor_id
+    FROM `f1`.`f1_scope`.`results` res
+    JOIN all_races ar ON res.race_id = ar.race_id
+),
+driver_year_info AS (
+    SELECT
+        dr.year,
+        dr.driver_id,
+        ARRAY_SORT(ARRAY_AGG(DISTINCT dr.round)) AS part_rounds
+    FROM driver_race dr
+    GROUP BY dr.year, dr.driver_id
+),
+driver_with_gaps AS (
+    SELECT
+        dyi.year,
+        dyi.driver_id,
+        ARRAY {
+            "prev_round": dyi.part_rounds[i],
+            "next_round": dyi.part_rounds[i+1],
+            "first_missed": dyi.part_rounds[i] + 1,
+            "last_missed": dyi.part_rounds[i+1] - 1
+        } FOR i IN ARRAY_RANGE(0, ARRAY_LENGTH(dyi.part_rounds) - 1)
+        WHEN dyi.part_rounds[i+1] - dyi.part_rounds[i] > 1
+         AND dyi.part_rounds[i+1] - dyi.part_rounds[i] - 1 < 3
+        END AS gaps
+    FROM driver_year_info dyi
+),
+gap_rows AS (
+    SELECT
+        dwg.year,
+        dwg.driver_id,
+        g.prev_round,
+        g.next_round,
+        g.first_missed,
+        g.last_missed
+    FROM driver_with_gaps dwg
+    UNNEST dwg.gaps AS g
+)
+SELECT
+    AVG(gr.first_missed) AS avg_first_missed_round,
+    AVG(gr.last_missed)  AS avg_last_missed_round
+FROM gap_rows gr
+JOIN driver_race dr1
+    ON dr1.year = gr.year AND dr1.driver_id = gr.driver_id AND dr1.round = gr.prev_round
+JOIN driver_race dr2
+    ON dr2.year = gr.year AND dr2.driver_id = gr.driver_id AND dr2.round = gr.next_round
+WHERE dr1.constructor_id != dr2.constructor_id;

@@ -1,0 +1,24 @@
+WITH country_sales AS (
+    SELECT
+        c.Country,
+        SUM(i.Total) AS total_sales
+    FROM `chinook`.`chinook_scope`.`customers` AS c
+    JOIN `chinook`.`chinook_scope`.`invoices` AS i
+        ON c.CustomerId = i.CustomerId
+    GROUP BY c.Country
+    HAVING COUNT(DISTINCT c.CustomerId) > 4
+),
+collected AS (
+    SELECT
+        ARRAY_SORT(ARRAY_AGG(cs.total_sales)) AS sorted_arr,
+        COUNT(1) AS cnt
+    FROM country_sales AS cs
+)
+SELECT
+    ROUND(
+        CASE
+            WHEN cnt % 2 = 1 THEN sorted_arr[FLOOR(cnt / 2)]
+            ELSE (sorted_arr[cnt / 2 - 1] + sorted_arr[cnt / 2]) / 2.0
+        END,
+    2) AS Median_total_sales
+FROM collected;

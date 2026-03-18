@@ -1,0 +1,65 @@
+WITH numbered_sales AS (
+    SELECT ms.product_id, ms.mth, ms.qty,
+        ROW_NUMBER() OVER (PARTITION BY ms.product_id ORDER BY ms.mth) AS time_step
+    FROM `oracle_sql`.`oracle_sql_scope`.`monthly_sales` ms
+    WHERE ms.mth >= '2016-01-01'
+),
+first_36 AS (
+    SELECT ns.product_id, ns.mth, ns.qty, ns.time_step
+    FROM numbered_sales ns WHERE ns.time_step <= 36
+),
+windowed_sales AS (
+    SELECT ns.product_id, ns.time_step, ns.qty,
+        AVG(ns.qty) OVER (PARTITION BY ns.product_id ORDER BY ns.time_step ROWS BETWEEN 5 PRECEDING AND 6 FOLLOWING) AS avg_first,
+        AVG(ns.qty) OVER (PARTITION BY ns.product_id ORDER BY ns.time_step ROWS BETWEEN 6 PRECEDING AND 5 FOLLOWING) AS avg_second
+    FROM first_36 ns
+),
+cma_calc AS (
+    SELECT ws.product_id, ws.time_step, ws.qty, (ws.avg_first + ws.avg_second) / 2.0 AS cma
+    FROM windowed_sales ws WHERE ws.time_step BETWEEN 7 AND 30
+),
+seasonal_ratios AS (
+    SELECT cc.product_id, ((cc.time_step - 1) % 12) + 1 AS month_of_year, AVG(cc.qty / cc.cma) AS avg_seasonal_ratio
+    FROM cma_calc cc WHERE cc.cma IS NOT NULL AND cc.cma > 0
+    GROUP BY cc.product_id, ((cc.time_step - 1) % 12) + 1
+),
+all_with_cma AS (
+    SELECT ws.product_id, ws.time_step, ws.qty, (ws.avg_first + ws.avg_second) / 2.0 AS cma
+    FROM windowed_sales ws WHERE ws.time_step <= 30
+),
+deseasonalized AS (
+    SELECT aw.product_id, aw.time_step,
+        aw.qty / sr.avg_seasonal_ratio AS deseasonalized_qty
+    FROM all_with_cma aw
+    JOIN seasonal_ratios sr
+        ON aw.product_id = sr.product_id
+        AND ((aw.time_step - 1) % 12) + 1 = sr.month_of_year
+    WHERE aw.cma > 0 AND sr.avg_seasonal_ratio > 0
+),
+regression AS (
+    SELECT d.product_id,
+        COUNT(*) AS n,
+        SUM(d.time_step) AS sum_x,
+        SUM(d.deseasonalized_qty) AS sum_y,
+        SUM(d.time_step * d.deseasonalized_qty) AS sum_xy,
+        SUM(d.time_step * d.time_step) AS sum_x2
+    FROM deseasonalized d
+    GROUP BY d.product_id
+),
+reg_params AS (
+    SELECT rg.product_id,
+        (rg.n * rg.sum_xy - rg.sum_x * rg.sum_y) / NULLIF(rg.n * rg.sum_x2 - rg.sum_x * rg.sum_x, 0) AS slope,
+        (rg.sum_y - ((rg.n * rg.sum_xy - rg.sum_x * rg.sum_y) / NULLIF(rg.n * rg.sum_x2 - rg.sum_x * rg.sum_x, 0)) * rg.sum_x) / rg.n AS intercept
+    FROM regression rg
+),
+forecast_months AS (
+    SELECT v + 24 AS time_step FROM ARRAY_RANGE(1, 13) AS v
+),
+forecasted AS (
+    SELECT rp.product_id, fm.time_step,
+        rp.slope * fm.time_step + rp.intercept AS forecast_qty
+    FROM reg_params rp, forecast_months fm
+    WHERE rp.product_id IN [4160, 7790]
+)
+SELECT ROUND(AVG(annual_sales), 4) AS AVG_FORECASTED_ANNUAL_SALES_2018
+FROM (SELECT product_id, SUM(forecast_qty) AS annual_sales FROM forecasted GROUP BY product_id) t;

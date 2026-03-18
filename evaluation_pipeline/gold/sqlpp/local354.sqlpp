@@ -1,0 +1,30 @@
+WITH driver_season_races AS (
+    SELECT
+        r.year,
+        res.driver_id,
+        res.constructor_id,
+        r.round,
+        r.race_id,
+        ROW_NUMBER() OVER (PARTITION BY r.year, res.driver_id ORDER BY r.round ASC) AS first_rn,
+        ROW_NUMBER() OVER (PARTITION BY r.year, res.driver_id ORDER BY r.round DESC) AS last_rn
+    FROM `f1`.`f1_scope`.`results` res
+    JOIN `f1`.`f1_scope`.`races` r ON res.race_id = r.race_id
+    WHERE r.year >= 1950 AND r.year <= 1959
+),
+first_last AS (
+    SELECT
+        dsr.year,
+        dsr.driver_id,
+        MAX(CASE WHEN dsr.first_rn = 1 THEN dsr.constructor_id END) AS first_constructor,
+        MAX(CASE WHEN dsr.last_rn = 1 THEN dsr.constructor_id END) AS last_constructor,
+        COUNT(DISTINCT dsr.round) AS distinct_rounds
+    FROM driver_season_races dsr
+    GROUP BY dsr.year, dsr.driver_id
+)
+SELECT DISTINCT
+    d.forename || ' ' || d.surname AS driver_name
+FROM first_last fl
+JOIN `f1`.`f1_scope`.`drivers` d ON fl.driver_id = d.driver_id
+WHERE fl.first_constructor = fl.last_constructor
+  AND fl.distinct_rounds >= 2
+ORDER BY driver_name;

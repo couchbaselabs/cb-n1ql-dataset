@@ -1,0 +1,41 @@
+WITH team_season_goals AS (
+    SELECT
+        M.home_team_api_id AS team_api_id,
+        M.season,
+        M.home_team_goal AS goals
+    FROM `EU_soccer`.`EU_soccer_scope`.`Match` M
+
+    UNION ALL
+
+    SELECT
+        M.away_team_api_id AS team_api_id,
+        M.season,
+        M.away_team_goal AS goals
+    FROM `EU_soccer`.`EU_soccer_scope`.`Match` M
+),
+team_season_total AS (
+    SELECT
+        T.team_long_name AS team_name,
+        tsg.season,
+        SUM(tsg.goals) AS total_goals
+    FROM team_season_goals tsg
+    JOIN `EU_soccer`.`EU_soccer_scope`.`Team` T ON tsg.team_api_id = T.team_api_id
+    GROUP BY T.team_long_name, tsg.season
+),
+highest_season_goals AS (
+    SELECT
+        team_name,
+        MAX(total_goals) AS max_season_goals
+    FROM team_season_total
+    GROUP BY team_name
+),
+ordered AS (
+    SELECT max_season_goals,
+           ROW_NUMBER() OVER (ORDER BY max_season_goals) AS rn,
+           COUNT(*) OVER () AS cnt
+    FROM highest_season_goals
+)
+SELECT
+    ROUND(AVG(max_season_goals), 1) AS median_goals
+FROM ordered
+WHERE rn IN [FLOOR((cnt + 1) / 2.0), CEIL((cnt + 1) / 2.0)];

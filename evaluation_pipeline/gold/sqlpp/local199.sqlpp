@@ -1,0 +1,23 @@
+WITH monthly_rentals AS (
+    SELECT
+        SUBSTR(r.rental_date, 0, 4) AS year,
+        SUBSTR(r.rental_date, 6, 1) AS rental_month,
+        s.store_id,
+        COUNT(r.rental_id) AS total_rentals
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`rental` r
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`staff` s ON r.staff_id = s.staff_id
+    GROUP BY SUBSTR(r.rental_date, 0, 4), SUBSTR(r.rental_date, 6, 1), s.store_id
+),
+store_max AS (
+    SELECT
+        store_id,
+        year,
+        rental_month,
+        total_rentals,
+        MAX(total_rentals) OVER (PARTITION BY store_id) AS max_rentals
+    FROM monthly_rentals
+)
+SELECT store_id, year, rental_month, total_rentals
+FROM store_max
+WHERE total_rentals = max_rentals
+ORDER BY store_id;

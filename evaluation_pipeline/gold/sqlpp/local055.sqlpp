@@ -1,0 +1,54 @@
+WITH artist_sales AS (
+    SELECT
+        ar.ArtistId,
+        ar.Name,
+        SUM(ii.Quantity * ii.UnitPrice) AS total_sales
+    FROM `chinook`.`chinook_scope`.`artists` AS ar
+    JOIN `chinook`.`chinook_scope`.`albums` AS al
+        ON al.ArtistId = ar.ArtistId
+    JOIN `chinook`.`chinook_scope`.`tracks` AS t
+        ON t.AlbumId = al.AlbumId
+    JOIN `chinook`.`chinook_scope`.`invoice_items` AS ii
+        ON ii.TrackId = t.TrackId
+    GROUP BY ar.ArtistId, ar.Name
+),
+top_artist AS (
+    SELECT ArtistId, Name
+    FROM artist_sales
+    ORDER BY total_sales DESC, Name ASC
+    LIMIT 1
+),
+bottom_artist AS (
+    SELECT ArtistId, Name
+    FROM artist_sales
+    ORDER BY total_sales ASC, Name ASC
+    LIMIT 1
+),
+customer_artist_spend AS (
+    SELECT
+        i.CustomerId,
+        ar.ArtistId,
+        SUM(ii.Quantity * ii.UnitPrice) AS amount_spent
+    FROM `chinook`.`chinook_scope`.`invoices` AS i
+    JOIN `chinook`.`chinook_scope`.`invoice_items` AS ii
+        ON ii.InvoiceId = i.InvoiceId
+    JOIN `chinook`.`chinook_scope`.`tracks` AS t
+        ON t.TrackId = ii.TrackId
+    JOIN `chinook`.`chinook_scope`.`albums` AS al
+        ON al.AlbumId = t.AlbumId
+    JOIN `chinook`.`chinook_scope`.`artists` AS ar
+        ON ar.ArtistId = al.ArtistId
+    WHERE ar.ArtistId IN [(SELECT RAW ArtistId FROM top_artist)[0], (SELECT RAW ArtistId FROM bottom_artist)[0]]
+    GROUP BY i.CustomerId, ar.ArtistId
+),
+top_avg AS (
+    SELECT AVG(amount_spent) AS avg_spent
+    FROM customer_artist_spend
+    WHERE ArtistId = (SELECT RAW ArtistId FROM top_artist)[0]
+),
+bottom_avg AS (
+    SELECT AVG(amount_spent) AS avg_spent
+    FROM customer_artist_spend
+    WHERE ArtistId = (SELECT RAW ArtistId FROM bottom_artist)[0]
+)
+SELECT ABS((SELECT RAW avg_spent FROM top_avg)[0] - (SELECT RAW avg_spent FROM bottom_avg)[0]) AS absolute_difference;

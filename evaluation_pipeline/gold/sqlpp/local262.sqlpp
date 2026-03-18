@@ -1,0 +1,45 @@
+WITH max_non_stack_scores AS (
+    SELECT
+        ms.name,
+        ms.version,
+        ms.step,
+        MAX(ms.test_score) AS max_non_stack_test_score
+    FROM `stacking`.`stacking_scope`.`model_score` AS ms
+    WHERE ms.step IN [1, 2, 3]
+      AND ms.model != 'Stack'
+    GROUP BY ms.name, ms.version, ms.step
+),
+strong_steps AS (
+    SELECT
+        ms.name,
+        ms.version,
+        ms.step
+    FROM `stacking`.`stacking_scope`.`model_score` AS ms
+    JOIN max_non_stack_scores AS mn
+        ON ms.name = mn.name
+       AND ms.version = mn.version
+       AND ms.step = mn.step
+    WHERE ms.step IN [1, 2, 3]
+      AND ms.model = 'Stack'
+      AND ms.test_score > mn.max_non_stack_test_score
+),
+strong_counts AS (
+    SELECT
+        ss.name,
+        COUNT(1) AS strong_occurrences
+    FROM strong_steps AS ss
+    GROUP BY ss.name
+),
+solution_counts AS (
+    SELECT
+        s.name,
+        COUNT(1) AS solution_occurrences
+    FROM `stacking`.`stacking_scope`.`solution` AS s
+    GROUP BY s.name
+)
+SELECT sc.name
+FROM strong_counts AS sc
+LEFT JOIN solution_counts AS sol
+    ON sc.name = sol.name
+WHERE sc.strong_occurrences > IFMISSINGORNULL(sol.solution_occurrences, 0)
+ORDER BY sc.name;

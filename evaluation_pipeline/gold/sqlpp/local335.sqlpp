@@ -1,0 +1,48 @@
+WITH driver_season_points AS (
+    SELECT
+        r.year,
+        re.driver_id,
+        SUM(re.points) AS total_points
+    FROM `f1`.`f1_scope`.`results` AS re
+    JOIN `f1`.`f1_scope`.`races` AS r
+        ON re.race_id = r.race_id
+    WHERE r.year >= 2001
+    GROUP BY r.year, re.driver_id
+    HAVING SUM(re.points) > 0
+),
+season_min_points AS (
+    SELECT
+        year,
+        MIN(total_points) AS min_points
+    FROM driver_season_points
+    GROUP BY year
+),
+lowest_driver_constructors AS (
+    SELECT DISTINCT
+        r.year,
+        re.constructor_id
+    FROM driver_season_points AS dsp
+    JOIN season_min_points AS smp
+        ON dsp.year = smp.year
+       AND dsp.total_points = smp.min_points
+    JOIN `f1`.`f1_scope`.`results` AS re
+        ON dsp.driver_id = re.driver_id
+    JOIN `f1`.`f1_scope`.`races` AS r
+        ON re.race_id = r.race_id
+       AND r.year = dsp.year
+),
+constructors_season_counts AS (
+    SELECT
+        ldc.constructor_id,
+        COUNT(DISTINCT ldc.year) AS seasons_with_lowest
+    FROM lowest_driver_constructors AS ldc
+    GROUP BY ldc.constructor_id
+)
+SELECT
+    c.name AS CONSTRUCTOR_NAME,
+    csc.seasons_with_lowest AS SEASONS_WITH_LOWEST
+FROM constructors_season_counts AS csc
+JOIN `f1`.`f1_scope`.`constructors` AS c
+    ON csc.constructor_id = c.constructor_id
+ORDER BY csc.seasons_with_lowest DESC, c.name ASC
+LIMIT 5;

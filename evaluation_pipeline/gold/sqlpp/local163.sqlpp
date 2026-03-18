@@ -1,0 +1,34 @@
+WITH AvgSalaries AS (
+    SELECT
+        FacRank,
+        AVG(FacSalary) AS AvSalary
+    FROM `education_business`.`education_business_scope`.`university_faculty`
+    GROUP BY FacRank
+),
+SalaryDifferences AS (
+    SELECT
+        f.FacRank,
+        f.FacFirstName,
+        f.FacLastName,
+        f.FacSalary,
+        ABS(f.FacSalary - a.AvSalary) AS Diff
+    FROM `education_business`.`education_business_scope`.`university_faculty` AS f
+    JOIN AvgSalaries AS a
+        ON f.FacRank = a.FacRank
+),
+MinDifferences AS (
+    SELECT
+        FacRank,
+        MIN(Diff) AS MinDiff
+    FROM SalaryDifferences
+    GROUP BY FacRank
+)
+SELECT
+    s.FacRank,
+    s.FacFirstName,
+    s.FacLastName,
+    s.FacSalary
+FROM SalaryDifferences AS s
+JOIN MinDifferences AS m
+    ON s.FacRank = m.FacRank
+   AND s.Diff = m.MinDiff;

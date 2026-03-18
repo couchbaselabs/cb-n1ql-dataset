@@ -1,0 +1,29 @@
+WITH actor_revenue AS (
+    SELECT
+        a.actor_id,
+        a.first_name || ' ' || a.last_name AS actor_name,
+        SUM(p.amount) AS total_revenue
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`actor` a
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`film_actor` fa ON a.actor_id = fa.actor_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`inventory` inv ON fa.film_id = inv.film_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`rental` r ON inv.inventory_id = r.inventory_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p ON r.rental_id = p.rental_id
+    GROUP BY a.actor_id, a.first_name, a.last_name
+    ORDER BY total_revenue DESC
+    LIMIT 5
+),
+top5_actor_customers AS (
+    SELECT DISTINCT
+        r.customer_id
+    FROM actor_revenue ar
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`film_actor` fa ON ar.actor_id = fa.actor_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`inventory` inv ON fa.film_id = inv.film_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`rental` r ON inv.inventory_id = r.inventory_id
+),
+total_customers AS (
+    SELECT COUNT(DISTINCT customer_id) AS cnt
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`customer`
+)
+SELECT
+    ROUND(COUNT(*) * 100.0 / (SELECT RAW tc.cnt FROM total_customers tc)[0], 2) AS customer_percentage
+FROM top5_actor_customers;

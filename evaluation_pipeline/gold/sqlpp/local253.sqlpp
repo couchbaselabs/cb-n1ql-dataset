@@ -1,0 +1,48 @@
+WITH cleaned_salaries AS (
+    SELECT
+        s.Location,
+        s.CompanyName,
+        TONUMBER(REGEXP_REPLACE(s.Salary, '[^0-9.]', '')) *
+            CASE
+                WHEN s.Salary LIKE '%/hr%' THEN 2080
+                WHEN s.Salary LIKE '%/mo%' THEN 12
+                ELSE 1
+            END AS salary_num
+    FROM `education_business`.`education_business_scope`.`SalaryDataset` AS s
+    WHERE s.Salary IS NOT NULL
+      AND s.Salary != ''
+),
+country_avg AS (
+    SELECT AVG(cs.salary_num) AS avg_salary_country
+    FROM cleaned_salaries cs
+    WHERE cs.salary_num IS NOT NULL
+      AND cs.salary_num > 0
+),
+location_companies AS (
+    SELECT
+        cs.Location,
+        cs.CompanyName,
+        AVG(cs.salary_num) AS avg_salary_state
+    FROM cleaned_salaries cs
+    WHERE cs.salary_num IS NOT NULL
+      AND cs.salary_num > 0
+      AND cs.Location IN ['Mumbai', 'Pune', 'New Delhi', 'Hyderabad']
+    GROUP BY cs.Location, cs.CompanyName
+),
+ranked AS (
+    SELECT
+        lc.Location,
+        lc.CompanyName,
+        lc.avg_salary_state,
+        ca.avg_salary_country,
+        RANK() OVER (PARTITION BY lc.Location ORDER BY lc.avg_salary_state DESC, lc.CompanyName) AS rk
+    FROM location_companies lc, country_avg ca
+)
+SELECT
+    Location,
+    CompanyName AS `Company Name`,
+    avg_salary_state AS `Average Salary in State`,
+    avg_salary_country AS `Average Salary in Country`
+FROM ranked
+WHERE rk <= 5
+ORDER BY Location, avg_salary_state DESC, CompanyName;

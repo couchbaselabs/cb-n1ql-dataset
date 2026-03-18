@@ -1,0 +1,72 @@
+WITH inv_ranked AS (
+    SELECT
+        i.product_id,
+        i.location_id,
+        i.qty AS inv_qty,
+        pu.purchased,
+        SUM(i.qty) OVER (
+            PARTITION BY i.product_id
+            ORDER BY pu.purchased, i.qty, i.id
+            ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING
+        ) AS prev_inv_qty
+    FROM `oracle_sql`.`oracle_sql_scope`.`inventory` AS i
+    JOIN `oracle_sql`.`oracle_sql_scope`.`purchases` AS pu
+        ON i.purchase_id = pu.id
+),
+all_picks AS (
+    SELECT
+        pl.product_id,
+        pl.order_id,
+        pl.line_no,
+        pl.qty AS pick_qty,
+        SUM(pl.qty) OVER (
+            PARTITION BY pl.product_id
+            ORDER BY pl.order_id, pl.line_no
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        ) AS cum_pick_qty,
+        SUM(pl.qty) OVER (
+            PARTITION BY pl.product_id
+            ORDER BY pl.order_id, pl.line_no
+            ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING
+        ) AS prev_cum_pick_qty
+    FROM `oracle_sql`.`oracle_sql_scope`.`picking_line` AS pl
+),
+alloc AS (
+    SELECT
+        ap.product_id,
+        ap.order_id,
+        ap.line_no,
+        ap.pick_qty,
+        GREATEST(
+            0,
+            LEAST(
+                IFMISSINGORNULL(ap.prev_cum_pick_qty, 0) + ap.pick_qty,
+                IFMISSINGORNULL(ir.prev_inv_qty, 0) + ir.inv_qty
+            ) - GREATEST(
+                IFMISSINGORNULL(ap.prev_cum_pick_qty, 0),
+                IFMISSINGORNULL(ir.prev_inv_qty, 0)
+            )
+        ) AS allocated_qty
+    FROM all_picks AS ap
+    LEFT JOIN inv_ranked AS ir
+        ON ap.product_id = ir.product_id
+),
+pick_alloc AS (
+    SELECT
+        product_id,
+        order_id,
+        line_no,
+        pick_qty,
+        SUM(allocated_qty) AS total_allocated
+    FROM alloc
+    GROUP BY product_id, order_id, line_no, pick_qty
+)
+SELECT
+    pa.product_id AS PRODUCT_ID,
+    p.name AS PRODUCT_NAME,
+    AVG(CASE WHEN pa.pick_qty = 0 THEN 0 ELSE LEAST(pa.total_allocated, pa.pick_qty) * 100.0 / pa.pick_qty END) AS AVG_PICK_PERCENTAGE
+FROM pick_alloc AS pa
+JOIN `oracle_sql`.`oracle_sql_scope`.`products` AS p
+    ON pa.product_id = p.id
+GROUP BY pa.product_id, p.name
+ORDER BY p.name

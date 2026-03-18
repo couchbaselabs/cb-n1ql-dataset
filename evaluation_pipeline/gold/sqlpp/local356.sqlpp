@@ -1,0 +1,63 @@
+WITH race_laps AS (
+    SELECT lp.race_id, lp.driver_id, lp.lap, lp.position
+    FROM `f1`.`f1_scope`.`lap_positions` AS lp
+    WHERE lp.lap_type = 'Race' AND lp.lap > 1
+),
+driver_laps AS (
+    SELECT c.race_id, c.driver_id, c.lap,
+           p.position AS prev_pos, c.position AS curr_pos
+    FROM race_laps AS c
+    JOIN race_laps AS p
+        ON p.race_id = c.race_id AND p.driver_id = c.driver_id AND p.lap = c.lap - 1
+),
+pairwise_overtakes AS (
+    SELECT a.race_id, a.lap,
+           a.driver_id AS overtaken_driver_id,
+           b.driver_id AS overtaker_driver_id
+    FROM driver_laps AS a
+    JOIN driver_laps AS b
+        ON b.race_id = a.race_id AND b.lap = a.lap AND b.driver_id != a.driver_id
+    WHERE a.prev_pos < b.prev_pos AND a.curr_pos > b.curr_pos
+),
+track_overtakes AS (
+    SELECT po.overtaken_driver_id, po.overtaker_driver_id
+    FROM pairwise_overtakes AS po
+    LEFT JOIN `f1`.`f1_scope`.`pit_stops` AS ps_same
+        ON ps_same.race_id = po.race_id
+       AND ps_same.driver_id = po.overtaken_driver_id
+       AND ps_same.lap = po.lap
+    LEFT JOIN `f1`.`f1_scope`.`pit_stops` AS ps_prev
+        ON ps_prev.race_id = po.race_id
+       AND ps_prev.driver_id = po.overtaken_driver_id
+       AND ps_prev.lap = po.lap - 1
+    LEFT JOIN `f1`.`f1_scope`.`retirements` AS ret
+        ON ret.race_id = po.race_id
+       AND ret.driver_id = po.overtaken_driver_id
+       AND ret.lap = po.lap
+    WHERE IFMISSINGORNULL(ps_same.driver_id, NULL) IS NULL
+      AND IFMISSINGORNULL(ps_prev.driver_id, NULL) IS NULL
+      AND IFMISSINGORNULL(ret.driver_id, NULL) IS NULL
+),
+made AS (
+    SELECT overtaker_driver_id AS driver_id, COUNT(*) AS cnt
+    FROM track_overtakes
+    GROUP BY overtaker_driver_id
+),
+suffered AS (
+    SELECT overtaken_driver_id AS driver_id, COUNT(*) AS cnt
+    FROM track_overtakes
+    GROUP BY overtaken_driver_id
+),
+all_drivers AS (
+    SELECT driver_id, full_name FROM `f1`.`f1_scope`.`drivers`
+    UNION
+    SELECT driver_id, full_name FROM `f1`.`f1_scope`.`drivers_ext`
+)
+SELECT ad.full_name
+FROM suffered AS s
+LEFT JOIN made AS m
+    ON m.driver_id = s.driver_id
+JOIN all_drivers AS ad
+    ON ad.driver_id = s.driver_id
+WHERE s.cnt > IFMISSINGORNULL(m.cnt, 0)
+ORDER BY ad.full_name;

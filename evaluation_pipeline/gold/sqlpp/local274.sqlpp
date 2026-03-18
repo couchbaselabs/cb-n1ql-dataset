@@ -1,0 +1,40 @@
+WITH order_product_qty AS (
+    SELECT
+        ol.product_id,
+        ol.qty AS order_qty,
+        SUM(ol.qty) OVER (PARTITION BY ol.product_id ORDER BY ol.id) AS cum_order_qty
+    FROM `oracle_sql`.`oracle_sql_scope`.`orderlines` ol
+    WHERE ol.order_id = 421
+),
+inv_ranked AS (
+    SELECT
+        i.product_id,
+        i.qty AS available_qty,
+        SUM(i.qty) OVER (PARTITION BY i.product_id ORDER BY p.purchased, i.qty, i.id) AS cum_inv
+    FROM `oracle_sql`.`oracle_sql_scope`.`inventory` i
+    JOIN `oracle_sql`.`oracle_sql_scope`.`purchases` p ON i.purchase_id = p.id
+),
+order_needed AS (
+    SELECT product_id, MAX(cum_order_qty) AS total_needed
+    FROM order_product_qty
+    GROUP BY product_id
+),
+picks AS (
+    SELECT
+        ir.product_id,
+        GREATEST(0,
+            LEAST(ir.cum_inv, on2.total_needed) -
+            (ir.cum_inv - ir.available_qty)
+        ) AS pick_qty
+    FROM inv_ranked ir
+    JOIN order_needed on2 ON ir.product_id = on2.product_id
+    WHERE ir.cum_inv - ir.available_qty < on2.total_needed
+)
+SELECT
+    pr.name AS product_name,
+    ROUND(AVG(p3.pick_qty), 2) AS avg_units_picked
+FROM picks p3
+JOIN `oracle_sql`.`oracle_sql_scope`.`products` pr ON p3.product_id = pr.id
+WHERE p3.pick_qty > 0
+GROUP BY pr.name
+ORDER BY pr.name;

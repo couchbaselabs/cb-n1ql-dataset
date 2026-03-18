@@ -1,0 +1,11 @@
+WITH l1_counts AS (
+    SELECT
+        m.L1_model,
+        COUNT(*) AS total_count
+    FROM `stacking`.`stacking_scope`.`model` m
+    GROUP BY m.L1_model
+)
+SELECT L1_model, total_count
+FROM l1_counts
+ORDER BY total_count DESC
+LIMIT 1;

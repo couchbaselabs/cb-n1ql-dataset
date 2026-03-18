@@ -1,0 +1,21 @@
+WITH state_stats AS (
+    SELECT
+        ad.state,
+        COUNT(*) AS alien_population,
+        AVG(ad.age) AS avg_alien_age,
+        SUM(CASE WHEN ad.aggressive = 0 THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS friendly_pct,
+        SUM(CASE WHEN ad.aggressive = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS hostile_pct
+    FROM `city_legislation`.`city_legislation_scope`.`alien_data` AS ad
+    WHERE ad.state IS NOT NULL
+    GROUP BY ad.state
+),
+top_10_states AS (
+    SELECT state, alien_population, avg_alien_age, friendly_pct, hostile_pct
+    FROM state_stats
+    ORDER BY alien_population DESC
+    LIMIT 10
+)
+SELECT COUNT(*) AS state_count
+FROM top_10_states
+WHERE friendly_pct > hostile_pct
+  AND avg_alien_age > 200;

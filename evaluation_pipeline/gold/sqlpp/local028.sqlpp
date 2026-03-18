@@ -1,0 +1,30 @@
+SELECT
+    month_name AS Month,
+    SUM(CASE WHEN order_year = 2016 THEN 1 ELSE 0 END) AS `2016`,
+    SUM(CASE WHEN order_year = 2017 THEN 1 ELSE 0 END) AS `2017`,
+    SUM(CASE WHEN order_year = 2018 THEN 1 ELSE 0 END) AS `2018`
+FROM (
+    SELECT
+        TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'month')) AS month_num,
+        CASE TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'month'))
+            WHEN 1 THEN 'January'
+            WHEN 2 THEN 'February'
+            WHEN 3 THEN 'March'
+            WHEN 4 THEN 'April'
+            WHEN 5 THEN 'May'
+            WHEN 6 THEN 'June'
+            WHEN 7 THEN 'July'
+            WHEN 8 THEN 'August'
+            WHEN 9 THEN 'September'
+            WHEN 10 THEN 'October'
+            WHEN 11 THEN 'November'
+            WHEN 12 THEN 'December'
+        END AS month_name,
+        TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'year')) AS order_year
+    FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS o
+    WHERE o.order_status = 'delivered'
+      AND o.order_delivered_customer_date IS NOT NULL
+      AND TONUMBER(DATE_PART_STR(o.order_delivered_customer_date, 'year')) IN [2016, 2017, 2018]
+) AS src
+GROUP BY month_num, month_name
+ORDER BY month_num;

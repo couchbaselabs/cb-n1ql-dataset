@@ -1,0 +1,58 @@
+WITH races_main AS (
+    SELECT r.race_id, r.year, r.round FROM `f1`.`f1_scope`.`races` r
+),
+races_extra AS (
+    SELECT r.race_id, r.year, r.round FROM `f1`.`f1_scope`.`races_ext` r
+),
+all_races AS (
+    SELECT race_id, year, round FROM races_main
+    UNION ALL
+    SELECT race_id, year, round FROM races_extra
+),
+ranked_races AS (
+    SELECT ar.race_id, ar.year,
+           ROW_NUMBER() OVER (PARTITION BY ar.year ORDER BY ar.round DESC) AS rn
+    FROM all_races ar
+),
+last_race AS (
+    SELECT rr.year, rr.race_id
+    FROM ranked_races rr
+    WHERE rr.rn = 1
+),
+ds_main AS (
+    SELECT ds.race_id, ds.driver_id, ds.points, ds.position
+    FROM `f1`.`f1_scope`.`driver_standings` ds
+),
+ds_extra AS (
+    SELECT ds.race_id, ds.driver_id, ds.points, ds.position
+    FROM `f1`.`f1_scope`.`driver_standings_ext` ds
+),
+all_ds AS (
+    SELECT race_id, driver_id, points, position FROM ds_main
+    UNION ALL
+    SELECT race_id, driver_id, points, position FROM ds_extra
+),
+top_driver AS (
+    SELECT DISTINCT lr.year, ads.driver_id, ads.points AS driver_points
+    FROM last_race lr
+    JOIN all_ds ads ON lr.race_id = ads.race_id AND ads.position = 1
+),
+top_constructor AS (
+    SELECT DISTINCT lr.year, cs.constructor_id, cs.points AS constructor_points
+    FROM last_race lr
+    JOIN `f1`.`f1_scope`.`constructor_standings` cs
+        ON lr.race_id = cs.race_id AND cs.position = 1
+)
+SELECT
+    td.year,
+    IFMISSINGORNULL(d.full_name, de.full_name) AS driver_full_name,
+    td.driver_points,
+    IFMISSINGORNULL(c.name, ce.name) AS constructor_name,
+    tc.constructor_points
+FROM top_driver td
+LEFT JOIN top_constructor tc ON td.year = tc.year
+LEFT JOIN `f1`.`f1_scope`.`drivers` d ON td.driver_id = d.driver_id
+LEFT JOIN `f1`.`f1_scope`.`drivers_ext` de ON td.driver_id = de.driver_id
+LEFT JOIN `f1`.`f1_scope`.`constructors` c ON tc.constructor_id = c.constructor_id
+LEFT JOIN `f1`.`f1_scope`.`constructors_ext` ce ON tc.constructor_id = ce.constructor_id
+ORDER BY td.year;

@@ -1,0 +1,17 @@
+SELECT
+    p.segment,
+    COUNT(DISTINCT CASE WHEN s.fiscal_year = 2020 THEN s.product_code END) AS unique_product_count_2020
+FROM `education_business`.`education_business_scope`.`hardware_fact_sales_monthly` AS s
+JOIN `education_business`.`education_business_scope`.`hardware_dim_product` AS p
+    ON s.product_code = p.product_code
+WHERE s.fiscal_year IN [2020, 2021]
+GROUP BY p.segment
+HAVING COUNT(DISTINCT CASE WHEN s.fiscal_year = 2020 THEN s.product_code END) > 0
+ORDER BY
+    (
+        (
+            COUNT(DISTINCT CASE WHEN s.fiscal_year = 2021 THEN s.product_code END) -
+            COUNT(DISTINCT CASE WHEN s.fiscal_year = 2020 THEN s.product_code END)
+        ) * 100.0
+        / COUNT(DISTINCT CASE WHEN s.fiscal_year = 2020 THEN s.product_code END)
+    ) DESC;

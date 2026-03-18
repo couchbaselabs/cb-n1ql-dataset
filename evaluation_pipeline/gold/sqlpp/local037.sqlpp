@@ -1,0 +1,28 @@
+SELECT
+    category_name AS product_category_name,
+    payment_type,
+    payment_count
+FROM (
+    SELECT
+        oc.category_name AS category_name,
+        pay.payment_type AS payment_type,
+        COUNT(1) AS payment_count,
+        ROW_NUMBER() OVER (
+            PARTITION BY oc.category_name
+            ORDER BY COUNT(1) DESC, pay.payment_type
+        ) AS rn
+    FROM (
+        SELECT DISTINCT oi.order_id, p.product_category_name AS category_name
+        FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_items` AS oi
+        JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_products` AS p
+            ON oi.product_id = p.product_id
+        WHERE p.product_category_name IS NOT NULL
+    ) AS oc
+    JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_order_payments` AS pay
+        ON oc.order_id = pay.order_id
+    WHERE pay.payment_type IS NOT NULL
+    GROUP BY oc.category_name, pay.payment_type
+) AS ranked
+WHERE rn = 1
+ORDER BY payment_count DESC, category_name
+LIMIT 3;

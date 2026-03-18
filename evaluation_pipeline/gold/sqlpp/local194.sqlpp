@@ -1,0 +1,52 @@
+WITH film_counts AS (
+    SELECT film_id, COUNT(*) AS actor_count
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`film_actor`
+    GROUP BY film_id
+),
+film_revenue AS (
+    SELECT
+        fa.actor_id,
+        fa.film_id,
+        SUM(p.amount) AS total_revenue
+    FROM `sqlite_sakila`.`sqlite_sakila_scope`.`film_actor` fa
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`inventory` inv ON fa.film_id = inv.film_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`rental` r ON inv.inventory_id = r.inventory_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`payment` p ON r.rental_id = p.rental_id
+    GROUP BY fa.actor_id, fa.film_id
+),
+actor_film_ranked AS (
+    SELECT
+        fr.actor_id,
+        a.first_name,
+        a.last_name,
+        f.title AS film_title,
+        fr.total_revenue,
+        fr.total_revenue / fc.actor_count AS actor_share_in_film,
+        ROW_NUMBER() OVER (PARTITION BY fr.actor_id ORDER BY fr.total_revenue DESC) AS rn
+    FROM film_revenue fr
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`actor` a ON fr.actor_id = a.actor_id
+    JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`film` f ON fr.film_id = f.film_id
+    JOIN film_counts fc ON fr.film_id = fc.film_id
+),
+top3 AS (
+    SELECT
+        actor_id,
+        first_name,
+        last_name,
+        film_title,
+        total_revenue,
+        actor_share_in_film,
+        AVG(actor_share_in_film) OVER (PARTITION BY actor_id) AS avg_revenue_per_actor_top3
+    FROM actor_film_ranked
+    WHERE rn <= 3
+)
+SELECT
+    actor_id,
+    first_name,
+    last_name,
+    film_title,
+    total_revenue,
+    ROUND(actor_share_in_film, 2) AS actor_share_in_film,
+    ROUND(avg_revenue_per_actor_top3, 2) AS avg_revenue_per_actor_top3
+FROM top3
+ORDER BY actor_id, total_revenue DESC;

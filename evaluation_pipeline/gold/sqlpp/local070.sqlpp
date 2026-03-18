@@ -1,0 +1,64 @@
+WITH filtered AS (
+    SELECT c.insert_date, c.city_name
+    FROM `city_legislation`.`city_legislation_scope`.`cities` AS c
+    WHERE c.country_code_2 = 'cn'
+      AND c.insert_date >= '2021-07-01'
+      AND c.insert_date < '2021-08-01'
+),
+distinct_dates AS (
+    SELECT RAW d
+    FROM (
+        SELECT DISTINCT f.insert_date AS d
+        FROM filtered AS f
+    ) AS x
+    ORDER BY d
+),
+dated AS (
+    SELECT
+        d AS insert_date,
+        DATE_DIFF_STR(d, '2021-07-01', 'day') AS day_num
+    FROM distinct_dates AS d
+),
+grouped_dates AS (
+    SELECT
+        insert_date,
+        day_num,
+        day_num - ROW_NUMBER() OVER (ORDER BY insert_date) AS grp
+    FROM dated
+),
+streaks AS (
+    SELECT
+        grp,
+        MIN(insert_date) AS start_date,
+        MAX(insert_date) AS end_date,
+        COUNT(*) AS streak_length
+    FROM grouped_dates
+    GROUP BY grp
+),
+extremes AS (
+    SELECT MIN(streak_length) AS min_len, MAX(streak_length) AS max_len
+    FROM streaks
+),
+target_dates AS (
+    SELECT gd.insert_date, s.streak_length
+    FROM grouped_dates AS gd
+    JOIN streaks AS s
+        ON gd.grp = s.grp
+    JOIN extremes AS e
+        ON s.streak_length = e.min_len OR s.streak_length = e.max_len
+),
+one_city_per_date AS (
+    SELECT
+        td.insert_date,
+        td.streak_length,
+        MIN(f.city_name) AS city_name
+    FROM target_dates AS td
+    JOIN filtered AS f
+        ON f.insert_date = td.insert_date
+    GROUP BY td.insert_date, td.streak_length
+)
+SELECT
+    o.insert_date,
+    UPPER(SUBSTR(o.city_name, 0, 1)) || LOWER(SUBSTR(o.city_name, 1)) AS city_name
+FROM one_city_per_date AS o
+ORDER BY o.insert_date;

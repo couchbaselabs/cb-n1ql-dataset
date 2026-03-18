@@ -1,0 +1,86 @@
+WITH grid_positions AS (
+    SELECT lp.race_id, lp.driver_id, lp.position AS grid
+    FROM `f1`.`f1_scope`.`lap_positions` lp
+    WHERE lp.lap_type LIKE 'Starting Position%'
+      AND lp.position > 0
+),
+lap_pos AS (
+    SELECT lp.race_id, lp.driver_id, lp.lap, lp.position
+    FROM `f1`.`f1_scope`.`lap_positions` lp
+    WHERE lp.lap_type = 'Race' AND lp.lap <= 5
+),
+pit_laps AS (
+    SELECT DISTINCT ps.race_id, ps.driver_id, ps.lap
+    FROM `f1`.`f1_scope`.`pit_stops` ps
+),
+lap1_start_count AS (
+    SELECT
+        a.race_id,
+        a.driver_id AS overtaken_id,
+        COUNT(*) AS start_overtakes
+    FROM lap_pos a
+    JOIN grid_positions ga ON a.race_id = ga.race_id AND a.driver_id = ga.driver_id
+    JOIN lap_pos b ON a.race_id = b.race_id AND a.lap = b.lap
+    JOIN grid_positions gb ON b.race_id = gb.race_id AND b.driver_id = gb.driver_id
+    WHERE a.lap = 1 AND b.lap = 1
+      AND ga.grid < gb.grid
+      AND a.position > b.position
+      AND ABS(ga.grid - gb.grid) <= 2
+    GROUP BY a.race_id, a.driver_id
+),
+overtaken AS (
+    SELECT c.race_id, c.driver_id, c.lap,
+           c.position - gp.grid AS positions_lost
+    FROM lap_pos c
+    JOIN grid_positions gp ON c.race_id = gp.race_id AND c.driver_id = gp.driver_id
+    WHERE c.lap = 1 AND c.position > gp.grid
+    UNION ALL
+    SELECT c.race_id, c.driver_id, c.lap,
+           c.position - p.position AS positions_lost
+    FROM lap_pos c
+    JOIN lap_pos p ON c.race_id = p.race_id AND c.driver_id = p.driver_id AND p.lap = c.lap - 1
+    WHERE c.lap > 1 AND c.position > p.position
+),
+classified AS (
+    SELECT
+        CASE
+            WHEN IFMISSINGORNULL(ret.driver_id, NULL) IS NOT NULL THEN 'Retirement'
+            WHEN IFMISSINGORNULL(pl1.driver_id, NULL) IS NOT NULL
+              OR IFMISSINGORNULL(pl2.driver_id, NULL) IS NOT NULL THEN 'Pit'
+            WHEN o.lap = 1 THEN 'Start'
+            ELSE 'Track'
+        END AS category,
+        o.positions_lost,
+        o.race_id,
+        o.driver_id,
+        o.lap,
+        IFMISSINGORNULL(sc.start_overtakes, 0) AS start_overtakes
+    FROM overtaken o
+    LEFT JOIN `f1`.`f1_scope`.`retirements` ret
+        ON o.race_id = ret.race_id AND o.driver_id = ret.driver_id AND o.lap = ret.lap
+    LEFT JOIN pit_laps pl1
+        ON o.race_id = pl1.race_id AND o.driver_id = pl1.driver_id AND o.lap = pl1.lap
+    LEFT JOIN pit_laps pl2
+        ON o.race_id = pl2.race_id AND o.driver_id = pl2.driver_id AND (o.lap - 1) = pl2.lap
+    LEFT JOIN lap1_start_count sc
+        ON o.race_id = sc.race_id AND o.driver_id = sc.overtaken_id AND o.lap = 1
+),
+final AS (
+    SELECT 'Retirement' AS category, SUM(positions_lost) AS overtake_count
+    FROM classified WHERE category = 'Retirement'
+    UNION ALL
+    SELECT 'Pit' AS category, SUM(positions_lost) AS overtake_count
+    FROM classified WHERE category = 'Pit'
+    UNION ALL
+    SELECT 'Start' AS category, SUM(start_overtakes) AS overtake_count
+    FROM classified WHERE category = 'Start'
+    UNION ALL
+    SELECT 'Track' AS category,
+           SUM(CASE WHEN category = 'Start' THEN positions_lost - start_overtakes
+                    ELSE positions_lost END) AS overtake_count
+    FROM classified WHERE category IN ['Start', 'Track']
+)
+SELECT category, overtake_count
+FROM final
+WHERE overtake_count > 0
+ORDER BY category;

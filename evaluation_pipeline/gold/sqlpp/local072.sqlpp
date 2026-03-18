@@ -1,0 +1,66 @@
+WITH jan_2022 AS (
+    SELECT
+        c.country_code_2,
+        cc.country_name,
+        c.insert_date,
+        c.city_name,
+        c.capital
+    FROM `city_legislation`.`city_legislation_scope`.`cities` AS c
+    JOIN `city_legislation`.`city_legislation_scope`.`cities_countries` AS cc
+        ON c.country_code_2 = cc.country_code_2
+    WHERE c.insert_date >= "2022-01-01"
+      AND c.insert_date < "2022-02-01"
+),
+target_country AS (
+    SELECT
+        j.country_code_2,
+        j.country_name
+    FROM jan_2022 AS j
+    GROUP BY j.country_code_2, j.country_name
+    HAVING COUNT(DISTINCT j.insert_date) = 9
+    LIMIT 1
+),
+country_days AS (
+    SELECT DISTINCT
+        j.insert_date
+    FROM jan_2022 AS j
+    JOIN target_country AS t
+        ON j.country_code_2 = t.country_code_2
+),
+ordered_days AS (
+    SELECT
+        d.insert_date,
+        ROW_NUMBER() OVER (ORDER BY d.insert_date) AS rn
+    FROM country_days AS d
+),
+day_groups AS (
+    SELECT
+        o.insert_date,
+        DATE_ADD_STR(o.insert_date, -o.rn, "day") AS grp_key
+    FROM ordered_days AS o
+),
+longest_period AS (
+    SELECT
+        MIN(g.insert_date) AS period_start,
+        MAX(g.insert_date) AS period_end,
+        COUNT(*) AS consecutive_days
+    FROM day_groups AS g
+    GROUP BY g.grp_key
+    ORDER BY consecutive_days DESC, period_start
+    LIMIT 1
+)
+SELECT
+    t.country_name,
+    lp.period_start,
+    lp.period_end,
+    lp.consecutive_days,
+    COUNT(*) AS total_entries_in_period,
+    SUM(CASE WHEN j.capital = 1 THEN 1 ELSE 0 END) AS capital_entries_in_period,
+    SUM(CASE WHEN j.capital = 1 THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS capital_entry_proportion
+FROM jan_2022 AS j
+JOIN target_country AS t
+    ON j.country_code_2 = t.country_code_2
+JOIN longest_period AS lp
+    ON j.insert_date >= lp.period_start
+   AND j.insert_date <= lp.period_end
+GROUP BY t.country_name, lp.period_start, lp.period_end, lp.consecutive_days;
