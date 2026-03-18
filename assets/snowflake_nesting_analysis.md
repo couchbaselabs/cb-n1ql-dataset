@@ -447,7 +447,7 @@
 | WORD_VECTORS_US | GLOVE_VECTORS |
 | _1000_GENOMES | VARIANTS |
 
-### Nested Instances (use ≥1 nested table) — 89 total
+### Nested Instances (use ≥1 nested table) — 95 total
 
 | Database | # | Instance IDs |
 |---|---|---|
@@ -472,8 +472,13 @@
 | NOAA_GLOBAL_FORECAST_SYSTEM | 1 | sf_bq291 |
 | OPEN_TARGETS_GENETICS_2 | 1 | sf_bq325 |
 | PYPI | 1 | sf_bq251 |
+| NETHERLANDS_OPEN_MAP_DATA | 2 | sf009, sf013 |
+| BRAZE_USER_EVENT_DEMO_DATASET | 1 | sf018 |
+| GLOBAL_GOVERNMENT | 1 | sf003 |
+| US_REAL_ESTATE | 1 | sf037 |
+| WEATHER__ENVIRONMENT | 1 | sf012 |
 
-### Flat-Only Instances (no nested tables) — 95 total
+### Flat-Only Instances (no nested tables) — 112 total
 
 | Database | # | Instance IDs |
 |---|---|---|
@@ -504,6 +509,18 @@
 | NOAA_PORTS | 1 | sf_bq276 |
 | SAN_FRANCISCO_PLUS | 1 | sf_bq294 |
 | TCGA_HG19_DATA_V0 | 1 | sf_bq150 |
+| OPEN_TARGETS_PLATFORM_1 | 3 | sf_bq095, sf_bq350, sf_bq379 |
+| FINANCE__ECONOMICS | 3 | sf002, sf006, sf044 |
+| US_REAL_ESTATE | 2 | sf008, sf010 |
+| OPEN_TARGETS_PLATFORM_2 | 1 | sf_bq078 |
+| STACKOVERFLOW_PLUS | 1 | sf_bq015 |
+| GLOBAL_WEATHER__CLIMATE_DATA_FOR_BI | 1 | sf001 |
+| BRAZE_USER_EVENT_DEMO_DATASET | 1 | sf035 |
+| AMAZON_VENDOR_ANALYTICS__SAMPLE_DATASET | 1 | sf029 |
+| US_ADDRESSES__POI | 1 | sf040 |
+| YES_ENERGY__SAMPLE_DATA | 1 | sf041 |
+| CENSUS_GALAXY__ZIP_CODE_TO_BLOCK_GROUP_SAMPLE | 1 | sf011 |
+| CENSUS_GALAXY__AIML_MODEL_DATA_ENRICHMENT_SAMPLE | 1 | sf014 |
 
 ---
 
@@ -734,6 +751,16 @@
 | SDOH | 294 | 4,417,166 | 1.4 |
 | IPL | 8 | 293,471 | 0.0 |
 | WWE | 10 | 578,899 | 0.0 |
+| FINANCE__ECONOMICS | 0 | 0 | 0.0 |
+| US_REAL_ESTATE | 0 | 0 | 0.0 |
+| BRAZE_USER_EVENT_DEMO | 0 | 0 | 0.0 |
+| NETHERLANDS_OPEN_MAP | N/A | N/A | N/A |
+| GLOBAL_WEATHER__CLIMATE | 0 | 0 | 0.0 |
+| GLOBAL_GOVERNMENT | 0 | 0 | 0.0 |
+| WEATHER__ENVIRONMENT | 0 | 0 | 0.0 |
+| AMAZON_VENDOR_ANALYTICS | N/A | N/A | N/A |
+| US_ADDRESSES__POI | 0 | 0 | 0.0 |
+| YES_ENERGY__SAMPLE_DATA | 0 | 0 | 0.0 |
 
 ---
 
