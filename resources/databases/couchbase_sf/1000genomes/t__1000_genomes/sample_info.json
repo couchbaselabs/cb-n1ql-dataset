@@ -1,0 +1,1522 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Avuncular": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NA20891(aunt/uncle)",
+              "HG00703 (niece/nephew)",
+              "NA19154 (niece/nephew)",
+              "NA19215 (niece/nephew)",
+              ""
+            ],
+            "type": "string"
+          },
+          "DNA_Source_from_Coriell": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LCL",
+              "Blood",
+              ""
+            ],
+            "type": "string"
+          },
+          "EBV_Coverage": {
+            "#docs": [
+              67,
+              933
+            ],
+            "%docs": [
+              6.7,
+              93.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.01,
+                128.71,
+                157.08,
+                172.1,
+                188.75
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "ET_Pilot_Centers": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WUGSC",
+              "BCM",
+              "BI",
+              "SC",
+              ""
+            ],
+            "type": "string"
+          },
+          "ET_Pilot_Platforms": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LS454",
+              "ILLUMINA",
+              "ILLUMINA,LS454",
+              ""
+            ],
+            "type": "string"
+          },
+          "E_Indel_Ratio": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.86,
+                0.87,
+                0.9,
+                0.92,
+                1.24
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "E_Passed_QC": {
+            "#docs": [
+              998,
+              2
+            ],
+            "%docs": [
+              99.8,
+              0.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Family_ID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BD09",
+              "BD10",
+              "BD32",
+              "NG14",
+              "PK19"
+            ],
+            "type": "string"
+          },
+          "Gender": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "female",
+              "male"
+            ],
+            "type": "string"
+          },
+          "Grandparents": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NA19686",
+              " NA18863",
+              "NA19238",
+              "NA19660, NA19661",
+              ""
+            ],
+            "type": "string"
+          },
+          "HC_Pilot_Centers": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BI,SC",
+              "BGI,WUGSC",
+              ""
+            ],
+            "type": "string"
+          },
+          "HC_Pilot_Platforms": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ILLUMINA",
+              ""
+            ],
+            "type": "string"
+          },
+          "Half_Siblings": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NA20279",
+              "NA19382",
+              ""
+            ],
+            "type": "string"
+          },
+          "Has_Affy_6_0_Genotypes": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Has_Axiom_Genotypes": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Has_Exome_LOF_Genotypes": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Has_Omni_Genotypes": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Has_Phase1_chrY_SNPS": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Has_Sequence_from_Blood_in_Index": {
+            "#docs": [
+              22,
+              978
+            ],
+            "%docs": [
+              2.2,
+              97.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Has_Sequence_in_Phase1": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Has_phase1_chrMT_SNPs": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Has_phase1_chrY_Deletions": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "In_Exon_Targetted_Pilot": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "In_Final_Phase_Variant_Calling": {
+            "#docs": [
+              998,
+              2
+            ],
+            "%docs": [
+              99.8,
+              0.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "In_High_Coverage_Pilot": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "In_Low_Coverage_Pilot": {
+            "#docs": [
+              6,
+              994
+            ],
+            "%docs": [
+              0.6,
+              99.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "In_Phase1_Integrated_Variant_Set": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "LC_Indel_Ratio": {
+            "#docs": [
+              67,
+              933
+            ],
+            "%docs": [
+              6.7,
+              93.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.8,
+                0.83,
+                0.84,
+                0.86,
+                0.99
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "LC_Non_Duplicated_Aligned_Coverage": {
+            "#docs": [
+              67,
+              933
+            ],
+            "%docs": [
+              6.7,
+              93.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                6.22,
+                7.49,
+                8.24,
+                8.7,
+                9.31
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "LC_Passed_QC": {
+            "#docs": [
+              933,
+              67
+            ],
+            "%docs": [
+              93.3,
+              6.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "LC_Pilot_Centers": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SC",
+              "ABHTD,SC",
+              "BCM,SC",
+              "BGI",
+              ""
+            ],
+            "type": "string"
+          },
+          "LC_Pilot_Platforms": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LS454",
+              "ABI_SOLID,ILLUMINA",
+              "ILLUMINA",
+              "ILLUMINA,LS454",
+              ""
+            ],
+            "type": "string"
+          },
+          "Main_Project_E_Centers": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WUGSC",
+              "BCM",
+              "BGI",
+              "BI",
+              ""
+            ],
+            "type": "string"
+          },
+          "Main_Project_E_Platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ILLUMINA",
+              ""
+            ],
+            "type": "string"
+          },
+          "Main_project_LC_Centers": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BGI",
+              "BI",
+              "ILLUMINA",
+              "SC",
+              "WUGSC"
+            ],
+            "type": "string"
+          },
+          "Main_project_LC_platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ILLUMINA",
+              ""
+            ],
+            "type": "string"
+          },
+          "Non_Paternity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NA20281",
+              "NA18510",
+              "NA19252",
+              "NA19714",
+              ""
+            ],
+            "type": "string"
+          },
+          "Phase1_E_Centers": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WUGSC",
+              "BCM",
+              "BGI",
+              "BI",
+              ""
+            ],
+            "type": "string"
+          },
+          "Phase1_E_Platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ILLUMINA",
+              "ABI_SOLID",
+              ""
+            ],
+            "type": "string"
+          },
+          "Phase1_LC_Centers": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WUGSC",
+              "BCM",
+              "BGI",
+              "SC",
+              ""
+            ],
+            "type": "string"
+          },
+          "Phase1_LC_Platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LS454",
+              "ABI_SOLID",
+              "ILLUMINA",
+              "ILLUMINA,LS454",
+              ""
+            ],
+            "type": "string"
+          },
+          "Population": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BEB",
+              "CLM",
+              "ESN",
+              "MSL",
+              "PJL"
+            ],
+            "type": "string"
+          },
+          "Population_Description": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bengali in Bangladesh",
+              "Colombian in Medellin, Colombi...",
+              "Esan in Nigeria",
+              "Mende in Sierra Leone",
+              "Punjabi in Lahore,Pakistan"
+            ],
+            "type": "string"
+          },
+          "Relationship": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "child",
+              "father",
+              "husband of Child",
+              "mother",
+              "unrel"
+            ],
+            "type": "string"
+          },
+          "Sample": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "HG02690",
+              "HG02947",
+              "HG03600",
+              "HG03603",
+              "HG03910"
+            ],
+            "type": "string"
+          },
+          "Siblings": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NA20301",
+              "HG00702",
+              "NA19153",
+              "NA19213",
+              ""
+            ],
+            "type": "string"
+          },
+          "Super_Population": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AFR",
+              "AMR",
+              "EAS",
+              "EUR",
+              "SAS"
+            ],
+            "type": "string"
+          },
+          "Super_Population_Description": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "African",
+              "American",
+              "East Asian",
+              "European",
+              "South Asian"
+            ],
+            "type": "string"
+          },
+          "Third_Order": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "HG03478, HG03469, HG03480",
+              "HG02624, HG02610, HG02666 ",
+              "HG02700",
+              "HG03457",
+              ""
+            ],
+            "type": "string"
+          },
+          "Total_Exome_Sequence": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                4904537488,
+                7913742000,
+                12718446200,
+                14409588900,
+                17579371700
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "Total_LC_Sequence": {
+            "#docs": [
+              67,
+              933
+            ],
+            "%docs": [
+              6.7,
+              93.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                17646562300,
+                22020106300,
+                24927066800,
+                26068892200,
+                26454982300
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "Unexpected_Parent_Child": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NA20871",
+              "HG00866",
+              "NA19923",
+              "NA20279",
+              ""
+            ],
+            "type": "string"
+          },
+          "Unknown_Second_Order": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NA20302,NA20313",
+              "HG00501, HG00524",
+              "HG00703",
+              "HG02353",
+              ""
+            ],
+            "type": "string"
+          },
+          "VerifyBam_E_Affy_Chip": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.00305,
+                0.0049,
+                0.00744,
+                0.01358,
+                0.01733
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "VerifyBam_E_Affy_Free": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.0031,
+                0.00498,
+                0.00754,
+                0.01375,
+                0.01752
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "VerifyBam_E_Omni_Chip": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.0013
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "VerifyBam_E_Omni_Free": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.00325,
+                0.00522,
+                0.0068,
+                0.01134,
+                0.01723
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "VerifyBam_LC_Affy_Chip": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.00058,
+                0.00096,
+                0.00195,
+                0.00255,
+                0.00266
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "VerifyBam_LC_Affy_Free": {
+            "#docs": [
+              67,
+              933
+            ],
+            "%docs": [
+              6.7,
+              93.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.00019,
+                0.00074,
+                0.00169,
+                0.00174,
+                0.00232
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "VerifyBam_LC_Omni_Chip": {
+            "#docs": [
+              998,
+              2
+            ],
+            "%docs": [
+              99.8,
+              0.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.0001,
+                0.00044
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "VerifyBam_LC_Omni_Free": {
+            "#docs": [
+              67,
+              933
+            ],
+            "%docs": [
+              6.7,
+              93.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1e-05,
+                0.00038,
+                0.00087,
+                0.00124,
+                0.00187
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "X_Targets_Covered_to_20x_or_greater": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.880688,
+                0.914311,
+                0.941797,
+                0.94371,
+                0.95337
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sample_info::1343",
+                  "sample_info::447",
+                  "sample_info::482",
+                  "sample_info::526",
+                  "sample_info::80"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sample_info::1343"
+              },
+              {
+                "id": "sample_info::447"
+              },
+              {
+                "id": "sample_info::482"
+              },
+              {
+                "id": "sample_info::526"
+              },
+              {
+                "id": "sample_info::80"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Avuncular": "",
+      "DNA_Source_from_Coriell": "",
+      "EBV_Coverage": null,
+      "ET_Pilot_Centers": "",
+      "ET_Pilot_Platforms": "",
+      "E_Indel_Ratio": null,
+      "E_Passed_QC": null,
+      "Family_ID": "NG48",
+      "Gender": "male",
+      "Grandparents": "",
+      "HC_Pilot_Centers": "",
+      "HC_Pilot_Platforms": "",
+      "Half_Siblings": "",
+      "Has_Affy_6_0_Genotypes": true,
+      "Has_Axiom_Genotypes": null,
+      "Has_Exome_LOF_Genotypes": null,
+      "Has_Omni_Genotypes": null,
+      "Has_Phase1_chrY_SNPS": null,
+      "Has_Sequence_from_Blood_in_Index": null,
+      "Has_Sequence_in_Phase1": null,
+      "Has_phase1_chrMT_SNPs": null,
+      "Has_phase1_chrY_Deletions": null,
+      "In_Exon_Targetted_Pilot": null,
+      "In_Final_Phase_Variant_Calling": null,
+      "In_High_Coverage_Pilot": null,
+      "In_Low_Coverage_Pilot": null,
+      "In_Phase1_Integrated_Variant_Set": null,
+      "LC_Indel_Ratio": null,
+      "LC_Non_Duplicated_Aligned_Coverage": null,
+      "LC_Passed_QC": null,
+      "LC_Pilot_Centers": "",
+      "LC_Pilot_Platforms": "",
+      "Main_Project_E_Centers": "",
+      "Main_Project_E_Platform": "",
+      "Main_project_LC_Centers": "",
+      "Main_project_LC_platform": "",
+      "Non_Paternity": "",
+      "Phase1_E_Centers": "",
+      "Phase1_E_Platform": "",
+      "Phase1_LC_Centers": "",
+      "Phase1_LC_Platform": "",
+      "Population": "ESN",
+      "Population_Description": "Esan in Nigeria",
+      "Relationship": "child",
+      "Sample": "HG03167",
+      "Siblings": "",
+      "Super_Population": "AFR",
+      "Super_Population_Description": "African",
+      "Third_Order": "",
+      "Total_Exome_Sequence": null,
+      "Total_LC_Sequence": null,
+      "Unexpected_Parent_Child": "",
+      "Unknown_Second_Order": "",
+      "VerifyBam_E_Affy_Chip": null,
+      "VerifyBam_E_Affy_Free": null,
+      "VerifyBam_E_Omni_Chip": null,
+      "VerifyBam_E_Omni_Free": null,
+      "VerifyBam_LC_Affy_Chip": null,
+      "VerifyBam_LC_Affy_Free": null,
+      "VerifyBam_LC_Omni_Chip": null,
+      "VerifyBam_LC_Omni_Free": null,
+      "X_Targets_Covered_to_20x_or_greater": null
+    },
+    {
+      "Avuncular": "",
+      "DNA_Source_from_Coriell": "",
+      "EBV_Coverage": 98.48,
+      "ET_Pilot_Centers": "",
+      "ET_Pilot_Platforms": "",
+      "E_Indel_Ratio": 0.84,
+      "E_Passed_QC": true,
+      "Family_ID": "NA18953",
+      "Gender": "male",
+      "Grandparents": "",
+      "HC_Pilot_Centers": "",
+      "HC_Pilot_Platforms": "",
+      "Half_Siblings": "",
+      "Has_Affy_6_0_Genotypes": null,
+      "Has_Axiom_Genotypes": true,
+      "Has_Exome_LOF_Genotypes": true,
+      "Has_Omni_Genotypes": true,
+      "Has_Phase1_chrY_SNPS": true,
+      "Has_Sequence_from_Blood_in_Index": null,
+      "Has_Sequence_in_Phase1": true,
+      "Has_phase1_chrMT_SNPs": true,
+      "Has_phase1_chrY_Deletions": true,
+      "In_Exon_Targetted_Pilot": null,
+      "In_Final_Phase_Variant_Calling": true,
+      "In_High_Coverage_Pilot": null,
+      "In_Low_Coverage_Pilot": true,
+      "In_Phase1_Integrated_Variant_Set": true,
+      "LC_Indel_Ratio": 0.87,
+      "LC_Non_Duplicated_Aligned_Coverage": 4.31,
+      "LC_Passed_QC": true,
+      "LC_Pilot_Centers": "BI",
+      "LC_Pilot_Platforms": "ILLUMINA",
+      "Main_Project_E_Centers": "BI",
+      "Main_Project_E_Platform": "ILLUMINA",
+      "Main_project_LC_Centers": "BI",
+      "Main_project_LC_platform": "ILLUMINA",
+      "Non_Paternity": "",
+      "Phase1_E_Centers": "BI",
+      "Phase1_E_Platform": "ILLUMINA",
+      "Phase1_LC_Centers": "BI",
+      "Phase1_LC_Platform": "ILLUMINA",
+      "Population": "JPT",
+      "Population_Description": "Japanese in Tokyo, Japan",
+      "Relationship": "",
+      "Sample": "NA18953",
+      "Siblings": "",
+      "Super_Population": "EAS",
+      "Super_Population_Description": "East Asian",
+      "Third_Order": "",
+      "Total_Exome_Sequence": 20537617560,
+      "Total_LC_Sequence": 21999037292,
+      "Unexpected_Parent_Child": "",
+      "Unknown_Second_Order": "",
+      "VerifyBam_E_Affy_Chip": null,
+      "VerifyBam_E_Affy_Free": 0.00015,
+      "VerifyBam_E_Omni_Chip": 0.00033,
+      "VerifyBam_E_Omni_Free": 0.00034,
+      "VerifyBam_LC_Affy_Chip": null,
+      "VerifyBam_LC_Affy_Free": null,
+      "VerifyBam_LC_Omni_Chip": 0.00027,
+      "VerifyBam_LC_Omni_Free": 9e-05,
+      "X_Targets_Covered_to_20x_or_greater": 0.94208
+    },
+    {
+      "Avuncular": "",
+      "DNA_Source_from_Coriell": "",
+      "EBV_Coverage": 46.25,
+      "ET_Pilot_Centers": "BI",
+      "ET_Pilot_Platforms": "ILLUMINA",
+      "E_Indel_Ratio": 0.88,
+      "E_Passed_QC": true,
+      "Family_ID": "NA18985",
+      "Gender": "male",
+      "Grandparents": "",
+      "HC_Pilot_Centers": "",
+      "HC_Pilot_Platforms": "",
+      "Half_Siblings": "",
+      "Has_Affy_6_0_Genotypes": null,
+      "Has_Axiom_Genotypes": null,
+      "Has_Exome_LOF_Genotypes": true,
+      "Has_Omni_Genotypes": true,
+      "Has_Phase1_chrY_SNPS": true,
+      "Has_Sequence_from_Blood_in_Index": null,
+      "Has_Sequence_in_Phase1": true,
+      "Has_phase1_chrMT_SNPs": true,
+      "Has_phase1_chrY_Deletions": true,
+      "In_Exon_Targetted_Pilot": true,
+      "In_Final_Phase_Variant_Calling": true,
+      "In_High_Coverage_Pilot": null,
+      "In_Low_Coverage_Pilot": null,
+      "In_Phase1_Integrated_Variant_Set": true,
+      "LC_Indel_Ratio": 0.9,
+      "LC_Non_Duplicated_Aligned_Coverage": 5.79,
+      "LC_Passed_QC": true,
+      "LC_Pilot_Centers": "",
+      "LC_Pilot_Platforms": "",
+      "Main_Project_E_Centers": "BI",
+      "Main_Project_E_Platform": "ILLUMINA",
+      "Main_project_LC_Centers": "BI",
+      "Main_project_LC_platform": "ILLUMINA",
+      "Non_Paternity": "",
+      "Phase1_E_Centers": "BI",
+      "Phase1_E_Platform": "ILLUMINA",
+      "Phase1_LC_Centers": "BI",
+      "Phase1_LC_Platform": "ILLUMINA",
+      "Population": "JPT",
+      "Population_Description": "Japanese in Tokyo, Japan",
+      "Relationship": "",
+      "Sample": "NA18985",
+      "Siblings": "",
+      "Super_Population": "EAS",
+      "Super_Population_Description": "East Asian",
+      "Third_Order": "",
+      "Total_Exome_Sequence": 5758993176,
+      "Total_LC_Sequence": 20034571964,
+      "Unexpected_Parent_Child": "",
+      "Unknown_Second_Order": "",
+      "VerifyBam_E_Affy_Chip": null,
+      "VerifyBam_E_Affy_Free": 0.00288,
+      "VerifyBam_E_Omni_Chip": 0.00358,
+      "VerifyBam_E_Omni_Free": 0.00363,
+      "VerifyBam_LC_Affy_Chip": null,
+      "VerifyBam_LC_Affy_Free": null,
+      "VerifyBam_LC_Omni_Chip": 0.00086,
+      "VerifyBam_LC_Omni_Free": 0.00067,
+      "X_Targets_Covered_to_20x_or_greater": 0.843694
+    },
+    {
+      "Avuncular": "",
+      "DNA_Source_from_Coriell": "",
+      "EBV_Coverage": 395.9,
+      "ET_Pilot_Centers": "BCM",
+      "ET_Pilot_Platforms": "LS454",
+      "E_Indel_Ratio": 1.16,
+      "E_Passed_QC": true,
+      "Family_ID": "Y100",
+      "Gender": "female",
+      "Grandparents": "",
+      "HC_Pilot_Centers": "",
+      "HC_Pilot_Platforms": "",
+      "Half_Siblings": "",
+      "Has_Affy_6_0_Genotypes": null,
+      "Has_Axiom_Genotypes": true,
+      "Has_Exome_LOF_Genotypes": true,
+      "Has_Omni_Genotypes": true,
+      "Has_Phase1_chrY_SNPS": null,
+      "Has_Sequence_from_Blood_in_Index": null,
+      "Has_Sequence_in_Phase1": true,
+      "Has_phase1_chrMT_SNPs": true,
+      "Has_phase1_chrY_Deletions": null,
+      "In_Exon_Targetted_Pilot": true,
+      "In_Final_Phase_Variant_Calling": true,
+      "In_High_Coverage_Pilot": null,
+      "In_Low_Coverage_Pilot": null,
+      "In_Phase1_Integrated_Variant_Set": true,
+      "LC_Indel_Ratio": 0.85,
+      "LC_Non_Duplicated_Aligned_Coverage": 8.84,
+      "LC_Passed_QC": true,
+      "LC_Pilot_Centers": "",
+      "LC_Pilot_Platforms": "",
+      "Main_Project_E_Centers": "BCM",
+      "Main_Project_E_Platform": "ILLUMINA",
+      "Main_project_LC_Centers": "BCM",
+      "Main_project_LC_platform": "ILLUMINA",
+      "Non_Paternity": "",
+      "Phase1_E_Centers": "BCM",
+      "Phase1_E_Platform": "ABI_SOLID",
+      "Phase1_LC_Centers": "BCM",
+      "Phase1_LC_Platform": "ABI_SOLID",
+      "Population": "YRI",
+      "Population_Description": "Yoruba in Ibadan, Nigeria",
+      "Relationship": "mother",
+      "Sample": "NA19118",
+      "Siblings": "",
+      "Super_Population": "AFR",
+      "Super_Population_Description": "African",
+      "Third_Order": "",
+      "Total_Exome_Sequence": 9144025607,
+      "Total_LC_Sequence": 25556926375,
+      "Unexpected_Parent_Child": "",
+      "Unknown_Second_Order": "",
+      "VerifyBam_E_Affy_Chip": null,
+      "VerifyBam_E_Affy_Free": 0.01696,
+      "VerifyBam_E_Omni_Chip": 0.01474,
+      "VerifyBam_E_Omni_Free": 0.01473,
+      "VerifyBam_LC_Affy_Chip": null,
+      "VerifyBam_LC_Affy_Free": 0.0022,
+      "VerifyBam_LC_Omni_Chip": 0.00224,
+      "VerifyBam_LC_Omni_Free": 0.00232,
+      "X_Targets_Covered_to_20x_or_greater": 0.92907
+    },
+    {
+      "Avuncular": "",
+      "DNA_Source_from_Coriell": "",
+      "EBV_Coverage": 25.54,
+      "ET_Pilot_Centers": "WUGSC",
+      "ET_Pilot_Platforms": "ILLUMINA",
+      "E_Indel_Ratio": 0.73,
+      "E_Passed_QC": true,
+      "Family_ID": "Y043",
+      "Gender": "male",
+      "Grandparents": "",
+      "HC_Pilot_Centers": "",
+      "HC_Pilot_Platforms": "",
+      "Half_Siblings": "",
+      "Has_Affy_6_0_Genotypes": null,
+      "Has_Axiom_Genotypes": true,
+      "Has_Exome_LOF_Genotypes": true,
+      "Has_Omni_Genotypes": true,
+      "Has_Phase1_chrY_SNPS": true,
+      "Has_Sequence_from_Blood_in_Index": null,
+      "Has_Sequence_in_Phase1": true,
+      "Has_phase1_chrMT_SNPs": true,
+      "Has_phase1_chrY_Deletions": true,
+      "In_Exon_Targetted_Pilot": true,
+      "In_Final_Phase_Variant_Calling": true,
+      "In_High_Coverage_Pilot": null,
+      "In_Low_Coverage_Pilot": true,
+      "In_Phase1_Integrated_Variant_Set": true,
+      "LC_Indel_Ratio": 0.86,
+      "LC_Non_Duplicated_Aligned_Coverage": 6.52,
+      "LC_Passed_QC": true,
+      "LC_Pilot_Centers": "MPIMG,WUGSC",
+      "LC_Pilot_Platforms": "ILLUMINA",
+      "Main_Project_E_Centers": "WUGSC",
+      "Main_Project_E_Platform": "ILLUMINA",
+      "Main_project_LC_Centers": "MPIMG",
+      "Main_project_LC_platform": "ILLUMINA",
+      "Non_Paternity": "",
+      "Phase1_E_Centers": "WUGSC",
+      "Phase1_E_Platform": "ILLUMINA",
+      "Phase1_LC_Centers": "MPIMG,WUGSC",
+      "Phase1_LC_Platform": "ILLUMINA",
+      "Population": "YRI",
+      "Population_Description": "Yoruba in Ibadan, Nigeria",
+      "Relationship": "father",
+      "Sample": "NA19138",
+      "Siblings": "",
+      "Super_Population": "AFR",
+      "Super_Population_Description": "African",
+      "Third_Order": "",
+      "Total_Exome_Sequence": 9880738600,
+      "Total_LC_Sequence": 19073470442,
+      "Unexpected_Parent_Child": "",
+      "Unknown_Second_Order": "",
+      "VerifyBam_E_Affy_Chip": null,
+      "VerifyBam_E_Affy_Free": 0.00085,
+      "VerifyBam_E_Omni_Chip": 0.00078,
+      "VerifyBam_E_Omni_Free": 0.00086,
+      "VerifyBam_LC_Affy_Chip": null,
+      "VerifyBam_LC_Affy_Free": 0.00042,
+      "VerifyBam_LC_Omni_Chip": 0.00244,
+      "VerifyBam_LC_Omni_Free": 0.00212,
+      "X_Targets_Covered_to_20x_or_greater": 0.879271
+    }
+  ]
+}

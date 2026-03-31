@@ -1,0 +1,570 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`CustomFields` = \"NULL\", `IsEmployee` = 0, `IsExternalLogonProvider` = 0, `IsPermittedToLogon` = 1, `IsSalesperson` = 0, `LastEditedBy` = 1, `OtherLanguages` = \"NULL\", `Photo` = \"NULL\", `ValidFrom` = 1464736440000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "CustomFields": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "EmailAddress": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "aakarsha@tailspintoys.com",
+              "elizas@northwindelectriccars.c...",
+              "markus@tailspintoys.com",
+              "matheuso@nodpublishers.com",
+              "prasong@tailspintoys.com"
+            ],
+            "type": "string"
+          },
+          "FaxNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(201) 555-0101",
+              "(201) 555-0106",
+              "(252) 555-0101"
+            ],
+            "type": "string"
+          },
+          "FullName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aakarsha Nookala",
+              "Eliza Soderberg",
+              "Markus Kantee",
+              "Matheus Oliveira",
+              "Prasong Tuntayakul"
+            ],
+            "type": "string"
+          },
+          "HashedPassword": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x23354C16E4ECC18E107A070A1D6B...",
+              "0x2787527C41F2131B0C1314FA84D7...",
+              "0x30BC048CC8A63CC96C3D62F6BD26...",
+              "0x80DE4F3879785996D9754010C8E9...",
+              "0xCB200A535BFF77394C556E909F35..."
+            ],
+            "type": "string"
+          },
+          "IsEmployee": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "IsExternalLogonProvider": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "IsPermittedToLogon": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "IsSalesperson": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "IsSystemUser": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LogonName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "aakarsha@tailspintoys.com",
+              "elizas@northwindelectriccars.c...",
+              "markus@tailspintoys.com",
+              "matheuso@nodpublishers.com",
+              "prasong@tailspintoys.com"
+            ],
+            "type": "string"
+          },
+          "OtherLanguages": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "PersonID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              38,
+              39,
+              1177,
+              1252,
+              1289
+            ],
+            "type": "number"
+          },
+          "PhoneNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(201) 555-0100",
+              "(201) 555-0101",
+              "(252) 555-0107"
+            ],
+            "type": "string"
+          },
+          "Photo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "PreferredName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aakarsha",
+              "Eliza",
+              "Markus",
+              "Matheus",
+              "Prasong"
+            ],
+            "type": "string"
+          },
+          "SearchName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aakarsha Aakarsha Nookala",
+              "Eliza Eliza Soderberg",
+              "Markus Markus Kantee",
+              "Matheus Matheus Oliveira",
+              "Prasong Prasong Tuntayakul"
+            ],
+            "type": "string"
+          },
+          "UserPreferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "dateFormat": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dd/mm/yy",
+                  "mm/dd/yy"
+                ],
+                "type": "string"
+              },
+              "favoritesOnDashboard": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  true
+                ],
+                "type": "boolean"
+              },
+              "table": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "properties": {
+                  "pageLength": {
+                    "#docs": 5,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      10,
+                      50
+                    ],
+                    "type": "number"
+                  },
+                  "pagingType": {
+                    "#docs": 5,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "full",
+                      "simple",
+                      "simple_numbers"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "samples": [
+                  {
+                    "pageLength": 10,
+                    "pagingType": "simple"
+                  },
+                  {
+                    "pageLength": 10,
+                    "pagingType": "simple_numbers"
+                  },
+                  {
+                    "pageLength": 50,
+                    "pagingType": "full"
+                  }
+                ],
+                "type": "object"
+              },
+              "theme": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "black-tie",
+                  "blitzer",
+                  "dark-hive",
+                  "ui-darkness"
+                ],
+                "type": "string"
+              },
+              "timeZone": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "PST"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "dateFormat": "dd/mm/yy",
+                "favoritesOnDashboard": true,
+                "table": {
+                  "pageLength": 50,
+                  "pagingType": "full"
+                },
+                "theme": "black-tie",
+                "timeZone": "PST"
+              },
+              {
+                "dateFormat": "mm/dd/yy",
+                "favoritesOnDashboard": true,
+                "table": {
+                  "pageLength": 10,
+                  "pagingType": "simple"
+                },
+                "theme": "blitzer",
+                "timeZone": "PST"
+              },
+              {
+                "dateFormat": "mm/dd/yy",
+                "favoritesOnDashboard": true,
+                "table": {
+                  "pageLength": 10,
+                  "pagingType": "simple"
+                },
+                "theme": "ui-darkness",
+                "timeZone": "PST"
+              },
+              {
+                "dateFormat": "mm/dd/yy",
+                "favoritesOnDashboard": true,
+                "table": {
+                  "pageLength": 10,
+                  "pagingType": "simple_numbers"
+                },
+                "theme": "dark-hive",
+                "timeZone": "PST"
+              },
+              {
+                "dateFormat": "mm/dd/yy",
+                "favoritesOnDashboard": true,
+                "table": {
+                  "pageLength": 50,
+                  "pagingType": "full"
+                },
+                "theme": "blitzer",
+                "timeZone": "PST"
+              }
+            ],
+            "type": "object"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1464736440000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "application_people::0",
+                  "application_people::1",
+                  "application_people::2",
+                  "application_people::3",
+                  "application_people::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "application_people::0"
+              },
+              {
+                "id": "application_people::1"
+              },
+              {
+                "id": "application_people::2"
+              },
+              {
+                "id": "application_people::3"
+              },
+              {
+                "id": "application_people::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CustomFields": "NULL",
+      "EmailAddress": "aakarsha@tailspintoys.com",
+      "FaxNumber": "(201) 555-0101",
+      "FullName": "Aakarsha Nookala",
+      "HashedPassword": "0xCB200A535BFF77394C556E909F35158B7C45D318E7E0100E4B98899ABC5797C5",
+      "IsEmployee": 0,
+      "IsExternalLogonProvider": 0,
+      "IsPermittedToLogon": 1,
+      "IsSalesperson": 0,
+      "IsSystemUser": 0,
+      "LastEditedBy": 1,
+      "LogonName": "aakarsha@tailspintoys.com",
+      "OtherLanguages": "NULL",
+      "PersonID": 1177,
+      "PhoneNumber": "(201) 555-0100",
+      "Photo": "NULL",
+      "PreferredName": "Aakarsha",
+      "SearchName": "Aakarsha Aakarsha Nookala",
+      "UserPreferences": {
+        "dateFormat": "mm/dd/yy",
+        "favoritesOnDashboard": true,
+        "table": {
+          "pageLength": 50,
+          "pagingType": "full"
+        },
+        "theme": "blitzer",
+        "timeZone": "PST"
+      },
+      "ValidFrom": 1464736440000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "CustomFields": "NULL",
+      "EmailAddress": "prasong@tailspintoys.com",
+      "FaxNumber": "(201) 555-0101",
+      "FullName": "Prasong Tuntayakul",
+      "HashedPassword": "0x30BC048CC8A63CC96C3D62F6BD267477A1577CE59F473C30FBC626A4D604358B",
+      "IsEmployee": 0,
+      "IsExternalLogonProvider": 0,
+      "IsPermittedToLogon": 1,
+      "IsSalesperson": 0,
+      "IsSystemUser": 0,
+      "LastEditedBy": 1,
+      "LogonName": "prasong@tailspintoys.com",
+      "OtherLanguages": "NULL",
+      "PersonID": 1289,
+      "PhoneNumber": "(201) 555-0100",
+      "Photo": "NULL",
+      "PreferredName": "Prasong",
+      "SearchName": "Prasong Prasong Tuntayakul",
+      "UserPreferences": {
+        "dateFormat": "mm/dd/yy",
+        "favoritesOnDashboard": true,
+        "table": {
+          "pageLength": 10,
+          "pagingType": "simple"
+        },
+        "theme": "blitzer",
+        "timeZone": "PST"
+      },
+      "ValidFrom": 1464736440000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "CustomFields": "NULL",
+      "EmailAddress": "elizas@northwindelectriccars.com",
+      "FaxNumber": "(201) 555-0106",
+      "FullName": "Eliza Soderberg",
+      "HashedPassword": "0x2787527C41F2131B0C1314FA84D727BCA95A6AF9F7F3DD5A028344E4BD5E1B87",
+      "IsEmployee": 0,
+      "IsExternalLogonProvider": 0,
+      "IsPermittedToLogon": 1,
+      "IsSalesperson": 0,
+      "IsSystemUser": 1,
+      "LastEditedBy": 1,
+      "LogonName": "elizas@northwindelectriccars.com",
+      "OtherLanguages": "NULL",
+      "PersonID": 39,
+      "PhoneNumber": "(201) 555-0101",
+      "Photo": "NULL",
+      "PreferredName": "Eliza",
+      "SearchName": "Eliza Eliza Soderberg",
+      "UserPreferences": {
+        "dateFormat": "mm/dd/yy",
+        "favoritesOnDashboard": true,
+        "table": {
+          "pageLength": 10,
+          "pagingType": "simple"
+        },
+        "theme": "ui-darkness",
+        "timeZone": "PST"
+      },
+      "ValidFrom": 1464736440000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "CustomFields": "NULL",
+      "EmailAddress": "matheuso@nodpublishers.com",
+      "FaxNumber": "(252) 555-0101",
+      "FullName": "Matheus Oliveira",
+      "HashedPassword": "0x80DE4F3879785996D9754010C8E90C24C3D82BF929D5726E9A69418D772AC046",
+      "IsEmployee": 0,
+      "IsExternalLogonProvider": 0,
+      "IsPermittedToLogon": 1,
+      "IsSalesperson": 0,
+      "IsSystemUser": 1,
+      "LastEditedBy": 1,
+      "LogonName": "matheuso@nodpublishers.com",
+      "OtherLanguages": "NULL",
+      "PersonID": 38,
+      "PhoneNumber": "(252) 555-0107",
+      "Photo": "NULL",
+      "PreferredName": "Matheus",
+      "SearchName": "Matheus Matheus Oliveira",
+      "UserPreferences": {
+        "dateFormat": "mm/dd/yy",
+        "favoritesOnDashboard": true,
+        "table": {
+          "pageLength": 10,
+          "pagingType": "simple_numbers"
+        },
+        "theme": "dark-hive",
+        "timeZone": "PST"
+      },
+      "ValidFrom": 1464736440000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "CustomFields": "NULL",
+      "EmailAddress": "markus@tailspintoys.com",
+      "FaxNumber": "(201) 555-0101",
+      "FullName": "Markus Kantee",
+      "HashedPassword": "0x23354C16E4ECC18E107A070A1D6BED07505F14608EF87400A1523EC74FBEE5A9",
+      "IsEmployee": 0,
+      "IsExternalLogonProvider": 0,
+      "IsPermittedToLogon": 1,
+      "IsSalesperson": 0,
+      "IsSystemUser": 0,
+      "LastEditedBy": 1,
+      "LogonName": "markus@tailspintoys.com",
+      "OtherLanguages": "NULL",
+      "PersonID": 1252,
+      "PhoneNumber": "(201) 555-0100",
+      "Photo": "NULL",
+      "PreferredName": "Markus",
+      "SearchName": "Markus Markus Kantee",
+      "UserPreferences": {
+        "dateFormat": "dd/mm/yy",
+        "favoritesOnDashboard": true,
+        "table": {
+          "pageLength": 50,
+          "pagingType": "full"
+        },
+        "theme": "black-tie",
+        "timeZone": "PST"
+      },
+      "ValidFrom": 1464736440000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

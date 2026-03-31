@@ -1,0 +1,327 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`required_signatures` = 1, `type` = \"pubkeyhash\"",
+        "properties": {
+          "addresses": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "bitcoincash:qqfa66djsk72zrsxm00l0l4da6ge8m8fnujuj006k9"
+              ],
+              [
+                "bitcoincash:qqmltxd6khkhryeka5jxatz57hg2ymqmkcgj4wqez5"
+              ],
+              [
+                "bitcoincash:qr6zkel7r092j48uj4pz3282r537pvk28v6vx3gtps"
+              ],
+              [
+                "bitcoincash:qrd8l76dahf95wuvtz5ralhu7shjyk4qzqe9k35hsd"
+              ],
+              [
+                "bitcoincash:qz9cq5ylczhld5rm7a4px04zl50v5ahr3scyqudsp9"
+              ]
+            ],
+            "type": "array"
+          },
+          "block_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "00000000000000000007da69f3056f...",
+              "000000000000000000a4cdd718411a...",
+              "000000000000000002cc3445786de4...",
+              "00000000000000000358cce19fed41...",
+              "00000000000000000472bc9db84f96..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              676871,
+              678040,
+              678309,
+              678863,
+              679209
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1614617283000000,
+              1615301301000000,
+              1615505565000000,
+              1615836335000000,
+              1616050789000000
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              168,
+              348
+            ],
+            "type": "number"
+          },
+          "required_signatures": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "script_asm": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "175877708409dd0db39e196002e3dc...",
+              "3045022100857e811f1ae8dd3afc7b...",
+              "3045022100b202d93772669eca3920...",
+              "34fc3797c517e905c6e0c2e5beca58...",
+              "e97ed1b94fd547f00b3493a727ba6d..."
+            ],
+            "type": "string"
+          },
+          "script_hex": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "41175877708409dd0db39e196002e3...",
+              "4134fc3797c517e905c6e0c2e5beca...",
+              "41e97ed1b94fd547f00b3493a727ba...",
+              "483045022100857e811f1ae8dd3afc...",
+              "483045022100b202d93772669eca39..."
+            ],
+            "type": "string"
+          },
+          "sequence": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              4294967294,
+              4294967295
+            ],
+            "type": "number"
+          },
+          "spent_output_index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "spent_transaction_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "25f2c4b996268014ed7174d0f80032...",
+              "6686e492d79cad737c1dbee08b6eff...",
+              "ad2e924f56c3800f13a8533024127f...",
+              "ad7a5f0adf588aa68669c98f839e2c...",
+              "f212f66ddb80467d94ff4d28facf7a..."
+            ],
+            "type": "string"
+          },
+          "transaction_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1d47406e0c2f7bb8ae7fca45d2dc76...",
+              "8b51daf64c3eeffcedde4c0f4c808d...",
+              "a33f011b81e638daef7266e2234679...",
+              "e67a4b78e725bd308d3f75dd769f0e...",
+              "f7cd819c84bdf80aa3393701783b9f..."
+            ],
+            "type": "string"
+          },
+          "type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "pubkeyhash"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1176,
+              4486,
+              100000,
+              2621859,
+              9522056
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "inputs::0",
+                  "inputs::1",
+                  "inputs::2",
+                  "inputs::3",
+                  "inputs::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "inputs::0"
+              },
+              {
+                "id": "inputs::1"
+              },
+              {
+                "id": "inputs::2"
+              },
+              {
+                "id": "inputs::3"
+              },
+              {
+                "id": "inputs::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "addresses": [
+        "bitcoincash:qqmltxd6khkhryeka5jxatz57hg2ymqmkcgj4wqez5"
+      ],
+      "block_hash": "000000000000000002cc3445786de4aaee2b3592d83a2faf4136f948384e40be",
+      "block_number": 678040,
+      "block_timestamp": 1615301301000000,
+      "index": 0,
+      "required_signatures": 1,
+      "script_asm": "175877708409dd0db39e196002e3dc5a0cb02a8606c0f1273ec45af074477f6f78499cbe2ac239457cd0c5f79e99efb8fbc62d7bd89f72307cd3b7feecc1a29b[ALL|FORKID] 03506e6b330851e1ec856ae0c2cdfbafd191aa19119526912331188cca3082a787",
+      "script_hex": "41175877708409dd0db39e196002e3dc5a0cb02a8606c0f1273ec45af074477f6f78499cbe2ac239457cd0c5f79e99efb8fbc62d7bd89f72307cd3b7feecc1a29b412103506e6b330851e1ec856ae0c2cdfbafd191aa19119526912331188cca3082a787",
+      "sequence": 0,
+      "spent_output_index": 1,
+      "spent_transaction_hash": "25f2c4b996268014ed7174d0f800329f373d81cd44b1190e3999c57df7f7129f",
+      "transaction_hash": "8b51daf64c3eeffcedde4c0f4c808d38a28651545cf9dc8a0e8e204485c4bb96",
+      "type": "pubkeyhash",
+      "value": 2621859
+    },
+    {
+      "addresses": [
+        "bitcoincash:qqfa66djsk72zrsxm00l0l4da6ge8m8fnujuj006k9"
+      ],
+      "block_hash": "00000000000000000358cce19fed412c2097aeeae692b9293fd92c7392386f14",
+      "block_number": 678309,
+      "block_timestamp": 1615505565000000,
+      "index": 348,
+      "required_signatures": 1,
+      "script_asm": "34fc3797c517e905c6e0c2e5beca58a42f9ad6b5593203fbf9f320f39ddd2fbd76ab158bee42dfc5e7e4296ed7b1f098637576d29608325f4c59917a47b4330b[ALL|FORKID] 037549adecd0358f22b4e5e0cfc71669bdaf303ce6bf74e1a08aa2f8bdfb3cc595",
+      "script_hex": "4134fc3797c517e905c6e0c2e5beca58a42f9ad6b5593203fbf9f320f39ddd2fbd76ab158bee42dfc5e7e4296ed7b1f098637576d29608325f4c59917a47b4330b4121037549adecd0358f22b4e5e0cfc71669bdaf303ce6bf74e1a08aa2f8bdfb3cc595",
+      "sequence": 4294967294,
+      "spent_output_index": 0,
+      "spent_transaction_hash": "f212f66ddb80467d94ff4d28facf7a634128cff4956b9c78cab1a674cf5ad1ba",
+      "transaction_hash": "e67a4b78e725bd308d3f75dd769f0e9ab9468ac472aae39941569468b8970d55",
+      "type": "pubkeyhash",
+      "value": 4486
+    },
+    {
+      "addresses": [
+        "bitcoincash:qr6zkel7r092j48uj4pz3282r537pvk28v6vx3gtps"
+      ],
+      "block_hash": "00000000000000000007da69f3056f627b7a79bf30085325c64425c12a7db638",
+      "block_number": 678863,
+      "block_timestamp": 1615836335000000,
+      "index": 0,
+      "required_signatures": 1,
+      "script_asm": "e97ed1b94fd547f00b3493a727ba6dd580c423dbd6b65652ca069412171d214049c72bfe38de157c6eedfed4213d395f142109f227f4821f2eaaf934989adbc5[ALL|FORKID] 035538f435206dc1ded8ae3cfd2f7dc82c42e16fa89c0d523bd24c9a1e75558ace",
+      "script_hex": "41e97ed1b94fd547f00b3493a727ba6dd580c423dbd6b65652ca069412171d214049c72bfe38de157c6eedfed4213d395f142109f227f4821f2eaaf934989adbc54121035538f435206dc1ded8ae3cfd2f7dc82c42e16fa89c0d523bd24c9a1e75558ace",
+      "sequence": 0,
+      "spent_output_index": 1,
+      "spent_transaction_hash": "ad2e924f56c3800f13a8533024127fe8cb828fb3ce11ae051beb82d26c2e9dc7",
+      "transaction_hash": "f7cd819c84bdf80aa3393701783b9f831b35c94668931cbddd1c8921021b5b61",
+      "type": "pubkeyhash",
+      "value": 9522056
+    },
+    {
+      "addresses": [
+        "bitcoincash:qrd8l76dahf95wuvtz5ralhu7shjyk4qzqe9k35hsd"
+      ],
+      "block_hash": "000000000000000000a4cdd718411ab88b22fd878a7204f007a77af2086cf6be",
+      "block_number": 676871,
+      "block_timestamp": 1614617283000000,
+      "index": 168,
+      "required_signatures": 1,
+      "script_asm": "3045022100b202d93772669eca39208f200326f20148f32d11fb6efe44d102166c61f51cf10220455f77cd780c26dd45c6dc110fd8517164dcf01dfea86e662765f2a36720874e[ALL|FORKID] 02eb6a6f677a69e204c6ad971d3b08021fb5b48ed36019e0b75c46c79966de42bf",
+      "script_hex": "483045022100b202d93772669eca39208f200326f20148f32d11fb6efe44d102166c61f51cf10220455f77cd780c26dd45c6dc110fd8517164dcf01dfea86e662765f2a36720874e412102eb6a6f677a69e204c6ad971d3b08021fb5b48ed36019e0b75c46c79966de42bf",
+      "sequence": 4294967295,
+      "spent_output_index": 0,
+      "spent_transaction_hash": "6686e492d79cad737c1dbee08b6eff5d87c5e09d93a3acb9a40f09acce1aa3ce",
+      "transaction_hash": "a33f011b81e638daef7266e2234679823d018ffcbae5c256001ff9818cf6bb65",
+      "type": "pubkeyhash",
+      "value": 1176
+    },
+    {
+      "addresses": [
+        "bitcoincash:qz9cq5ylczhld5rm7a4px04zl50v5ahr3scyqudsp9"
+      ],
+      "block_hash": "00000000000000000472bc9db84f9652d3fccb2bacf4204b6472be639363b586",
+      "block_number": 679209,
+      "block_timestamp": 1616050789000000,
+      "index": 0,
+      "required_signatures": 1,
+      "script_asm": "3045022100857e811f1ae8dd3afc7b9ec01a07de5d0c4d527965e91e22061b6573d92255560220646135085b18b05e051e80735236b11a2c8cd6f5afae14195625c990b834968c[ALL|FORKID] 04c2e61feba8ce9342722efdb6b336f4cf9a1821d2f1d5f94603f360811d885a070514c97a8ff01c4f80a21a1616d6e3b9c81ae1c717e9faa53b438e6009df4cbb",
+      "script_hex": "483045022100857e811f1ae8dd3afc7b9ec01a07de5d0c4d527965e91e22061b6573d92255560220646135085b18b05e051e80735236b11a2c8cd6f5afae14195625c990b834968c414104c2e61feba8ce9342722efdb6b336f4cf9a1821d2f1d5f94603f360811d885a070514c97a8ff01c4f80a21a1616d6e3b9c81ae1c717e9faa53b438e6009df4cbb",
+      "sequence": 4294967295,
+      "spent_output_index": 1,
+      "spent_transaction_hash": "ad7a5f0adf588aa68669c98f839e2c7a4abfe47d11d2096c08c3603e86a2748d",
+      "transaction_hash": "1d47406e0c2f7bb8ae7fca45d2dc76055aa38fc3e1416429f6ac9c8971ef7a08",
+      "type": "pubkeyhash",
+      "value": 100000
+    }
+  ]
+}

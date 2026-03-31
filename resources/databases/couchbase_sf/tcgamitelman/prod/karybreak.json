@@ -1,0 +1,157 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Breakpoint` = \"?\", `InvNo` = 1, `OrderNo` = 1",
+        "properties": {
+          "Breakpoint": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "?"
+            ],
+            "type": "string"
+          },
+          "CaseNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1B",
+              "254",
+              "384",
+              "43",
+              "56"
+            ],
+            "type": "string"
+          },
+          "CloneNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "InvNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "OrderNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "RefNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4169,
+              5553,
+              7703,
+              8463,
+              8473
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "karybreak::0",
+                  "karybreak::1",
+                  "karybreak::2",
+                  "karybreak::3",
+                  "karybreak::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "karybreak::0"
+              },
+              {
+                "id": "karybreak::1"
+              },
+              {
+                "id": "karybreak::2"
+              },
+              {
+                "id": "karybreak::3"
+              },
+              {
+                "id": "karybreak::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Breakpoint": "?",
+      "CaseNo": "384",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 4169
+    },
+    {
+      "Breakpoint": "?",
+      "CaseNo": "1B",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 8473
+    },
+    {
+      "Breakpoint": "?",
+      "CaseNo": "43",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 8463
+    },
+    {
+      "Breakpoint": "?",
+      "CaseNo": "254",
+      "CloneNo": 2,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 7703
+    },
+    {
+      "Breakpoint": "?",
+      "CaseNo": "56",
+      "CloneNo": 2,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 5553
+    }
+  ]
+}

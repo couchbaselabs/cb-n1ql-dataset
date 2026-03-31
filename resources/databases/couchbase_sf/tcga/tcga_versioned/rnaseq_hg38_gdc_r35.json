@@ -1,0 +1,437 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`platform` = \"Illumina\"",
+        "properties": {
+          "Ensembl_gene_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ENSG00000196878",
+              "ENSG00000200897",
+              "ENSG00000225535",
+              "ENSG00000226058",
+              "ENSG00000257674"
+            ],
+            "type": "string"
+          },
+          "Ensembl_gene_id_v": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ENSG00000196878.15",
+              "ENSG00000200897.1",
+              "ENSG00000225535.7",
+              "ENSG00000226058.1",
+              "ENSG00000257674.1"
+            ],
+            "type": "string"
+          },
+          "aliquot_barcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-18-3412-01A-01R-0980-07",
+              "TCGA-AP-A0LF-01A-11R-A118-07",
+              "TCGA-AP-A0LG-01A-11R-A16W-07",
+              "TCGA-AP-A0LH-01A-11R-A16W-07",
+              "TCGA-P5-A5EX-01A-12R-A28M-07"
+            ],
+            "type": "string"
+          },
+          "aliquot_gdc_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2c5d86e0-2e3d-4259-97e9-023df5...",
+              "39dbc57b-dd7d-4ebe-a905-47b500...",
+              "7b4d9c91-80eb-4d3e-8e3f-76a13c...",
+              "8539f984-feb7-4b21-ac81-1ae2b4...",
+              "e4db21b5-9a76-47c1-b838-10f49d..."
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-18-3412",
+              "TCGA-AP-A0LF",
+              "TCGA-AP-A0LG",
+              "TCGA-AP-A0LH",
+              "TCGA-P5-A5EX"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1f13065a-40f7-455d-b8eb-f9a128...",
+              "748e38b1-2ead-4a0a-8881-d64061...",
+              "7dce4215-01f6-43e9-9378-9e22c2...",
+              "c8802713-b814-4b55-993f-3ffebf...",
+              "cca5717d-226d-4390-a99b-c7aed6..."
+            ],
+            "type": "string"
+          },
+          "file_gdc_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4bacba95-0b9b-4ea5-a309-89abbb...",
+              "546eed47-4512-4587-bc73-8aa38c...",
+              "ad27802e-0364-4c3e-805c-7c9237...",
+              "bf456ccc-e7bb-40e0-9e92-03e6ce...",
+              "c970cda2-09e2-4873-9a98-7c8251..."
+            ],
+            "type": "string"
+          },
+          "fpkm_unstranded": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              0.1416,
+              0.2895,
+              0.7076,
+              18.3967
+            ],
+            "type": "number"
+          },
+          "fpkm_uq_unstranded": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              0.1754,
+              0.3057,
+              0.8153,
+              21.5129
+            ],
+            "type": "number"
+          },
+          "gene_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AC009774.1",
+              "AC020629.1",
+              "AC092570.1",
+              "LAMB3",
+              "LINC01393"
+            ],
+            "type": "string"
+          },
+          "gene_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IG_V_pseudogene",
+              "lncRNA",
+              "processed_pseudogene",
+              "protein_coding",
+              "snoRNA"
+            ],
+            "type": "string"
+          },
+          "platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Illumina"
+            ],
+            "type": "string"
+          },
+          "primary_site": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Brain",
+              "Breast",
+              "Bronchus and lung",
+              "Corpus uteri",
+              "Kidney"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-BRCA",
+              "TCGA-LGG",
+              "TCGA-LUAD",
+              "TCGA-LUSC",
+              "TCGA-UCEC"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-18-3412-01A",
+              "TCGA-AP-A0LF-01A",
+              "TCGA-AP-A0LG-01A",
+              "TCGA-AP-A0LH-01A",
+              "TCGA-P5-A5EX-01A"
+            ],
+            "type": "string"
+          },
+          "sample_gdc_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "031667f8-38d9-4df3-a18e-32cc42...",
+              "4c657ad4-2c53-4ea9-82b5-52996e...",
+              "5cdca8c3-1f5d-461c-b09a-6e34a0...",
+              "865f4ef4-4d1c-4cea-a6de-ce7901...",
+              "902e2dd8-81e5-4949-a57b-92b3ef..."
+            ],
+            "type": "string"
+          },
+          "sample_type_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Metastatic",
+              "Primary Tumor",
+              "Recurrent Tumor",
+              "Solid Tissue Normal"
+            ],
+            "type": "string"
+          },
+          "stranded_first": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5,
+              6,
+              57,
+              446
+            ],
+            "type": "number"
+          },
+          "stranded_second": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              4,
+              5,
+              40,
+              450
+            ],
+            "type": "number"
+          },
+          "tpm_unstranded": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              0.4334,
+              0.8112,
+              2.2793,
+              22.4094
+            ],
+            "type": "number"
+          },
+          "unstranded": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              9,
+              11,
+              97,
+              896
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "rnaseq_hg38_gdc_r35::1287511",
+                  "rnaseq_hg38_gdc_r35::1811064",
+                  "rnaseq_hg38_gdc_r35::1910257",
+                  "rnaseq_hg38_gdc_r35::193510",
+                  "rnaseq_hg38_gdc_r35::196036"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "rnaseq_hg38_gdc_r35::1287511"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r35::1811064"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r35::1910257"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r35::193510"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r35::196036"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Ensembl_gene_id": "ENSG00000276404",
+      "Ensembl_gene_id_v": "ENSG00000276404.1",
+      "aliquot_barcode": "TCGA-BH-A202-01A-11R-A14M-07",
+      "aliquot_gdc_id": "d3169d74-dd69-4c6b-8232-6e15ac2920b9",
+      "case_barcode": "TCGA-BH-A202",
+      "case_gdc_id": "e7a00d67-2c26-4d1f-bd17-35f659e88bc1",
+      "file_gdc_id": "6a89e8a2-577e-4531-98e8-ba6fc6cfe525",
+      "fpkm_unstranded": 0.9195,
+      "fpkm_uq_unstranded": 1.0138,
+      "gene_name": "MIR6835",
+      "gene_type": "miRNA",
+      "platform": "Illumina",
+      "primary_site": "Breast",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-BH-A202-01A",
+      "sample_gdc_id": "8fa798fe-f032-4d77-b362-06261db78e6d",
+      "sample_type_name": "Primary Tumor",
+      "stranded_first": 4,
+      "stranded_second": 1,
+      "tpm_unstranded": 3.4838,
+      "unstranded": 5
+    },
+    {
+      "Ensembl_gene_id": "ENSG00000188199",
+      "Ensembl_gene_id_v": "ENSG00000188199.10",
+      "aliquot_barcode": "TCGA-BH-A203-01A-12R-A169-07",
+      "aliquot_gdc_id": "ff6fb75e-aefc-44e3-accd-c4f690a51cca",
+      "case_barcode": "TCGA-BH-A203",
+      "case_gdc_id": "b3264748-947a-43aa-b227-b294fbcc8447",
+      "file_gdc_id": "4bf6ebc1-575d-49e4-9f66-068b537373c0",
+      "fpkm_unstranded": 0.0161,
+      "fpkm_uq_unstranded": 0.0173,
+      "gene_name": "NUTM2B",
+      "gene_type": "protein_coding",
+      "platform": "Illumina",
+      "primary_site": "Breast",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-BH-A203-01A",
+      "sample_gdc_id": "002997ef-3b93-443a-80a3-bae63e129d99",
+      "sample_type_name": "Primary Tumor",
+      "stranded_first": 3,
+      "stranded_second": 2,
+      "tpm_unstranded": 0.0547,
+      "unstranded": 5
+    },
+    {
+      "Ensembl_gene_id": "ENSG00000236782",
+      "Ensembl_gene_id_v": "ENSG00000236782.7",
+      "aliquot_barcode": "TCGA-BH-A203-01A-12R-A169-07",
+      "aliquot_gdc_id": "ff6fb75e-aefc-44e3-accd-c4f690a51cca",
+      "case_barcode": "TCGA-BH-A203",
+      "case_gdc_id": "b3264748-947a-43aa-b227-b294fbcc8447",
+      "file_gdc_id": "4bf6ebc1-575d-49e4-9f66-068b537373c0",
+      "fpkm_unstranded": 0.0395,
+      "fpkm_uq_unstranded": 0.0424,
+      "gene_name": "AL391650.1",
+      "gene_type": "protein_coding",
+      "platform": "Illumina",
+      "primary_site": "Breast",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-BH-A203-01A",
+      "sample_gdc_id": "002997ef-3b93-443a-80a3-bae63e129d99",
+      "sample_type_name": "Primary Tumor",
+      "stranded_first": 670,
+      "stranded_second": 652,
+      "tpm_unstranded": 0.1341,
+      "unstranded": 5
+    },
+    {
+      "Ensembl_gene_id": "ENSG00000213018",
+      "Ensembl_gene_id_v": "ENSG00000213018.2",
+      "aliquot_barcode": "TCGA-CJ-5671-01A-11R-1541-07",
+      "aliquot_gdc_id": "c6591d10-a67b-45b4-a893-81f395388535",
+      "case_barcode": "TCGA-CJ-5671",
+      "case_gdc_id": "960d1eaf-0b96-488b-b62c-829c024fd4b8",
+      "file_gdc_id": "86f25e09-9bdb-478d-b929-6f570418af6c",
+      "fpkm_unstranded": 0.2145,
+      "fpkm_uq_unstranded": 0.2447,
+      "gene_name": "PABPN1P1",
+      "gene_type": "processed_pseudogene",
+      "platform": "Illumina",
+      "primary_site": "Kidney",
+      "project_short_name": "TCGA-KIRC",
+      "sample_barcode": "TCGA-CJ-5671-01A",
+      "sample_gdc_id": "61aced60-7c03-4272-bdf2-b51cb18cf67f",
+      "sample_type_name": "Primary Tumor",
+      "stranded_first": 4,
+      "stranded_second": 1,
+      "tpm_unstranded": 0.6583,
+      "unstranded": 5
+    },
+    {
+      "Ensembl_gene_id": "ENSG00000112175",
+      "Ensembl_gene_id_v": "ENSG00000112175.8",
+      "aliquot_barcode": "TCGA-CJ-5671-01A-11R-1541-07",
+      "aliquot_gdc_id": "c6591d10-a67b-45b4-a893-81f395388535",
+      "case_barcode": "TCGA-CJ-5671",
+      "case_gdc_id": "960d1eaf-0b96-488b-b62c-829c024fd4b8",
+      "file_gdc_id": "86f25e09-9bdb-478d-b929-6f570418af6c",
+      "fpkm_unstranded": 0.0233,
+      "fpkm_uq_unstranded": 0.0266,
+      "gene_name": "BMP5",
+      "gene_type": "protein_coding",
+      "platform": "Illumina",
+      "primary_site": "Kidney",
+      "project_short_name": "TCGA-KIRC",
+      "sample_barcode": "TCGA-CJ-5671-01A",
+      "sample_gdc_id": "61aced60-7c03-4272-bdf2-b51cb18cf67f",
+      "sample_type_name": "Primary Tumor",
+      "stranded_first": 2,
+      "stranded_second": 3,
+      "tpm_unstranded": 0.0716,
+      "unstranded": 5
+    }
+  ]
+}

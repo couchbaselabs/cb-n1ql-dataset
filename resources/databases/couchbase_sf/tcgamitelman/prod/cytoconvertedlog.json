@@ -1,0 +1,153 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`CaseNo` = \"1\", `InvNo` = 1, `Message` = \"Warning in some chromosomes una...\", `Type` = \"Warning\"",
+        "properties": {
+          "CaseNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1"
+            ],
+            "type": "string"
+          },
+          "Clone": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "InvNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "Message": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Warning in some chromosomes un..."
+            ],
+            "type": "string"
+          },
+          "RefNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              777,
+              5316,
+              7214
+            ],
+            "type": "number"
+          },
+          "Type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Warning"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cytoconvertedlog::0",
+                  "cytoconvertedlog::1",
+                  "cytoconvertedlog::2",
+                  "cytoconvertedlog::3",
+                  "cytoconvertedlog::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cytoconvertedlog::0"
+              },
+              {
+                "id": "cytoconvertedlog::1"
+              },
+              {
+                "id": "cytoconvertedlog::2"
+              },
+              {
+                "id": "cytoconvertedlog::3"
+              },
+              {
+                "id": "cytoconvertedlog::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CaseNo": "1",
+      "Clone": 1,
+      "InvNo": 1,
+      "Message": "Warning in some chromosomes unaccounted for",
+      "RefNo": 5316,
+      "Type": "Warning"
+    },
+    {
+      "CaseNo": "1",
+      "Clone": 1,
+      "InvNo": 1,
+      "Message": "Warning in some chromosomes unaccounted for",
+      "RefNo": 777,
+      "Type": "Warning"
+    },
+    {
+      "CaseNo": "1",
+      "Clone": 2,
+      "InvNo": 1,
+      "Message": "Warning in some chromosomes unaccounted for",
+      "RefNo": 7214,
+      "Type": "Warning"
+    },
+    {
+      "CaseNo": "1",
+      "Clone": 3,
+      "InvNo": 1,
+      "Message": "Warning in some chromosomes unaccounted for",
+      "RefNo": 7214,
+      "Type": "Warning"
+    },
+    {
+      "CaseNo": "1",
+      "Clone": 4,
+      "InvNo": 1,
+      "Message": "Warning in some chromosomes unaccounted for",
+      "RefNo": 7214,
+      "Type": "Warning"
+    }
+  ]
+}

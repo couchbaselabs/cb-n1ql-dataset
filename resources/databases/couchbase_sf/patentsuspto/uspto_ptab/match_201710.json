@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ApplicationNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "07205419",
+              "07319778",
+              "07586391",
+              "07587326",
+              "07825488"
+            ],
+            "type": "string"
+          },
+          "application_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "US-20541988-A",
+              "US-31977889-A",
+              "US-58639190-A",
+              "US-58732690-A",
+              "US-82548892-A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "match_201710::0",
+                  "match_201710::1",
+                  "match_201710::2",
+                  "match_201710::3",
+                  "match_201710::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "match_201710::0"
+              },
+              {
+                "id": "match_201710::1"
+              },
+              {
+                "id": "match_201710::2"
+              },
+              {
+                "id": "match_201710::3"
+              },
+              {
+                "id": "match_201710::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ApplicationNumber": "07205419",
+      "application_number": "US-20541988-A"
+    },
+    {
+      "ApplicationNumber": "07587326",
+      "application_number": "US-58732690-A"
+    },
+    {
+      "ApplicationNumber": "07319778",
+      "application_number": "US-31977889-A"
+    },
+    {
+      "ApplicationNumber": "07825488",
+      "application_number": "US-82548892-A"
+    },
+    {
+      "ApplicationNumber": "07586391",
+      "application_number": "US-58639190-A"
+    }
+  ]
+}

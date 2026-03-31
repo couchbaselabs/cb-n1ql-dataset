@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "license": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "apache-2.0",
+              "bsd-3-clause",
+              "gpl-2.0",
+              "gpl-3.0",
+              "mit"
+            ],
+            "type": "string"
+          },
+          "repo_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ArchitectsDotNet/HelloWord",
+              "MrBotox/SpaceGame",
+              "dushmis/buddy.js",
+              "kadirahq/graphql-blog-schema",
+              "ksm2/metagram"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "licenses::1123072",
+                  "licenses::1134367",
+                  "licenses::1623791",
+                  "licenses::183720",
+                  "licenses::2114083"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "licenses::1123072"
+              },
+              {
+                "id": "licenses::1134367"
+              },
+              {
+                "id": "licenses::1623791"
+              },
+              {
+                "id": "licenses::183720"
+              },
+              {
+                "id": "licenses::2114083"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "license": "apache-2.0",
+      "repo_name": "samejack/point-core"
+    },
+    {
+      "license": "apache-2.0",
+      "repo_name": "haavardlian/tdt4240"
+    },
+    {
+      "license": "apache-2.0",
+      "repo_name": "jbrownbridge/thrust"
+    },
+    {
+      "license": "apache-2.0",
+      "repo_name": "ThomasTrungVo/TrainingContent"
+    },
+    {
+      "license": "apache-2.0",
+      "repo_name": "juhasipo/multi-user-test-runner"
+    }
+  ]
+}

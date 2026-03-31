@@ -1,0 +1,606 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`partition_date_please_ignore` = \"2018-08-23\", `quality` = 0, `reference_bases` = \"A\", `reference_name` = \"chr21\"",
+        "properties": {
+          "alternate_bases": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 5,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "alt": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "<*>"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "alt": "<*>"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "call": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 5,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "AD": {
+                  "items": {},
+                  "maxItems": 0,
+                  "minItems": 0,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    []
+                  ],
+                  "type": "array"
+                },
+                "GL": {
+                  "items": {},
+                  "maxItems": 0,
+                  "minItems": 0,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    []
+                  ],
+                  "type": "array"
+                },
+                "GQ": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    0,
+                    1,
+                    48,
+                    50
+                  ],
+                  "type": "number"
+                },
+                "MIN_DP": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    47,
+                    48,
+                    49,
+                    63
+                  ],
+                  "type": "number"
+                },
+                "PL": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 3,
+                  "minItems": 3,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      0,
+                      87,
+                      1349
+                    ],
+                    [
+                      0,
+                      153,
+                      1529
+                    ],
+                    [
+                      0,
+                      171,
+                      1709
+                    ],
+                    [
+                      2,
+                      0,
+                      1172
+                    ],
+                    [
+                      20,
+                      0,
+                      1490
+                    ]
+                  ],
+                  "type": "array"
+                },
+                "VAF": {
+                  "items": {},
+                  "maxItems": 0,
+                  "minItems": 0,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    []
+                  ],
+                  "type": "array"
+                },
+                "filter": {
+                  "items": {},
+                  "maxItems": 0,
+                  "minItems": 0,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    []
+                  ],
+                  "type": "array"
+                },
+                "genotype": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 2,
+                  "minItems": 2,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      0,
+                      0
+                    ]
+                  ],
+                  "type": "array"
+                },
+                "name": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "NA12877"
+                  ],
+                  "type": "string"
+                },
+                "quality": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    0
+                  ],
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "AD": [],
+                  "GL": [],
+                  "GQ": 0,
+                  "MIN_DP": 63,
+                  "PL": [
+                    20,
+                    0,
+                    1490
+                  ],
+                  "VAF": [],
+                  "filter": [],
+                  "genotype": [
+                    0,
+                    0
+                  ],
+                  "name": "NA12877",
+                  "quality": 0
+                }
+              ],
+              [
+                {
+                  "AD": [],
+                  "GL": [],
+                  "GQ": 1,
+                  "MIN_DP": 49,
+                  "PL": [
+                    2,
+                    0,
+                    1172
+                  ],
+                  "VAF": [],
+                  "filter": [],
+                  "genotype": [
+                    0,
+                    0
+                  ],
+                  "name": "NA12877",
+                  "quality": 0
+                }
+              ],
+              [
+                {
+                  "AD": [],
+                  "GL": [],
+                  "GQ": 48,
+                  "MIN_DP": 47,
+                  "PL": [
+                    0,
+                    171,
+                    1709
+                  ],
+                  "VAF": [],
+                  "filter": [],
+                  "genotype": [
+                    0,
+                    0
+                  ],
+                  "name": "NA12877",
+                  "quality": 0
+                }
+              ],
+              [
+                {
+                  "AD": [],
+                  "GL": [],
+                  "GQ": 50,
+                  "MIN_DP": 47,
+                  "PL": [
+                    0,
+                    153,
+                    1529
+                  ],
+                  "VAF": [],
+                  "filter": [],
+                  "genotype": [
+                    0,
+                    0
+                  ],
+                  "name": "NA12877",
+                  "quality": 0
+                }
+              ],
+              [
+                {
+                  "AD": [],
+                  "GL": [],
+                  "GQ": 50,
+                  "MIN_DP": 48,
+                  "PL": [
+                    0,
+                    87,
+                    1349
+                  ],
+                  "VAF": [],
+                  "filter": [],
+                  "genotype": [
+                    0,
+                    0
+                  ],
+                  "name": "NA12877",
+                  "quality": 0
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "end_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37002203,
+              37579770,
+              38007385,
+              38486681,
+              39004542
+            ],
+            "type": "number"
+          },
+          "filter": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "names": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "partition_date_please_ignore": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-08-23"
+            ],
+            "type": "string"
+          },
+          "quality": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "reference_bases": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A"
+            ],
+            "type": "string"
+          },
+          "reference_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "chr21"
+            ],
+            "type": "string"
+          },
+          "start_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37002029,
+              37579769,
+              38007379,
+              38486680,
+              39004530
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "platinum_genomes_deepvariant_v...",
+                  "platinum_genomes_deepvariant_v...",
+                  "platinum_genomes_deepvariant_v...",
+                  "platinum_genomes_deepvariant_v...",
+                  "platinum_genomes_deepvariant_v..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "platinum_genomes_deepvariant_variants_20180823::0"
+              },
+              {
+                "id": "platinum_genomes_deepvariant_variants_20180823::1"
+              },
+              {
+                "id": "platinum_genomes_deepvariant_variants_20180823::2"
+              },
+              {
+                "id": "platinum_genomes_deepvariant_variants_20180823::3"
+              },
+              {
+                "id": "platinum_genomes_deepvariant_variants_20180823::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "alternate_bases": [
+        {
+          "alt": "<*>"
+        }
+      ],
+      "call": [
+        {
+          "AD": [],
+          "GL": [],
+          "GQ": 1,
+          "MIN_DP": 49,
+          "PL": [
+            2,
+            0,
+            1172
+          ],
+          "VAF": [],
+          "filter": [],
+          "genotype": [
+            0,
+            0
+          ],
+          "name": "NA12877",
+          "quality": 0
+        }
+      ],
+      "end_position": 37579770,
+      "filter": [],
+      "names": [],
+      "partition_date_please_ignore": "2018-08-23",
+      "quality": 0,
+      "reference_bases": "A",
+      "reference_name": "chr21",
+      "start_position": 37579769
+    },
+    {
+      "alternate_bases": [
+        {
+          "alt": "<*>"
+        }
+      ],
+      "call": [
+        {
+          "AD": [],
+          "GL": [],
+          "GQ": 50,
+          "MIN_DP": 48,
+          "PL": [
+            0,
+            87,
+            1349
+          ],
+          "VAF": [],
+          "filter": [],
+          "genotype": [
+            0,
+            0
+          ],
+          "name": "NA12877",
+          "quality": 0
+        }
+      ],
+      "end_position": 38007385,
+      "filter": [],
+      "names": [],
+      "partition_date_please_ignore": "2018-08-23",
+      "quality": 0,
+      "reference_bases": "A",
+      "reference_name": "chr21",
+      "start_position": 38007379
+    },
+    {
+      "alternate_bases": [
+        {
+          "alt": "<*>"
+        }
+      ],
+      "call": [
+        {
+          "AD": [],
+          "GL": [],
+          "GQ": 48,
+          "MIN_DP": 47,
+          "PL": [
+            0,
+            171,
+            1709
+          ],
+          "VAF": [],
+          "filter": [],
+          "genotype": [
+            0,
+            0
+          ],
+          "name": "NA12877",
+          "quality": 0
+        }
+      ],
+      "end_position": 39004542,
+      "filter": [],
+      "names": [],
+      "partition_date_please_ignore": "2018-08-23",
+      "quality": 0,
+      "reference_bases": "A",
+      "reference_name": "chr21",
+      "start_position": 39004530
+    },
+    {
+      "alternate_bases": [
+        {
+          "alt": "<*>"
+        }
+      ],
+      "call": [
+        {
+          "AD": [],
+          "GL": [],
+          "GQ": 50,
+          "MIN_DP": 47,
+          "PL": [
+            0,
+            153,
+            1529
+          ],
+          "VAF": [],
+          "filter": [],
+          "genotype": [
+            0,
+            0
+          ],
+          "name": "NA12877",
+          "quality": 0
+        }
+      ],
+      "end_position": 37002203,
+      "filter": [],
+      "names": [],
+      "partition_date_please_ignore": "2018-08-23",
+      "quality": 0,
+      "reference_bases": "A",
+      "reference_name": "chr21",
+      "start_position": 37002029
+    },
+    {
+      "alternate_bases": [
+        {
+          "alt": "<*>"
+        }
+      ],
+      "call": [
+        {
+          "AD": [],
+          "GL": [],
+          "GQ": 0,
+          "MIN_DP": 63,
+          "PL": [
+            20,
+            0,
+            1490
+          ],
+          "VAF": [],
+          "filter": [],
+          "genotype": [
+            0,
+            0
+          ],
+          "name": "NA12877",
+          "quality": 0
+        }
+      ],
+      "end_position": 38486681,
+      "filter": [],
+      "names": [],
+      "partition_date_please_ignore": "2018-08-23",
+      "quality": 0,
+      "reference_bases": "A",
+      "reference_name": "chr21",
+      "start_position": 38486680
+    }
+  ]
+}

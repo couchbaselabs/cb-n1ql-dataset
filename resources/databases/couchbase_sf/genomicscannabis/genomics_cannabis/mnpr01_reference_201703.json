@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "length": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2058,
+              10486,
+              13197,
+              15956,
+              51794
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "gi|1098475405|gb|MNPR01010775....",
+              "gi|1098483403|gb|MNPR01008054....",
+              "gi|1098484911|gb|MNPR01007293....",
+              "gi|1098486184|gb|MNPR01006645....",
+              "gi|1098492753|gb|MNPR01003068...."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mnpr01_reference_201703::10675",
+                  "mnpr01_reference_201703::3559",
+                  "mnpr01_reference_201703::3628",
+                  "mnpr01_reference_201703::426",
+                  "mnpr01_reference_201703::6053"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mnpr01_reference_201703::10675"
+              },
+              {
+                "id": "mnpr01_reference_201703::3559"
+              },
+              {
+                "id": "mnpr01_reference_201703::3628"
+              },
+              {
+                "id": "mnpr01_reference_201703::426"
+              },
+              {
+                "id": "mnpr01_reference_201703::6053"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "length": 10728,
+      "name": "gi|1098483610|gb|MNPR01007997.1|"
+    },
+    {
+      "length": 38888,
+      "name": "gi|1098491446|gb|MNPR01003847.1|"
+    },
+    {
+      "length": 745,
+      "name": "gi|1098474507|gb|MNPR01011067.1|"
+    },
+    {
+      "length": 13289,
+      "name": "gi|1098484946|gb|MNPR01007270.1|"
+    },
+    {
+      "length": 7916,
+      "name": "gi|1098481116|gb|MNPR01008858.1|"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "license": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "apache-2.0",
+              "bsd-3-clause",
+              "isc",
+              "lgpl-3.0",
+              "mit"
+            ],
+            "type": "string"
+          },
+          "repo_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Zematus/cpg-biped-robot-simula...",
+              "clawoo/TileBasedGamePart2Cocos...",
+              "mottosso/mayabase-ubuntu",
+              "samsch/basic-redux",
+              "tedpower/snptz"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "licenses::1128434",
+                  "licenses::1506",
+                  "licenses::1647967",
+                  "licenses::2044697",
+                  "licenses::2462578"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "licenses::1128434"
+              },
+              {
+                "id": "licenses::1506"
+              },
+              {
+                "id": "licenses::1647967"
+              },
+              {
+                "id": "licenses::2044697"
+              },
+              {
+                "id": "licenses::2462578"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "license": "mit",
+      "repo_name": "screencloud/chrome-http"
+    },
+    {
+      "license": "mit",
+      "repo_name": "kenshin79/cradle"
+    },
+    {
+      "license": "mit",
+      "repo_name": "meng89/epubuilder"
+    },
+    {
+      "license": "mit",
+      "repo_name": "Polytech-AdrienCastex/Gomoku"
+    },
+    {
+      "license": "mit",
+      "repo_name": "nicksp/dotfiles"
+    }
+  ]
+}

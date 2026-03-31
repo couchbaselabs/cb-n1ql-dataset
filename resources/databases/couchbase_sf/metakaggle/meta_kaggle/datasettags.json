@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`TagId` = 2304",
+        "properties": {
+          "DatasetId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              629,
+              649,
+              655,
+              749,
+              1634
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              405,
+              445,
+              447,
+              520,
+              699
+            ],
+            "type": "number"
+          },
+          "TagId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2304
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "datasettags::0",
+                  "datasettags::1",
+                  "datasettags::2",
+                  "datasettags::3",
+                  "datasettags::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "datasettags::0"
+              },
+              {
+                "id": "datasettags::1"
+              },
+              {
+                "id": "datasettags::2"
+              },
+              {
+                "id": "datasettags::3"
+              },
+              {
+                "id": "datasettags::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "DatasetId": 649,
+      "Id": 520,
+      "TagId": 2304
+    },
+    {
+      "DatasetId": 1634,
+      "Id": 405,
+      "TagId": 2304
+    },
+    {
+      "DatasetId": 655,
+      "Id": 447,
+      "TagId": 2304
+    },
+    {
+      "DatasetId": 629,
+      "Id": 445,
+      "TagId": 2304
+    },
+    {
+      "DatasetId": 749,
+      "Id": 699,
+      "TagId": 2304
+    }
+  ]
+}

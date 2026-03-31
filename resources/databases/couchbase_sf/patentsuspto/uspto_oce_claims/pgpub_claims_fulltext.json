@@ -1,0 +1,173 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`appl_id` = \"13849904\", `pub_no` = \"20140021908\"",
+        "properties": {
+          "appl_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "13849904"
+            ],
+            "type": "string"
+          },
+          "claim_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10",
+              "11",
+              "7",
+              "8",
+              "9"
+            ],
+            "type": "string"
+          },
+          "claim_txt": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10. A wireless charging system...",
+              "11. The wireless charging syst...",
+              "7. The wireless charging syste...",
+              "8. The wireless charging syste...",
+              "9. The wireless charging syste..."
+            ],
+            "type": "string"
+          },
+          "dependencies": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1",
+                "10",
+                "4"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ind_flg": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "1"
+            ],
+            "type": "string"
+          },
+          "pub_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20140021908"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pgpub_claims_fulltext::0",
+                  "pgpub_claims_fulltext::1",
+                  "pgpub_claims_fulltext::2",
+                  "pgpub_claims_fulltext::3",
+                  "pgpub_claims_fulltext::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pgpub_claims_fulltext::0"
+              },
+              {
+                "id": "pgpub_claims_fulltext::1"
+              },
+              {
+                "id": "pgpub_claims_fulltext::2"
+              },
+              {
+                "id": "pgpub_claims_fulltext::3"
+              },
+              {
+                "id": "pgpub_claims_fulltext::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "appl_id": "13849904",
+      "claim_no": "7",
+      "claim_txt": "7. The wireless charging system of claim 1, wherein said charging station selectively communicates with said vehicle.",
+      "dependencies": "1",
+      "ind_flg": "0",
+      "pub_no": "20140021908"
+    },
+    {
+      "appl_id": "13849904",
+      "claim_no": "10",
+      "claim_txt": "10. A wireless charging system comprising: a charging station including a charging unit for transferring power, and a communication unit; an application accessible through a mobile device facilitating selective communication with said charging station, said application including a parking sequence function including a user interface to facilitates positioning a vehicle with respect to said charging unit; and a server selectively communicating with said charging station and said mobile device.",
+      "dependencies": null,
+      "ind_flg": "1",
+      "pub_no": "20140021908"
+    },
+    {
+      "appl_id": "13849904",
+      "claim_no": "8",
+      "claim_txt": "8. The wireless charging system of claim 4, wherein said application comprises a payment function including a user interface facilitating paying for the amount of power transferred by the charging unit.",
+      "dependencies": "4",
+      "ind_flg": "0",
+      "pub_no": "20140021908"
+    },
+    {
+      "appl_id": "13849904",
+      "claim_no": "9",
+      "claim_txt": "9. The wireless charging system of claim 1, wherein said application comprises a mapping function including a user interface facilitating a display of a location of said charging station via the user interface.",
+      "dependencies": "1",
+      "ind_flg": "0",
+      "pub_no": "20140021908"
+    },
+    {
+      "appl_id": "13849904",
+      "claim_no": "11",
+      "claim_txt": "11. The wireless charging system of claim 10, wherein said application initiates said parking sequence function when said vehicle is near said charging station.",
+      "dependencies": "10",
+      "ind_flg": "0",
+      "pub_no": "20140021908"
+    }
+  ]
+}

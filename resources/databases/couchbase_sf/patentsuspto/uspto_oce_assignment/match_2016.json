@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`pgpub_doc_num` = \"\"",
+        "properties": {
+          "grant_doc_num": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0000003",
+              "0000004",
+              "0000005",
+              "0000006",
+              "0000007"
+            ],
+            "type": "string"
+          },
+          "pgpub_doc_num": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              ""
+            ],
+            "type": "string"
+          },
+          "publication_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "US-3-A",
+              "US-4-A",
+              "US-5-A",
+              "US-6-A",
+              "US-7-A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "match_2016::0",
+                  "match_2016::1",
+                  "match_2016::2",
+                  "match_2016::3",
+                  "match_2016::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "match_2016::0"
+              },
+              {
+                "id": "match_2016::1"
+              },
+              {
+                "id": "match_2016::2"
+              },
+              {
+                "id": "match_2016::3"
+              },
+              {
+                "id": "match_2016::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "grant_doc_num": "0000003",
+      "pgpub_doc_num": "",
+      "publication_number": "US-3-A"
+    },
+    {
+      "grant_doc_num": "0000005",
+      "pgpub_doc_num": "",
+      "publication_number": "US-5-A"
+    },
+    {
+      "grant_doc_num": "0000004",
+      "pgpub_doc_num": "",
+      "publication_number": "US-4-A"
+    },
+    {
+      "grant_doc_num": "0000007",
+      "pgpub_doc_num": "",
+      "publication_number": "US-7-A"
+    },
+    {
+      "grant_doc_num": "0000006",
+      "pgpub_doc_num": "",
+      "publication_number": "US-6-A"
+    }
+  ]
+}

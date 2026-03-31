@@ -1,0 +1,256 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`IsOrderLineFinalized` = 1, `LastEditedBy` = 2, `PackageTypeID` = 7",
+        "properties": {
+          "Description": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Air cushion machine (Blue)",
+              "DBA joke mug - I will get you ...",
+              "Developer joke mug - Oct 31 = ...",
+              "Developer joke mug - Oct 31 = ...",
+              "IT joke mug - keyboard not fou..."
+            ],
+            "type": "string"
+          },
+          "ExpectedUnitPricePerOuter": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4.5,
+              1140
+            ],
+            "type": "number"
+          },
+          "IsOrderLineFinalized": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1357714800000000,
+              1358146800000000
+            ],
+            "type": "number"
+          },
+          "LastReceiptDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-09",
+              "2013-01-14"
+            ],
+            "type": "string"
+          },
+          "OrderedOuters": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9,
+              26,
+              27,
+              28,
+              42
+            ],
+            "type": "number"
+          },
+          "PackageTypeID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7
+            ],
+            "type": "number"
+          },
+          "PurchaseOrderID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              31,
+              40
+            ],
+            "type": "number"
+          },
+          "PurchaseOrderLineID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              219,
+              234,
+              235,
+              236,
+              237
+            ],
+            "type": "number"
+          },
+          "ReceivedOuters": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9,
+              26,
+              27,
+              28,
+              42
+            ],
+            "type": "number"
+          },
+          "StockItemID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              25,
+              30,
+              31,
+              52,
+              215
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "purchasing_purchaseorderlines:...",
+                  "purchasing_purchaseorderlines:...",
+                  "purchasing_purchaseorderlines:...",
+                  "purchasing_purchaseorderlines:...",
+                  "purchasing_purchaseorderlines:..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "purchasing_purchaseorderlines::0"
+              },
+              {
+                "id": "purchasing_purchaseorderlines::1"
+              },
+              {
+                "id": "purchasing_purchaseorderlines::2"
+              },
+              {
+                "id": "purchasing_purchaseorderlines::3"
+              },
+              {
+                "id": "purchasing_purchaseorderlines::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Description": "IT joke mug - keyboard not found \u2026 press F1 to continue (White)",
+      "ExpectedUnitPricePerOuter": 4.5,
+      "IsOrderLineFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1358146800000000,
+      "LastReceiptDate": "2013-01-14",
+      "OrderedOuters": 28,
+      "PackageTypeID": 7,
+      "PurchaseOrderID": 40,
+      "PurchaseOrderLineID": 237,
+      "ReceivedOuters": 28,
+      "StockItemID": 52
+    },
+    {
+      "Description": "Developer joke mug - Oct 31 = Dec 25 (Black)",
+      "ExpectedUnitPricePerOuter": 4.5,
+      "IsOrderLineFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1358146800000000,
+      "LastReceiptDate": "2013-01-14",
+      "OrderedOuters": 42,
+      "PackageTypeID": 7,
+      "PurchaseOrderID": 40,
+      "PurchaseOrderLineID": 236,
+      "ReceivedOuters": 42,
+      "StockItemID": 31
+    },
+    {
+      "Description": "Air cushion machine (Blue)",
+      "ExpectedUnitPricePerOuter": 1140,
+      "IsOrderLineFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1357714800000000,
+      "LastReceiptDate": "2013-01-09",
+      "OrderedOuters": 9,
+      "PackageTypeID": 7,
+      "PurchaseOrderID": 31,
+      "PurchaseOrderLineID": 219,
+      "ReceivedOuters": 9,
+      "StockItemID": 215
+    },
+    {
+      "Description": "Developer joke mug - Oct 31 = Dec 25 (White)",
+      "ExpectedUnitPricePerOuter": 4.5,
+      "IsOrderLineFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1358146800000000,
+      "LastReceiptDate": "2013-01-14",
+      "OrderedOuters": 27,
+      "PackageTypeID": 7,
+      "PurchaseOrderID": 40,
+      "PurchaseOrderLineID": 235,
+      "ReceivedOuters": 27,
+      "StockItemID": 30
+    },
+    {
+      "Description": "DBA joke mug - I will get you in order (Black)",
+      "ExpectedUnitPricePerOuter": 4.5,
+      "IsOrderLineFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1358146800000000,
+      "LastReceiptDate": "2013-01-14",
+      "OrderedOuters": 26,
+      "PackageTypeID": 7,
+      "PurchaseOrderID": 40,
+      "PurchaseOrderLineID": 234,
+      "ReceivedOuters": 26,
+      "StockItemID": 25
+    }
+  ]
+}

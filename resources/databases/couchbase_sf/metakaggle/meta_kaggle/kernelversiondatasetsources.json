@@ -1,0 +1,116 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              98881605,
+              108309921,
+              145287548,
+              145846584,
+              145901668
+            ],
+            "type": "number"
+          },
+          "KernelVersionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              74843040,
+              81692245,
+              104597902,
+              104954576,
+              104991079
+            ],
+            "type": "number"
+          },
+          "SourceDatasetVersionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2555904,
+              2883584,
+              4128768
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "kernelversiondatasetsources::0",
+                  "kernelversiondatasetsources::1",
+                  "kernelversiondatasetsources::2",
+                  "kernelversiondatasetsources::3",
+                  "kernelversiondatasetsources::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "kernelversiondatasetsources::0"
+              },
+              {
+                "id": "kernelversiondatasetsources::1"
+              },
+              {
+                "id": "kernelversiondatasetsources::2"
+              },
+              {
+                "id": "kernelversiondatasetsources::3"
+              },
+              {
+                "id": "kernelversiondatasetsources::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Id": 145901668,
+      "KernelVersionId": 104991079,
+      "SourceDatasetVersionId": 4128768
+    },
+    {
+      "Id": 108309921,
+      "KernelVersionId": 81692245,
+      "SourceDatasetVersionId": 2883584
+    },
+    {
+      "Id": 145846584,
+      "KernelVersionId": 104954576,
+      "SourceDatasetVersionId": 4128768
+    },
+    {
+      "Id": 145287548,
+      "KernelVersionId": 104597902,
+      "SourceDatasetVersionId": 4128768
+    },
+    {
+      "Id": 98881605,
+      "KernelVersionId": 74843040,
+      "SourceDatasetVersionId": 2555904
+    }
+  ]
+}

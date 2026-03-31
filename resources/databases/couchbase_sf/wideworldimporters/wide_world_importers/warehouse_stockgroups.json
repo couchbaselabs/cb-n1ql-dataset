@@ -1,0 +1,142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `ValidFrom` = 1356998400000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "StockGroupID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "StockGroupName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Airline Novelties",
+              "Clothing",
+              "Mugs",
+              "Novelty Items",
+              "T-Shirts"
+            ],
+            "type": "string"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_stockgroups::0",
+                  "warehouse_stockgroups::1",
+                  "warehouse_stockgroups::2",
+                  "warehouse_stockgroups::3",
+                  "warehouse_stockgroups::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_stockgroups::0"
+              },
+              {
+                "id": "warehouse_stockgroups::1"
+              },
+              {
+                "id": "warehouse_stockgroups::2"
+              },
+              {
+                "id": "warehouse_stockgroups::3"
+              },
+              {
+                "id": "warehouse_stockgroups::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LastEditedBy": 1,
+      "StockGroupID": 3,
+      "StockGroupName": "Mugs",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "StockGroupID": 1,
+      "StockGroupName": "Novelty Items",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "StockGroupID": 2,
+      "StockGroupName": "Clothing",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "StockGroupID": 4,
+      "StockGroupName": "T-Shirts",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "StockGroupID": 5,
+      "StockGroupName": "Airline Novelties",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

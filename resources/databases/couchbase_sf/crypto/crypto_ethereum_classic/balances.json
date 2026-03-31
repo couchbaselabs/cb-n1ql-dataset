@@ -1,0 +1,96 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`eth_balance` = 0",
+        "properties": {
+          "address": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x2d9a3b587fb75d23204fb72dfd91...",
+              "0x2f3b226c145870235b502117358d...",
+              "0xd6908376abeefc94d2eb3f698bab...",
+              "0xe485aee166761631ee5f0d0ce27c...",
+              "0xec893ca7b82f548dc813864f4671..."
+            ],
+            "type": "string"
+          },
+          "eth_balance": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "balances::0",
+                  "balances::1",
+                  "balances::2",
+                  "balances::3",
+                  "balances::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "balances::0"
+              },
+              {
+                "id": "balances::1"
+              },
+              {
+                "id": "balances::2"
+              },
+              {
+                "id": "balances::3"
+              },
+              {
+                "id": "balances::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "0x2f3b226c145870235b502117358ddc09652cdbbd",
+      "eth_balance": 0
+    },
+    {
+      "address": "0xec893ca7b82f548dc813864f46714e1a25605b78",
+      "eth_balance": 0
+    },
+    {
+      "address": "0x2d9a3b587fb75d23204fb72dfd91463f1798f142",
+      "eth_balance": 0
+    },
+    {
+      "address": "0xe485aee166761631ee5f0d0ce27c6f69dd7a3c5d",
+      "eth_balance": 0
+    },
+    {
+      "address": "0xd6908376abeefc94d2eb3f698bab3e7d69e4a109",
+      "eth_balance": 0
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Abnormality` = \"??\", `CloneNo` = 1, `InvNo` = 1, `OrderNo` = 1",
+        "properties": {
+          "Abnormality": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "??"
+            ],
+            "type": "string"
+          },
+          "CaseNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "105",
+              "109",
+              "124",
+              "63",
+              "66"
+            ],
+            "type": "string"
+          },
+          "CloneNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "InvNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "OrderNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "RefNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              401,
+              737
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "karyabnorm::0",
+                  "karyabnorm::1",
+                  "karyabnorm::2",
+                  "karyabnorm::3",
+                  "karyabnorm::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "karyabnorm::0"
+              },
+              {
+                "id": "karyabnorm::1"
+              },
+              {
+                "id": "karyabnorm::2"
+              },
+              {
+                "id": "karyabnorm::3"
+              },
+              {
+                "id": "karyabnorm::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Abnormality": "??",
+      "CaseNo": "105",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 737
+    },
+    {
+      "Abnormality": "??",
+      "CaseNo": "66",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 737
+    },
+    {
+      "Abnormality": "??",
+      "CaseNo": "124",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 737
+    },
+    {
+      "Abnormality": "??",
+      "CaseNo": "109",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 401
+    },
+    {
+      "Abnormality": "??",
+      "CaseNo": "63",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 737
+    }
+  ]
+}

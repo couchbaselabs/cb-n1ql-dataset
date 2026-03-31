@@ -1,0 +1,142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `ValidFrom` = 1356998400000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "SupplierCategoryID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "SupplierCategoryName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Clothing Supplier",
+              "Novelty Goods Supplier",
+              "Other Wholesaler",
+              "Packaging Supplier",
+              "Toy Supplier"
+            ],
+            "type": "string"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "purchasing_suppliercategories:...",
+                  "purchasing_suppliercategories:...",
+                  "purchasing_suppliercategories:...",
+                  "purchasing_suppliercategories:...",
+                  "purchasing_suppliercategories:..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "purchasing_suppliercategories::0"
+              },
+              {
+                "id": "purchasing_suppliercategories::1"
+              },
+              {
+                "id": "purchasing_suppliercategories::2"
+              },
+              {
+                "id": "purchasing_suppliercategories::3"
+              },
+              {
+                "id": "purchasing_suppliercategories::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LastEditedBy": 1,
+      "SupplierCategoryID": 2,
+      "SupplierCategoryName": "Novelty Goods Supplier",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "SupplierCategoryID": 3,
+      "SupplierCategoryName": "Toy Supplier",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "SupplierCategoryID": 1,
+      "SupplierCategoryName": "Other Wholesaler",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "SupplierCategoryID": 4,
+      "SupplierCategoryName": "Clothing Supplier",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "SupplierCategoryID": 5,
+      "SupplierCategoryName": "Packaging Supplier",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

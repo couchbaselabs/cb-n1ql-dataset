@@ -1,0 +1,164 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`index` = 0",
+        "properties": {
+          "block_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1696928,
+              1697440,
+              1697491,
+              1697555,
+              1697858
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1640690885000000,
+              1640708226000000,
+              1640709834000000,
+              1640712045000000,
+              1640722236000000
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "line": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              113,
+              237,
+              273
+            ],
+            "type": "number"
+          },
+          "message": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Exception thrown",
+              "Ran out of gas.\n"
+            ],
+            "type": "string"
+          },
+          "transaction_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "b18792b9fdac23f60a5fdf92eade83...",
+              "b950420f43241bdfa73f95bfd73e7c...",
+              "d703ddf86db9e870dc49dbc851f6ec...",
+              "f109271aca720223364537a39254bb...",
+              "fa8e663022b85f36f738124bdaf553..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "exceptions::0",
+                  "exceptions::1",
+                  "exceptions::2",
+                  "exceptions::3",
+                  "exceptions::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "exceptions::0"
+              },
+              {
+                "id": "exceptions::1"
+              },
+              {
+                "id": "exceptions::2"
+              },
+              {
+                "id": "exceptions::3"
+              },
+              {
+                "id": "exceptions::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "block_number": 1697555,
+      "block_timestamp": 1640712045000000,
+      "index": 0,
+      "line": 237,
+      "message": "Exception thrown",
+      "transaction_id": "b950420f43241bdfa73f95bfd73e7cb90fa5239dad60aa85bd5aeb6f28bb9e32"
+    },
+    {
+      "block_number": 1697491,
+      "block_timestamp": 1640709834000000,
+      "index": 0,
+      "line": 237,
+      "message": "Exception thrown",
+      "transaction_id": "b18792b9fdac23f60a5fdf92eade836d51cb1760f35faee6af2980d61229d591"
+    },
+    {
+      "block_number": 1697440,
+      "block_timestamp": 1640708226000000,
+      "index": 0,
+      "line": 1,
+      "message": "Ran out of gas.\n",
+      "transaction_id": "d703ddf86db9e870dc49dbc851f6ec1e8460174ce97a5ea101aebbb0ff47ce44"
+    },
+    {
+      "block_number": 1696928,
+      "block_timestamp": 1640690885000000,
+      "index": 0,
+      "line": 273,
+      "message": "Ran out of gas.\n",
+      "transaction_id": "f109271aca720223364537a39254bbbab4869ed8042bf74af657cb4bba6ea4c4"
+    },
+    {
+      "block_number": 1697858,
+      "block_timestamp": 1640722236000000,
+      "index": 0,
+      "line": 113,
+      "message": "Ran out of gas.\n",
+      "transaction_id": "fa8e663022b85f36f738124bdaf5530ceeefb0574d0b58b6a495317641060557"
+    }
+  ]
+}

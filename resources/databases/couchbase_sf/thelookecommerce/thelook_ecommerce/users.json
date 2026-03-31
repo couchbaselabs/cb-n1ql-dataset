@@ -1,0 +1,331 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "age": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              38,
+              46,
+              49,
+              60,
+              62
+            ],
+            "type": "number"
+          },
+          "city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Anaheim",
+              "Baschurch",
+              "Castillo de Vi\u00f1uelas",
+              "Fareham",
+              "Ruislip"
+            ],
+            "type": "string"
+          },
+          "country": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "China",
+              "France",
+              "Spain",
+              "United Kingdom",
+              "United States"
+            ],
+            "type": "string"
+          },
+          "created_at": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1557341220000000,
+              1594141800000000,
+              1619227440000000,
+              1656780000000000,
+              1717001760000000
+            ],
+            "type": "number"
+          },
+          "email": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "jenniferbowen@example.com",
+              "markwhite@example.org",
+              "melissastuart@example.org",
+              "rubengonzalez@example.org",
+              "susanstevens@example.org"
+            ],
+            "type": "string"
+          },
+          "first_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Jennifer",
+              "Mark",
+              "Melissa",
+              "Ruben",
+              "Susan"
+            ],
+            "type": "string"
+          },
+          "gender": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "F",
+              "M"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              42554,
+              46420,
+              66195,
+              69666,
+              93007
+            ],
+            "type": "number"
+          },
+          "last_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bowen",
+              "Gonzalez",
+              "Stevens",
+              "Stuart",
+              "White"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              33.82998953,
+              40.55287427,
+              50.8369649,
+              51.56968349,
+              52.79570838
+            ],
+            "type": "number"
+          },
+          "longitude": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -117.9056973,
+              -3.767395151,
+              -2.748013392,
+              -1.227878232,
+              -0.4126189892
+            ],
+            "type": "number"
+          },
+          "postal_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "28048",
+              "92805",
+              "HA4",
+              "PO14",
+              "SY4"
+            ],
+            "type": "string"
+          },
+          "state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Arizona",
+              "California",
+              "Comunidad de Madrid",
+              "England",
+              "Guangdong"
+            ],
+            "type": "string"
+          },
+          "street_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0332 Mcguire Skyway",
+              "1371 Young Lane",
+              "5332 Sarah Dam",
+              "649 Matthew Run Suite 162",
+              "72675 Bell Springs Suite 998"
+            ],
+            "type": "string"
+          },
+          "traffic_source": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Display",
+              "Email",
+              "Facebook",
+              "Organic",
+              "Search"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "users::12692",
+                  "users::18153",
+                  "users::20131",
+                  "users::21819",
+                  "users::22505"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "users::12692"
+              },
+              {
+                "id": "users::18153"
+              },
+              {
+                "id": "users::20131"
+              },
+              {
+                "id": "users::21819"
+              },
+              {
+                "id": "users::22505"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "age": 19,
+      "city": "Busan",
+      "country": "South Korea",
+      "created_at": 1705301580000000,
+      "email": "jenniferrobinson@example.com",
+      "first_name": "Jennifer",
+      "gender": "F",
+      "id": 17143,
+      "last_name": "Robinson",
+      "latitude": 35.3362658,
+      "longitude": 129.177989,
+      "postal_code": "619-960",
+      "state": "Busan",
+      "street_address": "98624 Aaron Lake Apt. 717",
+      "traffic_source": "Search"
+    },
+    {
+      "age": 23,
+      "city": "Busan",
+      "country": "South Korea",
+      "created_at": 1671360660000000,
+      "email": "sarahbrown@example.com",
+      "first_name": "Sarah",
+      "gender": "F",
+      "id": 3538,
+      "last_name": "Brown",
+      "latitude": 35.14150004,
+      "longitude": 129.1869047,
+      "postal_code": "612-010",
+      "state": "Busan",
+      "street_address": "1861 Jose Islands Suite 742",
+      "traffic_source": "Search"
+    },
+    {
+      "age": 64,
+      "city": "Hillsborough",
+      "country": "United States",
+      "created_at": 1579585800000000,
+      "email": "rickythompson@example.org",
+      "first_name": "Ricky",
+      "gender": "M",
+      "id": 80618,
+      "last_name": "Thompson",
+      "latitude": 37.56623187,
+      "longitude": -122.3743986,
+      "postal_code": "94010",
+      "state": "California",
+      "street_address": "504 Danielle Trafficway Suite 583",
+      "traffic_source": "Search"
+    },
+    {
+      "age": 33,
+      "city": "Oakland",
+      "country": "United States",
+      "created_at": 1728139140000000,
+      "email": "jonathanscott@example.com",
+      "first_name": "Jonathan",
+      "gender": "M",
+      "id": 40285,
+      "last_name": "Scott",
+      "latitude": 37.80820087,
+      "longitude": -122.302279,
+      "postal_code": "94607",
+      "state": "California",
+      "street_address": "3197 Ashley Centers",
+      "traffic_source": "Search"
+    },
+    {
+      "age": 36,
+      "city": "Napa",
+      "country": "United States",
+      "created_at": 1641751740000000,
+      "email": "timothydavis@example.net",
+      "first_name": "Timothy",
+      "gender": "M",
+      "id": 47007,
+      "last_name": "Davis",
+      "latitude": 38.49982005,
+      "longitude": -122.2753375,
+      "postal_code": "94558",
+      "state": "California",
+      "street_address": "09845 Peck Spurs",
+      "traffic_source": "Search"
+    }
+  ]
+}

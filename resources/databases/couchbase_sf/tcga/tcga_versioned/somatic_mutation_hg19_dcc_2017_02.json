@@ -1,0 +1,1800 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Mutation_Status` = \"Somatic\", `NCBI_Build` = \"GRCh37\"",
+        "properties": {
+          "Annotation_Transcript": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "ENST00000285600.4",
+                "ENST00000355528.4",
+                "ENST00000370128.4",
+                "ENST00000404338.3",
+                "ENST00000444197.2"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "CCLE_ONCOMAP_Total_Mutations_In_Gene": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                57
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "COSMIC_Total_Alterations_In_Gene": {
+            "#docs": [
+              994,
+              6
+            ],
+            "%docs": [
+              99.4,
+              0.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                15,
+                22,
+                25,
+                27,
+                43
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "Center": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "bcgsc.ca;broad.mit.edu",
+              "bcgsc.ca;broad.mit.edu;hgsc.bc...",
+              "broad.mit.edu",
+              "broad.mit.edu;hgsc.bcm.edu",
+              "broad.mit.edu;hgsc.bcm.edu;ucs..."
+            ],
+            "type": "string"
+          },
+          "Chromosome": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "14",
+              "17",
+              "19",
+              "6"
+            ],
+            "type": "string"
+          },
+          "DNARepairGenes_Role": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Non-homologous end-joining"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "DbSNP_RS": {
+            "#docs": [
+              990,
+              10
+            ],
+            "%docs": [
+              99,
+              1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "rs138645020",
+                "rs368157256",
+                "rs372137428",
+                "rs372603177",
+                "rs563402733"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "DbSNP_Val_Status": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "byFrequency"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "DrugBank": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Amitriptyline(DB00321)|Ampheta..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "End_Position": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20404271,
+              29408578,
+              47422373,
+              80724146,
+              100740453
+            ],
+            "type": "number"
+          },
+          "Entrez_Gene_Id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2909,
+              6904,
+              8634,
+              79544,
+              442194
+            ],
+            "type": "number"
+          },
+          "GC_Content": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.363,
+              0.368,
+              0.463,
+              0.473,
+              0.587
+            ],
+            "type": "number"
+          },
+          "GENCODE_Transcript_Name": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "ARHGAP35-001",
+                "OR10C1-001",
+                "OR4K1-001",
+                "RTCA-001",
+                "TBCD-001"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "GENCODE_Transcript_Status": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "KNOWN",
+                "NOVEL",
+                "PUTATIVE"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "GENCODE_Transcript_Type": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "IG_V_gene",
+                "TR_V_gene",
+                "nonsense_mediated_decay",
+                "processed_transcript",
+                "protein_coding"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "GO_Biological_Process": {
+            "#docs": [
+              6,
+              994
+            ],
+            "%docs": [
+              0.6,
+              99.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "RNA processing (GO:0006396)",
+                "axon guidance (GO:0007411)|cam...",
+                "base-excision repair (GO:00062...",
+                "cell projection organization (...",
+                "de novo' posttranslational pro..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "GO_Cellular_Component": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "actin cytoskeleton (GO:0015629...",
+                "adherens junction (GO:0005912)...",
+                "cytoplasm (GO:0005737)|extrace...",
+                "integral component of membrane...",
+                "nucleoplasm (GO:0005654)|nucle..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "GO_Molecular_Function": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "ATP binding (GO:0005524)|poly(...",
+                "DNA binding (GO:0003677)|GTP b...",
+                "DNA binding (GO:0003677)|ligas...",
+                "G-protein coupled receptor act...",
+                "beta-tubulin binding (GO:00484..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Gene_Type": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "IG_V_gene",
+                "TR_V_gene",
+                "lincRNA",
+                "processed_transcript",
+                "protein_coding"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Genome_Change": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "g.chr14:20404271delG",
+              "g.chr17:80724146C>T",
+              "g.chr19:47422373G>A",
+              "g.chr1:100740453T>G",
+              "g.chr6:29408578G>A"
+            ],
+            "type": "string"
+          },
+          "HGNC_Accession_Numbers": {
+            "#docs": [
+              6,
+              994
+            ],
+            "%docs": [
+              0.6,
+              99.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "AB071605",
+                "BC003094",
+                "M73077",
+                "U61740",
+                "Y11651"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "HGNC_CCDS_IDs": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "CCDS32025.1",
+                "CCDS34364.1",
+                "CCDS45818.1",
+                "CCDS46127.1",
+                "CCDS768.1, CCDS44178.1"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "HGNC_Ensembl_ID_Supplied_By_Ensembl": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "ENSG00000137996",
+                "ENSG00000141556",
+                "ENSG00000155249",
+                "ENSG00000160007",
+                "ENSG00000206474"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "HGNC_HGNC_ID": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                4591,
+                8165,
+                11581,
+                14726,
+                17981
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "HGNC_Locus_Group": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "non-coding RNA",
+                "other",
+                "protein-coding gene",
+                "pseudogene"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "HGNC_Locus_Type": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "T cell receptor gene",
+                "complex locus constituent",
+                "gene with protein product",
+                "immunoglobulin gene",
+                "protocadherin"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "HGNC_OMIM_ID_Supplied_By_NCBI": {
+            "#docs": [
+              6,
+              994
+            ],
+            "%docs": [
+              0.6,
+              99.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "300697",
+                "603330",
+                "604649",
+                "605277",
+                "611286"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "HGNC_RefSeq_Supplied_By_NCBI": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "NM_001004063",
+                "NM_003729",
+                "NM_004491",
+                "NM_005993",
+                "NM_013941"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "HGNC_UCSC_ID_Supplied_By_UCSC": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "uc001dtd.3",
+                "uc001vwj.2",
+                "uc002kfz.3",
+                "uc010ekv.3",
+                "uc011dlp.2"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "HGNC_UniProt_ID_Supplied_By_UniProt": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "O00442",
+                "Q8NGD4",
+                "Q96KK4",
+                "Q9BTW9",
+                "Q9NRY4"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Hugo_Symbol": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ARHGAP35",
+              "OR10C1",
+              "OR4K1",
+              "RTCA",
+              "TBCD"
+            ],
+            "type": "string"
+          },
+          "Mutation_Status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Somatic"
+            ],
+            "type": "string"
+          },
+          "NCBI_Build": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GRCh37"
+            ],
+            "type": "string"
+          },
+          "Normal_Seq_Allele1": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "A"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Normal_Seq_Allele2": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "-"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Normal_Validation_Allele1": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "-"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Normal_Validation_Allele2": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "-"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "OREGANNO_ID": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "OREG0025302"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Protein_Change": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "p.K262K",
+                "p.L183V",
+                "p.Q147Q",
+                "p.R113*",
+                "p.W149fs"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Ref_Context": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACTTTGAGCAGAAACAAATGC",
+              "CCCTATAAATTTAACTGAGCG",
+              "TCTATTTCCTGGGCGGTGGGC",
+              "TTCGCCCTAAGGCCAGCTACG",
+              "TTGATAGGTTCGAGGCTATAA"
+            ],
+            "type": "string"
+          },
+          "Reference_Allele": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A",
+              "C",
+              "G",
+              "GTG",
+              "T"
+            ],
+            "type": "string"
+          },
+          "Refseq_Prot_Id": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "NP_001004063.2",
+                "NP_003720.1",
+                "NP_004482.4",
+                "NP_005984.3",
+                "NP_039229.3"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Secondary_Variant_Classification": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Frame_Shift_Del"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Sequence_Source": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Capture",
+              "RNA-Seq",
+              "WXS"
+            ],
+            "type": "string"
+          },
+          "Sequencer": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Illumina GAIIx",
+              "Illumina HiSeq"
+            ],
+            "type": "string"
+          },
+          "Start_Position": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20404271,
+              29408578,
+              47422373,
+              80724146,
+              100740453
+            ],
+            "type": "number"
+          },
+          "SwissProt_Acc_Id": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "O00442",
+                "Q8NGD4",
+                "Q96KK4",
+                "Q9BTW9",
+                "Q9NRY4"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "SwissProt_Entry_Id": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "O10C1_HUMAN",
+                "OR4K1_HUMAN",
+                "RHG35_HUMAN",
+                "RTCA_HUMAN",
+                "TBCD_HUMAN"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Transcript_Exon": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1,
+                4,
+                6,
+                14,
+                67
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "Transcript_Position": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1496",
+                "441",
+                "467",
+                "505",
+                "716"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Transcript_Strand": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "+",
+                "-"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Tumor_Seq_Allele1": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A",
+              "C",
+              "G",
+              "GTG",
+              "T"
+            ],
+            "type": "string"
+          },
+          "Tumor_Seq_Allele2": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "-",
+              "A",
+              "C",
+              "G",
+              "T"
+            ],
+            "type": "string"
+          },
+          "Tumor_Validation_Allele1": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "-"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Tumor_Validation_Allele2": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "-"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "UniProt_AApos": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                113,
+                147,
+                149,
+                183,
+                262
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "UniProt_Region": {
+            "#docs": [
+              984,
+              16
+            ],
+            "%docs": [
+              98.4,
+              1.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Galectin 1. {ECO:0000255|PROSI...",
+                "Ig-like C2-type 1.",
+                "Ig-like C2-type 8.",
+                "Stem. {ECO:0000250}.",
+                "Thr-rich."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Validation_Method": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "454_PCR_WGA"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Variant_Classification": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Frame_Shift_Del",
+              "In_Frame_Del",
+              "Missense_Mutation",
+              "Nonsense_Mutation",
+              "Silent"
+            ],
+            "type": "string"
+          },
+          "Variant_Type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DEL",
+              "DNP",
+              "INS",
+              "SNP"
+            ],
+            "type": "string"
+          },
+          "aliquot_barcode_normal": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-91-6830-11A-01D-1945-08",
+              "TCGA-B5-A0JY-10A-01D-A10O-09",
+              "TCGA-BR-8680-10A-01D-2394-08",
+              "TCGA-G3-A3CJ-10A-01D-A20W-10",
+              "TCGA-QF-A5YS-10A-01D-A31U-09"
+            ],
+            "type": "string"
+          },
+          "aliquot_barcode_tumor": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-91-6830-01A-11D-1945-08",
+              "TCGA-B5-A0JY-01A-11D-A10B-09",
+              "TCGA-BR-8680-01A-11D-2394-08",
+              "TCGA-G3-A3CJ-01A-11D-A20W-10",
+              "TCGA-QF-A5YS-01A-11D-A31U-09"
+            ],
+            "type": "string"
+          },
+          "cDNA_Change": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "c.337C>T",
+                "c.441G>A",
+                "c.446delG",
+                "c.547T>G",
+                "c.786G>A"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "case_barcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-91-6830",
+              "TCGA-B5-A0JY",
+              "TCGA-BR-8680",
+              "TCGA-G3-A3CJ",
+              "TCGA-QF-A5YS"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-COAD",
+              "TCGA-LIHC",
+              "TCGA-LUAD",
+              "TCGA-STAD",
+              "TCGA-UCEC"
+            ],
+            "type": "string"
+          },
+          "sample_barcode_normal": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-91-6830-11A",
+              "TCGA-B5-A0JY-10A",
+              "TCGA-BR-8680-10A",
+              "TCGA-G3-A3CJ-10A",
+              "TCGA-QF-A5YS-10A"
+            ],
+            "type": "string"
+          },
+          "sample_barcode_tumor": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-91-6830-01A",
+              "TCGA-B5-A0JY-01A",
+              "TCGA-BR-8680-01A",
+              "TCGA-G3-A3CJ-01A",
+              "TCGA-QF-A5YS-01A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "somatic_mutation_hg19_dcc_2017...",
+                  "somatic_mutation_hg19_dcc_2017...",
+                  "somatic_mutation_hg19_dcc_2017...",
+                  "somatic_mutation_hg19_dcc_2017...",
+                  "somatic_mutation_hg19_dcc_2017..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "somatic_mutation_hg19_dcc_2017_02::110632"
+              },
+              {
+                "id": "somatic_mutation_hg19_dcc_2017_02::131410"
+              },
+              {
+                "id": "somatic_mutation_hg19_dcc_2017_02::142702"
+              },
+              {
+                "id": "somatic_mutation_hg19_dcc_2017_02::162922"
+              },
+              {
+                "id": "somatic_mutation_hg19_dcc_2017_02::182590"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Annotation_Transcript": null,
+      "CCLE_ONCOMAP_Total_Mutations_In_Gene": null,
+      "COSMIC_Total_Alterations_In_Gene": null,
+      "Center": "genome.wustl.edu",
+      "Chromosome": "3",
+      "DNARepairGenes_Role": null,
+      "DbSNP_RS": null,
+      "DbSNP_Val_Status": null,
+      "DrugBank": null,
+      "End_Position": 195671977,
+      "Entrez_Gene_Id": 0,
+      "GC_Content": 0.567,
+      "GENCODE_Transcript_Name": null,
+      "GENCODE_Transcript_Status": null,
+      "GENCODE_Transcript_Type": null,
+      "GO_Biological_Process": null,
+      "GO_Cellular_Component": null,
+      "GO_Molecular_Function": null,
+      "Gene_Type": null,
+      "Genome_Change": "g.chr3:195671977G>A",
+      "HGNC_Accession_Numbers": null,
+      "HGNC_CCDS_IDs": null,
+      "HGNC_Ensembl_ID_Supplied_By_Ensembl": null,
+      "HGNC_HGNC_ID": null,
+      "HGNC_Locus_Group": null,
+      "HGNC_Locus_Type": null,
+      "HGNC_OMIM_ID_Supplied_By_NCBI": null,
+      "HGNC_RefSeq_Supplied_By_NCBI": null,
+      "HGNC_UCSC_ID_Supplied_By_UCSC": null,
+      "HGNC_UniProt_ID_Supplied_By_UniProt": null,
+      "Hugo_Symbol": "Unknown",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh37",
+      "Normal_Seq_Allele1": "G",
+      "Normal_Seq_Allele2": "G",
+      "Normal_Validation_Allele1": null,
+      "Normal_Validation_Allele2": null,
+      "OREGANNO_ID": null,
+      "Protein_Change": null,
+      "Ref_Context": "ctgcagctgggagaccctcaa",
+      "Reference_Allele": "G",
+      "Refseq_Prot_Id": null,
+      "Secondary_Variant_Classification": null,
+      "Sequence_Source": "WXS",
+      "Sequencer": "Illumina GAIIx",
+      "Start_Position": 195671977,
+      "SwissProt_Acc_Id": null,
+      "SwissProt_Entry_Id": null,
+      "Transcript_Exon": null,
+      "Transcript_Position": null,
+      "Transcript_Strand": null,
+      "Tumor_Seq_Allele1": "G",
+      "Tumor_Seq_Allele2": "A",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UniProt_AApos": null,
+      "UniProt_Region": null,
+      "Validation_Method": null,
+      "Variant_Classification": "IGR",
+      "Variant_Type": "SNP",
+      "aliquot_barcode_normal": "TCGA-E2-A1LL-11A-21D-A142-09",
+      "aliquot_barcode_tumor": "TCGA-E2-A1LL-01A-11D-A142-09",
+      "cDNA_Change": null,
+      "case_barcode": "TCGA-E2-A1LL",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode_normal": "TCGA-E2-A1LL-11A",
+      "sample_barcode_tumor": "TCGA-E2-A1LL-01A"
+    },
+    {
+      "Annotation_Transcript": "ENST00000396365.2",
+      "CCLE_ONCOMAP_Total_Mutations_In_Gene": null,
+      "COSMIC_Total_Alterations_In_Gene": 38,
+      "Center": "broad.mit.edu",
+      "Chromosome": "19",
+      "DNARepairGenes_Role": null,
+      "DbSNP_RS": null,
+      "DbSNP_Val_Status": null,
+      "DrugBank": null,
+      "End_Position": 54744925,
+      "Entrez_Gene_Id": 79168,
+      "GC_Content": 0.652,
+      "GENCODE_Transcript_Name": "LILRA6-003",
+      "GENCODE_Transcript_Status": "NOVEL",
+      "GENCODE_Transcript_Type": "protein_coding",
+      "GO_Biological_Process": "immune system process (GO:0002376)",
+      "GO_Cellular_Component": "integral component of membrane (GO:0016021)",
+      "GO_Molecular_Function": null,
+      "Gene_Type": "protein_coding",
+      "Genome_Change": "g.chr19:54744925delC",
+      "HGNC_Accession_Numbers": "AF041262",
+      "HGNC_CCDS_IDs": "CCDS42610.1",
+      "HGNC_Ensembl_ID_Supplied_By_Ensembl": "ENSG00000244482",
+      "HGNC_HGNC_ID": 15495,
+      "HGNC_Locus_Group": "protein-coding gene",
+      "HGNC_Locus_Type": "gene with protein product",
+      "HGNC_OMIM_ID_Supplied_By_NCBI": null,
+      "HGNC_RefSeq_Supplied_By_NCBI": "NM_024318",
+      "HGNC_UCSC_ID_Supplied_By_UCSC": null,
+      "HGNC_UniProt_ID_Supplied_By_UniProt": "Q6PI73",
+      "Hugo_Symbol": "LILRA6",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh37",
+      "Normal_Seq_Allele1": null,
+      "Normal_Seq_Allele2": null,
+      "Normal_Validation_Allele1": null,
+      "Normal_Validation_Allele2": null,
+      "OREGANNO_ID": null,
+      "Protein_Change": "p.G246fs",
+      "Ref_Context": "GACATCAGAGCCACACTGGAG",
+      "Reference_Allele": "C",
+      "Refseq_Prot_Id": "NP_077294",
+      "Secondary_Variant_Classification": null,
+      "Sequence_Source": "WXS",
+      "Sequencer": "Illumina GAIIx",
+      "Start_Position": 54744925,
+      "SwissProt_Acc_Id": "Q6PI73",
+      "SwissProt_Entry_Id": "LIRA6_HUMAN",
+      "Transcript_Exon": 5,
+      "Transcript_Position": "776",
+      "Transcript_Strand": "-",
+      "Tumor_Seq_Allele1": "C",
+      "Tumor_Seq_Allele2": "-",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UniProt_AApos": 246,
+      "UniProt_Region": "Ig-like C2-type 1.",
+      "Validation_Method": null,
+      "Variant_Classification": "Frame_Shift_Del",
+      "Variant_Type": "DEL",
+      "aliquot_barcode_normal": "TCGA-DD-A3A0-11A-11D-A20W-10",
+      "aliquot_barcode_tumor": "TCGA-DD-A3A0-01A-11D-A20W-10",
+      "cDNA_Change": "c.737delG",
+      "case_barcode": "TCGA-DD-A3A0",
+      "project_short_name": "TCGA-LIHC",
+      "sample_barcode_normal": "TCGA-DD-A3A0-11A",
+      "sample_barcode_tumor": "TCGA-DD-A3A0-01A"
+    },
+    {
+      "Annotation_Transcript": "ENST00000326652.4",
+      "CCLE_ONCOMAP_Total_Mutations_In_Gene": null,
+      "COSMIC_Total_Alterations_In_Gene": 3,
+      "Center": "broad.mit.edu",
+      "Chromosome": "19",
+      "DNARepairGenes_Role": null,
+      "DbSNP_RS": null,
+      "DbSNP_Val_Status": null,
+      "DrugBank": null,
+      "End_Position": 55824362,
+      "Entrez_Gene_Id": 284417,
+      "GC_Content": 0.662,
+      "GENCODE_Transcript_Name": "TMEM150B-001",
+      "GENCODE_Transcript_Status": "KNOWN",
+      "GENCODE_Transcript_Type": "protein_coding",
+      "GO_Biological_Process": null,
+      "GO_Cellular_Component": "integral component of membrane (GO:0016021)",
+      "GO_Molecular_Function": null,
+      "Gene_Type": "protein_coding",
+      "Genome_Change": "g.chr19:55824362delG",
+      "HGNC_Accession_Numbers": "BC020862",
+      "HGNC_CCDS_IDs": "CCDS42629.1",
+      "HGNC_Ensembl_ID_Supplied_By_Ensembl": "ENSG00000180061",
+      "HGNC_HGNC_ID": 34415,
+      "HGNC_Locus_Group": "protein-coding gene",
+      "HGNC_Locus_Type": "gene with protein product",
+      "HGNC_OMIM_ID_Supplied_By_NCBI": null,
+      "HGNC_RefSeq_Supplied_By_NCBI": "XM_005258812",
+      "HGNC_UCSC_ID_Supplied_By_UCSC": "uc010esw.1",
+      "HGNC_UniProt_ID_Supplied_By_UniProt": "A6NC51",
+      "Hugo_Symbol": "TMEM150B",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh37",
+      "Normal_Seq_Allele1": null,
+      "Normal_Seq_Allele2": null,
+      "Normal_Validation_Allele1": null,
+      "Normal_Validation_Allele2": null,
+      "OREGANNO_ID": null,
+      "Protein_Change": "p.A189fs",
+      "Ref_Context": "ACAGCAGCATGGCCACGACCC",
+      "Reference_Allele": "G",
+      "Refseq_Prot_Id": "NP_001268940.1",
+      "Secondary_Variant_Classification": null,
+      "Sequence_Source": "WXS",
+      "Sequencer": "Illumina GAIIx",
+      "Start_Position": 55824362,
+      "SwissProt_Acc_Id": "A6NC51",
+      "SwissProt_Entry_Id": "T150B_HUMAN",
+      "Transcript_Exon": 8,
+      "Transcript_Position": "749",
+      "Transcript_Strand": "-",
+      "Tumor_Seq_Allele1": "G",
+      "Tumor_Seq_Allele2": "-",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UniProt_AApos": 189,
+      "UniProt_Region": null,
+      "Validation_Method": null,
+      "Variant_Classification": "Frame_Shift_Del",
+      "Variant_Type": "DEL",
+      "aliquot_barcode_normal": "TCGA-DD-A3A0-11A-11D-A20W-10",
+      "aliquot_barcode_tumor": "TCGA-DD-A3A0-01A-11D-A20W-10",
+      "cDNA_Change": "c.567delC",
+      "case_barcode": "TCGA-DD-A3A0",
+      "project_short_name": "TCGA-LIHC",
+      "sample_barcode_normal": "TCGA-DD-A3A0-11A",
+      "sample_barcode_tumor": "TCGA-DD-A3A0-01A"
+    },
+    {
+      "Annotation_Transcript": "ENST00000270459.3",
+      "CCLE_ONCOMAP_Total_Mutations_In_Gene": null,
+      "COSMIC_Total_Alterations_In_Gene": 5,
+      "Center": "broad.mit.edu",
+      "Chromosome": "19",
+      "DNARepairGenes_Role": null,
+      "DbSNP_RS": null,
+      "DbSNP_Val_Status": null,
+      "DrugBank": null,
+      "End_Position": 56600279,
+      "Entrez_Gene_Id": 126208,
+      "GC_Content": 0.716,
+      "GENCODE_Transcript_Name": "ZNF787-001",
+      "GENCODE_Transcript_Status": "KNOWN",
+      "GENCODE_Transcript_Type": "protein_coding",
+      "GO_Biological_Process": "regulation of transcription, DNA-templated (GO:0006355)|transcription, DNA-templated (GO:0006351)",
+      "GO_Cellular_Component": "nucleus (GO:0005634)",
+      "GO_Molecular_Function": "DNA binding (GO:0003677)|metal ion binding (GO:0046872)",
+      "Gene_Type": "protein_coding",
+      "Genome_Change": "g.chr19:56600279G>A",
+      "HGNC_Accession_Numbers": "BC077728, AF000560",
+      "HGNC_CCDS_IDs": "CCDS42634.1",
+      "HGNC_Ensembl_ID_Supplied_By_Ensembl": "ENSG00000142409",
+      "HGNC_HGNC_ID": 26998,
+      "HGNC_Locus_Group": "protein-coding gene",
+      "HGNC_Locus_Type": "gene with protein product",
+      "HGNC_OMIM_ID_Supplied_By_NCBI": null,
+      "HGNC_RefSeq_Supplied_By_NCBI": "NM_001002836",
+      "HGNC_UCSC_ID_Supplied_By_UCSC": "uc010eth.1",
+      "HGNC_UniProt_ID_Supplied_By_UniProt": "Q6DD87",
+      "Hugo_Symbol": "ZNF787",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh37",
+      "Normal_Seq_Allele1": null,
+      "Normal_Seq_Allele2": null,
+      "Normal_Validation_Allele1": null,
+      "Normal_Validation_Allele2": null,
+      "OREGANNO_ID": null,
+      "Protein_Change": "p.H88Y",
+      "Ref_Context": "TCGCCGGTGTGCGTGCGCTGG",
+      "Reference_Allele": "G",
+      "Refseq_Prot_Id": "NP_001002836",
+      "Secondary_Variant_Classification": null,
+      "Sequence_Source": "WXS",
+      "Sequencer": "Illumina GAIIx",
+      "Start_Position": 56600279,
+      "SwissProt_Acc_Id": "Q6DD87",
+      "SwissProt_Entry_Id": "ZN787_HUMAN",
+      "Transcript_Exon": 3,
+      "Transcript_Position": "380",
+      "Transcript_Strand": "-",
+      "Tumor_Seq_Allele1": "G",
+      "Tumor_Seq_Allele2": "A",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UniProt_AApos": 88,
+      "UniProt_Region": null,
+      "Validation_Method": null,
+      "Variant_Classification": "Missense_Mutation",
+      "Variant_Type": "SNP",
+      "aliquot_barcode_normal": "TCGA-55-8208-10A-01D-2238-08",
+      "aliquot_barcode_tumor": "TCGA-55-8208-01A-11D-2238-08",
+      "cDNA_Change": "c.262C>T",
+      "case_barcode": "TCGA-55-8208",
+      "project_short_name": "TCGA-LUAD",
+      "sample_barcode_normal": "TCGA-55-8208-10A",
+      "sample_barcode_tumor": "TCGA-55-8208-01A"
+    },
+    {
+      "Annotation_Transcript": "ENST00000315872.6",
+      "CCLE_ONCOMAP_Total_Mutations_In_Gene": null,
+      "COSMIC_Total_Alterations_In_Gene": 43,
+      "Center": "broad.mit.edu",
+      "Chromosome": "2",
+      "DNARepairGenes_Role": null,
+      "DbSNP_RS": null,
+      "DbSNP_Val_Status": null,
+      "DrugBank": null,
+      "End_Position": 11389837,
+      "Entrez_Gene_Id": 9475,
+      "GC_Content": 0.358,
+      "GENCODE_Transcript_Name": "ROCK2-001",
+      "GENCODE_Transcript_Status": "KNOWN",
+      "GENCODE_Transcript_Type": "protein_coding",
+      "GO_Biological_Process": "actin cytoskeleton organization (GO:0030036)|axon guidance (GO:0007411)|centrosome duplication (GO:0051298)|cytokinesis (GO:0000910)|extrinsic apoptotic signaling pathway via death domain receptors (GO:0008625)|intracellular signal transduction (GO:0035556)|negative regulation of angiogenesis (GO:0016525)|neural tube closure (GO:0001843)|positive regulation of centrosome duplication (GO:0010825)|protein phosphorylation (GO:0006468)|regulation of actin cytoskeleton organization (GO:0032956)|regulation of cell adhesion (GO:0030155)|regulation of cell motility (GO:2000145)|regulation of circadian rhythm (GO:0042752)|regulation of establishment of cell polarity (GO:2000114)|regulation of focal adhesion assembly (GO:0051893)|regulation of keratinocyte differentiation (GO:0045616)|regulation of stress fiber assembly (GO:0051492)|rhythmic process (GO:0048511)|smooth muscle contraction (GO:0006939)",
+      "GO_Cellular_Component": "centrosome (GO:0005813)|cytoplasmic ribonucleoprotein granule (GO:0036464)|cytosol (GO:0005829)|nucleus (GO:0005634)|plasma membrane (GO:0005886)|spindle pole centrosome (GO:0031616)",
+      "GO_Molecular_Function": "ATP binding (GO:0005524)|metal ion binding (GO:0046872)|poly(A) RNA binding (GO:0044822)|protein serine/threonine kinase activity (GO:0004674)|structural molecule activity (GO:0005198)",
+      "Gene_Type": "protein_coding",
+      "Genome_Change": "g.chr2:11389837delA",
+      "HGNC_Accession_Numbers": "D87931",
+      "HGNC_CCDS_IDs": "CCDS42654.1",
+      "HGNC_Ensembl_ID_Supplied_By_Ensembl": "ENSG00000134318",
+      "HGNC_HGNC_ID": 10252,
+      "HGNC_Locus_Group": "protein-coding gene",
+      "HGNC_Locus_Type": "gene with protein product",
+      "HGNC_OMIM_ID_Supplied_By_NCBI": "604002",
+      "HGNC_RefSeq_Supplied_By_NCBI": "NM_004850",
+      "HGNC_UCSC_ID_Supplied_By_UCSC": "uc002rbd.1",
+      "HGNC_UniProt_ID_Supplied_By_UniProt": "O75116",
+      "Hugo_Symbol": "ROCK2",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh37",
+      "Normal_Seq_Allele1": null,
+      "Normal_Seq_Allele2": null,
+      "Normal_Validation_Allele1": null,
+      "Normal_Validation_Allele2": null,
+      "OREGANNO_ID": null,
+      "Protein_Change": "p.W138fs",
+      "Ref_Context": "CTTTCTTCCCAAAAAAAGGCA",
+      "Reference_Allele": "A",
+      "Refseq_Prot_Id": "NP_004841.2",
+      "Secondary_Variant_Classification": null,
+      "Sequence_Source": "WXS",
+      "Sequencer": "Illumina GAIIx",
+      "Start_Position": 11389837,
+      "SwissProt_Acc_Id": "O75116",
+      "SwissProt_Entry_Id": "ROCK2_HUMAN",
+      "Transcript_Exon": 4,
+      "Transcript_Position": "860",
+      "Transcript_Strand": "-",
+      "Tumor_Seq_Allele1": "A",
+      "Tumor_Seq_Allele2": "-",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UniProt_AApos": 138,
+      "UniProt_Region": "Protein kinase. {ECO:0000255|PROSITE- ProRule:PRU00159}.",
+      "Validation_Method": null,
+      "Variant_Classification": "Frame_Shift_Del",
+      "Variant_Type": "DEL",
+      "aliquot_barcode_normal": "TCGA-BS-A0U8-10A-01D-A10B-09",
+      "aliquot_barcode_tumor": "TCGA-BS-A0U8-01A-11D-A10B-09",
+      "cDNA_Change": "c.412delT",
+      "case_barcode": "TCGA-BS-A0U8",
+      "project_short_name": "TCGA-UCEC",
+      "sample_barcode_normal": "TCGA-BS-A0U8-10A",
+      "sample_barcode_tumor": "TCGA-BS-A0U8-01A"
+    }
+  ]
+}

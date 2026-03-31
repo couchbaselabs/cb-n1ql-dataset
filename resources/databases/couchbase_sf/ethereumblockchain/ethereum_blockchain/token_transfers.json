@@ -1,0 +1,226 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "block_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x2d50d4caeb7381f3f612d8e51963...",
+              "0x46d4324e8997d9edca44cc06ec1c...",
+              "0xbafa634c3d61df0a096ef72b2a87...",
+              "0xdc89cbdbb81b1f2a924d50da1f5a...",
+              "0xde98c8a7294d4a1b21e16b6aefe6..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5728226,
+              5728959,
+              5730782,
+              5731474,
+              5732228
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1528076781000000,
+              1528087775000000,
+              1528115754000000,
+              1528125726000000,
+              1528137295000000
+            ],
+            "type": "number"
+          },
+          "from_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0000000000000000000000000000...",
+              "0x02aa25c19940b79cf37dc9068d67...",
+              "0x0610d63605783ec76d2394ec4139...",
+              "0x92691c264270070da2d275a0a6b5...",
+              "0xda72e4e97fb533e9e0c90396bb5d..."
+            ],
+            "type": "string"
+          },
+          "log_index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              49,
+              54,
+              86,
+              247
+            ],
+            "type": "number"
+          },
+          "to_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x3a6fbcf31c3618707fd9a0d922d4...",
+              "0x6f0c595955cb665e60909fb00461...",
+              "0x70608b68e5c8f213a6e2e337f7d8...",
+              "0x85f62cbda45cb5715c39ed3b2946...",
+              "0xacddf941b6a52f5bebba2e452baa..."
+            ],
+            "type": "string"
+          },
+          "token_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0cfda67b0067f1a99deb1cb80e02...",
+              "0x3209f98bebf0149b769ce26d71f7...",
+              "0x38405fa410c6eba342f9eb5ac66b...",
+              "0x636991bf69febcdd9eb1a58e1102...",
+              "0xb68042de5b3da08a80c20d29aefa..."
+            ],
+            "type": "string"
+          },
+          "transaction_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x32cf5e54459f4efa7b23655e766b...",
+              "0x3792d2339fc06eebcf1b4f7232b9...",
+              "0xad275755a3bb4fc7e79cdc34a80a...",
+              "0xc01b7b459f87b34c2b497d5da123...",
+              "0xcb04a8fdbb73115f288a395eb3b1..."
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10000000000000000000",
+              "316683733131",
+              "42732000000000000000000",
+              "46122400000000000000000",
+              "5137668301030659725580"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "token_transfers::103753",
+                  "token_transfers::134737",
+                  "token_transfers::136469",
+                  "token_transfers::142203",
+                  "token_transfers::145993"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "token_transfers::103753"
+              },
+              {
+                "id": "token_transfers::134737"
+              },
+              {
+                "id": "token_transfers::136469"
+              },
+              {
+                "id": "token_transfers::142203"
+              },
+              {
+                "id": "token_transfers::145993"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "block_hash": "0xbc7e42e537262f95c392be0adc987ea485240ecc61df28ccfecf130218e2fe49",
+      "block_number": 5733081,
+      "block_timestamp": 1528150057000000,
+      "from_address": "0xf3586684107ce0859c44aa2b2e0fb8cd8731a15a",
+      "log_index": 42,
+      "to_address": "0x9960a6a4c41c0adedf23ce610ffc3a6d619ec84d",
+      "token_address": "0xf3586684107ce0859c44aa2b2e0fb8cd8731a15a",
+      "transaction_hash": "0x08821c006667bb1823978d5719e8352d7ecceb26df06d0788173f703d90fa5c4",
+      "value": "14977941176"
+    },
+    {
+      "block_hash": "0x85705a67f074855d05ef2890323b01764d0aa71d2cbeee87bbf7b9b74f2bd63c",
+      "block_number": 5730326,
+      "block_timestamp": 1528109099000000,
+      "from_address": "0xf6ab5e6faa11137f270373026768cc426e09456b",
+      "log_index": 62,
+      "to_address": "0x2c63f0bcb837563991c2c14ce17d5f491dd347f0",
+      "token_address": "0x4cd988afbad37289baaf53c13e98e2bd46aaea8c",
+      "transaction_hash": "0x9aed11016838c07d7ab2839cc555610ddcf10881f7d8ef21dc1b49c92811d84a",
+      "value": "5167000000000000000000"
+    },
+    {
+      "block_hash": "0xbc7e42e537262f95c392be0adc987ea485240ecc61df28ccfecf130218e2fe49",
+      "block_number": 5733081,
+      "block_timestamp": 1528150057000000,
+      "from_address": "0x5e57d4355d8b900c4e4c190d8e1e7486a5a9d0b0",
+      "log_index": 36,
+      "to_address": "0x808db139850b3bdd0032796d66a998c52a0b4480",
+      "token_address": "0x21f4da2a2c925f7105ba189438c9f429f371cf21",
+      "transaction_hash": "0xf66f1fb3bfd2e724a8c72b457f45b0513632f94d1dbb19c3a4886826f301da52",
+      "value": "566000000000000000000"
+    },
+    {
+      "block_hash": "0xa0e19004eb0ba5a68646c97a644fbf30fbce69e26a3fc62d7143da568cd755ff",
+      "block_number": 5727962,
+      "block_timestamp": 1528072454000000,
+      "from_address": "0xce0a12c551e72388532c080e9c1e120324618fcc",
+      "log_index": 141,
+      "to_address": "0x41c461eaea7b65141b36466c253a08dee095ba6e",
+      "token_address": "0x3495ffcee09012ab7d827abf3e3b3ae428a38443",
+      "transaction_hash": "0xeb86782df4c72f828a241d789ec38627bf9ec0d069f3dc5c9c1e49491c1d8e91",
+      "value": "5000000000000000000"
+    },
+    {
+      "block_hash": "0xdbf5bcf440ff1fd67fb3e8738c2c02137c0c755442bcf015e1629a7074d5547c",
+      "block_number": 5729242,
+      "block_timestamp": 1528092005000000,
+      "from_address": "0x0a4af5612c922c974fac10402389b6ca37be23a6",
+      "log_index": 68,
+      "to_address": "0x32b23118249d7b765d2ec91988f6846800892f5f",
+      "token_address": "0x4cd988afbad37289baaf53c13e98e2bd46aaea8c",
+      "transaction_hash": "0xae5490ffa49c6f3cd5541bcca261fa5837aca9b727addce46fc254f8c841b515",
+      "value": "131076000000000000000000"
+    }
+  ]
+}

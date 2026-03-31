@@ -1,0 +1,483 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`extra_data` = \"0x\", `mix_hash` = \"0x00000000000000000000000000000...\", `nonce` = 0, `receipts_root` = \"0x56e81f171bcc55a6ff8345e692c0f...\", `uncles_sha3` = \"0x1dcc4de8dec75d7aab85b567b6ccd...\"",
+        "properties": {
+          "base_fee_per_gas": {
+            "#docs": [
+              533,
+              467
+            ],
+            "%docs": [
+              53.3,
+              46.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                4850499952754,
+                4850687897110,
+                4850871011871,
+                4851999645035,
+                4852410243140
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "block_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x37dd171c236e4564256b1860bc23...",
+              "0xaf9a21017d5e18fc74cd003f7f0d...",
+              "0xb9fc8121ecbe433bb193c9ac25d3...",
+              "0xe2f4acabe54aed4f9090d5a1e063...",
+              "0xed19e5b36b8eb9db66d9029a04f5..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              665518,
+              672482,
+              679306,
+              683705,
+              689118
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-12-21T18:48:34",
+              "2021-12-22T05:57:42",
+              "2021-12-22T16:52:17",
+              "2021-12-22T23:54:18",
+              "2021-12-23T08:37:12"
+            ],
+            "type": "string"
+          },
+          "difficulty": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "bignumeric_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  0
+                ],
+                "type": "number"
+              },
+              "string_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "0"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "bignumeric_value": 0,
+                "string_value": "0"
+              }
+            ],
+            "type": "object"
+          },
+          "extra_data": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x"
+            ],
+            "type": "string"
+          },
+          "gas_limit": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10000000,
+              40000000
+            ],
+            "type": "number"
+          },
+          "gas_used": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1481917,
+              1565817,
+              1959997,
+              2781811,
+              8572411
+            ],
+            "type": "number"
+          },
+          "logs_bloom": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0000000002000001000000009000...",
+              "0x04200020028002000000000a9600...",
+              "0x0420002802400048012020209220...",
+              "0x0c20000002000000000000009000...",
+              "0x2430000022002400008880009400..."
+            ],
+            "type": "string"
+          },
+          "miner": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0780adef7832a7f7682b757a5ec5...",
+              "0x4f87a3f99bd1e58d01de1c38b7f8...",
+              "0x75c8a84bc06356f94fa5a945982c...",
+              "0x81e3e543647e466a5abc824f5844...",
+              "0xca5cf03d081197be24ef707081fb..."
+            ],
+            "type": "string"
+          },
+          "mix_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0000000000000000000000000000..."
+            ],
+            "type": "string"
+          },
+          "nonce": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "parent_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0004f3392a8d38f88eba8a646ddb...",
+              "0x06f9fbdc30704a0f5f25df5cc7b6...",
+              "0x41aaa80f13ef49e273ec9bc58701...",
+              "0x4c1f282fd56aae960e51c44374e9...",
+              "0xabb8e0f2597312553a5e23c2e1d8..."
+            ],
+            "type": "string"
+          },
+          "receipts_root": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x56e81f171bcc55a6ff8345e692c0..."
+            ],
+            "type": "string"
+          },
+          "size": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7699,
+              8375,
+              9904,
+              33495,
+              72937
+            ],
+            "type": "number"
+          },
+          "state_root": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x1f9e450daf2d195c766d03a8b46f...",
+              "0x3a1f0574a1b9e668c992a29d946b...",
+              "0x4d31d6a3177ff245d6d90f416634...",
+              "0xc56faea9382182aa6d11ad2c08b6...",
+              "0xd474e86808397c66c33213495f96..."
+            ],
+            "type": "string"
+          },
+          "total_difficulty": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "bignumeric_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  0
+                ],
+                "type": "number"
+              },
+              "string_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "0"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "bignumeric_value": 0,
+                "string_value": "0"
+              }
+            ],
+            "type": "object"
+          },
+          "transactions_root": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0f1162cc7fda0e85fce2497c7fb8...",
+              "0x13940df756c57ef808dfb3052877...",
+              "0x48d52911f716b76324be068a8d58...",
+              "0x93049ddf634e5fcb310a5f5e1c31...",
+              "0xa24eb99ae33b5847a764a450bf24..."
+            ],
+            "type": "string"
+          },
+          "uncles": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "uncles_sha3": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x1dcc4de8dec75d7aab85b567b6cc..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "blocks::102575",
+                  "blocks::225",
+                  "blocks::27549",
+                  "blocks::35598",
+                  "blocks::7438"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "blocks::102575"
+              },
+              {
+                "id": "blocks::225"
+              },
+              {
+                "id": "blocks::27549"
+              },
+              {
+                "id": "blocks::35598"
+              },
+              {
+                "id": "blocks::7438"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "base_fee_per_gas": null,
+      "block_hash": "0x3a812913357abfd771523562c68ac77221e34c0a4b8062ac6d1c161480b14cb7",
+      "block_number": 668205,
+      "block_timestamp": "2021-12-21T23:07:01",
+      "difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "extra_data": "0x",
+      "gas_limit": 10000000,
+      "gas_used": 1928362,
+      "logs_bloom": "0xc0200000030804010000022080800000301040009400000014288240002125000004000020000004080100000000000208408000024000044040004048244000802008004081109200040009000001200040100000040408806000008000030108000610022020408000400810800a0020000200000818500000a01408200200900000011008c0040020000009020041280000018000400c1000004000000910020020022200000000200000002000000000020000888400002000200080c00401000002000300100004000010020002400400008080001220002200212460000010052001001000000c0000128c400000010800401000402000200800000112",
+      "miner": "0x0780adef7832a7f7682b757a5ec5bd9fe7c38b4b",
+      "mix_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "nonce": 0,
+      "parent_hash": "0x06bcc1d0cc2f3548edb593e1c4d5e32386ff0ae6c937b7933d64d85b86cf2ec3",
+      "receipts_root": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+      "size": 7619,
+      "state_root": "0x9df75339d2bb86b77988194b9b186034f37cc973ef90dd2b15338c865820aa1e",
+      "total_difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "transactions_root": "0x1a046d0c05b07fc2a70b7dad9e6859e652a58f85837b7c85aa9b30b933d9229b",
+      "uncles": [],
+      "uncles_sha3": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+    },
+    {
+      "base_fee_per_gas": null,
+      "block_hash": "0x87794694472394c6815e48d4da2d94d8db75c899652f86c0b8c242318ac4e3ff",
+      "block_number": 648390,
+      "block_timestamp": "2021-12-20T15:23:18",
+      "difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "extra_data": "0x",
+      "gas_limit": 10000000,
+      "gas_used": 2402644,
+      "logs_bloom": "0x0c200000020000000000000298000002000000000400100010280210002009200210002000000000000040080802010a08424000000480008002000000244000903010040081089200410208100c002008000002004c040080002004800080080028050002000000002040001088080800000000040814000004201000040204820008010242c004000802000512085100000809e01000081200004004000930121004020000100000202000000000000000120000080148100201200042001000020002000204000080000206262800100008110000001800002842010068000010050020010080020800000000000000000100444209420200208081000000",
+      "miner": "0x0780adef7832a7f7682b757a5ec5bd9fe7c38b4b",
+      "mix_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "nonce": 0,
+      "parent_hash": "0x60caeeef1d160f344ed79f2ca57d5d00d0e052ba9ce783cf3aeaf9426550d80d",
+      "receipts_root": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+      "size": 11536,
+      "state_root": "0xe3382146e1314c0b9829025bb89cce86cd1c5c9087a0c10eff8edcf16b8c2cb4",
+      "total_difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "transactions_root": "0x01e819042563a148b1bc9365871572b80d26301a71d68c705a3cb1c637d5ad38",
+      "uncles": [],
+      "uncles_sha3": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+    },
+    {
+      "base_fee_per_gas": null,
+      "block_hash": "0x4ef82bf6d5f88bd41fb3df7a0e04b8611bde179c9ec6c886818e4911428cf4bb",
+      "block_number": 645970,
+      "block_timestamp": "2021-12-20T11:29:48",
+      "difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "extra_data": "0x",
+      "gas_limit": 10000000,
+      "gas_used": 2559883,
+      "logs_bloom": "0x00200050034000000000202490800002811080008408000010200200082031000000003400000000000040080800000308401000004000000000000100204000242130000081008800400208000000200200000000008400c0200000800000480800040002000002100440001080080000000202000810100000201000200224800000000000c0040000010001024859080008018000400810000040200008100200004200001000002040020030400000000212000880009122002000000004000004020002000401403402a002200000000a008000001000002b50004020000010054100004802000804000880000000100000400000400000200080002012",
+      "miner": "0x0780adef7832a7f7682b757a5ec5bd9fe7c38b4b",
+      "mix_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "nonce": 0,
+      "parent_hash": "0xfcec1b66420cbdcffbdcd22bd2c5ac2308637c86271da103feb74f39b71152ec",
+      "receipts_root": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+      "size": 32390,
+      "state_root": "0xcc6cfa95abac56552bf5fe9835a04bf6221755f240e5eeafd53e454ed2151251",
+      "total_difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "transactions_root": "0x123ba8721d850433463c073620bec5ce1eab17aeca098ba8e7fe59eeb580ce76",
+      "uncles": [],
+      "uncles_sha3": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+    },
+    {
+      "base_fee_per_gas": null,
+      "block_hash": "0xa2518361b25737c6b07dc9df31937331ad4fa956b31adcfca5c3c8ededcf069e",
+      "block_number": 653470,
+      "block_timestamp": "2021-12-20T23:33:44",
+      "difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "extra_data": "0x",
+      "gas_limit": 10000000,
+      "gas_used": 1768093,
+      "logs_bloom": "0x08200000020000400004002090000000000800000400000010200200006000000000002000000000000040080a10000208401000000020000000040010204000202120001080008a1201020800080020060000000060004080000000000000080814054402800000000040101182480000000000000014000000221080000206824200010a00c0042000010001020854020000248001200810000440000000000210000210001040802001000100400000001200000800800020002000000000000202020002000000c2204080800000000048108000003000002102000028080010010100000044000105000000000000008000400050000000208081002410",
+      "miner": "0x0780adef7832a7f7682b757a5ec5bd9fe7c38b4b",
+      "mix_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "nonce": 0,
+      "parent_hash": "0x88f90197bd55ae9b27b0acea35d4d201b5a1ec65929ac356e882f394bb5188eb",
+      "receipts_root": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+      "size": 9149,
+      "state_root": "0x3d358fd94e2e7163c56f3a95c2097b2a7992853bcb7d1d50f8d8790006a47857",
+      "total_difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "transactions_root": "0xc322161c515dcdc1f8cb5e13d9d410a969389c7492a3897147561113283e066a",
+      "uncles": [],
+      "uncles_sha3": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+    },
+    {
+      "base_fee_per_gas": null,
+      "block_hash": "0x541d47b8d5aeefcf4dddcb8de00e89ad3abef50a16f454649e88c8581c0aefff",
+      "block_number": 665710,
+      "block_timestamp": "2021-12-21T19:07:04",
+      "difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "extra_data": "0x",
+      "gas_limit": 10000000,
+      "gas_used": 895259,
+      "logs_bloom": "0x00200808020000000000802080800040000000011800000010004200000000000000000000000802000000000000008200400000000000000000000008200000200000000000008020200008000000600280000000400900800020002000000040000400000000000048000010800420000000001000144008000010100000100000000000208008000800000102000000000000400000080000004200200000820000000200008000002040000040000000001010000000000010200000000080000002000000000040010080000000200000000000401000000802000000000010000000008000000024001200200000000000000000800000000800102008",
+      "miner": "0x0780adef7832a7f7682b757a5ec5bd9fe7c38b4b",
+      "mix_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "nonce": 0,
+      "parent_hash": "0x5949af4dcba44628902504610f89cf9aaf73ba53d6657268f7143a144c24fe48",
+      "receipts_root": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+      "size": 6730,
+      "state_root": "0x66876210dd7aa9b1931a72f2949293cb440541211e0bd1c3d2e941506f09f3e4",
+      "total_difficulty": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      },
+      "transactions_root": "0x23b0dfcc8230e1be00fee4480d4d719ce346f6a774900442754d25b7dde9e643",
+      "uncles": [],
+      "uncles_sha3": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"
+    }
+  ]
+}

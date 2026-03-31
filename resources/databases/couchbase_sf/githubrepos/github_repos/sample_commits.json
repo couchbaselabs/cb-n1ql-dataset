@@ -1,0 +1,1092 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "author": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "date": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  1287114155000000,
+                  1317918554000000,
+                  1379382847000000,
+                  1403611509000000,
+                  1403810566000000
+                ],
+                "type": "number"
+              },
+              "email": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "3055038c414aef68bf32c33b811862...",
+                  "33837adfb53316eae44aad04041e12...",
+                  "35a55a4ac466b5abd81eb66f3f7d6a...",
+                  "643a80aaf16a8332d6a70921c14d4b...",
+                  "72501f147b2753e6660fdce744d9ac..."
+                ],
+                "type": "string"
+              },
+              "name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Dan Carpenter",
+                  "Emmanuel Grumbach",
+                  "John Stultz",
+                  "Philipp Reisner",
+                  "Thierry Reding"
+                ],
+                "type": "string"
+              },
+              "time_sec": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  1287114155,
+                  1317918554,
+                  1379382847,
+                  1403611509,
+                  1403810566
+                ],
+                "type": "number"
+              },
+              "tz_offset": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  -420,
+                  120,
+                  180,
+                  240,
+                  540
+                ],
+                "type": "number"
+              }
+            },
+            "samples": [
+              {
+                "date": 1287114155000000,
+                "email": "72501f147b2753e6660fdce744d9ac3084854f5e@gmail.com",
+                "name": "Dan Carpenter",
+                "time_sec": 1287114155,
+                "tz_offset": 120
+              },
+              {
+                "date": 1317918554000000,
+                "email": "35a55a4ac466b5abd81eb66f3f7d6a972dd0dc24@linbit.com",
+                "name": "Philipp Reisner",
+                "time_sec": 1317918554,
+                "tz_offset": 120
+              },
+              {
+                "date": 1379382847000000,
+                "email": "33837adfb53316eae44aad04041e1240088d76fd@linaro.org",
+                "name": "John Stultz",
+                "time_sec": 1379382847,
+                "tz_offset": -420
+              },
+              {
+                "date": 1403611509000000,
+                "email": "643a80aaf16a8332d6a70921c14d4bb265446494@intel.com",
+                "name": "Emmanuel Grumbach",
+                "time_sec": 1403611509,
+                "tz_offset": 180
+              },
+              {
+                "date": 1403810566000000,
+                "email": "3055038c414aef68bf32c33b8118623e7554e0f2@nvidia.com",
+                "name": "Thierry Reding",
+                "time_sec": 1403810566,
+                "tz_offset": 120
+              }
+            ],
+            "type": "object"
+          },
+          "commit": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "35a4e1817187db6f3db609c1fce913...",
+              "389e067032fbb96e439abafae848dd...",
+              "5b605d4426e1dc38b6572bd42c151a...",
+              "79e7c561aeea958479194e24d711e9...",
+              "aaae506d545bb9d06f4d8362f670f4..."
+            ],
+            "type": "string"
+          },
+          "committer": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "date": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  1287170679000000,
+                  1336569353000000,
+                  1379382847000000,
+                  1403611509000000,
+                  1417706175000000
+                ],
+                "type": "number"
+              },
+              "email": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "3055038c414aef68bf32c33b811862...",
+                  "33837adfb53316eae44aad04041e12...",
+                  "35a55a4ac466b5abd81eb66f3f7d6a...",
+                  "4645f7897fd33786a2ee1264d590b3...",
+                  "643a80aaf16a8332d6a70921c14d4b..."
+                ],
+                "type": "string"
+              },
+              "name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Emmanuel Grumbach",
+                  "Greg Kroah-Hartman",
+                  "John Stultz",
+                  "Philipp Reisner",
+                  "Thierry Reding"
+                ],
+                "type": "string"
+              },
+              "time_sec": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  1287170679,
+                  1336569353,
+                  1379382847,
+                  1403611509,
+                  1417706175
+                ],
+                "type": "number"
+              },
+              "tz_offset": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  -480,
+                  -420,
+                  60,
+                  120,
+                  180
+                ],
+                "type": "number"
+              }
+            },
+            "samples": [
+              {
+                "date": 1287170679000000,
+                "email": "4645f7897fd33786a2ee1264d590b3c400559d85@suse.de",
+                "name": "Greg Kroah-Hartman",
+                "time_sec": 1287170679,
+                "tz_offset": -420
+              },
+              {
+                "date": 1336569353000000,
+                "email": "35a55a4ac466b5abd81eb66f3f7d6a972dd0dc24@linbit.com",
+                "name": "Philipp Reisner",
+                "time_sec": 1336569353,
+                "tz_offset": 120
+              },
+              {
+                "date": 1379382847000000,
+                "email": "33837adfb53316eae44aad04041e1240088d76fd@linaro.org",
+                "name": "John Stultz",
+                "time_sec": 1379382847,
+                "tz_offset": -420
+              },
+              {
+                "date": 1403611509000000,
+                "email": "643a80aaf16a8332d6a70921c14d4bb265446494@intel.com",
+                "name": "Emmanuel Grumbach",
+                "time_sec": 1403611509,
+                "tz_offset": 180
+              },
+              {
+                "date": 1417706175000000,
+                "email": "3055038c414aef68bf32c33b8118623e7554e0f2@nvidia.com",
+                "name": "Thierry Reding",
+                "time_sec": 1417706175,
+                "tz_offset": 60
+              }
+            ],
+            "type": "object"
+          },
+          "difference": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 21586,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "Flavor": "",
+              "properties": {
+                "new_mode": {
+                  "#docs": 17804,
+                  "%docs": 82.47,
+                  "nestingDepth": 2,
+                  "samples": [
+                    33188,
+                    33261
+                  ],
+                  "type": "number"
+                },
+                "new_path": {
+                  "#docs": 21586,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "arch/arm/boot/dts/tegra124.dts...",
+                    "drivers/block/drbd/drbd_worker...",
+                    "drivers/net/wireless/iwlwifi/m...",
+                    "drivers/staging/lirc/lirc_sase...",
+                    "sound/oss/hex2hex.c"
+                  ],
+                  "type": "string"
+                },
+                "new_sha1": {
+                  "#docs": 17804,
+                  "%docs": 82.47,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "041ef5c52bc269389fd3249dbcff0e...",
+                    "2e681cf3e85da8a957624467ff7d8c...",
+                    "40c112f136dc519cd8a7fda5595dc3...",
+                    "5fc60f622beda50c096ac2bced2eee...",
+                    "a9f3a3e1afc40db63f0d2449a3f8ff..."
+                  ],
+                  "type": "string"
+                },
+                "old_mode": {
+                  "#docs": 17114,
+                  "%docs": 79.28,
+                  "nestingDepth": 2,
+                  "samples": [
+                    33188,
+                    33261
+                  ],
+                  "type": "number"
+                },
+                "old_path": {
+                  "#docs": 21586,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "arch/arm/boot/dts/tegra124.dts...",
+                    "drivers/block/drbd/drbd_worker...",
+                    "drivers/net/wireless/iwlwifi/m...",
+                    "drivers/staging/lirc/lirc_sase...",
+                    "sound/oss/hex2hex.c"
+                  ],
+                  "type": "string"
+                },
+                "old_sha1": {
+                  "#docs": 17114,
+                  "%docs": 79.28,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "5460faae98c9a305015fbf8ee57fb2...",
+                    "5fcc6e704faaa03d8e783412cbb6ee...",
+                    "62bde5ae17f7cc873feeebf95b5237...",
+                    "896c21d4fc7c939f7d23bb8b4c87c5...",
+                    "d1ac0997f51b08a26b9b15e537dd6c..."
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 6879,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "new_mode": 33188,
+                  "new_path": "arch/arm/boot/dts/tegra124.dtsi",
+                  "new_sha1": "a9f3a3e1afc40db63f0d2449a3f8fff8f0340b7a",
+                  "old_mode": 33188,
+                  "old_path": "arch/arm/boot/dts/tegra124.dtsi",
+                  "old_sha1": "5fcc6e704faaa03d8e783412cbb6ee6d20717198"
+                }
+              ],
+              [
+                {
+                  "new_mode": 33188,
+                  "new_path": "drivers/block/drbd/drbd_worker.c",
+                  "new_sha1": "5fc60f622beda50c096ac2bced2eee2698201af6",
+                  "old_mode": 33188,
+                  "old_path": "drivers/block/drbd/drbd_worker.c",
+                  "old_sha1": "62bde5ae17f7cc873feeebf95b52373fddd0cedf"
+                }
+              ],
+              [
+                {
+                  "new_mode": 33188,
+                  "new_path": "drivers/net/wireless/iwlwifi/mvm/scan.c",
+                  "new_sha1": "40c112f136dc519cd8a7fda5595dc309106d1309",
+                  "old_mode": 33188,
+                  "old_path": "drivers/net/wireless/iwlwifi/mvm/scan.c",
+                  "old_sha1": "896c21d4fc7c939f7d23bb8b4c87c52f329361a9"
+                }
+              ],
+              [
+                {
+                  "new_mode": 33188,
+                  "new_path": "drivers/rtc/interface.c",
+                  "new_sha1": "544be722937cb5676c604ee1f586d289df09611c",
+                  "old_mode": 33188,
+                  "old_path": "drivers/rtc/interface.c",
+                  "old_sha1": "72c5cdbe0791afd2fed9a4779e5769c82c6b6ba3"
+                },
+                {
+                  "new_mode": 33188,
+                  "new_path": "kernel/time/clocksource.c",
+                  "new_sha1": "64cf63ca09cc58be75bcba8dd03f6133705d94fc",
+                  "old_mode": 33188,
+                  "old_path": "kernel/time/clocksource.c",
+                  "old_sha1": "637a14af6c21ec32655bf7c1f84e55c411dcafb6"
+                },
+                {
+                  "new_mode": 33188,
+                  "new_path": "kernel/time/ntp.c",
+                  "new_sha1": "ab1fa7cb8912d3f682b82ad52520f82ec8dee0b8",
+                  "old_mode": 33188,
+                  "old_path": "kernel/time/ntp.c",
+                  "old_sha1": "8f5b3b98577b797663f8057762b6248d0fae1823"
+                }
+              ],
+              [
+                {
+                  "new_mode": 33188,
+                  "new_path": "drivers/staging/lirc/lirc_sasem.c",
+                  "new_sha1": "2e681cf3e85da8a957624467ff7d8c25feb605d2",
+                  "old_mode": 33188,
+                  "old_path": "drivers/staging/lirc/lirc_sasem.c",
+                  "old_sha1": "d1ac0997f51b08a26b9b15e537dd6cefe9b1a1f6"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "difference_truncated": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "encoding": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "message": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ARM: tegra: Enable IOMMU for d...",
+              "Merge branch 'fortglx/3.12/tim...",
+              "Merge remote-tracking branch '...",
+              "Staging: lirc: fix PTR_ERR() c...",
+              "drbd: Fixed a race condition b..."
+            ],
+            "type": "string"
+          },
+          "parent": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 9,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "19c3205ceaffc8f860acf61537fa211087e4b8fc",
+                "a97ad0c4b447a132a322cedc3a5f7fa4cab4b304"
+              ],
+              [
+                "32215e716008160aadda99669f98a8b735e829fa"
+              ],
+              [
+                "6a9a92f4ef05bb3e94bbfe123c21482fa5da9866"
+              ],
+              [
+                "ab4800303299e9a3b844e8256bf3c8fd9f095060",
+                "89879413eba4d9f57b69f84a32fd085d54057df3"
+              ],
+              [
+                "fcbf77bf872c28ac3f18261a44af91383f0a2f3d"
+              ]
+            ],
+            "type": "array"
+          },
+          "repo_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "apple/swift",
+              "facebook/react",
+              "tensorflow/tensorflow",
+              "torvalds/linux",
+              "twbs/bootstrap"
+            ],
+            "type": "string"
+          },
+          "subject": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ARM: tegra: Enable IOMMU for d...",
+              "Merge branch 'fortglx/3.12/tim...",
+              "Merge remote-tracking branch '...",
+              "Staging: lirc: fix PTR_ERR() c...",
+              "drbd: Fixed a race condition b..."
+            ],
+            "type": "string"
+          },
+          "trailer": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": [
+              {
+                "#docs": 164,
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "Flavor": ""
+              },
+              {
+                "#docs": 2345,
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "Flavor": "",
+                "properties": {
+                  "email": {
+                    "#docs": 2321,
+                    "%docs": 98.97,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "00e4cf8f46a57000a44449bf9dd8cb...",
+                      "3055038c414aef68bf32c33b811862...",
+                      "33837adfb53316eae44aad04041e12...",
+                      "c028c213ed5efcf30c3f4fc7361dbd...",
+                      "de609eb4d5d70b1d38ec6642adbfc3..."
+                    ],
+                    "type": "string"
+                  },
+                  "key": {
+                    "#docs": 2345,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "BugLink",
+                      "Change",
+                      "Fixes",
+                      "Patchwork",
+                      "Signed-off-by"
+                    ],
+                    "type": "string"
+                  },
+                  "value": {
+                    "#docs": 2345,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "Al Viro <de609eb4d5d70b1d38ec6...",
+                      "John Stultz <33837adfb53316eae...",
+                      "Josh Triplett <c028c213ed5efcf...",
+                      "Thierry Reding <3055038c414aef...",
+                      "Thomas Gleixner <00e4cf8f46a57..."
+                    ],
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            ],
+            "maxItems": 17,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {}
+              ],
+              [
+                {
+                  "email": "3055038c414aef68bf32c33b8118623e7554e0f2@nvidia.com",
+                  "key": "Signed-off-by",
+                  "value": "Thierry Reding <3055038c414aef68bf32c33b8118623e7554e0f2@nvidia.com>"
+                }
+              ],
+              [
+                {
+                  "email": "33837adfb53316eae44aad04041e1240088d76fd@linaro.org",
+                  "key": "Signed-off-by",
+                  "value": "John Stultz <33837adfb53316eae44aad04041e1240088d76fd@linaro.org>"
+                }
+              ],
+              [
+                {
+                  "email": "35a55a4ac466b5abd81eb66f3f7d6a972dd0dc24@linbit.com",
+                  "key": "Signed-off-by",
+                  "value": "Philipp Reisner <35a55a4ac466b5abd81eb66f3f7d6a972dd0dc24@linbit.com>"
+                },
+                {
+                  "email": "31df9cacdc65c624cc60c2dcd22bbf92dc230e16@linbit.com",
+                  "key": "Signed-off-by",
+                  "value": "Lars Ellenberg <31df9cacdc65c624cc60c2dcd22bbf92dc230e16@linbit.com>"
+                }
+              ],
+              [
+                {
+                  "email": "72501f147b2753e6660fdce744d9ac3084854f5e@gmail.com",
+                  "key": "Signed-off-by",
+                  "value": "Dan Carpenter <72501f147b2753e6660fdce744d9ac3084854f5e@gmail.com>"
+                },
+                {
+                  "email": "14059c7158912dcae849c377925c87d46da48cdf@redhat.com",
+                  "key": "Acked-by",
+                  "value": "Jarod Wilson <14059c7158912dcae849c377925c87d46da48cdf@redhat.com>"
+                },
+                {
+                  "email": "4645f7897fd33786a2ee1264d590b3c400559d85@suse.de",
+                  "key": "Signed-off-by",
+                  "value": "Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@suse.de>"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "tree": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "287189621af2b893c85ad8f86e75e5...",
+              "4fb88894b2ce6e03ea44d188752170...",
+              "54a8ad0f2978e3ac3a0823bf331bd6...",
+              "9b5fdebaf55ad4e9d195412dbfbf10...",
+              "b1b486c2b967e4d7468791fc0a75a7..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sample_commits::10175",
+                  "sample_commits::10204",
+                  "sample_commits::10230",
+                  "sample_commits::13354",
+                  "sample_commits::16134"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sample_commits::10175"
+              },
+              {
+                "id": "sample_commits::10204"
+              },
+              {
+                "id": "sample_commits::10230"
+              },
+              {
+                "id": "sample_commits::13354"
+              },
+              {
+                "id": "sample_commits::16134"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "author": {
+        "date": 1343921026000000,
+        "email": "293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com",
+        "name": "Arnaldo Carvalho de Melo",
+        "time_sec": 1343921026,
+        "tz_offset": -180
+      },
+      "commit": "a3f698fe3082ff80a7f3b27c9b64b4b748c81f9d",
+      "committer": {
+        "date": 1343921026000000,
+        "email": "293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com",
+        "name": "Arnaldo Carvalho de Melo",
+        "time_sec": 1343921026,
+        "tz_offset": -180
+      },
+      "difference": [
+        {
+          "new_mode": 33188,
+          "new_path": "tools/perf/util/event.h",
+          "new_sha1": "d84870b0642627b11b81b5b5dc1c0abade1a09e4",
+          "old_mode": 33188,
+          "old_path": "tools/perf/util/event.h",
+          "old_sha1": "1b197280c621fea866e3bfd90f71f3213971ee4a"
+        },
+        {
+          "new_mode": 33188,
+          "new_path": "tools/perf/util/evlist.c",
+          "new_sha1": "9b38681add9e2d46e3a02b8ca0ffe48363a3e3c5",
+          "old_mode": 33188,
+          "old_path": "tools/perf/util/evlist.c",
+          "old_sha1": "1a560e0904a5a4eb299a9d909e88dbaa969cbff2"
+        },
+        {
+          "new_mode": 33188,
+          "new_path": "tools/perf/util/evlist.h",
+          "new_sha1": "528c1acd9298443ce37afee8a2f3be515f49adfe",
+          "old_mode": 33188,
+          "old_path": "tools/perf/util/evlist.h",
+          "old_sha1": "a5a49118a91a8e272f2c5ec7eabd73da63a2fa7b"
+        },
+        {
+          "new_mode": 33188,
+          "new_path": "tools/perf/util/evsel.c",
+          "new_sha1": "2eaae140def26b5ef952d814e47a1a3179d8abbb",
+          "old_mode": 33188,
+          "old_path": "tools/perf/util/evsel.c",
+          "old_sha1": "8feec4011356693c4c4a37cd85e33475b56439ab"
+        },
+        {
+          "new_mode": 33188,
+          "new_path": "tools/perf/util/evsel.h",
+          "new_sha1": "b559929983bbefd2e991fdf26e338fe588570a66",
+          "old_mode": 33188,
+          "old_path": "tools/perf/util/evsel.h",
+          "old_sha1": "894bd77d90ccf466c13c40b56e6853e868529036"
+        }
+      ],
+      "difference_truncated": null,
+      "encoding": null,
+      "message": "perf evsel: Adopt parse_sample method from perf_event\n\nSince we need evsel->{attr.{sample_{id_all,type}},sample_size},\nreducing the number of parameters tools have to pass.\n\nCc: David Ahern <b80c1600f604d3b0d768f26f90a76757e76005dd@gmail.com>\nCc: Frederic Weisbecker <e8a1bf9163cb25e93cfd6540f223b3872ea7ee55@gmail.com>\nCc: Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com>\nCc: Mike Galbraith <3cfa3897b7f55b5396b7a47c83b66325184bc9b4@gmx.de>\nCc: Namhyung Kim <5c915a589b3ddf58cebf14bec41bcc143b37ac3c@gmail.com>\nCc: Paul Mackerras <19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org>\nCc: Peter Zijlstra <3fddac958924aef220f202ca567388ddab3f14a8@infradead.org>\nCc: Stephane Eranian <f199ae9781930a5b94b284ca2f471140752002a7@google.com>\nLink: 99b45841e87bba9958c47cb835972fde72f549cd@git.kernel.org\nSigned-off-by: Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>\n",
+      "parent": [
+        "cb0b29e0861659c9eef9664772cd7e845ba1104a"
+      ],
+      "repo_name": "torvalds/linux",
+      "subject": "perf evsel: Adopt parse_sample method from perf_event",
+      "trailer": [
+        {
+          "email": "b80c1600f604d3b0d768f26f90a76757e76005dd@gmail.com",
+          "key": "Cc",
+          "value": "David Ahern <b80c1600f604d3b0d768f26f90a76757e76005dd@gmail.com>"
+        },
+        {
+          "email": "e8a1bf9163cb25e93cfd6540f223b3872ea7ee55@gmail.com",
+          "key": "Cc",
+          "value": "Frederic Weisbecker <e8a1bf9163cb25e93cfd6540f223b3872ea7ee55@gmail.com>"
+        },
+        {
+          "email": "2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com",
+          "key": "Cc",
+          "value": "Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com>"
+        },
+        {
+          "email": "3cfa3897b7f55b5396b7a47c83b66325184bc9b4@gmx.de",
+          "key": "Cc",
+          "value": "Mike Galbraith <3cfa3897b7f55b5396b7a47c83b66325184bc9b4@gmx.de>"
+        },
+        {
+          "email": "5c915a589b3ddf58cebf14bec41bcc143b37ac3c@gmail.com",
+          "key": "Cc",
+          "value": "Namhyung Kim <5c915a589b3ddf58cebf14bec41bcc143b37ac3c@gmail.com>"
+        },
+        {
+          "email": "19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org",
+          "key": "Cc",
+          "value": "Paul Mackerras <19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org>"
+        },
+        {
+          "email": "3fddac958924aef220f202ca567388ddab3f14a8@infradead.org",
+          "key": "Cc",
+          "value": "Peter Zijlstra <3fddac958924aef220f202ca567388ddab3f14a8@infradead.org>"
+        },
+        {
+          "email": "f199ae9781930a5b94b284ca2f471140752002a7@google.com",
+          "key": "Cc",
+          "value": "Stephane Eranian <f199ae9781930a5b94b284ca2f471140752002a7@google.com>"
+        },
+        {
+          "email": "99b45841e87bba9958c47cb835972fde72f549cd@git.kernel.org",
+          "key": "Link",
+          "value": "99b45841e87bba9958c47cb835972fde72f549cd@git.kernel.org"
+        },
+        {
+          "email": "293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com",
+          "key": "Signed-off-by",
+          "value": "Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>"
+        }
+      ],
+      "tree": "16fa9bf9b974893cff85ae38cb41ae9dec91f0c6"
+    },
+    {
+      "author": {
+        "date": 1412143399000000,
+        "email": "34c6fceca75e456f25e7e99531e2425c6c1de443@codyps.com",
+        "name": "Cody P Schafer",
+        "time_sec": 1412143399,
+        "tz_offset": -420
+      },
+      "commit": "ed90a4466340e51699139ea83dbe0f4536360e6d",
+      "committer": {
+        "date": 1413399280000000,
+        "email": "293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com",
+        "name": "Arnaldo Carvalho de Melo",
+        "time_sec": 1413399280,
+        "tz_offset": -180
+      },
+      "difference": [
+        {
+          "new_mode": 33188,
+          "new_path": "Documentation/ABI/testing/sysfs-bus-event_source-devices-events",
+          "new_sha1": "a5226f09415981f84fc7f7b074bf52f16a57e82d",
+          "old_mode": 33188,
+          "old_path": "Documentation/ABI/testing/sysfs-bus-event_source-devices-events",
+          "old_sha1": "7b40a3cbc26a8026cd818535d1e27f51261353e2"
+        }
+      ],
+      "difference_truncated": null,
+      "encoding": null,
+      "message": "perf Documentation: sysfs events/ interfaces\n\nAdd documentation for the <event>, <event>.scale, and <event>.unit\nfiles in sysfs.\n\n\t<event>.scale and <event>.unit were undocumented.\n\t<event> was previously documented only for specific powerpc pmu events.\n\nSigned-off-by: Cody P Schafer <34c6fceca75e456f25e7e99531e2425c6c1de443@codyps.com>\nSigned-off-by: Sukadev Bhattiprolu <2ac48ee9b8f6042694a5d86ef56b8e10fe5327d1@linux.vnet.ibm.com>\nCc: Andi Kleen <0474aee45985f5ae829f53849df476200e876990@linux.intel.com>\nCc: Anshuman Khandual <5cc840ad174e421baefc61e26aff2d5fb1883945@linux.vnet.ibm.com>\nCc: Cody P Schafer <34c6fceca75e456f25e7e99531e2425c6c1de443@codyps.com>\nCc: Haren Myneni <a828d6b576316e226a97a8449fa1587a63526294@us.ibm.com>\nCc: Haren Myneni <a828d6b576316e226a97a8449fa1587a63526294@us.ibm.com>\nCc: Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com>\nCc: Michael Ellerman <ef2235e1fe17796ebeb6e6e3f3a0cc6684e255f6@au1.ibm.com>\nCc: Paul Mackerras <19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org>\nCc: Peter Zijlstra <3fddac958924aef220f202ca567388ddab3f14a8@infradead.org>\nCc: Stephane Eranian <f199ae9781930a5b94b284ca2f471140752002a7@google.com>\nCc: 624e0123bdcc7ea450e9efbcd399e8858e365d3e@lists.ozlabs.org\nLink: http://lkml.kernel.org/r/1412143402-26061-4-git-send-email-2ac48ee9b8f6042694a5d86ef56b8e10fe5327d1@linux.vnet.ibm.com\nSigned-off-by: Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>\n",
+      "parent": [
+        "1e378ebd117d1828b9d5dbe0538887478fcb9d84"
+      ],
+      "repo_name": "torvalds/linux",
+      "subject": "perf Documentation: sysfs events/ interfaces",
+      "trailer": [
+        {
+          "email": "34c6fceca75e456f25e7e99531e2425c6c1de443@codyps.com",
+          "key": "Signed-off-by",
+          "value": "Cody P Schafer <34c6fceca75e456f25e7e99531e2425c6c1de443@codyps.com>"
+        },
+        {
+          "email": "2ac48ee9b8f6042694a5d86ef56b8e10fe5327d1@linux.vnet.ibm.com",
+          "key": "Signed-off-by",
+          "value": "Sukadev Bhattiprolu <2ac48ee9b8f6042694a5d86ef56b8e10fe5327d1@linux.vnet.ibm.com>"
+        },
+        {
+          "email": "0474aee45985f5ae829f53849df476200e876990@linux.intel.com",
+          "key": "Cc",
+          "value": "Andi Kleen <0474aee45985f5ae829f53849df476200e876990@linux.intel.com>"
+        },
+        {
+          "email": "5cc840ad174e421baefc61e26aff2d5fb1883945@linux.vnet.ibm.com",
+          "key": "Cc",
+          "value": "Anshuman Khandual <5cc840ad174e421baefc61e26aff2d5fb1883945@linux.vnet.ibm.com>"
+        },
+        {
+          "email": "34c6fceca75e456f25e7e99531e2425c6c1de443@codyps.com",
+          "key": "Cc",
+          "value": "Cody P Schafer <34c6fceca75e456f25e7e99531e2425c6c1de443@codyps.com>"
+        },
+        {
+          "email": "a828d6b576316e226a97a8449fa1587a63526294@us.ibm.com",
+          "key": "Cc",
+          "value": "Haren Myneni <a828d6b576316e226a97a8449fa1587a63526294@us.ibm.com>"
+        },
+        {
+          "email": "a828d6b576316e226a97a8449fa1587a63526294@us.ibm.com",
+          "key": "Cc",
+          "value": "Haren Myneni <a828d6b576316e226a97a8449fa1587a63526294@us.ibm.com>"
+        },
+        {
+          "email": "2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com",
+          "key": "Cc",
+          "value": "Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com>"
+        },
+        {
+          "email": "ef2235e1fe17796ebeb6e6e3f3a0cc6684e255f6@au1.ibm.com",
+          "key": "Cc",
+          "value": "Michael Ellerman <ef2235e1fe17796ebeb6e6e3f3a0cc6684e255f6@au1.ibm.com>"
+        },
+        {
+          "email": "19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org",
+          "key": "Cc",
+          "value": "Paul Mackerras <19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org>"
+        },
+        {
+          "email": "3fddac958924aef220f202ca567388ddab3f14a8@infradead.org",
+          "key": "Cc",
+          "value": "Peter Zijlstra <3fddac958924aef220f202ca567388ddab3f14a8@infradead.org>"
+        },
+        {
+          "email": "f199ae9781930a5b94b284ca2f471140752002a7@google.com",
+          "key": "Cc",
+          "value": "Stephane Eranian <f199ae9781930a5b94b284ca2f471140752002a7@google.com>"
+        },
+        {
+          "email": "624e0123bdcc7ea450e9efbcd399e8858e365d3e@lists.ozlabs.org",
+          "key": "Cc",
+          "value": "624e0123bdcc7ea450e9efbcd399e8858e365d3e@lists.ozlabs.org"
+        },
+        {
+          "email": "61492bd0fc3c39521cfa364c82c169f4925196c1@linux.vnet.ibm.com",
+          "key": "Link",
+          "value": "61492bd0fc3c39521cfa364c82c169f4925196c1@linux.vnet.ibm.com"
+        },
+        {
+          "email": "293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com",
+          "key": "Signed-off-by",
+          "value": "Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>"
+        }
+      ],
+      "tree": "d1c02068c3dda6b2a37944b36ffebb2507392d3b"
+    },
+    {
+      "author": {
+        "date": 1407825639000000,
+        "email": "5c915a589b3ddf58cebf14bec41bcc143b37ac3c@kernel.org",
+        "name": "Namhyung Kim",
+        "time_sec": 1407825639,
+        "tz_offset": 540
+      },
+      "commit": "14d37f38e956ba0dd4f2206f68534eb418ecd905",
+      "committer": {
+        "date": 1407958423000000,
+        "email": "293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com",
+        "name": "Arnaldo Carvalho de Melo",
+        "time_sec": 1407958423,
+        "tz_offset": -180
+      },
+      "difference": [
+        {
+          "new_mode": 33188,
+          "new_path": "tools/perf/builtin-kvm.c",
+          "new_sha1": "7f2b5551386396d9963df091cd0ff1fdee17f020",
+          "old_mode": 33188,
+          "old_path": "tools/perf/builtin-kvm.c",
+          "old_sha1": "ff404750d7447b4d64037eb1d33bf27c9b616f61"
+        }
+      ],
+      "difference_truncated": null,
+      "encoding": null,
+      "message": "perf kvm: Move call to symbol__init() after creating session\n\nThis is a preparation of fixing dso__load_kernel_sym().  It needs a\nsession info before calling symbol__init().\n\nSigned-off-by: Namhyung Kim <5c915a589b3ddf58cebf14bec41bcc143b37ac3c@kernel.org>\nAcked-by: Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@kernel.org>\nCc: Adrian Hunter <41bb5944f244750b7cf0394140496972a3f1bee3@intel.com>\nCc: David Ahern <b80c1600f604d3b0d768f26f90a76757e76005dd@gmail.com>\nCc: Ingo Molnar <9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@kernel.org>\nCc: Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com>\nCc: Minchan Kim <eee62f459f15dcddf87a8df69e8328e2a2562028@kernel.org>\nCc: Namhyung Kim <1b20bcb62cf1b100c528e605608922000dc2fc80@lge.com>\nCc: Paul Mackerras <19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org>\nCc: Peter Zijlstra <645ca7d3a8d3d4f60557176cd361ea8351edc32b@chello.nl>\nLink: http://lkml.kernel.org/r/1407825645-24586-8-git-send-email-5c915a589b3ddf58cebf14bec41bcc143b37ac3c@kernel.org\nSigned-off-by: Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>\n",
+      "parent": [
+        "2b2b2c68c64fb9db392940b42355944064f2a4ca"
+      ],
+      "repo_name": "torvalds/linux",
+      "subject": "perf kvm: Move call to symbol__init() after creating session",
+      "trailer": [
+        {
+          "email": "5c915a589b3ddf58cebf14bec41bcc143b37ac3c@kernel.org",
+          "key": "Signed-off-by",
+          "value": "Namhyung Kim <5c915a589b3ddf58cebf14bec41bcc143b37ac3c@kernel.org>"
+        },
+        {
+          "email": "2c6594f608aa3d41e98d48846a6328831f7084ad@kernel.org",
+          "key": "Acked-by",
+          "value": "Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@kernel.org>"
+        },
+        {
+          "email": "41bb5944f244750b7cf0394140496972a3f1bee3@intel.com",
+          "key": "Cc",
+          "value": "Adrian Hunter <41bb5944f244750b7cf0394140496972a3f1bee3@intel.com>"
+        },
+        {
+          "email": "b80c1600f604d3b0d768f26f90a76757e76005dd@gmail.com",
+          "key": "Cc",
+          "value": "David Ahern <b80c1600f604d3b0d768f26f90a76757e76005dd@gmail.com>"
+        },
+        {
+          "email": "9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@kernel.org",
+          "key": "Cc",
+          "value": "Ingo Molnar <9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@kernel.org>"
+        },
+        {
+          "email": "2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com",
+          "key": "Cc",
+          "value": "Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com>"
+        },
+        {
+          "email": "eee62f459f15dcddf87a8df69e8328e2a2562028@kernel.org",
+          "key": "Cc",
+          "value": "Minchan Kim <eee62f459f15dcddf87a8df69e8328e2a2562028@kernel.org>"
+        },
+        {
+          "email": "1b20bcb62cf1b100c528e605608922000dc2fc80@lge.com",
+          "key": "Cc",
+          "value": "Namhyung Kim <1b20bcb62cf1b100c528e605608922000dc2fc80@lge.com>"
+        },
+        {
+          "email": "19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org",
+          "key": "Cc",
+          "value": "Paul Mackerras <19a0ba370c443ba08d20b5061586430ab449ee8c@samba.org>"
+        },
+        {
+          "email": "645ca7d3a8d3d4f60557176cd361ea8351edc32b@chello.nl",
+          "key": "Cc",
+          "value": "Peter Zijlstra <645ca7d3a8d3d4f60557176cd361ea8351edc32b@chello.nl>"
+        },
+        {
+          "email": "23050aa336dacae597be4ad36e3ddb5d17f5ba01@kernel.org",
+          "key": "Link",
+          "value": "23050aa336dacae597be4ad36e3ddb5d17f5ba01@kernel.org"
+        },
+        {
+          "email": "293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com",
+          "key": "Signed-off-by",
+          "value": "Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>"
+        }
+      ],
+      "tree": "d7bc1f70f062173325ec22b86ecaa7e0a446469c"
+    },
+    {
+      "author": {
+        "date": 1399558825000000,
+        "email": "38814a9eb01a0a5ca268e1b57cf6c71c39ca3e01@fluxbb.org",
+        "name": "Quy Ton",
+        "time_sec": 1399558825,
+        "tz_offset": -420
+      },
+      "commit": "5f6304bd65e01320ca93f80445d978ca37f59a01",
+      "committer": {
+        "date": 1399558825000000,
+        "email": "38814a9eb01a0a5ca268e1b57cf6c71c39ca3e01@fluxbb.org",
+        "name": "Quy Ton",
+        "time_sec": 1399558825,
+        "tz_offset": -420
+      },
+      "difference": [
+        {
+          "new_mode": 33188,
+          "new_path": "docs/_includes/nav/css.html",
+          "new_sha1": "5a8d86368da06d136b2ccc9080aed2cb49bf3ef5",
+          "old_mode": 33188,
+          "old_path": "docs/_includes/nav/css.html",
+          "old_sha1": "f2b1b54204dba1cb91d0aed6ee441ec151729d10"
+        }
+      ],
+      "difference_truncated": null,
+      "encoding": null,
+      "message": "Remove outdated rtl nav links\n",
+      "parent": [
+        "6a803ad77794a25dd8e0222619be3dac27b2c8ea"
+      ],
+      "repo_name": "twbs/bootstrap",
+      "subject": "Remove outdated rtl nav links",
+      "trailer": [
+        {}
+      ],
+      "tree": "13372415c18b6d25704cb6e3a4055a8f043f831a"
+    },
+    {
+      "author": {
+        "date": 1449502238000000,
+        "email": "f60a3d4b180725ab11fd137ffa53f5ae9a69db9a@linaro.org",
+        "name": "Eric Auger",
+        "time_sec": 1449502238,
+        "tz_offset": 0
+      },
+      "commit": "90eee56c5f9081686035972dfcddfd6c85cafdf9",
+      "committer": {
+        "date": 1463751589000000,
+        "email": "39e5ecfe2ecc327c3e39af72d8d83d1bd0709aad@linaro.org",
+        "name": "Christoffer Dall",
+        "time_sec": 1463751589,
+        "tz_offset": 120
+      },
+      "difference": [
+        {
+          "new_mode": 33188,
+          "new_path": "include/kvm/vgic/vgic.h",
+          "new_sha1": "f6632880870f29ef466dedbcbc679d2a01a27a25",
+          "old_mode": 33188,
+          "old_path": "include/kvm/vgic/vgic.h",
+          "old_sha1": "9506267498e5be2f1b7dfa425ca43deaaebf2f40"
+        },
+        {
+          "new_mode": 33188,
+          "new_path": "virt/kvm/arm/vgic/vgic.c",
+          "new_sha1": "7e010087224c35d06c8394b23bfdfe3e772cebe1",
+          "old_mode": 33188,
+          "old_path": "virt/kvm/arm/vgic/vgic.c",
+          "old_sha1": "0bf0d20600532cee3e635749fae5b09955f0c4d5"
+        }
+      ],
+      "difference_truncated": null,
+      "encoding": null,
+      "message": "KVM: arm/arm64: vgic-new: Implement kvm_vgic_vcpu_pending_irq\n\nTell KVM whether a particular VCPU has an IRQ that needs handling\nin the guest. This is used to decide whether a VCPU is runnable.\n\nSigned-off-by: Eric Auger <f60a3d4b180725ab11fd137ffa53f5ae9a69db9a@linaro.org>\nSigned-off-by: Andre Przywara <94eb15b8f54b8e37c3f8d338296201be47dc5c3e@arm.com>\nReviewed-by: Christoffer Dall <39e5ecfe2ecc327c3e39af72d8d83d1bd0709aad@linaro.org>\nReviewed-by: Marc Zyngier <a16cc0c82647c52d401177f8e50567df5499e36c@arm.com>\n",
+      "parent": [
+        "59529f69f5048e50dcde3434661981c01f8208b4"
+      ],
+      "repo_name": "torvalds/linux",
+      "subject": "KVM: arm/arm64: vgic-new: Implement kvm_vgic_vcpu_pending_irq",
+      "trailer": [
+        {
+          "email": "f60a3d4b180725ab11fd137ffa53f5ae9a69db9a@linaro.org",
+          "key": "Signed-off-by",
+          "value": "Eric Auger <f60a3d4b180725ab11fd137ffa53f5ae9a69db9a@linaro.org>"
+        },
+        {
+          "email": "94eb15b8f54b8e37c3f8d338296201be47dc5c3e@arm.com",
+          "key": "Signed-off-by",
+          "value": "Andre Przywara <94eb15b8f54b8e37c3f8d338296201be47dc5c3e@arm.com>"
+        },
+        {
+          "email": "39e5ecfe2ecc327c3e39af72d8d83d1bd0709aad@linaro.org",
+          "key": "Reviewed-by",
+          "value": "Christoffer Dall <39e5ecfe2ecc327c3e39af72d8d83d1bd0709aad@linaro.org>"
+        },
+        {
+          "email": "a16cc0c82647c52d401177f8e50567df5499e36c@arm.com",
+          "key": "Reviewed-by",
+          "value": "Marc Zyngier <a16cc0c82647c52d401177f8e50567df5499e36c@arm.com>"
+        }
+      ],
+      "tree": "aaab7b44a2246a15b18cbb36da10395baa9ec467"
+    }
+  ]
+}

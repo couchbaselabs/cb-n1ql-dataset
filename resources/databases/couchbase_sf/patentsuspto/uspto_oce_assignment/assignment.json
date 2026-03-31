@@ -1,0 +1,304 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`convey_text` = \"ASSIGNMENT OF ASSIGNORS INTERES...\", `file_id` = \"1\", `purge_in` = \"N\"",
+        "properties": {
+          "caddress_1": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1825 K STREET NW",
+              "BETHPAGE, NY. 11714",
+              "HUNTSVILLE, TEX.",
+              "WASHINGTON, D.C. 20006",
+              "WASHINGTON, D.C. 20546"
+            ],
+            "type": "string"
+          },
+          "caddress_2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "caddress_3": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "WASHINGTON, DC 20006"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "caddress_4": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "cname": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GRUMMAN AEROSPACE CORPORATION",
+              "MCMURRY/HUGHES, INC.,",
+              "NATIONAL AERONAUTICS AND SPACE...",
+              "STAAS AND HALSEY",
+              "WENDEROTH, LIND & PONACK"
+            ],
+            "type": "string"
+          },
+          "convey_text": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ASSIGNMENT OF ASSIGNORS INTERE..."
+            ],
+            "type": "string"
+          },
+          "file_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1"
+            ],
+            "type": "string"
+          },
+          "frame_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "430",
+              "520",
+              "653",
+              "702",
+              "797"
+            ],
+            "type": "string"
+          },
+          "last_update_dt": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2002-01-18",
+              "2008-08-29",
+              "2008-12-15",
+              "2010-04-08",
+              "2010-04-15"
+            ],
+            "type": "string"
+          },
+          "page_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "2",
+              "3"
+            ],
+            "type": "string"
+          },
+          "purge_in": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N"
+            ],
+            "type": "string"
+          },
+          "record_dt": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1981-06-18",
+              "1982-08-23",
+              "1985-09-24",
+              "1987-03-03",
+              "1987-10-09"
+            ],
+            "type": "string"
+          },
+          "reel_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3862",
+              "4038",
+              "4462",
+              "4670",
+              "4779"
+            ],
+            "type": "string"
+          },
+          "rf_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "38620702",
+              "40380520",
+              "44620430",
+              "46700797",
+              "47790653"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "assignment::0",
+                  "assignment::1",
+                  "assignment::2",
+                  "assignment::3",
+                  "assignment::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "assignment::0"
+              },
+              {
+                "id": "assignment::1"
+              },
+              {
+                "id": "assignment::2"
+              },
+              {
+                "id": "assignment::3"
+              },
+              {
+                "id": "assignment::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "caddress_1": "WASHINGTON, D.C. 20546",
+      "caddress_2": null,
+      "caddress_3": null,
+      "caddress_4": null,
+      "cname": "NATIONAL AERONAUTICS AND SPACE ADMIN.",
+      "convey_text": "ASSIGNMENT OF ASSIGNORS INTEREST.",
+      "file_id": "1",
+      "frame_no": "430",
+      "last_update_dt": "2002-01-18",
+      "page_count": "2",
+      "purge_in": "N",
+      "record_dt": "1985-09-24",
+      "reel_no": "4462",
+      "rf_id": "44620430"
+    },
+    {
+      "caddress_1": "BETHPAGE, NY. 11714",
+      "caddress_2": null,
+      "caddress_3": null,
+      "caddress_4": null,
+      "cname": "GRUMMAN AEROSPACE CORPORATION",
+      "convey_text": "ASSIGNMENT OF ASSIGNORS INTEREST.",
+      "file_id": "1",
+      "frame_no": "520",
+      "last_update_dt": "2008-12-15",
+      "page_count": "2",
+      "purge_in": "N",
+      "record_dt": "1982-08-23",
+      "reel_no": "4038",
+      "rf_id": "40380520"
+    },
+    {
+      "caddress_1": "HUNTSVILLE, TEX.",
+      "caddress_2": null,
+      "caddress_3": null,
+      "caddress_4": null,
+      "cname": "MCMURRY/HUGHES, INC.,",
+      "convey_text": "ASSIGNMENT OF ASSIGNORS INTEREST.",
+      "file_id": "1",
+      "frame_no": "702",
+      "last_update_dt": "2008-08-29",
+      "page_count": "1",
+      "purge_in": "N",
+      "record_dt": "1981-06-18",
+      "reel_no": "3862",
+      "rf_id": "38620702"
+    },
+    {
+      "caddress_1": "1825 K STREET NW",
+      "caddress_2": null,
+      "caddress_3": "WASHINGTON, DC 20006",
+      "caddress_4": null,
+      "cname": "STAAS AND HALSEY",
+      "convey_text": "ASSIGNMENT OF ASSIGNORS INTEREST.",
+      "file_id": "1",
+      "frame_no": "653",
+      "last_update_dt": "2010-04-08",
+      "page_count": "1",
+      "purge_in": "N",
+      "record_dt": "1987-10-09",
+      "reel_no": "4779",
+      "rf_id": "47790653"
+    },
+    {
+      "caddress_1": "WASHINGTON, D.C. 20006",
+      "caddress_2": null,
+      "caddress_3": null,
+      "caddress_4": null,
+      "cname": "WENDEROTH, LIND & PONACK",
+      "convey_text": "ASSIGNMENT OF ASSIGNORS INTEREST.",
+      "file_id": "1",
+      "frame_no": "797",
+      "last_update_dt": "2010-04-15",
+      "page_count": "3",
+      "purge_in": "N",
+      "record_dt": "1987-03-03",
+      "reel_no": "4670",
+      "rf_id": "46700797"
+    }
+  ]
+}

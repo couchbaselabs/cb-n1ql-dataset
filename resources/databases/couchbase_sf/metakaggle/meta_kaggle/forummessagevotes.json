@@ -1,0 +1,168 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ForumMessageId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              64863,
+              417854,
+              435204,
+              1610205,
+              2623797
+            ],
+            "type": "number"
+          },
+          "FromUserId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              90967,
+              185772,
+              803728,
+              2603247,
+              9101537
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              128408,
+              531035,
+              565979,
+              2448348,
+              3982594
+            ],
+            "type": "number"
+          },
+          "ToUserId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              78307,
+              681829,
+              761268,
+              1356917,
+              1408736
+            ],
+            "type": "number"
+          },
+          "VoteDate": {
+            "#docs": [
+              47,
+              953
+            ],
+            "%docs": [
+              4.69,
+              95.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2016-07-21",
+                "2018-11-22",
+                "2019-01-01",
+                "2021-12-07",
+                "2024-02-09"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "forummessagevotes::1099639",
+                  "forummessagevotes::154570",
+                  "forummessagevotes::1703710",
+                  "forummessagevotes::2088444",
+                  "forummessagevotes::2107368"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "forummessagevotes::1099639"
+              },
+              {
+                "id": "forummessagevotes::154570"
+              },
+              {
+                "id": "forummessagevotes::1703710"
+              },
+              {
+                "id": "forummessagevotes::2088444"
+              },
+              {
+                "id": "forummessagevotes::2107368"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ForumMessageId": 2529095,
+      "FromUserId": 1506047,
+      "Id": 3805858,
+      "ToUserId": 10207857,
+      "VoteDate": "2023-11-18"
+    },
+    {
+      "ForumMessageId": 2529097,
+      "FromUserId": 317080,
+      "Id": 3804262,
+      "ToUserId": 6061339,
+      "VoteDate": "2023-11-18"
+    },
+    {
+      "ForumMessageId": 2529098,
+      "FromUserId": 13192197,
+      "Id": 3811284,
+      "ToUserId": 6733471,
+      "VoteDate": "2023-11-21"
+    },
+    {
+      "ForumMessageId": 2529120,
+      "FromUserId": 857020,
+      "Id": 3875455,
+      "ToUserId": 1884604,
+      "VoteDate": "2023-12-26"
+    },
+    {
+      "ForumMessageId": 2529126,
+      "FromUserId": 1069377,
+      "Id": 3804389,
+      "ToUserId": 10671485,
+      "VoteDate": "2023-11-18"
+    }
+  ]
+}

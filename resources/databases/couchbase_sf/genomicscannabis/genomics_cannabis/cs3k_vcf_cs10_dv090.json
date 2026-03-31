@@ -1,0 +1,681 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`_part` = 3, `reference_name` = \"chr2\"",
+        "properties": {
+          "_part": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3
+            ],
+            "type": "number"
+          },
+          "alternate_bases": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 5,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "alt": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "A",
+                    "C",
+                    "G",
+                    "T"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "alt": "A"
+                }
+              ],
+              [
+                {
+                  "alt": "C"
+                }
+              ],
+              [
+                {
+                  "alt": "G"
+                }
+              ],
+              [
+                {
+                  "alt": "T"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "call": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 5,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "AD": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 2,
+                  "minItems": 2,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      2,
+                      6
+                    ],
+                    [
+                      5,
+                      6
+                    ],
+                    [
+                      5,
+                      14
+                    ],
+                    [
+                      8,
+                      7
+                    ],
+                    [
+                      18,
+                      18
+                    ]
+                  ],
+                  "type": "array"
+                },
+                "DP": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    10,
+                    11,
+                    15,
+                    28,
+                    37
+                  ],
+                  "type": "number"
+                },
+                "GQ": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    2
+                  ],
+                  "type": "number"
+                },
+                "PL": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 3,
+                  "minItems": 3,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      0,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0,
+                      1
+                    ]
+                  ],
+                  "type": "array"
+                },
+                "VAF": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 1,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      0.466667
+                    ],
+                    [
+                      0.486486
+                    ],
+                    [
+                      0.5
+                    ],
+                    [
+                      0.545455
+                    ],
+                    [
+                      0.6
+                    ]
+                  ],
+                  "type": "array"
+                },
+                "genotype": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 2,
+                  "minItems": 2,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      1,
+                      1
+                    ]
+                  ],
+                  "type": "array"
+                },
+                "name": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "RSP10103",
+                    "SRS1598707",
+                    "SRS266493",
+                    "SRS266713"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "AD": [
+                    2,
+                    6
+                  ],
+                  "DP": 10,
+                  "GQ": 2,
+                  "PL": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "VAF": [
+                    0.6
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "SRS1598707"
+                }
+              ],
+              [
+                {
+                  "AD": [
+                    5,
+                    6
+                  ],
+                  "DP": 11,
+                  "GQ": 2,
+                  "PL": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "VAF": [
+                    0.545455
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "SRS266713"
+                }
+              ],
+              [
+                {
+                  "AD": [
+                    5,
+                    14
+                  ],
+                  "DP": 28,
+                  "GQ": 2,
+                  "PL": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "VAF": [
+                    0.5
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "SRS266493"
+                }
+              ],
+              [
+                {
+                  "AD": [
+                    8,
+                    7
+                  ],
+                  "DP": 15,
+                  "GQ": 2,
+                  "PL": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "VAF": [
+                    0.466667
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "SRS266713"
+                }
+              ],
+              [
+                {
+                  "AD": [
+                    18,
+                    18
+                  ],
+                  "DP": 37,
+                  "GQ": 2,
+                  "PL": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "VAF": [
+                    0.486486
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "RSP10103"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "end_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6373054,
+              14895496,
+              83762669,
+              86123823,
+              89838723
+            ],
+            "type": "number"
+          },
+          "filter": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "PASS"
+              ]
+            ],
+            "type": "array"
+          },
+          "geometry": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AQIAAAACAAAA1V5E2zHV9z8AAAAAAA...",
+              "AQIAAAACAAAAI+jDDr73IUAAAAAAAA...",
+              "AQIAAAACAAAAIiTBCqbAIEAAAAAAAA...",
+              "AQIAAAACAAAAPuTSncxk5D8AAAAAAA...",
+              "AQIAAAACAAAAxU+IJYo5IUAAAAAAAA..."
+            ],
+            "type": "string"
+          },
+          "names": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "quality": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4.5,
+              4.6,
+              4.9,
+              5.3
+            ],
+            "type": "number"
+          },
+          "reference_bases": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AATATATT",
+              "C",
+              "G",
+              "GA",
+              "GCTA"
+            ],
+            "type": "string"
+          },
+          "reference_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "chr2"
+            ],
+            "type": "string"
+          },
+          "start_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6373046,
+              14895495,
+              83762668,
+              86123821,
+              89838719
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cs3k_vcf_cs10_dv090::0",
+                  "cs3k_vcf_cs10_dv090::1",
+                  "cs3k_vcf_cs10_dv090::2",
+                  "cs3k_vcf_cs10_dv090::3",
+                  "cs3k_vcf_cs10_dv090::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cs3k_vcf_cs10_dv090::0"
+              },
+              {
+                "id": "cs3k_vcf_cs10_dv090::1"
+              },
+              {
+                "id": "cs3k_vcf_cs10_dv090::2"
+              },
+              {
+                "id": "cs3k_vcf_cs10_dv090::3"
+              },
+              {
+                "id": "cs3k_vcf_cs10_dv090::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "_part": 3,
+      "alternate_bases": [
+        {
+          "alt": "A"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            8,
+            7
+          ],
+          "DP": 15,
+          "GQ": 2,
+          "PL": [
+            0,
+            0,
+            1
+          ],
+          "VAF": [
+            0.466667
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "SRS266713"
+        }
+      ],
+      "end_position": 6373054,
+      "filter": [
+        "PASS"
+      ],
+      "geometry": "AQIAAAACAAAAPuTSncxk5D8AAAAAAAAAAOoNUkvOZOQ/AAAAAAAAAAA=",
+      "names": [],
+      "quality": 4.6,
+      "reference_bases": "AATATATT",
+      "reference_name": "chr2",
+      "start_position": 6373046
+    },
+    {
+      "_part": 3,
+      "alternate_bases": [
+        {
+          "alt": "T"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            2,
+            6
+          ],
+          "DP": 10,
+          "GQ": 2,
+          "PL": [
+            0,
+            0,
+            0
+          ],
+          "VAF": [
+            0.6
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "SRS1598707"
+        }
+      ],
+      "end_position": 83762669,
+      "filter": [
+        "PASS"
+      ],
+      "geometry": "AQIAAAACAAAAIiTBCqbAIEAAAAAAAAAAAHUiHA6mwCBAAAAAAAAAAAA=",
+      "names": [],
+      "quality": 4.9,
+      "reference_bases": "C",
+      "reference_name": "chr2",
+      "start_position": 83762668
+    },
+    {
+      "_part": 3,
+      "alternate_bases": [
+        {
+          "alt": "C"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            5,
+            6
+          ],
+          "DP": 11,
+          "GQ": 2,
+          "PL": [
+            0,
+            0,
+            0
+          ],
+          "VAF": [
+            0.545455
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "SRS266713"
+        }
+      ],
+      "end_position": 14895496,
+      "filter": [
+        "PASS"
+      ],
+      "geometry": "AQIAAAACAAAA1V5E2zHV9z8AAAAAAAAAAG9RHPYx1fc/AAAAAAAAAAA=",
+      "names": [],
+      "quality": 4.9,
+      "reference_bases": "G",
+      "reference_name": "chr2",
+      "start_position": 14895495
+    },
+    {
+      "_part": 3,
+      "alternate_bases": [
+        {
+          "alt": "G"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            5,
+            14
+          ],
+          "DP": 28,
+          "GQ": 2,
+          "PL": [
+            0,
+            0,
+            0
+          ],
+          "VAF": [
+            0.5
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "SRS266493"
+        }
+      ],
+      "end_position": 86123823,
+      "filter": [
+        "PASS"
+      ],
+      "geometry": "AQIAAAACAAAAxU+IJYo5IUAAAAAAAAAAAG1MPiyKOSFAAAAAAAAAAAA=",
+      "names": [],
+      "quality": 5.3,
+      "reference_bases": "GA",
+      "reference_name": "chr2",
+      "start_position": 86123821
+    },
+    {
+      "_part": 3,
+      "alternate_bases": [
+        {
+          "alt": "G"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            18,
+            18
+          ],
+          "DP": 37,
+          "GQ": 2,
+          "PL": [
+            0,
+            0,
+            0
+          ],
+          "VAF": [
+            0.486486
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "RSP10103"
+        }
+      ],
+      "end_position": 89838723,
+      "filter": [
+        "PASS"
+      ],
+      "geometry": "AQIAAAACAAAAI+jDDr73IUAAAAAAAAAAAG/hLxy+9yFAAAAAAAAAAAA=",
+      "names": [],
+      "quality": 4.5,
+      "reference_bases": "GCTA",
+      "reference_name": "chr2",
+      "start_position": 89838719
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`ChillerSensorNumber` = 1, `CompressedSensorData` = \"NULL\", `IsCompressed` = 0, `Temperature` = 3, `VehicleRegistration` = \"WWI-321-A\"",
+        "properties": {
+          "ChillerSensorNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "CompressedSensorData": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "FullSensorData": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "{\"Recordings\": [{\"type\":\"Featu...",
+              "{\"Recordings\": [{\"type\":\"Featu...",
+              "{\"Recordings\": [{\"type\":\"Featu...",
+              "{\"Recordings\": [{\"type\":\"Featu...",
+              "{\"Recordings\": [{\"type\":\"Featu..."
+            ],
+            "type": "string"
+          },
+          "IsCompressed": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "RecordedWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1462960351000000,
+              1463151383000000,
+              1463488650000000,
+              1464165910000000,
+              1464689767000000
+            ],
+            "type": "number"
+          },
+          "Temperature": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3
+            ],
+            "type": "number"
+          },
+          "VehicleRegistration": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WWI-321-A"
+            ],
+            "type": "string"
+          },
+          "VehicleTemperatureID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              56863,
+              57993,
+              59671,
+              63011,
+              65731
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_vehicletemperatures:...",
+                  "warehouse_vehicletemperatures:...",
+                  "warehouse_vehicletemperatures:...",
+                  "warehouse_vehicletemperatures:...",
+                  "warehouse_vehicletemperatures:..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_vehicletemperatures::0"
+              },
+              {
+                "id": "warehouse_vehicletemperatures::1"
+              },
+              {
+                "id": "warehouse_vehicletemperatures::2"
+              },
+              {
+                "id": "warehouse_vehicletemperatures::3"
+              },
+              {
+                "id": "warehouse_vehicletemperatures::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ChillerSensorNumber": 1,
+      "CompressedSensorData": "NULL",
+      "FullSensorData": "{\"Recordings\": [{\"type\":\"Feature\", \"geometry\": {\"type\":\"Point\", \"coordinates\":[-118.8449588,48.4987197] }, \"properties\":{\"rego\":\"WWI-321-A\",\"sensor\":\"1,\"when\":\"2016-05-13T14:56:23\",\"temp\":3.00}} ]",
+      "IsCompressed": 0,
+      "RecordedWhen": 1463151383000000,
+      "Temperature": 3,
+      "VehicleRegistration": "WWI-321-A",
+      "VehicleTemperatureID": 57993
+    },
+    {
+      "ChillerSensorNumber": 1,
+      "CompressedSensorData": "NULL",
+      "FullSensorData": "{\"Recordings\": [{\"type\":\"Feature\", \"geometry\": {\"type\":\"Point\", \"coordinates\":[-85.3249088,46.5837717] }, \"properties\":{\"rego\":\"WWI-321-A\",\"sensor\":\"1,\"when\":\"2016-05-31T10:16:07\",\"temp\":3.00}} ]",
+      "IsCompressed": 0,
+      "RecordedWhen": 1464689767000000,
+      "Temperature": 3,
+      "VehicleRegistration": "WWI-321-A",
+      "VehicleTemperatureID": 65731
+    },
+    {
+      "ChillerSensorNumber": 1,
+      "CompressedSensorData": "NULL",
+      "FullSensorData": "{\"Recordings\": [{\"type\":\"Feature\", \"geometry\": {\"type\":\"Point\", \"coordinates\":[-121.1070531,50.7015841] }, \"properties\":{\"rego\":\"WWI-321-A\",\"sensor\":\"1,\"when\":\"2016-05-11T09:52:31\",\"temp\":3.00}} ]",
+      "IsCompressed": 0,
+      "RecordedWhen": 1462960351000000,
+      "Temperature": 3,
+      "VehicleRegistration": "WWI-321-A",
+      "VehicleTemperatureID": 56863
+    },
+    {
+      "ChillerSensorNumber": 1,
+      "CompressedSensorData": "NULL",
+      "FullSensorData": "{\"Recordings\": [{\"type\":\"Feature\", \"geometry\": {\"type\":\"Point\", \"coordinates\":[-121.0988238,48.1889402] }, \"properties\":{\"rego\":\"WWI-321-A\",\"sensor\":\"1,\"when\":\"2016-05-17T12:37:30\",\"temp\":3.00}} ]",
+      "IsCompressed": 0,
+      "RecordedWhen": 1463488650000000,
+      "Temperature": 3,
+      "VehicleRegistration": "WWI-321-A",
+      "VehicleTemperatureID": 59671
+    },
+    {
+      "ChillerSensorNumber": 1,
+      "CompressedSensorData": "NULL",
+      "FullSensorData": "{\"Recordings\": [{\"type\":\"Feature\", \"geometry\": {\"type\":\"Point\", \"coordinates\":[-117.6318604,63.2988934] }, \"properties\":{\"rego\":\"WWI-321-A\",\"sensor\":\"1,\"when\":\"2016-05-25T08:45:10\",\"temp\":3.00}} ]",
+      "IsCompressed": 0,
+      "RecordedWhen": 1464165910000000,
+      "Temperature": 3,
+      "VehicleRegistration": "WWI-321-A",
+      "VehicleTemperatureID": 63011
+    }
+  ]
+}

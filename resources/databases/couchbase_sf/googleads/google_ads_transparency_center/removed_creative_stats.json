@@ -1,0 +1,2561 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "audience_selection_approach_info": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "contextual_signals": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED"
+                ],
+                "type": "string"
+              },
+              "customer_lists": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_EXCLUDED",
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              },
+              "demographic_info": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              },
+              "geo_location": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_EXCLUDED",
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              },
+              "topics_of_interest": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_EXCLUDED",
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "contextual_signals": "CRITERIA_INCLUDED",
+                "customer_lists": "CRITERIA_INCLUDED",
+                "demographic_info": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "geo_location": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "topics_of_interest": "CRITERIA_UNUSED"
+              },
+              {
+                "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "customer_lists": "CRITERIA_UNUSED",
+                "demographic_info": "CRITERIA_INCLUDED",
+                "geo_location": "CRITERIA_INCLUDED",
+                "topics_of_interest": "CRITERIA_UNUSED"
+              },
+              {
+                "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "customer_lists": "CRITERIA_UNUSED",
+                "demographic_info": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "geo_location": "CRITERIA_EXCLUDED",
+                "topics_of_interest": "CRITERIA_UNUSED"
+              },
+              {
+                "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "customer_lists": "CRITERIA_UNUSED",
+                "demographic_info": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "geo_location": "CRITERIA_INCLUDED",
+                "topics_of_interest": "CRITERIA_INCLUDED"
+              },
+              {
+                "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "customer_lists": "CRITERIA_UNUSED",
+                "demographic_info": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "geo_location": "CRITERIA_INCLUDED",
+                "topics_of_interest": "CRITERIA_UNUSED"
+              }
+            ],
+            "type": "object"
+          },
+          "creative_page_url": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "https://adstransparency.google...",
+              "https://adstransparency.google...",
+              "https://adstransparency.google...",
+              "https://adstransparency.google...",
+              "https://adstransparency.google..."
+            ],
+            "type": "string"
+          },
+          "disapproval": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 1222,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "decision_type": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Google investigation",
+                    "Legal notice"
+                  ],
+                  "type": "string"
+                },
+                "removal_location": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 36,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "CZ"
+                    ],
+                    [
+                      "DE"
+                    ],
+                    [
+                      "GLOBAL"
+                    ],
+                    [
+                      "IT"
+                    ],
+                    [
+                      "PL"
+                    ]
+                  ],
+                  "type": "array"
+                },
+                "removal_reason": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Abusing the ad network",
+                    "Account suspension",
+                    "Copyrights",
+                    "Editorial",
+                    "Sexual content"
+                  ],
+                  "type": "string"
+                },
+                "use_of_automated_means": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    false,
+                    true
+                  ],
+                  "type": "boolean"
+                },
+                "violation_category": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "EDITORIAL_AND_TECHNICAL",
+                    "PROHIBITED_CONTENT",
+                    "PROHIBITED_PRACTICES",
+                    "RESTRICTED_CONTENT_AND_FEATURE..."
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 7,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "decision_type": "Google investigation",
+                  "removal_location": [
+                    "GLOBAL"
+                  ],
+                  "removal_reason": "Abusing the ad network",
+                  "use_of_automated_means": false,
+                  "violation_category": "PROHIBITED_PRACTICES"
+                }
+              ],
+              [
+                {
+                  "decision_type": "Google investigation",
+                  "removal_location": [
+                    "GLOBAL"
+                  ],
+                  "removal_reason": "Account suspension",
+                  "use_of_automated_means": false,
+                  "violation_category": "PROHIBITED_PRACTICES"
+                }
+              ],
+              [
+                {
+                  "decision_type": "Google investigation",
+                  "removal_location": [
+                    "GLOBAL"
+                  ],
+                  "removal_reason": "Account suspension",
+                  "use_of_automated_means": true,
+                  "violation_category": "PROHIBITED_PRACTICES"
+                }
+              ],
+              [
+                {
+                  "decision_type": "Google investigation",
+                  "removal_location": [
+                    "GLOBAL"
+                  ],
+                  "removal_reason": "Editorial",
+                  "use_of_automated_means": true,
+                  "violation_category": "EDITORIAL_AND_TECHNICAL"
+                }
+              ],
+              [
+                {
+                  "decision_type": "Google investigation",
+                  "removal_location": [
+                    "GLOBAL"
+                  ],
+                  "removal_reason": "Sexual content",
+                  "use_of_automated_means": false,
+                  "violation_category": "RESTRICTED_CONTENT_AND_FEATURES"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "region_stats": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": [
+              {
+                "#docs": 339,
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "Flavor": "",
+                "properties": {
+                  "first_shown": {
+                    "#docs": 339,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "type": "string"
+                  },
+                  "last_shown": {
+                    "#docs": 339,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "type": "string"
+                  },
+                  "region_code": {
+                    "#docs": 339,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "type": "string"
+                  },
+                  "times_shown_availability_date": {
+                    "#docs": 339,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              {
+                "#docs": 4174,
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "Flavor": "",
+                "properties": {
+                  "first_shown": {
+                    "#docs": 4174,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-03-01",
+                      "2023-03-04",
+                      "2023-11-09",
+                      "2023-11-12",
+                      "2024-03-06"
+                    ],
+                    "type": "string"
+                  },
+                  "last_shown": {
+                    "#docs": 4174,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-07-23",
+                      "2023-07-31",
+                      "2023-11-13",
+                      "2023-11-14",
+                      "2024-03-07"
+                    ],
+                    "type": "string"
+                  },
+                  "region_code": {
+                    "#docs": 4174,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "DE",
+                      "HU",
+                      "NO",
+                      "PL",
+                      "RO"
+                    ],
+                    "type": "string"
+                  },
+                  "surface_serving_stats": {
+                    "#docs": 3318,
+                    "%docs": 79.49,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "surface_serving_stats": {
+                        "#docs": 3318,
+                        "%docs": 100,
+                        "items": {
+                          "#docs": 16590,
+                          "$schema": "http://json-schema.org/draft-06/schema",
+                          "properties": {
+                            "surface": {
+                              "nestingDepth": 5,
+                              "type": "string"
+                            },
+                            "times_shown_lower_bound": {
+                              "nestingDepth": 5,
+                              "type": "number"
+                            },
+                            "times_shown_upper_bound": {
+                              "nestingDepth": 5,
+                              "type": "number"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "maxItems": 5,
+                        "minItems": 5,
+                        "nestingDepth": 3,
+                        "sampleSize": 0,
+                        "type": "array"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "times_shown_end_date": {
+                    "#docs": 4174,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-07-23",
+                      "2023-07-31",
+                      "2023-11-13",
+                      "2023-11-14",
+                      "2024-03-07"
+                    ],
+                    "type": "string"
+                  },
+                  "times_shown_lower_bound": {
+                    "#docs": 4174,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      0,
+                      10000,
+                      30000
+                    ],
+                    "type": "number"
+                  },
+                  "times_shown_start_date": {
+                    "#docs": 4174,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-03-01",
+                      "2023-03-04",
+                      "2023-11-09",
+                      "2023-11-12",
+                      "2024-03-06"
+                    ],
+                    "type": "string"
+                  },
+                  "times_shown_upper_bound": {
+                    "#docs": 4174,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      1000,
+                      15000,
+                      35000
+                    ],
+                    "type": "number"
+                  }
+                },
+                "type": "object"
+              }
+            ],
+            "maxItems": 37,
+            "minItems": 2,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "AT",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "BE",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "BG",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "CZ",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "DE",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "DK",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "EE",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "EEA",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "ES",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "FI",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "FR",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "GR",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "HR",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "HU",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "IE",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "IT",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "LT",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "LV",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "NL",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "NO",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "PL",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "PT",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "RO",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "SE",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "SI",
+                  "times_shown_availability_date": "2024-10-16"
+                },
+                {
+                  "first_shown": "2024-07-18",
+                  "last_shown": "2024-07-20",
+                  "region_code": "SK",
+                  "times_shown_availability_date": "2024-10-16"
+                }
+              ],
+              [
+                {
+                  "first_shown": "2023-03-30",
+                  "last_shown": "2023-07-24",
+                  "region_code": "AT",
+                  "times_shown_end_date": "2023-07-24",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-03-30",
+                  "times_shown_upper_bound": 1000
+                },
+                {
+                  "first_shown": "2023-03-01",
+                  "last_shown": "2024-03-07",
+                  "region_code": "DE",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-03-07",
+                  "times_shown_lower_bound": 30000,
+                  "times_shown_start_date": "2023-03-01",
+                  "times_shown_upper_bound": 35000
+                },
+                {
+                  "first_shown": "2023-03-01",
+                  "last_shown": "2024-03-07",
+                  "region_code": "EEA",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-03-07",
+                  "times_shown_lower_bound": 35000,
+                  "times_shown_start_date": "2023-03-01",
+                  "times_shown_upper_bound": 40000
+                },
+                {
+                  "first_shown": "2023-03-03",
+                  "last_shown": "2023-07-25",
+                  "region_code": "ES",
+                  "times_shown_end_date": "2023-07-25",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-03-03",
+                  "times_shown_upper_bound": 1000
+                },
+                {
+                  "first_shown": "2023-03-05",
+                  "last_shown": "2023-07-26",
+                  "region_code": "FR",
+                  "times_shown_end_date": "2023-07-26",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-03-05",
+                  "times_shown_upper_bound": 1000
+                },
+                {
+                  "first_shown": "2023-03-26",
+                  "last_shown": "2023-07-26",
+                  "region_code": "GR",
+                  "times_shown_end_date": "2023-07-26",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-03-26",
+                  "times_shown_upper_bound": 1000
+                },
+                {
+                  "first_shown": "2023-03-10",
+                  "last_shown": "2023-07-26",
+                  "region_code": "IT",
+                  "times_shown_end_date": "2023-07-26",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-03-10",
+                  "times_shown_upper_bound": 1000
+                },
+                {
+                  "first_shown": "2023-03-03",
+                  "last_shown": "2023-07-26",
+                  "region_code": "PL",
+                  "times_shown_end_date": "2023-07-26",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-03-03",
+                  "times_shown_upper_bound": 1000
+                }
+              ],
+              [
+                {
+                  "first_shown": "2023-10-16",
+                  "last_shown": "2023-10-16",
+                  "region_code": "EEA",
+                  "times_shown_end_date": "2023-10-16",
+                  "times_shown_lower_bound": 15000,
+                  "times_shown_start_date": "2023-10-16",
+                  "times_shown_upper_bound": 20000
+                },
+                {
+                  "first_shown": "2023-10-16",
+                  "last_shown": "2023-10-16",
+                  "region_code": "SK",
+                  "times_shown_end_date": "2023-10-16",
+                  "times_shown_lower_bound": 15000,
+                  "times_shown_start_date": "2023-10-16",
+                  "times_shown_upper_bound": 20000
+                }
+              ],
+              [
+                {
+                  "first_shown": "2024-04-03",
+                  "last_shown": "2024-05-15",
+                  "region_code": "EEA",
+                  "times_shown_end_date": "2024-05-15",
+                  "times_shown_lower_bound": 1000,
+                  "times_shown_start_date": "2024-04-03",
+                  "times_shown_upper_bound": 2000
+                },
+                {
+                  "first_shown": "2024-04-03",
+                  "last_shown": "2024-05-15",
+                  "region_code": "SK",
+                  "times_shown_end_date": "2024-05-15",
+                  "times_shown_lower_bound": 1000,
+                  "times_shown_start_date": "2024-04-03",
+                  "times_shown_upper_bound": 2000
+                }
+              ],
+              [
+                {
+                  "first_shown": "2023-12-08",
+                  "last_shown": "2023-12-08",
+                  "region_code": "DE",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2023-12-08",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-12-08",
+                  "times_shown_upper_bound": 1000
+                },
+                {
+                  "first_shown": "2023-09-08",
+                  "last_shown": "2024-03-03",
+                  "region_code": "EEA",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 1000,
+                        "times_shown_upper_bound": 2000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-03-03",
+                  "times_shown_lower_bound": 1000,
+                  "times_shown_start_date": "2023-09-08",
+                  "times_shown_upper_bound": 2000
+                },
+                {
+                  "first_shown": "2023-09-08",
+                  "last_shown": "2024-03-03",
+                  "region_code": "ES",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 1000,
+                        "times_shown_upper_bound": 2000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-03-03",
+                  "times_shown_lower_bound": 1000,
+                  "times_shown_start_date": "2023-09-08",
+                  "times_shown_upper_bound": 2000
+                },
+                {
+                  "first_shown": "2023-09-08",
+                  "last_shown": "2024-01-02",
+                  "region_code": "FR",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-01-02",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-09-08",
+                  "times_shown_upper_bound": 1000
+                },
+                {
+                  "first_shown": "2023-09-08",
+                  "last_shown": "2024-01-02",
+                  "region_code": "IT",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-01-02",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-09-08",
+                  "times_shown_upper_bound": 1000
+                },
+                {
+                  "first_shown": "2023-09-08",
+                  "last_shown": "2024-01-02",
+                  "region_code": "PT",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-01-02",
+                  "times_shown_lower_bound": 0,
+                  "times_shown_start_date": "2023-09-08",
+                  "times_shown_upper_bound": 1000
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "removed_creative_stats::1115",
+                  "removed_creative_stats::184",
+                  "removed_creative_stats::2071",
+                  "removed_creative_stats::2288",
+                  "removed_creative_stats::2737"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "removed_creative_stats::1115"
+              },
+              {
+                "id": "removed_creative_stats::184"
+              },
+              {
+                "id": "removed_creative_stats::2071"
+              },
+              {
+                "id": "removed_creative_stats::2288"
+              },
+              {
+                "id": "removed_creative_stats::2737"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_UNUSED",
+        "demographic_info": "CRITERIA_INCLUDED",
+        "geo_location": "CRITERIA_INCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_page_url": "https://adstransparency.google.com/removed/creative/CR17833272076388007937",
+      "disapproval": [
+        {
+          "decision_type": "Google investigation",
+          "removal_location": [
+            "DE",
+            "AT"
+          ],
+          "removal_reason": "Editorial & professional requirements",
+          "use_of_automated_means": false,
+          "violation_category": "EDITORIAL_AND_TECHNICAL"
+        }
+      ],
+      "region_stats": [
+        {
+          "first_shown": "2023-04-13",
+          "last_shown": "2023-12-20",
+          "region_code": "AT",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-12-20",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-04-13",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-04-13",
+          "last_shown": "2023-12-20",
+          "region_code": "DE",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-12-20",
+          "times_shown_lower_bound": 1000,
+          "times_shown_start_date": "2023-04-13",
+          "times_shown_upper_bound": 2000
+        },
+        {
+          "first_shown": "2023-04-13",
+          "last_shown": "2023-12-20",
+          "region_code": "EEA",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-12-20",
+          "times_shown_lower_bound": 1000,
+          "times_shown_start_date": "2023-04-13",
+          "times_shown_upper_bound": 2000
+        }
+      ]
+    },
+    {
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_UNUSED",
+        "demographic_info": "CRITERIA_INCLUDED",
+        "geo_location": "CRITERIA_INCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_page_url": "https://adstransparency.google.com/removed/creative/CR01628636995754393601",
+      "disapproval": [
+        {
+          "decision_type": "Google investigation",
+          "removal_location": [
+            "AT",
+            "DE"
+          ],
+          "removal_reason": "Editorial & professional requirements",
+          "use_of_automated_means": false,
+          "violation_category": "EDITORIAL_AND_TECHNICAL"
+        }
+      ],
+      "region_stats": [
+        {
+          "first_shown": "2023-03-24",
+          "last_shown": "2023-12-14",
+          "region_code": "AT",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-12-14",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-03-24",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-08",
+          "last_shown": "2023-12-14",
+          "region_code": "DE",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-12-14",
+          "times_shown_lower_bound": 3000,
+          "times_shown_start_date": "2023-03-08",
+          "times_shown_upper_bound": 4000
+        },
+        {
+          "first_shown": "2023-03-08",
+          "last_shown": "2023-12-14",
+          "region_code": "EEA",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-12-14",
+          "times_shown_lower_bound": 3000,
+          "times_shown_start_date": "2023-03-08",
+          "times_shown_upper_bound": 4000
+        }
+      ]
+    },
+    {
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_UNUSED",
+        "demographic_info": "CRITERIA_INCLUDED",
+        "geo_location": "CRITERIA_INCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_page_url": "https://adstransparency.google.com/removed/creative/CR11279334226744311809",
+      "disapproval": [
+        {
+          "decision_type": "Google investigation",
+          "removal_location": [
+            "CZ",
+            "GR",
+            "IE",
+            "PT",
+            "SK",
+            "HU",
+            "DE",
+            "NO",
+            "BE",
+            "ES",
+            "NL",
+            "DK",
+            "PL",
+            "RO",
+            "FI",
+            "AT",
+            "SE"
+          ],
+          "removal_reason": "Editorial & professional requirements",
+          "use_of_automated_means": false,
+          "violation_category": "EDITORIAL_AND_TECHNICAL"
+        }
+      ],
+      "region_stats": [
+        {
+          "first_shown": "2024-04-29",
+          "last_shown": "2024-09-26",
+          "region_code": "AT",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-04-29",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-11",
+          "last_shown": "2024-09-26",
+          "region_code": "BE",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-11",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-05",
+          "last_shown": "2024-08-26",
+          "region_code": "CZ",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-05",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-04-29",
+          "last_shown": "2024-09-26",
+          "region_code": "DE",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 5000,
+                "times_shown_upper_bound": 6000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 1000,
+                "times_shown_upper_bound": 2000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 6000,
+          "times_shown_start_date": "2024-04-29",
+          "times_shown_upper_bound": 7000
+        },
+        {
+          "first_shown": "2024-05-06",
+          "last_shown": "2024-09-26",
+          "region_code": "DK",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-06",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-04-29",
+          "last_shown": "2024-09-26",
+          "region_code": "EEA",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 5000,
+                "times_shown_upper_bound": 6000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 1000,
+                "times_shown_upper_bound": 2000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 7000,
+          "times_shown_start_date": "2024-04-29",
+          "times_shown_upper_bound": 8000
+        },
+        {
+          "first_shown": "2024-05-05",
+          "last_shown": "2024-09-26",
+          "region_code": "ES",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-05",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-24",
+          "last_shown": "2024-09-26",
+          "region_code": "FI",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-24",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-04-29",
+          "last_shown": "2024-09-26",
+          "region_code": "GR",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-04-29",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-08",
+          "last_shown": "2024-09-26",
+          "region_code": "HU",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-08",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-06-10",
+          "last_shown": "2024-09-26",
+          "region_code": "IE",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-06-10",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-05",
+          "last_shown": "2024-09-26",
+          "region_code": "NL",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-05",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-21",
+          "last_shown": "2024-09-26",
+          "region_code": "NO",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-21",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-06",
+          "last_shown": "2024-09-26",
+          "region_code": "PL",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-06",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-29",
+          "last_shown": "2024-09-22",
+          "region_code": "PT",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-29",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-21",
+          "last_shown": "2024-09-26",
+          "region_code": "RO",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-21",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-14",
+          "last_shown": "2024-09-26",
+          "region_code": "SE",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-14",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2024-05-30",
+          "last_shown": "2024-09-26",
+          "region_code": "SK",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2024-05-30",
+          "times_shown_upper_bound": 1000
+        }
+      ]
+    },
+    {
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_UNUSED",
+        "demographic_info": "CRITERIA_INCLUDED",
+        "geo_location": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_page_url": "https://adstransparency.google.com/removed/creative/CR04071890577296195585",
+      "disapproval": [
+        {
+          "decision_type": "Google investigation",
+          "removal_location": [
+            "GLOBAL"
+          ],
+          "removal_reason": "Trademarks",
+          "use_of_automated_means": false,
+          "violation_category": "RESTRICTED_CONTENT_AND_FEATURES"
+        }
+      ],
+      "region_stats": [
+        {
+          "first_shown": "2023-03-06",
+          "last_shown": "2024-01-18",
+          "region_code": "AT",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-01-18",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-03-06",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-06",
+          "last_shown": "2024-01-17",
+          "region_code": "CZ",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-01-17",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-03-06",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-07",
+          "last_shown": "2024-01-09",
+          "region_code": "DE",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-01-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-03-07",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-06",
+          "last_shown": "2024-01-18",
+          "region_code": "EEA",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 7000,
+                "times_shown_upper_bound": 8000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-01-18",
+          "times_shown_lower_bound": 15000,
+          "times_shown_start_date": "2023-03-06",
+          "times_shown_upper_bound": 20000
+        },
+        {
+          "first_shown": "2023-06-25",
+          "last_shown": "2024-01-01",
+          "region_code": "HR",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-01-01",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-06-25",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-10",
+          "last_shown": "2024-01-18",
+          "region_code": "HU",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-01-18",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-03-10",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-06",
+          "last_shown": "2023-12-19",
+          "region_code": "IT",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-12-19",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-03-06",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-08",
+          "last_shown": "2023-11-15",
+          "region_code": "NL",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-11-15",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-03-08",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-07",
+          "last_shown": "2024-01-09",
+          "region_code": "PL",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-01-09",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-03-07",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-06",
+          "last_shown": "2024-01-18",
+          "region_code": "SK",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 6000,
+                "times_shown_upper_bound": 7000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-01-18",
+          "times_shown_lower_bound": 15000,
+          "times_shown_start_date": "2023-03-06",
+          "times_shown_upper_bound": 20000
+        }
+      ]
+    },
+    {
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_UNUSED",
+        "demographic_info": "CRITERIA_INCLUDED",
+        "geo_location": "CRITERIA_INCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_page_url": "https://adstransparency.google.com/removed/creative/CR16380446543238397953",
+      "disapproval": [
+        {
+          "decision_type": "Google investigation",
+          "removal_location": [
+            "RO"
+          ],
+          "removal_reason": "Editorial & professional requirements",
+          "use_of_automated_means": false,
+          "violation_category": "EDITORIAL_AND_TECHNICAL"
+        },
+        {
+          "decision_type": "Google investigation",
+          "removal_location": [
+            "RO"
+          ],
+          "removal_reason": "Dangerous products",
+          "use_of_automated_means": true,
+          "violation_category": "PROHIBITED_CONTENT"
+        },
+        {
+          "decision_type": "Google investigation",
+          "removal_location": [
+            "RO"
+          ],
+          "removal_reason": "Healthcare & medicines",
+          "use_of_automated_means": true,
+          "violation_category": "RESTRICTED_CONTENT_AND_FEATURES"
+        }
+      ],
+      "region_stats": [
+        {
+          "first_shown": "2023-12-04",
+          "last_shown": "2024-06-16",
+          "region_code": "EEA",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 4000,
+                "times_shown_upper_bound": 5000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 1000,
+                "times_shown_upper_bound": 2000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-06-16",
+          "times_shown_lower_bound": 6000,
+          "times_shown_start_date": "2023-12-04",
+          "times_shown_upper_bound": 7000
+        },
+        {
+          "first_shown": "2023-12-04",
+          "last_shown": "2024-06-16",
+          "region_code": "RO",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 4000,
+                "times_shown_upper_bound": 5000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 1000,
+                "times_shown_upper_bound": 2000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-06-16",
+          "times_shown_lower_bound": 6000,
+          "times_shown_start_date": "2023-12-04",
+          "times_shown_upper_bound": 7000
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1944 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`DeliveryAddressLine1` = \"Suite 14\", `DeliveryAddressLine2` = \"1968 Martin Luther King Junior ...\", `DeliveryCityID` = 30378, `DeliveryLocation` = \"0xE6100000010C09DE904605E24240C...\", `DeliveryPostalCode` = 94129, `LastEditedBy` = 1, `LastEditedWhen` = \"2013-01-01 00:00:00.0000000\", `PostalAddressLine1` = \"PO Box 201158\", `PostalAddressLine2` = \"Golden Gate Park\", `PostalCityID` = 30378, `PostalPostalCode` = 94129, `SystemParameterID` = 1",
+        "properties": {
+          "ApplicationSettings": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "Customer": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "properties": {
+                  "CSSTheme": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "bootstrap-admin"
+                    ],
+                    "type": "string"
+                  },
+                  "Dashboard": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "NewStockItemsCount": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          5
+                        ],
+                        "type": "number"
+                      },
+                      "PromoCategories": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          ""
+                        ],
+                        "type": "string"
+                      },
+                      "PromoCount": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          5
+                        ],
+                        "type": "number"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "NewStockItemsCount": 5,
+                        "PromoCategories": "",
+                        "PromoCount": 5
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "SEO": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "Description": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "Wide World Importers - Custome..."
+                        ],
+                        "type": "string"
+                      },
+                      "StockItemTitleTemplate": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WWI | CustomerPortal | StockIt..."
+                        ],
+                        "type": "string"
+                      },
+                      "Title": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WWI | Customer Portal"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "Description": "Wide World Importers - Customer Site",
+                        "StockItemTitleTemplate": "WWI | CustomerPortal | StockItem {0}",
+                        "Title": "WWI | Customer Portal"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                },
+                "samples": [
+                  {
+                    "CSSTheme": "bootstrap-admin",
+                    "Dashboard": {
+                      "NewStockItemsCount": 5,
+                      "PromoCategories": "",
+                      "PromoCount": 5
+                    },
+                    "SEO": {
+                      "Description": "Wide World Importers - Customer Site",
+                      "StockItemTitleTemplate": "WWI | CustomerPortal | StockItem {0}",
+                      "Title": "WWI | Customer Portal"
+                    }
+                  }
+                ],
+                "type": "object"
+              },
+              "Logging": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "properties": {
+                  "configuration": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "ThresholdFilter": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "properties": {
+                          "level": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "debug"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "samples": [
+                          {
+                            "level": "debug"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "appenders": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "properties": {
+                          "Console": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "properties": {
+                              "PatternLayout": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "properties": {
+                                  "pattern": {
+                                    "#docs": 1,
+                                    "%docs": 100,
+                                    "nestingDepth": 6,
+                                    "samples": [
+                                      "%m%n"
+                                    ],
+                                    "type": "string"
+                                  }
+                                },
+                                "samples": [
+                                  {
+                                    "pattern": "%m%n"
+                                  }
+                                ],
+                                "type": "object"
+                              },
+                              "name": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "STDOUT"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "samples": [
+                              {
+                                "PatternLayout": {
+                                  "pattern": "%m%n"
+                                },
+                                "name": "STDOUT"
+                              }
+                            ],
+                            "type": "object"
+                          },
+                          "List": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "properties": {
+                              "ThresholdFilter": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "properties": {
+                                  "level": {
+                                    "#docs": 1,
+                                    "%docs": 100,
+                                    "nestingDepth": 6,
+                                    "samples": [
+                                      "debug"
+                                    ],
+                                    "type": "string"
+                                  }
+                                },
+                                "samples": [
+                                  {
+                                    "level": "debug"
+                                  }
+                                ],
+                                "type": "object"
+                              },
+                              "name": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "List"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "samples": [
+                              {
+                                "ThresholdFilter": {
+                                  "level": "debug"
+                                },
+                                "name": "List"
+                              }
+                            ],
+                            "type": "object"
+                          },
+                          "Routing": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "properties": {
+                              "Routes": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "properties": {
+                                  "Route": {
+                                    "#docs": 1,
+                                    "%docs": 100,
+                                    "items": [
+                                      {
+                                        "#docs": 1,
+                                        "$schema": "http://json-schema.org/draft-06/schema",
+                                        "Flavor": "",
+                                        "properties": {
+                                          "RollingFile": {
+                                            "#docs": 1,
+                                            "%docs": 100,
+                                            "nestingDepth": 8,
+                                            "properties": {
+                                              "PatternLayout": {
+                                                "#docs": 1,
+                                                "%docs": 100,
+                                                "nestingDepth": 9,
+                                                "properties": {
+                                                  "pattern": {
+                                                    "#docs": 1,
+                                                    "%docs": 100,
+                                                    "nestingDepth": 10,
+                                                    "type": "string"
+                                                  }
+                                                },
+                                                "type": "object"
+                                              },
+                                              "SizeBasedTriggeringPolicy": {
+                                                "#docs": 1,
+                                                "%docs": 100,
+                                                "nestingDepth": 9,
+                                                "properties": {
+                                                  "size": {
+                                                    "#docs": 1,
+                                                    "%docs": 100,
+                                                    "nestingDepth": 10,
+                                                    "type": "string"
+                                                  }
+                                                },
+                                                "type": "object"
+                                              },
+                                              "fileName": {
+                                                "#docs": 1,
+                                                "%docs": 100,
+                                                "nestingDepth": 9,
+                                                "type": "string"
+                                              },
+                                              "filePattern": {
+                                                "#docs": 1,
+                                                "%docs": 100,
+                                                "nestingDepth": 9,
+                                                "type": "string"
+                                              },
+                                              "name": {
+                                                "#docs": 1,
+                                                "%docs": 100,
+                                                "nestingDepth": 9,
+                                                "type": "string"
+                                              }
+                                            },
+                                            "type": "object"
+                                          }
+                                        },
+                                        "type": "object"
+                                      },
+                                      {
+                                        "#docs": 2,
+                                        "$schema": "http://json-schema.org/draft-06/schema",
+                                        "Flavor": "",
+                                        "properties": {
+                                          "AppenderRef": {
+                                            "#docs": 2,
+                                            "%docs": 100,
+                                            "nestingDepth": 8,
+                                            "type": "string"
+                                          },
+                                          "key": {
+                                            "#docs": 2,
+                                            "%docs": 100,
+                                            "nestingDepth": 8,
+                                            "type": "string"
+                                          }
+                                        },
+                                        "type": "object"
+                                      }
+                                    ],
+                                    "maxItems": 3,
+                                    "minItems": 3,
+                                    "nestingDepth": 6,
+                                    "sampleSize": 0,
+                                    "samples": [
+                                      [
+                                        {
+                                          "RollingFile": {
+                                            "PatternLayout": {
+                                              "pattern": "%d %p %c{1.} [%t] %m%n"
+                                            },
+                                            "SizeBasedTriggeringPolicy": {
+                                              "size": "500"
+                                            },
+                                            "fileName": "${filename}",
+                                            "filePattern": "target/rolling1/test1-${sd:type}.%i.log.gz",
+                                            "name": "Rolling-${sd:type}"
+                                          }
+                                        },
+                                        {
+                                          "AppenderRef": "STDOUT",
+                                          "key": "Audit"
+                                        },
+                                        {
+                                          "AppenderRef": "List",
+                                          "key": "Service"
+                                        }
+                                      ]
+                                    ],
+                                    "type": "array"
+                                  },
+                                  "pattern": {
+                                    "#docs": 1,
+                                    "%docs": 100,
+                                    "nestingDepth": 6,
+                                    "samples": [
+                                      "$${sd:type}"
+                                    ],
+                                    "type": "string"
+                                  }
+                                },
+                                "samples": [
+                                  {
+                                    "Route": [
+                                      {
+                                        "RollingFile": {
+                                          "PatternLayout": {
+                                            "pattern": "%d %p %c{1.} [%t] %m%n"
+                                          },
+                                          "SizeBasedTriggeringPolicy": {
+                                            "size": "500"
+                                          },
+                                          "fileName": "${filename}",
+                                          "filePattern": "target/rolling1/test1-${sd:type}.%i.log.gz",
+                                          "name": "Rolling-${sd:type}"
+                                        }
+                                      },
+                                      {
+                                        "AppenderRef": "STDOUT",
+                                        "key": "Audit"
+                                      },
+                                      {
+                                        "AppenderRef": "List",
+                                        "key": "Service"
+                                      }
+                                    ],
+                                    "pattern": "$${sd:type}"
+                                  }
+                                ],
+                                "type": "object"
+                              },
+                              "name": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "Routing"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "samples": [
+                              {
+                                "Routes": {
+                                  "Route": [
+                                    {
+                                      "RollingFile": {
+                                        "PatternLayout": {
+                                          "pattern": "%d %p %c{1.} [%t] %m%n"
+                                        },
+                                        "SizeBasedTriggeringPolicy": {
+                                          "size": "500"
+                                        },
+                                        "fileName": "${filename}",
+                                        "filePattern": "target/rolling1/test1-${sd:type}.%i.log.gz",
+                                        "name": "Rolling-${sd:type}"
+                                      }
+                                    },
+                                    {
+                                      "AppenderRef": "STDOUT",
+                                      "key": "Audit"
+                                    },
+                                    {
+                                      "AppenderRef": "List",
+                                      "key": "Service"
+                                    }
+                                  ],
+                                  "pattern": "$${sd:type}"
+                                },
+                                "name": "Routing"
+                              }
+                            ],
+                            "type": "object"
+                          }
+                        },
+                        "samples": [
+                          {
+                            "Console": {
+                              "PatternLayout": {
+                                "pattern": "%m%n"
+                              },
+                              "name": "STDOUT"
+                            },
+                            "List": {
+                              "ThresholdFilter": {
+                                "level": "debug"
+                              },
+                              "name": "List"
+                            },
+                            "Routing": {
+                              "Routes": {
+                                "Route": [
+                                  {
+                                    "RollingFile": {
+                                      "PatternLayout": {
+                                        "pattern": "%d %p %c{1.} [%t] %m%n"
+                                      },
+                                      "SizeBasedTriggeringPolicy": {
+                                        "size": "500"
+                                      },
+                                      "fileName": "${filename}",
+                                      "filePattern": "target/rolling1/test1-${sd:type}.%i.log.gz",
+                                      "name": "Rolling-${sd:type}"
+                                    }
+                                  },
+                                  {
+                                    "AppenderRef": "STDOUT",
+                                    "key": "Audit"
+                                  },
+                                  {
+                                    "AppenderRef": "List",
+                                    "key": "Service"
+                                  }
+                                ],
+                                "pattern": "$${sd:type}"
+                              },
+                              "name": "Routing"
+                            }
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "loggers": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "properties": {
+                          "logger": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "properties": {
+                              "AppenderRef": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "properties": {
+                                  "ref": {
+                                    "#docs": 1,
+                                    "%docs": 100,
+                                    "nestingDepth": 6,
+                                    "samples": [
+                                      "Routing"
+                                    ],
+                                    "type": "string"
+                                  }
+                                },
+                                "samples": [
+                                  {
+                                    "ref": "Routing"
+                                  }
+                                ],
+                                "type": "object"
+                              },
+                              "additivity": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "false"
+                                ],
+                                "type": "string"
+                              },
+                              "level": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "info"
+                                ],
+                                "type": "string"
+                              },
+                              "name": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "EventLogger"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "samples": [
+                              {
+                                "AppenderRef": {
+                                  "ref": "Routing"
+                                },
+                                "additivity": "false",
+                                "level": "info",
+                                "name": "EventLogger"
+                              }
+                            ],
+                            "type": "object"
+                          },
+                          "root": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "properties": {
+                              "AppenderRef": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "properties": {
+                                  "ref": {
+                                    "#docs": 1,
+                                    "%docs": 100,
+                                    "nestingDepth": 6,
+                                    "samples": [
+                                      "STDOUT"
+                                    ],
+                                    "type": "string"
+                                  }
+                                },
+                                "samples": [
+                                  {
+                                    "ref": "STDOUT"
+                                  }
+                                ],
+                                "type": "object"
+                              },
+                              "level": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "error"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "samples": [
+                              {
+                                "AppenderRef": {
+                                  "ref": "STDOUT"
+                                },
+                                "level": "error"
+                              }
+                            ],
+                            "type": "object"
+                          }
+                        },
+                        "samples": [
+                          {
+                            "logger": {
+                              "AppenderRef": {
+                                "ref": "Routing"
+                              },
+                              "additivity": "false",
+                              "level": "info",
+                              "name": "EventLogger"
+                            },
+                            "root": {
+                              "AppenderRef": {
+                                "ref": "STDOUT"
+                              },
+                              "level": "error"
+                            }
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "name": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "RoutingTest"
+                        ],
+                        "type": "string"
+                      },
+                      "packages": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "org.apache.logging.log4j.test"
+                        ],
+                        "type": "string"
+                      },
+                      "properties": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "properties": {
+                          "property": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "properties": {
+                              "name": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "filename"
+                                ],
+                                "type": "string"
+                              },
+                              "value": {
+                                "#docs": 1,
+                                "%docs": 100,
+                                "nestingDepth": 5,
+                                "samples": [
+                                  "target/rolling1/rollingtest-$$..."
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "samples": [
+                              {
+                                "name": "filename",
+                                "value": "target/rolling1/rollingtest-$${sd:type}.log"
+                              }
+                            ],
+                            "type": "object"
+                          }
+                        },
+                        "samples": [
+                          {
+                            "property": {
+                              "name": "filename",
+                              "value": "target/rolling1/rollingtest-$${sd:type}.log"
+                            }
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "status": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "error"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "ThresholdFilter": {
+                          "level": "debug"
+                        },
+                        "appenders": {
+                          "Console": {
+                            "PatternLayout": {
+                              "pattern": "%m%n"
+                            },
+                            "name": "STDOUT"
+                          },
+                          "List": {
+                            "ThresholdFilter": {
+                              "level": "debug"
+                            },
+                            "name": "List"
+                          },
+                          "Routing": {
+                            "Routes": {
+                              "Route": [
+                                {
+                                  "RollingFile": {
+                                    "PatternLayout": {
+                                      "pattern": "%d %p %c{1.} [%t] %m%n"
+                                    },
+                                    "SizeBasedTriggeringPolicy": {
+                                      "size": "500"
+                                    },
+                                    "fileName": "${filename}",
+                                    "filePattern": "target/rolling1/test1-${sd:type}.%i.log.gz",
+                                    "name": "Rolling-${sd:type}"
+                                  }
+                                },
+                                {
+                                  "AppenderRef": "STDOUT",
+                                  "key": "Audit"
+                                },
+                                {
+                                  "AppenderRef": "List",
+                                  "key": "Service"
+                                }
+                              ],
+                              "pattern": "$${sd:type}"
+                            },
+                            "name": "Routing"
+                          }
+                        },
+                        "loggers": {
+                          "logger": {
+                            "AppenderRef": {
+                              "ref": "Routing"
+                            },
+                            "additivity": "false",
+                            "level": "info",
+                            "name": "EventLogger"
+                          },
+                          "root": {
+                            "AppenderRef": {
+                              "ref": "STDOUT"
+                            },
+                            "level": "error"
+                          }
+                        },
+                        "name": "RoutingTest",
+                        "packages": "org.apache.logging.log4j.test",
+                        "properties": {
+                          "property": {
+                            "name": "filename",
+                            "value": "target/rolling1/rollingtest-$${sd:type}.log"
+                          }
+                        },
+                        "status": "error"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                },
+                "samples": [
+                  {
+                    "configuration": {
+                      "ThresholdFilter": {
+                        "level": "debug"
+                      },
+                      "appenders": {
+                        "Console": {
+                          "PatternLayout": {
+                            "pattern": "%m%n"
+                          },
+                          "name": "STDOUT"
+                        },
+                        "List": {
+                          "ThresholdFilter": {
+                            "level": "debug"
+                          },
+                          "name": "List"
+                        },
+                        "Routing": {
+                          "Routes": {
+                            "Route": [
+                              {
+                                "RollingFile": {
+                                  "PatternLayout": {
+                                    "pattern": "%d %p %c{1.} [%t] %m%n"
+                                  },
+                                  "SizeBasedTriggeringPolicy": {
+                                    "size": "500"
+                                  },
+                                  "fileName": "${filename}",
+                                  "filePattern": "target/rolling1/test1-${sd:type}.%i.log.gz",
+                                  "name": "Rolling-${sd:type}"
+                                }
+                              },
+                              {
+                                "AppenderRef": "STDOUT",
+                                "key": "Audit"
+                              },
+                              {
+                                "AppenderRef": "List",
+                                "key": "Service"
+                              }
+                            ],
+                            "pattern": "$${sd:type}"
+                          },
+                          "name": "Routing"
+                        }
+                      },
+                      "loggers": {
+                        "logger": {
+                          "AppenderRef": {
+                            "ref": "Routing"
+                          },
+                          "additivity": "false",
+                          "level": "info",
+                          "name": "EventLogger"
+                        },
+                        "root": {
+                          "AppenderRef": {
+                            "ref": "STDOUT"
+                          },
+                          "level": "error"
+                        }
+                      },
+                      "name": "RoutingTest",
+                      "packages": "org.apache.logging.log4j.test",
+                      "properties": {
+                        "property": {
+                          "name": "filename",
+                          "value": "target/rolling1/rollingtest-$${sd:type}.log"
+                        }
+                      },
+                      "status": "error"
+                    }
+                  }
+                ],
+                "type": "object"
+              },
+              "Site": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "properties": {
+                  "CSSTheme": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "bootstrap-stockitems"
+                    ],
+                    "type": "string"
+                  },
+                  "Home": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "HotStockItemsCount": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          5
+                        ],
+                        "type": "number"
+                      },
+                      "Message": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "New StockItems from Wide World..."
+                        ],
+                        "type": "string"
+                      },
+                      "NewStockItemsCount": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          5
+                        ],
+                        "type": "number"
+                      },
+                      "PromoCategories": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "items": {
+                          "type": "string"
+                        },
+                        "maxItems": 2,
+                        "minItems": 2,
+                        "nestingDepth": 3,
+                        "sampleSize": 0,
+                        "samples": [
+                          [
+                            "Gadgets",
+                            "Toys"
+                          ]
+                        ],
+                        "type": "array"
+                      },
+                      "PromoCount": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          5
+                        ],
+                        "type": "number"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "HotStockItemsCount": 5,
+                        "Message": "New StockItems from Wide World Importers",
+                        "NewStockItemsCount": 5,
+                        "PromoCategories": [
+                          "Gadgets",
+                          "Toys"
+                        ],
+                        "PromoCount": 5
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "Menu": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "Brands": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "properties": {
+                          "Alt": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "Supplier listing"
+                            ],
+                            "type": "string"
+                          },
+                          "Url": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "/brand"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "samples": [
+                          {
+                            "Alt": "Supplier listing",
+                            "Url": "/brand"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "Contact": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "properties": {
+                          "Alt": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "Contact"
+                            ],
+                            "type": "string"
+                          },
+                          "Url": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "/contact-us"
+                            ],
+                            "type": "string"
+                          },
+                          "email": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "jane@wideworldimporters.com"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "samples": [
+                          {
+                            "Alt": "Contact",
+                            "Url": "/contact-us",
+                            "email": "jane@wideworldimporters.com"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "Home": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "properties": {
+                          "Alt": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "Home"
+                            ],
+                            "type": "string"
+                          },
+                          "Url": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "/"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "samples": [
+                          {
+                            "Alt": "Home",
+                            "Url": "/"
+                          }
+                        ],
+                        "type": "object"
+                      },
+                      "StockItems": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "properties": {
+                          "Alt": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "Stock item search"
+                            ],
+                            "type": "string"
+                          },
+                          "Url": {
+                            "#docs": 1,
+                            "%docs": 100,
+                            "nestingDepth": 4,
+                            "samples": [
+                              "/stockitem"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "samples": [
+                          {
+                            "Alt": "Stock item search",
+                            "Url": "/stockitem"
+                          }
+                        ],
+                        "type": "object"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "Brands": {
+                          "Alt": "Supplier listing",
+                          "Url": "/brand"
+                        },
+                        "Contact": {
+                          "Alt": "Contact",
+                          "Url": "/contact-us",
+                          "email": "jane@wideworldimporters.com"
+                        },
+                        "Home": {
+                          "Alt": "Home",
+                          "Url": "/"
+                        },
+                        "StockItems": {
+                          "Alt": "Stock item search",
+                          "Url": "/stockitem"
+                        }
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "SEO": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "Description": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "Wide World Importers - Site"
+                        ],
+                        "type": "string"
+                      },
+                      "StockItemDescrTemplate": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "StockItem {0} ({1}})"
+                        ],
+                        "type": "string"
+                      },
+                      "StockItemTitleTemplate": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WWI | Site | StockItem {0}"
+                        ],
+                        "type": "string"
+                      },
+                      "Title": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WWI | Site"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "Description": "Wide World Importers - Site",
+                        "StockItemDescrTemplate": "StockItem {0} ({1}})",
+                        "StockItemTitleTemplate": "WWI | Site | StockItem {0}",
+                        "Title": "WWI | Site"
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "SearchResults": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "FacetCount": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          3
+                        ],
+                        "type": "number"
+                      },
+                      "SeoDescrTemplate": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "Wide World Importers | Stock I..."
+                        ],
+                        "type": "string"
+                      },
+                      "SeoTitleTemplate": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WWI | Site | {0} | {1}"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "FacetCount": 3,
+                        "SeoDescrTemplate": "Wide World Importers | Stock Items {0} ({1}})",
+                        "SeoTitleTemplate": "WWI | Site | {0} | {1}"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                },
+                "samples": [
+                  {
+                    "CSSTheme": "bootstrap-stockitems",
+                    "Home": {
+                      "HotStockItemsCount": 5,
+                      "Message": "New StockItems from Wide World Importers",
+                      "NewStockItemsCount": 5,
+                      "PromoCategories": [
+                        "Gadgets",
+                        "Toys"
+                      ],
+                      "PromoCount": 5
+                    },
+                    "Menu": {
+                      "Brands": {
+                        "Alt": "Supplier listing",
+                        "Url": "/brand"
+                      },
+                      "Contact": {
+                        "Alt": "Contact",
+                        "Url": "/contact-us",
+                        "email": "jane@wideworldimporters.com"
+                      },
+                      "Home": {
+                        "Alt": "Home",
+                        "Url": "/"
+                      },
+                      "StockItems": {
+                        "Alt": "Stock item search",
+                        "Url": "/stockitem"
+                      }
+                    },
+                    "SEO": {
+                      "Description": "Wide World Importers - Site",
+                      "StockItemDescrTemplate": "StockItem {0} ({1}})",
+                      "StockItemTitleTemplate": "WWI | Site | StockItem {0}",
+                      "Title": "WWI | Site"
+                    },
+                    "SearchResults": {
+                      "FacetCount": 3,
+                      "SeoDescrTemplate": "Wide World Importers | Stock Items {0} ({1}})",
+                      "SeoTitleTemplate": "WWI | Site | {0} | {1}"
+                    }
+                  }
+                ],
+                "type": "object"
+              },
+              "Supplier": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "properties": {
+                  "CSSTheme": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "bootstrap-admin"
+                    ],
+                    "type": "string"
+                  },
+                  "Dashboard": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "QuotesPerPage": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          25
+                        ],
+                        "type": "number"
+                      },
+                      "StockItemsPerPage": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          10
+                        ],
+                        "type": "number"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "QuotesPerPage": 25,
+                        "StockItemsPerPage": 10
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "Reports": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "ThisMonthSale": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          true
+                        ],
+                        "type": "boolean"
+                      },
+                      "TopSales": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          true
+                        ],
+                        "type": "boolean"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "ThisMonthSale": true,
+                        "TopSales": true
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "SEO": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "Title": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WWI | Supplier Portal"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "Title": "WWI | Supplier Portal"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                },
+                "samples": [
+                  {
+                    "CSSTheme": "bootstrap-admin",
+                    "Dashboard": {
+                      "QuotesPerPage": 25,
+                      "StockItemsPerPage": 10
+                    },
+                    "Reports": {
+                      "ThisMonthSale": true,
+                      "TopSales": true
+                    },
+                    "SEO": {
+                      "Title": "WWI | Supplier Portal"
+                    }
+                  }
+                ],
+                "type": "object"
+              },
+              "Warehouse": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "properties": {
+                  "CSSTheme": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "bootstrap-admin"
+                    ],
+                    "type": "string"
+                  },
+                  "SEO": {
+                    "#docs": 1,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "Description": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WorldWideImporters - Site"
+                        ],
+                        "type": "string"
+                      },
+                      "StockItemTitleTemplate": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WWI | Site | StockItem {0}"
+                        ],
+                        "type": "string"
+                      },
+                      "Title": {
+                        "#docs": 1,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "samples": [
+                          "WWI | Warehouse Administration"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "Description": "WorldWideImporters - Site",
+                        "StockItemTitleTemplate": "WWI | Site | StockItem {0}",
+                        "Title": "WWI | Warehouse Administration"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                },
+                "samples": [
+                  {
+                    "CSSTheme": "bootstrap-admin",
+                    "SEO": {
+                      "Description": "WorldWideImporters - Site",
+                      "StockItemTitleTemplate": "WWI | Site | StockItem {0}",
+                      "Title": "WWI | Warehouse Administration"
+                    }
+                  }
+                ],
+                "type": "object"
+              }
+            },
+            "samples": [
+              {
+                "Customer": {
+                  "CSSTheme": "bootstrap-admin",
+                  "Dashboard": {
+                    "NewStockItemsCount": 5,
+                    "PromoCategories": "",
+                    "PromoCount": 5
+                  },
+                  "SEO": {
+                    "Description": "Wide World Importers - Customer Site",
+                    "StockItemTitleTemplate": "WWI | CustomerPortal | StockItem {0}",
+                    "Title": "WWI | Customer Portal"
+                  }
+                },
+                "Logging": {
+                  "configuration": {
+                    "ThresholdFilter": {
+                      "level": "debug"
+                    },
+                    "appenders": {
+                      "Console": {
+                        "PatternLayout": {
+                          "pattern": "%m%n"
+                        },
+                        "name": "STDOUT"
+                      },
+                      "List": {
+                        "ThresholdFilter": {
+                          "level": "debug"
+                        },
+                        "name": "List"
+                      },
+                      "Routing": {
+                        "Routes": {
+                          "Route": [
+                            {
+                              "RollingFile": {
+                                "PatternLayout": {
+                                  "pattern": "%d %p %c{1.} [%t] %m%n"
+                                },
+                                "SizeBasedTriggeringPolicy": {
+                                  "size": "500"
+                                },
+                                "fileName": "${filename}",
+                                "filePattern": "target/rolling1/test1-${sd:type}.%i.log.gz",
+                                "name": "Rolling-${sd:type}"
+                              }
+                            },
+                            {
+                              "AppenderRef": "STDOUT",
+                              "key": "Audit"
+                            },
+                            {
+                              "AppenderRef": "List",
+                              "key": "Service"
+                            }
+                          ],
+                          "pattern": "$${sd:type}"
+                        },
+                        "name": "Routing"
+                      }
+                    },
+                    "loggers": {
+                      "logger": {
+                        "AppenderRef": {
+                          "ref": "Routing"
+                        },
+                        "additivity": "false",
+                        "level": "info",
+                        "name": "EventLogger"
+                      },
+                      "root": {
+                        "AppenderRef": {
+                          "ref": "STDOUT"
+                        },
+                        "level": "error"
+                      }
+                    },
+                    "name": "RoutingTest",
+                    "packages": "org.apache.logging.log4j.test",
+                    "properties": {
+                      "property": {
+                        "name": "filename",
+                        "value": "target/rolling1/rollingtest-$${sd:type}.log"
+                      }
+                    },
+                    "status": "error"
+                  }
+                },
+                "Site": {
+                  "CSSTheme": "bootstrap-stockitems",
+                  "Home": {
+                    "HotStockItemsCount": 5,
+                    "Message": "New StockItems from Wide World Importers",
+                    "NewStockItemsCount": 5,
+                    "PromoCategories": [
+                      "Gadgets",
+                      "Toys"
+                    ],
+                    "PromoCount": 5
+                  },
+                  "Menu": {
+                    "Brands": {
+                      "Alt": "Supplier listing",
+                      "Url": "/brand"
+                    },
+                    "Contact": {
+                      "Alt": "Contact",
+                      "Url": "/contact-us",
+                      "email": "jane@wideworldimporters.com"
+                    },
+                    "Home": {
+                      "Alt": "Home",
+                      "Url": "/"
+                    },
+                    "StockItems": {
+                      "Alt": "Stock item search",
+                      "Url": "/stockitem"
+                    }
+                  },
+                  "SEO": {
+                    "Description": "Wide World Importers - Site",
+                    "StockItemDescrTemplate": "StockItem {0} ({1}})",
+                    "StockItemTitleTemplate": "WWI | Site | StockItem {0}",
+                    "Title": "WWI | Site"
+                  },
+                  "SearchResults": {
+                    "FacetCount": 3,
+                    "SeoDescrTemplate": "Wide World Importers | Stock Items {0} ({1}})",
+                    "SeoTitleTemplate": "WWI | Site | {0} | {1}"
+                  }
+                },
+                "Supplier": {
+                  "CSSTheme": "bootstrap-admin",
+                  "Dashboard": {
+                    "QuotesPerPage": 25,
+                    "StockItemsPerPage": 10
+                  },
+                  "Reports": {
+                    "ThisMonthSale": true,
+                    "TopSales": true
+                  },
+                  "SEO": {
+                    "Title": "WWI | Supplier Portal"
+                  }
+                },
+                "Warehouse": {
+                  "CSSTheme": "bootstrap-admin",
+                  "SEO": {
+                    "Description": "WorldWideImporters - Site",
+                    "StockItemTitleTemplate": "WWI | Site | StockItem {0}",
+                    "Title": "WWI | Warehouse Administration"
+                  }
+                }
+              }
+            ],
+            "type": "object"
+          },
+          "DeliveryAddressLine1": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Suite 14"
+            ],
+            "type": "string"
+          },
+          "DeliveryAddressLine2": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1968 Martin Luther King Junior..."
+            ],
+            "type": "string"
+          },
+          "DeliveryCityID": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30378
+            ],
+            "type": "number"
+          },
+          "DeliveryLocation": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0xE6100000010C09DE904605E24240..."
+            ],
+            "type": "string"
+          },
+          "DeliveryPostalCode": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              94129
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-01 00:00:00.0000000"
+            ],
+            "type": "string"
+          },
+          "PostalAddressLine1": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PO Box 201158"
+            ],
+            "type": "string"
+          },
+          "PostalAddressLine2": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Golden Gate Park"
+            ],
+            "type": "string"
+          },
+          "PostalCityID": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30378
+            ],
+            "type": "number"
+          },
+          "PostalPostalCode": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              94129
+            ],
+            "type": "number"
+          },
+          "SystemParameterID": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "application_systemparameters::..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "application_systemparameters::0"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ApplicationSettings": {
+        "Customer": {
+          "CSSTheme": "bootstrap-admin",
+          "Dashboard": {
+            "NewStockItemsCount": 5,
+            "PromoCategories": "",
+            "PromoCount": 5
+          },
+          "SEO": {
+            "Description": "Wide World Importers - Customer Site",
+            "StockItemTitleTemplate": "WWI | CustomerPortal | StockItem {0}",
+            "Title": "WWI | Customer Portal"
+          }
+        },
+        "Logging": {
+          "configuration": {
+            "ThresholdFilter": {
+              "level": "debug"
+            },
+            "appenders": {
+              "Console": {
+                "PatternLayout": {
+                  "pattern": "%m%n"
+                },
+                "name": "STDOUT"
+              },
+              "List": {
+                "ThresholdFilter": {
+                  "level": "debug"
+                },
+                "name": "List"
+              },
+              "Routing": {
+                "Routes": {
+                  "Route": [
+                    {
+                      "RollingFile": {
+                        "PatternLayout": {
+                          "pattern": "%d %p %c{1.} [%t] %m%n"
+                        },
+                        "SizeBasedTriggeringPolicy": {
+                          "size": "500"
+                        },
+                        "fileName": "${filename}",
+                        "filePattern": "target/rolling1/test1-${sd:type}.%i.log.gz",
+                        "name": "Rolling-${sd:type}"
+                      }
+                    },
+                    {
+                      "AppenderRef": "STDOUT",
+                      "key": "Audit"
+                    },
+                    {
+                      "AppenderRef": "List",
+                      "key": "Service"
+                    }
+                  ],
+                  "pattern": "$${sd:type}"
+                },
+                "name": "Routing"
+              }
+            },
+            "loggers": {
+              "logger": {
+                "AppenderRef": {
+                  "ref": "Routing"
+                },
+                "additivity": "false",
+                "level": "info",
+                "name": "EventLogger"
+              },
+              "root": {
+                "AppenderRef": {
+                  "ref": "STDOUT"
+                },
+                "level": "error"
+              }
+            },
+            "name": "RoutingTest",
+            "packages": "org.apache.logging.log4j.test",
+            "properties": {
+              "property": {
+                "name": "filename",
+                "value": "target/rolling1/rollingtest-$${sd:type}.log"
+              }
+            },
+            "status": "error"
+          }
+        },
+        "Site": {
+          "CSSTheme": "bootstrap-stockitems",
+          "Home": {
+            "HotStockItemsCount": 5,
+            "Message": "New StockItems from Wide World Importers",
+            "NewStockItemsCount": 5,
+            "PromoCategories": [
+              "Gadgets",
+              "Toys"
+            ],
+            "PromoCount": 5
+          },
+          "Menu": {
+            "Brands": {
+              "Alt": "Supplier listing",
+              "Url": "/brand"
+            },
+            "Contact": {
+              "Alt": "Contact",
+              "Url": "/contact-us",
+              "email": "jane@wideworldimporters.com"
+            },
+            "Home": {
+              "Alt": "Home",
+              "Url": "/"
+            },
+            "StockItems": {
+              "Alt": "Stock item search",
+              "Url": "/stockitem"
+            }
+          },
+          "SEO": {
+            "Description": "Wide World Importers - Site",
+            "StockItemDescrTemplate": "StockItem {0} ({1}})",
+            "StockItemTitleTemplate": "WWI | Site | StockItem {0}",
+            "Title": "WWI | Site"
+          },
+          "SearchResults": {
+            "FacetCount": 3,
+            "SeoDescrTemplate": "Wide World Importers | Stock Items {0} ({1}})",
+            "SeoTitleTemplate": "WWI | Site | {0} | {1}"
+          }
+        },
+        "Supplier": {
+          "CSSTheme": "bootstrap-admin",
+          "Dashboard": {
+            "QuotesPerPage": 25,
+            "StockItemsPerPage": 10
+          },
+          "Reports": {
+            "ThisMonthSale": true,
+            "TopSales": true
+          },
+          "SEO": {
+            "Title": "WWI | Supplier Portal"
+          }
+        },
+        "Warehouse": {
+          "CSSTheme": "bootstrap-admin",
+          "SEO": {
+            "Description": "WorldWideImporters - Site",
+            "StockItemTitleTemplate": "WWI | Site | StockItem {0}",
+            "Title": "WWI | Warehouse Administration"
+          }
+        }
+      },
+      "DeliveryAddressLine1": "Suite 14",
+      "DeliveryAddressLine2": "1968 Martin Luther King Junior Drive",
+      "DeliveryCityID": 30378,
+      "DeliveryLocation": "0xE6100000010C09DE904605E24240C617EDF142A05EC0",
+      "DeliveryPostalCode": 94129,
+      "LastEditedBy": 1,
+      "LastEditedWhen": "2013-01-01 00:00:00.0000000",
+      "PostalAddressLine1": "PO Box 201158",
+      "PostalAddressLine2": "Golden Gate Park",
+      "PostalCityID": 30378,
+      "PostalPostalCode": 94129,
+      "SystemParameterID": 1
+    }
+  ]
+}

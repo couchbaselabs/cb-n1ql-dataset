@@ -1,0 +1,1489 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ad_format_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IMAGE",
+              "TEXT",
+              "VIDEO"
+            ],
+            "type": "string"
+          },
+          "advertiser_disclosed_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aquatica Art Plusz Kft.",
+              "MLADINSKA KNJIGA TRGOVINA D.O....",
+              "MODIVO S.A.",
+              "PINK AND GREEN,LDA",
+              "Pepita Group Zrt."
+            ],
+            "type": "string"
+          },
+          "advertiser_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AR01531844478900371457",
+              "AR10992231571565576193",
+              "AR12968567850926080001",
+              "AR13695681006407778305",
+              "AR15094201179225194497"
+            ],
+            "type": "string"
+          },
+          "advertiser_legal_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aquatica Art Plusz Kft.",
+              "MLADINSKA KNJIGA TRGOVINA D.O....",
+              "MODIVO S.A.",
+              "PINK AND GREEN,LDA",
+              "Pepita Group Zrt."
+            ],
+            "type": "string"
+          },
+          "advertiser_location": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "HU",
+              "NL",
+              "PL",
+              "PT",
+              "SI"
+            ],
+            "type": "string"
+          },
+          "advertiser_verification_status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "UNVERIFIED",
+              "VERIFIED"
+            ],
+            "type": "string"
+          },
+          "audience_selection_approach_info": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "contextual_signals": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              },
+              "customer_lists": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_EXCLUDED",
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              },
+              "demographic_info": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_EXCLUDED",
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              },
+              "geo_location": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_EXCLUDED",
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              },
+              "topics_of_interest": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "CRITERIA_EXCLUDED",
+                  "CRITERIA_INCLUDED",
+                  "CRITERIA_INCLUDED_AND_EXCLUDED",
+                  "CRITERIA_UNUSED"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "contextual_signals": "CRITERIA_INCLUDED",
+                "customer_lists": "CRITERIA_UNUSED",
+                "demographic_info": "CRITERIA_INCLUDED",
+                "geo_location": "CRITERIA_INCLUDED",
+                "topics_of_interest": "CRITERIA_UNUSED"
+              },
+              {
+                "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "customer_lists": "CRITERIA_INCLUDED",
+                "demographic_info": "CRITERIA_INCLUDED",
+                "geo_location": "CRITERIA_INCLUDED",
+                "topics_of_interest": "CRITERIA_UNUSED"
+              },
+              {
+                "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "customer_lists": "CRITERIA_INCLUDED",
+                "demographic_info": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "geo_location": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "topics_of_interest": "CRITERIA_INCLUDED"
+              },
+              {
+                "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "customer_lists": "CRITERIA_UNUSED",
+                "demographic_info": "CRITERIA_INCLUDED",
+                "geo_location": "CRITERIA_INCLUDED",
+                "topics_of_interest": "CRITERIA_UNUSED"
+              },
+              {
+                "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "customer_lists": "CRITERIA_UNUSED",
+                "demographic_info": "CRITERIA_INCLUDED",
+                "geo_location": "CRITERIA_INCLUDED_AND_EXCLUDED",
+                "topics_of_interest": "CRITERIA_UNUSED"
+              }
+            ],
+            "type": "object"
+          },
+          "creative_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CR00418836345893421057",
+              "CR04563624578470903809",
+              "CR05612598322507284481",
+              "CR13081810092523782145",
+              "CR14709494601970876417"
+            ],
+            "type": "string"
+          },
+          "creative_page_url": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "https://adstransparency.google...",
+              "https://adstransparency.google...",
+              "https://adstransparency.google...",
+              "https://adstransparency.google...",
+              "https://adstransparency.google..."
+            ],
+            "type": "string"
+          },
+          "is_funded_by_google_ad_grants": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "region_stats": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": [
+              {
+                "#docs": 405,
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "Flavor": "",
+                "properties": {
+                  "first_shown": {
+                    "#docs": 405,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-03-01",
+                      "2024-08-14",
+                      "2024-08-22",
+                      "2024-09-23",
+                      "2024-09-27"
+                    ],
+                    "type": "string"
+                  },
+                  "last_shown": {
+                    "#docs": 405,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2024-07-15",
+                      "2024-09-24",
+                      "2024-09-26",
+                      "2024-10-01",
+                      "2024-10-07"
+                    ],
+                    "type": "string"
+                  },
+                  "region_code": {
+                    "#docs": 405,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "BE",
+                      "EE",
+                      "TR"
+                    ],
+                    "type": "string"
+                  },
+                  "times_shown_availability_date": {
+                    "#docs": 405,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2024-10-13",
+                      "2024-11-12",
+                      "2024-11-20",
+                      "2024-12-22",
+                      "2024-12-26"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              {
+                "#docs": 3515,
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "Flavor": "",
+                "properties": {
+                  "first_shown": {
+                    "#docs": 3515,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-04-23",
+                      "2023-10-31",
+                      "2023-12-21",
+                      "2024-01-09",
+                      "2024-02-27"
+                    ],
+                    "type": "string"
+                  },
+                  "last_shown": {
+                    "#docs": 3515,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-12-31",
+                      "2024-01-31",
+                      "2024-02-27",
+                      "2024-10-06",
+                      "2024-10-07"
+                    ],
+                    "type": "string"
+                  },
+                  "region_code": {
+                    "#docs": 3515,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "AT",
+                      "BE",
+                      "DE",
+                      "SI",
+                      "TR"
+                    ],
+                    "type": "string"
+                  },
+                  "surface_serving_stats": {
+                    "#docs": 2891,
+                    "%docs": 82.24,
+                    "nestingDepth": 2,
+                    "properties": {
+                      "surface_serving_stats": {
+                        "#docs": 2891,
+                        "%docs": 100,
+                        "items": {
+                          "#docs": 14455,
+                          "$schema": "http://json-schema.org/draft-06/schema",
+                          "properties": {
+                            "surface": {
+                              "nestingDepth": 5,
+                              "type": "string"
+                            },
+                            "times_shown_lower_bound": {
+                              "nestingDepth": 5,
+                              "type": "number"
+                            },
+                            "times_shown_upper_bound": {
+                              "nestingDepth": 5,
+                              "type": "number"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "maxItems": 5,
+                        "minItems": 5,
+                        "nestingDepth": 3,
+                        "sampleSize": 0,
+                        "samples": [
+                          [
+                            {
+                              "surface": "MAPS",
+                              "times_shown_lower_bound": 10000,
+                              "times_shown_upper_bound": 15000
+                            },
+                            {
+                              "surface": "SHOPPING",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "YOUTUBE",
+                              "times_shown_lower_bound": 25000,
+                              "times_shown_upper_bound": 30000
+                            },
+                            {
+                              "surface": "SEARCH",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "PLAY",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            }
+                          ],
+                          [
+                            {
+                              "surface": "PLAY",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "YOUTUBE",
+                              "times_shown_lower_bound": 900000,
+                              "times_shown_upper_bound": 1000000
+                            },
+                            {
+                              "surface": "MAPS",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "SHOPPING",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "SEARCH",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            }
+                          ],
+                          [
+                            {
+                              "surface": "SHOPPING",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "YOUTUBE",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "PLAY",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "MAPS",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "SEARCH",
+                              "times_shown_lower_bound": 2000,
+                              "times_shown_upper_bound": 3000
+                            }
+                          ],
+                          [
+                            {
+                              "surface": "YOUTUBE",
+                              "times_shown_lower_bound": 2000,
+                              "times_shown_upper_bound": 3000
+                            },
+                            {
+                              "surface": "SHOPPING",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "PLAY",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "MAPS",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "SEARCH",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            }
+                          ],
+                          [
+                            {
+                              "surface": "YOUTUBE",
+                              "times_shown_lower_bound": 7000,
+                              "times_shown_upper_bound": 8000
+                            },
+                            {
+                              "surface": "SHOPPING",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "PLAY",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "MAPS",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            },
+                            {
+                              "surface": "SEARCH",
+                              "times_shown_lower_bound": 0,
+                              "times_shown_upper_bound": 1000
+                            }
+                          ]
+                        ],
+                        "type": "array"
+                      }
+                    },
+                    "samples": [
+                      {
+                        "surface_serving_stats": [
+                          {
+                            "surface": "MAPS",
+                            "times_shown_lower_bound": 10000,
+                            "times_shown_upper_bound": 15000
+                          },
+                          {
+                            "surface": "SHOPPING",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "YOUTUBE",
+                            "times_shown_lower_bound": 25000,
+                            "times_shown_upper_bound": 30000
+                          },
+                          {
+                            "surface": "SEARCH",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "PLAY",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          }
+                        ]
+                      },
+                      {
+                        "surface_serving_stats": [
+                          {
+                            "surface": "PLAY",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "YOUTUBE",
+                            "times_shown_lower_bound": 900000,
+                            "times_shown_upper_bound": 1000000
+                          },
+                          {
+                            "surface": "MAPS",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "SHOPPING",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "SEARCH",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          }
+                        ]
+                      },
+                      {
+                        "surface_serving_stats": [
+                          {
+                            "surface": "SHOPPING",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "YOUTUBE",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "PLAY",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "MAPS",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "SEARCH",
+                            "times_shown_lower_bound": 2000,
+                            "times_shown_upper_bound": 3000
+                          }
+                        ]
+                      },
+                      {
+                        "surface_serving_stats": [
+                          {
+                            "surface": "YOUTUBE",
+                            "times_shown_lower_bound": 2000,
+                            "times_shown_upper_bound": 3000
+                          },
+                          {
+                            "surface": "SHOPPING",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "PLAY",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "MAPS",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "SEARCH",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          }
+                        ]
+                      },
+                      {
+                        "surface_serving_stats": [
+                          {
+                            "surface": "YOUTUBE",
+                            "times_shown_lower_bound": 7000,
+                            "times_shown_upper_bound": 8000
+                          },
+                          {
+                            "surface": "SHOPPING",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "PLAY",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "MAPS",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          },
+                          {
+                            "surface": "SEARCH",
+                            "times_shown_lower_bound": 0,
+                            "times_shown_upper_bound": 1000
+                          }
+                        ]
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "times_shown_end_date": {
+                    "#docs": 3515,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-12-31",
+                      "2024-01-31",
+                      "2024-02-27",
+                      "2024-04-08",
+                      "2024-07-09"
+                    ],
+                    "type": "string"
+                  },
+                  "times_shown_lower_bound": {
+                    "#docs": 3515,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      2000,
+                      5000,
+                      7000,
+                      35000,
+                      900000
+                    ],
+                    "type": "number"
+                  },
+                  "times_shown_start_date": {
+                    "#docs": 3515,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "2023-04-23",
+                      "2023-10-31",
+                      "2023-12-21",
+                      "2024-01-09",
+                      "2024-02-27"
+                    ],
+                    "type": "string"
+                  },
+                  "times_shown_upper_bound": {
+                    "#docs": 3515,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      3000,
+                      6000,
+                      8000,
+                      40000,
+                      1000000
+                    ],
+                    "type": "number"
+                  }
+                },
+                "type": "object"
+              }
+            ],
+            "maxItems": 36,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "first_shown": "2024-08-13",
+                  "last_shown": "2024-10-07",
+                  "region_code": "EEA",
+                  "times_shown_availability_date": "2024-11-11"
+                },
+                {
+                  "first_shown": "2024-08-13",
+                  "last_shown": "2024-10-07",
+                  "region_code": "HU",
+                  "times_shown_availability_date": "2024-11-11"
+                }
+              ],
+              [
+                {
+                  "first_shown": "2023-03-01",
+                  "last_shown": "2024-10-06",
+                  "region_code": "EEA",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-07-09",
+                  "times_shown_lower_bound": 4000,
+                  "times_shown_start_date": "2023-03-01",
+                  "times_shown_upper_bound": 5000
+                },
+                {
+                  "first_shown": "2023-03-01",
+                  "last_shown": "2024-10-06",
+                  "region_code": "HU",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-07-09",
+                  "times_shown_lower_bound": 4000,
+                  "times_shown_start_date": "2023-03-01",
+                  "times_shown_upper_bound": 5000
+                }
+              ],
+              [
+                {
+                  "first_shown": "2023-03-01",
+                  "last_shown": "2024-10-07",
+                  "region_code": "EEA",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 2000,
+                        "times_shown_upper_bound": 3000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-07-09",
+                  "times_shown_lower_bound": 4000,
+                  "times_shown_start_date": "2023-03-01",
+                  "times_shown_upper_bound": 5000
+                },
+                {
+                  "first_shown": "2023-03-01",
+                  "last_shown": "2024-10-07",
+                  "region_code": "SI",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 2000,
+                        "times_shown_upper_bound": 3000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-07-09",
+                  "times_shown_lower_bound": 4000,
+                  "times_shown_start_date": "2023-03-01",
+                  "times_shown_upper_bound": 5000
+                }
+              ],
+              [
+                {
+                  "first_shown": "2023-04-04",
+                  "last_shown": "2024-09-22",
+                  "region_code": "EEA",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 15000,
+                        "times_shown_upper_bound": 20000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-07-09",
+                  "times_shown_lower_bound": 30000,
+                  "times_shown_start_date": "2023-04-04",
+                  "times_shown_upper_bound": 35000
+                },
+                {
+                  "first_shown": "2023-04-04",
+                  "last_shown": "2024-09-22",
+                  "region_code": "PT",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 15000,
+                        "times_shown_upper_bound": 20000
+                      },
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-07-09",
+                  "times_shown_lower_bound": 30000,
+                  "times_shown_start_date": "2023-04-04",
+                  "times_shown_upper_bound": 35000
+                }
+              ],
+              [
+                {
+                  "first_shown": "2024-01-11",
+                  "last_shown": "2024-01-15",
+                  "region_code": "EEA",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 125000,
+                        "times_shown_upper_bound": 150000
+                      },
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-01-15",
+                  "times_shown_lower_bound": 125000,
+                  "times_shown_start_date": "2024-01-11",
+                  "times_shown_upper_bound": 150000
+                },
+                {
+                  "first_shown": "2024-01-11",
+                  "last_shown": "2024-01-15",
+                  "region_code": "PL",
+                  "surface_serving_stats": {
+                    "surface_serving_stats": [
+                      {
+                        "surface": "PLAY",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "SEARCH",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "YOUTUBE",
+                        "times_shown_lower_bound": 125000,
+                        "times_shown_upper_bound": 150000
+                      },
+                      {
+                        "surface": "SHOPPING",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      },
+                      {
+                        "surface": "MAPS",
+                        "times_shown_lower_bound": 0,
+                        "times_shown_upper_bound": 1000
+                      }
+                    ]
+                  },
+                  "times_shown_end_date": "2024-01-15",
+                  "times_shown_lower_bound": 125000,
+                  "times_shown_start_date": "2024-01-11",
+                  "times_shown_upper_bound": 150000
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "topic": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Apparel",
+              "Beauty & Personal Care",
+              "Health & Beauty",
+              "Home & Garden",
+              "News, Books & Publications"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "creative_stats::287686",
+                  "creative_stats::288680",
+                  "creative_stats::312984",
+                  "creative_stats::314192",
+                  "creative_stats::366232"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "creative_stats::287686"
+              },
+              {
+                "id": "creative_stats::288680"
+              },
+              {
+                "id": "creative_stats::312984"
+              },
+              {
+                "id": "creative_stats::314192"
+              },
+              {
+                "id": "creative_stats::366232"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ad_format_type": "IMAGE",
+      "advertiser_disclosed_name": "Davli",
+      "advertiser_id": "AR09932607339427266561",
+      "advertiser_legal_name": "Davli",
+      "advertiser_location": "FR",
+      "advertiser_verification_status": "VERIFIED",
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_UNUSED",
+        "demographic_info": "CRITERIA_INCLUDED",
+        "geo_location": "CRITERIA_INCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_id": "CR16633638129512742913",
+      "creative_page_url": "https://adstransparency.google.com/advertiser/AR09932607339427266561/creative/CR16633638129512742913",
+      "is_funded_by_google_ad_grants": false,
+      "region_stats": [
+        {
+          "first_shown": "2023-03-01",
+          "last_shown": "2023-08-12",
+          "region_code": "BE",
+          "times_shown_end_date": "2023-08-12",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-04-08",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-01",
+          "last_shown": "2024-10-07",
+          "region_code": "EEA",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 2250000,
+                "times_shown_upper_bound": 2500000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 10000000,
+          "times_shown_start_date": "2023-03-01",
+          "times_shown_upper_bound": 9223372036854775807
+        },
+        {
+          "first_shown": "2023-03-01",
+          "last_shown": "2024-10-07",
+          "region_code": "FR",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 2250000,
+                "times_shown_upper_bound": 2500000
+              },
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-07-09",
+          "times_shown_lower_bound": 10000000,
+          "times_shown_start_date": "2023-03-01",
+          "times_shown_upper_bound": 9223372036854775807
+        },
+        {
+          "first_shown": "2023-07-24",
+          "last_shown": "2023-08-05",
+          "region_code": "GP",
+          "times_shown_end_date": "2023-08-05",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-07-24",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-07-18",
+          "last_shown": "2023-08-10",
+          "region_code": "GR",
+          "times_shown_end_date": "2023-08-10",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-07-18",
+          "times_shown_upper_bound": 1000
+        },
+        {
+          "first_shown": "2023-03-01",
+          "last_shown": "2023-08-13",
+          "region_code": "PT",
+          "times_shown_end_date": "2023-08-13",
+          "times_shown_lower_bound": 0,
+          "times_shown_start_date": "2023-07-19",
+          "times_shown_upper_bound": 1000
+        }
+      ],
+      "topic": "Home & Garden"
+    },
+    {
+      "ad_format_type": "VIDEO",
+      "advertiser_disclosed_name": "JONALICIA",
+      "advertiser_id": "AR11885625347984588801",
+      "advertiser_legal_name": "JONALICIA",
+      "advertiser_location": "FR",
+      "advertiser_verification_status": "VERIFIED",
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_INCLUDED",
+        "demographic_info": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "geo_location": "CRITERIA_INCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_id": "CR13862819383853711361",
+      "creative_page_url": "https://adstransparency.google.com/advertiser/AR11885625347984588801/creative/CR13862819383853711361",
+      "is_funded_by_google_ad_grants": false,
+      "region_stats": [
+        {
+          "first_shown": "2023-09-30",
+          "last_shown": "2023-10-18",
+          "region_code": "EEA",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 200000,
+                "times_shown_upper_bound": 225000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-10-18",
+          "times_shown_lower_bound": 200000,
+          "times_shown_start_date": "2023-09-30",
+          "times_shown_upper_bound": 225000
+        },
+        {
+          "first_shown": "2023-09-30",
+          "last_shown": "2023-10-18",
+          "region_code": "FR",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 200000,
+                "times_shown_upper_bound": 225000
+              }
+            ]
+          },
+          "times_shown_end_date": "2023-10-18",
+          "times_shown_lower_bound": 200000,
+          "times_shown_start_date": "2023-09-30",
+          "times_shown_upper_bound": 225000
+        }
+      ],
+      "topic": "Sports & Fitness"
+    },
+    {
+      "ad_format_type": "IMAGE",
+      "advertiser_disclosed_name": "Decathlon France SASU",
+      "advertiser_id": "AR15666691663760195585",
+      "advertiser_legal_name": "Decathlon France SASU",
+      "advertiser_location": "FR",
+      "advertiser_verification_status": "VERIFIED",
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_UNUSED",
+        "demographic_info": "CRITERIA_UNUSED",
+        "geo_location": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_id": "CR11640736414529748993",
+      "creative_page_url": "https://adstransparency.google.com/advertiser/AR15666691663760195585/creative/CR11640736414529748993",
+      "is_funded_by_google_ad_grants": false,
+      "region_stats": [
+        {
+          "first_shown": "2024-02-19",
+          "last_shown": "2024-02-20",
+          "region_code": "EEA",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 1000,
+                "times_shown_upper_bound": 2000
+              },
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 3000,
+                "times_shown_upper_bound": 4000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 200000,
+                "times_shown_upper_bound": 225000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-02-20",
+          "times_shown_lower_bound": 200000,
+          "times_shown_start_date": "2024-02-19",
+          "times_shown_upper_bound": 225000
+        },
+        {
+          "first_shown": "2024-02-19",
+          "last_shown": "2024-02-20",
+          "region_code": "FR",
+          "surface_serving_stats": {
+            "surface_serving_stats": [
+              {
+                "surface": "SHOPPING",
+                "times_shown_lower_bound": 1000,
+                "times_shown_upper_bound": 2000
+              },
+              {
+                "surface": "SEARCH",
+                "times_shown_lower_bound": 200000,
+                "times_shown_upper_bound": 225000
+              },
+              {
+                "surface": "YOUTUBE",
+                "times_shown_lower_bound": 3000,
+                "times_shown_upper_bound": 4000
+              },
+              {
+                "surface": "MAPS",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              },
+              {
+                "surface": "PLAY",
+                "times_shown_lower_bound": 0,
+                "times_shown_upper_bound": 1000
+              }
+            ]
+          },
+          "times_shown_end_date": "2024-02-20",
+          "times_shown_lower_bound": 200000,
+          "times_shown_start_date": "2024-02-19",
+          "times_shown_upper_bound": 225000
+        }
+      ],
+      "topic": "Sporting Goods"
+    },
+    {
+      "ad_format_type": "IMAGE",
+      "advertiser_disclosed_name": "LEGO COMPANY LIMITED",
+      "advertiser_id": "AR00944276150895509505",
+      "advertiser_legal_name": "LEGO COMPANY LIMITED",
+      "advertiser_location": "GB",
+      "advertiser_verification_status": "VERIFIED",
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "demographic_info": "CRITERIA_UNUSED",
+        "geo_location": "CRITERIA_INCLUDED",
+        "topics_of_interest": "CRITERIA_UNUSED"
+      },
+      "creative_id": "CR09638498115120005121",
+      "creative_page_url": "https://adstransparency.google.com/advertiser/AR00944276150895509505/creative/CR09638498115120005121",
+      "is_funded_by_google_ad_grants": false,
+      "region_stats": [
+        {
+          "first_shown": "2024-08-14",
+          "last_shown": "2024-08-16",
+          "region_code": "EEA",
+          "times_shown_availability_date": "2024-11-12"
+        },
+        {
+          "first_shown": "2024-08-14",
+          "last_shown": "2024-08-16",
+          "region_code": "NL",
+          "times_shown_availability_date": "2024-11-12"
+        }
+      ],
+      "topic": "Hobbies, Games & Leisure"
+    },
+    {
+      "ad_format_type": "IMAGE",
+      "advertiser_disclosed_name": "JPMorgan Asset Management (UK) Ltd",
+      "advertiser_id": "AR01222267874769371137",
+      "advertiser_legal_name": "JPMorgan Asset Management (UK) Ltd",
+      "advertiser_location": "GB",
+      "advertiser_verification_status": "VERIFIED",
+      "audience_selection_approach_info": {
+        "contextual_signals": "CRITERIA_INCLUDED_AND_EXCLUDED",
+        "customer_lists": "CRITERIA_INCLUDED",
+        "demographic_info": "CRITERIA_INCLUDED",
+        "geo_location": "CRITERIA_INCLUDED",
+        "topics_of_interest": "CRITERIA_INCLUDED"
+      },
+      "creative_id": "CR09086370706190499841",
+      "creative_page_url": "https://adstransparency.google.com/advertiser/AR01222267874769371137/creative/CR09086370706190499841",
+      "is_funded_by_google_ad_grants": false,
+      "region_stats": [
+        {
+          "first_shown": "2024-08-08",
+          "last_shown": "2024-10-07",
+          "region_code": "EEA",
+          "times_shown_availability_date": "2024-11-06"
+        },
+        {
+          "first_shown": "2024-08-08",
+          "last_shown": "2024-10-07",
+          "region_code": "LU",
+          "times_shown_availability_date": "2024-11-06"
+        }
+      ],
+      "topic": "Finance"
+    }
+  ]
+}

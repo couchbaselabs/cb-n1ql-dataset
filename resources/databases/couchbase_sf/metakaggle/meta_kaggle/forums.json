@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              779845,
+              1898087,
+              2880032,
+              3108978,
+              3374937
+            ],
+            "type": "number"
+          },
+          "ParentForumId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              8,
+              52,
+              1023,
+              2578766
+            ],
+            "type": "number"
+          },
+          "Title": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Inria_70_15_15",
+              "Valiya Babji",
+              "[orphaned from bad competition...",
+              "flower_data_pro",
+              "melanoma 400 cv"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "forums::128477",
+                  "forums::157275",
+                  "forums::177241",
+                  "forums::178519",
+                  "forums::19082"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "forums::128477"
+              },
+              {
+                "id": "forums::157275"
+              },
+              {
+                "id": "forums::177241"
+              },
+              {
+                "id": "forums::178519"
+              },
+              {
+                "id": "forums::19082"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Id": 3360625,
+      "ParentForumId": 1023,
+      "Title": "main64best"
+    },
+    {
+      "Id": 819940,
+      "ParentForumId": 1023,
+      "Title": "maogoudada"
+    },
+    {
+      "Id": 3246764,
+      "ParentForumId": 1023,
+      "Title": "mariocode1"
+    },
+    {
+      "Id": 1857377,
+      "ParentForumId": 1023,
+      "Title": "mind-small"
+    },
+    {
+      "Id": 5245959,
+      "ParentForumId": 1023,
+      "Title": "mirte-data"
+    }
+  ]
+}

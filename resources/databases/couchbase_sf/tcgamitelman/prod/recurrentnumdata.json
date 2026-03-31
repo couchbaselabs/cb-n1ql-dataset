@@ -1,0 +1,155 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Abnormality` = \"+1\", `ChrOrder` = 1, `Chromosome` = \"1\"",
+        "properties": {
+          "Abnormality": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "+1"
+            ],
+            "type": "string"
+          },
+          "ChrOrder": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "Chromosome": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1"
+            ],
+            "type": "string"
+          },
+          "Morph": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1101",
+              "1104",
+              "1107",
+              "1112",
+              "1202"
+            ],
+            "type": "string"
+          },
+          "Topo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TotalCases": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "182",
+              "32",
+              "36",
+              "37"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "recurrentnumdata::0",
+                  "recurrentnumdata::1",
+                  "recurrentnumdata::2",
+                  "recurrentnumdata::3",
+                  "recurrentnumdata::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "recurrentnumdata::0"
+              },
+              {
+                "id": "recurrentnumdata::1"
+              },
+              {
+                "id": "recurrentnumdata::2"
+              },
+              {
+                "id": "recurrentnumdata::3"
+              },
+              {
+                "id": "recurrentnumdata::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Abnormality": "+1",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Morph": "1107",
+      "Topo": null,
+      "TotalCases": "32"
+    },
+    {
+      "Abnormality": "+1",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Morph": "1112",
+      "Topo": null,
+      "TotalCases": "37"
+    },
+    {
+      "Abnormality": "+1",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Morph": "1202",
+      "Topo": null,
+      "TotalCases": "36"
+    },
+    {
+      "Abnormality": "+1",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Morph": "1104",
+      "Topo": null,
+      "TotalCases": "37"
+    },
+    {
+      "Abnormality": "+1",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Morph": "1101",
+      "Topo": null,
+      "TotalCases": "182"
+    }
+  ]
+}

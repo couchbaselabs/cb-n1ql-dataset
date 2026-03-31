@@ -1,0 +1,198 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`is_erc20` = false, `is_erc721` = false",
+        "properties": {
+          "address": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x1a04ff8b67e8cf7edf772def8b54...",
+              "0x3de78207dc72ae6a861344b9a922...",
+              "0x3f5e784e6c6f449e113dfcfc6bfd...",
+              "0xdf26f0f1ef7a2aa724d042c5dc62...",
+              "0xf353eba063eb7cd41515050c98ed..."
+            ],
+            "type": "string"
+          },
+          "block_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x19e8503608feafe444e55be8da7a...",
+              "0x44f76b597ade4b75bb26d31c5016...",
+              "0x5ab80e6cf42ee058b0edf761519e...",
+              "0x6d947703a3563c6180ed6c89ab98...",
+              "0x7d9cb6a2275679894d42ee2fa09c..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5312466,
+              5439020,
+              6729447,
+              8125505,
+              19284660
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1521885486000000,
+              1523708310000000,
+              1542572636000000,
+              1562789125000000,
+              1708623251000000
+            ],
+            "type": "number"
+          },
+          "bytecode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x3d3d33735de4839a76cf55d0c90e...",
+              "0x6060604052341561000f57600080...",
+              "0x606060405273ccc1d3102703418c..."
+            ],
+            "type": "string"
+          },
+          "function_sighashes": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "is_erc20": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "is_erc721": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "contracts::0",
+                  "contracts::1",
+                  "contracts::2",
+                  "contracts::3",
+                  "contracts::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "contracts::0"
+              },
+              {
+                "id": "contracts::1"
+              },
+              {
+                "id": "contracts::2"
+              },
+              {
+                "id": "contracts::3"
+              },
+              {
+                "id": "contracts::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "0xdf26f0f1ef7a2aa724d042c5dc62ed78de7114de",
+      "block_hash": "0x6d947703a3563c6180ed6c89ab9888d239e86aa88e549659293df1b3f2431bd5",
+      "block_number": 6729447,
+      "block_timestamp": 1542572636000000,
+      "bytecode": "0x6060604052341561000f57600080fd5b6000610019610141565b6000805473ffffffffffffffffffffffffffffffffffffffff16906313e7c9d8903290604051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff841602815273ffffffffffffffffffffffffffffffffffffffff9091166004820152602401602060405180830381600087803b15156100a757600080fd5b6102c65a03f115156100b857600080fd5b5050506040518051905015156100cd57600080fd5b60015473ffffffffffffffffffffffffffffffffffffffff169150600036806020601f820181900481020160405190810160405281815292919060208401838380828437509495506040945050505050516000818351602085016000875af13d806000843e81801561013d578184f35b8184fd5b602060405190810160405260008152905600a165627a7a723058202808c79164fe8b48c88735a3375ed8cf247b67ba22a14506e658603a0d3a25db0029",
+      "function_sighashes": [],
+      "is_erc20": false,
+      "is_erc721": false
+    },
+    {
+      "address": "0x3de78207dc72ae6a861344b9a9224fd862788104",
+      "block_hash": "0x5ab80e6cf42ee058b0edf761519ec472a8963ea2727c09a7f7dd39d642df1f6b",
+      "block_number": 5312466,
+      "block_timestamp": 1521885486000000,
+      "bytecode": "0x6060604052341561000f57600080fd5b6000610019610141565b6000805473ffffffffffffffffffffffffffffffffffffffff16906313e7c9d8903290604051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff841602815273ffffffffffffffffffffffffffffffffffffffff9091166004820152602401602060405180830381600087803b15156100a757600080fd5b6102c65a03f115156100b857600080fd5b5050506040518051905015156100cd57600080fd5b60015473ffffffffffffffffffffffffffffffffffffffff169150600036806020601f820181900481020160405190810160405281815292919060208401838380828437509495506040945050505050516000818351602085016000875af13d806000843e81801561013d578184f35b8184fd5b602060405190810160405260008152905600a165627a7a723058202808c79164fe8b48c88735a3375ed8cf247b67ba22a14506e658603a0d3a25db0029",
+      "function_sighashes": [],
+      "is_erc20": false,
+      "is_erc721": false
+    },
+    {
+      "address": "0x3f5e784e6c6f449e113dfcfc6bfda2009c10469c",
+      "block_hash": "0x19e8503608feafe444e55be8da7ab58130b86f5ec09145990ccc788d91477396",
+      "block_number": 19284660,
+      "block_timestamp": 1708623251000000,
+      "bytecode": "0x3d3d33735de4839a76cf55d0c90e2061ef4386d962e15ae314605757363d3d37363d7f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e6052573d6000fd5b3d6000f35b3d356020355560408036111560525736038060403d373d3d355af43d6000803e6052573d6000fd",
+      "function_sighashes": [],
+      "is_erc20": false,
+      "is_erc721": false
+    },
+    {
+      "address": "0xf353eba063eb7cd41515050c98ed7dfffdf2937d",
+      "block_hash": "0x7d9cb6a2275679894d42ee2fa09c79b47431d4b93fa15d72795435035c99a126",
+      "block_number": 8125505,
+      "block_timestamp": 1562789125000000,
+      "bytecode": "0x6060604052341561000f57600080fd5b6000610019610141565b6000805473ffffffffffffffffffffffffffffffffffffffff16906313e7c9d8903290604051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff841602815273ffffffffffffffffffffffffffffffffffffffff9091166004820152602401602060405180830381600087803b15156100a757600080fd5b6102c65a03f115156100b857600080fd5b5050506040518051905015156100cd57600080fd5b60015473ffffffffffffffffffffffffffffffffffffffff169150600036806020601f820181900481020160405190810160405281815292919060208401838380828437509495506040945050505050516000818351602085016000875af13d806000843e81801561013d578184f35b8184fd5b602060405190810160405260008152905600a165627a7a723058202808c79164fe8b48c88735a3375ed8cf247b67ba22a14506e658603a0d3a25db0029",
+      "function_sighashes": [],
+      "is_erc20": false,
+      "is_erc721": false
+    },
+    {
+      "address": "0x1a04ff8b67e8cf7edf772def8b54d564ef49eaa4",
+      "block_hash": "0x44f76b597ade4b75bb26d31c501647916b99cf605fd5254cdfdae12d2f83b3c6",
+      "block_number": 5439020,
+      "block_timestamp": 1523708310000000,
+      "bytecode": "0x606060405273ccc1d3102703418cfda055ce688867268563b3e63373ffffffffffffffffffffffffffffffffffffffff168114603a57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a7230582070de39f94ebac145bcf967b6a6a6eb07f52dec622baf939fd92c51dabf6b333a0029",
+      "function_sighashes": [],
+      "is_erc20": false,
+      "is_erc721": false
+    }
+  ]
+}

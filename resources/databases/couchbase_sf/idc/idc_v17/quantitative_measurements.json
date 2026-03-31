@@ -1,0 +1,649 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`derivationModifier` = \"null\"",
+        "properties": {
+          "PatientID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "203166",
+              "203536",
+              "LIDC-IDRI-0388",
+              "LUNG1-183",
+              "LUNG1-250"
+            ],
+            "type": "string"
+          },
+          "Quantity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Diameter",
+                  "Elongation",
+                  "Least Axis in 3D Length",
+                  "Surface Area of Mesh",
+                  "Volume from Voxel Summation"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "7J51",
+                  "C0JK",
+                  "M-02550",
+                  "Q3CK",
+                  "YEKZ"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "IBSI",
+                  "SRT"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "Diameter",
+                "CodeValue": "M-02550",
+                "CodingSchemeDesignator": "SRT"
+              },
+              {
+                "CodeMeaning": "Elongation",
+                "CodeValue": "Q3CK",
+                "CodingSchemeDesignator": "IBSI"
+              },
+              {
+                "CodeMeaning": "Least Axis in 3D Length",
+                "CodeValue": "7J51",
+                "CodingSchemeDesignator": "IBSI"
+              },
+              {
+                "CodeMeaning": "Surface Area of Mesh",
+                "CodeValue": "C0JK",
+                "CodingSchemeDesignator": "IBSI"
+              },
+              {
+                "CodeMeaning": "Volume from Voxel Summation",
+                "CodeValue": "YEKZ",
+                "CodingSchemeDesignator": "IBSI"
+              }
+            ],
+            "type": "object"
+          },
+          "SOPInstanceUID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.2.276.0.7230010.3.1.4.0.2410...",
+              "1.2.276.0.7230010.3.1.4.481037...",
+              "1.2.276.0.7230010.3.1.4.481037...",
+              "1.2.276.0.7230010.3.1.4.481037...",
+              "1.2.276.0.7230010.3.1.4.481037..."
+            ],
+            "type": "string"
+          },
+          "SeriesDescription": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3d_fullres-tta_nnU-Net_Measure...",
+              "3d_lowres-tta_nnU-Net_Measurem...",
+              "Nodule 1 - Annotation 166180 e...",
+              "Nodule 10 - Annotation IL057_1...",
+              "Nodule 4 - Annotation MI014_20..."
+            ],
+            "type": "string"
+          },
+          "Units": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cubic millimeter",
+                  "millimeter",
+                  "no units",
+                  "per millimeter",
+                  "square millimeter"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "/mm",
+                  "1",
+                  "mm",
+                  "mm2",
+                  "mm3"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "UCUM"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "cubic millimeter",
+                "CodeValue": "mm3",
+                "CodingSchemeDesignator": "UCUM"
+              },
+              {
+                "CodeMeaning": "millimeter",
+                "CodeValue": "mm",
+                "CodingSchemeDesignator": "UCUM"
+              },
+              {
+                "CodeMeaning": "no units",
+                "CodeValue": "1",
+                "CodingSchemeDesignator": "UCUM"
+              },
+              {
+                "CodeMeaning": "per millimeter",
+                "CodeValue": "/mm",
+                "CodingSchemeDesignator": "UCUM"
+              },
+              {
+                "CodeMeaning": "square millimeter",
+                "CodeValue": "mm2",
+                "CodingSchemeDesignator": "UCUM"
+              }
+            ],
+            "type": "object"
+          },
+          "Value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.502,
+              5.816236,
+              30.585,
+              32.032,
+              149605.751
+            ],
+            "type": "number"
+          },
+          "derivationModifier": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "null"
+            ],
+            "type": "string"
+          },
+          "finding": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Nodule",
+                  "Normal",
+                  "Organ"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "113343008",
+                  "G-A460",
+                  "M-03010"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "SCT",
+                  "SRT"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "Nodule",
+                "CodeValue": "M-03010",
+                "CodingSchemeDesignator": "SRT"
+              },
+              {
+                "CodeMeaning": "Normal",
+                "CodeValue": "G-A460",
+                "CodingSchemeDesignator": "SRT"
+              },
+              {
+                "CodeMeaning": "Organ",
+                "CodeValue": "113343008",
+                "CodingSchemeDesignator": "SCT"
+              }
+            ],
+            "type": "object"
+          },
+          "findingSite": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Aorta",
+                  "Esophagus",
+                  "Heart",
+                  "Lung",
+                  "Trachea"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "15825003",
+                  "32849002",
+                  "44567001",
+                  "80891009",
+                  "T-28000"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "SCT",
+                  "SRT"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "Aorta",
+                "CodeValue": "15825003",
+                "CodingSchemeDesignator": "SCT"
+              },
+              {
+                "CodeMeaning": "Esophagus",
+                "CodeValue": "32849002",
+                "CodingSchemeDesignator": "SCT"
+              },
+              {
+                "CodeMeaning": "Heart",
+                "CodeValue": "80891009",
+                "CodingSchemeDesignator": "SCT"
+              },
+              {
+                "CodeMeaning": "Lung",
+                "CodeValue": "T-28000",
+                "CodingSchemeDesignator": "SRT"
+              },
+              {
+                "CodeMeaning": "Trachea",
+                "CodeValue": "44567001",
+                "CodingSchemeDesignator": "SCT"
+              }
+            ],
+            "type": "object"
+          },
+          "measurementGroup_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "segmentationInstanceUID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.2.276.0.7230010.3.1.4.0.2410...",
+              "1.2.276.0.7230010.3.1.4.481034...",
+              "1.2.276.0.7230010.3.1.4.481034...",
+              "1.2.276.0.7230010.3.1.4.481034...",
+              "1.2.276.0.7230010.3.1.4.481034..."
+            ],
+            "type": "string"
+          },
+          "segmentationSegmentNumber": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "type": "array"
+          },
+          "sourceSegmentedSeriesUID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.3.6.1.4.1.14519.5.2.1.6279.6...",
+              "1.3.6.1.4.1.14519.5.2.1.7009.9...",
+              "1.3.6.1.4.1.14519.5.2.1.7009.9...",
+              "1.3.6.1.4.1.32722.99.99.110943...",
+              "1.3.6.1.4.1.32722.99.99.249261..."
+            ],
+            "type": "string"
+          },
+          "trackingIdentifier": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Measurements group 1",
+              "Measurements group 4",
+              "Nodule 1",
+              "Nodule 10",
+              "Nodule 4"
+            ],
+            "type": "string"
+          },
+          "trackingUniqueIdentifier": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.3.6.1.4.1.43046.3.1.4.481034...",
+              "1.3.6.1.4.1.43046.3.1.4.481034...",
+              "1.3.6.1.4.1.43046.3.1.4.481034...",
+              "1.3.6.1.4.1.43046.3.1.4.481034...",
+              "2.25.1045017586216721714114824..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "quantitative_measurements::125...",
+                  "quantitative_measurements::135...",
+                  "quantitative_measurements::146...",
+                  "quantitative_measurements::152...",
+                  "quantitative_measurements::152..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "quantitative_measurements::125555"
+              },
+              {
+                "id": "quantitative_measurements::135351"
+              },
+              {
+                "id": "quantitative_measurements::14655"
+              },
+              {
+                "id": "quantitative_measurements::152529"
+              },
+              {
+                "id": "quantitative_measurements::152531"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "PatientID": "LUNG1-111",
+      "Quantity": {
+        "CodeMeaning": "Volume from Voxel Summation",
+        "CodeValue": "YEKZ",
+        "CodingSchemeDesignator": "IBSI"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.481037312.24158.1685070935.356449",
+      "SeriesDescription": "3d_lowres-tta_nnU-Net_Measurements",
+      "Units": {
+        "CodeMeaning": "cubic millimeter",
+        "CodeValue": "mm3",
+        "CodingSchemeDesignator": "UCUM"
+      },
+      "Value": 33345.222,
+      "derivationModifier": "null",
+      "finding": {
+        "CodeMeaning": "Organ",
+        "CodeValue": "113343008",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Trachea",
+        "CodeValue": "44567001",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "measurementGroup_number": 2,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.481034752.90572.1665632334.642166",
+      "segmentationSegmentNumber": [
+        3
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.32722.99.99.211220317471491860252302145015280121711",
+      "trackingIdentifier": "Measurements group 3",
+      "trackingUniqueIdentifier": "1.3.6.1.4.1.43046.3.1.4.481034752.91084.1665632381.505035"
+    },
+    {
+      "PatientID": "107151",
+      "Quantity": {
+        "CodeMeaning": "Volume of Mesh",
+        "CodeValue": "RNU0",
+        "CodingSchemeDesignator": "IBSI"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.481037312.20375.1685065981.240996",
+      "SeriesDescription": "3d_fullres-tta_nnU-Net_Measurements",
+      "Units": {
+        "CodeMeaning": "cubic millimeter",
+        "CodeValue": "mm3",
+        "CodingSchemeDesignator": "UCUM"
+      },
+      "Value": 70109.782,
+      "derivationModifier": "null",
+      "finding": {
+        "CodeMeaning": "Organ",
+        "CodeValue": "113343008",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Trachea",
+        "CodeValue": "44567001",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "measurementGroup_number": 2,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.481034752.90639.1661505355.689162",
+      "segmentationSegmentNumber": [
+        3
+      ],
+      "sourceSegmentedSeriesUID": "1.2.840.113654.2.55.153809938501803691882470179510604553143",
+      "trackingIdentifier": "Measurements group 3",
+      "trackingUniqueIdentifier": "1.3.6.1.4.1.43046.3.1.4.481034752.91151.1661505402.134327"
+    },
+    {
+      "PatientID": "LUNG1-346",
+      "Quantity": {
+        "CodeMeaning": "Sphericity",
+        "CodeValue": "QCFX",
+        "CodingSchemeDesignator": "IBSI"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.481037312.24323.1685070941.473427",
+      "SeriesDescription": "3d_lowres-tta_nnU-Net_Measurements",
+      "Units": {
+        "CodeMeaning": "no units",
+        "CodeValue": "1",
+        "CodingSchemeDesignator": "UCUM"
+      },
+      "Value": 0.468,
+      "derivationModifier": "null",
+      "finding": {
+        "CodeMeaning": "Organ",
+        "CodeValue": "113343008",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Trachea",
+        "CodeValue": "44567001",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "measurementGroup_number": 2,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.481034752.91261.1665632504.740479",
+      "segmentationSegmentNumber": [
+        3
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.32722.99.99.21176465357969264011307680784798645123",
+      "trackingIdentifier": "Measurements group 3",
+      "trackingUniqueIdentifier": "1.3.6.1.4.1.43046.3.1.4.481034752.91773.1665632534.493572"
+    },
+    {
+      "PatientID": "LUNG1-020",
+      "Quantity": {
+        "CodeMeaning": "Maximum 3D Diameter of a Mesh",
+        "CodeValue": "L0JK",
+        "CodingSchemeDesignator": "IBSI"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.481037312.34229.1685071321.972518",
+      "SeriesDescription": "3d_fullres-tta_nnU-Net_Measurements",
+      "Units": {
+        "CodeMeaning": "millimeter",
+        "CodeValue": "mm",
+        "CodingSchemeDesignator": "UCUM"
+      },
+      "Value": 162.103,
+      "derivationModifier": "null",
+      "finding": {
+        "CodeMeaning": "Organ",
+        "CodeValue": "113343008",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Trachea",
+        "CodeValue": "44567001",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "measurementGroup_number": 2,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.481034752.95131.1664317685.659543",
+      "segmentationSegmentNumber": [
+        3
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.32722.99.99.252985934944355749520800390041687397384",
+      "trackingIdentifier": "Measurements group 3",
+      "trackingUniqueIdentifier": "1.3.6.1.4.1.43046.3.1.4.481034752.95643.1664317713.846110"
+    },
+    {
+      "PatientID": "LUNG1-020",
+      "Quantity": {
+        "CodeMeaning": "Surface to Volume Ratio",
+        "CodeValue": "2PR5",
+        "CodingSchemeDesignator": "IBSI"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.481037312.34229.1685071321.972518",
+      "SeriesDescription": "3d_fullres-tta_nnU-Net_Measurements",
+      "Units": {
+        "CodeMeaning": "per millimeter",
+        "CodeValue": "/mm",
+        "CodingSchemeDesignator": "UCUM"
+      },
+      "Value": 0.29,
+      "derivationModifier": "null",
+      "finding": {
+        "CodeMeaning": "Organ",
+        "CodeValue": "113343008",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Trachea",
+        "CodeValue": "44567001",
+        "CodingSchemeDesignator": "SCT"
+      },
+      "measurementGroup_number": 2,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.481034752.95131.1664317685.659543",
+      "segmentationSegmentNumber": [
+        3
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.32722.99.99.252985934944355749520800390041687397384",
+      "trackingIdentifier": "Measurements group 3",
+      "trackingUniqueIdentifier": "1.3.6.1.4.1.43046.3.1.4.481034752.95643.1664317713.846110"
+    }
+  ]
+}

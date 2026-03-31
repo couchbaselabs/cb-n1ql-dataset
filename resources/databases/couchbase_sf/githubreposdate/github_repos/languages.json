@@ -1,0 +1,233 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "language": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 2326,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "bytes": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    4399,
+                    4894,
+                    10227,
+                    21626,
+                    342204
+                  ],
+                  "type": "number"
+                },
+                "name": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "C#",
+                    "Haskell",
+                    "Java",
+                    "Lua",
+                    "Objective-C"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 20,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "bytes": 4894,
+                  "name": "C#"
+                }
+              ],
+              [
+                {
+                  "bytes": 6122,
+                  "name": "HTML"
+                },
+                {
+                  "bytes": 33885,
+                  "name": "JavaScript"
+                }
+              ],
+              [
+                {
+                  "bytes": 19417,
+                  "name": "CSS"
+                },
+                {
+                  "bytes": 7576,
+                  "name": "HTML"
+                },
+                {
+                  "bytes": 2967,
+                  "name": "JavaScript"
+                }
+              ],
+              [
+                {
+                  "bytes": 208141,
+                  "name": "Go"
+                },
+                {
+                  "bytes": 1276,
+                  "name": "Makefile"
+                },
+                {
+                  "bytes": 55,
+                  "name": "Shell"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "repo_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TrickKey/TrickKey.github.io",
+              "asannou/vuls",
+              "fuku518/ShinyLine2WPF",
+              "nknapp/customize",
+              "simulationcoin/newgethslopepro..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "languages::1012269",
+                  "languages::1071048",
+                  "languages::1266689",
+                  "languages::1481020",
+                  "languages::1633143"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "languages::1012269"
+              },
+              {
+                "id": "languages::1071048"
+              },
+              {
+                "id": "languages::1266689"
+              },
+              {
+                "id": "languages::1481020"
+              },
+              {
+                "id": "languages::1633143"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "language": [
+        {
+          "bytes": 3190,
+          "name": "CSS"
+        },
+        {
+          "bytes": 2569,
+          "name": "HTML"
+        },
+        {
+          "bytes": 405,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "gecugamo/Simple-Accordion"
+    },
+    {
+      "language": [
+        {
+          "bytes": 3527,
+          "name": "CSS"
+        },
+        {
+          "bytes": 11623,
+          "name": "HTML"
+        },
+        {
+          "bytes": 25150,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "fiddleplum/notes"
+    },
+    {
+      "language": [
+        {
+          "bytes": 6144,
+          "name": "CSS"
+        },
+        {
+          "bytes": 23119,
+          "name": "HTML"
+        },
+        {
+          "bytes": 751532,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "Kalimaha/spartimm-app"
+    },
+    {
+      "language": [
+        {
+          "bytes": 26816,
+          "name": "CoffeeScript"
+        },
+        {
+          "bytes": 1217,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "nodesphere/nodesphere"
+    },
+    {
+      "language": [
+        {
+          "bytes": 1999,
+          "name": "CSS"
+        },
+        {
+          "bytes": 344,
+          "name": "HTML"
+        },
+        {
+          "bytes": 59303,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "atomdmac/roc-game-dev-gallery"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "case_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2:05-cv-06445",
+              "2:06-cv-00053"
+            ],
+            "type": "string"
+          },
+          "case_row_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "35376",
+              "35523"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Jack Sutton",
+              "Peters Jewelers",
+              "Peters Motor Cuts"
+            ],
+            "type": "string"
+          },
+          "name_row_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "234351",
+              "234352",
+              "235648",
+              "235649",
+              "235650"
+            ],
+            "type": "string"
+          },
+          "party_row_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "186960",
+              "186961",
+              "187912",
+              "187913",
+              "187914"
+            ],
+            "type": "string"
+          },
+          "party_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "names::0",
+                  "names::1",
+                  "names::2",
+                  "names::3",
+                  "names::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "names::0"
+              },
+              {
+                "id": "names::1"
+              },
+              {
+                "id": "names::2"
+              },
+              {
+                "id": "names::3"
+              },
+              {
+                "id": "names::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "case_number": "2:06-cv-00053",
+      "case_row_id": "35523",
+      "name": "Peters Jewelers",
+      "name_row_count": "235648",
+      "party_row_count": "187912",
+      "party_type": null
+    },
+    {
+      "case_number": "2:06-cv-00053",
+      "case_row_id": "35523",
+      "name": "Peters Motor Cuts",
+      "name_row_count": "235650",
+      "party_row_count": "187914",
+      "party_type": null
+    },
+    {
+      "case_number": "2:05-cv-06445",
+      "case_row_id": "35376",
+      "name": "Jack Sutton",
+      "name_row_count": "234352",
+      "party_row_count": "186961",
+      "party_type": null
+    },
+    {
+      "case_number": "2:05-cv-06445",
+      "case_row_id": "35376",
+      "name": "Jack Sutton",
+      "name_row_count": "234351",
+      "party_row_count": "186960",
+      "party_type": null
+    },
+    {
+      "case_number": "2:06-cv-00053",
+      "case_row_id": "35523",
+      "name": "Peters Motor Cuts",
+      "name_row_count": "235649",
+      "party_row_count": "187913",
+      "party_type": null
+    }
+  ]
+}

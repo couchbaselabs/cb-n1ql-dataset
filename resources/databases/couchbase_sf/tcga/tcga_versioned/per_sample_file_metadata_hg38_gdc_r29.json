@@ -1,0 +1,413 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`access` = \"controlled\", `acl` = \"phs000178\", `data_category` = \"Sequencing Reads\", `data_format` = \"BAM\", `data_type` = \"Aligned Reads\", `file_type` = \"aligned_reads\", `platform` = \"Illumina\", `program_name` = \"TCGA\", `project_short_name` = \"TCGA-OV\", `project_short_name_suffix` = \"OV\", `sample_type_name` = \"Primary Tumor\"",
+        "properties": {
+          "access": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "controlled"
+            ],
+            "type": "string"
+          },
+          "acl": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "phs000178"
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-09-2051",
+              "TCGA-24-0980",
+              "TCGA-29-1693",
+              "TCGA-29-1694",
+              "TCGA-72-4236"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "02594e5e-8751-47c1-9245-90c669...",
+              "1db60f09-7f5a-4f21-8003-06a6ab...",
+              "6fb71a0c-bc50-48c8-acfa-db94be...",
+              "c8e0008e-00e9-4868-8b38-227fea...",
+              "d1eeaca3-52c0-4a0c-916a-fd64ce..."
+            ],
+            "type": "string"
+          },
+          "data_category": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Sequencing Reads"
+            ],
+            "type": "string"
+          },
+          "data_format": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BAM"
+            ],
+            "type": "string"
+          },
+          "data_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aligned Reads"
+            ],
+            "type": "string"
+          },
+          "experimental_strategy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WXS",
+              "miRNA-Seq"
+            ],
+            "type": "string"
+          },
+          "file_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "21da9007-e3d2-4ce9-b524-205597...",
+              "6d301032-ef19-4f48-8139-9fc668...",
+              "72836f35-b1e5-46fa-9dd1-43eb92...",
+              "abf478a1-285d-4459-b0c6-a8634e...",
+              "e5bb4b00-06d4-4c9b-9654-518bc1..."
+            ],
+            "type": "string"
+          },
+          "file_name_key": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "gs://gdc-tcga-phs000178-contro...",
+              "gs://gdc-tcga-phs000178-contro...",
+              "gs://gdc-tcga-phs000178-contro...",
+              "gs://gdc-tcga-phs000178-contro...",
+              "gs://gdc-tcga-phs000178-contro..."
+            ],
+            "type": "string"
+          },
+          "file_size": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              39632761,
+              180485570,
+              20209040769,
+              26067472424,
+              27004373200
+            ],
+            "type": "number"
+          },
+          "file_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "aligned_reads"
+            ],
+            "type": "string"
+          },
+          "index_file_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "13b1d68c-5751-43a6-ba52-052c8a...",
+              "4fad0a83-be8c-46e1-b1c1-ca59af...",
+              "6e63b839-f136-4555-9b49-5737fb...",
+              "da4c6404-0f16-4218-98e6-0b2636...",
+              "f31d7f86-3e08-4973-afc1-9abb6b..."
+            ],
+            "type": "string"
+          },
+          "index_file_name_key": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "gs://gdc-tcga-phs000178-contro...",
+              "gs://gdc-tcga-phs000178-contro...",
+              "gs://gdc-tcga-phs000178-contro...",
+              "gs://gdc-tcga-phs000178-contro...",
+              "gs://gdc-tcga-phs000178-contro..."
+            ],
+            "type": "string"
+          },
+          "index_file_size": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2110296,
+              3144568,
+              6303904,
+              7365896,
+              7675864
+            ],
+            "type": "number"
+          },
+          "platform": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Illumina"
+            ],
+            "type": "string"
+          },
+          "program_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-OV"
+            ],
+            "type": "string"
+          },
+          "project_short_name_suffix": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OV"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-09-2051-01A",
+              "TCGA-24-0980-01A",
+              "TCGA-29-1693-01A",
+              "TCGA-29-1694-01A",
+              "TCGA-72-4236-01A"
+            ],
+            "type": "string"
+          },
+          "sample_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "13caa1a6-03a5-4fcf-9b54-4dfa86...",
+              "4d74ff85-24e2-4e93-aa23-94d58e...",
+              "c46d2ade-620c-44a6-93ba-8edda9...",
+              "d2713ae1-4993-415c-8bb3-a69dd3...",
+              "e029f019-fe77-43da-b999-52f4c0..."
+            ],
+            "type": "string"
+          },
+          "sample_type_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Primary Tumor"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "per_sample_file_metadata_hg38_...",
+                  "per_sample_file_metadata_hg38_...",
+                  "per_sample_file_metadata_hg38_...",
+                  "per_sample_file_metadata_hg38_...",
+                  "per_sample_file_metadata_hg38_..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "per_sample_file_metadata_hg38_gdc_r29::0"
+              },
+              {
+                "id": "per_sample_file_metadata_hg38_gdc_r29::1"
+              },
+              {
+                "id": "per_sample_file_metadata_hg38_gdc_r29::2"
+              },
+              {
+                "id": "per_sample_file_metadata_hg38_gdc_r29::3"
+              },
+              {
+                "id": "per_sample_file_metadata_hg38_gdc_r29::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "access": "controlled",
+      "acl": "phs000178",
+      "case_barcode": "TCGA-72-4236",
+      "case_gdc_id": "c8e0008e-00e9-4868-8b38-227fea246885",
+      "data_category": "Sequencing Reads",
+      "data_format": "BAM",
+      "data_type": "Aligned Reads",
+      "experimental_strategy": "miRNA-Seq",
+      "file_gdc_id": "e5bb4b00-06d4-4c9b-9654-518bc1660672",
+      "file_name_key": "gs://gdc-tcga-phs000178-controlled/e5bb4b00-06d4-4c9b-9654-518bc1660672/TCGA-72-4236-01A-01R-1013-13_GRCh37-lite_mirna_gdc_realn.bam",
+      "file_size": 39632761,
+      "file_type": "aligned_reads",
+      "index_file_id": "6e63b839-f136-4555-9b49-5737fbfe9fe0",
+      "index_file_name_key": "gs://gdc-tcga-phs000178-controlled/6e63b839-f136-4555-9b49-5737fbfe9fe0/TCGA-72-4236-01A-01R-1013-13_GRCh37-lite_mirna_gdc_realn.bai",
+      "index_file_size": 2110296,
+      "platform": "Illumina",
+      "program_name": "TCGA",
+      "project_short_name": "TCGA-OV",
+      "project_short_name_suffix": "OV",
+      "sample_barcode": "TCGA-72-4236-01A",
+      "sample_gdc_id": "e029f019-fe77-43da-b999-52f4c06c5898",
+      "sample_type_name": "Primary Tumor"
+    },
+    {
+      "access": "controlled",
+      "acl": "phs000178",
+      "case_barcode": "TCGA-24-0980",
+      "case_gdc_id": "d1eeaca3-52c0-4a0c-916a-fd64cec911d9",
+      "data_category": "Sequencing Reads",
+      "data_format": "BAM",
+      "data_type": "Aligned Reads",
+      "experimental_strategy": "WXS",
+      "file_gdc_id": "abf478a1-285d-4459-b0c6-a8634e790082",
+      "file_name_key": "gs://gdc-tcga-phs000178-controlled/abf478a1-285d-4459-b0c6-a8634e790082/13ba14331e7b9d10b853903ec10ebe20_gdc_realn.bam",
+      "file_size": 27004373200,
+      "file_type": "aligned_reads",
+      "index_file_id": "4fad0a83-be8c-46e1-b1c1-ca59af9e5672",
+      "index_file_name_key": "gs://gdc-tcga-phs000178-controlled/4fad0a83-be8c-46e1-b1c1-ca59af9e5672/13ba14331e7b9d10b853903ec10ebe20_gdc_realn.bai",
+      "index_file_size": 7675864,
+      "platform": "Illumina",
+      "program_name": "TCGA",
+      "project_short_name": "TCGA-OV",
+      "project_short_name_suffix": "OV",
+      "sample_barcode": "TCGA-24-0980-01A",
+      "sample_gdc_id": "d2713ae1-4993-415c-8bb3-a69dd31ef6f5",
+      "sample_type_name": "Primary Tumor"
+    },
+    {
+      "access": "controlled",
+      "acl": "phs000178",
+      "case_barcode": "TCGA-29-1694",
+      "case_gdc_id": "1db60f09-7f5a-4f21-8003-06a6abc781db",
+      "data_category": "Sequencing Reads",
+      "data_format": "BAM",
+      "data_type": "Aligned Reads",
+      "experimental_strategy": "miRNA-Seq",
+      "file_gdc_id": "21da9007-e3d2-4ce9-b524-205597ff5aef",
+      "file_name_key": "gs://gdc-tcga-phs000178-controlled/21da9007-e3d2-4ce9-b524-205597ff5aef/TCGA-29-1694-01A-01R-1567-13_mirna_gdc_realn.bam",
+      "file_size": 180485570,
+      "file_type": "aligned_reads",
+      "index_file_id": "da4c6404-0f16-4218-98e6-0b2636be2456",
+      "index_file_name_key": "gs://gdc-tcga-phs000178-controlled/da4c6404-0f16-4218-98e6-0b2636be2456/TCGA-29-1694-01A-01R-1567-13_mirna_gdc_realn.bai",
+      "index_file_size": 3144568,
+      "platform": "Illumina",
+      "program_name": "TCGA",
+      "project_short_name": "TCGA-OV",
+      "project_short_name_suffix": "OV",
+      "sample_barcode": "TCGA-29-1694-01A",
+      "sample_gdc_id": "4d74ff85-24e2-4e93-aa23-94d58efd22e4",
+      "sample_type_name": "Primary Tumor"
+    },
+    {
+      "access": "controlled",
+      "acl": "phs000178",
+      "case_barcode": "TCGA-09-2051",
+      "case_gdc_id": "02594e5e-8751-47c1-9245-90c66984b665",
+      "data_category": "Sequencing Reads",
+      "data_format": "BAM",
+      "data_type": "Aligned Reads",
+      "experimental_strategy": "WXS",
+      "file_gdc_id": "72836f35-b1e5-46fa-9dd1-43eb9259c043",
+      "file_name_key": "gs://gdc-tcga-phs000178-controlled/72836f35-b1e5-46fa-9dd1-43eb9259c043/C239.TCGA-09-2051-01A-01W-0799-08.2_gdc_realn.bam",
+      "file_size": 20209040769,
+      "file_type": "aligned_reads",
+      "index_file_id": "13b1d68c-5751-43a6-ba52-052c8a3c49cd",
+      "index_file_name_key": "gs://gdc-tcga-phs000178-controlled/13b1d68c-5751-43a6-ba52-052c8a3c49cd/C239.TCGA-09-2051-01A-01W-0799-08.2_gdc_realn.bai",
+      "index_file_size": 6303904,
+      "platform": "Illumina",
+      "program_name": "TCGA",
+      "project_short_name": "TCGA-OV",
+      "project_short_name_suffix": "OV",
+      "sample_barcode": "TCGA-09-2051-01A",
+      "sample_gdc_id": "c46d2ade-620c-44a6-93ba-8edda9909c1b",
+      "sample_type_name": "Primary Tumor"
+    },
+    {
+      "access": "controlled",
+      "acl": "phs000178",
+      "case_barcode": "TCGA-29-1693",
+      "case_gdc_id": "6fb71a0c-bc50-48c8-acfa-db94be1e151a",
+      "data_category": "Sequencing Reads",
+      "data_format": "BAM",
+      "data_type": "Aligned Reads",
+      "experimental_strategy": "WXS",
+      "file_gdc_id": "6d301032-ef19-4f48-8139-9fc668ba13ab",
+      "file_name_key": "gs://gdc-tcga-phs000178-controlled/6d301032-ef19-4f48-8139-9fc668ba13ab/29b7944737b1c11be2b158eadae07307_gdc_realn.bam",
+      "file_size": 26067472424,
+      "file_type": "aligned_reads",
+      "index_file_id": "f31d7f86-3e08-4973-afc1-9abb6b58a057",
+      "index_file_name_key": "gs://gdc-tcga-phs000178-controlled/f31d7f86-3e08-4973-afc1-9abb6b58a057/29b7944737b1c11be2b158eadae07307_gdc_realn.bai",
+      "index_file_size": 7365896,
+      "platform": "Illumina",
+      "program_name": "TCGA",
+      "project_short_name": "TCGA-OV",
+      "project_short_name_suffix": "OV",
+      "sample_barcode": "TCGA-29-1693-01A",
+      "sample_gdc_id": "13caa1a6-03a5-4fcf-9b54-4dfa86fb5c84",
+      "sample_type_name": "Primary Tumor"
+    }
+  ]
+}

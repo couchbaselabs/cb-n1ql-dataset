@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 55,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "fips": {
+            "#docs": 55,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20,
+              33,
+              35,
+              56,
+              66
+            ],
+            "type": "number"
+          },
+          "postal_code": {
+            "#docs": 55,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GU",
+              "KS",
+              "NH",
+              "NM",
+              "WY"
+            ],
+            "type": "string"
+          },
+          "state": {
+            "#docs": 55,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Guam",
+              "Kansas",
+              "New Hampshire",
+              "New Mexico",
+              "Wyoming"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 55,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 55,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "state_fips::15",
+                  "state_fips::28",
+                  "state_fips::30",
+                  "state_fips::49",
+                  "state_fips::51"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "state_fips::15"
+              },
+              {
+                "id": "state_fips::28"
+              },
+              {
+                "id": "state_fips::30"
+              },
+              {
+                "id": "state_fips::49"
+              },
+              {
+                "id": "state_fips::51"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "fips": 54,
+      "postal_code": "WV",
+      "state": "West Virginia"
+    },
+    {
+      "fips": 24,
+      "postal_code": "MD",
+      "state": "Maryland"
+    },
+    {
+      "fips": 40,
+      "postal_code": "OK",
+      "state": "Oklahoma"
+    },
+    {
+      "fips": 13,
+      "postal_code": "GA",
+      "state": "Georgia"
+    },
+    {
+      "fips": 56,
+      "postal_code": "WY",
+      "state": "Wyoming"
+    }
+  ]
+}

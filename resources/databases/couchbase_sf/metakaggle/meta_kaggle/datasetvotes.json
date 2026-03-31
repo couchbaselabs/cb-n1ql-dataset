@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`DatasetVersionId` = 6",
+        "properties": {
+          "DatasetVersionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              360,
+              400,
+              564,
+              598,
+              2782
+            ],
+            "type": "number"
+          },
+          "UserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              145532,
+              455699,
+              484081,
+              505983,
+              603518
+            ],
+            "type": "number"
+          },
+          "VoteDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-01-24",
+              "2016-01-28",
+              "2016-01-30",
+              "2016-01-31",
+              "2016-05-03"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "datasetvotes::0",
+                  "datasetvotes::1",
+                  "datasetvotes::2",
+                  "datasetvotes::3",
+                  "datasetvotes::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "datasetvotes::0"
+              },
+              {
+                "id": "datasetvotes::1"
+              },
+              {
+                "id": "datasetvotes::2"
+              },
+              {
+                "id": "datasetvotes::3"
+              },
+              {
+                "id": "datasetvotes::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "DatasetVersionId": 6,
+      "Id": 2782,
+      "UserId": 603518,
+      "VoteDate": "2016-05-03"
+    },
+    {
+      "DatasetVersionId": 6,
+      "Id": 598,
+      "UserId": 455699,
+      "VoteDate": "2016-01-31"
+    },
+    {
+      "DatasetVersionId": 6,
+      "Id": 564,
+      "UserId": 505983,
+      "VoteDate": "2016-01-30"
+    },
+    {
+      "DatasetVersionId": 6,
+      "Id": 360,
+      "UserId": 145532,
+      "VoteDate": "2016-01-24"
+    },
+    {
+      "DatasetVersionId": 6,
+      "Id": 400,
+      "UserId": 484081,
+      "VoteDate": "2016-01-28"
+    }
+  ]
+}

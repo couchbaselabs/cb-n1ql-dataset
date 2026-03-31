@@ -1,0 +1,301 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`FinalizationDate` = \"2013-04-08\", `IsFinalized` = 1, `LastEditedBy` = 2, `LastEditedWhen` = 1365411600000000, `OutstandingBalance` = 0, `PaymentMethodID` = 4, `TransactionTypeID` = 5",
+        "properties": {
+          "AmountExcludingTax": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9986.8,
+              10387.2,
+              72426,
+              73110,
+              74460
+            ],
+            "type": "number"
+          },
+          "FinalizationDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-04-08"
+            ],
+            "type": "string"
+          },
+          "IsFinalized": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1365411600000000
+            ],
+            "type": "number"
+          },
+          "OutstandingBalance": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "PaymentMethodID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4
+            ],
+            "type": "number"
+          },
+          "PurchaseOrderID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "153",
+              "154",
+              "155",
+              "156",
+              "157"
+            ],
+            "type": "string"
+          },
+          "SupplierID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              7
+            ],
+            "type": "number"
+          },
+          "SupplierInvoiceNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3874",
+              "4746",
+              "7948",
+              "873",
+              "8940"
+            ],
+            "type": "string"
+          },
+          "SupplierTransactionID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21470,
+              21473,
+              21757,
+              21760,
+              22020
+            ],
+            "type": "number"
+          },
+          "TaxAmount": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1498.02,
+              1558.08,
+              10863.9,
+              10966.5,
+              11169
+            ],
+            "type": "number"
+          },
+          "TransactionAmount": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11484.82,
+              11945.28,
+              83289.9,
+              84076.5,
+              85629
+            ],
+            "type": "number"
+          },
+          "TransactionDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-04-02",
+              "2013-04-03",
+              "2013-04-04"
+            ],
+            "type": "string"
+          },
+          "TransactionTypeID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "purchasing_suppliertransaction...",
+                  "purchasing_suppliertransaction...",
+                  "purchasing_suppliertransaction...",
+                  "purchasing_suppliertransaction...",
+                  "purchasing_suppliertransaction..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "purchasing_suppliertransactions::0"
+              },
+              {
+                "id": "purchasing_suppliertransactions::1"
+              },
+              {
+                "id": "purchasing_suppliertransactions::2"
+              },
+              {
+                "id": "purchasing_suppliertransactions::3"
+              },
+              {
+                "id": "purchasing_suppliertransactions::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AmountExcludingTax": 9986.8,
+      "FinalizationDate": "2013-04-08",
+      "IsFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1365411600000000,
+      "OutstandingBalance": 0,
+      "PaymentMethodID": 4,
+      "PurchaseOrderID": "154",
+      "SupplierID": 7,
+      "SupplierInvoiceNumber": "3874",
+      "SupplierTransactionID": 21473,
+      "TaxAmount": 1498.02,
+      "TransactionAmount": 11484.82,
+      "TransactionDate": "2013-04-02",
+      "TransactionTypeID": 5
+    },
+    {
+      "AmountExcludingTax": 74460,
+      "FinalizationDate": "2013-04-08",
+      "IsFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1365411600000000,
+      "OutstandingBalance": 0,
+      "PaymentMethodID": 4,
+      "PurchaseOrderID": "157",
+      "SupplierID": 4,
+      "SupplierInvoiceNumber": "4746",
+      "SupplierTransactionID": 22020,
+      "TaxAmount": 11169,
+      "TransactionAmount": 85629,
+      "TransactionDate": "2013-04-04",
+      "TransactionTypeID": 5
+    },
+    {
+      "AmountExcludingTax": 73110,
+      "FinalizationDate": "2013-04-08",
+      "IsFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1365411600000000,
+      "OutstandingBalance": 0,
+      "PaymentMethodID": 4,
+      "PurchaseOrderID": "155",
+      "SupplierID": 4,
+      "SupplierInvoiceNumber": "873",
+      "SupplierTransactionID": 21757,
+      "TaxAmount": 10966.5,
+      "TransactionAmount": 84076.5,
+      "TransactionDate": "2013-04-03",
+      "TransactionTypeID": 5
+    },
+    {
+      "AmountExcludingTax": 10387.2,
+      "FinalizationDate": "2013-04-08",
+      "IsFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1365411600000000,
+      "OutstandingBalance": 0,
+      "PaymentMethodID": 4,
+      "PurchaseOrderID": "156",
+      "SupplierID": 7,
+      "SupplierInvoiceNumber": "7948",
+      "SupplierTransactionID": 21760,
+      "TaxAmount": 1558.08,
+      "TransactionAmount": 11945.28,
+      "TransactionDate": "2013-04-03",
+      "TransactionTypeID": 5
+    },
+    {
+      "AmountExcludingTax": 72426,
+      "FinalizationDate": "2013-04-08",
+      "IsFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1365411600000000,
+      "OutstandingBalance": 0,
+      "PaymentMethodID": 4,
+      "PurchaseOrderID": "153",
+      "SupplierID": 4,
+      "SupplierInvoiceNumber": "8940",
+      "SupplierTransactionID": 21470,
+      "TaxAmount": 10863.9,
+      "TransactionAmount": 83289.9,
+      "TransactionDate": "2013-04-02",
+      "TransactionTypeID": 5
+    }
+  ]
+}

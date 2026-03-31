@@ -1,0 +1,202 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`aliquot_id` = \"410a1984-6429-11e8-bcf1-0a27052...\", `aliquot_run_metadata_id` = \"27c280fc-5730-11e8-b664-00a098d...\", `aliquot_submitter_id` = \"TCGA-E2-A10A-01A-12-A21V-30\", `case_id` = \"010df72d-63d9-11e8-bcf1-0a27052...\", `sample_id` = \"9532a8b4-6420-11e8-bcf1-0a27052...\", `study_name` = \"TCGA Breast Cancer Phosphoprote...\"",
+        "properties": {
+          "aliquot_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "410a1984-6429-11e8-bcf1-0a2705..."
+            ],
+            "type": "string"
+          },
+          "aliquot_run_metadata_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "27c280fc-5730-11e8-b664-00a098..."
+            ],
+            "type": "string"
+          },
+          "aliquot_submitter_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-E2-A10A-01A-12-A21V-30"
+            ],
+            "type": "string"
+          },
+          "case_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "010df72d-63d9-11e8-bcf1-0a2705..."
+            ],
+            "type": "string"
+          },
+          "phosphorylation_sites": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "s1068",
+              "s354s358y364",
+              "s392",
+              "s536",
+              "s568"
+            ],
+            "type": "string"
+          },
+          "protein_abundance_log2ratio": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "-0.1509",
+              "-0.8946",
+              "-2.3882",
+              "-4.7876",
+              "0.0863"
+            ],
+            "type": "string"
+          },
+          "refseq_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NP_001138436.1",
+              "NP_001269554.1",
+              "NP_001311404.1",
+              "NP_056018.2",
+              "NP_620147.1"
+            ],
+            "type": "string"
+          },
+          "sample_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "9532a8b4-6420-11e8-bcf1-0a2705..."
+            ],
+            "type": "string"
+          },
+          "study_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA Breast Cancer Phosphoprot..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "quant_phosphoproteome_tcga_bre...",
+                  "quant_phosphoproteome_tcga_bre...",
+                  "quant_phosphoproteome_tcga_bre...",
+                  "quant_phosphoproteome_tcga_bre...",
+                  "quant_phosphoproteome_tcga_bre..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "quant_phosphoproteome_tcga_breast_cancer_pdc_v1_17::0"
+              },
+              {
+                "id": "quant_phosphoproteome_tcga_breast_cancer_pdc_v1_17::1"
+              },
+              {
+                "id": "quant_phosphoproteome_tcga_breast_cancer_pdc_v1_17::2"
+              },
+              {
+                "id": "quant_phosphoproteome_tcga_breast_cancer_pdc_v1_17::3"
+              },
+              {
+                "id": "quant_phosphoproteome_tcga_breast_cancer_pdc_v1_17::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_id": "410a1984-6429-11e8-bcf1-0a2705229b82",
+      "aliquot_run_metadata_id": "27c280fc-5730-11e8-b664-00a098d917f8",
+      "aliquot_submitter_id": "TCGA-E2-A10A-01A-12-A21V-30",
+      "case_id": "010df72d-63d9-11e8-bcf1-0a2705229b82",
+      "phosphorylation_sites": "s1068",
+      "protein_abundance_log2ratio": "-0.8946",
+      "refseq_id": "NP_056018.2",
+      "sample_id": "9532a8b4-6420-11e8-bcf1-0a2705229b82",
+      "study_name": "TCGA Breast Cancer Phosphoproteome"
+    },
+    {
+      "aliquot_id": "410a1984-6429-11e8-bcf1-0a2705229b82",
+      "aliquot_run_metadata_id": "27c280fc-5730-11e8-b664-00a098d917f8",
+      "aliquot_submitter_id": "TCGA-E2-A10A-01A-12-A21V-30",
+      "case_id": "010df72d-63d9-11e8-bcf1-0a2705229b82",
+      "phosphorylation_sites": "s536",
+      "protein_abundance_log2ratio": "-0.1509",
+      "refseq_id": "NP_001311404.1",
+      "sample_id": "9532a8b4-6420-11e8-bcf1-0a2705229b82",
+      "study_name": "TCGA Breast Cancer Phosphoproteome"
+    },
+    {
+      "aliquot_id": "410a1984-6429-11e8-bcf1-0a2705229b82",
+      "aliquot_run_metadata_id": "27c280fc-5730-11e8-b664-00a098d917f8",
+      "aliquot_submitter_id": "TCGA-E2-A10A-01A-12-A21V-30",
+      "case_id": "010df72d-63d9-11e8-bcf1-0a2705229b82",
+      "phosphorylation_sites": "s392",
+      "protein_abundance_log2ratio": "-4.7876",
+      "refseq_id": "NP_001269554.1",
+      "sample_id": "9532a8b4-6420-11e8-bcf1-0a2705229b82",
+      "study_name": "TCGA Breast Cancer Phosphoproteome"
+    },
+    {
+      "aliquot_id": "410a1984-6429-11e8-bcf1-0a2705229b82",
+      "aliquot_run_metadata_id": "27c280fc-5730-11e8-b664-00a098d917f8",
+      "aliquot_submitter_id": "TCGA-E2-A10A-01A-12-A21V-30",
+      "case_id": "010df72d-63d9-11e8-bcf1-0a2705229b82",
+      "phosphorylation_sites": "s354s358y364",
+      "protein_abundance_log2ratio": "-2.3882",
+      "refseq_id": "NP_001138436.1",
+      "sample_id": "9532a8b4-6420-11e8-bcf1-0a2705229b82",
+      "study_name": "TCGA Breast Cancer Phosphoproteome"
+    },
+    {
+      "aliquot_id": "410a1984-6429-11e8-bcf1-0a2705229b82",
+      "aliquot_run_metadata_id": "27c280fc-5730-11e8-b664-00a098d917f8",
+      "aliquot_submitter_id": "TCGA-E2-A10A-01A-12-A21V-30",
+      "case_id": "010df72d-63d9-11e8-bcf1-0a2705229b82",
+      "phosphorylation_sites": "s568",
+      "protein_abundance_log2ratio": "0.0863",
+      "refseq_id": "NP_620147.1",
+      "sample_id": "9532a8b4-6420-11e8-bcf1-0a2705229b82",
+      "study_name": "TCGA Breast Cancer Phosphoproteome"
+    }
+  ]
+}

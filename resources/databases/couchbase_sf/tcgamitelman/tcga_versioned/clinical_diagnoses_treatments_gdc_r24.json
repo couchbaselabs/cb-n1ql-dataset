@@ -1,0 +1,192 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`diag__treat__state` = \"released\", `diag__treat__treatment_or_therapy` = \"no\", `diag__treat__treatment_type` = \"Radiation Therapy, NOS\"",
+        "properties": {
+          "case_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0be4fa90-0122-4b26-b35f-7b1a4a...",
+              "54a0e4d7-c274-4569-9c25-45bbe2...",
+              "b5e2cbda-bbfa-4ef8-a9c4-cb978b...",
+              "c46971a1-cbac-425d-bac2-f4142c...",
+              "ca400ea1-3e4e-437e-a54c-446431..."
+            ],
+            "type": "string"
+          },
+          "diag__diagnosis_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "18573ba8-355f-51ed-9c59-d66bb6...",
+              "3377a3ed-2d60-5d32-b546-ddfa73...",
+              "70e600df-b0f3-5918-8ad6-6c0dad...",
+              "b27e64b1-55b7-55c8-860d-85e89f...",
+              "d5555aa3-4849-59ea-9d9c-1c0add..."
+            ],
+            "type": "string"
+          },
+          "diag__treat__created_datetime": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "diag__treat__state": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "released"
+            ],
+            "type": "string"
+          },
+          "diag__treat__treatment_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1764121a-3e23-5039-8050-9a1147...",
+              "25e2cda8-5729-58fb-b73a-4e50fe...",
+              "70dc1273-1ba4-5fb1-9438-fc34d4...",
+              "77adcdb4-fa5e-50c2-ac44-83c1e4...",
+              "f2f0b186-4392-515d-894b-c7cf42..."
+            ],
+            "type": "string"
+          },
+          "diag__treat__treatment_or_therapy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "no"
+            ],
+            "type": "string"
+          },
+          "diag__treat__treatment_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Radiation Therapy, NOS"
+            ],
+            "type": "string"
+          },
+          "diag__treat__updated_datetime": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-07-31T15:27:49.322818-05:...",
+              "2019-07-31T18:36:16.492804-05:...",
+              "2019-07-31T18:46:05.862882-05:...",
+              "2019-07-31T19:23:57.419570-05:...",
+              "2019-07-31T20:27:10.759651-05:..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "clinical_diagnoses_treatments_...",
+                  "clinical_diagnoses_treatments_...",
+                  "clinical_diagnoses_treatments_...",
+                  "clinical_diagnoses_treatments_...",
+                  "clinical_diagnoses_treatments_..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "clinical_diagnoses_treatments_gdc_r24::0"
+              },
+              {
+                "id": "clinical_diagnoses_treatments_gdc_r24::1"
+              },
+              {
+                "id": "clinical_diagnoses_treatments_gdc_r24::2"
+              },
+              {
+                "id": "clinical_diagnoses_treatments_gdc_r24::3"
+              },
+              {
+                "id": "clinical_diagnoses_treatments_gdc_r24::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "case_id": "0be4fa90-0122-4b26-b35f-7b1a4a16e63b",
+      "diag__diagnosis_id": "70e600df-b0f3-5918-8ad6-6c0dad10fb6b",
+      "diag__treat__created_datetime": null,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "77adcdb4-fa5e-50c2-ac44-83c1e44f306f",
+      "diag__treat__treatment_or_therapy": "no",
+      "diag__treat__treatment_type": "Radiation Therapy, NOS",
+      "diag__treat__updated_datetime": "2019-07-31T18:46:05.862882-05:00"
+    },
+    {
+      "case_id": "54a0e4d7-c274-4569-9c25-45bbe26d7f21",
+      "diag__diagnosis_id": "3377a3ed-2d60-5d32-b546-ddfa73564aa6",
+      "diag__treat__created_datetime": null,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "1764121a-3e23-5039-8050-9a1147fe1239",
+      "diag__treat__treatment_or_therapy": "no",
+      "diag__treat__treatment_type": "Radiation Therapy, NOS",
+      "diag__treat__updated_datetime": "2019-07-31T20:27:10.759651-05:00"
+    },
+    {
+      "case_id": "c46971a1-cbac-425d-bac2-f4142c92522e",
+      "diag__diagnosis_id": "18573ba8-355f-51ed-9c59-d66bb6316be2",
+      "diag__treat__created_datetime": null,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "25e2cda8-5729-58fb-b73a-4e50fe4feb2c",
+      "diag__treat__treatment_or_therapy": "no",
+      "diag__treat__treatment_type": "Radiation Therapy, NOS",
+      "diag__treat__updated_datetime": "2019-07-31T18:36:16.492804-05:00"
+    },
+    {
+      "case_id": "b5e2cbda-bbfa-4ef8-a9c4-cb978bef9b23",
+      "diag__diagnosis_id": "b27e64b1-55b7-55c8-860d-85e89f0aa603",
+      "diag__treat__created_datetime": null,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "70dc1273-1ba4-5fb1-9438-fc34d4b4cb95",
+      "diag__treat__treatment_or_therapy": "no",
+      "diag__treat__treatment_type": "Radiation Therapy, NOS",
+      "diag__treat__updated_datetime": "2019-07-31T19:23:57.419570-05:00"
+    },
+    {
+      "case_id": "ca400ea1-3e4e-437e-a54c-446431b741da",
+      "diag__diagnosis_id": "d5555aa3-4849-59ea-9d9c-1c0add28b7d4",
+      "diag__treat__created_datetime": null,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "f2f0b186-4392-515d-894b-c7cf42c26e60",
+      "diag__treat__treatment_or_therapy": "no",
+      "diag__treat__treatment_type": "Radiation Therapy, NOS",
+      "diag__treat__updated_datetime": "2019-07-31T15:27:49.322818-05:00"
+    }
+  ]
+}

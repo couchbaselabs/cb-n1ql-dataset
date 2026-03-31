@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "app_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "12133722",
+              "13439571",
+              "13583612",
+              "13948455",
+              "14673949"
+            ],
+            "type": "string"
+          },
+          "application_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "US-13372208-A",
+              "US-201113583612-A",
+              "US-201213439571-A",
+              "US-201313948455-A",
+              "US-201514673949-A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "match_app::1101569",
+                  "match_app::1221973",
+                  "match_app::1370662",
+                  "match_app::1544503",
+                  "match_app::1809877"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "match_app::1101569"
+              },
+              {
+                "id": "match_app::1221973"
+              },
+              {
+                "id": "match_app::1370662"
+              },
+              {
+                "id": "match_app::1544503"
+              },
+              {
+                "id": "match_app::1809877"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "app_id": "13977387",
+      "application_number": "US-201113977387-A"
+    },
+    {
+      "app_id": "13978069",
+      "application_number": "US-201113978069-A"
+    },
+    {
+      "app_id": "13989276",
+      "application_number": "US-201113989276-A"
+    },
+    {
+      "app_id": "13989422",
+      "application_number": "US-201113989422-A"
+    },
+    {
+      "app_id": "13989964",
+      "application_number": "US-201113989964-A"
+    }
+  ]
+}

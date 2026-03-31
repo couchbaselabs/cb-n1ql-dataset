@@ -1,0 +1,336 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Comments` = \"NULL\", `DeliveryInstructions` = \"NULL\", `InternalComments` = \"NULL\", `IsUndersupplyBackordered` = 1",
+        "properties": {
+          "BackorderOrderID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "14154",
+              "14566",
+              "39990",
+              "50756",
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "Comments": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "ContactPersonID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1011,
+              1137,
+              2225,
+              3172,
+              3175
+            ],
+            "type": "number"
+          },
+          "CustomerID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              69,
+              513,
+              972,
+              975
+            ],
+            "type": "number"
+          },
+          "CustomerPurchaseOrderNumber": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13015,
+              14661,
+              14927,
+              18237,
+              19127
+            ],
+            "type": "number"
+          },
+          "DeliveryInstructions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "ExpectedDeliveryDate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-04-08",
+              "2013-09-20",
+              "2014-10-30",
+              "2015-03-16",
+              "2016-03-14"
+            ],
+            "type": "string"
+          },
+          "InternalComments": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "IsUndersupplyBackordered": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              5,
+              7,
+              10,
+              11
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1365246000000000,
+              1379592000000000,
+              1414580400000000,
+              1426244400000000,
+              1457694000000000
+            ],
+            "type": "number"
+          },
+          "OrderDate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-04-06",
+              "2013-09-19",
+              "2014-10-29",
+              "2015-03-13",
+              "2016-03-11"
+            ],
+            "type": "string"
+          },
+          "OrderID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4897,
+              14075,
+              36876,
+              44985,
+              68290
+            ],
+            "type": "number"
+          },
+          "PickedByPersonID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10",
+              "11",
+              "2",
+              "7",
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "PickingCompletedWhen": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-04-06 11:00:00.0000000",
+              "2013-09-19 12:00:00.0000000",
+              "2014-10-29 11:00:00.0000000",
+              "2015-03-13 11:00:00.0000000",
+              "2016-03-11 11:00:00.0000000"
+            ],
+            "type": "string"
+          },
+          "SalespersonPersonID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7,
+              8,
+              15,
+              16,
+              20
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_orders::13204",
+                  "sales_orders::1678",
+                  "sales_orders::21034",
+                  "sales_orders::33141",
+                  "sales_orders::34828"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_orders::13204"
+              },
+              {
+                "id": "sales_orders::1678"
+              },
+              {
+                "id": "sales_orders::21034"
+              },
+              {
+                "id": "sales_orders::33141"
+              },
+              {
+                "id": "sales_orders::34828"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BackorderOrderID": "6244",
+      "Comments": "NULL",
+      "ContactPersonID": 2369,
+      "CustomerID": 585,
+      "CustomerPurchaseOrderNumber": 11644,
+      "DeliveryInstructions": "NULL",
+      "ExpectedDeliveryDate": "2013-05-02",
+      "InternalComments": "NULL",
+      "IsUndersupplyBackordered": 1,
+      "LastEditedBy": 4,
+      "LastEditedWhen": 1367409600000000,
+      "OrderDate": "2013-05-01",
+      "OrderID": 6222,
+      "PickedByPersonID": "NULL",
+      "PickingCompletedWhen": "2013-05-01 12:00:00.0000000",
+      "SalespersonPersonID": 16
+    },
+    {
+      "BackorderOrderID": "62112",
+      "Comments": "NULL",
+      "ContactPersonID": 1127,
+      "CustomerID": 64,
+      "CustomerPurchaseOrderNumber": 17524,
+      "DeliveryInstructions": "NULL",
+      "ExpectedDeliveryDate": "2015-12-02",
+      "InternalComments": "NULL",
+      "IsUndersupplyBackordered": 1,
+      "LastEditedBy": 4,
+      "LastEditedWhen": 1448971200000000,
+      "OrderDate": "2015-12-01",
+      "OrderID": 62087,
+      "PickedByPersonID": "NULL",
+      "PickingCompletedWhen": "2015-12-01 12:00:00.0000000",
+      "SalespersonPersonID": 6
+    },
+    {
+      "BackorderOrderID": "NULL",
+      "Comments": "NULL",
+      "ContactPersonID": 2105,
+      "CustomerID": 453,
+      "CustomerPurchaseOrderNumber": 16150,
+      "DeliveryInstructions": "NULL",
+      "ExpectedDeliveryDate": "2013-04-18",
+      "InternalComments": "NULL",
+      "IsUndersupplyBackordered": 1,
+      "LastEditedBy": 4,
+      "LastEditedWhen": 1366196400000000,
+      "OrderDate": "2013-04-17",
+      "OrderID": 5410,
+      "PickedByPersonID": "4",
+      "PickingCompletedWhen": "2013-04-17 11:00:00.0000000",
+      "SalespersonPersonID": 7
+    },
+    {
+      "BackorderOrderID": "NULL",
+      "Comments": "NULL",
+      "ContactPersonID": 3009,
+      "CustomerID": 809,
+      "CustomerPurchaseOrderNumber": 18298,
+      "DeliveryInstructions": "NULL",
+      "ExpectedDeliveryDate": "2013-10-11",
+      "InternalComments": "NULL",
+      "IsUndersupplyBackordered": 1,
+      "LastEditedBy": 4,
+      "LastEditedWhen": 1381402800000000,
+      "OrderDate": "2013-10-10",
+      "OrderID": 15167,
+      "PickedByPersonID": "4",
+      "PickingCompletedWhen": "2013-10-10 11:00:00.0000000",
+      "SalespersonPersonID": 7
+    },
+    {
+      "BackorderOrderID": "NULL",
+      "Comments": "NULL",
+      "ContactPersonID": 1399,
+      "CustomerID": 200,
+      "CustomerPurchaseOrderNumber": 13940,
+      "DeliveryInstructions": "NULL",
+      "ExpectedDeliveryDate": "2013-10-11",
+      "InternalComments": "NULL",
+      "IsUndersupplyBackordered": 1,
+      "LastEditedBy": 4,
+      "LastEditedWhen": 1381402800000000,
+      "OrderDate": "2013-10-10",
+      "OrderID": 15197,
+      "PickedByPersonID": "4",
+      "PickingCompletedWhen": "2013-10-10 11:00:00.0000000",
+      "SalespersonPersonID": 16
+    }
+  ]
+}

@@ -1,0 +1,2719 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`BIOTYPE` = \"protein_coding\", `Feature_type` = \"Transcript\", `Mutation_Status` = \"Somatic\", `NCBI_Build` = \"GRCh38\", `PHENO` = \"0;1\", `RNA_Support` = \"Unknown\", `SOMATIC` = \"0;1\", `SYMBOL_SOURCE` = \"HGNC\", `Strand` = \"+\", `VARIANT_CLASS` = \"SNV\", `Variant_Type` = \"SNP\", `gnomAD_AMR_AF` = 0, `gnomAD_EAS_AF` = 0, `gnomAD_FIN_AF` = 0, `gnomAD_OTH_AF` = 0, `hotspot` = false, `muse` = \"Yes\", `mutect2` = \"Yes\", `pindel` = \"No\"",
+        "properties": {
+          "APPRIS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "P1",
+              "P3",
+              "P4"
+            ],
+            "type": "string"
+          },
+          "Allele": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A",
+              "T"
+            ],
+            "type": "string"
+          },
+          "Amino_acids": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A/T",
+              "D/N",
+              "E",
+              "G/S",
+              "R/H"
+            ],
+            "type": "string"
+          },
+          "BAM_File": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "BIOTYPE": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "protein_coding"
+            ],
+            "type": "string"
+          },
+          "CANONICAL": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "YES"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "CCDS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CCDS1014.1",
+              "CCDS3074.1",
+              "CCDS32155.1",
+              "CCDS47729.1",
+              "CCDS5254.1"
+            ],
+            "type": "string"
+          },
+          "CDS_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1127/4491",
+              "220/279",
+              "391/2343",
+              "765/1017",
+              "802/2448"
+            ],
+            "type": "string"
+          },
+          "CLIN_SIG": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "CONTEXT": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACTGCCCCTGT",
+              "ATGGAGGCTCA",
+              "ATTACGCTGGC",
+              "TAAATCACGGA",
+              "TCCACGGTGAG"
+            ],
+            "type": "string"
+          },
+          "COSMIC": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "COSM2148885"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Center": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BI",
+              "WUGSC"
+            ],
+            "type": "string"
+          },
+          "Chromosome": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "chr1",
+              "chr14",
+              "chr3",
+              "chr6",
+              "chr7"
+            ],
+            "type": "string"
+          },
+          "Codons": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Gat/Aat",
+              "Gct/Act",
+              "Ggc/Agc",
+              "cGt/cAt",
+              "gaG/gaA"
+            ],
+            "type": "string"
+          },
+          "Consequence": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "missense_variant",
+              "missense_variant;splice_region...",
+              "synonymous_variant"
+            ],
+            "type": "string"
+          },
+          "DISTANCE": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "DOMAINS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CDD:cd05154;PANTHER:PTHR45741;...",
+              "CDD:cd15015;PANTHER:PTHR11394:...",
+              "PDB-ENSP_mappings:4ci8.A;PDB-E...",
+              "PROSITE_profiles:PS50275;PANTH...",
+              "Pfam:PF14672;PANTHER:PTHR23263..."
+            ],
+            "type": "string"
+          },
+          "ENSP": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ENSP00000262233",
+              "ENSP00000264990",
+              "ENSP00000347792",
+              "ENSP00000357776",
+              "ENSP00000405095"
+            ],
+            "type": "string"
+          },
+          "ESP_AA_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ESP_EA_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "EXON": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1/1",
+              "2/2",
+              "4/20",
+              "7/22",
+              "8/27"
+            ],
+            "type": "string"
+          },
+          "End_Position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              99897269,
+              132642118,
+              143184183,
+              152579717,
+              158062164
+            ],
+            "type": "number"
+          },
+          "Entrez_Gene_Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2009,
+              8871,
+              84129,
+              84648,
+              259285
+            ],
+            "type": "number"
+          },
+          "Existing_variation": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "rs1216625496;COSV101489421",
+              "rs1321965561;COSV100909856",
+              "rs1347456083;COSV99391730",
+              "rs764781997;COSV51746801",
+              "rs772199451;COSV62895768"
+            ],
+            "type": "string"
+          },
+          "Exon_Number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1/1",
+              "2/2",
+              "4/20",
+              "7/22",
+              "8/27"
+            ],
+            "type": "string"
+          },
+          "FLAGS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Feature": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ENST00000262233",
+              "ENST00000264990",
+              "ENST00000355585",
+              "ENST00000368787",
+              "ENST00000446620"
+            ],
+            "type": "string"
+          },
+          "Feature_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Transcript"
+            ],
+            "type": "string"
+          },
+          "GDC_FILTER": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "GENE_PHENO": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Gene": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ENSG00000066629",
+              "ENSG00000078269",
+              "ENSG00000163202",
+              "ENSG00000236398",
+              "ENSG00000240303"
+            ],
+            "type": "string"
+          },
+          "HGNC_ID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "HGNC:11504",
+              "HGNC:16615",
+              "HGNC:18886",
+              "HGNC:30211",
+              "HGNC:3330"
+            ],
+            "type": "string"
+          },
+          "HGVS_OFFSET": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "HGVSc": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "c.1127G>A",
+              "c.220G>A",
+              "c.391G>A",
+              "c.765G>A",
+              "c.802G>A"
+            ],
+            "type": "string"
+          },
+          "HGVSp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "p.Ala268Thr",
+              "p.Arg376His",
+              "p.Asp131Asn",
+              "p.Glu255=",
+              "p.Gly74Ser"
+            ],
+            "type": "string"
+          },
+          "HGVSp_Short": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "p.A268T",
+              "p.D131N",
+              "p.E255=",
+              "p.G74S",
+              "p.R376H"
+            ],
+            "type": "string"
+          },
+          "HIGH_INF_POS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Hugo_Symbol": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACAD11",
+              "EML1",
+              "LCE3D",
+              "SYNJ2",
+              "TAS2R39"
+            ],
+            "type": "string"
+          },
+          "IMPACT": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LOW",
+              "MODERATE"
+            ],
+            "type": "string"
+          },
+          "INTRON": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "MANE": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NM_003898.4",
+              "NM_004434.3",
+              "NM_032169.5",
+              "NM_032563.2",
+              "NM_176881.2"
+            ],
+            "type": "string"
+          },
+          "MAX_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3.268e-05,
+              6.193e-05,
+              9.958e-05,
+              9.962e-05
+            ],
+            "type": "number"
+          },
+          "MAX_AF_POPS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "gnomAD_AFR",
+              "gnomAD_ASJ",
+              "gnomAD_SAS"
+            ],
+            "type": "string"
+          },
+          "MOTIF_NAME": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "MOTIF_POS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "MOTIF_SCORE_CHANGE": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Match_Norm_Seq_Allele1": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Match_Norm_Seq_Allele2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Match_Norm_Validation_Allele1": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Match_Norm_Validation_Allele2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Matched_Norm_Aliquot_Barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-02-0003-10A-01D-1490-08",
+              "TCGA-02-2470-10A-01D-1494-08",
+              "TCGA-04-1360-11A-01W-0492-08",
+              "TCGA-04-1369-11A-01D-1526-09",
+              "TCGA-05-4382-10A-01D-1265-08"
+            ],
+            "type": "string"
+          },
+          "Matched_Norm_Aliquot_UUID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0b63ce82-23d2-48d4-be99-395991...",
+              "1ab37cba-6ad6-4825-98bb-b8e102...",
+              "20e316a4-d1e4-44d2-881c-527e60...",
+              "7019adc7-8cd6-4942-9cfd-39cdbc...",
+              "e1d50578-4839-4490-ab36-f0d82f..."
+            ],
+            "type": "string"
+          },
+          "Mutation_Status": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Somatic"
+            ],
+            "type": "string"
+          },
+          "NCBI_Build": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GRCh38"
+            ],
+            "type": "string"
+          },
+          "One_Consequence": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "missense_variant",
+              "synonymous_variant"
+            ],
+            "type": "string"
+          },
+          "PHENO": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0;1"
+            ],
+            "type": "string"
+          },
+          "PICK": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "PUBMED": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "PolyPhen": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "benign(0)",
+                "benign(0.207)",
+                "possibly_damaging(0.764)",
+                "probably_damaging(0.964)"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Protein_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "131/780",
+              "255/338",
+              "268/815",
+              "376/1496",
+              "74/92"
+            ],
+            "type": "string"
+          },
+          "RNA_Support": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "RNA_alt_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "RNA_depth": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "RNA_ref_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "RefSeq": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NM_001375411.1;NM_004434.3;NM_...",
+              "NM_003898.4",
+              "NM_032169.5",
+              "NM_032563.2",
+              "NM_176881.2"
+            ],
+            "type": "string"
+          },
+          "Reference_Allele": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C",
+              "G"
+            ],
+            "type": "string"
+          },
+          "SIFT": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "deleterious(0.01)",
+                "deleterious(0.04)",
+                "deleterious_low_confidence(0.0...",
+                "tolerated(0.25)"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "SOMATIC": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0;1"
+            ],
+            "type": "string"
+          },
+          "SWISSPROT": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "O00423.177",
+              "O15056.196",
+              "P59534.133",
+              "Q709F0.150",
+              "Q9BYE3.103"
+            ],
+            "type": "string"
+          },
+          "SYMBOL": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACAD11",
+              "EML1",
+              "LCE3D",
+              "SYNJ2",
+              "TAS2R39"
+            ],
+            "type": "string"
+          },
+          "SYMBOL_SOURCE": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "HGNC"
+            ],
+            "type": "string"
+          },
+          "Score": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Sequence_Source": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Sequencer": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Sequencing_Phase": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Start_Position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              99897269,
+              132642118,
+              143184183,
+              152579717,
+              158062164
+            ],
+            "type": "number"
+          },
+          "Strand": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "+"
+            ],
+            "type": "string"
+          },
+          "TRANSCRIPTION_FACTORS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TRANSCRIPT_STRAND": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "-1",
+              "1"
+            ],
+            "type": "string"
+          },
+          "TREMBL": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TSL": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ThousG_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ThousG_AFR_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ThousG_AMR_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ThousG_EAS_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ThousG_EUR_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ThousG_SAS_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Transcript_ID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ENST00000262233",
+              "ENST00000264990",
+              "ENST00000355585",
+              "ENST00000368787",
+              "ENST00000446620"
+            ],
+            "type": "string"
+          },
+          "Tumor_Aliquot_Barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-02-0003-01A-01D-1490-08",
+              "TCGA-02-2470-01A-01D-1494-08",
+              "TCGA-04-1360-01A-01W-0492-08",
+              "TCGA-04-1369-01A-02D-1526-09",
+              "TCGA-05-4382-01A-01D-1931-08"
+            ],
+            "type": "string"
+          },
+          "Tumor_Aliquot_UUID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0b35f2ff-2a08-4585-a1a9-cfc6a9...",
+              "0c2c84b0-43e2-469c-8813-f50f25...",
+              "43b8f335-bb32-45de-985a-855080...",
+              "458f13e0-34f3-4a92-b3b3-9a3c2e...",
+              "7a657ef6-0ff3-40cb-b02b-a1a79e..."
+            ],
+            "type": "string"
+          },
+          "Tumor_Seq_Allele1": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C",
+              "G"
+            ],
+            "type": "string"
+          },
+          "Tumor_Seq_Allele2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A",
+              "T"
+            ],
+            "type": "string"
+          },
+          "Tumor_Validation_Allele1": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Tumor_Validation_Allele2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "UNIPARC": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "UPI00000620BE",
+              "UPI000006E2F8",
+              "UPI000006EC48",
+              "UPI000013D278",
+              "UPI0000223E4E"
+            ],
+            "type": "string"
+          },
+          "UNIPROT_ISOFORM": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "O00423-1",
+                "O15056-1",
+                "Q709F0-1"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "VARIANT_CLASS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SNV"
+            ],
+            "type": "string"
+          },
+          "Validation_Method": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Validation_Status": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Variant_Classification": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Missense_Mutation",
+              "Silent"
+            ],
+            "type": "string"
+          },
+          "Variant_Type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SNP"
+            ],
+            "type": "string"
+          },
+          "Verification_Status": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "aliquot_barcode_normal": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-02-0003-10A-01D-1490-08",
+              "TCGA-02-2470-10A-01D-1494-08",
+              "TCGA-04-1360-11A-01W-0492-08",
+              "TCGA-04-1369-11A-01D-1526-09",
+              "TCGA-05-4382-10A-01D-1265-08"
+            ],
+            "type": "string"
+          },
+          "aliquot_barcode_tumor": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-02-0003-01A-01D-1490-08",
+              "TCGA-02-2470-01A-01D-1494-08",
+              "TCGA-04-1360-01A-01W-0492-08",
+              "TCGA-04-1369-01A-02D-1526-09",
+              "TCGA-05-4382-01A-01D-1931-08"
+            ],
+            "type": "string"
+          },
+          "all_effects": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACAD11,missense_variant,p.D131...",
+              "EML1,missense_variant,p.A293T,...",
+              "LCE3D,missense_variant,p.G74S,...",
+              "SYNJ2,missense_variant,p.R376H...",
+              "TAS2R39,synonymous_variant,p.E..."
+            ],
+            "type": "string"
+          },
+          "cDNA_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1226/7402",
+              "289/625",
+              "449/3231",
+              "765/1017",
+              "866/4460"
+            ],
+            "type": "string"
+          },
+          "callers": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "muse;mutect2",
+              "muse;mutect2;varscan2"
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-02-0003",
+              "TCGA-02-2470",
+              "TCGA-04-1360",
+              "TCGA-04-1369",
+              "TCGA-05-4382"
+            ],
+            "type": "string"
+          },
+          "case_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3434b91a-c05f-460f-a078-7b1bb6...",
+              "6c43727d-631a-40fb-b1a1-242a12...",
+              "df3c1d61-79c1-43e9-971a-802949...",
+              "e0502c47-3234-4609-a8d5-730a9e...",
+              "e948d951-9299-4dec-9772-60b4ac..."
+            ],
+            "type": "string"
+          },
+          "dbSNP_RS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "rs1216625496",
+              "rs1321965561",
+              "rs1347456083",
+              "rs764781997",
+              "rs772199451"
+            ],
+            "type": "string"
+          },
+          "dbSNP_Val_Status": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "file_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "39bc8e0a-7e9d-4d5e-b0cc-3c3a5d...",
+              "434bd7d8-91fb-44f5-8e1e-975963...",
+              "6fd169e5-a79b-405f-8c4e-b20a03...",
+              "7f5e52cd-7481-4e75-9826-8fb59c...",
+              "879297cc-5afe-48aa-9a38-e8b1c6..."
+            ],
+            "type": "string"
+          },
+          "gnomAD_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3.983e-06,
+              4.012e-06,
+              7.979e-06,
+              2.418e-05
+            ],
+            "type": "number"
+          },
+          "gnomAD_AFR_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              6.193e-05
+            ],
+            "type": "number"
+          },
+          "gnomAD_AMR_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "gnomAD_ASJ_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              9.962e-05
+            ],
+            "type": "number"
+          },
+          "gnomAD_EAS_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "gnomAD_FIN_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "gnomAD_NFE_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              8.84e-06,
+              2.664e-05
+            ],
+            "type": "number"
+          },
+          "gnomAD_OTH_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "gnomAD_SAS_AF": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              3.268e-05,
+              9.958e-05
+            ],
+            "type": "number"
+          },
+          "gnomAD_non_cancer_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1.3528099771065172e-05
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_AFR_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                4.8626301577314734e-05
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_AMI_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_AMR_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_ASJ_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_EAS_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_FIN_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_MAX_AF_POPS_adj": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "afr"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "gnomAD_non_cancer_MAX_AF_adj": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                4.8626301577314734e-05
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_MID_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_NFE_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_OTH_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gnomAD_non_cancer_SAS_AF": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "hotspot": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "miRNA": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "muse": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "mutect2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "n_alt_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "n_depth": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              86,
+              90,
+              220,
+              226,
+              613
+            ],
+            "type": "number"
+          },
+          "n_ref_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "normal_submitter_uuid": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0651c598-5bd2-42b7-942b-0fc1fd...",
+              "8bdcb466-e141-45b4-8d5a-975bd3...",
+              "a67953ea-2409-4a42-9056-a90e97...",
+              "f0be1c9e-728c-4655-b792-96bfe1...",
+              "f1798146-9940-463d-9144-3393c8..."
+            ],
+            "type": "string"
+          },
+          "pindel": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No"
+            ],
+            "type": "string"
+          },
+          "primary_site": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Brain",
+              "Bronchus and lung",
+              "Ovary"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-GBM",
+              "TCGA-LUAD",
+              "TCGA-OV"
+            ],
+            "type": "string"
+          },
+          "sample_barcode_normal": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-02-0003-10A",
+              "TCGA-02-2470-10A",
+              "TCGA-04-1360-11A",
+              "TCGA-04-1369-11A",
+              "TCGA-05-4382-10A"
+            ],
+            "type": "string"
+          },
+          "sample_barcode_tumor": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-02-0003-01A",
+              "TCGA-02-2470-01A",
+              "TCGA-04-1360-01A",
+              "TCGA-04-1369-01A",
+              "TCGA-05-4382-01A"
+            ],
+            "type": "string"
+          },
+          "t_alt_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              17,
+              40,
+              52,
+              165
+            ],
+            "type": "number"
+          },
+          "t_depth": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              100,
+              160,
+              171,
+              194,
+              1146
+            ],
+            "type": "number"
+          },
+          "t_ref_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              46,
+              143,
+              154,
+              160,
+              981
+            ],
+            "type": "number"
+          },
+          "tumor_submitter_uuid": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "060c15c0-25ca-4464-8aa3-364396...",
+              "1e4437dd-6049-4a7d-8102-594316...",
+              "5aa2d6c0-4a4a-42b7-a663-591c07...",
+              "634033ea-10ce-47d0-8298-63a7c3...",
+              "c0fab472-3cdc-4661-9010-60fa3b..."
+            ],
+            "type": "string"
+          },
+          "varscan2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "masked_somatic_mutation_hg38_g...",
+                  "masked_somatic_mutation_hg38_g...",
+                  "masked_somatic_mutation_hg38_g...",
+                  "masked_somatic_mutation_hg38_g...",
+                  "masked_somatic_mutation_hg38_g..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "masked_somatic_mutation_hg38_gdc_r39::0"
+              },
+              {
+                "id": "masked_somatic_mutation_hg38_gdc_r39::1"
+              },
+              {
+                "id": "masked_somatic_mutation_hg38_gdc_r39::2"
+              },
+              {
+                "id": "masked_somatic_mutation_hg38_gdc_r39::3"
+              },
+              {
+                "id": "masked_somatic_mutation_hg38_gdc_r39::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "APPRIS": "P4",
+      "Allele": "A",
+      "Amino_acids": "A/T",
+      "BAM_File": null,
+      "BIOTYPE": "protein_coding",
+      "CANONICAL": null,
+      "CCDS": "CCDS32155.1",
+      "CDS_position": "802/2448",
+      "CLIN_SIG": null,
+      "CONTEXT": "ATTACGCTGGC",
+      "COSMIC": "COSM2148885",
+      "Center": "BI",
+      "Chromosome": "chr14",
+      "Codons": "Gct/Act",
+      "Consequence": "missense_variant",
+      "DISTANCE": null,
+      "DOMAINS": "PDB-ENSP_mappings:4ci8.A;PDB-ENSP_mappings:4ci8.B;Superfamily:SSF50998;SMART:SM00320;Pfam:PF00400;Gene3D:2.130.10.10;Gene3D:2.130.10.10;PANTHER:PTHR13720:SF22;PANTHER:PTHR13720",
+      "ENSP": "ENSP00000262233",
+      "ESP_AA_AF": null,
+      "ESP_EA_AF": null,
+      "EXON": "7/22",
+      "End_Position": 99897269,
+      "Entrez_Gene_Id": 2009,
+      "Existing_variation": "rs764781997;COSV51746801",
+      "Exon_Number": "7/22",
+      "FLAGS": null,
+      "Feature": "ENST00000262233",
+      "Feature_type": "Transcript",
+      "GDC_FILTER": null,
+      "GENE_PHENO": "1",
+      "Gene": "ENSG00000066629",
+      "HGNC_ID": "HGNC:3330",
+      "HGVS_OFFSET": null,
+      "HGVSc": "c.802G>A",
+      "HGVSp": "p.Ala268Thr",
+      "HGVSp_Short": "p.A268T",
+      "HIGH_INF_POS": null,
+      "Hugo_Symbol": "EML1",
+      "IMPACT": "MODERATE",
+      "INTRON": null,
+      "MANE": "NM_004434.3",
+      "MAX_AF": 9.958e-05,
+      "MAX_AF_POPS": "gnomAD_SAS",
+      "MOTIF_NAME": null,
+      "MOTIF_POS": null,
+      "MOTIF_SCORE_CHANGE": null,
+      "Match_Norm_Seq_Allele1": null,
+      "Match_Norm_Seq_Allele2": null,
+      "Match_Norm_Validation_Allele1": null,
+      "Match_Norm_Validation_Allele2": null,
+      "Matched_Norm_Aliquot_Barcode": "TCGA-02-0003-10A-01D-1490-08",
+      "Matched_Norm_Aliquot_UUID": "0b63ce82-23d2-48d4-be99-3959917d94ea",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh38",
+      "One_Consequence": "missense_variant",
+      "PHENO": "0;1",
+      "PICK": null,
+      "PUBMED": null,
+      "PolyPhen": "benign(0)",
+      "Protein_position": "268/815",
+      "RNA_Support": "Unknown",
+      "RNA_alt_count": null,
+      "RNA_depth": null,
+      "RNA_ref_count": null,
+      "RefSeq": "NM_001375411.1;NM_004434.3;NM_001375412.1",
+      "Reference_Allele": "G",
+      "SIFT": "tolerated(0.25)",
+      "SOMATIC": "0;1",
+      "SWISSPROT": "O00423.177",
+      "SYMBOL": "EML1",
+      "SYMBOL_SOURCE": "HGNC",
+      "Score": null,
+      "Sequence_Source": null,
+      "Sequencer": null,
+      "Sequencing_Phase": null,
+      "Start_Position": 99897269,
+      "Strand": "+",
+      "TRANSCRIPTION_FACTORS": null,
+      "TRANSCRIPT_STRAND": "1",
+      "TREMBL": null,
+      "TSL": "1",
+      "ThousG_AF": null,
+      "ThousG_AFR_AF": null,
+      "ThousG_AMR_AF": null,
+      "ThousG_EAS_AF": null,
+      "ThousG_EUR_AF": null,
+      "ThousG_SAS_AF": null,
+      "Transcript_ID": "ENST00000262233",
+      "Tumor_Aliquot_Barcode": "TCGA-02-0003-01A-01D-1490-08",
+      "Tumor_Aliquot_UUID": "458f13e0-34f3-4a92-b3b3-9a3c2ee3ef23",
+      "Tumor_Seq_Allele1": "G",
+      "Tumor_Seq_Allele2": "A",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UNIPARC": "UPI000013D278",
+      "UNIPROT_ISOFORM": "O00423-1",
+      "VARIANT_CLASS": "SNV",
+      "Validation_Method": null,
+      "Validation_Status": null,
+      "Variant_Classification": "Missense_Mutation",
+      "Variant_Type": "SNP",
+      "Verification_Status": null,
+      "aliquot_barcode_normal": "TCGA-02-0003-10A-01D-1490-08",
+      "aliquot_barcode_tumor": "TCGA-02-0003-01A-01D-1490-08",
+      "all_effects": "EML1,missense_variant,p.A293T,ENST00000649352,,c.877G>A,MODERATE,YES,tolerated(0.24),benign(0.003),1;EML1,missense_variant,p.A268T,ENST00000262233,NM_001375411.1&NM_004434.3&NM_001375412.1,c.802G>A,MODERATE,,tolerated(0.25),benign(0),1;EML1,missense_variant,p.A287T,ENST00000334192,NM_001008707.2,c.859G>A,MODERATE,,tolerated(0.27),benign(0.001),1;EML1,missense_variant,p.A256T,ENST00000327921,,c.766G>A,MODERATE,,tolerated(0.24),benign(0),1;EML1,missense_variant,p.A255T,ENST00000554479,,c.763G>A,MODERATE,,tolerated(0.19),benign(0),1;EML1,missense_variant,p.A237T,ENST00000556714,,c.709G>A,MODERATE,,tolerated(0.15),benign(0),1;EML1,upstream_gene_variant,,ENST00000554386,,,MODIFIER,,,,1;EML1,upstream_gene_variant,,ENST00000555812,,,MODIFIER,,,,1;EML1,missense_variant,p.A10T,ENST00000554553,,c.28G>A,MODERATE,,tolerated(0.34),benign(0.001),1;EML1,non_coding_transcript_exon_variant,,ENST00000555277,,n.431G>A,MODIFIER,,,,1",
+      "cDNA_position": "866/4460",
+      "callers": "muse;mutect2;varscan2",
+      "case_barcode": "TCGA-02-0003",
+      "case_id": "df3c1d61-79c1-43e9-971a-8029497ffeab",
+      "dbSNP_RS": "rs764781997",
+      "dbSNP_Val_Status": null,
+      "file_gdc_id": "6fd169e5-a79b-405f-8c4e-b20a03d8a4a9",
+      "gnomAD_AF": 2.418e-05,
+      "gnomAD_AFR_AF": 0,
+      "gnomAD_AMR_AF": 0,
+      "gnomAD_ASJ_AF": 0,
+      "gnomAD_EAS_AF": 0,
+      "gnomAD_FIN_AF": 0,
+      "gnomAD_NFE_AF": 2.664e-05,
+      "gnomAD_OTH_AF": 0,
+      "gnomAD_SAS_AF": 9.958e-05,
+      "gnomAD_non_cancer_AF": null,
+      "gnomAD_non_cancer_AFR_AF": null,
+      "gnomAD_non_cancer_AMI_AF": null,
+      "gnomAD_non_cancer_AMR_AF": null,
+      "gnomAD_non_cancer_ASJ_AF": null,
+      "gnomAD_non_cancer_EAS_AF": null,
+      "gnomAD_non_cancer_FIN_AF": null,
+      "gnomAD_non_cancer_MAX_AF_POPS_adj": null,
+      "gnomAD_non_cancer_MAX_AF_adj": null,
+      "gnomAD_non_cancer_MID_AF": null,
+      "gnomAD_non_cancer_NFE_AF": null,
+      "gnomAD_non_cancer_OTH_AF": null,
+      "gnomAD_non_cancer_SAS_AF": null,
+      "hotspot": false,
+      "miRNA": null,
+      "muse": "Yes",
+      "mutect2": "Yes",
+      "n_alt_count": null,
+      "n_depth": 90,
+      "n_ref_count": null,
+      "normal_submitter_uuid": "8bdcb466-e141-45b4-8d5a-975bd3dd0cde",
+      "pindel": "No",
+      "primary_site": "Brain",
+      "project_short_name": "TCGA-GBM",
+      "sample_barcode_normal": "TCGA-02-0003-10A",
+      "sample_barcode_tumor": "TCGA-02-0003-01A",
+      "t_alt_count": 52,
+      "t_depth": 100,
+      "t_ref_count": 46,
+      "tumor_submitter_uuid": "5aa2d6c0-4a4a-42b7-a663-591c0716b0f2",
+      "varscan2": "Yes"
+    },
+    {
+      "APPRIS": "P1",
+      "Allele": "A",
+      "Amino_acids": "E",
+      "BAM_File": null,
+      "BIOTYPE": "protein_coding",
+      "CANONICAL": "YES",
+      "CCDS": "CCDS47729.1",
+      "CDS_position": "765/1017",
+      "CLIN_SIG": null,
+      "CONTEXT": "ATGGAGGCTCA",
+      "COSMIC": null,
+      "Center": "BI",
+      "Chromosome": "chr7",
+      "Codons": "gaG/gaA",
+      "Consequence": "synonymous_variant",
+      "DISTANCE": null,
+      "DOMAINS": "CDD:cd15015;PANTHER:PTHR11394:SF136;PANTHER:PTHR11394;Pfam:PF05296;Superfamily:SSF81321",
+      "ENSP": "ENSP00000405095",
+      "ESP_AA_AF": null,
+      "ESP_EA_AF": null,
+      "EXON": "1/1",
+      "End_Position": 143184183,
+      "Entrez_Gene_Id": 259285,
+      "Existing_variation": "rs1216625496;COSV101489421",
+      "Exon_Number": "1/1",
+      "FLAGS": null,
+      "Feature": "ENST00000446620",
+      "Feature_type": "Transcript",
+      "GDC_FILTER": null,
+      "GENE_PHENO": null,
+      "Gene": "ENSG00000236398",
+      "HGNC_ID": "HGNC:18886",
+      "HGVS_OFFSET": null,
+      "HGVSc": "c.765G>A",
+      "HGVSp": "p.Glu255=",
+      "HGVSp_Short": "p.E255=",
+      "HIGH_INF_POS": null,
+      "Hugo_Symbol": "TAS2R39",
+      "IMPACT": "LOW",
+      "INTRON": null,
+      "MANE": "NM_176881.2",
+      "MAX_AF": 3.268e-05,
+      "MAX_AF_POPS": "gnomAD_SAS",
+      "MOTIF_NAME": null,
+      "MOTIF_POS": null,
+      "MOTIF_SCORE_CHANGE": null,
+      "Match_Norm_Seq_Allele1": null,
+      "Match_Norm_Seq_Allele2": null,
+      "Match_Norm_Validation_Allele1": null,
+      "Match_Norm_Validation_Allele2": null,
+      "Matched_Norm_Aliquot_Barcode": "TCGA-04-1360-11A-01W-0492-08",
+      "Matched_Norm_Aliquot_UUID": "7019adc7-8cd6-4942-9cfd-39cdbc19f283",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh38",
+      "One_Consequence": "synonymous_variant",
+      "PHENO": "0;1",
+      "PICK": "1",
+      "PUBMED": null,
+      "PolyPhen": null,
+      "Protein_position": "255/338",
+      "RNA_Support": "Unknown",
+      "RNA_alt_count": null,
+      "RNA_depth": null,
+      "RNA_ref_count": null,
+      "RefSeq": "NM_176881.2",
+      "Reference_Allele": "G",
+      "SIFT": null,
+      "SOMATIC": "0;1",
+      "SWISSPROT": "P59534.133",
+      "SYMBOL": "TAS2R39",
+      "SYMBOL_SOURCE": "HGNC",
+      "Score": null,
+      "Sequence_Source": null,
+      "Sequencer": null,
+      "Sequencing_Phase": null,
+      "Start_Position": 143184183,
+      "Strand": "+",
+      "TRANSCRIPTION_FACTORS": null,
+      "TRANSCRIPT_STRAND": "1",
+      "TREMBL": null,
+      "TSL": null,
+      "ThousG_AF": null,
+      "ThousG_AFR_AF": null,
+      "ThousG_AMR_AF": null,
+      "ThousG_EAS_AF": null,
+      "ThousG_EUR_AF": null,
+      "ThousG_SAS_AF": null,
+      "Transcript_ID": "ENST00000446620",
+      "Tumor_Aliquot_Barcode": "TCGA-04-1360-01A-01W-0492-08",
+      "Tumor_Aliquot_UUID": "0c2c84b0-43e2-469c-8813-f50f2599d90f",
+      "Tumor_Seq_Allele1": "G",
+      "Tumor_Seq_Allele2": "A",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UNIPARC": "UPI00000620BE",
+      "UNIPROT_ISOFORM": null,
+      "VARIANT_CLASS": "SNV",
+      "Validation_Method": null,
+      "Validation_Status": null,
+      "Variant_Classification": "Silent",
+      "Variant_Type": "SNP",
+      "Verification_Status": null,
+      "aliquot_barcode_normal": "TCGA-04-1360-11A-01W-0492-08",
+      "aliquot_barcode_tumor": "TCGA-04-1360-01A-01W-0492-08",
+      "all_effects": "TAS2R39,synonymous_variant,p.E255=,ENST00000446620,NM_176881.2,c.765G>A,LOW,YES,,,1",
+      "cDNA_position": "765/1017",
+      "callers": "muse;mutect2;varscan2",
+      "case_barcode": "TCGA-04-1360",
+      "case_id": "e0502c47-3234-4609-a8d5-730a9e6eb5b8",
+      "dbSNP_RS": "rs1216625496",
+      "dbSNP_Val_Status": null,
+      "file_gdc_id": "434bd7d8-91fb-44f5-8e1e-975963a6b733",
+      "gnomAD_AF": 4.012e-06,
+      "gnomAD_AFR_AF": 0,
+      "gnomAD_AMR_AF": 0,
+      "gnomAD_ASJ_AF": 0,
+      "gnomAD_EAS_AF": 0,
+      "gnomAD_FIN_AF": 0,
+      "gnomAD_NFE_AF": 0,
+      "gnomAD_OTH_AF": 0,
+      "gnomAD_SAS_AF": 3.268e-05,
+      "gnomAD_non_cancer_AF": null,
+      "gnomAD_non_cancer_AFR_AF": null,
+      "gnomAD_non_cancer_AMI_AF": null,
+      "gnomAD_non_cancer_AMR_AF": null,
+      "gnomAD_non_cancer_ASJ_AF": null,
+      "gnomAD_non_cancer_EAS_AF": null,
+      "gnomAD_non_cancer_FIN_AF": null,
+      "gnomAD_non_cancer_MAX_AF_POPS_adj": null,
+      "gnomAD_non_cancer_MAX_AF_adj": null,
+      "gnomAD_non_cancer_MID_AF": null,
+      "gnomAD_non_cancer_NFE_AF": null,
+      "gnomAD_non_cancer_OTH_AF": null,
+      "gnomAD_non_cancer_SAS_AF": null,
+      "hotspot": false,
+      "miRNA": null,
+      "muse": "Yes",
+      "mutect2": "Yes",
+      "n_alt_count": null,
+      "n_depth": 613,
+      "n_ref_count": null,
+      "normal_submitter_uuid": "0651c598-5bd2-42b7-942b-0fc1fd070d35",
+      "pindel": "No",
+      "primary_site": "Ovary",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode_normal": "TCGA-04-1360-11A",
+      "sample_barcode_tumor": "TCGA-04-1360-01A",
+      "t_alt_count": 165,
+      "t_depth": 1146,
+      "t_ref_count": 981,
+      "tumor_submitter_uuid": "c0fab472-3cdc-4661-9010-60fa3b738ed6",
+      "varscan2": "Yes"
+    },
+    {
+      "APPRIS": "P1",
+      "Allele": "T",
+      "Amino_acids": "G/S",
+      "BAM_File": null,
+      "BIOTYPE": "protein_coding",
+      "CANONICAL": "YES",
+      "CCDS": "CCDS1014.1",
+      "CDS_position": "220/279",
+      "CLIN_SIG": null,
+      "CONTEXT": "ACTGCCCCTGT",
+      "COSMIC": null,
+      "Center": "WUGSC",
+      "Chromosome": "chr1",
+      "Codons": "Ggc/Agc",
+      "Consequence": "missense_variant",
+      "DISTANCE": null,
+      "DOMAINS": "Pfam:PF14672;PANTHER:PTHR23263;PANTHER:PTHR23263:SF123;MobiDB_lite:mobidb-lite;Low_complexity_(Seg):seg",
+      "ENSP": "ENSP00000357776",
+      "ESP_AA_AF": null,
+      "ESP_EA_AF": null,
+      "EXON": "2/2",
+      "End_Position": 152579717,
+      "Entrez_Gene_Id": 84648,
+      "Existing_variation": "rs1321965561;COSV100909856",
+      "Exon_Number": "2/2",
+      "FLAGS": null,
+      "Feature": "ENST00000368787",
+      "Feature_type": "Transcript",
+      "GDC_FILTER": null,
+      "GENE_PHENO": null,
+      "Gene": "ENSG00000163202",
+      "HGNC_ID": "HGNC:16615",
+      "HGVS_OFFSET": null,
+      "HGVSc": "c.220G>A",
+      "HGVSp": "p.Gly74Ser",
+      "HGVSp_Short": "p.G74S",
+      "HIGH_INF_POS": null,
+      "Hugo_Symbol": "LCE3D",
+      "IMPACT": "MODERATE",
+      "INTRON": null,
+      "MANE": "NM_032563.2",
+      "MAX_AF": 6.193e-05,
+      "MAX_AF_POPS": "gnomAD_AFR",
+      "MOTIF_NAME": null,
+      "MOTIF_POS": null,
+      "MOTIF_SCORE_CHANGE": null,
+      "Match_Norm_Seq_Allele1": null,
+      "Match_Norm_Seq_Allele2": null,
+      "Match_Norm_Validation_Allele1": null,
+      "Match_Norm_Validation_Allele2": null,
+      "Matched_Norm_Aliquot_Barcode": "TCGA-04-1369-11A-01D-1526-09",
+      "Matched_Norm_Aliquot_UUID": "e1d50578-4839-4490-ab36-f0d82fec4eec",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh38",
+      "One_Consequence": "missense_variant",
+      "PHENO": "0;1",
+      "PICK": "1",
+      "PUBMED": null,
+      "PolyPhen": "possibly_damaging(0.764)",
+      "Protein_position": "74/92",
+      "RNA_Support": "Unknown",
+      "RNA_alt_count": null,
+      "RNA_depth": null,
+      "RNA_ref_count": null,
+      "RefSeq": "NM_032563.2",
+      "Reference_Allele": "C",
+      "SIFT": "deleterious_low_confidence(0.03)",
+      "SOMATIC": "0;1",
+      "SWISSPROT": "Q9BYE3.103",
+      "SYMBOL": "LCE3D",
+      "SYMBOL_SOURCE": "HGNC",
+      "Score": null,
+      "Sequence_Source": null,
+      "Sequencer": null,
+      "Sequencing_Phase": null,
+      "Start_Position": 152579717,
+      "Strand": "+",
+      "TRANSCRIPTION_FACTORS": null,
+      "TRANSCRIPT_STRAND": "-1",
+      "TREMBL": null,
+      "TSL": "1",
+      "ThousG_AF": null,
+      "ThousG_AFR_AF": null,
+      "ThousG_AMR_AF": null,
+      "ThousG_EAS_AF": null,
+      "ThousG_EUR_AF": null,
+      "ThousG_SAS_AF": null,
+      "Transcript_ID": "ENST00000368787",
+      "Tumor_Aliquot_Barcode": "TCGA-04-1369-01A-02D-1526-09",
+      "Tumor_Aliquot_UUID": "7a657ef6-0ff3-40cb-b02b-a1a79ef899f6",
+      "Tumor_Seq_Allele1": "C",
+      "Tumor_Seq_Allele2": "T",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UNIPARC": "UPI000006EC48",
+      "UNIPROT_ISOFORM": null,
+      "VARIANT_CLASS": "SNV",
+      "Validation_Method": null,
+      "Validation_Status": null,
+      "Variant_Classification": "Missense_Mutation",
+      "Variant_Type": "SNP",
+      "Verification_Status": null,
+      "aliquot_barcode_normal": "TCGA-04-1369-11A-01D-1526-09",
+      "aliquot_barcode_tumor": "TCGA-04-1369-01A-02D-1526-09",
+      "all_effects": "LCE3D,missense_variant,p.G74S,ENST00000368787,NM_032563.2,c.220G>A,MODERATE,YES,deleterious_low_confidence(0.03),possibly_damaging(0.764),-1",
+      "cDNA_position": "289/625",
+      "callers": "muse;mutect2",
+      "case_barcode": "TCGA-04-1369",
+      "case_id": "6c43727d-631a-40fb-b1a1-242a12889eaa",
+      "dbSNP_RS": "rs1321965561",
+      "dbSNP_Val_Status": null,
+      "file_gdc_id": "7f5e52cd-7481-4e75-9826-8fb59cbc413b",
+      "gnomAD_AF": 3.983e-06,
+      "gnomAD_AFR_AF": 6.193e-05,
+      "gnomAD_AMR_AF": 0,
+      "gnomAD_ASJ_AF": 0,
+      "gnomAD_EAS_AF": 0,
+      "gnomAD_FIN_AF": 0,
+      "gnomAD_NFE_AF": 0,
+      "gnomAD_OTH_AF": 0,
+      "gnomAD_SAS_AF": 0,
+      "gnomAD_non_cancer_AF": 1.3528099771065172e-05,
+      "gnomAD_non_cancer_AFR_AF": 4.8626301577314734e-05,
+      "gnomAD_non_cancer_AMI_AF": 0,
+      "gnomAD_non_cancer_AMR_AF": 0,
+      "gnomAD_non_cancer_ASJ_AF": 0,
+      "gnomAD_non_cancer_EAS_AF": 0,
+      "gnomAD_non_cancer_FIN_AF": 0,
+      "gnomAD_non_cancer_MAX_AF_POPS_adj": "afr",
+      "gnomAD_non_cancer_MAX_AF_adj": 4.8626301577314734e-05,
+      "gnomAD_non_cancer_MID_AF": 0,
+      "gnomAD_non_cancer_NFE_AF": 0,
+      "gnomAD_non_cancer_OTH_AF": 0,
+      "gnomAD_non_cancer_SAS_AF": 0,
+      "hotspot": false,
+      "miRNA": null,
+      "muse": "Yes",
+      "mutect2": "Yes",
+      "n_alt_count": null,
+      "n_depth": 220,
+      "n_ref_count": null,
+      "normal_submitter_uuid": "f1798146-9940-463d-9144-3393c88c2001",
+      "pindel": "No",
+      "primary_site": "Ovary",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode_normal": "TCGA-04-1369-11A",
+      "sample_barcode_tumor": "TCGA-04-1369-01A",
+      "t_alt_count": 11,
+      "t_depth": 171,
+      "t_ref_count": 160,
+      "tumor_submitter_uuid": "1e4437dd-6049-4a7d-8102-594316f14efa",
+      "varscan2": "No"
+    },
+    {
+      "APPRIS": "P1",
+      "Allele": "T",
+      "Amino_acids": "D/N",
+      "BAM_File": null,
+      "BIOTYPE": "protein_coding",
+      "CANONICAL": "YES",
+      "CCDS": "CCDS3074.1",
+      "CDS_position": "391/2343",
+      "CLIN_SIG": null,
+      "CONTEXT": "TAAATCACGGA",
+      "COSMIC": null,
+      "Center": "BI",
+      "Chromosome": "chr3",
+      "Codons": "Gat/Aat",
+      "Consequence": "missense_variant",
+      "DISTANCE": null,
+      "DOMAINS": "CDD:cd05154;PANTHER:PTHR45741;Gene3D:3.90.1200.10;Pfam:PF01636;Superfamily:SSF56112",
+      "ENSP": "ENSP00000264990",
+      "ESP_AA_AF": null,
+      "ESP_EA_AF": null,
+      "EXON": "4/20",
+      "End_Position": 132642118,
+      "Entrez_Gene_Id": 84129,
+      "Existing_variation": "rs1347456083;COSV99391730",
+      "Exon_Number": "4/20",
+      "FLAGS": null,
+      "Feature": "ENST00000264990",
+      "Feature_type": "Transcript",
+      "GDC_FILTER": null,
+      "GENE_PHENO": null,
+      "Gene": "ENSG00000240303",
+      "HGNC_ID": "HGNC:30211",
+      "HGVS_OFFSET": null,
+      "HGVSc": "c.391G>A",
+      "HGVSp": "p.Asp131Asn",
+      "HGVSp_Short": "p.D131N",
+      "HIGH_INF_POS": null,
+      "Hugo_Symbol": "ACAD11",
+      "IMPACT": "MODERATE",
+      "INTRON": null,
+      "MANE": "NM_032169.5",
+      "MAX_AF": 3.268e-05,
+      "MAX_AF_POPS": "gnomAD_SAS",
+      "MOTIF_NAME": null,
+      "MOTIF_POS": null,
+      "MOTIF_SCORE_CHANGE": null,
+      "Match_Norm_Seq_Allele1": null,
+      "Match_Norm_Seq_Allele2": null,
+      "Match_Norm_Validation_Allele1": null,
+      "Match_Norm_Validation_Allele2": null,
+      "Matched_Norm_Aliquot_Barcode": "TCGA-05-4382-10A-01D-1265-08",
+      "Matched_Norm_Aliquot_UUID": "20e316a4-d1e4-44d2-881c-527e600203f0",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh38",
+      "One_Consequence": "missense_variant",
+      "PHENO": "0;1",
+      "PICK": "1",
+      "PUBMED": null,
+      "PolyPhen": "benign(0.207)",
+      "Protein_position": "131/780",
+      "RNA_Support": "Unknown",
+      "RNA_alt_count": null,
+      "RNA_depth": null,
+      "RNA_ref_count": null,
+      "RefSeq": "NM_032169.5",
+      "Reference_Allele": "C",
+      "SIFT": "deleterious(0.04)",
+      "SOMATIC": "0;1",
+      "SWISSPROT": "Q709F0.150",
+      "SYMBOL": "ACAD11",
+      "SYMBOL_SOURCE": "HGNC",
+      "Score": null,
+      "Sequence_Source": null,
+      "Sequencer": null,
+      "Sequencing_Phase": null,
+      "Start_Position": 132642118,
+      "Strand": "+",
+      "TRANSCRIPTION_FACTORS": null,
+      "TRANSCRIPT_STRAND": "-1",
+      "TREMBL": null,
+      "TSL": "1",
+      "ThousG_AF": null,
+      "ThousG_AFR_AF": null,
+      "ThousG_AMR_AF": null,
+      "ThousG_EAS_AF": null,
+      "ThousG_EUR_AF": null,
+      "ThousG_SAS_AF": null,
+      "Transcript_ID": "ENST00000264990",
+      "Tumor_Aliquot_Barcode": "TCGA-05-4382-01A-01D-1931-08",
+      "Tumor_Aliquot_UUID": "43b8f335-bb32-45de-985a-85508048b237",
+      "Tumor_Seq_Allele1": "C",
+      "Tumor_Seq_Allele2": "T",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UNIPARC": "UPI0000223E4E",
+      "UNIPROT_ISOFORM": "Q709F0-1",
+      "VARIANT_CLASS": "SNV",
+      "Validation_Method": null,
+      "Validation_Status": null,
+      "Variant_Classification": "Missense_Mutation",
+      "Variant_Type": "SNP",
+      "Verification_Status": null,
+      "aliquot_barcode_normal": "TCGA-05-4382-10A-01D-1265-08",
+      "aliquot_barcode_tumor": "TCGA-05-4382-01A-01D-1931-08",
+      "all_effects": "ACAD11,missense_variant,p.D131N,ENST00000264990,NM_032169.5,c.391G>A,MODERATE,YES,deleterious(0.04),benign(0.207),-1;ACAD11,missense_variant,p.D131N,ENST00000481970,,c.391G>A,MODERATE,,tolerated(0.05),benign(0.422),-1;NPHP3-ACAD11,downstream_gene_variant,,ENST00000632629,,,MODIFIER,YES,,,-1;ACAD11,intron_variant,,ENST00000489991,,n.461-11560G>A,MODIFIER,,,,-1;ACAD11,missense_variant,p.D131N,ENST00000485198,,c.391G>A,MODERATE,,deleterious(0.03),benign(0.422),-1;NPHP3-ACAD11,3_prime_UTR_variant,,ENST00000471702,,c.*2217G>A,MODIFIER,,,,-1;ACAD11,non_coding_transcript_exon_variant,,ENST00000496418,,n.289G>A,MODIFIER,,,,-1;ACAD11,non_coding_transcript_exon_variant,,ENST00000469042,,n.722G>A,MODIFIER,,,,-1;HSPA8P19,upstream_gene_variant,,ENST00000505359,,,MODIFIER,YES,,,1",
+      "cDNA_position": "449/3231",
+      "callers": "muse;mutect2;varscan2",
+      "case_barcode": "TCGA-05-4382",
+      "case_id": "3434b91a-c05f-460f-a078-7b1bb6e7085d",
+      "dbSNP_RS": "rs1347456083",
+      "dbSNP_Val_Status": null,
+      "file_gdc_id": "879297cc-5afe-48aa-9a38-e8b1c6fe0a32",
+      "gnomAD_AF": 3.983e-06,
+      "gnomAD_AFR_AF": 0,
+      "gnomAD_AMR_AF": 0,
+      "gnomAD_ASJ_AF": 0,
+      "gnomAD_EAS_AF": 0,
+      "gnomAD_FIN_AF": 0,
+      "gnomAD_NFE_AF": 0,
+      "gnomAD_OTH_AF": 0,
+      "gnomAD_SAS_AF": 3.268e-05,
+      "gnomAD_non_cancer_AF": null,
+      "gnomAD_non_cancer_AFR_AF": null,
+      "gnomAD_non_cancer_AMI_AF": null,
+      "gnomAD_non_cancer_AMR_AF": null,
+      "gnomAD_non_cancer_ASJ_AF": null,
+      "gnomAD_non_cancer_EAS_AF": null,
+      "gnomAD_non_cancer_FIN_AF": null,
+      "gnomAD_non_cancer_MAX_AF_POPS_adj": null,
+      "gnomAD_non_cancer_MAX_AF_adj": null,
+      "gnomAD_non_cancer_MID_AF": null,
+      "gnomAD_non_cancer_NFE_AF": null,
+      "gnomAD_non_cancer_OTH_AF": null,
+      "gnomAD_non_cancer_SAS_AF": null,
+      "hotspot": false,
+      "miRNA": null,
+      "muse": "Yes",
+      "mutect2": "Yes",
+      "n_alt_count": null,
+      "n_depth": 86,
+      "n_ref_count": null,
+      "normal_submitter_uuid": "f0be1c9e-728c-4655-b792-96bfe1cd5344",
+      "pindel": "No",
+      "primary_site": "Bronchus and lung",
+      "project_short_name": "TCGA-LUAD",
+      "sample_barcode_normal": "TCGA-05-4382-10A",
+      "sample_barcode_tumor": "TCGA-05-4382-01A",
+      "t_alt_count": 17,
+      "t_depth": 160,
+      "t_ref_count": 143,
+      "tumor_submitter_uuid": "060c15c0-25ca-4464-8aa3-364396b9b34c",
+      "varscan2": "Yes"
+    },
+    {
+      "APPRIS": "P3",
+      "Allele": "A",
+      "Amino_acids": "R/H",
+      "BAM_File": null,
+      "BIOTYPE": "protein_coding",
+      "CANONICAL": "YES",
+      "CCDS": "CCDS5254.1",
+      "CDS_position": "1127/4491",
+      "CLIN_SIG": null,
+      "CONTEXT": "TCCACGGTGAG",
+      "COSMIC": "COSM2149100;COSM2149101",
+      "Center": "BI",
+      "Chromosome": "chr6",
+      "Codons": "cGt/cAt",
+      "Consequence": "missense_variant;splice_region_variant",
+      "DISTANCE": null,
+      "DOMAINS": "PROSITE_profiles:PS50275;PANTHER:PTHR11200:SF148;PANTHER:PTHR11200",
+      "ENSP": "ENSP00000347792",
+      "ESP_AA_AF": null,
+      "ESP_EA_AF": null,
+      "EXON": "8/27",
+      "End_Position": 158062164,
+      "Entrez_Gene_Id": 8871,
+      "Existing_variation": "rs772199451;COSV62895768",
+      "Exon_Number": "8/27",
+      "FLAGS": null,
+      "Feature": "ENST00000355585",
+      "Feature_type": "Transcript",
+      "GDC_FILTER": null,
+      "GENE_PHENO": null,
+      "Gene": "ENSG00000078269",
+      "HGNC_ID": "HGNC:11504",
+      "HGVS_OFFSET": null,
+      "HGVSc": "c.1127G>A",
+      "HGVSp": "p.Arg376His",
+      "HGVSp_Short": "p.R376H",
+      "HIGH_INF_POS": null,
+      "Hugo_Symbol": "SYNJ2",
+      "IMPACT": "MODERATE",
+      "INTRON": null,
+      "MANE": "NM_003898.4",
+      "MAX_AF": 9.962e-05,
+      "MAX_AF_POPS": "gnomAD_ASJ",
+      "MOTIF_NAME": null,
+      "MOTIF_POS": null,
+      "MOTIF_SCORE_CHANGE": null,
+      "Match_Norm_Seq_Allele1": null,
+      "Match_Norm_Seq_Allele2": null,
+      "Match_Norm_Validation_Allele1": null,
+      "Match_Norm_Validation_Allele2": null,
+      "Matched_Norm_Aliquot_Barcode": "TCGA-02-2470-10A-01D-1494-08",
+      "Matched_Norm_Aliquot_UUID": "1ab37cba-6ad6-4825-98bb-b8e102f64ed2",
+      "Mutation_Status": "Somatic",
+      "NCBI_Build": "GRCh38",
+      "One_Consequence": "missense_variant",
+      "PHENO": "0;1",
+      "PICK": "1",
+      "PUBMED": null,
+      "PolyPhen": "probably_damaging(0.964)",
+      "Protein_position": "376/1496",
+      "RNA_Support": "Unknown",
+      "RNA_alt_count": null,
+      "RNA_depth": null,
+      "RNA_ref_count": null,
+      "RefSeq": "NM_003898.4",
+      "Reference_Allele": "G",
+      "SIFT": "deleterious(0.01)",
+      "SOMATIC": "0;1",
+      "SWISSPROT": "O15056.196",
+      "SYMBOL": "SYNJ2",
+      "SYMBOL_SOURCE": "HGNC",
+      "Score": null,
+      "Sequence_Source": null,
+      "Sequencer": null,
+      "Sequencing_Phase": null,
+      "Start_Position": 158062164,
+      "Strand": "+",
+      "TRANSCRIPTION_FACTORS": null,
+      "TRANSCRIPT_STRAND": "1",
+      "TREMBL": null,
+      "TSL": "1",
+      "ThousG_AF": null,
+      "ThousG_AFR_AF": null,
+      "ThousG_AMR_AF": null,
+      "ThousG_EAS_AF": null,
+      "ThousG_EUR_AF": null,
+      "ThousG_SAS_AF": null,
+      "Transcript_ID": "ENST00000355585",
+      "Tumor_Aliquot_Barcode": "TCGA-02-2470-01A-01D-1494-08",
+      "Tumor_Aliquot_UUID": "0b35f2ff-2a08-4585-a1a9-cfc6a9f5b224",
+      "Tumor_Seq_Allele1": "G",
+      "Tumor_Seq_Allele2": "A",
+      "Tumor_Validation_Allele1": null,
+      "Tumor_Validation_Allele2": null,
+      "UNIPARC": "UPI000006E2F8",
+      "UNIPROT_ISOFORM": "O15056-1",
+      "VARIANT_CLASS": "SNV",
+      "Validation_Method": null,
+      "Validation_Status": null,
+      "Variant_Classification": "Missense_Mutation",
+      "Variant_Type": "SNP",
+      "Verification_Status": null,
+      "aliquot_barcode_normal": "TCGA-02-2470-10A-01D-1494-08",
+      "aliquot_barcode_tumor": "TCGA-02-2470-01A-01D-1494-08",
+      "all_effects": "SYNJ2,missense_variant,p.R376H,ENST00000355585,NM_003898.4,c.1127G>A,MODERATE,YES,deleterious(0.01),probably_damaging(0.964),1;SYNJ2,missense_variant,p.R139H,ENST00000638626,NM_001178088.2,c.416G>A,MODERATE,,deleterious(0.01),probably_damaging(0.964),1;SYNJ2,missense_variant,p.R376H,ENST00000640338,,c.1127G>A,MODERATE,,deleterious(0),probably_damaging(0.909),1;SYNJ2,splice_region_variant,,ENST00000485863,,c.*231G>A,LOW,,,,1",
+      "cDNA_position": "1226/7402",
+      "callers": "muse;mutect2;varscan2",
+      "case_barcode": "TCGA-02-2470",
+      "case_id": "e948d951-9299-4dec-9772-60b4ac3569cb",
+      "dbSNP_RS": "rs772199451",
+      "dbSNP_Val_Status": null,
+      "file_gdc_id": "39bc8e0a-7e9d-4d5e-b0cc-3c3a5d3cba6d",
+      "gnomAD_AF": 7.979e-06,
+      "gnomAD_AFR_AF": 0,
+      "gnomAD_AMR_AF": 0,
+      "gnomAD_ASJ_AF": 9.962e-05,
+      "gnomAD_EAS_AF": 0,
+      "gnomAD_FIN_AF": 0,
+      "gnomAD_NFE_AF": 8.84e-06,
+      "gnomAD_OTH_AF": 0,
+      "gnomAD_SAS_AF": 0,
+      "gnomAD_non_cancer_AF": null,
+      "gnomAD_non_cancer_AFR_AF": null,
+      "gnomAD_non_cancer_AMI_AF": null,
+      "gnomAD_non_cancer_AMR_AF": null,
+      "gnomAD_non_cancer_ASJ_AF": null,
+      "gnomAD_non_cancer_EAS_AF": null,
+      "gnomAD_non_cancer_FIN_AF": null,
+      "gnomAD_non_cancer_MAX_AF_POPS_adj": null,
+      "gnomAD_non_cancer_MAX_AF_adj": null,
+      "gnomAD_non_cancer_MID_AF": null,
+      "gnomAD_non_cancer_NFE_AF": null,
+      "gnomAD_non_cancer_OTH_AF": null,
+      "gnomAD_non_cancer_SAS_AF": null,
+      "hotspot": false,
+      "miRNA": null,
+      "muse": "Yes",
+      "mutect2": "Yes",
+      "n_alt_count": null,
+      "n_depth": 226,
+      "n_ref_count": null,
+      "normal_submitter_uuid": "a67953ea-2409-4a42-9056-a90e97549cb0",
+      "pindel": "No",
+      "primary_site": "Brain",
+      "project_short_name": "TCGA-GBM",
+      "sample_barcode_normal": "TCGA-02-2470-10A",
+      "sample_barcode_tumor": "TCGA-02-2470-01A",
+      "t_alt_count": 40,
+      "t_depth": 194,
+      "t_ref_count": 154,
+      "tumor_submitter_uuid": "634033ea-10ce-47d0-8298-63a7c3e3e89b",
+      "varscan2": "Yes"
+    }
+  ]
+}

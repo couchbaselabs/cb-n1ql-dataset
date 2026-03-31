@@ -1,0 +1,312 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`aliquot_barcode` = \"TCGA-04-1331-01A-01R-1569-13\", `aliquot_gdc_id` = \"7fbfdb3e-1fd2-4206-8d2e-7f68e4a...\", `case_barcode` = \"TCGA-04-1331\", `case_gdc_id` = \"6d10d4ee-6331-4bba-93bc-a7b64cc...\", `file_gdc_id` = \"776adc23-7d40-4c1a-94df-7a2ce61...\", `project_short_name` = \"TCGA-OV\", `sample_barcode` = \"TCGA-04-1331-01A\", `sample_gdc_id` = \"a1ec9279-c1a6-4e58-97ed-9ec1f36...\"",
+        "properties": {
+          "Ensembl_gene_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ENSG00000102786",
+              "ENSG00000152672",
+              "ENSG00000223815",
+              "ENSG00000273299",
+              "ENSG00000279271"
+            ],
+            "type": "string"
+          },
+          "Ensembl_gene_id_v": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ENSG00000102786.13",
+              "ENSG00000152672.6",
+              "ENSG00000223815.1",
+              "ENSG00000273299.1",
+              "ENSG00000279271.1"
+            ],
+            "type": "string"
+          },
+          "HTSeq__Counts": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5,
+              35,
+              2100
+            ],
+            "type": "number"
+          },
+          "HTSeq__FPKM": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              0.225495904781,
+              0.234060193689,
+              1.36257551307
+            ],
+            "type": "number"
+          },
+          "HTSeq__FPKM_UQ": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              4964.10209569,
+              5152.63769044,
+              29995.9503324
+            ],
+            "type": "number"
+          },
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331-01A-01R-1569-13"
+            ],
+            "type": "string"
+          },
+          "aliquot_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "7fbfdb3e-1fd2-4206-8d2e-7f68e4..."
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "6d10d4ee-6331-4bba-93bc-a7b64c..."
+            ],
+            "type": "string"
+          },
+          "file_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "776adc23-7d40-4c1a-94df-7a2ce6..."
+            ],
+            "type": "string"
+          },
+          "gene_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CLEC4F",
+              "CTB-13L3.1",
+              "DIAPH3-AS2",
+              "INTS6",
+              "RP11-349F21.3"
+            ],
+            "type": "string"
+          },
+          "gene_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TEC",
+              "antisense",
+              "processed_transcript",
+              "protein_coding"
+            ],
+            "type": "string"
+          },
+          "platform": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-OV"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331-01A"
+            ],
+            "type": "string"
+          },
+          "sample_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "a1ec9279-c1a6-4e58-97ed-9ec1f3..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "rnaseq_hg38_gdc_2017_12::0",
+                  "rnaseq_hg38_gdc_2017_12::1",
+                  "rnaseq_hg38_gdc_2017_12::2",
+                  "rnaseq_hg38_gdc_2017_12::3",
+                  "rnaseq_hg38_gdc_2017_12::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "rnaseq_hg38_gdc_2017_12::0"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_2017_12::1"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_2017_12::2"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_2017_12::3"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_2017_12::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Ensembl_gene_id": "ENSG00000152672",
+      "Ensembl_gene_id_v": "ENSG00000152672.6",
+      "HTSeq__Counts": 35,
+      "HTSeq__FPKM": 0.234060193689,
+      "HTSeq__FPKM_UQ": 5152.63769044,
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "aliquot_gdc_id": "7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844",
+      "case_barcode": "TCGA-04-1331",
+      "case_gdc_id": "6d10d4ee-6331-4bba-93bc-a7b64cc0b22a",
+      "file_gdc_id": "776adc23-7d40-4c1a-94df-7a2ce6188db6",
+      "gene_name": "CLEC4F",
+      "gene_type": "protein_coding",
+      "platform": null,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1331-01A",
+      "sample_gdc_id": "a1ec9279-c1a6-4e58-97ed-9ec1f36187c5"
+    },
+    {
+      "Ensembl_gene_id": "ENSG00000102786",
+      "Ensembl_gene_id_v": "ENSG00000102786.13",
+      "HTSeq__Counts": 2100,
+      "HTSeq__FPKM": 1.36257551307,
+      "HTSeq__FPKM_UQ": 29995.9503324,
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "aliquot_gdc_id": "7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844",
+      "case_barcode": "TCGA-04-1331",
+      "case_gdc_id": "6d10d4ee-6331-4bba-93bc-a7b64cc0b22a",
+      "file_gdc_id": "776adc23-7d40-4c1a-94df-7a2ce6188db6",
+      "gene_name": "INTS6",
+      "gene_type": "protein_coding",
+      "platform": null,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1331-01A",
+      "sample_gdc_id": "a1ec9279-c1a6-4e58-97ed-9ec1f36187c5"
+    },
+    {
+      "Ensembl_gene_id": "ENSG00000279271",
+      "Ensembl_gene_id_v": "ENSG00000279271.1",
+      "HTSeq__Counts": 0,
+      "HTSeq__FPKM": 0,
+      "HTSeq__FPKM_UQ": 0,
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "aliquot_gdc_id": "7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844",
+      "case_barcode": "TCGA-04-1331",
+      "case_gdc_id": "6d10d4ee-6331-4bba-93bc-a7b64cc0b22a",
+      "file_gdc_id": "776adc23-7d40-4c1a-94df-7a2ce6188db6",
+      "gene_name": "RP11-349F21.3",
+      "gene_type": "TEC",
+      "platform": null,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1331-01A",
+      "sample_gdc_id": "a1ec9279-c1a6-4e58-97ed-9ec1f36187c5"
+    },
+    {
+      "Ensembl_gene_id": "ENSG00000223815",
+      "Ensembl_gene_id_v": "ENSG00000223815.1",
+      "HTSeq__Counts": 5,
+      "HTSeq__FPKM": 0.225495904781,
+      "HTSeq__FPKM_UQ": 4964.10209569,
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "aliquot_gdc_id": "7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844",
+      "case_barcode": "TCGA-04-1331",
+      "case_gdc_id": "6d10d4ee-6331-4bba-93bc-a7b64cc0b22a",
+      "file_gdc_id": "776adc23-7d40-4c1a-94df-7a2ce6188db6",
+      "gene_name": "DIAPH3-AS2",
+      "gene_type": "antisense",
+      "platform": null,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1331-01A",
+      "sample_gdc_id": "a1ec9279-c1a6-4e58-97ed-9ec1f36187c5"
+    },
+    {
+      "Ensembl_gene_id": "ENSG00000273299",
+      "Ensembl_gene_id_v": "ENSG00000273299.1",
+      "HTSeq__Counts": 0,
+      "HTSeq__FPKM": 0,
+      "HTSeq__FPKM_UQ": 0,
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "aliquot_gdc_id": "7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844",
+      "case_barcode": "TCGA-04-1331",
+      "case_gdc_id": "6d10d4ee-6331-4bba-93bc-a7b64cc0b22a",
+      "file_gdc_id": "776adc23-7d40-4c1a-94df-7a2ce6188db6",
+      "gene_name": "CTB-13L3.1",
+      "gene_type": "processed_transcript",
+      "platform": null,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1331-01A",
+      "sample_gdc_id": "a1ec9279-c1a6-4e58-97ed-9ec1f36187c5"
+    }
+  ]
+}

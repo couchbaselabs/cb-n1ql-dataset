@@ -1,0 +1,229 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ee_address_1": {
+            "#docs": [
+              3,
+              2
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "STREET,"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ee_address_2": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "A CORP."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ee_city": {
+            "#docs": [
+              3,
+              2
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "LIBEREC",
+                "SOMERSET,"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ee_country": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CZECHOSLOVAKIA",
+              "ENGLAND",
+              "NOT PROVIDED"
+            ],
+            "type": "string"
+          },
+          "ee_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CLARKS LIMITED, A BRITISH COMP...",
+              "ITT RESEARCH INSTITUTE",
+              "RAND, JOHN H.",
+              "UNITED STATES OF AMERICA AS RE...",
+              "VYOSKA SKOLA STROJNI A TEXTILN..."
+            ],
+            "type": "string"
+          },
+          "ee_postcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ee_state": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "rf_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "37920040",
+              "37920888",
+              "37940287",
+              "37940840",
+              "37990340"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "assignee_2016::0",
+                  "assignee_2016::1",
+                  "assignee_2016::2",
+                  "assignee_2016::3",
+                  "assignee_2016::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "assignee_2016::0"
+              },
+              {
+                "id": "assignee_2016::1"
+              },
+              {
+                "id": "assignee_2016::2"
+              },
+              {
+                "id": "assignee_2016::3"
+              },
+              {
+                "id": "assignee_2016::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ee_address_1": null,
+      "ee_address_2": null,
+      "ee_city": null,
+      "ee_country": "NOT PROVIDED",
+      "ee_name": "UNITED STATES OF AMERICA AS REPRESENTED BY THE SECRETARY OF THE ARMY",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "37920888"
+    },
+    {
+      "ee_address_1": "STREET,",
+      "ee_address_2": null,
+      "ee_city": "SOMERSET,",
+      "ee_country": "ENGLAND",
+      "ee_name": "CLARKS LIMITED, A BRITISH COMPANY",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "37940840"
+    },
+    {
+      "ee_address_1": null,
+      "ee_address_2": "A CORP.",
+      "ee_city": "LIBEREC",
+      "ee_country": "CZECHOSLOVAKIA",
+      "ee_name": "VYOSKA SKOLA STROJNI A TEXTILNI",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "37990340"
+    },
+    {
+      "ee_address_1": null,
+      "ee_address_2": null,
+      "ee_city": null,
+      "ee_country": "NOT PROVIDED",
+      "ee_name": "RAND, JOHN H.",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "37920040"
+    },
+    {
+      "ee_address_1": null,
+      "ee_address_2": null,
+      "ee_city": null,
+      "ee_country": "NOT PROVIDED",
+      "ee_name": "ITT RESEARCH INSTITUTE",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "37940287"
+    }
+  ]
+}

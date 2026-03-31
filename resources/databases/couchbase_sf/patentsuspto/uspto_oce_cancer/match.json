@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Patent_or_Publication_ID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "US 0994660 A",
+              "US 1151536 A",
+              "US 1500985 A",
+              "US 1795580 A",
+              "US 1837503 A"
+            ],
+            "type": "string"
+          },
+          "publication_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "US-1151536-A",
+              "US-1500985-A",
+              "US-1795580-A",
+              "US-1837503-A",
+              "US-994660-A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "match::0",
+                  "match::1",
+                  "match::2",
+                  "match::3",
+                  "match::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "match::0"
+              },
+              {
+                "id": "match::1"
+              },
+              {
+                "id": "match::2"
+              },
+              {
+                "id": "match::3"
+              },
+              {
+                "id": "match::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Patent_or_Publication_ID": "US 1837503 A",
+      "publication_number": "US-1837503-A"
+    },
+    {
+      "Patent_or_Publication_ID": "US 1500985 A",
+      "publication_number": "US-1500985-A"
+    },
+    {
+      "Patent_or_Publication_ID": "US 0994660 A",
+      "publication_number": "US-994660-A"
+    },
+    {
+      "Patent_or_Publication_ID": "US 1151536 A",
+      "publication_number": "US-1151536-A"
+    },
+    {
+      "Patent_or_Publication_ID": "US 1795580 A",
+      "publication_number": "US-1795580-A"
+    }
+  ]
+}

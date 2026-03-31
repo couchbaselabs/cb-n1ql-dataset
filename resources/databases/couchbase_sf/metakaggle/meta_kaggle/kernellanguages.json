@@ -1,0 +1,129 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`IsNotebook` = false",
+        "properties": {
+          "DisplayName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Python",
+              "R"
+            ],
+            "type": "string"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              5,
+              9,
+              12
+            ],
+            "type": "number"
+          },
+          "IsNotebook": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "Name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IPython Notebook HTML",
+              "Python",
+              "R",
+              "R Notebook HTML",
+              "RMarkdown"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "kernellanguages::0",
+                  "kernellanguages::1",
+                  "kernellanguages::2",
+                  "kernellanguages::3",
+                  "kernellanguages::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "kernellanguages::0"
+              },
+              {
+                "id": "kernellanguages::1"
+              },
+              {
+                "id": "kernellanguages::2"
+              },
+              {
+                "id": "kernellanguages::3"
+              },
+              {
+                "id": "kernellanguages::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "DisplayName": "Python",
+      "Id": 9,
+      "IsNotebook": false,
+      "Name": "IPython Notebook HTML"
+    },
+    {
+      "DisplayName": "R",
+      "Id": 1,
+      "IsNotebook": false,
+      "Name": "R"
+    },
+    {
+      "DisplayName": "R",
+      "Id": 12,
+      "IsNotebook": false,
+      "Name": "R Notebook HTML"
+    },
+    {
+      "DisplayName": "Python",
+      "Id": 2,
+      "IsNotebook": false,
+      "Name": "Python"
+    },
+    {
+      "DisplayName": "R",
+      "Id": 5,
+      "IsNotebook": false,
+      "Name": "RMarkdown"
+    }
+  ]
+}

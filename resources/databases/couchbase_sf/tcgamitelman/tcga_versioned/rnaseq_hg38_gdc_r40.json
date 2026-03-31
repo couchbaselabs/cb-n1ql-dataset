@@ -1,0 +1,384 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`platform` = \"Illumina\", `primary_site` = \"Breast\", `project_short_name` = \"TCGA-BRCA\"",
+        "properties": {
+          "Ensembl_gene_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N_ambiguous",
+              "N_multimapping",
+              "N_noFeature",
+              "N_unmapped"
+            ],
+            "type": "string"
+          },
+          "Ensembl_gene_id_v": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N_ambiguous",
+              "N_multimapping",
+              "N_noFeature",
+              "N_unmapped"
+            ],
+            "type": "string"
+          },
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-BH-A18K-11A-13R-A12D-07",
+              "TCGA-BH-A18L-01A-32R-A12D-07"
+            ],
+            "type": "string"
+          },
+          "aliquot_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "c3604281-d909-4819-a90e-a1081b...",
+              "dc55c016-0e33-46b0-ac5e-f854c6..."
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-BH-A18K",
+              "TCGA-BH-A18L"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "50619f8c-10aa-464a-a227-90a7aa...",
+              "9ddc3e7b-8b54-4a83-8335-805394..."
+            ],
+            "type": "string"
+          },
+          "file_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "836f61df-2b3d-4e1f-abcc-377340...",
+              "a37587aa-2e1f-42f5-a691-c4a41a..."
+            ],
+            "type": "string"
+          },
+          "fpkm_unstranded": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "fpkm_uq_unstranded": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "gene_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "gene_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "platform": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Illumina"
+            ],
+            "type": "string"
+          },
+          "primary_site": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Breast"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-BRCA"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-BH-A18K-11A",
+              "TCGA-BH-A18L-01A"
+            ],
+            "type": "string"
+          },
+          "sample_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "796e565c-3841-425a-bdfb-569776...",
+              "a456d499-cba4-49a6-a296-998ed0..."
+            ],
+            "type": "string"
+          },
+          "sample_type_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Primary Tumor",
+              "Solid Tissue Normal"
+            ],
+            "type": "string"
+          },
+          "stranded_first": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1089456,
+              1129244,
+              1590547,
+              3677813,
+              26810195
+            ],
+            "type": "number"
+          },
+          "stranded_second": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1083281,
+              1129244,
+              1590547,
+              3677813,
+              26822289
+            ],
+            "type": "number"
+          },
+          "tpm_unstranded": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "unstranded": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1129244,
+              1590547,
+              3677813,
+              3829635,
+              4475184
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "rnaseq_hg38_gdc_r40::0",
+                  "rnaseq_hg38_gdc_r40::1",
+                  "rnaseq_hg38_gdc_r40::2",
+                  "rnaseq_hg38_gdc_r40::3",
+                  "rnaseq_hg38_gdc_r40::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "rnaseq_hg38_gdc_r40::0"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r40::1"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r40::2"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r40::3"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r40::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Ensembl_gene_id": "N_noFeature",
+      "Ensembl_gene_id_v": "N_noFeature",
+      "aliquot_barcode": "TCGA-BH-A18K-11A-13R-A12D-07",
+      "aliquot_gdc_id": "dc55c016-0e33-46b0-ac5e-f854c667a378",
+      "case_barcode": "TCGA-BH-A18K",
+      "case_gdc_id": "50619f8c-10aa-464a-a227-90a7aa6ffd43",
+      "file_gdc_id": "a37587aa-2e1f-42f5-a691-c4a41ae79ea9",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Breast",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-BH-A18K-11A",
+      "sample_gdc_id": "a456d499-cba4-49a6-a296-998ed018947a",
+      "sample_type_name": "Solid Tissue Normal",
+      "stranded_first": 26810195,
+      "stranded_second": 26822289,
+      "tpm_unstranded": null,
+      "unstranded": 3829635
+    },
+    {
+      "Ensembl_gene_id": "N_multimapping",
+      "Ensembl_gene_id_v": "N_multimapping",
+      "aliquot_barcode": "TCGA-BH-A18K-11A-13R-A12D-07",
+      "aliquot_gdc_id": "dc55c016-0e33-46b0-ac5e-f854c667a378",
+      "case_barcode": "TCGA-BH-A18K",
+      "case_gdc_id": "50619f8c-10aa-464a-a227-90a7aa6ffd43",
+      "file_gdc_id": "a37587aa-2e1f-42f5-a691-c4a41ae79ea9",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Breast",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-BH-A18K-11A",
+      "sample_gdc_id": "a456d499-cba4-49a6-a296-998ed018947a",
+      "sample_type_name": "Solid Tissue Normal",
+      "stranded_first": 3677813,
+      "stranded_second": 3677813,
+      "tpm_unstranded": null,
+      "unstranded": 3677813
+    },
+    {
+      "Ensembl_gene_id": "N_ambiguous",
+      "Ensembl_gene_id_v": "N_ambiguous",
+      "aliquot_barcode": "TCGA-BH-A18K-11A-13R-A12D-07",
+      "aliquot_gdc_id": "dc55c016-0e33-46b0-ac5e-f854c667a378",
+      "case_barcode": "TCGA-BH-A18K",
+      "case_gdc_id": "50619f8c-10aa-464a-a227-90a7aa6ffd43",
+      "file_gdc_id": "a37587aa-2e1f-42f5-a691-c4a41ae79ea9",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Breast",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-BH-A18K-11A",
+      "sample_gdc_id": "a456d499-cba4-49a6-a296-998ed018947a",
+      "sample_type_name": "Solid Tissue Normal",
+      "stranded_first": 1089456,
+      "stranded_second": 1083281,
+      "tpm_unstranded": null,
+      "unstranded": 4475184
+    },
+    {
+      "Ensembl_gene_id": "N_unmapped",
+      "Ensembl_gene_id_v": "N_unmapped",
+      "aliquot_barcode": "TCGA-BH-A18K-11A-13R-A12D-07",
+      "aliquot_gdc_id": "dc55c016-0e33-46b0-ac5e-f854c667a378",
+      "case_barcode": "TCGA-BH-A18K",
+      "case_gdc_id": "50619f8c-10aa-464a-a227-90a7aa6ffd43",
+      "file_gdc_id": "a37587aa-2e1f-42f5-a691-c4a41ae79ea9",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Breast",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-BH-A18K-11A",
+      "sample_gdc_id": "a456d499-cba4-49a6-a296-998ed018947a",
+      "sample_type_name": "Solid Tissue Normal",
+      "stranded_first": 1129244,
+      "stranded_second": 1129244,
+      "tpm_unstranded": null,
+      "unstranded": 1129244
+    },
+    {
+      "Ensembl_gene_id": "N_unmapped",
+      "Ensembl_gene_id_v": "N_unmapped",
+      "aliquot_barcode": "TCGA-BH-A18L-01A-32R-A12D-07",
+      "aliquot_gdc_id": "c3604281-d909-4819-a90e-a1081b1e9d7f",
+      "case_barcode": "TCGA-BH-A18L",
+      "case_gdc_id": "9ddc3e7b-8b54-4a83-8335-8053940f56c1",
+      "file_gdc_id": "836f61df-2b3d-4e1f-abcc-37734091b746",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Breast",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-BH-A18L-01A",
+      "sample_gdc_id": "796e565c-3841-425a-bdfb-569776d7c9ac",
+      "sample_type_name": "Primary Tumor",
+      "stranded_first": 1590547,
+      "stranded_second": 1590547,
+      "tpm_unstranded": null,
+      "unstranded": 1590547
+    }
+  ]
+}

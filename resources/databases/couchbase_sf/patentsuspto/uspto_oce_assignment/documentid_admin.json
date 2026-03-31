@@ -1,0 +1,160 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`error` = \"missing appno_doc_num\"",
+        "properties": {
+          "admin_appl_id_for_grant": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "06631963",
+              "07137436",
+              "09407035",
+              "29120963",
+              "29267510"
+            ],
+            "type": "string"
+          },
+          "admin_pat_no_for_appno": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "appno_doc_num": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "error": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "missing appno_doc_num"
+            ],
+            "type": "string"
+          },
+          "grant_doc_num": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4517046",
+              "4805377",
+              "6103949",
+              "D439769",
+              "D551413"
+            ],
+            "type": "string"
+          },
+          "rf_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "148050598",
+              "149130184",
+              "149130371",
+              "152590001",
+              "152590006"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "documentid_admin::0",
+                  "documentid_admin::1",
+                  "documentid_admin::2",
+                  "documentid_admin::3",
+                  "documentid_admin::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "documentid_admin::0"
+              },
+              {
+                "id": "documentid_admin::1"
+              },
+              {
+                "id": "documentid_admin::2"
+              },
+              {
+                "id": "documentid_admin::3"
+              },
+              {
+                "id": "documentid_admin::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "admin_appl_id_for_grant": "07137436",
+      "admin_pat_no_for_appno": null,
+      "appno_doc_num": null,
+      "error": "missing appno_doc_num",
+      "grant_doc_num": "4805377",
+      "rf_id": "149130184"
+    },
+    {
+      "admin_appl_id_for_grant": "29120963",
+      "admin_pat_no_for_appno": null,
+      "appno_doc_num": null,
+      "error": "missing appno_doc_num",
+      "grant_doc_num": "D439769",
+      "rf_id": "152590001"
+    },
+    {
+      "admin_appl_id_for_grant": "06631963",
+      "admin_pat_no_for_appno": null,
+      "appno_doc_num": null,
+      "error": "missing appno_doc_num",
+      "grant_doc_num": "4517046",
+      "rf_id": "152590006"
+    },
+    {
+      "admin_appl_id_for_grant": "09407035",
+      "admin_pat_no_for_appno": null,
+      "appno_doc_num": null,
+      "error": "missing appno_doc_num",
+      "grant_doc_num": "6103949",
+      "rf_id": "149130371"
+    },
+    {
+      "admin_appl_id_for_grant": "29267510",
+      "admin_pat_no_for_appno": null,
+      "appno_doc_num": null,
+      "error": "missing appno_doc_num",
+      "grant_doc_num": "D551413",
+      "rf_id": "148050598"
+    }
+  ]
+}

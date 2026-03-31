@@ -1,0 +1,450 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`block_height` = 6029312, `block_timestamp` = 1621658124736565, `block_timestamp_truncated` = 1621658124736565, `log` = \"\", `log_index` = 0, `msg_index` = 0",
+        "properties": {
+          "block_height": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6029312
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1621658124736565
+            ],
+            "type": "number"
+          },
+          "block_timestamp_truncated": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1621658124736565
+            ],
+            "type": "number"
+          },
+          "events": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 10,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "attributes": {
+                  "items": {
+                    "#docs": 15,
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "properties": {
+                      "key": {
+                        "nestingDepth": 4,
+                        "type": "string"
+                      },
+                      "value": {
+                        "nestingDepth": 4,
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "maxItems": 2,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "type": "array"
+                },
+                "type": {
+                  "nestingDepth": 2,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "attributes": [
+                    {
+                      "key": "action",
+                      "value": "report"
+                    }
+                  ],
+                  "type": "message"
+                },
+                {
+                  "attributes": [
+                    {
+                      "key": "id",
+                      "value": "5405808"
+                    },
+                    {
+                      "key": "validator",
+                      "value": "bandvaloper14m538kv607xpcvpef6zrk2uhavpr8katfq2s8z"
+                    }
+                  ],
+                  "type": "report"
+                }
+              ],
+              [
+                {
+                  "attributes": [
+                    {
+                      "key": "action",
+                      "value": "report"
+                    }
+                  ],
+                  "type": "message"
+                },
+                {
+                  "attributes": [
+                    {
+                      "key": "id",
+                      "value": "5405808"
+                    },
+                    {
+                      "key": "validator",
+                      "value": "bandvaloper17d3uhcjlh4jyqcep82jfsrg8avsngklxxan5tg"
+                    }
+                  ],
+                  "type": "report"
+                }
+              ],
+              [
+                {
+                  "attributes": [
+                    {
+                      "key": "action",
+                      "value": "report"
+                    }
+                  ],
+                  "type": "message"
+                },
+                {
+                  "attributes": [
+                    {
+                      "key": "id",
+                      "value": "5405809"
+                    },
+                    {
+                      "key": "validator",
+                      "value": "bandvaloper14m538kv607xpcvpef6zrk2uhavpr8katfq2s8z"
+                    }
+                  ],
+                  "type": "report"
+                }
+              ],
+              [
+                {
+                  "attributes": [
+                    {
+                      "key": "action",
+                      "value": "report"
+                    }
+                  ],
+                  "type": "message"
+                },
+                {
+                  "attributes": [
+                    {
+                      "key": "id",
+                      "value": "5405809"
+                    },
+                    {
+                      "key": "validator",
+                      "value": "bandvaloper1ycs4g7xu8wmf7n4vwwtfsvhtfm7tekvwk34rxz"
+                    }
+                  ],
+                  "type": "report"
+                }
+              ],
+              [
+                {
+                  "attributes": [
+                    {
+                      "key": "action",
+                      "value": "report"
+                    }
+                  ],
+                  "type": "message"
+                },
+                {
+                  "attributes": [
+                    {
+                      "key": "id",
+                      "value": "5405811"
+                    },
+                    {
+                      "key": "validator",
+                      "value": "bandvaloper1nzfwx85yjjar55fft72vj72lg6pfgzfz6dsrgm"
+                    }
+                  ],
+                  "type": "report"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "log": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              ""
+            ],
+            "type": "string"
+          },
+          "log_index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "msg_index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "txhash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "6771828311C5972DF165BA05BA541D...",
+              "A21AF533617B3B062A218681F17B4C...",
+              "B06636D5B3261860772ABF08598AE0...",
+              "D374F4C4C0AF4884EDA2B1451E5773...",
+              "D48286DB4615F314FF677A94D229A5..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "logs::0",
+                  "logs::1",
+                  "logs::2",
+                  "logs::3",
+                  "logs::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "logs::0"
+              },
+              {
+                "id": "logs::1"
+              },
+              {
+                "id": "logs::2"
+              },
+              {
+                "id": "logs::3"
+              },
+              {
+                "id": "logs::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "block_height": 6029312,
+      "block_timestamp": 1621658124736565,
+      "block_timestamp_truncated": 1621658124736565,
+      "events": [
+        {
+          "attributes": [
+            {
+              "key": "action",
+              "value": "report"
+            }
+          ],
+          "type": "message"
+        },
+        {
+          "attributes": [
+            {
+              "key": "id",
+              "value": "5405808"
+            },
+            {
+              "key": "validator",
+              "value": "bandvaloper17d3uhcjlh4jyqcep82jfsrg8avsngklxxan5tg"
+            }
+          ],
+          "type": "report"
+        }
+      ],
+      "log": "",
+      "log_index": 0,
+      "msg_index": 0,
+      "txhash": "D374F4C4C0AF4884EDA2B1451E577316D71588D6BF12AE0B722F98B01A858569"
+    },
+    {
+      "block_height": 6029312,
+      "block_timestamp": 1621658124736565,
+      "block_timestamp_truncated": 1621658124736565,
+      "events": [
+        {
+          "attributes": [
+            {
+              "key": "action",
+              "value": "report"
+            }
+          ],
+          "type": "message"
+        },
+        {
+          "attributes": [
+            {
+              "key": "id",
+              "value": "5405808"
+            },
+            {
+              "key": "validator",
+              "value": "bandvaloper14m538kv607xpcvpef6zrk2uhavpr8katfq2s8z"
+            }
+          ],
+          "type": "report"
+        }
+      ],
+      "log": "",
+      "log_index": 0,
+      "msg_index": 0,
+      "txhash": "6771828311C5972DF165BA05BA541DA3FD55E8ED65EEA0B53DEFA1D0E6984E7D"
+    },
+    {
+      "block_height": 6029312,
+      "block_timestamp": 1621658124736565,
+      "block_timestamp_truncated": 1621658124736565,
+      "events": [
+        {
+          "attributes": [
+            {
+              "key": "action",
+              "value": "report"
+            }
+          ],
+          "type": "message"
+        },
+        {
+          "attributes": [
+            {
+              "key": "id",
+              "value": "5405809"
+            },
+            {
+              "key": "validator",
+              "value": "bandvaloper14m538kv607xpcvpef6zrk2uhavpr8katfq2s8z"
+            }
+          ],
+          "type": "report"
+        }
+      ],
+      "log": "",
+      "log_index": 0,
+      "msg_index": 0,
+      "txhash": "D48286DB4615F314FF677A94D229A57EFECF558FBE1702DA855EB1C8E448B67A"
+    },
+    {
+      "block_height": 6029312,
+      "block_timestamp": 1621658124736565,
+      "block_timestamp_truncated": 1621658124736565,
+      "events": [
+        {
+          "attributes": [
+            {
+              "key": "action",
+              "value": "report"
+            }
+          ],
+          "type": "message"
+        },
+        {
+          "attributes": [
+            {
+              "key": "id",
+              "value": "5405811"
+            },
+            {
+              "key": "validator",
+              "value": "bandvaloper1nzfwx85yjjar55fft72vj72lg6pfgzfz6dsrgm"
+            }
+          ],
+          "type": "report"
+        }
+      ],
+      "log": "",
+      "log_index": 0,
+      "msg_index": 0,
+      "txhash": "B06636D5B3261860772ABF08598AE061071778830ABB953DC3FB8FF5E8899CDD"
+    },
+    {
+      "block_height": 6029312,
+      "block_timestamp": 1621658124736565,
+      "block_timestamp_truncated": 1621658124736565,
+      "events": [
+        {
+          "attributes": [
+            {
+              "key": "action",
+              "value": "report"
+            }
+          ],
+          "type": "message"
+        },
+        {
+          "attributes": [
+            {
+              "key": "id",
+              "value": "5405809"
+            },
+            {
+              "key": "validator",
+              "value": "bandvaloper1ycs4g7xu8wmf7n4vwwtfsvhtfm7tekvwk34rxz"
+            }
+          ],
+          "type": "report"
+        }
+      ],
+      "log": "",
+      "log_index": 0,
+      "msg_index": 0,
+      "txhash": "A21AF533617B3B062A218681F17B4C3446980A348345A0957C465416D4785136"
+    }
+  ]
+}

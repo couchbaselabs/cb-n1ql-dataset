@@ -1,0 +1,112 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`employer_assign` = \"0\"",
+        "properties": {
+          "convey_ty": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "missing",
+              "other",
+              "release"
+            ],
+            "type": "string"
+          },
+          "employer_assign": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0"
+            ],
+            "type": "string"
+          },
+          "rf_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "37900515",
+              "38020406",
+              "38310269",
+              "38430251",
+              "38550270"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "assignment_conveyance_2016::0",
+                  "assignment_conveyance_2016::1",
+                  "assignment_conveyance_2016::2",
+                  "assignment_conveyance_2016::3",
+                  "assignment_conveyance_2016::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "assignment_conveyance_2016::0"
+              },
+              {
+                "id": "assignment_conveyance_2016::1"
+              },
+              {
+                "id": "assignment_conveyance_2016::2"
+              },
+              {
+                "id": "assignment_conveyance_2016::3"
+              },
+              {
+                "id": "assignment_conveyance_2016::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "convey_ty": "missing",
+      "employer_assign": "0",
+      "rf_id": "37900515"
+    },
+    {
+      "convey_ty": "other",
+      "employer_assign": "0",
+      "rf_id": "38430251"
+    },
+    {
+      "convey_ty": "other",
+      "employer_assign": "0",
+      "rf_id": "38310269"
+    },
+    {
+      "convey_ty": "release",
+      "employer_assign": "0",
+      "rf_id": "38550270"
+    },
+    {
+      "convey_ty": "other",
+      "employer_assign": "0",
+      "rf_id": "38020406"
+    }
+  ]
+}

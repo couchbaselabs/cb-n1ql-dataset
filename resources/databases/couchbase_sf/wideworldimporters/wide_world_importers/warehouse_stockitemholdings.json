@@ -1,0 +1,210 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 3, `LastEditedWhen` = 1464696000000000",
+        "properties": {
+          "BinLocation": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "D-2",
+              "D-8",
+              "L-3"
+            ],
+            "type": "string"
+          },
+          "LastCostPrice": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              110,
+              1140
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1464696000000000
+            ],
+            "type": "number"
+          },
+          "LastStocktakeQuantity": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8702,
+              12296,
+              14697,
+              40230,
+              202964
+            ],
+            "type": "number"
+          },
+          "QuantityOnHand": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8879,
+              12530,
+              15106,
+              41251,
+              208109
+            ],
+            "type": "number"
+          },
+          "ReorderLevel": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              5
+            ],
+            "type": "number"
+          },
+          "StockItemID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              174,
+              175,
+              176,
+              215
+            ],
+            "type": "number"
+          },
+          "TargetStockLevel": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              100
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_stockitemholdings::0",
+                  "warehouse_stockitemholdings::1",
+                  "warehouse_stockitemholdings::2",
+                  "warehouse_stockitemholdings::3",
+                  "warehouse_stockitemholdings::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_stockitemholdings::0"
+              },
+              {
+                "id": "warehouse_stockitemholdings::1"
+              },
+              {
+                "id": "warehouse_stockitemholdings::2"
+              },
+              {
+                "id": "warehouse_stockitemholdings::3"
+              },
+              {
+                "id": "warehouse_stockitemholdings::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BinLocation": "D-2",
+      "LastCostPrice": 110,
+      "LastEditedBy": 3,
+      "LastEditedWhen": 1464696000000000,
+      "LastStocktakeQuantity": 14697,
+      "QuantityOnHand": 15106,
+      "ReorderLevel": 2,
+      "StockItemID": 175,
+      "TargetStockLevel": 3
+    },
+    {
+      "BinLocation": "D-8",
+      "LastCostPrice": 1140,
+      "LastEditedBy": 3,
+      "LastEditedWhen": 1464696000000000,
+      "LastStocktakeQuantity": 12296,
+      "QuantityOnHand": 12530,
+      "ReorderLevel": 1,
+      "StockItemID": 215,
+      "TargetStockLevel": 2
+    },
+    {
+      "BinLocation": "D-2",
+      "LastCostPrice": 110,
+      "LastEditedBy": 3,
+      "LastEditedWhen": 1464696000000000,
+      "LastStocktakeQuantity": 8702,
+      "QuantityOnHand": 8879,
+      "ReorderLevel": 2,
+      "StockItemID": 174,
+      "TargetStockLevel": 3
+    },
+    {
+      "BinLocation": "D-2",
+      "LastCostPrice": 110,
+      "LastEditedBy": 3,
+      "LastEditedWhen": 1464696000000000,
+      "LastStocktakeQuantity": 40230,
+      "QuantityOnHand": 41251,
+      "ReorderLevel": 2,
+      "StockItemID": 176,
+      "TargetStockLevel": 3
+    },
+    {
+      "BinLocation": "L-3",
+      "LastCostPrice": 12,
+      "LastEditedBy": 3,
+      "LastEditedWhen": 1464696000000000,
+      "LastStocktakeQuantity": 202964,
+      "QuantityOnHand": 208109,
+      "ReorderLevel": 5,
+      "StockItemID": 4,
+      "TargetStockLevel": 100
+    }
+  ]
+}

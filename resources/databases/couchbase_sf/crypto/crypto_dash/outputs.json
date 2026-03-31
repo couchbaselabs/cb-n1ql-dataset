@@ -1,0 +1,280 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`required_signatures` = 1",
+        "properties": {
+          "addresses": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "7WCvHxdcQ67mxrodC88544Nqj8YKZNKeRW"
+              ],
+              [
+                "Xsyjqc1zZ19T3FtJ97WrCLzXUmnE4P6ACP"
+              ],
+              [
+                "XtLxEnmEb3cy7dJ8wmQgBsC4c4BqGUgNJk"
+              ],
+              [
+                "XtqdruE1TedGWqtvyGg6jUcXCnRRHZuPxz"
+              ],
+              [
+                "XtwW2T4Sq2t6vPkmH7Gwa3RN4rMk4JfVmH"
+              ]
+            ],
+            "type": "array"
+          },
+          "block_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0000000000000005411bcad85547a0...",
+              "0000000000000009161f162acf4d4d...",
+              "0000000000000014e427cf1ba719bf...",
+              "000000000000001b7e10f2c2c604d6...",
+              "000000000000001dacd520c1501e8d..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              764637,
+              829538,
+              837169,
+              841067,
+              1481142
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1509727696000000,
+              1519952693000000,
+              1521155610000000,
+              1521769945000000,
+              1622632577000000
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              185,
+              289
+            ],
+            "type": "number"
+          },
+          "required_signatures": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "script_asm": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OP_DUP OP_HASH160 bdac34c8369c...",
+              "OP_DUP OP_HASH160 c1af4acb475e...",
+              "OP_DUP OP_HASH160 c71c03aeaa94...",
+              "OP_DUP OP_HASH160 c837f83299c8...",
+              "OP_HASH160 29a87b7938faafa35f3..."
+            ],
+            "type": "string"
+          },
+          "script_hex": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "76a914bdac34c8369c3278c19ce857...",
+              "76a914c1af4acb475eceda9ca2539a...",
+              "76a914c71c03aeaa946e4536e6363f...",
+              "76a914c837f83299c8209d06f2ca43...",
+              "a91429a87b7938faafa35f3aae472c..."
+            ],
+            "type": "string"
+          },
+          "transaction_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "592f9f9565b0c97460e52f125165fe...",
+              "95b71c1892d5996d183fa6cb91f931...",
+              "d8e3ee4b126fcea18d82af9945370d...",
+              "debccd4ce5b3571570d12c5d9e2ddb...",
+              "f6e82d8644dc17dc0739116a0ae9c6..."
+            ],
+            "type": "string"
+          },
+          "type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "pubkeyhash",
+              "scripthash"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              193504,
+              969722,
+              3365818,
+              6838500,
+              1564464353
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "outputs::0",
+                  "outputs::1",
+                  "outputs::2",
+                  "outputs::3",
+                  "outputs::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "outputs::0"
+              },
+              {
+                "id": "outputs::1"
+              },
+              {
+                "id": "outputs::2"
+              },
+              {
+                "id": "outputs::3"
+              },
+              {
+                "id": "outputs::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "addresses": [
+        "Xsyjqc1zZ19T3FtJ97WrCLzXUmnE4P6ACP"
+      ],
+      "block_hash": "000000000000001b7e10f2c2c604d6670ab0ee160b54b4245b4d8a7db90b3299",
+      "block_number": 829538,
+      "block_timestamp": 1519952693000000,
+      "index": 1,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 bdac34c8369c3278c19ce857bf3cda38e6e74631 OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a914bdac34c8369c3278c19ce857bf3cda38e6e7463188ac",
+      "transaction_hash": "d8e3ee4b126fcea18d82af9945370d8db4e4bf08d884bbb6b38f6fae97483790",
+      "type": "pubkeyhash",
+      "value": 1564464353
+    },
+    {
+      "addresses": [
+        "7WCvHxdcQ67mxrodC88544Nqj8YKZNKeRW"
+      ],
+      "block_hash": "000000000000001dacd520c1501e8d2046c3ab13b7e173d184e83d4f43621813",
+      "block_number": 837169,
+      "block_timestamp": 1521155610000000,
+      "index": 185,
+      "required_signatures": 1,
+      "script_asm": "OP_HASH160 29a87b7938faafa35f3aae472ce258f0fb095ad8 OP_EQUAL",
+      "script_hex": "a91429a87b7938faafa35f3aae472ce258f0fb095ad887",
+      "transaction_hash": "592f9f9565b0c97460e52f125165fe9332e8ba93fcff93cb8bc3c9f7189d2e06",
+      "type": "scripthash",
+      "value": 969722
+    },
+    {
+      "addresses": [
+        "XtLxEnmEb3cy7dJ8wmQgBsC4c4BqGUgNJk"
+      ],
+      "block_hash": "0000000000000009161f162acf4d4dd62581a3628dced07220de86537be72881",
+      "block_number": 764637,
+      "block_timestamp": 1509727696000000,
+      "index": 1,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 c1af4acb475eceda9ca2539acdbbf642d9b5716a OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a914c1af4acb475eceda9ca2539acdbbf642d9b5716a88ac",
+      "transaction_hash": "f6e82d8644dc17dc0739116a0ae9c6cc3c9331e09a56d60230a8890b4d5fe93d",
+      "type": "pubkeyhash",
+      "value": 6838500
+    },
+    {
+      "addresses": [
+        "XtwW2T4Sq2t6vPkmH7Gwa3RN4rMk4JfVmH"
+      ],
+      "block_hash": "0000000000000014e427cf1ba719bff2f8d57e670fbcd83f9f18b780c21f74f1",
+      "block_number": 1481142,
+      "block_timestamp": 1622632577000000,
+      "index": 0,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 c837f83299c8209d06f2ca43e11830aa7a1aa05b OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a914c837f83299c8209d06f2ca43e11830aa7a1aa05b88ac",
+      "transaction_hash": "debccd4ce5b3571570d12c5d9e2ddb6243d5b44cfb1e70aa37f788344490e0b3",
+      "type": "pubkeyhash",
+      "value": 193504
+    },
+    {
+      "addresses": [
+        "XtqdruE1TedGWqtvyGg6jUcXCnRRHZuPxz"
+      ],
+      "block_hash": "0000000000000005411bcad85547a0fd4f1396467e8141d0ee36663b30b2134a",
+      "block_number": 841067,
+      "block_timestamp": 1521769945000000,
+      "index": 289,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 c71c03aeaa946e4536e6363fb19aef726bd948b2 OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a914c71c03aeaa946e4536e6363fb19aef726bd948b288ac",
+      "transaction_hash": "95b71c1892d5996d183fa6cb91f93186816cd918394b34074c4aaeec32e3fbb2",
+      "type": "pubkeyhash",
+      "value": 3365818
+    }
+  ]
+}

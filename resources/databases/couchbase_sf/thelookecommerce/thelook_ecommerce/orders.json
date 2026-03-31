@@ -1,0 +1,264 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "created_at": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1591116300000000,
+              1660795260000000,
+              1662913080000000,
+              1676453700000000,
+              1687423980000000
+            ],
+            "type": "number"
+          },
+          "delivered_at": {
+            "#docs": [
+              330,
+              670
+            ],
+            "%docs": [
+              33,
+              67
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1591214460000000,
+                1660935840000000,
+                1663452000000000,
+                1676640300000000,
+                1687886220000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gender": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "F",
+              "M"
+            ],
+            "type": "string"
+          },
+          "num_of_item": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              19709,
+              54867,
+              90257,
+              109005,
+              121115
+            ],
+            "type": "number"
+          },
+          "returned_at": {
+            "#docs": [
+              330,
+              670
+            ],
+            "%docs": [
+              33,
+              67
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1591301160000000,
+                1661089440000000,
+                1663593540000000,
+                1676659140000000,
+                1687987440000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "shipped_at": {
+            "#docs": [
+              332,
+              668
+            ],
+            "%docs": [
+              33.2,
+              66.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1591129800000000,
+                1660886580000000,
+                1663069980000000,
+                1676481240000000,
+                1687656000000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cancelled",
+              "Complete",
+              "Processing",
+              "Returned",
+              "Shipped"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15930,
+              44060,
+              72321,
+              87329,
+              97019
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "orders::100736",
+                  "orders::102468",
+                  "orders::105226",
+                  "orders::105844",
+                  "orders::41884"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "orders::100736"
+              },
+              {
+                "id": "orders::102468"
+              },
+              {
+                "id": "orders::105226"
+              },
+              {
+                "id": "orders::105844"
+              },
+              {
+                "id": "orders::41884"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "created_at": 1709182440000000,
+      "delivered_at": 1709529780000000,
+      "gender": "M",
+      "num_of_item": 3,
+      "order_id": 5397,
+      "returned_at": 1709663580000000,
+      "shipped_at": 1709208000000000,
+      "status": "Returned",
+      "user_id": 4489
+    },
+    {
+      "created_at": 1712505660000000,
+      "delivered_at": 1712872560000000,
+      "gender": "M",
+      "num_of_item": 2,
+      "order_id": 5893,
+      "returned_at": 1713067380000000,
+      "shipped_at": 1712521620000000,
+      "status": "Returned",
+      "user_id": 4900
+    },
+    {
+      "created_at": 1691305980000000,
+      "delivered_at": 1691465580000000,
+      "gender": "M",
+      "num_of_item": 1,
+      "order_id": 5922,
+      "returned_at": 1691627580000000,
+      "shipped_at": 1691329680000000,
+      "status": "Returned",
+      "user_id": 4922
+    },
+    {
+      "created_at": 1662309180000000,
+      "delivered_at": 1662567720000000,
+      "gender": "M",
+      "num_of_item": 1,
+      "order_id": 8796,
+      "returned_at": 1662577740000000,
+      "shipped_at": 1662412200000000,
+      "status": "Returned",
+      "user_id": 7175
+    },
+    {
+      "created_at": 1634875080000000,
+      "delivered_at": 1635203160000000,
+      "gender": "M",
+      "num_of_item": 1,
+      "order_id": 11737,
+      "returned_at": 1635448320000000,
+      "shipped_at": 1634950920000000,
+      "status": "Returned",
+      "user_id": 9581
+    }
+  ]
+}

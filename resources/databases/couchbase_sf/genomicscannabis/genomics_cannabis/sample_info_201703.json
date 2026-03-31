@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Library_Name_s": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PK-EFLW",
+              "PK-MFLW",
+              "PK-RT",
+              "PK-SHT",
+              "PK-STM"
+            ],
+            "type": "string"
+          },
+          "SRA_Sample_s": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SRS266822",
+              "SRS266823",
+              "SRS266825",
+              "SRS266826",
+              "SRS266829"
+            ],
+            "type": "string"
+          },
+          "Sample_Name_s": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PK-EFLW",
+              "PK-MFLW",
+              "PK-RT",
+              "PK-SHT",
+              "PK-STM"
+            ],
+            "type": "string"
+          },
+          "cultivar_s": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sample_info_201703::0",
+                  "sample_info_201703::1",
+                  "sample_info_201703::2",
+                  "sample_info_201703::3",
+                  "sample_info_201703::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sample_info_201703::0"
+              },
+              {
+                "id": "sample_info_201703::1"
+              },
+              {
+                "id": "sample_info_201703::2"
+              },
+              {
+                "id": "sample_info_201703::3"
+              },
+              {
+                "id": "sample_info_201703::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Library_Name_s": "PK-EFLW",
+      "SRA_Sample_s": "SRS266823",
+      "Sample_Name_s": "PK-EFLW",
+      "cultivar_s": null
+    },
+    {
+      "Library_Name_s": "PK-RT",
+      "SRA_Sample_s": "SRS266829",
+      "Sample_Name_s": "PK-RT",
+      "cultivar_s": null
+    },
+    {
+      "Library_Name_s": "PK-MFLW",
+      "SRA_Sample_s": "SRS266822",
+      "Sample_Name_s": "PK-MFLW",
+      "cultivar_s": null
+    },
+    {
+      "Library_Name_s": "PK-STM",
+      "SRA_Sample_s": "SRS266826",
+      "Sample_Name_s": "PK-STM",
+      "cultivar_s": null
+    },
+    {
+      "Library_Name_s": "PK-SHT",
+      "SRA_Sample_s": "SRS266825",
+      "Sample_Name_s": "PK-SHT",
+      "cultivar_s": null
+    }
+  ]
+}

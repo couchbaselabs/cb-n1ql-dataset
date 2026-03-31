@@ -1,0 +1,280 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`CallStatus` = \"called\", `Cancer_DNA_fraction` = 0.25, `Genome_doublings` = 0, `Ploidy` = 2, `Purity` = 0.25, `Solution` = \"new\"",
+        "properties": {
+          "AliquotBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-AB-2879-03A-01D-0756-21",
+              "TCGA-DJ-A3UT-01A-11D-A22C-01",
+              "TCGA-X7-A8D7-01A-11D-A422-01",
+              "TCGA-XM-A8R9-01A-31D-A422-01",
+              "TCGA-ZC-AAAH-01A-11D-A427-01"
+            ],
+            "type": "string"
+          },
+          "CallStatus": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "called"
+            ],
+            "type": "string"
+          },
+          "Cancer_DNA_fraction": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.25
+            ],
+            "type": "number"
+          },
+          "Coverage_for_80_power": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              42,
+              43
+            ],
+            "type": "number"
+          },
+          "Genome_doublings": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "ParticipantBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-AB-2879",
+              "TCGA-DJ-A3UT",
+              "TCGA-X7-A8D7",
+              "TCGA-XM-A8R9",
+              "TCGA-ZC-AAAH"
+            ],
+            "type": "string"
+          },
+          "Ploidy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "Purity": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.25
+            ],
+            "type": "number"
+          },
+          "SampleBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-AB-2879-03A",
+              "TCGA-DJ-A3UT-01A",
+              "TCGA-X7-A8D7-01A",
+              "TCGA-XM-A8R9-01A",
+              "TCGA-ZC-AAAH-01A"
+            ],
+            "type": "string"
+          },
+          "SampleType": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Primary Blood Derived Cancer -...",
+              "Primary solid Tumor"
+            ],
+            "type": "string"
+          },
+          "SampleTypeLetterCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TB",
+              "TP"
+            ],
+            "type": "string"
+          },
+          "Solution": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "new"
+            ],
+            "type": "string"
+          },
+          "Study": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LAML",
+              "THCA",
+              "THYM"
+            ],
+            "type": "string"
+          },
+          "Subclonal_genome_fraction": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              0.03,
+              0.04,
+              0.09
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "purity_ploidy_all_samples_filt...",
+                  "purity_ploidy_all_samples_filt...",
+                  "purity_ploidy_all_samples_filt...",
+                  "purity_ploidy_all_samples_filt...",
+                  "purity_ploidy_all_samples_filt..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "purity_ploidy_all_samples_filtered::0"
+              },
+              {
+                "id": "purity_ploidy_all_samples_filtered::1"
+              },
+              {
+                "id": "purity_ploidy_all_samples_filtered::2"
+              },
+              {
+                "id": "purity_ploidy_all_samples_filtered::3"
+              },
+              {
+                "id": "purity_ploidy_all_samples_filtered::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AliquotBarcode": "TCGA-X7-A8D7-01A-11D-A422-01",
+      "CallStatus": "called",
+      "Cancer_DNA_fraction": 0.25,
+      "Coverage_for_80_power": 43,
+      "Genome_doublings": 0,
+      "ParticipantBarcode": "TCGA-X7-A8D7",
+      "Ploidy": 2,
+      "Purity": 0.25,
+      "SampleBarcode": "TCGA-X7-A8D7-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Solution": "new",
+      "Study": "THYM",
+      "Subclonal_genome_fraction": 0.04
+    },
+    {
+      "AliquotBarcode": "TCGA-AB-2879-03A-01D-0756-21",
+      "CallStatus": "called",
+      "Cancer_DNA_fraction": 0.25,
+      "Coverage_for_80_power": 43,
+      "Genome_doublings": 0,
+      "ParticipantBarcode": "TCGA-AB-2879",
+      "Ploidy": 2,
+      "Purity": 0.25,
+      "SampleBarcode": "TCGA-AB-2879-03A",
+      "SampleType": "Primary Blood Derived Cancer - Peripheral Blood",
+      "SampleTypeLetterCode": "TB",
+      "Solution": "new",
+      "Study": "LAML",
+      "Subclonal_genome_fraction": 0
+    },
+    {
+      "AliquotBarcode": "TCGA-XM-A8R9-01A-31D-A422-01",
+      "CallStatus": "called",
+      "Cancer_DNA_fraction": 0.25,
+      "Coverage_for_80_power": 43,
+      "Genome_doublings": 0,
+      "ParticipantBarcode": "TCGA-XM-A8R9",
+      "Ploidy": 2,
+      "Purity": 0.25,
+      "SampleBarcode": "TCGA-XM-A8R9-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Solution": "new",
+      "Study": "THYM",
+      "Subclonal_genome_fraction": 0.03
+    },
+    {
+      "AliquotBarcode": "TCGA-ZC-AAAH-01A-11D-A427-01",
+      "CallStatus": "called",
+      "Cancer_DNA_fraction": 0.25,
+      "Coverage_for_80_power": 43,
+      "Genome_doublings": 0,
+      "ParticipantBarcode": "TCGA-ZC-AAAH",
+      "Ploidy": 2,
+      "Purity": 0.25,
+      "SampleBarcode": "TCGA-ZC-AAAH-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Solution": "new",
+      "Study": "THYM",
+      "Subclonal_genome_fraction": 0.09
+    },
+    {
+      "AliquotBarcode": "TCGA-DJ-A3UT-01A-11D-A22C-01",
+      "CallStatus": "called",
+      "Cancer_DNA_fraction": 0.25,
+      "Coverage_for_80_power": 42,
+      "Genome_doublings": 0,
+      "ParticipantBarcode": "TCGA-DJ-A3UT",
+      "Ploidy": 2,
+      "Purity": 0.25,
+      "SampleBarcode": "TCGA-DJ-A3UT-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Solution": "new",
+      "Study": "THCA",
+      "Subclonal_genome_fraction": 0
+    }
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`measurementGroup_number` = 0",
+        "properties": {
+          "PatientID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LIDC-IDRI-0036",
+              "LIDC-IDRI-0046",
+              "LIDC-IDRI-0055",
+              "LIDC-IDRI-0145"
+            ],
+            "type": "string"
+          },
+          "Quantity": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Lobular Pattern",
+                  "Spiculation"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "C28749",
+                  "C62175"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "NCIt"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "Lobular Pattern",
+                "CodeValue": "C62175",
+                "CodingSchemeDesignator": "NCIt"
+              },
+              {
+                "CodeMeaning": "Spiculation",
+                "CodeValue": "C28749",
+                "CodingSchemeDesignator": "NCIt"
+              }
+            ],
+            "type": "object"
+          },
+          "SOPInstanceUID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.2.276.0.7230010.3.1.4.0.1046...",
+              "1.2.276.0.7230010.3.1.4.0.1585...",
+              "1.2.276.0.7230010.3.1.4.0.2454...",
+              "1.2.276.0.7230010.3.1.4.0.3109..."
+            ],
+            "type": "string"
+          },
+          "Value": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "2 out of 5"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "002"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "99LIDCQIICR"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "2 out of 5",
+                "CodeValue": "002",
+                "CodingSchemeDesignator": "99LIDCQIICR"
+              }
+            ],
+            "type": "object"
+          },
+          "finding": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Nodule"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "M-03010"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "SRT"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "Nodule",
+                "CodeValue": "M-03010",
+                "CodingSchemeDesignator": "SRT"
+              }
+            ],
+            "type": "object"
+          },
+          "findingSite": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Lung"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "T-28000"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "SRT"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "Lung",
+                "CodeValue": "T-28000",
+                "CodingSchemeDesignator": "SRT"
+              }
+            ],
+            "type": "object"
+          },
+          "measurementGroup_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "segmentationInstanceUID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.2.276.0.7230010.3.1.4.0.1046...",
+              "1.2.276.0.7230010.3.1.4.0.1584...",
+              "1.2.276.0.7230010.3.1.4.0.2453...",
+              "1.2.276.0.7230010.3.1.4.0.3108..."
+            ],
+            "type": "string"
+          },
+          "segmentationSegmentNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                1
+              ]
+            ],
+            "type": "array"
+          },
+          "sourceSegmentedSeriesUID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.3.6.1.4.1.14519.5.2.1.6279.6...",
+              "1.3.6.1.4.1.14519.5.2.1.6279.6...",
+              "1.3.6.1.4.1.14519.5.2.1.6279.6...",
+              "1.3.6.1.4.1.14519.5.2.1.6279.6..."
+            ],
+            "type": "string"
+          },
+          "trackingIdentifier": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Nodule 1",
+              "Nodule 2",
+              "Nodule 3",
+              "Nodule 7"
+            ],
+            "type": "string"
+          },
+          "trackingUniqueIdentifier": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2.25.1078768621570652877189309...",
+              "2.25.1902126532559338336841169...",
+              "2.25.3891103788090476721976371...",
+              "2.25.4827771364794978152769136..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "qualitative_measurements::0",
+                  "qualitative_measurements::1",
+                  "qualitative_measurements::2",
+                  "qualitative_measurements::3",
+                  "qualitative_measurements::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "qualitative_measurements::0"
+              },
+              {
+                "id": "qualitative_measurements::1"
+              },
+              {
+                "id": "qualitative_measurements::2"
+              },
+              {
+                "id": "qualitative_measurements::3"
+              },
+              {
+                "id": "qualitative_measurements::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "PatientID": "LIDC-IDRI-0036",
+      "Quantity": {
+        "CodeMeaning": "Spiculation",
+        "CodeValue": "C28749",
+        "CodingSchemeDesignator": "NCIt"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.0.1585.1553286274.439237",
+      "Value": {
+        "CodeMeaning": "2 out of 5",
+        "CodeValue": "002",
+        "CodingSchemeDesignator": "99LIDCQIICR"
+      },
+      "finding": {
+        "CodeMeaning": "Nodule",
+        "CodeValue": "M-03010",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Lung",
+        "CodeValue": "T-28000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "measurementGroup_number": 0,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.0.1584.1553286271.3857",
+      "segmentationSegmentNumber": [
+        1
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.14519.5.2.1.6279.6001.177685820605315926524514718990",
+      "trackingIdentifier": "Nodule 2",
+      "trackingUniqueIdentifier": "2.25.38911037880904767219763718462833112874273705289856885576034"
+    },
+    {
+      "PatientID": "LIDC-IDRI-0055",
+      "Quantity": {
+        "CodeMeaning": "Spiculation",
+        "CodeValue": "C28749",
+        "CodingSchemeDesignator": "NCIt"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.0.3109.1553287545.756478",
+      "Value": {
+        "CodeMeaning": "2 out of 5",
+        "CodeValue": "002",
+        "CodingSchemeDesignator": "99LIDCQIICR"
+      },
+      "finding": {
+        "CodeMeaning": "Nodule",
+        "CodeValue": "M-03010",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Lung",
+        "CodeValue": "T-28000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "measurementGroup_number": 0,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.0.3108.1553287544.9742",
+      "segmentationSegmentNumber": [
+        1
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.14519.5.2.1.6279.6001.214252223927572015414741039150",
+      "trackingIdentifier": "Nodule 1",
+      "trackingUniqueIdentifier": "2.25.19021265325593383368411690106574002039729755006330864394525"
+    },
+    {
+      "PatientID": "LIDC-IDRI-0046",
+      "Quantity": {
+        "CodeMeaning": "Lobular Pattern",
+        "CodeValue": "C62175",
+        "CodingSchemeDesignator": "NCIt"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.0.2454.1553286994.621177",
+      "Value": {
+        "CodeMeaning": "2 out of 5",
+        "CodeValue": "002",
+        "CodingSchemeDesignator": "99LIDCQIICR"
+      },
+      "finding": {
+        "CodeMeaning": "Nodule",
+        "CodeValue": "M-03010",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Lung",
+        "CodeValue": "T-28000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "measurementGroup_number": 0,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.0.2453.1553286993.870",
+      "segmentationSegmentNumber": [
+        1
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.14519.5.2.1.6279.6001.122914038048856168343065566972",
+      "trackingIdentifier": "Nodule 7",
+      "trackingUniqueIdentifier": "2.25.48277713647949781527691364338594907455474313531912292577715"
+    },
+    {
+      "PatientID": "LIDC-IDRI-0145",
+      "Quantity": {
+        "CodeMeaning": "Lobular Pattern",
+        "CodeValue": "C62175",
+        "CodingSchemeDesignator": "NCIt"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.0.10464.1553293771.522846",
+      "Value": {
+        "CodeMeaning": "2 out of 5",
+        "CodeValue": "002",
+        "CodingSchemeDesignator": "99LIDCQIICR"
+      },
+      "finding": {
+        "CodeMeaning": "Nodule",
+        "CodeValue": "M-03010",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Lung",
+        "CodeValue": "T-28000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "measurementGroup_number": 0,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.0.10463.1553293770.667",
+      "segmentationSegmentNumber": [
+        1
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.14519.5.2.1.6279.6001.333145094436144085379032922488",
+      "trackingIdentifier": "Nodule 3",
+      "trackingUniqueIdentifier": "2.25.10787686215706528771893090962943727412211227212002927460191"
+    },
+    {
+      "PatientID": "LIDC-IDRI-0036",
+      "Quantity": {
+        "CodeMeaning": "Lobular Pattern",
+        "CodeValue": "C62175",
+        "CodingSchemeDesignator": "NCIt"
+      },
+      "SOPInstanceUID": "1.2.276.0.7230010.3.1.4.0.1585.1553286274.439237",
+      "Value": {
+        "CodeMeaning": "2 out of 5",
+        "CodeValue": "002",
+        "CodingSchemeDesignator": "99LIDCQIICR"
+      },
+      "finding": {
+        "CodeMeaning": "Nodule",
+        "CodeValue": "M-03010",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "findingSite": {
+        "CodeMeaning": "Lung",
+        "CodeValue": "T-28000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "measurementGroup_number": 0,
+      "segmentationInstanceUID": "1.2.276.0.7230010.3.1.4.0.1584.1553286271.3857",
+      "segmentationSegmentNumber": [
+        1
+      ],
+      "sourceSegmentedSeriesUID": "1.3.6.1.4.1.14519.5.2.1.6279.6001.177685820605315926524514718990",
+      "trackingIdentifier": "Nodule 2",
+      "trackingUniqueIdentifier": "2.25.38911037880904767219763718462833112874273705289856885576034"
+    }
+  ]
+}

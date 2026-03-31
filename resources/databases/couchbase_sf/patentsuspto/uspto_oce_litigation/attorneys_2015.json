@@ -1,0 +1,206 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "attorney_row_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1157",
+              "29900",
+              "33949",
+              "35285",
+              "40772"
+            ],
+            "type": "string"
+          },
+          "case_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0:96-cv-06366-WDF",
+              "1:89-cv-07289",
+              "1:91-cv-00349",
+              "1:91-cv-02222-KMO",
+              "1:92-cv-09264-MGC-MHD"
+            ],
+            "type": "string"
+          },
+          "case_row_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "171",
+              "2707",
+              "3136",
+              "3284",
+              "3865"
+            ],
+            "type": "string"
+          },
+          "contactinfo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(See above for address)",
+              "Hopgood, Calimafde, Kalil, Bla...",
+              "Webb, Burden & Ziesenheim; 436..."
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "David G. Hill",
+              "Frederick B Ziesenheim",
+              "Gordon D. Coplein",
+              "Thomas Holland Loffredo",
+              "William A. Alper"
+            ],
+            "type": "string"
+          },
+          "party_row_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "11707",
+              "13822",
+              "14519",
+              "17106",
+              "833"
+            ],
+            "type": "string"
+          },
+          "party_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Counter-Claimant ",
+              "Intervenor Plaintiff ",
+              "Third Party Defendant ",
+              "ThirdParty Defendant ",
+              "ThirdParty Plaintiff "
+            ],
+            "type": "string"
+          },
+          "position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TERMINATED: 01/16/1991; LEAD A...",
+              "TERMINATED: 03/02/1992; LEAD A...",
+              "TERMINATED: 04/29/1994; LEAD A...",
+              "TERMINATED: 09/30/1997; LEAD A...",
+              "TERMINATED: 11/16/1993; LEAD A..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "attorneys_2015::0",
+                  "attorneys_2015::1",
+                  "attorneys_2015::2",
+                  "attorneys_2015::3",
+                  "attorneys_2015::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "attorneys_2015::0"
+              },
+              {
+                "id": "attorneys_2015::1"
+              },
+              {
+                "id": "attorneys_2015::2"
+              },
+              {
+                "id": "attorneys_2015::3"
+              },
+              {
+                "id": "attorneys_2015::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "attorney_row_count": "33949",
+      "case_number": "1:91-cv-00349",
+      "case_row_id": "3136",
+      "contactinfo": "Webb, Burden & Ziesenheim; 436 7th Avenue; Suite 700; Pittsburgh, PA 15219-1818; (412) 471-8815",
+      "name": "Frederick B Ziesenheim",
+      "party_row_count": "13822",
+      "party_type": "Third Party Defendant ",
+      "position": "TERMINATED: 11/16/1993; LEAD ATTORNEY; ATTORNEY TO BE NOTICED"
+    },
+    {
+      "attorney_row_count": "35285",
+      "case_number": "1:91-cv-02222-KMO",
+      "case_row_id": "3284",
+      "contactinfo": "(See above for address)",
+      "name": "David G. Hill",
+      "party_row_count": "14519",
+      "party_type": "Counter-Claimant ",
+      "position": "TERMINATED: 03/02/1992; LEAD ATTORNEY; ATTORNEY TO BE NOTICED"
+    },
+    {
+      "attorney_row_count": "1157",
+      "case_number": "0:96-cv-06366-WDF",
+      "case_row_id": "171",
+      "contactinfo": "(See above for address)",
+      "name": "Thomas Holland Loffredo",
+      "party_row_count": "833",
+      "party_type": "ThirdParty Plaintiff ",
+      "position": "TERMINATED: 09/30/1997; LEAD ATTORNEY; ATTORNEY TO BE NOTICED"
+    },
+    {
+      "attorney_row_count": "40772",
+      "case_number": "1:92-cv-09264-MGC-MHD",
+      "case_row_id": "3865",
+      "contactinfo": "Hopgood, Calimafde, Kalil, Blaustein & Judlowe; 60 East 42nd Street; New York, NY 10165; (212) 986-2480",
+      "name": "William A. Alper",
+      "party_row_count": "17106",
+      "party_type": "ThirdParty Defendant ",
+      "position": "TERMINATED: 04/29/1994; LEAD ATTORNEY"
+    },
+    {
+      "attorney_row_count": "29900",
+      "case_number": "1:89-cv-07289",
+      "case_row_id": "2707",
+      "contactinfo": "(See above for address)",
+      "name": "Gordon D. Coplein",
+      "party_row_count": "11707",
+      "party_type": "Intervenor Plaintiff ",
+      "position": "TERMINATED: 01/16/1991; LEAD ATTORNEY; ATTORNEY TO BE NOTICED"
+    }
+  ]
+}

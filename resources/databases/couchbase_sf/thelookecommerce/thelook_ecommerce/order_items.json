@@ -1,0 +1,304 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "created_at": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1596496697000000,
+              1640909034000000,
+              1643166734000000,
+              1688703672000000,
+              1689818156000000
+            ],
+            "type": "number"
+          },
+          "delivered_at": {
+            "#docs": [
+              765,
+              235
+            ],
+            "%docs": [
+              76.5,
+              23.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1589985300000000,
+                1603362000000000,
+                1701121020000000,
+                1712187300000000,
+                1727206980000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              55287,
+              62389,
+              63464,
+              69156,
+              159840
+            ],
+            "type": "number"
+          },
+          "inventory_item_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              149528,
+              168706,
+              171652,
+              187039,
+              431880
+            ],
+            "type": "number"
+          },
+          "order_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              38215,
+              43198,
+              43950,
+              47905,
+              110528
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13135,
+              24468,
+              24645,
+              24721,
+              26386
+            ],
+            "type": "number"
+          },
+          "returned_at": {
+            "#docs": [
+              898,
+              102
+            ],
+            "%docs": [
+              89.8,
+              10.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1647744420000000,
+                1684825440000000,
+                1685046120000000,
+                1707360240000000,
+                1723116660000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "sale_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8.989999771118164,
+              11,
+              12.989999771118164,
+              36,
+              38.950000762939446
+            ],
+            "type": "number"
+          },
+          "shipped_at": {
+            "#docs": [
+              765,
+              235
+            ],
+            "%docs": [
+              76.5,
+              23.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1589915400000000,
+                1602984120000000,
+                1701053880000000,
+                1711962720000000,
+                1727158620000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cancelled",
+              "Complete",
+              "Processing",
+              "Returned",
+              "Shipped"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30820,
+              34751,
+              35343,
+              38484,
+              88562
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "order_items::10430",
+                  "order_items::15664",
+                  "order_items::5089",
+                  "order_items::80265",
+                  "order_items::85777"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "order_items::10430"
+              },
+              {
+                "id": "order_items::15664"
+              },
+              {
+                "id": "order_items::5089"
+              },
+              {
+                "id": "order_items::80265"
+              },
+              {
+                "id": "order_items::85777"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "created_at": 1670142324000000,
+      "delivered_at": 1670027460000000,
+      "id": 1989,
+      "inventory_item_id": 5376,
+      "order_id": 1342,
+      "product_id": 16736,
+      "returned_at": null,
+      "sale_price": 45,
+      "shipped_at": 1669933440000000,
+      "status": "Complete",
+      "user_id": 1088
+    },
+    {
+      "created_at": 1672389148000000,
+      "delivered_at": 1672841760000000,
+      "id": 24406,
+      "inventory_item_id": 66046,
+      "order_id": 16804,
+      "product_id": 3796,
+      "returned_at": null,
+      "sale_price": 45,
+      "shipped_at": 1672449360000000,
+      "status": "Complete",
+      "user_id": 13621
+    },
+    {
+      "created_at": 1669514880000000,
+      "delivered_at": 1670153100000000,
+      "id": 116016,
+      "inventory_item_id": 313603,
+      "order_id": 80299,
+      "product_id": 18286,
+      "returned_at": null,
+      "sale_price": 45,
+      "shipped_at": 1669732020000000,
+      "status": "Complete",
+      "user_id": 64332
+    },
+    {
+      "created_at": 1727504438000000,
+      "delivered_at": null,
+      "id": 26469,
+      "inventory_item_id": 71533,
+      "order_id": 18197,
+      "product_id": 2962,
+      "returned_at": null,
+      "sale_price": 45,
+      "shipped_at": null,
+      "status": "Processing",
+      "user_id": 14705
+    },
+    {
+      "created_at": 1689007911000000,
+      "delivered_at": null,
+      "id": 47602,
+      "inventory_item_id": 128715,
+      "order_id": 32891,
+      "product_id": 2043,
+      "returned_at": null,
+      "sale_price": 45,
+      "shipped_at": null,
+      "status": "Processing",
+      "user_id": 26525
+    }
+  ]
+}

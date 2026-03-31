@@ -1,0 +1,142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `ValidFrom` = 1356998400000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "PackageTypeID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "PackageTypeName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bag",
+              "Block",
+              "Bottle",
+              "Box",
+              "Can"
+            ],
+            "type": "string"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_packagetypes::0",
+                  "warehouse_packagetypes::1",
+                  "warehouse_packagetypes::2",
+                  "warehouse_packagetypes::3",
+                  "warehouse_packagetypes::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_packagetypes::0"
+              },
+              {
+                "id": "warehouse_packagetypes::1"
+              },
+              {
+                "id": "warehouse_packagetypes::2"
+              },
+              {
+                "id": "warehouse_packagetypes::3"
+              },
+              {
+                "id": "warehouse_packagetypes::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LastEditedBy": 1,
+      "PackageTypeID": 4,
+      "PackageTypeName": "Box",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "PackageTypeID": 3,
+      "PackageTypeName": "Bottle",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "PackageTypeID": 5,
+      "PackageTypeName": "Can",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "PackageTypeID": 2,
+      "PackageTypeName": "Block",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "PackageTypeID": 1,
+      "PackageTypeName": "Bag",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

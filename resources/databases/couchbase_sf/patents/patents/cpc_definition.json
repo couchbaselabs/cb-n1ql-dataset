@@ -1,0 +1,2882 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "applicationReferences": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 14,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Container apertures for pressu..."
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 2,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "G21C13/0285"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 11,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "Container apertures for pressure vessels of nuclear reactors",
+                  "target": [
+                    "G21C13/0285"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Error or fault reporting or storing in computer systems",
+                  "target": [
+                    "G06F11/0766"
+                  ]
+                },
+                {
+                  "description": "Logging of test results",
+                  "target": [
+                    "G06F11/2268"
+                  ]
+                },
+                {
+                  "description": "Monitoring of computer systems",
+                  "target": [
+                    "G06F11/30"
+                  ]
+                },
+                {
+                  "description": "Flight recorders and related data acquisition",
+                  "target": [
+                    "B64D45/00"
+                  ]
+                },
+                {
+                  "description": "Storage of video surveillance data",
+                  "target": [
+                    "G08B13/19665"
+                  ]
+                },
+                {
+                  "description": "Arrangements monitoring consumption of a utility or use of an appliance which consumes a utility to detect unsafe condition, e.g. metering of water, gas or electricity, use of taps, toilet flush, gas stove or electric kettle",
+                  "target": [
+                    "G08B21/0484"
+                  ]
+                },
+                {
+                  "description": "Data acquisition and logging in alarm systems",
+                  "target": [
+                    "G08B25/00",
+                    "G08B26/00"
+                  ]
+                },
+                {
+                  "description": "Management of faults or events or alarms in packet switching networks involving network fault data acquisition and logging",
+                  "target": [
+                    "H04L41/06"
+                  ]
+                },
+                {
+                  "description": "Arrangements for monitoring packet switching networks involving capturing and processing of network packets",
+                  "target": [
+                    "H04L43/00"
+                  ]
+                },
+                {
+                  "description": "Scanning of documents",
+                  "target": [
+                    "H04N1/00"
+                  ]
+                },
+                {
+                  "description": "Arrangements in telecontrol or telemetry systems for selectively calling a substation from a main station, in which substation desired apparatus is selected for obtaining measured values therefrom",
+                  "target": [
+                    "H04Q9/00"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Peculiar to engines characterised by their use of non-liquid fuels, pluralities of fuels, or non-fuel substances added to the combustible mixtures",
+                  "target": [
+                    "F02D19/00"
+                  ]
+                },
+                {
+                  "description": "Peculiar to supercharged engines",
+                  "target": [
+                    "F02D23/00"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "breakdownCode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "childGroups": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 1,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    ""
+                  ],
+                  "type": "string"
+                },
+                "symbols": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 9,
+                  "minItems": 9,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "B30B1/00",
+                      "B30B3/00",
+                      "B30B5/00",
+                      "B30B7/00",
+                      "B30B9/00",
+                      "B30B11/00",
+                      "B30B12/00",
+                      "B30B13/00",
+                      "B30B15/00"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "",
+                  "symbols": [
+                    "B30B1/00",
+                    "B30B3/00",
+                    "B30B5/00",
+                    "B30B7/00",
+                    "B30B9/00",
+                    "B30B11/00",
+                    "B30B12/00",
+                    "B30B13/00",
+                    "B30B15/00"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "children": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 28,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                "A61K45/05",
+                "A61K45/06"
+              ],
+              [
+                "B03C3/885"
+              ],
+              [
+                "C03B35/085"
+              ],
+              [
+                "F22B1/025",
+                "F22B1/026"
+              ]
+            ],
+            "type": "array"
+          },
+          "dateRevised": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20130101,
+              20150115,
+              20160501,
+              20220501,
+              20230101
+            ],
+            "type": "number"
+          },
+          "definition": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 28,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                "Any detail about the removal of particles that have already been removed from the electrodes and/or walls."
+              ],
+              [
+                "Handling means structures which move, transfer, grip, carry, or otherwise relocate preforms from one location to another location.",
+                "Illustrative example of subject matter classified in this group:"
+              ],
+              [
+                "Setting hollow rivets of the type where a mandrel is pushed into a rivet in order to expand said rivet."
+              ],
+              [
+                "The following images that show balls with layers that are interlocked by protrusions, inserts or lattices."
+              ]
+            ],
+            "type": "array"
+          },
+          "glossary": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 4,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Handle",
+                    "Peptides"
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 1,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "handle is defined to grab and/or manipulate/move the lighting device to a chosen position and not as being a handle on which a lighting device is or can be mounted."
+                    ],
+                    [
+                      "oligopeptides, polypeptides, proteins and chemically modified forms thereof."
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 2,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "Handle",
+                  "target": [
+                    "handle is defined to grab and/or manipulate/move the lighting device to a chosen position and not as being a handle on which a lighting device is or can be mounted."
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Peptides",
+                  "target": [
+                    "oligopeptides, polypeptides, proteins and chemically modified forms thereof."
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Transmutation",
+                  "target": [
+                    "Conversion of nuclear waste to less problematic isotopes."
+                  ]
+                },
+                {
+                  "description": "Generator",
+                  "target": [
+                    "Shielded delivery system containing a mother isotope which can be eluted or \"milked\" to deliver an isotope product, which usually has a short half-life, e.g. Technetium-99m."
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "informativeReferences": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 209,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "Flavor": "",
+              "properties": {
+                "description": {
+                  "#docs": 209,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Back- up rolls per se, axially...",
+                    "Blind rivets fastened by a dri...",
+                    "Catalysts in general",
+                    "Cleaning of the electrodes",
+                    "Sheet holders, retainers, mova..."
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "#docs": 209,
+                  "%docs": 100,
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 721,
+                  "minItems": 0,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "B01J21/00",
+                      "B01J21/005",
+                      "B01J21/02",
+                      "B01J21/04",
+                      "B01J21/06",
+                      "B01J21/063",
+                      "B01J21/066",
+                      "B01J21/08",
+                      "B01J21/10",
+                      "B01J21/12",
+                      "B01J21/14",
+                      "B01J21/16",
+                      "B01J21/18",
+                      "B01J21/185",
+                      "B01J21/20",
+                      "B01J23/00",
+                      "B01J23/002",
+                      "B01J23/005",
+                      "B01J23/007",
+                      "B01J23/02",
+                      "B01J23/04",
+                      "B01J23/06",
+                      "B01J23/08",
+                      "B01J23/10",
+                      "B01J23/12",
+                      "B01J23/14",
+                      "B01J23/16",
+                      "B01J23/18",
+                      "B01J23/20",
+                      "B01J23/22",
+                      "B01J23/24",
+                      "B01J23/26",
+                      "B01J23/28",
+                      "B01J23/30",
+                      "B01J23/31",
+                      "B01J23/32",
+                      "B01J23/34",
+                      "B01J23/36",
+                      "B01J23/38",
+                      "B01J23/40",
+                      "B01J23/42",
+                      "B01J23/44",
+                      "B01J23/46",
+                      "B01J23/462",
+                      "B01J23/464",
+                      "B01J23/466",
+                      "B01J23/468",
+                      "B01J23/48",
+                      "B01J23/50",
+                      "B01J23/52",
+                      "B01J23/54",
+                      "B01J23/56",
+                      "B01J23/58",
+                      "B01J23/60",
+                      "B01J23/62",
+                      "B01J23/622",
+                      "B01J23/624",
+                      "B01J23/626",
+                      "B01J23/628",
+                      "B01J23/63",
+                      "B01J23/64",
+                      "B01J23/644",
+                      "B01J23/6442",
+                      "B01J23/6445",
+                      "B01J23/6447",
+                      "B01J23/648",
+                      "B01J23/6482",
+                      "B01J23/6484",
+                      "B01J23/6486",
+                      "B01J23/6488",
+                      "B01J23/652",
+                      "B01J23/6522",
+                      "B01J23/6525",
+                      "B01J23/6527",
+                      "B01J23/656",
+                      "B01J23/6562",
+                      "B01J23/6565",
+                      "B01J23/6567",
+                      "B01J23/66",
+                      "B01J23/68",
+                      "B01J23/681",
+                      "B01J23/682",
+                      "B01J23/683",
+                      "B01J23/685",
+                      "B01J23/686",
+                      "B01J23/687",
+                      "B01J23/688",
+                      "B01J23/70",
+                      "B01J23/72",
+                      "B01J23/74",
+                      "B01J23/745",
+                      "B01J23/75",
+                      "B01J23/755",
+                      "B01J23/76",
+                      "B01J23/78",
+                      "B01J23/80",
+                      "B01J23/825",
+                      "B01J23/83",
+                      "B01J23/835",
+                      "B01J23/84",
+                      "B01J23/843",
+                      "B01J23/8432",
+                      "B01J23/8435",
+                      "B01J23/8437",
+                      "B01J23/847",
+                      "B01J23/8472",
+                      "B01J23/8474",
+                      "B01J23/8476",
+                      "B01J23/8478",
+                      "B01J23/85",
+                      "B01J23/86",
+                      "B01J23/862",
+                      "B01J23/864",
+                      "B01J23/866",
+                      "B01J23/868",
+                      "B01J23/88",
+                      "B01J23/881",
+                      "B01J23/882",
+                      "B01J23/883",
+                      "B01J23/885",
+                      "B01J23/887",
+                      "B01J23/8871",
+                      "B01J23/8872",
+                      "B01J23/8873",
+                      "B01J23/8874",
+                      "B01J23/8875",
+                      "B01J23/8876",
+                      "B01J23/8877",
+                      "B01J23/8878",
+                      "B01J23/888",
+                      "B01J23/8885",
+                      "B01J23/889",
+                      "B01J23/8892",
+                      "B01J23/8894",
+                      "B01J23/8896",
+                      "B01J23/8898",
+                      "B01J23/89",
+                      "B01J23/8906",
+                      "B01J23/8913",
+                      "B01J23/892",
+                      "B01J23/8926",
+                      "B01J23/8933",
+                      "B01J23/894",
+                      "B01J23/8946",
+                      "B01J23/8953",
+                      "B01J23/896",
+                      "B01J23/8966",
+                      "B01J23/8973",
+                      "B01J23/898",
+                      "B01J23/8986",
+                      "B01J23/8993",
+                      "B01J23/90",
+                      "B01J23/92",
+                      "B01J23/94",
+                      "B01J23/96",
+                      "B01J25/00",
+                      "B01J25/02",
+                      "B01J25/04",
+                      "B01J27/00",
+                      "B01J27/02",
+                      "B01J27/04",
+                      "B01J27/043",
+                      "B01J27/045",
+                      "B01J27/047",
+                      "B01J27/049",
+                      "B01J27/051",
+                      "B01J27/0515",
+                      "B01J27/053",
+                      "B01J27/055",
+                      "B01J27/057",
+                      "B01J27/0573",
+                      "B01J27/0576",
+                      "B01J27/06",
+                      "B01J27/08",
+                      "B01J27/10",
+                      "B01J27/12",
+                      "B01J27/122",
+                      "B01J27/125",
+                      "B01J27/128",
+                      "B01J27/13",
+                      "B01J27/132",
+                      "B01J27/135",
+                      "B01J27/138",
+                      "B01J27/14",
+                      "B01J27/16",
+                      "B01J27/18",
+                      "B01J27/1802",
+                      "B01J27/1804",
+                      "B01J27/1806",
+                      "B01J27/1808",
+                      "B01J27/1811",
+                      "B01J27/1813",
+                      "B01J27/1815",
+                      "B01J27/1817",
+                      "B01J27/182",
+                      "B01J27/185",
+                      "B01J27/1853",
+                      "B01J27/1856",
+                      "B01J27/186",
+                      "B01J27/187",
+                      "B01J27/188",
+                      "B01J27/19",
+                      "B01J27/192",
+                      "B01J27/195",
+                      "B01J27/198",
+                      "B01J27/199",
+                      "B01J27/20",
+                      "B01J27/22",
+                      "B01J27/224",
+                      "B01J27/228",
+                      "B01J27/232",
+                      "B01J27/236",
+                      "B01J27/24",
+                      "B01J27/25",
+                      "B01J27/26",
+                      "B01J27/28",
+                      "B01J27/285",
+                      "B01J27/30",
+                      "B01J27/32",
+                      "B01J29/00",
+                      "B01J29/005",
+                      "B01J29/03",
+                      "B01J29/0308",
+                      "B01J29/0316",
+                      "B01J29/0325",
+                      "B01J29/0333",
+                      "B01J29/0341",
+                      "B01J29/035",
+                      "B01J29/0352",
+                      "B01J29/0354",
+                      "B01J29/0356",
+                      "B01J29/0358",
+                      "B01J29/04",
+                      "B01J29/041",
+                      "B01J29/042",
+                      "B01J29/043",
+                      "B01J29/044",
+                      "B01J29/045",
+                      "B01J29/046",
+                      "B01J29/047",
+                      "B01J29/048",
+                      "B01J29/049",
+                      "B01J29/06",
+                      "B01J29/061",
+                      "B01J2029/062",
+                      "B01J29/064",
+                      "B01J29/068",
+                      "B01J29/072",
+                      "B01J29/076",
+                      "B01J29/08",
+                      "B01J2029/081",
+                      "B01J29/082",
+                      "B01J29/084",
+                      "B01J29/085",
+                      "B01J29/087",
+                      "B01J29/088",
+                      "B01J29/10",
+                      "B01J29/103",
+                      "B01J29/106",
+                      "B01J29/12",
+                      "B01J29/123",
+                      "B01J29/126",
+                      "B01J29/14",
+                      "B01J29/143",
+                      "B01J29/146",
+                      "B01J29/16",
+                      "B01J29/163",
+                      "B01J29/166",
+                      "B01J29/18",
+                      "B01J29/185",
+                      "B01J29/20",
+                      "B01J29/22",
+                      "B01J29/24",
+                      "B01J29/26",
+                      "B01J29/40",
+                      "B01J29/405",
+                      "B01J29/42",
+                      "B01J29/44",
+                      "B01J29/46",
+                      "B01J29/48",
+                      "B01J29/50",
+                      "B01J29/505",
+                      "B01J29/52",
+                      "B01J29/54",
+                      "B01J29/56",
+                      "B01J29/58",
+                      "B01J29/60",
+                      "B01J29/605",
+                      "B01J29/61",
+                      "B01J29/62",
+                      "B01J29/63",
+                      "B01J29/64",
+                      "B01J29/65",
+                      "B01J29/655",
+                      "B01J29/66",
+                      "B01J29/67",
+                      "B01J29/68",
+                      "B01J29/69",
+                      "B01J29/70",
+                      "B01J29/7003",
+                      "B01J29/7007",
+                      "B01J29/7011",
+                      "B01J29/7015",
+                      "B01J29/7019",
+                      "B01J29/7023",
+                      "B01J29/7026",
+                      "B01J29/703",
+                      "B01J29/7034",
+                      "B01J29/7038",
+                      "B01J29/7042",
+                      "B01J29/7046",
+                      "B01J29/7049",
+                      "B01J29/7053",
+                      "B01J29/7057",
+                      "B01J29/7061",
+                      "B01J29/7065",
+                      "B01J29/7069",
+                      "B01J29/7073",
+                      "B01J29/7076",
+                      "B01J29/708",
+                      "B01J29/7084",
+                      "B01J29/7088",
+                      "B01J29/7092",
+                      "B01J29/7096",
+                      "B01J29/72",
+                      "B01J29/7207",
+                      "B01J29/7215",
+                      "B01J29/7223",
+                      "B01J29/723",
+                      "B01J29/7238",
+                      "B01J29/7246",
+                      "B01J29/7253",
+                      "B01J29/7261",
+                      "B01J29/7269",
+                      "B01J29/7276",
+                      "B01J29/7284",
+                      "B01J29/7292",
+                      "B01J29/74",
+                      "B01J29/7407",
+                      "B01J29/7415",
+                      "B01J29/7423",
+                      "B01J29/743",
+                      "B01J29/7438",
+                      "B01J29/7446",
+                      "B01J29/7453",
+                      "B01J29/7461",
+                      "B01J29/7469",
+                      "B01J29/7476",
+                      "B01J29/7484",
+                      "B01J29/7492",
+                      "B01J29/76",
+                      "B01J29/7607",
+                      "B01J29/7615",
+                      "B01J29/7623",
+                      "B01J29/763",
+                      "B01J29/7638",
+                      "B01J29/7646",
+                      "B01J29/7653",
+                      "B01J29/7661",
+                      "B01J29/7669",
+                      "B01J29/7676",
+                      "B01J29/7684",
+                      "B01J29/7692",
+                      "B01J29/78",
+                      "B01J29/7807",
+                      "B01J29/7815",
+                      "B01J29/7823",
+                      "B01J29/783",
+                      "B01J29/7838",
+                      "B01J29/7846",
+                      "B01J29/7853",
+                      "B01J29/7861",
+                      "B01J29/7869",
+                      "B01J29/7876",
+                      "B01J29/7884",
+                      "B01J29/7892",
+                      "B01J29/80",
+                      "B01J29/82",
+                      "B01J29/83",
+                      "B01J29/84",
+                      "B01J29/85",
+                      "B01J29/86",
+                      "B01J29/87",
+                      "B01J29/88",
+                      "B01J29/89",
+                      "B01J29/90",
+                      "B01J31/00",
+                      "B01J31/003",
+                      "B01J31/006",
+                      "B01J31/02",
+                      "B01J31/0201",
+                      "B01J31/0202",
+                      "B01J31/0204",
+                      "B01J31/0205",
+                      "B01J31/0207",
+                      "B01J31/0208",
+                      "B01J31/0209",
+                      "B01J31/0211",
+                      "B01J31/0212",
+                      "B01J31/0214",
+                      "B01J31/0215",
+                      "B01J31/0217",
+                      "B01J31/0218",
+                      "B01J31/022",
+                      "B01J31/0221",
+                      "B01J31/0222",
+                      "B01J31/0224",
+                      "B01J31/0225",
+                      "B01J31/0227",
+                      "B01J31/0228",
+                      "B01J31/0229",
+                      "B01J31/0231",
+                      "B01J31/0232",
+                      "B01J31/0234",
+                      "B01J31/0235",
+                      "B01J31/0237",
+                      "B01J31/0238",
+                      "B01J31/0239",
+                      "B01J31/0241",
+                      "B01J31/0242",
+                      "B01J31/0244",
+                      "B01J31/0245",
+                      "B01J31/0247",
+                      "B01J31/0248",
+                      "B01J31/0249",
+                      "B01J31/0251",
+                      "B01J31/0252",
+                      "B01J31/0254",
+                      "B01J31/0255",
+                      "B01J31/0257",
+                      "B01J31/0258",
+                      "B01J31/0259",
+                      "B01J31/0261",
+                      "B01J31/0262",
+                      "B01J31/0264",
+                      "B01J31/0265",
+                      "B01J31/0267",
+                      "B01J31/0268",
+                      "B01J31/0269",
+                      "B01J31/0271",
+                      "B01J31/0272",
+                      "B01J31/0274",
+                      "B01J31/0275",
+                      "B01J31/0277",
+                      "B01J31/0278",
+                      "B01J31/0279",
+                      "B01J31/0281",
+                      "B01J31/0282",
+                      "B01J31/0284",
+                      "B01J31/0285",
+                      "B01J31/0287",
+                      "B01J31/0288",
+                      "B01J31/0289",
+                      "B01J31/0291",
+                      "B01J31/0292",
+                      "B01J31/0294",
+                      "B01J31/0295",
+                      "B01J31/0297",
+                      "B01J31/0298",
+                      "B01J31/04",
+                      "B01J31/06",
+                      "B01J31/061",
+                      "B01J31/062",
+                      "B01J31/063",
+                      "B01J31/064",
+                      "B01J31/065",
+                      "B01J31/066",
+                      "B01J31/067",
+                      "B01J31/068",
+                      "B01J31/069",
+                      "B01J31/08",
+                      "B01J31/10",
+                      "B01J31/12",
+                      "B01J31/121",
+                      "B01J31/122",
+                      "B01J31/123",
+                      "B01J31/124",
+                      "B01J31/125",
+                      "B01J31/126",
+                      "B01J31/127",
+                      "B01J31/128",
+                      "B01J31/14",
+                      "B01J31/143",
+                      "B01J31/146",
+                      "B01J31/16",
+                      "B01J31/1608",
+                      "B01J31/1616",
+                      "B01J31/1625",
+                      "B01J31/1633",
+                      "B01J31/1641",
+                      "B01J31/165",
+                      "B01J31/1658",
+                      "B01J31/1666",
+                      "B01J31/1675",
+                      "B01J31/1683",
+                      "B01J31/1691",
+                      "B01J31/18",
+                      "B01J31/1805",
+                      "B01J31/181",
+                      "B01J31/1815",
+                      "B01J31/182",
+                      "B01J31/1825",
+                      "B01J31/183",
+                      "B01J31/1835",
+                      "B01J31/184",
+                      "B01J31/1845",
+                      "B01J31/185",
+                      "B01J31/1855",
+                      "B01J31/186",
+                      "B01J31/1865",
+                      "B01J31/187",
+                      "B01J31/1875",
+                      "B01J31/188",
+                      "B01J31/1885",
+                      "B01J31/189",
+                      "B01J31/1895",
+                      "B01J31/20",
+                      "B01J31/22",
+                      "B01J31/2204",
+                      "B01J31/2208",
+                      "B01J31/2213",
+                      "B01J31/2217",
+                      "B01J31/2221",
+                      "B01J31/2226",
+                      "B01J31/223",
+                      "B01J31/2234",
+                      "B01J31/2239",
+                      "B01J31/2243",
+                      "B01J31/2247",
+                      "B01J31/2252",
+                      "B01J31/2256",
+                      "B01J31/226",
+                      "B01J31/2265",
+                      "B01J31/2269",
+                      "B01J31/2273",
+                      "B01J31/2278",
+                      "B01J31/2282",
+                      "B01J31/2286",
+                      "B01J31/2291",
+                      "B01J31/2295",
+                      "B01J31/24",
+                      "B01J31/2404",
+                      "B01J31/2409",
+                      "B01J31/2414",
+                      "B01J31/2419",
+                      "B01J31/2423",
+                      "B01J31/2428",
+                      "B01J31/2433",
+                      "B01J31/2438",
+                      "B01J31/2442",
+                      "B01J31/2447",
+                      "B01J31/2452",
+                      "B01J31/2457",
+                      "B01J31/2461",
+                      "B01J31/2466",
+                      "B01J31/2471",
+                      "B01J31/2476",
+                      "B01J31/248",
+                      "B01J31/2485",
+                      "B01J31/249",
+                      "B01J31/2495",
+                      "B01J31/26",
+                      "B01J31/28",
+                      "B01J31/30",
+                      "B01J31/32",
+                      "B01J31/34",
+                      "B01J31/36",
+                      "B01J31/38",
+                      "B01J31/40",
+                      "B01J31/4007",
+                      "B01J31/4015",
+                      "B01J31/4023",
+                      "B01J31/403",
+                      "B01J31/4038",
+                      "B01J31/4046",
+                      "B01J31/4053",
+                      "B01J31/4061",
+                      "B01J31/4069",
+                      "B01J31/4076",
+                      "B01J31/4084",
+                      "B01J31/4092",
+                      "B01J33/00",
+                      "B01J35/00",
+                      "B01J35/19",
+                      "B01J35/20",
+                      "B01J35/23",
+                      "B01J35/27",
+                      "B01J35/30",
+                      "B01J35/31",
+                      "B01J35/32",
+                      "B01J35/33",
+                      "B01J35/34",
+                      "B01J35/36",
+                      "B01J35/37",
+                      "B01J35/38",
+                      "B01J35/39",
+                      "B01J35/391",
+                      "B01J35/392",
+                      "B01J35/393",
+                      "B01J35/394",
+                      "B01J35/395",
+                      "B01J35/396",
+                      "B01J35/397",
+                      "B01J35/398",
+                      "B01J35/399",
+                      "B01J35/40",
+                      "B01J35/45",
+                      "B01J35/50",
+                      "B01J35/505",
+                      "B01J35/51",
+                      "B01J35/52",
+                      "B01J35/53",
+                      "B01J35/54",
+                      "B01J35/55",
+                      "B01J35/56",
+                      "B01J35/57",
+                      "B01J35/58",
+                      "B01J35/59",
+                      "B01J35/60",
+                      "B01J35/61",
+                      "B01J35/612",
+                      "B01J35/613",
+                      "B01J35/615",
+                      "B01J35/617",
+                      "B01J35/618",
+                      "B01J35/63",
+                      "B01J35/633",
+                      "B01J35/635",
+                      "B01J35/638",
+                      "B01J35/64",
+                      "B01J35/643",
+                      "B01J35/647",
+                      "B01J35/651",
+                      "B01J35/653",
+                      "B01J35/657",
+                      "B01J35/66",
+                      "B01J35/67",
+                      "B01J35/69",
+                      "B01J35/695",
+                      "B01J35/70",
+                      "B01J35/73",
+                      "B01J35/733",
+                      "B01J35/735",
+                      "B01J35/737",
+                      "B01J35/77",
+                      "B01J35/80",
+                      "B01J37/00",
+                      "B01J37/0009",
+                      "B01J37/0018",
+                      "B01J37/0027",
+                      "B01J37/0036",
+                      "B01J37/0045",
+                      "B01J37/0054",
+                      "B01J37/0063",
+                      "B01J37/0072",
+                      "B01J37/0081",
+                      "B01J37/009",
+                      "B01J37/02",
+                      "B01J37/0201",
+                      "B01J37/0203",
+                      "B01J37/0205",
+                      "B01J37/0207",
+                      "B01J37/0209",
+                      "B01J37/0211",
+                      "B01J37/0213",
+                      "B01J37/0215",
+                      "B01J37/0217",
+                      "B01J37/0219",
+                      "B01J37/0221",
+                      "B01J37/0223",
+                      "B01J37/0225",
+                      "B01J37/0226",
+                      "B01J37/0228",
+                      "B01J37/023",
+                      "B01J37/0232",
+                      "B01J37/0234",
+                      "B01J37/0236",
+                      "B01J37/0238",
+                      "B01J37/024",
+                      "B01J37/0242",
+                      "B01J37/0244",
+                      "B01J37/0246",
+                      "B01J37/0248",
+                      "B01J37/03",
+                      "B01J37/031",
+                      "B01J37/033",
+                      "B01J37/035",
+                      "B01J37/036",
+                      "B01J37/038",
+                      "B01J37/04",
+                      "B01J37/06",
+                      "B01J37/08",
+                      "B01J37/082",
+                      "B01J37/084",
+                      "B01J37/086",
+                      "B01J37/088",
+                      "B01J37/10",
+                      "B01J37/105",
+                      "B01J37/12",
+                      "B01J37/14",
+                      "B01J37/16",
+                      "B01J37/18",
+                      "B01J37/20",
+                      "B01J37/22",
+                      "B01J37/24",
+                      "B01J37/26",
+                      "B01J37/28",
+                      "B01J37/30",
+                      "B01J37/32",
+                      "B01J37/34",
+                      "B01J37/341",
+                      "B01J37/342",
+                      "B01J37/343",
+                      "B01J37/344",
+                      "B01J37/345",
+                      "B01J37/346",
+                      "B01J37/347",
+                      "B01J37/348",
+                      "B01J37/349",
+                      "B01J37/36",
+                      "B01J38/00"
+                    ],
+                    [
+                      "B03C3/74"
+                    ],
+                    [
+                      "B21B13/14"
+                    ],
+                    [
+                      "B41J13/106"
+                    ],
+                    [
+                      "F16B19/1081"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 28,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "Back- up rolls per se, axially shifting the rolls, lateral support devices",
+                  "target": [
+                    "B21B13/14"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Blind rivets fastened by a drive-pin",
+                  "target": [
+                    "F16B19/1081"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Catalysts in general",
+                  "target": [
+                    "B01J21/00",
+                    "B01J21/005",
+                    "B01J21/02",
+                    "B01J21/04",
+                    "B01J21/06",
+                    "B01J21/063",
+                    "B01J21/066",
+                    "B01J21/08",
+                    "B01J21/10",
+                    "B01J21/12",
+                    "B01J21/14",
+                    "B01J21/16",
+                    "B01J21/18",
+                    "B01J21/185",
+                    "B01J21/20",
+                    "B01J23/00",
+                    "B01J23/002",
+                    "B01J23/005",
+                    "B01J23/007",
+                    "B01J23/02",
+                    "B01J23/04",
+                    "B01J23/06",
+                    "B01J23/08",
+                    "B01J23/10",
+                    "B01J23/12",
+                    "B01J23/14",
+                    "B01J23/16",
+                    "B01J23/18",
+                    "B01J23/20",
+                    "B01J23/22",
+                    "B01J23/24",
+                    "B01J23/26",
+                    "B01J23/28",
+                    "B01J23/30",
+                    "B01J23/31",
+                    "B01J23/32",
+                    "B01J23/34",
+                    "B01J23/36",
+                    "B01J23/38",
+                    "B01J23/40",
+                    "B01J23/42",
+                    "B01J23/44",
+                    "B01J23/46",
+                    "B01J23/462",
+                    "B01J23/464",
+                    "B01J23/466",
+                    "B01J23/468",
+                    "B01J23/48",
+                    "B01J23/50",
+                    "B01J23/52",
+                    "B01J23/54",
+                    "B01J23/56",
+                    "B01J23/58",
+                    "B01J23/60",
+                    "B01J23/62",
+                    "B01J23/622",
+                    "B01J23/624",
+                    "B01J23/626",
+                    "B01J23/628",
+                    "B01J23/63",
+                    "B01J23/64",
+                    "B01J23/644",
+                    "B01J23/6442",
+                    "B01J23/6445",
+                    "B01J23/6447",
+                    "B01J23/648",
+                    "B01J23/6482",
+                    "B01J23/6484",
+                    "B01J23/6486",
+                    "B01J23/6488",
+                    "B01J23/652",
+                    "B01J23/6522",
+                    "B01J23/6525",
+                    "B01J23/6527",
+                    "B01J23/656",
+                    "B01J23/6562",
+                    "B01J23/6565",
+                    "B01J23/6567",
+                    "B01J23/66",
+                    "B01J23/68",
+                    "B01J23/681",
+                    "B01J23/682",
+                    "B01J23/683",
+                    "B01J23/685",
+                    "B01J23/686",
+                    "B01J23/687",
+                    "B01J23/688",
+                    "B01J23/70",
+                    "B01J23/72",
+                    "B01J23/74",
+                    "B01J23/745",
+                    "B01J23/75",
+                    "B01J23/755",
+                    "B01J23/76",
+                    "B01J23/78",
+                    "B01J23/80",
+                    "B01J23/825",
+                    "B01J23/83",
+                    "B01J23/835",
+                    "B01J23/84",
+                    "B01J23/843",
+                    "B01J23/8432",
+                    "B01J23/8435",
+                    "B01J23/8437",
+                    "B01J23/847",
+                    "B01J23/8472",
+                    "B01J23/8474",
+                    "B01J23/8476",
+                    "B01J23/8478",
+                    "B01J23/85",
+                    "B01J23/86",
+                    "B01J23/862",
+                    "B01J23/864",
+                    "B01J23/866",
+                    "B01J23/868",
+                    "B01J23/88",
+                    "B01J23/881",
+                    "B01J23/882",
+                    "B01J23/883",
+                    "B01J23/885",
+                    "B01J23/887",
+                    "B01J23/8871",
+                    "B01J23/8872",
+                    "B01J23/8873",
+                    "B01J23/8874",
+                    "B01J23/8875",
+                    "B01J23/8876",
+                    "B01J23/8877",
+                    "B01J23/8878",
+                    "B01J23/888",
+                    "B01J23/8885",
+                    "B01J23/889",
+                    "B01J23/8892",
+                    "B01J23/8894",
+                    "B01J23/8896",
+                    "B01J23/8898",
+                    "B01J23/89",
+                    "B01J23/8906",
+                    "B01J23/8913",
+                    "B01J23/892",
+                    "B01J23/8926",
+                    "B01J23/8933",
+                    "B01J23/894",
+                    "B01J23/8946",
+                    "B01J23/8953",
+                    "B01J23/896",
+                    "B01J23/8966",
+                    "B01J23/8973",
+                    "B01J23/898",
+                    "B01J23/8986",
+                    "B01J23/8993",
+                    "B01J23/90",
+                    "B01J23/92",
+                    "B01J23/94",
+                    "B01J23/96",
+                    "B01J25/00",
+                    "B01J25/02",
+                    "B01J25/04",
+                    "B01J27/00",
+                    "B01J27/02",
+                    "B01J27/04",
+                    "B01J27/043",
+                    "B01J27/045",
+                    "B01J27/047",
+                    "B01J27/049",
+                    "B01J27/051",
+                    "B01J27/0515",
+                    "B01J27/053",
+                    "B01J27/055",
+                    "B01J27/057",
+                    "B01J27/0573",
+                    "B01J27/0576",
+                    "B01J27/06",
+                    "B01J27/08",
+                    "B01J27/10",
+                    "B01J27/12",
+                    "B01J27/122",
+                    "B01J27/125",
+                    "B01J27/128",
+                    "B01J27/13",
+                    "B01J27/132",
+                    "B01J27/135",
+                    "B01J27/138",
+                    "B01J27/14",
+                    "B01J27/16",
+                    "B01J27/18",
+                    "B01J27/1802",
+                    "B01J27/1804",
+                    "B01J27/1806",
+                    "B01J27/1808",
+                    "B01J27/1811",
+                    "B01J27/1813",
+                    "B01J27/1815",
+                    "B01J27/1817",
+                    "B01J27/182",
+                    "B01J27/185",
+                    "B01J27/1853",
+                    "B01J27/1856",
+                    "B01J27/186",
+                    "B01J27/187",
+                    "B01J27/188",
+                    "B01J27/19",
+                    "B01J27/192",
+                    "B01J27/195",
+                    "B01J27/198",
+                    "B01J27/199",
+                    "B01J27/20",
+                    "B01J27/22",
+                    "B01J27/224",
+                    "B01J27/228",
+                    "B01J27/232",
+                    "B01J27/236",
+                    "B01J27/24",
+                    "B01J27/25",
+                    "B01J27/26",
+                    "B01J27/28",
+                    "B01J27/285",
+                    "B01J27/30",
+                    "B01J27/32",
+                    "B01J29/00",
+                    "B01J29/005",
+                    "B01J29/03",
+                    "B01J29/0308",
+                    "B01J29/0316",
+                    "B01J29/0325",
+                    "B01J29/0333",
+                    "B01J29/0341",
+                    "B01J29/035",
+                    "B01J29/0352",
+                    "B01J29/0354",
+                    "B01J29/0356",
+                    "B01J29/0358",
+                    "B01J29/04",
+                    "B01J29/041",
+                    "B01J29/042",
+                    "B01J29/043",
+                    "B01J29/044",
+                    "B01J29/045",
+                    "B01J29/046",
+                    "B01J29/047",
+                    "B01J29/048",
+                    "B01J29/049",
+                    "B01J29/06",
+                    "B01J29/061",
+                    "B01J2029/062",
+                    "B01J29/064",
+                    "B01J29/068",
+                    "B01J29/072",
+                    "B01J29/076",
+                    "B01J29/08",
+                    "B01J2029/081",
+                    "B01J29/082",
+                    "B01J29/084",
+                    "B01J29/085",
+                    "B01J29/087",
+                    "B01J29/088",
+                    "B01J29/10",
+                    "B01J29/103",
+                    "B01J29/106",
+                    "B01J29/12",
+                    "B01J29/123",
+                    "B01J29/126",
+                    "B01J29/14",
+                    "B01J29/143",
+                    "B01J29/146",
+                    "B01J29/16",
+                    "B01J29/163",
+                    "B01J29/166",
+                    "B01J29/18",
+                    "B01J29/185",
+                    "B01J29/20",
+                    "B01J29/22",
+                    "B01J29/24",
+                    "B01J29/26",
+                    "B01J29/40",
+                    "B01J29/405",
+                    "B01J29/42",
+                    "B01J29/44",
+                    "B01J29/46",
+                    "B01J29/48",
+                    "B01J29/50",
+                    "B01J29/505",
+                    "B01J29/52",
+                    "B01J29/54",
+                    "B01J29/56",
+                    "B01J29/58",
+                    "B01J29/60",
+                    "B01J29/605",
+                    "B01J29/61",
+                    "B01J29/62",
+                    "B01J29/63",
+                    "B01J29/64",
+                    "B01J29/65",
+                    "B01J29/655",
+                    "B01J29/66",
+                    "B01J29/67",
+                    "B01J29/68",
+                    "B01J29/69",
+                    "B01J29/70",
+                    "B01J29/7003",
+                    "B01J29/7007",
+                    "B01J29/7011",
+                    "B01J29/7015",
+                    "B01J29/7019",
+                    "B01J29/7023",
+                    "B01J29/7026",
+                    "B01J29/703",
+                    "B01J29/7034",
+                    "B01J29/7038",
+                    "B01J29/7042",
+                    "B01J29/7046",
+                    "B01J29/7049",
+                    "B01J29/7053",
+                    "B01J29/7057",
+                    "B01J29/7061",
+                    "B01J29/7065",
+                    "B01J29/7069",
+                    "B01J29/7073",
+                    "B01J29/7076",
+                    "B01J29/708",
+                    "B01J29/7084",
+                    "B01J29/7088",
+                    "B01J29/7092",
+                    "B01J29/7096",
+                    "B01J29/72",
+                    "B01J29/7207",
+                    "B01J29/7215",
+                    "B01J29/7223",
+                    "B01J29/723",
+                    "B01J29/7238",
+                    "B01J29/7246",
+                    "B01J29/7253",
+                    "B01J29/7261",
+                    "B01J29/7269",
+                    "B01J29/7276",
+                    "B01J29/7284",
+                    "B01J29/7292",
+                    "B01J29/74",
+                    "B01J29/7407",
+                    "B01J29/7415",
+                    "B01J29/7423",
+                    "B01J29/743",
+                    "B01J29/7438",
+                    "B01J29/7446",
+                    "B01J29/7453",
+                    "B01J29/7461",
+                    "B01J29/7469",
+                    "B01J29/7476",
+                    "B01J29/7484",
+                    "B01J29/7492",
+                    "B01J29/76",
+                    "B01J29/7607",
+                    "B01J29/7615",
+                    "B01J29/7623",
+                    "B01J29/763",
+                    "B01J29/7638",
+                    "B01J29/7646",
+                    "B01J29/7653",
+                    "B01J29/7661",
+                    "B01J29/7669",
+                    "B01J29/7676",
+                    "B01J29/7684",
+                    "B01J29/7692",
+                    "B01J29/78",
+                    "B01J29/7807",
+                    "B01J29/7815",
+                    "B01J29/7823",
+                    "B01J29/783",
+                    "B01J29/7838",
+                    "B01J29/7846",
+                    "B01J29/7853",
+                    "B01J29/7861",
+                    "B01J29/7869",
+                    "B01J29/7876",
+                    "B01J29/7884",
+                    "B01J29/7892",
+                    "B01J29/80",
+                    "B01J29/82",
+                    "B01J29/83",
+                    "B01J29/84",
+                    "B01J29/85",
+                    "B01J29/86",
+                    "B01J29/87",
+                    "B01J29/88",
+                    "B01J29/89",
+                    "B01J29/90",
+                    "B01J31/00",
+                    "B01J31/003",
+                    "B01J31/006",
+                    "B01J31/02",
+                    "B01J31/0201",
+                    "B01J31/0202",
+                    "B01J31/0204",
+                    "B01J31/0205",
+                    "B01J31/0207",
+                    "B01J31/0208",
+                    "B01J31/0209",
+                    "B01J31/0211",
+                    "B01J31/0212",
+                    "B01J31/0214",
+                    "B01J31/0215",
+                    "B01J31/0217",
+                    "B01J31/0218",
+                    "B01J31/022",
+                    "B01J31/0221",
+                    "B01J31/0222",
+                    "B01J31/0224",
+                    "B01J31/0225",
+                    "B01J31/0227",
+                    "B01J31/0228",
+                    "B01J31/0229",
+                    "B01J31/0231",
+                    "B01J31/0232",
+                    "B01J31/0234",
+                    "B01J31/0235",
+                    "B01J31/0237",
+                    "B01J31/0238",
+                    "B01J31/0239",
+                    "B01J31/0241",
+                    "B01J31/0242",
+                    "B01J31/0244",
+                    "B01J31/0245",
+                    "B01J31/0247",
+                    "B01J31/0248",
+                    "B01J31/0249",
+                    "B01J31/0251",
+                    "B01J31/0252",
+                    "B01J31/0254",
+                    "B01J31/0255",
+                    "B01J31/0257",
+                    "B01J31/0258",
+                    "B01J31/0259",
+                    "B01J31/0261",
+                    "B01J31/0262",
+                    "B01J31/0264",
+                    "B01J31/0265",
+                    "B01J31/0267",
+                    "B01J31/0268",
+                    "B01J31/0269",
+                    "B01J31/0271",
+                    "B01J31/0272",
+                    "B01J31/0274",
+                    "B01J31/0275",
+                    "B01J31/0277",
+                    "B01J31/0278",
+                    "B01J31/0279",
+                    "B01J31/0281",
+                    "B01J31/0282",
+                    "B01J31/0284",
+                    "B01J31/0285",
+                    "B01J31/0287",
+                    "B01J31/0288",
+                    "B01J31/0289",
+                    "B01J31/0291",
+                    "B01J31/0292",
+                    "B01J31/0294",
+                    "B01J31/0295",
+                    "B01J31/0297",
+                    "B01J31/0298",
+                    "B01J31/04",
+                    "B01J31/06",
+                    "B01J31/061",
+                    "B01J31/062",
+                    "B01J31/063",
+                    "B01J31/064",
+                    "B01J31/065",
+                    "B01J31/066",
+                    "B01J31/067",
+                    "B01J31/068",
+                    "B01J31/069",
+                    "B01J31/08",
+                    "B01J31/10",
+                    "B01J31/12",
+                    "B01J31/121",
+                    "B01J31/122",
+                    "B01J31/123",
+                    "B01J31/124",
+                    "B01J31/125",
+                    "B01J31/126",
+                    "B01J31/127",
+                    "B01J31/128",
+                    "B01J31/14",
+                    "B01J31/143",
+                    "B01J31/146",
+                    "B01J31/16",
+                    "B01J31/1608",
+                    "B01J31/1616",
+                    "B01J31/1625",
+                    "B01J31/1633",
+                    "B01J31/1641",
+                    "B01J31/165",
+                    "B01J31/1658",
+                    "B01J31/1666",
+                    "B01J31/1675",
+                    "B01J31/1683",
+                    "B01J31/1691",
+                    "B01J31/18",
+                    "B01J31/1805",
+                    "B01J31/181",
+                    "B01J31/1815",
+                    "B01J31/182",
+                    "B01J31/1825",
+                    "B01J31/183",
+                    "B01J31/1835",
+                    "B01J31/184",
+                    "B01J31/1845",
+                    "B01J31/185",
+                    "B01J31/1855",
+                    "B01J31/186",
+                    "B01J31/1865",
+                    "B01J31/187",
+                    "B01J31/1875",
+                    "B01J31/188",
+                    "B01J31/1885",
+                    "B01J31/189",
+                    "B01J31/1895",
+                    "B01J31/20",
+                    "B01J31/22",
+                    "B01J31/2204",
+                    "B01J31/2208",
+                    "B01J31/2213",
+                    "B01J31/2217",
+                    "B01J31/2221",
+                    "B01J31/2226",
+                    "B01J31/223",
+                    "B01J31/2234",
+                    "B01J31/2239",
+                    "B01J31/2243",
+                    "B01J31/2247",
+                    "B01J31/2252",
+                    "B01J31/2256",
+                    "B01J31/226",
+                    "B01J31/2265",
+                    "B01J31/2269",
+                    "B01J31/2273",
+                    "B01J31/2278",
+                    "B01J31/2282",
+                    "B01J31/2286",
+                    "B01J31/2291",
+                    "B01J31/2295",
+                    "B01J31/24",
+                    "B01J31/2404",
+                    "B01J31/2409",
+                    "B01J31/2414",
+                    "B01J31/2419",
+                    "B01J31/2423",
+                    "B01J31/2428",
+                    "B01J31/2433",
+                    "B01J31/2438",
+                    "B01J31/2442",
+                    "B01J31/2447",
+                    "B01J31/2452",
+                    "B01J31/2457",
+                    "B01J31/2461",
+                    "B01J31/2466",
+                    "B01J31/2471",
+                    "B01J31/2476",
+                    "B01J31/248",
+                    "B01J31/2485",
+                    "B01J31/249",
+                    "B01J31/2495",
+                    "B01J31/26",
+                    "B01J31/28",
+                    "B01J31/30",
+                    "B01J31/32",
+                    "B01J31/34",
+                    "B01J31/36",
+                    "B01J31/38",
+                    "B01J31/40",
+                    "B01J31/4007",
+                    "B01J31/4015",
+                    "B01J31/4023",
+                    "B01J31/403",
+                    "B01J31/4038",
+                    "B01J31/4046",
+                    "B01J31/4053",
+                    "B01J31/4061",
+                    "B01J31/4069",
+                    "B01J31/4076",
+                    "B01J31/4084",
+                    "B01J31/4092",
+                    "B01J33/00",
+                    "B01J35/00",
+                    "B01J35/19",
+                    "B01J35/20",
+                    "B01J35/23",
+                    "B01J35/27",
+                    "B01J35/30",
+                    "B01J35/31",
+                    "B01J35/32",
+                    "B01J35/33",
+                    "B01J35/34",
+                    "B01J35/36",
+                    "B01J35/37",
+                    "B01J35/38",
+                    "B01J35/39",
+                    "B01J35/391",
+                    "B01J35/392",
+                    "B01J35/393",
+                    "B01J35/394",
+                    "B01J35/395",
+                    "B01J35/396",
+                    "B01J35/397",
+                    "B01J35/398",
+                    "B01J35/399",
+                    "B01J35/40",
+                    "B01J35/45",
+                    "B01J35/50",
+                    "B01J35/505",
+                    "B01J35/51",
+                    "B01J35/52",
+                    "B01J35/53",
+                    "B01J35/54",
+                    "B01J35/55",
+                    "B01J35/56",
+                    "B01J35/57",
+                    "B01J35/58",
+                    "B01J35/59",
+                    "B01J35/60",
+                    "B01J35/61",
+                    "B01J35/612",
+                    "B01J35/613",
+                    "B01J35/615",
+                    "B01J35/617",
+                    "B01J35/618",
+                    "B01J35/63",
+                    "B01J35/633",
+                    "B01J35/635",
+                    "B01J35/638",
+                    "B01J35/64",
+                    "B01J35/643",
+                    "B01J35/647",
+                    "B01J35/651",
+                    "B01J35/653",
+                    "B01J35/657",
+                    "B01J35/66",
+                    "B01J35/67",
+                    "B01J35/69",
+                    "B01J35/695",
+                    "B01J35/70",
+                    "B01J35/73",
+                    "B01J35/733",
+                    "B01J35/735",
+                    "B01J35/737",
+                    "B01J35/77",
+                    "B01J35/80",
+                    "B01J37/00",
+                    "B01J37/0009",
+                    "B01J37/0018",
+                    "B01J37/0027",
+                    "B01J37/0036",
+                    "B01J37/0045",
+                    "B01J37/0054",
+                    "B01J37/0063",
+                    "B01J37/0072",
+                    "B01J37/0081",
+                    "B01J37/009",
+                    "B01J37/02",
+                    "B01J37/0201",
+                    "B01J37/0203",
+                    "B01J37/0205",
+                    "B01J37/0207",
+                    "B01J37/0209",
+                    "B01J37/0211",
+                    "B01J37/0213",
+                    "B01J37/0215",
+                    "B01J37/0217",
+                    "B01J37/0219",
+                    "B01J37/0221",
+                    "B01J37/0223",
+                    "B01J37/0225",
+                    "B01J37/0226",
+                    "B01J37/0228",
+                    "B01J37/023",
+                    "B01J37/0232",
+                    "B01J37/0234",
+                    "B01J37/0236",
+                    "B01J37/0238",
+                    "B01J37/024",
+                    "B01J37/0242",
+                    "B01J37/0244",
+                    "B01J37/0246",
+                    "B01J37/0248",
+                    "B01J37/03",
+                    "B01J37/031",
+                    "B01J37/033",
+                    "B01J37/035",
+                    "B01J37/036",
+                    "B01J37/038",
+                    "B01J37/04",
+                    "B01J37/06",
+                    "B01J37/08",
+                    "B01J37/082",
+                    "B01J37/084",
+                    "B01J37/086",
+                    "B01J37/088",
+                    "B01J37/10",
+                    "B01J37/105",
+                    "B01J37/12",
+                    "B01J37/14",
+                    "B01J37/16",
+                    "B01J37/18",
+                    "B01J37/20",
+                    "B01J37/22",
+                    "B01J37/24",
+                    "B01J37/26",
+                    "B01J37/28",
+                    "B01J37/30",
+                    "B01J37/32",
+                    "B01J37/34",
+                    "B01J37/341",
+                    "B01J37/342",
+                    "B01J37/343",
+                    "B01J37/344",
+                    "B01J37/345",
+                    "B01J37/346",
+                    "B01J37/347",
+                    "B01J37/348",
+                    "B01J37/349",
+                    "B01J37/36",
+                    "B01J38/00"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Cleaning of the electrodes",
+                  "target": [
+                    "B03C3/74"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "ipcConcordant": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A61B5/151",
+              "A63B37/00",
+              "B01D53/86",
+              "B60J1/20",
+              "G01G13/285"
+            ],
+            "type": "string"
+          },
+          "level": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7,
+              11,
+              12,
+              13,
+              16
+            ],
+            "type": "number"
+          },
+          "limitingReferences": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 78,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Control of flatness/ profile b...",
+                    "Diaphragms for loudspeakers",
+                    "Mixing of inks, solvent or air...",
+                    "Three-way-catalysts for engine...",
+                    "Working platforms on other typ..."
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 15,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "B01D53/9445",
+                      "B01D53/945",
+                      "B01D53/9454"
+                    ],
+                    [
+                      "B21B37/38"
+                    ],
+                    [
+                      "B41J2/211"
+                    ],
+                    [
+                      "B66F11/04"
+                    ],
+                    [
+                      "H04R7/00"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 12,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "Control of flatness/ profile by roll bending",
+                  "target": [
+                    "B21B37/38"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Surface construction for playgrounds or sports",
+                  "target": [
+                    "E01C13/00"
+                  ]
+                },
+                {
+                  "description": "Surfaces simulating grass",
+                  "target": [
+                    "E01C13/08"
+                  ]
+                },
+                {
+                  "description": "Artificial for snow or ice sports",
+                  "target": [
+                    "E01C13/10"
+                  ]
+                },
+                {
+                  "description": "Woods floors",
+                  "target": [
+                    "E04F15/02",
+                    "E04F15/04"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Three-way-catalysts for engine exhaust gases (e.g. cars)",
+                  "target": [
+                    "B01D53/9445",
+                    "B01D53/945",
+                    "B01D53/9454"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Using invasive optical sensors",
+                  "target": [
+                    "A61B5/1459"
+                  ]
+                },
+                {
+                  "description": "Optical sensors specially adapted for foetal tissue",
+                  "target": [
+                    "A61B5/1464"
+                  ]
+                },
+                {
+                  "description": "Using invasive chemical or electrochemical sensors",
+                  "target": [
+                    "A61B5/1473"
+                  ]
+                },
+                {
+                  "description": "Chemical or electrochemical sensors specially adapted for foetal tissue",
+                  "target": [
+                    "A61B5/1482"
+                  ]
+                },
+                {
+                  "description": "Using invasive enzyme electrodes",
+                  "target": [
+                    "A61B5/14865"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "notAllocatable": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "parents": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 15,
+            "minItems": 2,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "A61B5/15157",
+                "A61B5/15148",
+                "A61B5/15146",
+                "A61B5/151",
+                "A61B5/15",
+                "A61B5/00",
+                "A61B",
+                "A61",
+                "A"
+              ],
+              [
+                "A63B37/0077",
+                "A63B37/007",
+                "A63B37/0003",
+                "A63B37/00",
+                "A63B",
+                "A63",
+                "A"
+              ],
+              [
+                "B01D53/8646",
+                "B01D53/8643",
+                "B01D53/86",
+                "B01D53/74",
+                "B01D53/34",
+                "B01D53/00",
+                "B01D",
+                "B01",
+                "B"
+              ],
+              [
+                "B60J1/2036",
+                "B60J1/2013",
+                "B60J1/2011",
+                "B60J1/20",
+                "B60J1/00",
+                "B60J",
+                "B60",
+                "B"
+              ],
+              [
+                "G01G13/2852",
+                "G01G13/2851",
+                "G01G13/285",
+                "G01G13/28",
+                "G01G13/24",
+                "G01G13/00",
+                "G01G",
+                "G01",
+                "G"
+              ]
+            ],
+            "type": "array"
+          },
+          "precedenceLimitingReferences": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 33,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "and take precedence",
+                    "take precedence",
+                    "takes precedence",
+                    "takes precedence, holders for ..."
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 5,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "A42B1/045",
+                      "A42B1/046"
+                    ],
+                    [
+                      "A61B5/1459",
+                      "A61B5/1464",
+                      "A61B5/1473",
+                      "A61B5/1482",
+                      "A61B5/14865"
+                    ],
+                    [
+                      "B05B1/3452"
+                    ],
+                    [
+                      "B29D24/00",
+                      "B29D99/001"
+                    ],
+                    [
+                      "C12Q1/6897"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "take precedence",
+                  "target": [
+                    "A61B5/1459",
+                    "A61B5/1464",
+                    "A61B5/1473",
+                    "A61B5/1482",
+                    "A61B5/14865"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "take precedence",
+                  "target": [
+                    "B29D24/00",
+                    "B29D99/001"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "takes precedence",
+                  "target": [
+                    "B05B1/3452"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "takes precedence",
+                  "target": [
+                    "C12Q1/6897"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "residualReferences": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 1,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Ink ribbons characterised by a..."
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 1,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "B41J31/09"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "Ink ribbons characterised by areas carrying media for obliteration or removal of typing errors",
+                  "target": [
+                    "B41J31/09"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "rules": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 81,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "Flavor": "",
+              "properties": {
+                "description": {
+                  "#docs": 81,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Concepts classified here must ...",
+                    "Documents classified in the su...",
+                    "Documents having tiles resting...",
+                    "Other essential aspects should...",
+                    "The Indexing Code G06F2212/702..."
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "#docs": 81,
+                  "%docs": 100,
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 7,
+                  "minItems": 0,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "B01D2255/00"
+                    ],
+                    [
+                      "C11D3/0005",
+                      "C11D3/0094",
+                      "C11D"
+                    ],
+                    [
+                      "D06N3/00"
+                    ],
+                    [
+                      "E04D11/00"
+                    ],
+                    [
+                      "G06F2212/702"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 18,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "Concepts classified here must further specify the catalytic substance in B01D2255/00.",
+                  "target": [
+                    "B01D2255/00"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Documents classified in the subgroups\u00a0C11D3/0005 - C11D3/0094\u00a0are also classified in other groups of the\u00a0C11D\u00a0subclass according to the chemical nature of the compounds as such.",
+                  "target": [
+                    "C11D3/0005",
+                    "C11D3/0094",
+                    "C11D"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Documents having tiles resting directly on the flat roofing surface without separate supports or spacers between the roofing surface and the tiles, e.g. normal terrace floors on flat roofs, should be classified in E04D11/00.",
+                  "target": [
+                    "E04D11/00"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "This group is hardly used. Manual in nature.",
+                  "target": []
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "scopeLimitingReferences": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 114,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "taps in general",
+                    "computer engineering",
+                    "control devices responsive to ...",
+                    "for reed switches",
+                    ""
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 323,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "B21B37/38"
+                    ],
+                    [
+                      "B25J13/087"
+                    ],
+                    [
+                      "F16K5/00"
+                    ],
+                    [
+                      "G09B19/0053"
+                    ],
+                    [
+                      "H01H36/002"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 15,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "",
+                  "target": [
+                    "B25J13/087"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "control devices responsive to roll bending",
+                  "target": [
+                    "B21B37/38"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "for reed switches",
+                  "target": [
+                    "H01H36/002"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "surface construction",
+                  "target": [
+                    "E01C"
+                  ]
+                },
+                {
+                  "description": "",
+                  "target": [
+                    "A63C19/00"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "frozen",
+              "published"
+            ],
+            "type": "string"
+          },
+          "symbol": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A61B5/15174",
+              "A63B37/0097",
+              "B01D53/865",
+              "B60J1/2044",
+              "G01G13/2853"
+            ],
+            "type": "string"
+          },
+          "synonyms": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 7,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "\"planing\"",
+                    "Isotope delivery system"
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 1,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "\"Generator\", \"cow\", ion exchange column."
+                    ],
+                    [
+                      "\"shaping\""
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 5,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "description": "\"planing\"",
+                  "target": [
+                    "\"shaping\""
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "HTS or High-Tc",
+                  "target": [
+                    "These abbreviations correspond to the term \"high critical-temperature superconductor\"."
+                  ]
+                },
+                {
+                  "description": "Y-Ba-Cu-O",
+                  "target": [
+                    "In patent literature this abbreviation is used for the general substance group, which includes e.g. the compounds Y1Ba2Cu3Ox or Y2Ba1Cu1O5 corresponding to the short cuts Y-123 or Y-211."
+                  ]
+                },
+                {
+                  "description": "Bi-Sr-Ca-Cu-O",
+                  "target": [
+                    "In patent literature this abbreviation is used for the general substance group, which includes e.g. the compounds Bi2Sr2Ca2Cu3Ox or Bi2Sr2Ca1Cu2Ox corresponding to the short cuts Bi-2223 or Bi-2212."
+                  ]
+                },
+                {
+                  "description": "Hg-Ba-Ca-Cu-O",
+                  "target": [
+                    "In patent literature this abbreviation is used for the general substance group, which includes e.g. the compound Hg1Ba2Ca2Cu3Ox corresponding to the short cut Hg-1223."
+                  ]
+                },
+                {
+                  "description": "Tl-Sr-Ca-Cu-O",
+                  "target": [
+                    "In patent literature this abbreviation is used for the general substance group, which includes e.g. the compound Tl2Sr2Ca2Cu3Ox corresponding to the short cut Tl-2223."
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "Isotope delivery system",
+                  "target": [
+                    "\"Generator\", \"cow\", ion exchange column."
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "titleFull": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Draw bars, including elements ...",
+              "Layers interlocking by means o...",
+              "Piercing elements stocked in t...",
+              "Simultaneous elimination of th...",
+              "Weighing mechanism control arr..."
+            ],
+            "type": "string"
+          },
+          "titlePart": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 3,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "Draw bars, including elements attached to it, e.g. sliding shoes, gripping elements or pull cords"
+              ],
+              [
+                "Layers interlocking by means of protrusions or inserts, lattices or the like"
+              ],
+              [
+                "Piercing elements stocked in the form of a stack or pile"
+              ],
+              [
+                "characterised by a specific catalyst"
+              ],
+              [
+                "wherein the main feed is effected by gravity from a hopper or chute"
+              ]
+            ],
+            "type": "array"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cpc_definition::100627",
+                  "cpc_definition::120936",
+                  "cpc_definition::136989",
+                  "cpc_definition::137129",
+                  "cpc_definition::137952"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cpc_definition::100627"
+              },
+              {
+                "id": "cpc_definition::120936"
+              },
+              {
+                "id": "cpc_definition::136989"
+              },
+              {
+                "id": "cpc_definition::137129"
+              },
+              {
+                "id": "cpc_definition::137952"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [],
+      "children": [],
+      "dateRevised": 20130101,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "A47J37/08",
+      "level": 11,
+      "limitingReferences": [],
+      "notAllocatable": false,
+      "parents": [
+        "A47J37/0814",
+        "A47J37/08",
+        "A47J37/06",
+        "A47J37/00",
+        "A47J",
+        "A47",
+        "A"
+      ],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "A47J37/0821",
+      "synonyms": [],
+      "titleFull": "Bread-toasters with automatic bread ejection or timing means with mechanical clockwork timers",
+      "titlePart": [
+        "with mechanical clockwork timers"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [],
+      "children": [],
+      "dateRevised": 20130101,
+      "definition": [
+        "Arrangements to chop or mince food particles and control methods therefor."
+      ],
+      "glossary": [],
+      "informativeReferences": [
+        {
+          "description": "Disintegrating by knives or other cutting or tearing members which chop material into fragments",
+          "target": [
+            "B02C18/00"
+          ]
+        },
+        {
+          "description": "Specially adapted for disintegrating garbage, waste or sewage",
+          "target": [
+            "B02C18/0084"
+          ]
+        },
+        {
+          "description": "For waste water or for garbage",
+          "target": [
+            "B02C18/0092"
+          ]
+        }
+      ],
+      "ipcConcordant": "A47L15/42",
+      "level": 11,
+      "limitingReferences": [],
+      "notAllocatable": false,
+      "parents": [
+        "A47L15/4225",
+        "A47L15/4214",
+        "A47L15/42",
+        "A47L15/00",
+        "A47L",
+        "A47",
+        "A"
+      ],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "A47L15/4227",
+      "synonyms": [],
+      "titleFull": "Arrangements or adaption of recirculation or discharge pumps with macerator arrangements for chopping entrained food particles",
+      "titlePart": [
+        "with macerator arrangements for chopping entrained food particles"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [],
+      "children": [],
+      "dateRevised": 20130101,
+      "definition": [
+        "Illustrative example of subject matter classified in"
+      ],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "A61B17/3207",
+      "level": 11,
+      "limitingReferences": [],
+      "notAllocatable": false,
+      "parents": [
+        "A61B17/3207",
+        "A61B17/3205",
+        "A61B17/32",
+        "A61B17/00",
+        "A61B",
+        "A61",
+        "A"
+      ],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [
+        {
+          "description": "",
+          "target": [
+            "A61B17/32075"
+          ]
+        }
+      ],
+      "status": "published",
+      "symbol": "A61B17/32075",
+      "synonyms": [],
+      "titleFull": "Pullback cutting; combined forward and pullback cutting, e.g. with cutters at both sides of the plaque",
+      "titlePart": [
+        "Pullback cutting; combined forward and pullback cutting, e.g. with cutters at both sides of the plaque"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [],
+      "children": [],
+      "dateRevised": 20160201,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [
+        {
+          "description": "Packages or dispensers for sharps",
+          "target": [
+            "A61B50/3001"
+          ]
+        }
+      ],
+      "ipcConcordant": "A61B17/3215",
+      "level": 11,
+      "limitingReferences": [],
+      "notAllocatable": false,
+      "parents": [
+        "A61B17/3211",
+        "A61B17/3209",
+        "A61B17/32",
+        "A61B17/00",
+        "A61B",
+        "A61",
+        "A"
+      ],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "A61B17/3215",
+      "synonyms": [],
+      "titleFull": "Packages or dispensers for scalpel blades",
+      "titlePart": [
+        "Packages or dispensers for scalpel blades"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [],
+      "children": [],
+      "dateRevised": 20130101,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "A61K31/7036",
+      "level": 11,
+      "limitingReferences": [],
+      "notAllocatable": false,
+      "parents": [
+        "A61K31/7034",
+        "A61K31/7028",
+        "A61K31/70",
+        "A61K31/00",
+        "A61K",
+        "A61",
+        "A"
+      ],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "A61K31/7036",
+      "synonyms": [],
+      "titleFull": "Compounds having saccharide radicals attached to non-saccharide compounds by glycosidic linkages attached to a carbocyclic compound, e.g. phloridzin having at least one amino group directly attached to the carbocyclic ring, e.g. streptomycin, gentamycin, amikacin, validamycin, fortimicins",
+      "titlePart": [
+        "having at least one amino group directly attached to the carbocyclic ring, e.g. streptomycin, gentamycin, amikacin, validamycin, fortimicins"
+      ]
+    }
+  ]
+}

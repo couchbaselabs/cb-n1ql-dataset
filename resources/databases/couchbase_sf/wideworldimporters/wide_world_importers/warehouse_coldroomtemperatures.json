@@ -1,0 +1,145 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 4,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`RecordedWhen` = 1464739164000000, `ValidFrom` = 1464739164000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "ColdRoomSensorNumber": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "ColdRoomTemperatureID": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3654737,
+              3654738,
+              3654739,
+              3654740
+            ],
+            "type": "number"
+          },
+          "RecordedWhen": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1464739164000000
+            ],
+            "type": "number"
+          },
+          "Temperature": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              3.58,
+              3.72,
+              4.7
+            ],
+            "type": "number"
+          },
+          "ValidFrom": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1464739164000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 4,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_coldroomtemperatures...",
+                  "warehouse_coldroomtemperatures...",
+                  "warehouse_coldroomtemperatures...",
+                  "warehouse_coldroomtemperatures..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_coldroomtemperatures::0"
+              },
+              {
+                "id": "warehouse_coldroomtemperatures::1"
+              },
+              {
+                "id": "warehouse_coldroomtemperatures::2"
+              },
+              {
+                "id": "warehouse_coldroomtemperatures::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ColdRoomSensorNumber": 4,
+      "ColdRoomTemperatureID": 3654740,
+      "RecordedWhen": 1464739164000000,
+      "Temperature": 3.58,
+      "ValidFrom": 1464739164000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "ColdRoomSensorNumber": 1,
+      "ColdRoomTemperatureID": 3654737,
+      "RecordedWhen": 1464739164000000,
+      "Temperature": 3.72,
+      "ValidFrom": 1464739164000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "ColdRoomSensorNumber": 3,
+      "ColdRoomTemperatureID": 3654739,
+      "RecordedWhen": 1464739164000000,
+      "Temperature": 3,
+      "ValidFrom": 1464739164000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "ColdRoomSensorNumber": 2,
+      "ColdRoomTemperatureID": 3654738,
+      "RecordedWhen": 1464739164000000,
+      "Temperature": 4.7,
+      "ValidFrom": 1464739164000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

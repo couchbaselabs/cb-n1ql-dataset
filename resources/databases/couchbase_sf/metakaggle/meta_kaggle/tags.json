@@ -1,0 +1,226 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CompetitionCount": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14,
+              15,
+              20,
+              28,
+              30
+            ],
+            "type": "number"
+          },
+          "DatasetCount": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              846,
+              1870,
+              4079,
+              6741,
+              8103
+            ],
+            "type": "number"
+          },
+          "Description": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Basketball is one of the world...",
+              "Research is our endeavor to sy...",
+              "The sports tag covers the whol...",
+              "This tag is your digital libra...",
+              "Video games were originally cr..."
+            ],
+            "type": "string"
+          },
+          "FullPath": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "subject > arts and entertainme...",
+              "subject > culture and humaniti...",
+              "subject > health and fitness >...",
+              "subject > health and fitness >...",
+              "subject > science and technolo..."
+            ],
+            "type": "string"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1219,
+              2206,
+              2507,
+              2606,
+              4141
+            ],
+            "type": "number"
+          },
+          "KernelCount": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              370,
+              466,
+              662,
+              3505,
+              3889
+            ],
+            "type": "number"
+          },
+          "Name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "basketball",
+              "literature",
+              "research",
+              "sports",
+              "video games"
+            ],
+            "type": "string"
+          },
+          "ParentTagId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2200,
+              2500,
+              4130,
+              4141,
+              12000
+            ],
+            "type": "number"
+          },
+          "Slug": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "basketball",
+              "literature",
+              "research",
+              "sports",
+              "video-games"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "tags::0",
+                  "tags::1",
+                  "tags::2",
+                  "tags::3",
+                  "tags::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "tags::0"
+              },
+              {
+                "id": "tags::1"
+              },
+              {
+                "id": "tags::2"
+              },
+              {
+                "id": "tags::3"
+              },
+              {
+                "id": "tags::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CompetitionCount": 30,
+      "DatasetCount": 6741,
+      "Description": "Video games were originally created to prevent people from going to college and getting good jobs. That back-fired and now we have data centers full of GPUs training models to tell the difference between cats and dogs. All thanks to gamers.",
+      "FullPath": "subject > culture and humanities > games > video games",
+      "Id": 2507,
+      "KernelCount": 3889,
+      "Name": "video games",
+      "ParentTagId": 2500,
+      "Slug": "video-games"
+    },
+    {
+      "CompetitionCount": 20,
+      "DatasetCount": 1870,
+      "Description": "Basketball is one of the world's most popular and widely viewed sports. Analyze Kobe Bryant's shot selections and peruse our annual March Mania competitions.",
+      "FullPath": "subject > health and fitness > exercise > sports > basketball",
+      "Id": 2606,
+      "KernelCount": 662,
+      "Name": "basketball",
+      "ParentTagId": 4141,
+      "Slug": "basketball"
+    },
+    {
+      "CompetitionCount": 14,
+      "DatasetCount": 4079,
+      "Description": "This tag is your digital library for varius copora such as Southern Literature, Paranormal Romance novels, and Urban Dictionary spelling variations.",
+      "FullPath": "subject > arts and entertainment > literature",
+      "Id": 2206,
+      "KernelCount": 466,
+      "Name": "literature",
+      "ParentTagId": 2200,
+      "Slug": "literature"
+    },
+    {
+      "CompetitionCount": 28,
+      "DatasetCount": 8103,
+      "Description": "The sports tag covers the whole spectrum of sports around the world. We've got tennis, we've got football, and we've even got kitefoil racing.",
+      "FullPath": "subject > health and fitness > exercise > sports",
+      "Id": 4141,
+      "KernelCount": 3505,
+      "Name": "sports",
+      "ParentTagId": 4130,
+      "Slug": "sports"
+    },
+    {
+      "CompetitionCount": 15,
+      "DatasetCount": 846,
+      "Description": "Research is our endeavor to systematically increase our knowledge about the world. Whether it's undertaken by greats like Einstein or underpaid graduate students, you'll find the fruits of their labor in this tag plus the kernels that make their work reproducible.",
+      "FullPath": "subject > science and technology > research",
+      "Id": 1219,
+      "KernelCount": 370,
+      "Name": "research",
+      "ParentTagId": 12000,
+      "Slug": "research"
+    }
+  ]
+}

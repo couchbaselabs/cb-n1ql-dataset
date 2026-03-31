@@ -1,0 +1,182 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`court_code` = \"azd\", `court_name` = \"Arizona District Court\"",
+        "properties": {
+          "case_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Astaris LLC v. Fire-Trol Holdi...",
+              "Cirone v. Sinclair & Rush",
+              "Crafco Inc v. Sealmaster Ind I...",
+              "PAR Technologies Inc v. Philip...",
+              "Palestrant, et al v. O'Brien, ..."
+            ],
+            "type": "string"
+          },
+          "case_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2:2000-cv-01538",
+              "2:2001-cv-01273",
+              "2:2001-cv-01857",
+              "2:2002-cv-01970",
+              "2:2003-cv-01468"
+            ],
+            "type": "string"
+          },
+          "court_code": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "azd"
+            ],
+            "type": "string"
+          },
+          "court_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Arizona District Court"
+            ],
+            "type": "string"
+          },
+          "date_closed": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "01/06/2006",
+              "01/09/2002",
+              "03/02/2001",
+              "05/14/2002",
+              "12/11/2002"
+            ],
+            "type": "string"
+          },
+          "date_filed": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2000-08-10",
+              "2001-07-09",
+              "2001-09-28",
+              "2002-10-07",
+              "2003-07-30"
+            ],
+            "type": "string"
+          },
+          "pacer_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "13166",
+              "13699",
+              "23753",
+              "34568",
+              "3939"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pacer_cases_2015::0",
+                  "pacer_cases_2015::1",
+                  "pacer_cases_2015::2",
+                  "pacer_cases_2015::3",
+                  "pacer_cases_2015::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pacer_cases_2015::0"
+              },
+              {
+                "id": "pacer_cases_2015::1"
+              },
+              {
+                "id": "pacer_cases_2015::2"
+              },
+              {
+                "id": "pacer_cases_2015::3"
+              },
+              {
+                "id": "pacer_cases_2015::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "case_name": "Crafco Inc v. Sealmaster Ind Inc",
+      "case_number": "2:2000-cv-01538",
+      "court_code": "azd",
+      "court_name": "Arizona District Court",
+      "date_closed": "03/02/2001",
+      "date_filed": "2000-08-10",
+      "pacer_id": "3939"
+    },
+    {
+      "case_name": "PAR Technologies Inc v. Philips Elec N Amer, et al",
+      "case_number": "2:2001-cv-01273",
+      "court_code": "azd",
+      "court_name": "Arizona District Court",
+      "date_closed": "01/09/2002",
+      "date_filed": "2001-07-09",
+      "pacer_id": "13166"
+    },
+    {
+      "case_name": "Cirone v. Sinclair & Rush",
+      "case_number": "2:2001-cv-01857",
+      "court_code": "azd",
+      "court_name": "Arizona District Court",
+      "date_closed": "05/14/2002",
+      "date_filed": "2001-09-28",
+      "pacer_id": "13699"
+    },
+    {
+      "case_name": "Palestrant, et al v. O'Brien, et al",
+      "case_number": "2:2002-cv-01970",
+      "court_code": "azd",
+      "court_name": "Arizona District Court",
+      "date_closed": "12/11/2002",
+      "date_filed": "2002-10-07",
+      "pacer_id": "23753"
+    },
+    {
+      "case_name": "Astaris LLC v. Fire-Trol Holdings",
+      "case_number": "2:2003-cv-01468",
+      "court_code": "azd",
+      "court_name": "Arizona District Court",
+      "date_closed": "01/06/2006",
+      "date_filed": "2003-07-30",
+      "pacer_id": "34568"
+    }
+  ]
+}

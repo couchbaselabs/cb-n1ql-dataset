@@ -1,0 +1,159 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`block_event_type` = \"begin\"",
+        "properties": {
+          "attributes": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "block_event_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "begin"
+            ],
+            "type": "string"
+          },
+          "block_height": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4560826,
+              4560830,
+              4561369
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-03-29T22:59:30.7985516Z",
+              "2021-03-29T22:59:43.7732523Z",
+              "2021-03-29T23:27:14.111869Z"
+            ],
+            "type": "string"
+          },
+          "block_timestamp_truncated": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1617058770798551,
+              1617058783773252,
+              1617060434111869
+            ],
+            "type": "number"
+          },
+          "event_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "mint",
+              "proposer_reward"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "block_events::0",
+                  "block_events::1",
+                  "block_events::2",
+                  "block_events::3",
+                  "block_events::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "block_events::0"
+              },
+              {
+                "id": "block_events::1"
+              },
+              {
+                "id": "block_events::2"
+              },
+              {
+                "id": "block_events::3"
+              },
+              {
+                "id": "block_events::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "attributes": [],
+      "block_event_type": "begin",
+      "block_height": 4561369,
+      "block_timestamp": "2021-03-29T23:27:14.111869Z",
+      "block_timestamp_truncated": 1617060434111869,
+      "event_type": "mint"
+    },
+    {
+      "attributes": [],
+      "block_event_type": "begin",
+      "block_height": 4560826,
+      "block_timestamp": "2021-03-29T22:59:30.7985516Z",
+      "block_timestamp_truncated": 1617058770798551,
+      "event_type": "proposer_reward"
+    },
+    {
+      "attributes": [],
+      "block_event_type": "begin",
+      "block_height": 4560826,
+      "block_timestamp": "2021-03-29T22:59:30.7985516Z",
+      "block_timestamp_truncated": 1617058770798551,
+      "event_type": "mint"
+    },
+    {
+      "attributes": [],
+      "block_event_type": "begin",
+      "block_height": 4561369,
+      "block_timestamp": "2021-03-29T23:27:14.111869Z",
+      "block_timestamp_truncated": 1617060434111869,
+      "event_type": "proposer_reward"
+    },
+    {
+      "attributes": [],
+      "block_event_type": "begin",
+      "block_height": 4560830,
+      "block_timestamp": "2021-03-29T22:59:43.7732523Z",
+      "block_timestamp_truncated": 1617058783773252,
+      "event_type": "mint"
+    }
+  ]
+}

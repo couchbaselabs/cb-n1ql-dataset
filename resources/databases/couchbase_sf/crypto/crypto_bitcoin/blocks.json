@@ -1,0 +1,298 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "bits": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1705c739",
+              "17079e15",
+              "1707a812",
+              "170a8bb4",
+              "1807a114"
+            ],
+            "type": "string"
+          },
+          "coinbase_param": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "033cac0b1b4d696e65642062792041...",
+              "0345020c2cfabe6d6dba3297862bfd...",
+              "0353060b1062696e616e63652fff00...",
+              "0377110604abe1ba560903a001281e...",
+              "03c0000c04f5ac44642f466f756e64..."
+            ],
+            "type": "string"
+          },
+          "hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "00000000000000000000de3360998b...",
+              "0000000000000000000147abd08693...",
+              "00000000000000000001caeebb3edc...",
+              "00000000000000000004700f4664c2...",
+              "0000000000000000017ae9af881913..."
+            ],
+            "type": "string"
+          },
+          "merkle_root": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3870d6ea5015f488cc4891998bdd8d...",
+              "4945f0f34ad3f65d990c4558cc3764...",
+              "535ee950d8dbdb42be0a6969815bed...",
+              "87a1b1a1334696e4fd7f123d769b19...",
+              "fab27674705fd7c67868a55c83964d..."
+            ],
+            "type": "string"
+          },
+          "nonce": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3b65c428",
+              "4175d169",
+              "4b5b8d68",
+              "db556e5c",
+              "fd250137"
+            ],
+            "type": "string"
+          },
+          "number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              397687,
+              722515,
+              764988,
+              786624,
+              787013
+            ],
+            "type": "number"
+          },
+          "size": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              716307,
+              1307929,
+              1480408,
+              1589630,
+              1850426
+            ],
+            "type": "number"
+          },
+          "stripped_size": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              714354,
+              716307,
+              801320,
+              837545,
+              896566
+            ],
+            "type": "number"
+          },
+          "timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1455088043000000,
+              1644432943000000,
+              1669613140000000,
+              1682222325000000,
+              1682468241000000
+            ],
+            "type": "number"
+          },
+          "timestamp_month": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-02-01",
+              "2017-07-01",
+              "2022-02-01",
+              "2022-11-01",
+              "2023-04-01"
+            ],
+            "type": "string"
+          },
+          "transaction_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              937,
+              1653,
+              1674,
+              1867,
+              3133
+            ],
+            "type": "number"
+          },
+          "version": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              536870912,
+              543162368,
+              547356672,
+              705093632
+            ],
+            "type": "number"
+          },
+          "weight": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2865228,
+              3993043,
+              3993488,
+              3993590,
+              3997627
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "blocks::110194",
+                  "blocks::209918",
+                  "blocks::243443",
+                  "blocks::243696",
+                  "blocks::256755"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "blocks::110194"
+              },
+              {
+                "id": "blocks::209918"
+              },
+              {
+                "id": "blocks::243443"
+              },
+              {
+                "id": "blocks::243696"
+              },
+              {
+                "id": "blocks::256755"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "bits": "1806a4c3",
+      "coinbase_param": "03d22b06194b6e434d696e657242322d5031167fe8b6bd80875556f713bb7c0600004badf601",
+      "hash": "0000000000000000006c830c32723144fcadefefe1b3127c8e33ac3b0f0ebfbb",
+      "merkle_root": "d34643b673a524d6a348d5ace38c3cc86358962d70c60ea4fec4ca752075c0a8",
+      "nonce": "b73d0eb3",
+      "number": 404434,
+      "size": 651670,
+      "stripped_size": 651670,
+      "timestamp": 1459032901000000,
+      "timestamp_month": "2016-03-01",
+      "transaction_count": 1493,
+      "version": 805306368,
+      "weight": 2606680
+    },
+    {
+      "bits": "1806a4c3",
+      "coinbase_param": "037f2c061a4b6e434d696e6572422d50326a20fa2afef2a5ff56f8a6a305e1be080000ba940901",
+      "hash": "0000000000000000037ff4b397361f95699ee71b82f3007650b37303462efc73",
+      "merkle_root": "52dc8f300b8f0bec9eff5543c706e881043f1121b3154765177d8b893eab6cba",
+      "nonce": "e991b818",
+      "number": 404607,
+      "size": 663282,
+      "stripped_size": 663282,
+      "timestamp": 1459136009000000,
+      "timestamp_month": "2016-03-01",
+      "transaction_count": 1307,
+      "version": 805306368,
+      "weight": 2653128
+    },
+    {
+      "bits": "1806a4c3",
+      "coinbase_param": "03ab2d06fabe6d6d12eaed8dcadc9c0af2b9eb019c24c5d3d4d776add02d04cf31d5cef4e360691501000000000000000165040028521a245df60a3aa9032f736c7573682f",
+      "hash": "000000000000000000f49944ffc97ef22ca0820e922977d65ed89344f8c3fecd",
+      "merkle_root": "2f313071426d354a17b5ada85537c320fd0d08ca777fd9b115080a1621a1dec9",
+      "nonce": "4020d5b3",
+      "number": 404907,
+      "size": 871981,
+      "stripped_size": 871981,
+      "timestamp": 1459295961000000,
+      "timestamp_month": "2016-03-01",
+      "transaction_count": 633,
+      "version": 805306368,
+      "weight": 3487924
+    },
+    {
+      "bits": "1806b99f",
+      "coinbase_param": "038919062a4b6e434d696e6572422d50312f4256383030303030302f4249503130302f5436cbf622ad54ab56ccc4ea80040000b7a2b800",
+      "hash": "0000000000000000030eab568d2488cebb18894361f5e9895c94c0b0af9deee8",
+      "merkle_root": "25d3619f62e73450133e73a39dd014bce52b87447f09d57026e894177c8c6edc",
+      "nonce": "1cac8ec3",
+      "number": 399753,
+      "size": 934594,
+      "stripped_size": 934594,
+      "timestamp": 1456260207000000,
+      "timestamp_month": "2016-02-01",
+      "transaction_count": 2218,
+      "version": 805306368,
+      "weight": 3738376
+    },
+    {
+      "bits": "1806b99f",
+      "coinbase_param": "033d1b061a4b6e434d696e657242332d50318a8fbf63a4ecc77256d0edd7016e040000c2538900",
+      "hash": "000000000000000004e721379fe43e45e065688db0e16318a213593d8ea81421",
+      "merkle_root": "6f44b2ab0be1a0b578debd88360c630423140016bb2544ee3210f7b7903c5965",
+      "nonce": "23833e40",
+      "number": 400189,
+      "size": 934580,
+      "stripped_size": 934580,
+      "timestamp": 1456532833000000,
+      "timestamp_month": "2016-02-01",
+      "transaction_count": 2274,
+      "version": 805306368,
+      "weight": 3738320
+    }
+  ]
+}

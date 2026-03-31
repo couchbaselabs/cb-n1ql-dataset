@@ -1,0 +1,103 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `ValidFrom` = 1356998400000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "BuyingGroupID": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "BuyingGroupName": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Tailspin Toys",
+              "Wingtip Toys"
+            ],
+            "type": "string"
+          },
+          "LastEditedBy": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "ValidFrom": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_buyinggroups::0",
+                  "sales_buyinggroups::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_buyinggroups::0"
+              },
+              {
+                "id": "sales_buyinggroups::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BuyingGroupID": 1,
+      "BuyingGroupName": "Tailspin Toys",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "BuyingGroupID": 2,
+      "BuyingGroupName": "Wingtip Toys",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

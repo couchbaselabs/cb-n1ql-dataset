@@ -1,0 +1,345 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`IsProjectLanguageTemplate` = false, `MadePublicDate` = \"2022-07-27\", `TotalComments` = 0, `TotalVotes` = 0",
+        "properties": {
+          "AuthorUserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              381993,
+              6152691,
+              8146404,
+              10127384
+            ],
+            "type": "number"
+          },
+          "CreationDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1649550567000000,
+              1650730698000000,
+              1650848300000000,
+              1650970141000000,
+              1653396159000000
+            ],
+            "type": "number"
+          },
+          "CurrentKernelVersionId": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                92866910,
+                93916784,
+                101880531
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "CurrentUrlSlug": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "bellabeat-case-study-google-ca...",
+              "call-analyzer-backend",
+              "exercise-your-first-machine-le...",
+              "nba-basketball-scrape-public",
+              "nba-born-map"
+            ],
+            "type": "string"
+          },
+          "EvaluationDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2022-04-13",
+              "2022-04-25",
+              "2022-07-27",
+              "2023-02-16"
+            ],
+            "type": "string"
+          },
+          "FirstKernelVersionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              92577284,
+              93809482,
+              93915812,
+              94047230,
+              96456530
+            ],
+            "type": "number"
+          },
+          "ForkParentKernelVersionId": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                74377666,
+                87319253
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "ForumTopicId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              26139410,
+              26504466,
+              26537250,
+              26577620,
+              27323973
+            ],
+            "type": "number"
+          },
+          "IsProjectLanguageTemplate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "MadePublicDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2022-07-27"
+            ],
+            "type": "string"
+          },
+          "Medal": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "MedalAwardDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TotalComments": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "TotalViews": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              36,
+              37,
+              40,
+              78,
+              84
+            ],
+            "type": "number"
+          },
+          "TotalVotes": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "kernels::0",
+                  "kernels::1",
+                  "kernels::2",
+                  "kernels::3",
+                  "kernels::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "kernels::0"
+              },
+              {
+                "id": "kernels::1"
+              },
+              {
+                "id": "kernels::2"
+              },
+              {
+                "id": "kernels::3"
+              },
+              {
+                "id": "kernels::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AuthorUserId": 10127384,
+      "CreationDate": 1650730698000000,
+      "CurrentKernelVersionId": null,
+      "CurrentUrlSlug": "call-analyzer-backend",
+      "EvaluationDate": "2023-02-16",
+      "FirstKernelVersionId": 93809482,
+      "ForkParentKernelVersionId": 74377666,
+      "ForumTopicId": null,
+      "Id": 26504466,
+      "IsProjectLanguageTemplate": false,
+      "MadePublicDate": "2022-07-27",
+      "Medal": null,
+      "MedalAwardDate": null,
+      "TotalComments": 0,
+      "TotalViews": 36,
+      "TotalVotes": 0
+    },
+    {
+      "AuthorUserId": 381993,
+      "CreationDate": 1650848300000000,
+      "CurrentKernelVersionId": 93916784,
+      "CurrentUrlSlug": "nba-basketball-scrape-public",
+      "EvaluationDate": "2022-04-25",
+      "FirstKernelVersionId": 93915812,
+      "ForkParentKernelVersionId": null,
+      "ForumTopicId": null,
+      "Id": 26537250,
+      "IsProjectLanguageTemplate": false,
+      "MadePublicDate": "2022-07-27",
+      "Medal": null,
+      "MedalAwardDate": null,
+      "TotalComments": 0,
+      "TotalViews": 78,
+      "TotalVotes": 0
+    },
+    {
+      "AuthorUserId": 6152691,
+      "CreationDate": 1650970141000000,
+      "CurrentKernelVersionId": 101880531,
+      "CurrentUrlSlug": "exercise-your-first-machine-learning-model",
+      "EvaluationDate": "2022-07-27",
+      "FirstKernelVersionId": 94047230,
+      "ForkParentKernelVersionId": 87319253,
+      "ForumTopicId": null,
+      "Id": 26577620,
+      "IsProjectLanguageTemplate": false,
+      "MadePublicDate": "2022-07-27",
+      "Medal": null,
+      "MedalAwardDate": null,
+      "TotalComments": 0,
+      "TotalViews": 37,
+      "TotalVotes": 0
+    },
+    {
+      "AuthorUserId": 381993,
+      "CreationDate": 1649550567000000,
+      "CurrentKernelVersionId": 92866910,
+      "CurrentUrlSlug": "nba-born-map",
+      "EvaluationDate": "2022-04-13",
+      "FirstKernelVersionId": 92577284,
+      "ForkParentKernelVersionId": null,
+      "ForumTopicId": null,
+      "Id": 26139410,
+      "IsProjectLanguageTemplate": false,
+      "MadePublicDate": "2022-07-27",
+      "Medal": null,
+      "MedalAwardDate": null,
+      "TotalComments": 0,
+      "TotalViews": 84,
+      "TotalVotes": 0
+    },
+    {
+      "AuthorUserId": 8146404,
+      "CreationDate": 1653396159000000,
+      "CurrentKernelVersionId": null,
+      "CurrentUrlSlug": "bellabeat-case-study-google-capstone-project",
+      "EvaluationDate": "2022-07-27",
+      "FirstKernelVersionId": 96456530,
+      "ForkParentKernelVersionId": null,
+      "ForumTopicId": null,
+      "Id": 27323973,
+      "IsProjectLanguageTemplate": false,
+      "MadePublicDate": "2022-07-27",
+      "Medal": null,
+      "MedalAwardDate": null,
+      "TotalComments": 0,
+      "TotalViews": 40,
+      "TotalVotes": 0
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`pub_no` = \"\"",
+        "properties": {
+          "pat_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3930271",
+              "3930272",
+              "3930273",
+              "3930274",
+              "3930275"
+            ],
+            "type": "string"
+          },
+          "pub_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              ""
+            ],
+            "type": "string"
+          },
+          "publication_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "US-3930271-A",
+              "US-3930272-A",
+              "US-3930273-A",
+              "US-3930274-A",
+              "US-3930275-A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "match_2014::0",
+                  "match_2014::1",
+                  "match_2014::2",
+                  "match_2014::3",
+                  "match_2014::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "match_2014::0"
+              },
+              {
+                "id": "match_2014::1"
+              },
+              {
+                "id": "match_2014::2"
+              },
+              {
+                "id": "match_2014::3"
+              },
+              {
+                "id": "match_2014::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "pat_no": "3930271",
+      "pub_no": "",
+      "publication_number": "US-3930271-A"
+    },
+    {
+      "pat_no": "3930273",
+      "pub_no": "",
+      "publication_number": "US-3930273-A"
+    },
+    {
+      "pat_no": "3930274",
+      "pub_no": "",
+      "publication_number": "US-3930274-A"
+    },
+    {
+      "pat_no": "3930272",
+      "pub_no": "",
+      "publication_number": "US-3930272-A"
+    },
+    {
+      "pat_no": "3930275",
+      "pub_no": "",
+      "publication_number": "US-3930275-A"
+    }
+  ]
+}

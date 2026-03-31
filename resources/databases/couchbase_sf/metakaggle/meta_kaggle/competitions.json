@@ -1,0 +1,727 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`BanTeamMergers` = true, `CanQualifyTiers` = false, `CompetitionTypeId` = 1, `EnableSubmissionModelAttachments` = false, `EnableSubmissionModelHashes` = false, `EnableTeamModels` = false, `EvaluationAlgorithmAbbreviation` = \"RMSE\", `EvaluationAlgorithmDescription` = \"Square root of the average of t...\", `EvaluationAlgorithmIsMax` = false, `EvaluationAlgorithmName` = \"Root Mean Squared Error\", `FinalLeaderboardHasBeenVerified` = true, `HasLeaderboard` = true, `HostSegmentTitle` = \"Community\", `MaxTeamSize` = 1...",
+        "properties": {
+          "BanTeamMergers": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              true
+            ],
+            "type": "boolean"
+          },
+          "CanQualifyTiers": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "CompetitionTypeId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "DeadlineDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1420070340000000,
+              1451606340000000,
+              1479772740000000,
+              1523933940000000,
+              1646265540000000
+            ],
+            "type": "number"
+          },
+          "EnableSubmissionModelAttachments": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "EnableSubmissionModelHashes": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "EnableTeamModels": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "EnabledDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1415805646000000,
+              1447716414000000,
+              1477443498000000,
+              1521473690000000,
+              1641755431000000
+            ],
+            "type": "number"
+          },
+          "EvaluationAlgorithmAbbreviation": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "RMSE"
+            ],
+            "type": "string"
+          },
+          "EvaluationAlgorithmDescription": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Square root of the average of ..."
+            ],
+            "type": "string"
+          },
+          "EvaluationAlgorithmIsMax": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "EvaluationAlgorithmName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Root Mean Squared Error"
+            ],
+            "type": "string"
+          },
+          "FinalLeaderboardHasBeenVerified": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              true
+            ],
+            "type": "boolean"
+          },
+          "ForumId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              540,
+              923,
+              1782,
+              25077,
+              1874775
+            ],
+            "type": "number"
+          },
+          "HasKernels": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "HasLeaderboard": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              true
+            ],
+            "type": "boolean"
+          },
+          "HostName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "HostSegmentTitle": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Community"
+            ],
+            "type": "string"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4107,
+              4758,
+              5586,
+              8933,
+              33697
+            ],
+            "type": "number"
+          },
+          "LeaderboardPercentage": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30,
+              48,
+              50,
+              100
+            ],
+            "type": "number"
+          },
+          "MaxDailySubmissions": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7,
+              25,
+              1000,
+              1440
+            ],
+            "type": "number"
+          },
+          "MaxTeamSize": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "ModelSubmissionDeadlineDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "NumPrizes": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "NumScoredSubmissions": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "OnlyAllowKernelSubmissions": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "OrganizationId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ProhibitNewEntrantsDeadlineDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "RewardQuantity": {
+            "#docs": [
+              2,
+              3
+            ],
+            "%docs": [
+              40,
+              60
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "RewardType": {
+            "#docs": [
+              3,
+              2
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Knowledge"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ScoreTruncationNumDecimals": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5
+            ],
+            "type": "number"
+          },
+          "Slug": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "enkaaiclubcompetition",
+              "itmo-year2011-ml-recsys-track-...",
+              "itmo-year2012-ml-recsys-track-...",
+              "recsys-20181-cfmr",
+              "wustl-t81-558-washu-deep-learn..."
+            ],
+            "type": "string"
+          },
+          "Subtitle": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Created for ENKA Schools AI Cl...",
+              "Predict users' ratings for mov...",
+              "Regression problem with 7 inpu...",
+              "\u0417\u0430\u0434\u0430\u0447\u0430 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435..."
+            ],
+            "type": "string"
+          },
+          "TeamMergerDeadlineDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TeamModelDeadlineDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Title": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Applications of Deep Learning ...",
+              "Enka AI Club Competition",
+              "ITMO year2011 ML RecSys (track...",
+              "ITMO year2012 ML RecSys (track...",
+              "RecSys 2018/1: Collaborative M..."
+            ],
+            "type": "string"
+          },
+          "TotalCompetitors": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              19,
+              20,
+              27,
+              35
+            ],
+            "type": "number"
+          },
+          "TotalSubmissions": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              117,
+              139,
+              221,
+              734
+            ],
+            "type": "number"
+          },
+          "TotalTeams": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              14,
+              16,
+              24,
+              27
+            ],
+            "type": "number"
+          },
+          "UserRankMultiplier": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "ValidationSetName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ValidationSetValue": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "competitions::0",
+                  "competitions::1",
+                  "competitions::2",
+                  "competitions::3",
+                  "competitions::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "competitions::0"
+              },
+              {
+                "id": "competitions::1"
+              },
+              {
+                "id": "competitions::2"
+              },
+              {
+                "id": "competitions::3"
+              },
+              {
+                "id": "competitions::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BanTeamMergers": true,
+      "CanQualifyTiers": false,
+      "CompetitionTypeId": 1,
+      "DeadlineDate": 1523933940000000,
+      "EnableSubmissionModelAttachments": false,
+      "EnableSubmissionModelHashes": false,
+      "EnableTeamModels": false,
+      "EnabledDate": 1521473690000000,
+      "EvaluationAlgorithmAbbreviation": "RMSE",
+      "EvaluationAlgorithmDescription": "Square root of the average of the squared errors.",
+      "EvaluationAlgorithmIsMax": false,
+      "EvaluationAlgorithmName": "Root Mean Squared Error",
+      "FinalLeaderboardHasBeenVerified": true,
+      "ForumId": 25077,
+      "HasKernels": true,
+      "HasLeaderboard": true,
+      "HostName": null,
+      "HostSegmentTitle": "Community",
+      "Id": 8933,
+      "LeaderboardPercentage": 48,
+      "MaxDailySubmissions": 1000,
+      "MaxTeamSize": 1,
+      "ModelSubmissionDeadlineDate": null,
+      "NumPrizes": 0,
+      "NumScoredSubmissions": 2,
+      "OnlyAllowKernelSubmissions": false,
+      "OrganizationId": null,
+      "ProhibitNewEntrantsDeadlineDate": null,
+      "RewardQuantity": 0,
+      "RewardType": null,
+      "ScoreTruncationNumDecimals": 5,
+      "Slug": "recsys-20181-cfmr",
+      "Subtitle": "Predict users' ratings for movies",
+      "TeamMergerDeadlineDate": null,
+      "TeamModelDeadlineDate": null,
+      "Title": "RecSys 2018/1: Collaborative Movie Recommendation",
+      "TotalCompetitors": 27,
+      "TotalSubmissions": 734,
+      "TotalTeams": 27,
+      "UserRankMultiplier": 0,
+      "ValidationSetName": null,
+      "ValidationSetValue": null
+    },
+    {
+      "BanTeamMergers": true,
+      "CanQualifyTiers": false,
+      "CompetitionTypeId": 1,
+      "DeadlineDate": 1451606340000000,
+      "EnableSubmissionModelAttachments": false,
+      "EnableSubmissionModelHashes": false,
+      "EnableTeamModels": false,
+      "EnabledDate": 1447716414000000,
+      "EvaluationAlgorithmAbbreviation": "RMSE",
+      "EvaluationAlgorithmDescription": "Square root of the average of the squared errors.",
+      "EvaluationAlgorithmIsMax": false,
+      "EvaluationAlgorithmName": "Root Mean Squared Error",
+      "FinalLeaderboardHasBeenVerified": true,
+      "ForumId": 923,
+      "HasKernels": false,
+      "HasLeaderboard": true,
+      "HostName": null,
+      "HostSegmentTitle": "Community",
+      "Id": 4758,
+      "LeaderboardPercentage": 30,
+      "MaxDailySubmissions": 1440,
+      "MaxTeamSize": 1,
+      "ModelSubmissionDeadlineDate": null,
+      "NumPrizes": 1,
+      "NumScoredSubmissions": 2,
+      "OnlyAllowKernelSubmissions": false,
+      "OrganizationId": null,
+      "ProhibitNewEntrantsDeadlineDate": null,
+      "RewardQuantity": 0,
+      "RewardType": "Knowledge",
+      "ScoreTruncationNumDecimals": 5,
+      "Slug": "itmo-year2012-ml-recsys-track-1",
+      "Subtitle": "\u0417\u0430\u0434\u0430\u0447\u0430 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432 4-\u0433\u043e \u043a\u0443\u0440\u0441\u0430 \u041a\u0422 \u043f\u043e \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u043c \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u043c \u0432 \u0440\u0430\u043c\u043a\u0430\u0445 \u043a\u0443\u0440\u0441\u0430 \u043f\u043e \u043c\u0430\u0448\u0438\u043d\u043d\u043e\u043c\u0443 \u043e\u0431\u0443\u0447\u0435\u043d\u0438\u044e. Track 1",
+      "TeamMergerDeadlineDate": null,
+      "TeamModelDeadlineDate": null,
+      "Title": "ITMO year2012 ML RecSys (track 1)",
+      "TotalCompetitors": 19,
+      "TotalSubmissions": 117,
+      "TotalTeams": 14,
+      "UserRankMultiplier": 0,
+      "ValidationSetName": null,
+      "ValidationSetValue": null
+    },
+    {
+      "BanTeamMergers": true,
+      "CanQualifyTiers": false,
+      "CompetitionTypeId": 1,
+      "DeadlineDate": 1479772740000000,
+      "EnableSubmissionModelAttachments": false,
+      "EnableSubmissionModelHashes": false,
+      "EnableTeamModels": false,
+      "EnabledDate": 1477443498000000,
+      "EvaluationAlgorithmAbbreviation": "RMSE",
+      "EvaluationAlgorithmDescription": "Square root of the average of the squared errors.",
+      "EvaluationAlgorithmIsMax": false,
+      "EvaluationAlgorithmName": "Root Mean Squared Error",
+      "FinalLeaderboardHasBeenVerified": true,
+      "ForumId": 1782,
+      "HasKernels": false,
+      "HasLeaderboard": true,
+      "HostName": null,
+      "HostSegmentTitle": "Community",
+      "Id": 5586,
+      "LeaderboardPercentage": 50,
+      "MaxDailySubmissions": 25,
+      "MaxTeamSize": 1,
+      "ModelSubmissionDeadlineDate": null,
+      "NumPrizes": 1,
+      "NumScoredSubmissions": 2,
+      "OnlyAllowKernelSubmissions": false,
+      "OrganizationId": null,
+      "ProhibitNewEntrantsDeadlineDate": null,
+      "RewardQuantity": null,
+      "RewardType": "Knowledge",
+      "ScoreTruncationNumDecimals": 5,
+      "Slug": "wustl-t81-558-washu-deep-learning-fall-2016",
+      "Subtitle": "Regression problem with 7 inputs.  Programming assignment #3 for T81-558 applications of deep learning.",
+      "TeamMergerDeadlineDate": null,
+      "TeamModelDeadlineDate": null,
+      "Title": "Applications of Deep Learning (WUSTL, Fall 2016)",
+      "TotalCompetitors": 20,
+      "TotalSubmissions": 139,
+      "TotalTeams": 16,
+      "UserRankMultiplier": 0,
+      "ValidationSetName": null,
+      "ValidationSetValue": null
+    },
+    {
+      "BanTeamMergers": true,
+      "CanQualifyTiers": false,
+      "CompetitionTypeId": 1,
+      "DeadlineDate": 1646265540000000,
+      "EnableSubmissionModelAttachments": false,
+      "EnableSubmissionModelHashes": false,
+      "EnableTeamModels": false,
+      "EnabledDate": 1641755431000000,
+      "EvaluationAlgorithmAbbreviation": "RMSE",
+      "EvaluationAlgorithmDescription": "Square root of the average of the squared errors.",
+      "EvaluationAlgorithmIsMax": false,
+      "EvaluationAlgorithmName": "Root Mean Squared Error",
+      "FinalLeaderboardHasBeenVerified": true,
+      "ForumId": 1874775,
+      "HasKernels": true,
+      "HasLeaderboard": true,
+      "HostName": null,
+      "HostSegmentTitle": "Community",
+      "Id": 33697,
+      "LeaderboardPercentage": 100,
+      "MaxDailySubmissions": 7,
+      "MaxTeamSize": 1,
+      "ModelSubmissionDeadlineDate": null,
+      "NumPrizes": 1,
+      "NumScoredSubmissions": 2,
+      "OnlyAllowKernelSubmissions": false,
+      "OrganizationId": null,
+      "ProhibitNewEntrantsDeadlineDate": null,
+      "RewardQuantity": null,
+      "RewardType": null,
+      "ScoreTruncationNumDecimals": 5,
+      "Slug": "enkaaiclubcompetition",
+      "Subtitle": "Created for ENKA Schools AI Club",
+      "TeamMergerDeadlineDate": null,
+      "TeamModelDeadlineDate": null,
+      "Title": "Enka AI Club Competition",
+      "TotalCompetitors": 0,
+      "TotalSubmissions": 0,
+      "TotalTeams": 0,
+      "UserRankMultiplier": 0,
+      "ValidationSetName": null,
+      "ValidationSetValue": null
+    },
+    {
+      "BanTeamMergers": true,
+      "CanQualifyTiers": false,
+      "CompetitionTypeId": 1,
+      "DeadlineDate": 1420070340000000,
+      "EnableSubmissionModelAttachments": false,
+      "EnableSubmissionModelHashes": false,
+      "EnableTeamModels": false,
+      "EnabledDate": 1415805646000000,
+      "EvaluationAlgorithmAbbreviation": "RMSE",
+      "EvaluationAlgorithmDescription": "Square root of the average of the squared errors.",
+      "EvaluationAlgorithmIsMax": false,
+      "EvaluationAlgorithmName": "Root Mean Squared Error",
+      "FinalLeaderboardHasBeenVerified": true,
+      "ForumId": 540,
+      "HasKernels": false,
+      "HasLeaderboard": true,
+      "HostName": null,
+      "HostSegmentTitle": "Community",
+      "Id": 4107,
+      "LeaderboardPercentage": 100,
+      "MaxDailySubmissions": 1440,
+      "MaxTeamSize": 1,
+      "ModelSubmissionDeadlineDate": null,
+      "NumPrizes": 1,
+      "NumScoredSubmissions": 2,
+      "OnlyAllowKernelSubmissions": false,
+      "OrganizationId": null,
+      "ProhibitNewEntrantsDeadlineDate": null,
+      "RewardQuantity": null,
+      "RewardType": "Knowledge",
+      "ScoreTruncationNumDecimals": 5,
+      "Slug": "itmo-year2011-ml-recsys-track-1",
+      "Subtitle": "\u0417\u0430\u0434\u0430\u0447\u0430 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432 4-\u0433\u043e \u043a\u0443\u0440\u0441\u0430 \u041a\u0422 \u043f\u043e \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u043c \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u043c \u0432 \u0440\u0430\u043c\u043a\u0430\u0445 \u043a\u0443\u0440\u0441\u0430 \u043f\u043e \u043c\u0430\u0448\u0438\u043d\u043d\u043e\u043c\u0443 \u043e\u0431\u0443\u0447\u0435\u043d\u0438\u044e. Track 1",
+      "TeamMergerDeadlineDate": null,
+      "TeamModelDeadlineDate": null,
+      "Title": "ITMO year2011 ML RecSys (track 1)",
+      "TotalCompetitors": 35,
+      "TotalSubmissions": 221,
+      "TotalTeams": 24,
+      "UserRankMultiplier": 0,
+      "ValidationSetName": null,
+      "ValidationSetValue": null
+    }
+  ]
+}

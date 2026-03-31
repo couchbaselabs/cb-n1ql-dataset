@@ -1,0 +1,311 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "accepted": {
+            "#docs": [
+              999,
+              1
+            ],
+            "%docs": [
+              99.9,
+              0.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                false,
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "addr": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "zil14pzuzq6v6pmmmrfjhczywguu0e...",
+              "zil15lr86jwg937urdeayvtypvhy6p...",
+              "zil1e3pw790l6vvr9xx923u932svvn...",
+              "zil1k7qwsz2m3w595u29je0dvv4nka...",
+              "zil1w6tynx7zxt3dcn92dzwl8m4x85..."
+            ],
+            "type": "string"
+          },
+          "amount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              99210000000000,
+              235019187723941,
+              1043886593012521,
+              87490500000000000
+            ],
+            "type": "number"
+          },
+          "block_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1289691,
+              1414323,
+              1416146,
+              1935840,
+              2064403
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1626513405000000,
+              1631073625000000,
+              1631135276000000,
+              1648910774000000,
+              1653336409000000
+            ],
+            "type": "number"
+          },
+          "depth": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "params": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 8,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0x773fdc4383ac0c8298629b15cc13bb7f519e1c92\",\"vname\":\"burn_account\"}",
+                "{\"type\":\"Uint128\",\"value\":\"12000000000000000\",\"vname\":\"amount\"}"
+              ],
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xa152fe059da458002b20f1ba66b189ab7aef9aa1\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"7427045679628\",\"vname\":\"amount\"}"
+              ],
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xa7c67d49c82c7dc1b73d231640b2e4d0661d37c1\",\"vname\":\"minter\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0x34c94020a6a4ae2534277520a8914be9ff595456\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"32650367034062\",\"vname\":\"amount\"}"
+              ],
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xa7c67d49c82c7dc1b73d231640b2e4d0661d37c1\",\"vname\":\"minter\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0x56ae8258abb44fe6a7d4eadb9438602ebca601e6\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"102342086597244\",\"vname\":\"amount\"}"
+              ],
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xdadcd80596ad61aa1577b34d3cefadd6c4275065\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"35710015363054\",\"vname\":\"amount\"}"
+              ]
+            ],
+            "type": "array"
+          },
+          "recipient": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "zil126hgyk9tk387df75atdegwrq96...",
+              "zil14pzuzq6v6pmmmrfjhczywguu0e...",
+              "zil1m3m5jqqcaemtefnlk795qpw59d...",
+              "zil1xny5qg9x5jhz2dp8w5s23y2ta8...",
+              "zil1xswavlggsqmkd9kddcp0ulceqm..."
+            ],
+            "type": "string"
+          },
+          "tag": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Burn",
+              "Mint",
+              "RecipientAcceptMint",
+              "TransferFrom",
+              "WithdrawStakeRewardsSuccessCal..."
+            ],
+            "type": "string"
+          },
+          "transaction_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "372c585ced5d192fbb3ec15399a2d1...",
+              "3e485ab3caf2e13fce43fe9e2a55fe...",
+              "8b9d6c33e1c6a393947ec7dc9fc473...",
+              "a4c1c5ba7adbade961521b9ccc4d5c...",
+              "e5a2cdaf404737feffb7be8050e39c..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "transitions::113011",
+                  "transitions::114",
+                  "transitions::144733",
+                  "transitions::159505",
+                  "transitions::159658"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "transitions::113011"
+              },
+              {
+                "id": "transitions::114"
+              },
+              {
+                "id": "transitions::144733"
+              },
+              {
+                "id": "transitions::159505"
+              },
+              {
+                "id": "transitions::159658"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "accepted": true,
+      "addr": "zil1k7qwsz2m3w595u29je0dvv4nka62c5wwrp8r8p",
+      "amount": 0,
+      "block_number": 1053403,
+      "block_timestamp": 1615355706000000,
+      "depth": 1,
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0x635eff625a147c7ca0397445eee436129ee6ca0b\",\"vname\":\"ssnaddr\"}",
+        "{\"type\":\"Uint128\",\"value\":\"20775404964215\",\"vname\":\"amount\"}"
+      ],
+      "recipient": "zil19uyfkgp3x9me2qhjetmlfdffrr4zruw9xmcqzw",
+      "tag": "DelegateStakeSuccessCallBack",
+      "transaction_id": "c3a652e047980b7ee4d43517d15148536b0d03675a2fe5e5b86165b2ecb34011"
+    },
+    {
+      "accepted": true,
+      "addr": "zil15lr86jwg937urdeayvtypvhy6pnp6d7p8n5z09",
+      "amount": 0,
+      "block_number": 2167525,
+      "block_timestamp": 1656918000000000,
+      "depth": 1,
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0x90d3dbd71c54c38341a6f5682c607e8a17023c28\",\"vname\":\"ssnaddr\"}",
+        "{\"type\":\"Uint128\",\"value\":\"2630000000000000\",\"vname\":\"amount\"}"
+      ],
+      "recipient": "zil18jp2w3x4628u98ny722j3ysnqtxnam4rwa505f",
+      "tag": "DelegateStakeSuccessCallBack",
+      "transaction_id": "0146a04d526fe6b3134a999a30b2bd4d3b8a26f28ff37659d539d7a5c67c7f2b"
+    },
+    {
+      "accepted": true,
+      "addr": "zil15lr86jwg937urdeayvtypvhy6pnp6d7p8n5z09",
+      "amount": 0,
+      "block_number": 2062304,
+      "block_timestamp": 1653264249000000,
+      "depth": 1,
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0x90d3dbd71c54c38341a6f5682c607e8a17023c28\",\"vname\":\"ssnaddr\"}",
+        "{\"type\":\"Uint128\",\"value\":\"64000000000000\",\"vname\":\"amount\"}"
+      ],
+      "recipient": "zil1f200wktjnyk78kg4lnq9r0akxt03agkqm9jq9e",
+      "tag": "DelegateStakeSuccessCallBack",
+      "transaction_id": "8d4c1dc71f3592955549ccefc5ff52305399d031b2a6298a204dc3804912d918"
+    },
+    {
+      "accepted": true,
+      "addr": "zil15lr86jwg937urdeayvtypvhy6pnp6d7p8n5z09",
+      "amount": 0,
+      "block_number": 1936516,
+      "block_timestamp": 1648934395000000,
+      "depth": 1,
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0x635eff625a147c7ca0397445eee436129ee6ca0b\",\"vname\":\"ssnaddr\"}",
+        "{\"type\":\"Uint128\",\"value\":\"126646288753947\",\"vname\":\"amount\"}"
+      ],
+      "recipient": "zil1wnyr3lky7jupqt0mdax4r5am0zy0vtnykvjjz4",
+      "tag": "DelegateStakeSuccessCallBack",
+      "transaction_id": "0b0764caf2203d9cb6795b25c35fdf261f8d8ab11a48a56cbec4a0e26a05d2b5"
+    },
+    {
+      "accepted": true,
+      "addr": "zil15lr86jwg937urdeayvtypvhy6pnp6d7p8n5z09",
+      "amount": 0,
+      "block_number": 1416252,
+      "block_timestamp": 1631138822000000,
+      "depth": 1,
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0x122219cceab410901e96c3a0e55e46231480341b\",\"vname\":\"ssnaddr\"}",
+        "{\"type\":\"Uint128\",\"value\":\"178000000000000000\",\"vname\":\"amount\"}"
+      ],
+      "recipient": "zil1zcjmkv4taazzjcdwg363v7qc7t949ptvrxjxvy",
+      "tag": "DelegateStakeSuccessCallBack",
+      "transaction_id": "f491bab8830e14bec0373f168aeb7465fe517138a5ed56a1c34c55d2cc2e1a08"
+    }
+  ]
+}

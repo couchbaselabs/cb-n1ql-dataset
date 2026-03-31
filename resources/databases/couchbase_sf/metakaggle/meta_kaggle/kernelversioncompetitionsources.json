@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`SourceCompetitionId` = 3948",
+        "properties": {
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6280,
+              88411,
+              601723,
+              610941,
+              961249
+            ],
+            "type": "number"
+          },
+          "KernelVersionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              555,
+              557,
+              558,
+              841,
+              4511
+            ],
+            "type": "number"
+          },
+          "SourceCompetitionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3948
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "kernelversioncompetitionsource...",
+                  "kernelversioncompetitionsource...",
+                  "kernelversioncompetitionsource...",
+                  "kernelversioncompetitionsource...",
+                  "kernelversioncompetitionsource..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "kernelversioncompetitionsources::0"
+              },
+              {
+                "id": "kernelversioncompetitionsources::1"
+              },
+              {
+                "id": "kernelversioncompetitionsources::2"
+              },
+              {
+                "id": "kernelversioncompetitionsources::3"
+              },
+              {
+                "id": "kernelversioncompetitionsources::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Id": 610941,
+      "KernelVersionId": 557,
+      "SourceCompetitionId": 3948
+    },
+    {
+      "Id": 6280,
+      "KernelVersionId": 4511,
+      "SourceCompetitionId": 3948
+    },
+    {
+      "Id": 961249,
+      "KernelVersionId": 558,
+      "SourceCompetitionId": 3948
+    },
+    {
+      "Id": 88411,
+      "KernelVersionId": 841,
+      "SourceCompetitionId": 3948
+    },
+    {
+      "Id": 601723,
+      "KernelVersionId": 555,
+      "SourceCompetitionId": 3948
+    }
+  ]
+}

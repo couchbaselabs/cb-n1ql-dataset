@@ -1,0 +1,146 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`CompetitionId` = 63763, `Type` = 1",
+        "properties": {
+          "CompetitionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              63763
+            ],
+            "type": "number"
+          },
+          "CreateTime": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1700183443000000,
+              1700251478000000,
+              1700574436000000,
+              1701350393000000,
+              1702092214000000
+            ],
+            "type": "number"
+          },
+          "EndTime": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1700183636000000,
+              1700251721000000,
+              1700574634000000,
+              1701350611000000,
+              1702092658000000
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              53193024,
+              53201241,
+              53240048,
+              53371196,
+              53450853
+            ],
+            "type": "number"
+          },
+          "Type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "episodes::0",
+                  "episodes::1",
+                  "episodes::2",
+                  "episodes::3",
+                  "episodes::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "episodes::0"
+              },
+              {
+                "id": "episodes::1"
+              },
+              {
+                "id": "episodes::2"
+              },
+              {
+                "id": "episodes::3"
+              },
+              {
+                "id": "episodes::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CompetitionId": 63763,
+      "CreateTime": 1701350393000000,
+      "EndTime": 1701350611000000,
+      "Id": 53371196,
+      "Type": 1
+    },
+    {
+      "CompetitionId": 63763,
+      "CreateTime": 1700251478000000,
+      "EndTime": 1700251721000000,
+      "Id": 53201241,
+      "Type": 1
+    },
+    {
+      "CompetitionId": 63763,
+      "CreateTime": 1700183443000000,
+      "EndTime": 1700183636000000,
+      "Id": 53193024,
+      "Type": 1
+    },
+    {
+      "CompetitionId": 63763,
+      "CreateTime": 1702092214000000,
+      "EndTime": 1702092658000000,
+      "Id": 53450853,
+      "Type": 1
+    },
+    {
+      "CompetitionId": 63763,
+      "CreateTime": 1700574436000000,
+      "EndTime": 1700574634000000,
+      "Id": 53240048,
+      "Type": 1
+    }
+  ]
+}

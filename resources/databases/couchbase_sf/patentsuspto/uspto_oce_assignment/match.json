@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "grant_doc_num": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "D610497",
+              "4741250",
+              "6344365",
+              "D538645",
+              ""
+            ],
+            "type": "string"
+          },
+          "pgpub_doc_num": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20140083712",
+              "20010047675",
+              "20080203724",
+              "20110238525",
+              ""
+            ],
+            "type": "string"
+          },
+          "publication_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "US-2008203724-A1",
+              "US-2014083712-A1",
+              "US-6344365-B1",
+              "US-D538645-S",
+              "US-D610497-S"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "match::1153542",
+                  "match::2708831",
+                  "match::4027981",
+                  "match::5660843",
+                  "match::5716965"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "match::1153542"
+              },
+              {
+                "id": "match::2708831"
+              },
+              {
+                "id": "match::4027981"
+              },
+              {
+                "id": "match::5660843"
+              },
+              {
+                "id": "match::5716965"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "grant_doc_num": "",
+      "pgpub_doc_num": "20030191394",
+      "publication_number": "US-2003191394-A1"
+    },
+    {
+      "grant_doc_num": "",
+      "pgpub_doc_num": "20040076350",
+      "publication_number": "US-2004076350-A1"
+    },
+    {
+      "grant_doc_num": "",
+      "pgpub_doc_num": "20080018108",
+      "publication_number": "US-2008018108-A1"
+    },
+    {
+      "grant_doc_num": "",
+      "pgpub_doc_num": "20080018110",
+      "publication_number": "US-2008018110-A1"
+    },
+    {
+      "grant_doc_num": "",
+      "pgpub_doc_num": "20080018133",
+      "publication_number": "US-2008018133-A1"
+    }
+  ]
+}

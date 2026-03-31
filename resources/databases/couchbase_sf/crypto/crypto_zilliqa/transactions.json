@@ -1,0 +1,881 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`version` = 65537",
+        "properties": {
+          "accepted": {
+            "#docs": [
+              135,
+              865
+            ],
+            "%docs": [
+              13.5,
+              86.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                false,
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "amount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30294673327910,
+              50764848830023,
+              71446509309516,
+              80936000000000,
+              37199800000000000
+            ],
+            "type": "number"
+          },
+          "block_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1131637,
+              1222818,
+              1236950,
+              1351337,
+              2255028
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1619532674000000,
+              1623664893000000,
+              1624317080000000,
+              1628749117000000,
+              1660129520000000
+            ],
+            "type": "number"
+          },
+          "code": {
+            "#docs": [
+              998,
+              2
+            ],
+            "%docs": [
+              99.8,
+              0.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "\nscilla_version 0\nimport BoolU..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "cumulative_gas": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              50,
+              405,
+              894,
+              913
+            ],
+            "type": "number"
+          },
+          "data": {
+            "#docs": [
+              2,
+              754,
+              109,
+              109
+            ],
+            "%docs": [
+              0.2,
+              75.4,
+              10.9,
+              10.9
+            ],
+            "items": {
+              "#docs": 10,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "Flavor": "`type` = \"Map String String\", `vname` = \"initialRecords\"",
+              "properties": {
+                "type": {
+                  "#docs": 10,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Map String String"
+                  ],
+                  "type": "string"
+                },
+                "value": {
+                  "#docs": [
+                    2,
+                    8
+                  ],
+                  "%docs": [
+                    20,
+                    80
+                  ],
+                  "items": {
+                    "#docs": 2,
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "properties": {
+                      "key": {
+                        "nestingDepth": 4,
+                        "samples": [
+                          "ZIL"
+                        ],
+                        "type": "string"
+                      },
+                      "val": {
+                        "nestingDepth": 4,
+                        "samples": [
+                          "zil18ahjnedczxpks3dep84728ym3w...",
+                          "zil1urs9d37ufx8ltulzft0xrgz6ru..."
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "maxItems": 1,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      [
+                        {
+                          "key": "ZIL",
+                          "val": "zil18ahjnedczxpks3dep84728ym3wuen6ysxf9rjk"
+                        }
+                      ],
+                      [
+                        {
+                          "key": "ZIL",
+                          "val": "zil1urs9d37ufx8ltulzft0xrgz6ruqe3jgz5xe89g"
+                        }
+                      ]
+                    ],
+                    []
+                  ],
+                  "type": [
+                    "array",
+                    "string"
+                  ]
+                },
+                "vname": {
+                  "#docs": 10,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "initialRecords"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 5,
+            "minItems": 5,
+            "nestingDepth": 0,
+            "properties": {
+              "_tag": {
+                "#docs": 109,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "AddLiquidity",
+                  "Claim",
+                  "DelegateStake",
+                  "WithdrawStakeAmt",
+                  "WithdrawStakeRewards"
+                ],
+                "type": "string"
+              },
+              "params": {
+                "#docs": 109,
+                "%docs": 100,
+                "items": {
+                  "#docs": 208,
+                  "$schema": "http://json-schema.org/draft-06/schema",
+                  "Flavor": "",
+                  "properties": {
+                    "type": {
+                      "#docs": 208,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "type": "string"
+                    },
+                    "value": {
+                      "#docs": [
+                        2,
+                        4,
+                        202
+                      ],
+                      "%docs": [
+                        0.96,
+                        1.92,
+                        97.11
+                      ],
+                      "items": {
+                        "#docs": 6,
+                        "$schema": "http://json-schema.org/draft-06/schema",
+                        "properties": {
+                          "argtypes": {
+                            "items": {},
+                            "maxItems": 0,
+                            "minItems": 0,
+                            "nestingDepth": 5,
+                            "sampleSize": 0,
+                            "type": "array"
+                          },
+                          "arguments": {
+                            "items": {
+                              "type": "string"
+                            },
+                            "maxItems": 2,
+                            "minItems": 2,
+                            "nestingDepth": 5,
+                            "sampleSize": 0,
+                            "type": "array"
+                          },
+                          "constructor": {
+                            "nestingDepth": 5,
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "maxItems": 4,
+                      "minItems": 2,
+                      "nestingDepth": 3,
+                      "properties": {
+                        "argtypes": {
+                          "#docs": 4,
+                          "%docs": 100,
+                          "items": {},
+                          "maxItems": 0,
+                          "minItems": 0,
+                          "nestingDepth": 4,
+                          "sampleSize": 0,
+                          "type": "array"
+                        },
+                        "arguments": {
+                          "#docs": 4,
+                          "%docs": 100,
+                          "items": [
+                            {
+                              "items": {
+                                "type": "string"
+                              },
+                              "maxItems": 13,
+                              "minItems": 7,
+                              "sampleSize": 0,
+                              "type": "array"
+                            },
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "#docs": 4,
+                              "$schema": "http://json-schema.org/draft-06/schema",
+                              "Flavor": "",
+                              "properties": {
+                                "argtypes": {
+                                  "#docs": 4,
+                                  "%docs": 100,
+                                  "items": {},
+                                  "maxItems": 0,
+                                  "minItems": 0,
+                                  "nestingDepth": 6,
+                                  "sampleSize": 0,
+                                  "type": "array"
+                                },
+                                "arguments": {
+                                  "#docs": 4,
+                                  "%docs": 100,
+                                  "items": {
+                                    "type": "string"
+                                  },
+                                  "maxItems": 2,
+                                  "minItems": 2,
+                                  "nestingDepth": 6,
+                                  "sampleSize": 0,
+                                  "type": "array"
+                                },
+                                "constructor": {
+                                  "#docs": 4,
+                                  "%docs": 100,
+                                  "nestingDepth": 6,
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          ],
+                          "maxItems": 3,
+                          "minItems": 3,
+                          "nestingDepth": 4,
+                          "sampleSize": 0,
+                          "type": "array"
+                        },
+                        "constructor": {
+                          "#docs": 4,
+                          "%docs": 100,
+                          "nestingDepth": 4,
+                          "type": "string"
+                        }
+                      },
+                      "sampleSize": 0,
+                      "samples": [
+                        null,
+                        null,
+                        []
+                      ],
+                      "type": [
+                        "array",
+                        "object",
+                        "string"
+                      ]
+                    },
+                    "vname": {
+                      "#docs": 208,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "maxItems": 6,
+                "minItems": 0,
+                "nestingDepth": 1,
+                "sampleSize": 0,
+                "samples": [
+                  [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x122219cceab410901e96c3a0e55e46231480341b",
+                      "vname": "ssnaddr"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x173ca6770aa56eb00511dac8e6e13b3d7f16a5a5",
+                      "vname": "token_address"
+                    },
+                    {
+                      "type": "Uint128",
+                      "value": "390231206707532",
+                      "vname": "min_contribution_amount"
+                    },
+                    {
+                      "type": "Uint128",
+                      "value": "2672879934",
+                      "vname": "max_token_amount"
+                    },
+                    {
+                      "type": "BNum",
+                      "value": "1046886",
+                      "vname": "deadline_block"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x635eff625a147c7ca0397445eee436129ee6ca0b",
+                      "vname": "ssnaddr"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x90d3dbd71c54c38341a6f5682c607e8a17023c28",
+                      "vname": "ssnaddr"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "ByStr20",
+                      "value": "0xb83fc2c72c44b6b869c64384375c979dc3f7cf05",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                ],
+                "type": "array"
+              }
+            },
+            "sampleSize": 0,
+            "samples": [
+              [
+                [
+                  {
+                    "type": "Uint32",
+                    "value": "0",
+                    "vname": "_scilla_version"
+                  },
+                  {
+                    "type": "ByStr20",
+                    "value": "0x3f6f29e5b811836845b909ebe51c9b8bb999e890",
+                    "vname": "initialOwner"
+                  },
+                  {
+                    "type": "ByStr20",
+                    "value": "0x9611c53be6d1b32058b2747bdececed7e1216793",
+                    "vname": "registry"
+                  },
+                  {
+                    "type": "ByStr32",
+                    "value": "0x16ee9905e70681659331b3abb1f43e2ddb9a96a3b3c3c2184eacedf59cd325d3",
+                    "vname": "node"
+                  },
+                  {
+                    "type": "Map String String",
+                    "value": [
+                      {
+                        "key": "ZIL",
+                        "val": "zil18ahjnedczxpks3dep84728ym3wuen6ysxf9rjk"
+                      }
+                    ],
+                    "vname": "initialRecords"
+                  }
+                ],
+                [
+                  {
+                    "type": "Uint32",
+                    "value": "0",
+                    "vname": "_scilla_version"
+                  },
+                  {
+                    "type": "ByStr20",
+                    "value": "0xe0e056c7dc498ff5f3e24ade61a05a1f0198c902",
+                    "vname": "initialOwner"
+                  },
+                  {
+                    "type": "ByStr20",
+                    "value": "0x9611c53be6d1b32058b2747bdececed7e1216793",
+                    "vname": "registry"
+                  },
+                  {
+                    "type": "ByStr32",
+                    "value": "0xb9b3dcd6b37cc0847cd5a79f6f9fbf03f32be01df1d1003471c2c0384bdb3c77",
+                    "vname": "node"
+                  },
+                  {
+                    "type": "Map String String",
+                    "value": [
+                      {
+                        "key": "ZIL",
+                        "val": "zil1urs9d37ufx8ltulzft0xrgz6ruqe3jgz5xe89g"
+                      }
+                    ],
+                    "vname": "initialRecords"
+                  }
+                ]
+              ],
+              [
+                null
+              ],
+              [
+                {
+                  "_tag": "DelegateStake",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x90d3dbd71c54c38341a6f5682c607e8a17023c28",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                },
+                {
+                  "_tag": "DelegateStake",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0xb83fc2c72c44b6b869c64384375c979dc3f7cf05",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                },
+                {
+                  "_tag": "WithdrawStakeRewards",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x122219cceab410901e96c3a0e55e46231480341b",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                },
+                {
+                  "_tag": "WithdrawStakeRewards",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x635eff625a147c7ca0397445eee436129ee6ca0b",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                },
+                {
+                  "_tag": "WithdrawStakeRewards",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x90d3dbd71c54c38341a6f5682c607e8a17023c28",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "_tag": "DelegateStake",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x90d3dbd71c54c38341a6f5682c607e8a17023c28",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                },
+                {
+                  "_tag": "DelegateStake",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0xb83fc2c72c44b6b869c64384375c979dc3f7cf05",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                },
+                {
+                  "_tag": "WithdrawStakeRewards",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x122219cceab410901e96c3a0e55e46231480341b",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                },
+                {
+                  "_tag": "WithdrawStakeRewards",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x635eff625a147c7ca0397445eee436129ee6ca0b",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                },
+                {
+                  "_tag": "WithdrawStakeRewards",
+                  "params": [
+                    {
+                      "type": "ByStr20",
+                      "value": "0x90d3dbd71c54c38341a6f5682c607e8a17023c28",
+                      "vname": "ssnaddr"
+                    }
+                  ]
+                }
+              ]
+            ],
+            "type": [
+              "array",
+              "null",
+              "object",
+              "object"
+            ]
+          },
+          "epoch_num": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1131637,
+              1222818,
+              1236950,
+              1351337,
+              2255028
+            ],
+            "type": "number"
+          },
+          "gas_limit": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              50,
+              100,
+              10000,
+              20000
+            ],
+            "type": "number"
+          },
+          "gas_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1000000000,
+              2000000000,
+              2100000000,
+              3000000000,
+              4000000000
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20bba0e434f8d7f01c24edd418e71e...",
+              "2c11f2358fef2ab5160800bbfd3f6d...",
+              "41c7bf17f59b794b15b1bd2fe562cc...",
+              "5e5b127e001bc6c725af0bd697255d...",
+              "634df1d2e7d1d310307368d612a935..."
+            ],
+            "type": "string"
+          },
+          "sender": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "zil109qchukkw43jw2lkt25j6lk86v...",
+              "zil10eg50z4f2tde84pl30hu35aw45...",
+              "zil1rsx4flvgjqh3lczjwhrvpghul9...",
+              "zil1scpt4xkmgszp2pzqa5ldcwjzyg...",
+              "zil1z3zky3kv20f37z3wkq86qfy00t..."
+            ],
+            "type": "string"
+          },
+          "sender_pub_key": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0218A36C9C0B51EFBDF3EA5430D3...",
+              "0x023D0A99E1A2ED895ED7F3FAACBC...",
+              "0x03225E44C99E3A39FDAB473BCC25...",
+              "0x038274E73930301B82B43345F442...",
+              "0x03B47A03E7BFF0A99A13C057DB67..."
+            ],
+            "type": "string"
+          },
+          "signature": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x3AF98510E68520F839D93394E73A...",
+              "0x83B790E2CC46B21A17CED3B1A6C8...",
+              "0xE8B82A512B0333341BAC4703DEC3...",
+              "0xF1D4A9A629A67CC7A51A9E3BC233...",
+              "0xFA83CF698396B73BDD5F0BC09C2C..."
+            ],
+            "type": "string"
+          },
+          "success": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "to_addr": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "zil133ne0au3szusqq2q6kmhjc05fv...",
+              "zil169mznzg8jpad06l9z52ul28dc0...",
+              "zil17rpyuuf3vw4z0jfhqyc04fw2mn...",
+              "zil1cfmmlnmj70ttf8euzh2swkadp0...",
+              "zil1wt7276q45kuu98cy2aj3c5qa5f..."
+            ],
+            "type": "string"
+          },
+          "version": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              65537
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "transactions::118114",
+                  "transactions::204227",
+                  "transactions::210056",
+                  "transactions::27339",
+                  "transactions::279846"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "transactions::118114"
+              },
+              {
+                "id": "transactions::204227"
+              },
+              {
+                "id": "transactions::210056"
+              },
+              {
+                "id": "transactions::27339"
+              },
+              {
+                "id": "transactions::279846"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "accepted": null,
+      "amount": 79229712040940,
+      "block_number": 782613,
+      "block_timestamp": 1600327008000000,
+      "code": null,
+      "cumulative_gas": 1,
+      "data": null,
+      "epoch_num": 782613,
+      "gas_limit": 1,
+      "gas_price": 1000000000,
+      "id": "fd5e3b43044b335b88a83458cfa0e358aa98575cb09abadb3084d2e3c328098c",
+      "sender": "zil1zhltxpte848ymnnxj6rghme4k2aclfc78e82yx",
+      "sender_pub_key": "0x03889EA284A8BEFBC767608DCBB9B27BFB7BA59C27B93480C5E209B3F6E542EDC8",
+      "signature": "0x96F37BF619F9CF40FBCCBA142E7F750A30EB82A274065348B25CCBE07D8EC33F5838FE0FD46F5EF06F031639A29181E52F6F2F6190DB332ADAFC3F879D3CEBAw==",
+      "success": true,
+      "to_addr": "zil17rpyuuf3vw4z0jfhqyc04fw2mnpffwj9w9na5p",
+      "version": 65537
+    },
+    {
+      "accepted": null,
+      "amount": 86103800000000,
+      "block_number": 1046549,
+      "block_timestamp": 1614960385000000,
+      "code": null,
+      "cumulative_gas": 1,
+      "data": null,
+      "epoch_num": 1046549,
+      "gas_limit": 1,
+      "gas_price": 2000000000,
+      "id": "ba8d6362f5123e6608c7f1c077b23279fda9ce9b562c1bbf8363830f477b2604",
+      "sender": "zil1yqknv8jhe42va69aepefxa56xqlfn37x6aeve5",
+      "sender_pub_key": "0x02FE6E93270BE5ADF90843AD827E56A154517AAF982617035CA6C900889B180ADC",
+      "signature": "0x95D9C7AFC4B12AF04FE1300D9559AEC6A1D7E48491822B3DF477A770FC8EDB31807D7C1250334AECDF0D0AEA16FDE9C5A28294C2FA68123852D26843B6309EDA==",
+      "success": true,
+      "to_addr": "zil1ewset8ry05qk8yajayfr5x4nj8rmzn84xp3vvz",
+      "version": 65537
+    },
+    {
+      "accepted": null,
+      "amount": 501615407140000,
+      "block_number": 1046549,
+      "block_timestamp": 1614960385000000,
+      "code": null,
+      "cumulative_gas": 1,
+      "data": null,
+      "epoch_num": 1046549,
+      "gas_limit": 1,
+      "gas_price": 2000000000,
+      "id": "37875e7d1abe9633b5fa2a8f0de64a436486300a33a93cc6d726968815692ada",
+      "sender": "zil1nmqty6lq4t89w8cpenc6njukmfa5mz6uxn7z4g",
+      "sender_pub_key": "0x0330986213B0213A397A98546C92144D8A8EC34F1D5316F7446C18ABE6FBE57217",
+      "signature": "0x47A9D4B32300951767CF50540DFD8AFC304A575B08D5AD4CEC17CC4EEA00D2EED9E9294527D5A7F21C57641994926ED47542AD0FDD7D4BDC026E2371CD94CB1w==",
+      "success": true,
+      "to_addr": "zil1348upsgsejmhv5e7afwd65xfj9pjyn7c82sz5p",
+      "version": 65537
+    },
+    {
+      "accepted": null,
+      "amount": 2042392390490000,
+      "block_number": 1131542,
+      "block_timestamp": 1619527453000000,
+      "code": null,
+      "cumulative_gas": 1,
+      "data": null,
+      "epoch_num": 1131542,
+      "gas_limit": 1,
+      "gas_price": 2000000000,
+      "id": "d825dbdfe95bccaa8f8bdba45e8c381078c2b96bed42ca883c71fe32068f8dda",
+      "sender": "zil1vl3xmk6ndm5z0ldvumlxk0akkghgqkq688zxwf",
+      "sender_pub_key": "0x034872CB9027028321FA95A704F4C96BA91D2D0A559815774EA2817A7C83E62F9C",
+      "signature": "0x599AF1A14249E8D443F567AC2A7FEF989BC71FC7362BD6186DB29AA4BB6DD36FA24D797DF037D0BDD75DB12D85739C57FC22DE0B6BCB957AB6518277D42C37CA==",
+      "success": true,
+      "to_addr": "zil1e7g79p6ccc8dcv75tdznx52clpgsd92vfwyqcv",
+      "version": 65537
+    },
+    {
+      "accepted": null,
+      "amount": 5000000000000,
+      "block_number": 1132054,
+      "block_timestamp": 1619555749000000,
+      "code": null,
+      "cumulative_gas": 1,
+      "data": null,
+      "epoch_num": 1132054,
+      "gas_limit": 1,
+      "gas_price": 2000000000,
+      "id": "70c1b17178415b6138c1b30a4ef8526cd7304488c49f2398be59f6b9c95653ee",
+      "sender": "zil1sstyapm7tntpwduks8wf4vaj3ugtty7cp5ypng",
+      "sender_pub_key": "0x038EB8C21B200AD966C4919587E355132C1F4BADD1FA5BEAABAE997B6FA0788C98",
+      "signature": "0x5293171D3B8069CDFD7C7B268F0A84160156A7B3F5E5AE2647D2D76419780C3A6BE19BB4F3AC65349D329E6A784040FA4132601F6DC16EACD9D431C01F09198A==",
+      "success": true,
+      "to_addr": "zil1mnsj363apprku95726kh9mvax8gh6ytgczej7g",
+      "version": 65537
+    }
+  ]
+}

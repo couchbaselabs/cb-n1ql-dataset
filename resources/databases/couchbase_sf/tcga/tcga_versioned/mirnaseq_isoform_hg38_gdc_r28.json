@@ -1,0 +1,338 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`aliquot_barcode` = \"TCGA-BA-A6DJ-01A-11R-A30I-13\", `aliquot_gdc_id` = \"6078be42-4bec-4f11-814b-b15acb2...\", `case_barcode` = \"TCGA-BA-A6DJ\", `case_gdc_id` = \"0de19185-3517-4e30-925b-7eb1f50...\", `file_gdc_id` = \"b2fc0f4b-6ef3-4ae2-bdf7-5708908...\", `primary_site` = \"Gum\", `project_short_name` = \"TCGA-HNSC\", `sample_barcode` = \"TCGA-BA-A6DJ-01A\", `sample_gdc_id` = \"4210ffee-2a83-4f05-8935-2687503...\", `sample_type_name` = \"Primary Tumor\"",
+        "properties": {
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-BA-A6DJ-01A-11R-A30I-13"
+            ],
+            "type": "string"
+          },
+          "aliquot_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "6078be42-4bec-4f11-814b-b15acb..."
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-BA-A6DJ"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0de19185-3517-4e30-925b-7eb1f5..."
+            ],
+            "type": "string"
+          },
+          "chromosome": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "chr10",
+              "chr11",
+              "chr17",
+              "chr20",
+              "chr6"
+            ],
+            "type": "string"
+          },
+          "cross_mapped": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N",
+              "Y"
+            ],
+            "type": "string"
+          },
+          "end_pos": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2854064,
+              3917562,
+              31560036,
+              98395254,
+              122146586
+            ],
+            "type": "number"
+          },
+          "file_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "b2fc0f4b-6ef3-4ae2-bdf7-570890..."
+            ],
+            "type": "string"
+          },
+          "miRNA_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "hsa-let-7a-2",
+              "hsa-mir-103a-2",
+              "hsa-mir-1287",
+              "hsa-mir-193a",
+              "hsa-mir-4645"
+            ],
+            "type": "string"
+          },
+          "primary_site": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Gum"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-HNSC"
+            ],
+            "type": "string"
+          },
+          "read_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5,
+              7
+            ],
+            "type": "number"
+          },
+          "reads_per_million_miRNA_mapped": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.272142,
+              1.360711,
+              1.904995
+            ],
+            "type": "number"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-BA-A6DJ-01A"
+            ],
+            "type": "string"
+          },
+          "sample_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4210ffee-2a83-4f05-8935-268750..."
+            ],
+            "type": "string"
+          },
+          "sample_type_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Primary Tumor"
+            ],
+            "type": "string"
+          },
+          "start_pos": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2854041,
+              3917542,
+              31560016,
+              98395231,
+              122146568
+            ],
+            "type": "number"
+          },
+          "strand": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "+",
+              "-"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mirnaseq_isoform_hg38_gdc_r28:...",
+                  "mirnaseq_isoform_hg38_gdc_r28:...",
+                  "mirnaseq_isoform_hg38_gdc_r28:...",
+                  "mirnaseq_isoform_hg38_gdc_r28:...",
+                  "mirnaseq_isoform_hg38_gdc_r28:..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r28::0"
+              },
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r28::1"
+              },
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r28::2"
+              },
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r28::3"
+              },
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r28::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_barcode": "TCGA-BA-A6DJ-01A-11R-A30I-13",
+      "aliquot_gdc_id": "6078be42-4bec-4f11-814b-b15acb27109f",
+      "case_barcode": "TCGA-BA-A6DJ",
+      "case_gdc_id": "0de19185-3517-4e30-925b-7eb1f5079ec2",
+      "chromosome": "chr20",
+      "cross_mapped": "Y",
+      "end_pos": 3917562,
+      "file_gdc_id": "b2fc0f4b-6ef3-4ae2-bdf7-57089086961e",
+      "miRNA_id": "hsa-mir-103a-2",
+      "primary_site": "Gum",
+      "project_short_name": "TCGA-HNSC",
+      "read_count": 1,
+      "reads_per_million_miRNA_mapped": 0.272142,
+      "sample_barcode": "TCGA-BA-A6DJ-01A",
+      "sample_gdc_id": "4210ffee-2a83-4f05-8935-2687503c83d4",
+      "sample_type_name": "Primary Tumor",
+      "start_pos": 3917542,
+      "strand": "+"
+    },
+    {
+      "aliquot_barcode": "TCGA-BA-A6DJ-01A-11R-A30I-13",
+      "aliquot_gdc_id": "6078be42-4bec-4f11-814b-b15acb27109f",
+      "case_barcode": "TCGA-BA-A6DJ",
+      "case_gdc_id": "0de19185-3517-4e30-925b-7eb1f5079ec2",
+      "chromosome": "chr17",
+      "cross_mapped": "N",
+      "end_pos": 31560036,
+      "file_gdc_id": "b2fc0f4b-6ef3-4ae2-bdf7-57089086961e",
+      "miRNA_id": "hsa-mir-193a",
+      "primary_site": "Gum",
+      "project_short_name": "TCGA-HNSC",
+      "read_count": 7,
+      "reads_per_million_miRNA_mapped": 1.904995,
+      "sample_barcode": "TCGA-BA-A6DJ-01A",
+      "sample_gdc_id": "4210ffee-2a83-4f05-8935-2687503c83d4",
+      "sample_type_name": "Primary Tumor",
+      "start_pos": 31560016,
+      "strand": "+"
+    },
+    {
+      "aliquot_barcode": "TCGA-BA-A6DJ-01A-11R-A30I-13",
+      "aliquot_gdc_id": "6078be42-4bec-4f11-814b-b15acb27109f",
+      "case_barcode": "TCGA-BA-A6DJ",
+      "case_gdc_id": "0de19185-3517-4e30-925b-7eb1f5079ec2",
+      "chromosome": "chr6",
+      "cross_mapped": "N",
+      "end_pos": 2854064,
+      "file_gdc_id": "b2fc0f4b-6ef3-4ae2-bdf7-57089086961e",
+      "miRNA_id": "hsa-mir-4645",
+      "primary_site": "Gum",
+      "project_short_name": "TCGA-HNSC",
+      "read_count": 1,
+      "reads_per_million_miRNA_mapped": 0.272142,
+      "sample_barcode": "TCGA-BA-A6DJ-01A",
+      "sample_gdc_id": "4210ffee-2a83-4f05-8935-2687503c83d4",
+      "sample_type_name": "Primary Tumor",
+      "start_pos": 2854041,
+      "strand": "-"
+    },
+    {
+      "aliquot_barcode": "TCGA-BA-A6DJ-01A-11R-A30I-13",
+      "aliquot_gdc_id": "6078be42-4bec-4f11-814b-b15acb27109f",
+      "case_barcode": "TCGA-BA-A6DJ",
+      "case_gdc_id": "0de19185-3517-4e30-925b-7eb1f5079ec2",
+      "chromosome": "chr11",
+      "cross_mapped": "N",
+      "end_pos": 122146586,
+      "file_gdc_id": "b2fc0f4b-6ef3-4ae2-bdf7-57089086961e",
+      "miRNA_id": "hsa-let-7a-2",
+      "primary_site": "Gum",
+      "project_short_name": "TCGA-HNSC",
+      "read_count": 5,
+      "reads_per_million_miRNA_mapped": 1.360711,
+      "sample_barcode": "TCGA-BA-A6DJ-01A",
+      "sample_gdc_id": "4210ffee-2a83-4f05-8935-2687503c83d4",
+      "sample_type_name": "Primary Tumor",
+      "start_pos": 122146568,
+      "strand": "-"
+    },
+    {
+      "aliquot_barcode": "TCGA-BA-A6DJ-01A-11R-A30I-13",
+      "aliquot_gdc_id": "6078be42-4bec-4f11-814b-b15acb27109f",
+      "case_barcode": "TCGA-BA-A6DJ",
+      "case_gdc_id": "0de19185-3517-4e30-925b-7eb1f5079ec2",
+      "chromosome": "chr10",
+      "cross_mapped": "N",
+      "end_pos": 98395254,
+      "file_gdc_id": "b2fc0f4b-6ef3-4ae2-bdf7-57089086961e",
+      "miRNA_id": "hsa-mir-1287",
+      "primary_site": "Gum",
+      "project_short_name": "TCGA-HNSC",
+      "read_count": 1,
+      "reads_per_million_miRNA_mapped": 0.272142,
+      "sample_barcode": "TCGA-BA-A6DJ-01A",
+      "sample_gdc_id": "4210ffee-2a83-4f05-8935-2687503c83d4",
+      "sample_type_name": "Primary Tumor",
+      "start_pos": 98395231,
+      "strand": "-"
+    }
+  ]
+}

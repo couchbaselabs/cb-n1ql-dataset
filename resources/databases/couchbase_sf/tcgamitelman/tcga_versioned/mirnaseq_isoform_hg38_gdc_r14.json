@@ -1,0 +1,281 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`chromosome` = \"chr10\", `cross_mapped` = \"N\", `end_pos` = 21496596, `mirna_accession` = \"MIMAT0007892\", `mirna_id` = \"hsa-mir-1915\", `mirna_transcript` = \"mature\", `start_pos` = 21496576, `strand` = \"-\"",
+        "properties": {
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-13-0794-01A-01R-1564-13",
+              "TCGA-24-0982-01A-01R-1565-13",
+              "TCGA-24-2262-01A-01R-1568-13",
+              "TCGA-61-2008-02A-01R-1568-13",
+              "TCGA-N5-A4RD-01A-11R-A28Z-13"
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-13-0794",
+              "TCGA-24-0982",
+              "TCGA-24-2262",
+              "TCGA-61-2008",
+              "TCGA-N5-A4RD"
+            ],
+            "type": "string"
+          },
+          "chromosome": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "chr10"
+            ],
+            "type": "string"
+          },
+          "cross_mapped": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N"
+            ],
+            "type": "string"
+          },
+          "end_pos": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21496596
+            ],
+            "type": "number"
+          },
+          "mirna_accession": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MIMAT0007892"
+            ],
+            "type": "string"
+          },
+          "mirna_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "hsa-mir-1915"
+            ],
+            "type": "string"
+          },
+          "mirna_transcript": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "mature"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-OV",
+              "TCGA-UCS"
+            ],
+            "type": "string"
+          },
+          "read_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "reads_per_million_miRNA_mapped": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.168732,
+              0.598486,
+              0.638075,
+              0.981864,
+              3.727655
+            ],
+            "type": "number"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-13-0794-01A",
+              "TCGA-24-0982-01A",
+              "TCGA-24-2262-01A",
+              "TCGA-61-2008-02A",
+              "TCGA-N5-A4RD-01A"
+            ],
+            "type": "string"
+          },
+          "start_pos": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21496576
+            ],
+            "type": "number"
+          },
+          "strand": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "-"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mirnaseq_isoform_hg38_gdc_r14:...",
+                  "mirnaseq_isoform_hg38_gdc_r14:...",
+                  "mirnaseq_isoform_hg38_gdc_r14:...",
+                  "mirnaseq_isoform_hg38_gdc_r14:...",
+                  "mirnaseq_isoform_hg38_gdc_r14:..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r14::0"
+              },
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r14::1"
+              },
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r14::2"
+              },
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r14::3"
+              },
+              {
+                "id": "mirnaseq_isoform_hg38_gdc_r14::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_barcode": "TCGA-N5-A4RD-01A-11R-A28Z-13",
+      "case_barcode": "TCGA-N5-A4RD",
+      "chromosome": "chr10",
+      "cross_mapped": "N",
+      "end_pos": 21496596,
+      "mirna_accession": "MIMAT0007892",
+      "mirna_id": "hsa-mir-1915",
+      "mirna_transcript": "mature",
+      "project_short_name": "TCGA-UCS",
+      "read_count": 1,
+      "reads_per_million_miRNA_mapped": 0.168732,
+      "sample_barcode": "TCGA-N5-A4RD-01A",
+      "start_pos": 21496576,
+      "strand": "-"
+    },
+    {
+      "aliquot_barcode": "TCGA-61-2008-02A-01R-1568-13",
+      "case_barcode": "TCGA-61-2008",
+      "chromosome": "chr10",
+      "cross_mapped": "N",
+      "end_pos": 21496596,
+      "mirna_accession": "MIMAT0007892",
+      "mirna_id": "hsa-mir-1915",
+      "mirna_transcript": "mature",
+      "project_short_name": "TCGA-OV",
+      "read_count": 4,
+      "reads_per_million_miRNA_mapped": 0.598486,
+      "sample_barcode": "TCGA-61-2008-02A",
+      "start_pos": 21496576,
+      "strand": "-"
+    },
+    {
+      "aliquot_barcode": "TCGA-13-0794-01A-01R-1564-13",
+      "case_barcode": "TCGA-13-0794",
+      "chromosome": "chr10",
+      "cross_mapped": "N",
+      "end_pos": 21496596,
+      "mirna_accession": "MIMAT0007892",
+      "mirna_id": "hsa-mir-1915",
+      "mirna_transcript": "mature",
+      "project_short_name": "TCGA-OV",
+      "read_count": 5,
+      "reads_per_million_miRNA_mapped": 3.727655,
+      "sample_barcode": "TCGA-13-0794-01A",
+      "start_pos": 21496576,
+      "strand": "-"
+    },
+    {
+      "aliquot_barcode": "TCGA-24-2262-01A-01R-1568-13",
+      "case_barcode": "TCGA-24-2262",
+      "chromosome": "chr10",
+      "cross_mapped": "N",
+      "end_pos": 21496596,
+      "mirna_accession": "MIMAT0007892",
+      "mirna_id": "hsa-mir-1915",
+      "mirna_transcript": "mature",
+      "project_short_name": "TCGA-OV",
+      "read_count": 2,
+      "reads_per_million_miRNA_mapped": 0.638075,
+      "sample_barcode": "TCGA-24-2262-01A",
+      "start_pos": 21496576,
+      "strand": "-"
+    },
+    {
+      "aliquot_barcode": "TCGA-24-0982-01A-01R-1565-13",
+      "case_barcode": "TCGA-24-0982",
+      "chromosome": "chr10",
+      "cross_mapped": "N",
+      "end_pos": 21496596,
+      "mirna_accession": "MIMAT0007892",
+      "mirna_id": "hsa-mir-1915",
+      "mirna_transcript": "mature",
+      "project_short_name": "TCGA-OV",
+      "read_count": 3,
+      "reads_per_million_miRNA_mapped": 0.981864,
+      "sample_barcode": "TCGA-24-0982-01A",
+      "start_pos": 21496576,
+      "strand": "-"
+    }
+  ]
+}

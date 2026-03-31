@@ -1,0 +1,228 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Index` = 0, `InitialConfidence` = 35, `State` = 2, `UpdatedConfidence` = 35",
+        "properties": {
+          "EpisodeId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              34963068,
+              34963073,
+              34963099,
+              34963101,
+              34963102
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              85019591,
+              85019601,
+              85019653,
+              85019657,
+              85019659
+            ],
+            "type": "number"
+          },
+          "Index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "InitialConfidence": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              35
+            ],
+            "type": "number"
+          },
+          "InitialScore": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1257.86747766475,
+              1412.47669267716,
+              1414.0280321821347,
+              1434.5166662592064,
+              1516.9084650063558
+            ],
+            "type": "number"
+          },
+          "Reward": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              60008,
+              100012,
+              400040,
+              1100104
+            ],
+            "type": "number"
+          },
+          "State": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "SubmissionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              23468555,
+              23714363,
+              23950228,
+              24102342,
+              24120582
+            ],
+            "type": "number"
+          },
+          "UpdatedConfidence": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              35
+            ],
+            "type": "number"
+          },
+          "UpdatedScore": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1262.7703482486515,
+              1408.9210257206757,
+              1410.2442776024131,
+              1430.0565531175387,
+              1520.776611368087
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "episodeagents::0",
+                  "episodeagents::1",
+                  "episodeagents::2",
+                  "episodeagents::3",
+                  "episodeagents::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "episodeagents::0"
+              },
+              {
+                "id": "episodeagents::1"
+              },
+              {
+                "id": "episodeagents::2"
+              },
+              {
+                "id": "episodeagents::3"
+              },
+              {
+                "id": "episodeagents::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "EpisodeId": 34963102,
+      "Id": 85019659,
+      "Index": 0,
+      "InitialConfidence": 35,
+      "InitialScore": 1516.9084650063558,
+      "Reward": 100012,
+      "State": 2,
+      "SubmissionId": 23468555,
+      "UpdatedConfidence": 35,
+      "UpdatedScore": 1520.776611368087
+    },
+    {
+      "EpisodeId": 34963068,
+      "Id": 85019591,
+      "Index": 0,
+      "InitialConfidence": 35,
+      "InitialScore": 1257.86747766475,
+      "Reward": 1100104,
+      "State": 2,
+      "SubmissionId": 24102342,
+      "UpdatedConfidence": 35,
+      "UpdatedScore": 1262.7703482486515
+    },
+    {
+      "EpisodeId": 34963099,
+      "Id": 85019653,
+      "Index": 0,
+      "InitialConfidence": 35,
+      "InitialScore": 1434.5166662592064,
+      "Reward": 5,
+      "State": 2,
+      "SubmissionId": 23950228,
+      "UpdatedConfidence": 35,
+      "UpdatedScore": 1430.0565531175387
+    },
+    {
+      "EpisodeId": 34963101,
+      "Id": 85019657,
+      "Index": 0,
+      "InitialConfidence": 35,
+      "InitialScore": 1414.0280321821347,
+      "Reward": 400040,
+      "State": 2,
+      "SubmissionId": 24120582,
+      "UpdatedConfidence": 35,
+      "UpdatedScore": 1410.2442776024131
+    },
+    {
+      "EpisodeId": 34963073,
+      "Id": 85019601,
+      "Index": 0,
+      "InitialConfidence": 35,
+      "InitialScore": 1412.47669267716,
+      "Reward": 60008,
+      "State": 2,
+      "SubmissionId": 23714363,
+      "UpdatedConfidence": 35,
+      "UpdatedScore": 1408.9210257206757
+    }
+  ]
+}

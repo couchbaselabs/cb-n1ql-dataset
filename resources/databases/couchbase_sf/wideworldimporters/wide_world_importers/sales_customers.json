@@ -1,0 +1,615 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 663,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`DeliveryMethodID` = 3, `IsOnCreditHold` = 0, `IsStatementSent` = 0, `PaymentDays` = 7, `StandardDiscountPercentage` = 0, `ValidTo` = 253402300799999999",
+        "properties": {
+          "AccountOpenedDate": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-01",
+              "2013-06-22",
+              "2015-01-30",
+              "2016-01-09",
+              "2016-02-01"
+            ],
+            "type": "string"
+          },
+          "AlternateContactPersonID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1290",
+              "2138",
+              "2352",
+              "2372",
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "BillToCustomerID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              401,
+              834,
+              921,
+              996
+            ],
+            "type": "number"
+          },
+          "BuyingGroupID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "2",
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "CreditLimit": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1400.00",
+              "1500.00",
+              "2200.00",
+              "3885.00",
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "CustomerCategoryID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "CustomerID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              469,
+              576,
+              586,
+              834,
+              921
+            ],
+            "type": "number"
+          },
+          "CustomerName": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cong Hoa",
+              "Victoria Lacusta",
+              "Wingtip Toys (Goodings Grove, ...",
+              "Wingtip Toys (Johnetta, KY)",
+              "Wingtip Toys (Lynne, FL)"
+            ],
+            "type": "string"
+          },
+          "DeliveryAddressLine1": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Shop 156",
+              "Shop 204",
+              "Suite 12",
+              "Unit 21",
+              "Unit 280"
+            ],
+            "type": "string"
+          },
+          "DeliveryAddressLine2": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1314 Arvidsson Boulevard",
+              "1428 Mercier Avenue",
+              "167 Kubatova Lane",
+              "415 Omidzadeh Road",
+              "580 Poddar Lane"
+            ],
+            "type": "string"
+          },
+          "DeliveryCityID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7408,
+              13388,
+              17093,
+              20376,
+              25971
+            ],
+            "type": "number"
+          },
+          "DeliveryLocation": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8.607660043233206e+52,
+              8.607660043233208e+52,
+              8.607660043233216e+52,
+              8.607660043233232e+52,
+              8.607660043233238e+52
+            ],
+            "type": "number"
+          },
+          "DeliveryMethodID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3
+            ],
+            "type": "number"
+          },
+          "DeliveryPostalCode": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              90009,
+              90396,
+              90512,
+              90632,
+              90699
+            ],
+            "type": "number"
+          },
+          "DeliveryRun": {
+            "#docs": [
+              602,
+              61
+            ],
+            "%docs": [
+              90.79,
+              9.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "NULL"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "FaxNumber": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(212) 555-0101",
+              "(215) 555-0101",
+              "(217) 555-0101",
+              "(239) 555-0101",
+              "(270) 555-0101"
+            ],
+            "type": "string"
+          },
+          "IsOnCreditHold": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "IsStatementSent": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              8,
+              15,
+              20
+            ],
+            "type": "number"
+          },
+          "PaymentDays": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7
+            ],
+            "type": "number"
+          },
+          "PhoneNumber": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(212) 555-0100",
+              "(215) 555-0100",
+              "(217) 555-0100",
+              "(239) 555-0100",
+              "(270) 555-0100"
+            ],
+            "type": "string"
+          },
+          "PostalAddressLine1": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PO Box 3039",
+              "PO Box 3133",
+              "PO Box 563",
+              "PO Box 7069",
+              "PO Box 9095"
+            ],
+            "type": "string"
+          },
+          "PostalAddressLine2": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bohuslavville",
+              "Brasseurville",
+              "Cuville",
+              "Keskulaville",
+              "Minville"
+            ],
+            "type": "string"
+          },
+          "PostalCityID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7408,
+              13388,
+              17093,
+              20376,
+              25971
+            ],
+            "type": "number"
+          },
+          "PostalPostalCode": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              90009,
+              90396,
+              90512,
+              90632,
+              90699
+            ],
+            "type": "number"
+          },
+          "PrimaryContactPersonID": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2137,
+              2351,
+              2371,
+              3034,
+              3121
+            ],
+            "type": "number"
+          },
+          "RunPosition": {
+            "#docs": [
+              602,
+              61
+            ],
+            "%docs": [
+              90.79,
+              9.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "NULL"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "StandardDiscountPercentage": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "ValidFrom": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000,
+              1372694400000000,
+              1404230400000000,
+              1435766400000000,
+              1454284800000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "WebsiteURL": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "http://www.microsoft.com/CongH...",
+              "http://www.microsoft.com/Victo...",
+              "http://www.wingtiptoys.com/Goo...",
+              "http://www.wingtiptoys.com/Joh...",
+              "http://www.wingtiptoys.com/Lyn..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 663,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 663,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_customers::282",
+                  "sales_customers::312",
+                  "sales_customers::326",
+                  "sales_customers::454",
+                  "sales_customers::460"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_customers::282"
+              },
+              {
+                "id": "sales_customers::312"
+              },
+              {
+                "id": "sales_customers::326"
+              },
+              {
+                "id": "sales_customers::454"
+              },
+              {
+                "id": "sales_customers::460"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AccountOpenedDate": "2013-01-01",
+      "AlternateContactPersonID": "1186",
+      "BillToCustomerID": 1,
+      "BuyingGroupID": "1",
+      "CreditLimit": "NULL",
+      "CustomerCategoryID": 3,
+      "CustomerID": 93,
+      "CustomerName": "Tailspin Toys (Clewiston, FL)",
+      "DeliveryAddressLine1": "Suite 80",
+      "DeliveryAddressLine2": "351 Lill Crescent",
+      "DeliveryCityID": 6809,
+      "DeliveryLocation": 8.60766004323322e+52,
+      "DeliveryMethodID": 3,
+      "DeliveryPostalCode": 90354,
+      "DeliveryRun": null,
+      "FaxNumber": "(239) 555-0101",
+      "IsOnCreditHold": 0,
+      "IsStatementSent": 0,
+      "LastEditedBy": 1,
+      "PaymentDays": 7,
+      "PhoneNumber": "(239) 555-0100",
+      "PostalAddressLine1": "PO Box 7050",
+      "PostalAddressLine2": "Muppavarapuville",
+      "PostalCityID": 6809,
+      "PostalPostalCode": 90354,
+      "PrimaryContactPersonID": 1185,
+      "RunPosition": null,
+      "StandardDiscountPercentage": 0,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.tailspintoys.com/Clewiston"
+    },
+    {
+      "AccountOpenedDate": "2013-01-01",
+      "AlternateContactPersonID": "1070",
+      "BillToCustomerID": 1,
+      "BuyingGroupID": "1",
+      "CreditLimit": "NULL",
+      "CustomerCategoryID": 3,
+      "CustomerID": 35,
+      "CustomerName": "Tailspin Toys (Slanesville, WV)",
+      "DeliveryAddressLine1": "Suite 150",
+      "DeliveryAddressLine2": "1959 Sarma Road",
+      "DeliveryCityID": 31758,
+      "DeliveryLocation": 8.607660043233233e+52,
+      "DeliveryMethodID": 3,
+      "DeliveryPostalCode": 90601,
+      "DeliveryRun": null,
+      "FaxNumber": "(304) 555-0101",
+      "IsOnCreditHold": 0,
+      "IsStatementSent": 0,
+      "LastEditedBy": 1,
+      "PaymentDays": 7,
+      "PhoneNumber": "(304) 555-0100",
+      "PostalAddressLine1": "PO Box 6433",
+      "PostalAddressLine2": "Nilssonville",
+      "PostalCityID": 31758,
+      "PostalPostalCode": 90601,
+      "PrimaryContactPersonID": 1069,
+      "RunPosition": null,
+      "StandardDiscountPercentage": 0,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.tailspintoys.com/Slanesville"
+    },
+    {
+      "AccountOpenedDate": "2013-01-01",
+      "AlternateContactPersonID": "1314",
+      "BillToCustomerID": 1,
+      "BuyingGroupID": "1",
+      "CreditLimit": "NULL",
+      "CustomerCategoryID": 3,
+      "CustomerID": 157,
+      "CustomerName": "Tailspin Toys (Saks, AL)",
+      "DeliveryAddressLine1": "Suite 187",
+      "DeliveryAddressLine2": "1962 Celik Road",
+      "DeliveryCityID": 30216,
+      "DeliveryLocation": 8.607660043233206e+52,
+      "DeliveryMethodID": 3,
+      "DeliveryPostalCode": 90362,
+      "DeliveryRun": null,
+      "FaxNumber": "(205) 555-0101",
+      "IsOnCreditHold": 0,
+      "IsStatementSent": 0,
+      "LastEditedBy": 1,
+      "PaymentDays": 7,
+      "PhoneNumber": "(205) 555-0100",
+      "PostalAddressLine1": "PO Box 55",
+      "PostalAddressLine2": "Korjusville",
+      "PostalCityID": 30216,
+      "PostalPostalCode": 90362,
+      "PrimaryContactPersonID": 1313,
+      "RunPosition": null,
+      "StandardDiscountPercentage": 0,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.tailspintoys.com/Saks"
+    },
+    {
+      "AccountOpenedDate": "2013-01-01",
+      "AlternateContactPersonID": "1096",
+      "BillToCustomerID": 1,
+      "BuyingGroupID": "1",
+      "CreditLimit": "NULL",
+      "CustomerCategoryID": 3,
+      "CustomerID": 48,
+      "CustomerName": "Tailspin Toys (Trentwood, WA)",
+      "DeliveryAddressLine1": "Shop 40",
+      "DeliveryAddressLine2": "197 Jaramillo Street",
+      "DeliveryCityID": 34400,
+      "DeliveryLocation": 8.607660043233227e+52,
+      "DeliveryMethodID": 3,
+      "DeliveryPostalCode": 90615,
+      "DeliveryRun": null,
+      "FaxNumber": "(206) 555-0101",
+      "IsOnCreditHold": 0,
+      "IsStatementSent": 0,
+      "LastEditedBy": 1,
+      "PaymentDays": 7,
+      "PhoneNumber": "(206) 555-0100",
+      "PostalAddressLine1": "PO Box 9285",
+      "PostalAddressLine2": "Pasekville",
+      "PostalCityID": 34400,
+      "PostalPostalCode": 90615,
+      "PrimaryContactPersonID": 1095,
+      "RunPosition": null,
+      "StandardDiscountPercentage": 0,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.tailspintoys.com/Trentwood"
+    },
+    {
+      "AccountOpenedDate": "2013-01-01",
+      "AlternateContactPersonID": "2398",
+      "BillToCustomerID": 401,
+      "BuyingGroupID": "2",
+      "CreditLimit": "NULL",
+      "CustomerCategoryID": 3,
+      "CustomerID": 599,
+      "CustomerName": "Wingtip Toys (Dickworsham, TX)",
+      "DeliveryAddressLine1": "Unit 210",
+      "DeliveryAddressLine2": "811 Benjaree Road",
+      "DeliveryCityID": 9077,
+      "DeliveryLocation": 8.607660043233231e+52,
+      "DeliveryMethodID": 3,
+      "DeliveryPostalCode": 90704,
+      "DeliveryRun": null,
+      "FaxNumber": "(210) 555-0101",
+      "IsOnCreditHold": 0,
+      "IsStatementSent": 0,
+      "LastEditedBy": 1,
+      "PaymentDays": 7,
+      "PhoneNumber": "(210) 555-0100",
+      "PostalAddressLine1": "PO Box 3728",
+      "PostalAddressLine2": "Sokkville",
+      "PostalCityID": 9077,
+      "PostalPostalCode": 90704,
+      "PrimaryContactPersonID": 2397,
+      "RunPosition": null,
+      "StandardDiscountPercentage": 0,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.wingtiptoys.com/Dickworsham"
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "block_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0163955148a26665b2c78463cedc...",
+              "0x1061c3590eb664e16e25b67c288d...",
+              "0x3f6f29b1eec98085b0c6f8bcfd62...",
+              "0x906ec2e5f48c3f18dc200db62107...",
+              "0xda514db15e8f73cc766abb5215cf..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7139200,
+              7140580,
+              8127167,
+              8127859,
+              8129997
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1548681108000000,
+              1548705378000000,
+              1562810909000000,
+              1562819753000000,
+              1562848897000000
+            ],
+            "type": "number"
+          },
+          "from_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x2143e21eca9ff1a667c207d262c9...",
+              "0x429bf8ec3330e02401d72beade86...",
+              "0x954da1083b7c5b4e6b584cf6b66c...",
+              "0xb19df923079d05c01b054eb781f9...",
+              "0xd06a327019791647f302f9f1c85b..."
+            ],
+            "type": "string"
+          },
+          "gas": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21000,
+              45000,
+              90000,
+              200000,
+              210000
+            ],
+            "type": "number"
+          },
+          "gas_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2000000000,
+              9555000000,
+              20000000000,
+              67000000000,
+              100000000000
+            ],
+            "type": "number"
+          },
+          "hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x26143684ebb4daa50e2278e415bd...",
+              "0x95639b7fa74390206296b7ed69a7...",
+              "0xb75c1088e5762ce8064b7bbb2661...",
+              "0xc772c7aacccdb53bd13731856900...",
+              "0xee4cd53e6e258fc15551b3f26050..."
+            ],
+            "type": "string"
+          },
+          "input": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x",
+              "0x095ea7b300000000000000000000...",
+              "0x9ee679e800000000000000000000...",
+              "0xa9059cbb00000000000000000000...",
+              "0xa9059cbb00000000000000000000..."
+            ],
+            "type": "string"
+          },
+          "nonce": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              47,
+              8278,
+              38915
+            ],
+            "type": "number"
+          },
+          "receipt_contract_address": {
+            "#docs": [
+              997,
+              3
+            ],
+            "%docs": [
+              99.7,
+              0.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x31476d0ab0ef93c8ceca57ae778e...",
+                "0x9f560ffb67b5958b694e67d03b75...",
+                "0xcef1e292376d5f43af4cb8dc60d8..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "receipt_cumulative_gas_used": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              118281,
+              3554358,
+              5664731,
+              6641237,
+              7741965
+            ],
+            "type": "number"
+          },
+          "receipt_gas_used": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21000,
+              31033,
+              36639,
+              41739,
+              51997
+            ],
+            "type": "number"
+          },
+          "receipt_root": {
+            "#docs": [
+              738,
+              262
+            ],
+            "%docs": [
+              73.8,
+              26.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x2543aecc24315f8b45fd41949f97...",
+                "0x270e494669e4199f5a60ade16335...",
+                "0x3b7741b1c36f40ed0fda9790d3fe...",
+                "0x6a1c0f0fa3c16f722f78c59451f2...",
+                "0xaac9bfc35b9f5a12b4a74d3d21a1..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "receipt_status": {
+            "#docs": [
+              262,
+              738
+            ],
+            "%docs": [
+              26.2,
+              73.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "to_address": {
+            "#docs": [
+              3,
+              997
+            ],
+            "%docs": [
+              0.3,
+              99.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x043c4b3ddc1c4c5768d29f9a00f7...",
+                "0x6fb3e0a217407efff7ca062d46c2...",
+                "0x999d1ce359692aebc26cd969a31d...",
+                "0xa9409cd81b60ee5d1881e4817e83...",
+                "0xcd6116c85122f28ef3f46a110ce1..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "transaction_index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              93,
+              106,
+              107,
+              236
+            ],
+            "type": "number"
+          },
+          "value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1600000000000000,
+              15558000000000000,
+              45113990000000000,
+              2521800000000000000
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "transactions::108527",
+                  "transactions::131015",
+                  "transactions::175312",
+                  "transactions::203102",
+                  "transactions::216384"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "transactions::108527"
+              },
+              {
+                "id": "transactions::131015"
+              },
+              {
+                "id": "transactions::175312"
+              },
+              {
+                "id": "transactions::203102"
+              },
+              {
+                "id": "transactions::216384"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "block_hash": "0x7b5382ce9751d381d08c5587b30e4f66dfd8eb9004d8bcae9ba04fce64693abd",
+      "block_number": 4277443,
+      "block_timestamp": 1505496823000000,
+      "from_address": "0xd94c9ff168dc6aebf9b6cc86deff54f3fb0afc33",
+      "gas": 90000,
+      "gas_price": 50000000000,
+      "hash": "0xf0bcac592729c576314c9be9841c7fbf5e4a4452c469150fea727ebbe508ab15",
+      "input": "0x",
+      "nonce": 373854,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 5721398,
+      "receipt_gas_used": 21000,
+      "receipt_root": "0xae31390a8d6cff63c1125a82535d36573b9f34cb38421a67a8bd7e0009caf1ee",
+      "receipt_status": null,
+      "to_address": "0xb9cb232bf7ee112a8cc707fe7b5e646109380560",
+      "transaction_index": 266,
+      "value": 544763910000000000
+    },
+    {
+      "block_hash": "0x7b5382ce9751d381d08c5587b30e4f66dfd8eb9004d8bcae9ba04fce64693abd",
+      "block_number": 4277443,
+      "block_timestamp": 1505496823000000,
+      "from_address": "0xd94c9ff168dc6aebf9b6cc86deff54f3fb0afc33",
+      "gas": 90000,
+      "gas_price": 50000000000,
+      "hash": "0x003d3eb4ad1269f0338eb03a2b02990979ae53b850f316883456b1125d545e76",
+      "input": "0x",
+      "nonce": 373641,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 1229733,
+      "receipt_gas_used": 21000,
+      "receipt_root": "0x114a09249490eb9b0baa175d1d49d90ccdbd515b5731f0cd72612ce378c0526a",
+      "receipt_status": null,
+      "to_address": "0xb786b5faa4d5657b9b8d2282c3bfd03ed1b5c84c",
+      "transaction_index": 53,
+      "value": 6790000018941675520
+    },
+    {
+      "block_hash": "0x7b5382ce9751d381d08c5587b30e4f66dfd8eb9004d8bcae9ba04fce64693abd",
+      "block_number": 4277443,
+      "block_timestamp": 1505496823000000,
+      "from_address": "0xd94c9ff168dc6aebf9b6cc86deff54f3fb0afc33",
+      "gas": 90000,
+      "gas_price": 50000000000,
+      "hash": "0x59ce787f84a10b7e92f8754bd482759f4f951ff54ce23a6c0df20c9a41a89c85",
+      "input": "0x",
+      "nonce": 373611,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 599682,
+      "receipt_gas_used": 21000,
+      "receipt_root": "0x976ece903e3b0cd229bce396f04e853e94f813baec6c61738b13bf304baae2e2",
+      "receipt_status": null,
+      "to_address": "0x655cf210d9d67502a7ed563cbe0404c83c78d40d",
+      "transaction_index": 23,
+      "value": 12366389763871336000
+    },
+    {
+      "block_hash": "0xc1c2c3b32a7065d33495782ea4b7434bc201e0cb828396ac7c6a2a9015184033",
+      "block_number": 7138243,
+      "block_timestamp": 1548663893000000,
+      "from_address": "0x14feaf2e4c5033581c1463df8b34bb2307f375c9",
+      "gas": 21000,
+      "gas_price": 11000000000,
+      "hash": "0xfcf659c13f2526d8409de08bdf0b7e0e31fcbe6b3dc097a6eb180649a721c53d",
+      "input": "0x",
+      "nonce": 0,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 152486,
+      "receipt_gas_used": 21000,
+      "receipt_root": null,
+      "receipt_status": 1,
+      "to_address": "0x731d358cba339d9684a1d97eaf81d25957e3d76e",
+      "transaction_index": 4,
+      "value": 1.8285326836851773e+20
+    },
+    {
+      "block_hash": "0x0808a18596f76853ea83eb3d633e2ebc96b2d0b99410533b3ba4507cbdc33e2c",
+      "block_number": 7138755,
+      "block_timestamp": 1548672901000000,
+      "from_address": "0x8b95a26c2cab721892cee3a562bd632f1a1b3bdc",
+      "gas": 21000,
+      "gas_price": 56000000000,
+      "hash": "0x656e2df9cd39db39d42da16ab518c0e3adfbdeda3ee4ea94b3a15ac66b38ebc8",
+      "input": "0x",
+      "nonce": 49,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 603547,
+      "receipt_gas_used": 21000,
+      "receipt_root": null,
+      "receipt_status": 1,
+      "to_address": "0x5e032243d507c743b061ef021e2ec7fcc6d3ab89",
+      "transaction_index": 27,
+      "value": 9998824000000000000
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`TagId` = 2304",
+        "properties": {
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1008,
+              2078,
+              4312,
+              5867,
+              14387
+            ],
+            "type": "number"
+          },
+          "KernelId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              90782,
+              160689,
+              358835,
+              406690,
+              435514
+            ],
+            "type": "number"
+          },
+          "TagId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2304
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "kerneltags::0",
+                  "kerneltags::1",
+                  "kerneltags::2",
+                  "kerneltags::3",
+                  "kerneltags::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "kerneltags::0"
+              },
+              {
+                "id": "kerneltags::1"
+              },
+              {
+                "id": "kerneltags::2"
+              },
+              {
+                "id": "kerneltags::3"
+              },
+              {
+                "id": "kerneltags::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Id": 1008,
+      "KernelId": 358835,
+      "TagId": 2304
+    },
+    {
+      "Id": 2078,
+      "KernelId": 406690,
+      "TagId": 2304
+    },
+    {
+      "Id": 5867,
+      "KernelId": 90782,
+      "TagId": 2304
+    },
+    {
+      "Id": 4312,
+      "KernelId": 435514,
+      "TagId": 2304
+    },
+    {
+      "Id": 14387,
+      "KernelId": 160689,
+      "TagId": 2304
+    }
+  ]
+}

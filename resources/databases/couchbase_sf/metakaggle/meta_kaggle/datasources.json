@@ -1,0 +1,148 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Type` = \"Dataset\"",
+        "properties": {
+          "CreationDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1579269613000000,
+              1579359348000000,
+              1579368003000000,
+              1596301140000000,
+              1716275091000000
+            ],
+            "type": "number"
+          },
+          "CreatorUserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3867392,
+              4456704,
+              19595776
+            ],
+            "type": "number"
+          },
+          "CurrentDatasourceVersionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              923765,
+              925571,
+              925744,
+              1421532,
+              8617480
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              497665,
+              498859,
+              498982,
+              831351,
+              5145157
+            ],
+            "type": "number"
+          },
+          "Type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Dataset"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "datasources::0",
+                  "datasources::1",
+                  "datasources::2",
+                  "datasources::3",
+                  "datasources::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "datasources::0"
+              },
+              {
+                "id": "datasources::1"
+              },
+              {
+                "id": "datasources::2"
+              },
+              {
+                "id": "datasources::3"
+              },
+              {
+                "id": "datasources::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CreationDate": 1596301140000000,
+      "CreatorUserId": 4456704,
+      "CurrentDatasourceVersionId": 1421532,
+      "Id": 831351,
+      "Type": "Dataset"
+    },
+    {
+      "CreationDate": 1579368003000000,
+      "CreatorUserId": 3867392,
+      "CurrentDatasourceVersionId": 925744,
+      "Id": 498982,
+      "Type": "Dataset"
+    },
+    {
+      "CreationDate": 1579359348000000,
+      "CreatorUserId": 3867392,
+      "CurrentDatasourceVersionId": 925571,
+      "Id": 498859,
+      "Type": "Dataset"
+    },
+    {
+      "CreationDate": 1716275091000000,
+      "CreatorUserId": 19595776,
+      "CurrentDatasourceVersionId": 8617480,
+      "Id": 5145157,
+      "Type": "Dataset"
+    },
+    {
+      "CreationDate": 1579269613000000,
+      "CreatorUserId": 3867392,
+      "CurrentDatasourceVersionId": 923765,
+      "Id": 497665,
+      "Type": "Dataset"
+    }
+  ]
+}

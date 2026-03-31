@@ -1,0 +1,133 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              28,
+              30,
+              33,
+              45,
+              46
+            ],
+            "type": "number"
+          },
+          "JoinDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-09-28",
+              "2016-10-04",
+              "2016-10-17"
+            ],
+            "type": "string"
+          },
+          "OrganizationId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              5,
+              9,
+              10
+            ],
+            "type": "number"
+          },
+          "UserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              35250,
+              56281,
+              99783,
+              346825,
+              724814
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "userorganizations::0",
+                  "userorganizations::1",
+                  "userorganizations::2",
+                  "userorganizations::3",
+                  "userorganizations::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "userorganizations::0"
+              },
+              {
+                "id": "userorganizations::1"
+              },
+              {
+                "id": "userorganizations::2"
+              },
+              {
+                "id": "userorganizations::3"
+              },
+              {
+                "id": "userorganizations::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Id": 33,
+      "JoinDate": "2016-10-04",
+      "OrganizationId": 5,
+      "UserId": 724814
+    },
+    {
+      "Id": 45,
+      "JoinDate": "2016-10-17",
+      "OrganizationId": 3,
+      "UserId": 99783
+    },
+    {
+      "Id": 46,
+      "JoinDate": "2016-10-17",
+      "OrganizationId": 3,
+      "UserId": 346825
+    },
+    {
+      "Id": 28,
+      "JoinDate": "2016-09-28",
+      "OrganizationId": 9,
+      "UserId": 35250
+    },
+    {
+      "Id": 30,
+      "JoinDate": "2016-09-28",
+      "OrganizationId": 10,
+      "UserId": 56281
+    }
+  ]
+}

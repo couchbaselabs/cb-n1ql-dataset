@@ -1,0 +1,142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `ValidFrom` = 1356998400000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "ColorID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "ColorName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Azure",
+              "Beige",
+              "Black",
+              "Blue",
+              "Charcoal"
+            ],
+            "type": "string"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_colors::0",
+                  "warehouse_colors::1",
+                  "warehouse_colors::2",
+                  "warehouse_colors::3",
+                  "warehouse_colors::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_colors::0"
+              },
+              {
+                "id": "warehouse_colors::1"
+              },
+              {
+                "id": "warehouse_colors::2"
+              },
+              {
+                "id": "warehouse_colors::3"
+              },
+              {
+                "id": "warehouse_colors::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ColorID": 2,
+      "ColorName": "Beige",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "ColorID": 4,
+      "ColorName": "Blue",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "ColorID": 1,
+      "ColorName": "Azure",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "ColorID": 3,
+      "ColorName": "Black",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "ColorID": 5,
+      "ColorName": "Charcoal",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

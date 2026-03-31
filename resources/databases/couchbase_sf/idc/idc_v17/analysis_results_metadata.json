@@ -1,0 +1,310 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Access` = \"Public\", `license_long_name` = \"Creative Commons Attribution 3....\", `license_short_name` = \"CC BY 3.0\", `license_url` = \"https://creativecommons.org/lic...\"",
+        "properties": {
+          "Access": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Public"
+            ],
+            "type": "string"
+          },
+          "AnalysisArtifacts": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DICOM SR descriptions of patie...",
+              "Organ Segmentations",
+              "Organ segmentations",
+              "Tumor segmentations"
+            ],
+            "type": "string"
+          },
+          "AnalysisArtifactsonTCIA": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DICOM SR descriptions of patie...",
+              "Organ Segmentations",
+              "Organ segmentations",
+              "Tumor segmentations"
+            ],
+            "type": "string"
+          },
+          "CancerType": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Breast",
+              "Lung",
+              "Prostate"
+            ],
+            "type": "string"
+          },
+          "Collections": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "breast_diagnosis,breast_mri_na...",
+              "lidc_idri,lung_phantom,qin_lun...",
+              "prostatex",
+              "rider_lung_ct"
+            ],
+            "type": "string"
+          },
+          "DOI": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10.7937/k9/tcia.2015.1buvfjr7",
+              "10.7937/tcia.2019.deg7zg1u",
+              "10.7937/tcia.2019.wgllssg1",
+              "10.7937/tcia.2020.jit9grk8",
+              "10.7937/tcia.nbb4-4655"
+            ],
+            "type": "string"
+          },
+          "Description": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "<p> This collection contains 6...",
+              "<p> This collection contains c...",
+              "<p> This collection contains l...",
+              "<p> This collection contains m...",
+              "<p> This collection contains p..."
+            ],
+            "type": "string"
+          },
+          "ID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DICOM-SR-Breast-Clinical",
+              "PROSTATEx-Seg-HiRes",
+              "PROSTATEx-Seg-Zones",
+              "QIN-LungCT-Seg",
+              "RIDER-LungCT-Seg"
+            ],
+            "type": "string"
+          },
+          "Location": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Breast",
+              "Chest",
+              "Prostate"
+            ],
+            "type": "string"
+          },
+          "Subjects": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              31,
+              66,
+              98,
+              474
+            ],
+            "type": "number"
+          },
+          "Title": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DICOM SR of clinical data and ...",
+              "High Resolution Prostate Segme...",
+              "PROSTATEx Zone Segmentations",
+              "QIN multi-site collection of L...",
+              "RIDER Lung CT Segmentation Lab..."
+            ],
+            "type": "string"
+          },
+          "Updated": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-12-18",
+              "2020-02-13",
+              "2020-05-28",
+              "2020-09-22",
+              "2020-11-30"
+            ],
+            "type": "string"
+          },
+          "license_long_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Creative Commons Attribution 3..."
+            ],
+            "type": "string"
+          },
+          "license_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CC BY 3.0"
+            ],
+            "type": "string"
+          },
+          "license_url": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "https://creativecommons.org/li..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "analysis_results_metadata::0",
+                  "analysis_results_metadata::1",
+                  "analysis_results_metadata::2",
+                  "analysis_results_metadata::3",
+                  "analysis_results_metadata::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "analysis_results_metadata::0"
+              },
+              {
+                "id": "analysis_results_metadata::1"
+              },
+              {
+                "id": "analysis_results_metadata::2"
+              },
+              {
+                "id": "analysis_results_metadata::3"
+              },
+              {
+                "id": "analysis_results_metadata::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Access": "Public",
+      "AnalysisArtifacts": "Organ segmentations",
+      "AnalysisArtifactsonTCIA": "Organ segmentations",
+      "CancerType": "Prostate",
+      "Collections": "prostatex",
+      "DOI": "10.7937/tcia.2019.deg7zg1u",
+      "Description": "<p> This collection contains 66 high resolution automatic CNN-based segmentations of the prostate gland for randomly chosen T2-weighted volumes of the SPIE-AAPM-NCI PROSTATEx Challenges (PROSTATEx).</p> \n<p>  Please see the <a class=\"external-link\" href=\"\" url=\"https://doi.org/10.7937/TCIA.2019.DEG7ZG1U\" data-toggle=\"modal\" data-target=\"#external-web-warning\">PROSTATEx-Seg-HiRes <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a> wiki page to learn more about the images and to obtain any supporting metadata for this collection.</p>",
+      "ID": "PROSTATEx-Seg-HiRes",
+      "Location": "Prostate",
+      "Subjects": 66,
+      "Title": "High Resolution Prostate Segmentations for the ProstateX-Challenge",
+      "Updated": "2020-09-22",
+      "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+      "license_short_name": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "Access": "Public",
+      "AnalysisArtifacts": "Tumor segmentations",
+      "AnalysisArtifactsonTCIA": "Tumor segmentations",
+      "CancerType": "Lung",
+      "Collections": "rider_lung_ct",
+      "DOI": "10.7937/tcia.2020.jit9grk8",
+      "Description": "<p> This collection contains manual and automatic segmentations of the gross tumor volume for the RIDER Lung CT collection.</p> \n<p>  Please see the <a class=\"external-link\" href=\"\" url=\"https://doi.org/10.7937/tcia.2020.jit9grk8\" data-toggle=\"modal\" data-target=\"#external-web-warning\">RIDER-LungCT-Seg <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a> wiki page to learn more about the images and to obtain any supporting metadata for this collection.</p>",
+      "ID": "RIDER-LungCT-Seg",
+      "Location": "Chest",
+      "Subjects": 31,
+      "Title": "RIDER Lung CT Segmentation Labels from: Decoding tumour phenotype by noninvasive imaging using a quantitative radiomics approach",
+      "Updated": "2020-02-13",
+      "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+      "license_short_name": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "Access": "Public",
+      "AnalysisArtifacts": "DICOM SR descriptions of patient characteristics, histopathology, receptor status and clinical findings including measurements.",
+      "AnalysisArtifactsonTCIA": "DICOM SR descriptions of patient characteristics, histopathology, receptor status and clinical findings including measurements.",
+      "CancerType": "Breast",
+      "Collections": "breast_diagnosis,breast_mri_nact_pilot,ispy1,tcga_brca",
+      "DOI": "10.7937/tcia.2019.wgllssg1",
+      "Description": "<p> This collection contains clinical metadata corresponding to several breast imaging collections harmonized into DICOM SR representation, generated by the Data Integration & Imaging Informatics (DI-Cubed) project.</p> \n<p>  Please see the <a class=\"external-link\" href=\"\" url=\"https://doi.org/10.7937/TCIA.2019.wgllssg1\" data-toggle=\"modal\" data-target=\"#external-web-warning\">DICOM-SR-Breast-Clinical <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a> wiki page to learn more about the images and to obtain any supporting metadata for this collection.</p>",
+      "ID": "DICOM-SR-Breast-Clinical",
+      "Location": "Breast",
+      "Subjects": 474,
+      "Title": "DICOM SR of clinical data and measurement for breast cancer collections to TCIA",
+      "Updated": "2020-05-28",
+      "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+      "license_short_name": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "Access": "Public",
+      "AnalysisArtifacts": "Tumor segmentations",
+      "AnalysisArtifactsonTCIA": "Tumor segmentations",
+      "CancerType": "Lung",
+      "Collections": "lidc_idri,lung_phantom,qin_lung_ct,rider_lung_ct",
+      "DOI": "10.7937/k9/tcia.2015.1buvfjr7",
+      "Description": "<p> This collection contains lung nodule segmentations obtained using segmentation tools that participated in the QIN challenge \u201cmoist run\u201d initiative.</p> \n<p>  Please see the <a class=\"external-link\" href=\"\" url=\"https://doi.org/10.7937/K9/TCIA.2015.1BUVFJR7\" data-toggle=\"modal\" data-target=\"#external-web-warning\">QIN-LungCT-Seg <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a> wiki page to learn more about the images and to obtain any supporting metadata for this collection.</p>",
+      "ID": "QIN-LungCT-Seg",
+      "Location": "Chest",
+      "Subjects": 31,
+      "Title": "QIN multi-site collection of Lung CT data with Nodule Segmentations",
+      "Updated": "2018-12-18",
+      "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+      "license_short_name": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "Access": "Public",
+      "AnalysisArtifacts": "Organ Segmentations",
+      "AnalysisArtifactsonTCIA": "Organ Segmentations",
+      "CancerType": "Prostate",
+      "Collections": "prostatex",
+      "DOI": "10.7937/tcia.nbb4-4655",
+      "Description": "<p> This collection contains prostate\u2019s CNN-based automatic zonal segmentation for 98 cases randomly selected from the SPIE-AAPM-NCI PROSTATEx Challenges (PROSTATEx). The four-class segmentation encompasses the peripheral zone, transition zone, fibromuscular stroma and the distal prostatic urethra.</p> \n<p>  Please see the <a class=\"external-link\" href=\"\" url=\"https://doi.org/10.7937/tcia.nbb4-4655\" data-toggle=\"modal\" data-target=\"#external-web-warning\">PROSTATEx-Seg-Zones <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a> wiki page to learn more about the images and to obtain any supporting metadata for this collection.</p>",
+      "ID": "PROSTATEx-Seg-Zones",
+      "Location": "Prostate",
+      "Subjects": 98,
+      "Title": "PROSTATEx Zone Segmentations",
+      "Updated": "2020-11-30",
+      "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+      "license_short_name": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  ]
+}

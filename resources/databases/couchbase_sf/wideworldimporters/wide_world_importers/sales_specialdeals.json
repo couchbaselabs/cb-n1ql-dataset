@@ -1,0 +1,206 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 2,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`CustomerCategoryID` = \"NULL\", `CustomerID` = \"NULL\", `DiscountAmount` = \"NULL\", `LastEditedBy` = 2, `LastEditedWhen` = 1451577600000000, `StockGroupID` = 7, `StockItemID` = \"NULL\", `UnitPrice` = \"NULL\"",
+        "properties": {
+          "BuyingGroupID": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "CustomerCategoryID": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "CustomerID": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "DealDescription": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10% 1st qtr USB Wingtip",
+              "15% 2nd qtr USB Tailspin"
+            ],
+            "type": "string"
+          },
+          "DiscountAmount": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "DiscountPercentage": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              15
+            ],
+            "type": "number"
+          },
+          "EndDate": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-03-31",
+              "2016-06-30"
+            ],
+            "type": "string"
+          },
+          "LastEditedBy": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1451577600000000
+            ],
+            "type": "number"
+          },
+          "SpecialDealID": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "StartDate": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-01-01",
+              "2016-04-01"
+            ],
+            "type": "string"
+          },
+          "StockGroupID": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7
+            ],
+            "type": "number"
+          },
+          "StockItemID": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "UnitPrice": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 2,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 2,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_specialdeals::0",
+                  "sales_specialdeals::1"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_specialdeals::0"
+              },
+              {
+                "id": "sales_specialdeals::1"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BuyingGroupID": 1,
+      "CustomerCategoryID": "NULL",
+      "CustomerID": "NULL",
+      "DealDescription": "15% 2nd qtr USB Tailspin",
+      "DiscountAmount": "NULL",
+      "DiscountPercentage": 15,
+      "EndDate": "2016-06-30",
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1451577600000000,
+      "SpecialDealID": 2,
+      "StartDate": "2016-04-01",
+      "StockGroupID": 7,
+      "StockItemID": "NULL",
+      "UnitPrice": "NULL"
+    },
+    {
+      "BuyingGroupID": 2,
+      "CustomerCategoryID": "NULL",
+      "CustomerID": "NULL",
+      "DealDescription": "10% 1st qtr USB Wingtip",
+      "DiscountAmount": "NULL",
+      "DiscountPercentage": 10,
+      "EndDate": "2016-03-31",
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1451577600000000,
+      "SpecialDealID": 1,
+      "StartDate": "2016-01-01",
+      "StockGroupID": 7,
+      "StockItemID": "NULL",
+      "UnitPrice": "NULL"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`aliquot_barcode` = \"TCGA-04-1348-01A-01R-1565-13\", `case_barcode` = \"TCGA-04-1348\", `platform` = \"IlluminaHiSeq\", `project_short_name` = \"TCGA-OV\", `sample_barcode` = \"TCGA-04-1348-01A\"",
+        "properties": {
+          "HGNC_gene_symbol": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GBP7",
+              "GLRB",
+              "IGSF22",
+              "KCNE1",
+              "WDR19"
+            ],
+            "type": "string"
+          },
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1348-01A-01R-1565-13"
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1348"
+            ],
+            "type": "string"
+          },
+          "gene_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2743,
+              3753,
+              57728,
+              283284,
+              388646
+            ],
+            "type": "number"
+          },
+          "normalized_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2.619,
+              5.9156,
+              17.5585,
+              28.7712,
+              369.9919
+            ],
+            "type": "number"
+          },
+          "original_gene_symbol": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GBP7",
+              "GLRB",
+              "IGSF22",
+              "KCNE1",
+              "WDR19"
+            ],
+            "type": "string"
+          },
+          "platform": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IlluminaHiSeq"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-OV"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1348-01A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "rnaseq_hg19_gdc_2017_02::0",
+                  "rnaseq_hg19_gdc_2017_02::1",
+                  "rnaseq_hg19_gdc_2017_02::2",
+                  "rnaseq_hg19_gdc_2017_02::3",
+                  "rnaseq_hg19_gdc_2017_02::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::0"
+              },
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::1"
+              },
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::2"
+              },
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::3"
+              },
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "HGNC_gene_symbol": "KCNE1",
+      "aliquot_barcode": "TCGA-04-1348-01A-01R-1565-13",
+      "case_barcode": "TCGA-04-1348",
+      "gene_id": 3753,
+      "normalized_count": 5.9156,
+      "original_gene_symbol": "KCNE1",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1348-01A"
+    },
+    {
+      "HGNC_gene_symbol": "GLRB",
+      "aliquot_barcode": "TCGA-04-1348-01A-01R-1565-13",
+      "case_barcode": "TCGA-04-1348",
+      "gene_id": 2743,
+      "normalized_count": 28.7712,
+      "original_gene_symbol": "GLRB",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1348-01A"
+    },
+    {
+      "HGNC_gene_symbol": "WDR19",
+      "aliquot_barcode": "TCGA-04-1348-01A-01R-1565-13",
+      "case_barcode": "TCGA-04-1348",
+      "gene_id": 57728,
+      "normalized_count": 369.9919,
+      "original_gene_symbol": "WDR19",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1348-01A"
+    },
+    {
+      "HGNC_gene_symbol": "IGSF22",
+      "aliquot_barcode": "TCGA-04-1348-01A-01R-1565-13",
+      "case_barcode": "TCGA-04-1348",
+      "gene_id": 283284,
+      "normalized_count": 17.5585,
+      "original_gene_symbol": "IGSF22",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1348-01A"
+    },
+    {
+      "HGNC_gene_symbol": "GBP7",
+      "aliquot_barcode": "TCGA-04-1348-01A-01R-1565-13",
+      "case_barcode": "TCGA-04-1348",
+      "gene_id": 388646,
+      "normalized_count": 2.619,
+      "original_gene_symbol": "GBP7",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-04-1348-01A"
+    }
+  ]
+}

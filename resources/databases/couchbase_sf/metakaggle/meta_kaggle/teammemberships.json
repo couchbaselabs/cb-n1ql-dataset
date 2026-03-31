@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              17955,
+              18500,
+              18532,
+              18680,
+              18798
+            ],
+            "type": "number"
+          },
+          "RequestDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TeamId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3223,
+              4091,
+              4158,
+              4302,
+              4415
+            ],
+            "type": "number"
+          },
+          "UserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4019,
+              5412,
+              5525,
+              7034,
+              10128
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "teammemberships::0",
+                  "teammemberships::1",
+                  "teammemberships::2",
+                  "teammemberships::3",
+                  "teammemberships::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "teammemberships::0"
+              },
+              {
+                "id": "teammemberships::1"
+              },
+              {
+                "id": "teammemberships::2"
+              },
+              {
+                "id": "teammemberships::3"
+              },
+              {
+                "id": "teammemberships::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Id": 18798,
+      "RequestDate": null,
+      "TeamId": 4415,
+      "UserId": 10128
+    },
+    {
+      "Id": 17955,
+      "RequestDate": null,
+      "TeamId": 3223,
+      "UserId": 5525
+    },
+    {
+      "Id": 18680,
+      "RequestDate": null,
+      "TeamId": 4302,
+      "UserId": 4019
+    },
+    {
+      "Id": 18500,
+      "RequestDate": null,
+      "TeamId": 4091,
+      "UserId": 7034
+    },
+    {
+      "Id": 18532,
+      "RequestDate": null,
+      "TeamId": 4158,
+      "UserId": 5412
+    }
+  ]
+}

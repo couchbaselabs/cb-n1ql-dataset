@@ -1,0 +1,142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `ValidFrom` = 1356998400000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "TransactionTypeID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "TransactionTypeName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Customer Credit Note",
+              "Customer Invoice",
+              "Customer Payment Received",
+              "Customer Refund",
+              "Supplier Invoice"
+            ],
+            "type": "string"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "application_transactiontypes::...",
+                  "application_transactiontypes::...",
+                  "application_transactiontypes::...",
+                  "application_transactiontypes::...",
+                  "application_transactiontypes::..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "application_transactiontypes::0"
+              },
+              {
+                "id": "application_transactiontypes::1"
+              },
+              {
+                "id": "application_transactiontypes::2"
+              },
+              {
+                "id": "application_transactiontypes::3"
+              },
+              {
+                "id": "application_transactiontypes::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LastEditedBy": 1,
+      "TransactionTypeID": 4,
+      "TransactionTypeName": "Customer Refund",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "TransactionTypeID": 1,
+      "TransactionTypeName": "Customer Invoice",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "TransactionTypeID": 2,
+      "TransactionTypeName": "Customer Credit Note",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "TransactionTypeID": 3,
+      "TransactionTypeName": "Customer Payment Received",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "TransactionTypeID": 5,
+      "TransactionTypeName": "Supplier Invoice",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

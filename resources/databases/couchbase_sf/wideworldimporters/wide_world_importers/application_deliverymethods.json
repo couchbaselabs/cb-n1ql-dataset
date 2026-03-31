@@ -1,0 +1,142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `ValidFrom` = 1356998400000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "DeliveryMethodID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "type": "number"
+          },
+          "DeliveryMethodName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Courier",
+              "Customer Collect",
+              "Customer Courier to Collect",
+              "Delivery Van",
+              "Post"
+            ],
+            "type": "string"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "application_deliverymethods::0",
+                  "application_deliverymethods::1",
+                  "application_deliverymethods::2",
+                  "application_deliverymethods::3",
+                  "application_deliverymethods::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "application_deliverymethods::0"
+              },
+              {
+                "id": "application_deliverymethods::1"
+              },
+              {
+                "id": "application_deliverymethods::2"
+              },
+              {
+                "id": "application_deliverymethods::3"
+              },
+              {
+                "id": "application_deliverymethods::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "DeliveryMethodID": 3,
+      "DeliveryMethodName": "Delivery Van",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "DeliveryMethodID": 2,
+      "DeliveryMethodName": "Courier",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "DeliveryMethodID": 6,
+      "DeliveryMethodName": "Customer Courier to Collect",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "DeliveryMethodID": 4,
+      "DeliveryMethodName": "Customer Collect",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "DeliveryMethodID": 1,
+      "DeliveryMethodName": "Post",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

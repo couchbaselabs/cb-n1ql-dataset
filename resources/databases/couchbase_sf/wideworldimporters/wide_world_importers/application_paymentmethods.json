@@ -1,0 +1,131 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 4,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`ValidTo` = 253402300799999999",
+        "properties": {
+          "LastEditedBy": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              9
+            ],
+            "type": "number"
+          },
+          "PaymentMethodID": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "PaymentMethodName": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cash",
+              "Check",
+              "Credit-Card",
+              "EFT"
+            ],
+            "type": "string"
+          },
+          "ValidFrom": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000,
+              1451664000000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 4,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 4,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "application_paymentmethods::0",
+                  "application_paymentmethods::1",
+                  "application_paymentmethods::2",
+                  "application_paymentmethods::3"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "application_paymentmethods::0"
+              },
+              {
+                "id": "application_paymentmethods::1"
+              },
+              {
+                "id": "application_paymentmethods::2"
+              },
+              {
+                "id": "application_paymentmethods::3"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LastEditedBy": 9,
+      "PaymentMethodID": 3,
+      "PaymentMethodName": "Credit-Card",
+      "ValidFrom": 1451664000000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "PaymentMethodID": 2,
+      "PaymentMethodName": "Check",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "PaymentMethodID": 1,
+      "PaymentMethodName": "Cash",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "LastEditedBy": 1,
+      "PaymentMethodID": 4,
+      "PaymentMethodName": "EFT",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`AliquotBarcode` = \"TCGA-04-1331-01A-01R-1569-13\", `Corrected` = \"Corrected\", `ParticipantBarcode` = \"TCGA-04-1331\", `SampleBarcode` = \"TCGA-04-1331-01A\", `SampleType` = \"Primary solid Tumor\", `SampleTypeLetterCode` = \"TP\", `Study` = \"OV\"",
+        "properties": {
+          "AliquotBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331-01A-01R-1569-13"
+            ],
+            "type": "string"
+          },
+          "Corrected": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Corrected"
+            ],
+            "type": "string"
+          },
+          "ID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "hsa-miR-129-2-3p",
+              "hsa-miR-3130-5p",
+              "hsa-miR-454-3p",
+              "hsa-miR-501-5p",
+              "hsa-miR-760"
+            ],
+            "type": "string"
+          },
+          "ParticipantBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331"
+            ],
+            "type": "string"
+          },
+          "SampleBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331-01A"
+            ],
+            "type": "string"
+          },
+          "SampleType": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Primary solid Tumor"
+            ],
+            "type": "string"
+          },
+          "SampleTypeLetterCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TP"
+            ],
+            "type": "string"
+          },
+          "Study": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OV"
+            ],
+            "type": "string"
+          },
+          "miRNAexpr": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.274879,
+              1.924155,
+              7.696621,
+              35.184554,
+              47.554124
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pancanmirs_ebadjonprotocolplat...",
+                  "pancanmirs_ebadjonprotocolplat...",
+                  "pancanmirs_ebadjonprotocolplat...",
+                  "pancanmirs_ebadjonprotocolplat...",
+                  "pancanmirs_ebadjonprotocolplat..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pancanmirs_ebadjonprotocolplatformwithoutrepswithuncorrectmirs_08_04_16_filtered::0"
+              },
+              {
+                "id": "pancanmirs_ebadjonprotocolplatformwithoutrepswithuncorrectmirs_08_04_16_filtered::1"
+              },
+              {
+                "id": "pancanmirs_ebadjonprotocolplatformwithoutrepswithuncorrectmirs_08_04_16_filtered::2"
+              },
+              {
+                "id": "pancanmirs_ebadjonprotocolplatformwithoutrepswithuncorrectmirs_08_04_16_filtered::3"
+              },
+              {
+                "id": "pancanmirs_ebadjonprotocolplatformwithoutrepswithuncorrectmirs_08_04_16_filtered::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AliquotBarcode": "TCGA-04-1331-01A-01R-1569-13",
+      "Corrected": "Corrected",
+      "ID": "hsa-miR-501-5p",
+      "ParticipantBarcode": "TCGA-04-1331",
+      "SampleBarcode": "TCGA-04-1331-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "miRNAexpr": 7.696621
+    },
+    {
+      "AliquotBarcode": "TCGA-04-1331-01A-01R-1569-13",
+      "Corrected": "Corrected",
+      "ID": "hsa-miR-129-2-3p",
+      "ParticipantBarcode": "TCGA-04-1331",
+      "SampleBarcode": "TCGA-04-1331-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "miRNAexpr": 1.924155
+    },
+    {
+      "AliquotBarcode": "TCGA-04-1331-01A-01R-1569-13",
+      "Corrected": "Corrected",
+      "ID": "hsa-miR-3130-5p",
+      "ParticipantBarcode": "TCGA-04-1331",
+      "SampleBarcode": "TCGA-04-1331-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "miRNAexpr": 35.184554
+    },
+    {
+      "AliquotBarcode": "TCGA-04-1331-01A-01R-1569-13",
+      "Corrected": "Corrected",
+      "ID": "hsa-miR-454-3p",
+      "ParticipantBarcode": "TCGA-04-1331",
+      "SampleBarcode": "TCGA-04-1331-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "miRNAexpr": 0.274879
+    },
+    {
+      "AliquotBarcode": "TCGA-04-1331-01A-01R-1569-13",
+      "Corrected": "Corrected",
+      "ID": "hsa-miR-760",
+      "ParticipantBarcode": "TCGA-04-1331",
+      "SampleBarcode": "TCGA-04-1331-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "miRNAexpr": 47.554124
+    }
+  ]
+}

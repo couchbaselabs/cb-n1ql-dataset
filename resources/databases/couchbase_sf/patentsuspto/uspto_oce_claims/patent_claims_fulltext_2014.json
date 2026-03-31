@@ -1,0 +1,173 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`appl_id` = \"12473471\", `pat_no` = \"8775932\"",
+        "properties": {
+          "appl_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "12473471"
+            ],
+            "type": "string"
+          },
+          "claim_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "18",
+              "20",
+              "23",
+              "3"
+            ],
+            "type": "string"
+          },
+          "claim_txt": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1. A color management system c...",
+              "18. The method of claim 17, wh...",
+              "20. The method of claim 19, wh...",
+              "23. The method of claim 17, fu...",
+              "3. The system of claim 2, wher..."
+            ],
+            "type": "string"
+          },
+          "dependencies": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "17",
+                "19",
+                "2"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ind_flg": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "1"
+            ],
+            "type": "string"
+          },
+          "pat_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "8775932"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "patent_claims_fulltext_2014::0",
+                  "patent_claims_fulltext_2014::1",
+                  "patent_claims_fulltext_2014::2",
+                  "patent_claims_fulltext_2014::3",
+                  "patent_claims_fulltext_2014::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "patent_claims_fulltext_2014::0"
+              },
+              {
+                "id": "patent_claims_fulltext_2014::1"
+              },
+              {
+                "id": "patent_claims_fulltext_2014::2"
+              },
+              {
+                "id": "patent_claims_fulltext_2014::3"
+              },
+              {
+                "id": "patent_claims_fulltext_2014::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "appl_id": "12473471",
+      "claim_no": "1",
+      "claim_txt": "1. A color management system comprising: a non-transitory computer readable memory which stores a guided natural language interface, the guided natural language interface comprising a set of issue description templates, each of the issue description templates being configured for guiding a user in formulating a problem statement, the user-formulated problem statement characterizing, in natural language, a perceived problem related to color identified in an input document and color of the input document when rendered on an associated printer; and a plurality of automated problem detectors which operate on an input document, each of the automated problem detectors being configured for automatically identifying a respective color-related problem when there is an expected difference in color between the input document and color of the input document when it is rendered using characteristics of a specific printer, each detector being configured to provide input to the guided natural language interface when the detector detects the color-related problem for the input document, the detector input specifying one of the set of issue description templates or being used for partially filling in one of the issue description templates based on the identified color-related problem; the guided natural language interface further comprising a natural language rendering engine, executed by a processor, which is configured for receiving information input by at least one of the user and at least one of the problem detectors, and which instantiates one of the issue description templates in response to receiving the information input by the at least one of the user and the at least one problem detector, the natural language rendering engine configured for presenting the problem statement and accepting user input to refine the problem statement in accordance with options provided from the instantiated template, and communicating information based on the refined problem statement to an associated color management problem corrector.",
+      "dependencies": null,
+      "ind_flg": "1",
+      "pat_no": "8775932"
+    },
+    {
+      "appl_id": "12473471",
+      "claim_no": "18",
+      "claim_txt": "18. The method of claim 17, wherein the issue description nodes include text nodes which support generation of syntactically correct text strings in the problem statement, in which text content of the text node is filled or modified in response to features of other nodes.",
+      "dependencies": "17",
+      "ind_flg": "0",
+      "pat_no": "8775932"
+    },
+    {
+      "appl_id": "12473471",
+      "claim_no": "23",
+      "claim_txt": "23. The method of claim 17, further comprising annotating the image with the problem statement.",
+      "dependencies": "17",
+      "ind_flg": "0",
+      "pat_no": "8775932"
+    },
+    {
+      "appl_id": "12473471",
+      "claim_no": "3",
+      "claim_txt": "3. The system of claim 2, wherein the field nodes are interactive nodes in which text content of the field nodes is filled or modified in response to inputs by at least one of the user and a problem detector.",
+      "dependencies": "2",
+      "ind_flg": "0",
+      "pat_no": "8775932"
+    },
+    {
+      "appl_id": "12473471",
+      "claim_no": "20",
+      "claim_txt": "20. The method of claim 19, wherein the corrected image is rendered on a display.",
+      "dependencies": "19",
+      "ind_flg": "0",
+      "pat_no": "8775932"
+    }
+  ]
+}

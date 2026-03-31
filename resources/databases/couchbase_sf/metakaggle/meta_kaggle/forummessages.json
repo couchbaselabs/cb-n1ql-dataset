@@ -1,0 +1,292 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ForumTopicId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              124832,
+              200171,
+              208897,
+              387996,
+              478735
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              713017,
+              1120031,
+              1141079,
+              2147385,
+              2662624
+            ],
+            "type": "number"
+          },
+          "Medal": {
+            "#docs": [
+              984,
+              16
+            ],
+            "%docs": [
+              98.4,
+              1.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1,
+                2,
+                3
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "MedalAwardDate": {
+            "#docs": [
+              984,
+              16
+            ],
+            "%docs": [
+              98.4,
+              1.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "06/05/2018",
+                "07/02/2018",
+                "07/15/2016"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Message": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "<blockquote>\n  <p><strong>Moba...",
+                "<p><a href=\"https://www.kaggle...",
+                "<p>Python, R and Julia are goo...",
+                "<p>Thanks for the help\u2026\ud83d\udc4d<...",
+                "<p>That makes sense. If I unde..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "PostDate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "01/06/2021 13:30:13",
+              "01/07/2020 20:17:31",
+              "02/16/2023 15:28:12",
+              "02/22/2024 03:06:03",
+              "12/20/2020 15:00:32"
+            ],
+            "type": "string"
+          },
+          "PostUserId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              974295,
+              3242158,
+              4704957,
+              10498692,
+              16391958
+            ],
+            "type": "number"
+          },
+          "RawMarkdown": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "&gt; **Mobassir wrote:**\n&gt; ...",
+                "Python, R and Julia are good l...",
+                "Thanks for the help...\ud83d\udc4d",
+                "That makes sense. If I underst...",
+                "marshuu nice. Keep it going!"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ReplyToForumMessageId": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                712467,
+                1119889,
+                1139613,
+                2146005,
+                2662527
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "forummessages::1159233",
+                  "forummessages::1876501",
+                  "forummessages::1963887",
+                  "forummessages::503760",
+                  "forummessages::611952"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "forummessages::1159233"
+              },
+              {
+                "id": "forummessages::1876501"
+              },
+              {
+                "id": "forummessages::1963887"
+              },
+              {
+                "id": "forummessages::503760"
+              },
+              {
+                "id": "forummessages::611952"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ForumTopicId": 87078,
+      "Id": 502564,
+      "Medal": null,
+      "MedalAwardDate": null,
+      "Message": "<p>Thanks for your answer.</p>\n\n<p>This is my way :\nI haven't your background and I probably never have it.\nI must work to optimise my model instead of working features.</p>\n\n<p>To do that, when it is a \"true\" 1 or when it's a \"true\" 0, the result of my kernel must be 0 or a high probabylity if it's 1.\nI have made some work in this direction.\nFor example, if I delete from my train set some very bad \"1\".\n(Target is 1 but my model give a very very poor result... Like 0.1 for example..)\nWhen I supress some of this row, my model give a better result...\nResult for real \"0\" is lower and the auc is better.</p>\n\n<p>I have made some submission to test... with models trained with a depleted dataset.\nResults are better or the same. 0.9\nWith this type of dataset, the real \"1\" have a highter value and the real \"0\" a lower value.\nFinality auc is same of better.</p>\n\n<p>But I need to find cut off to do that or a rule or something...\nTo do that I want to know if I suppress a value that exist in the test train or not...</p>\n\n<p>I hope</p>",
+      "PostDate": "03/28/2019 18:37:21",
+      "PostUserId": 2602271,
+      "RawMarkdown": "Thanks for your answer.\n\nThis is my way :\nI haven't your background and I probably never have it.\nI must work to optimise my model instead of working features.\n\nTo do that, when it is a \"true\" 1 or when it's a \"true\" 0, the result of my kernel must be 0 or a high probabylity if it's 1.\nI have made some work in this direction.\nFor example, if I delete from my train set some very bad \"1\".\n(Target is 1 but my model give a very very poor result... Like 0.1 for example..)\nWhen I supress some of this row, my model give a better result...\nResult for real \"0\" is lower and the auc is better.\n\nI have made some submission to test... with models trained with a depleted dataset.\nResults are better or the same. 0.9\nWith this type of dataset, the real \"1\" have a highter value and the real \"0\" a lower value.\nFinality auc is same of better.\n\nBut I need to find cut off to do that or a rule or something...\nTo do that I want to know if I suppress a value that exist in the test train or not...\n\n\nI hope",
+      "ReplyToForumMessageId": null
+    },
+    {
+      "ForumTopicId": 460061,
+      "Id": 2553495,
+      "Medal": null,
+      "MedalAwardDate": "12/08/2023",
+      "Message": "<p>Congratulations <a href=\"https://www.kaggle.com/whats2000\" target=\"_blank\">@whats2000</a>, on this achievement! Good luck!</p>",
+      "PostDate": "12/08/2023 09:52:45",
+      "PostUserId": 10857013,
+      "RawMarkdown": "Congratulations @whats2000, on this achievement! Good luck!",
+      "ReplyToForumMessageId": 2552735
+    },
+    {
+      "ForumTopicId": 26339,
+      "Id": 149381,
+      "Medal": 3,
+      "MedalAwardDate": "12/09/2016",
+      "Message": "<p>[quote=Jiahuan He;149374]</p>\n\n<p>Tom is amazing. He must saw something I didn't capture. I am really looking forward to see his solution after we finish this.</p>\n\n<p>[/quote]</p>\n\n<p>Thanks Jiahuan, I really appreciate your kind words but I am not even sure that the difference between the current first and second(s) is statistically significant. We'll know soon enough!</p>",
+      "PostDate": "12/09/2016 19:22:06",
+      "PostUserId": 582611,
+      "RawMarkdown": "[quote=Jiahuan He;149374]\r\n\r\nTom is amazing. He must saw something I didn't capture. I am really looking forward to see his solution after we finish this.\r\n\r\n[/quote]\r\n\r\nThanks Jiahuan, I really appreciate your kind words but I am not even sure that the difference between the current first and second(s) is statistically significant. We'll know soon enough!",
+      "ReplyToForumMessageId": 149374
+    },
+    {
+      "ForumTopicId": 202209,
+      "Id": 1107054,
+      "Medal": 1,
+      "MedalAwardDate": "12/09/2020",
+      "Message": "<p>2020 strikes again. Very disappointing that we're departing from tradition and there's no optimization problem this year.  \u2639\ufe0f</p>",
+      "PostDate": "12/09/2020 10:51:41",
+      "PostUserId": 918514,
+      "RawMarkdown": "2020 strikes again. Very disappointing that we're departing from tradition and there's no optimization problem this year.  \u2639\ufe0f",
+      "ReplyToForumMessageId": 1106581
+    },
+    {
+      "ForumTopicId": 45037,
+      "Id": 257233,
+      "Medal": 3,
+      "MedalAwardDate": "12/13/2017",
+      "Message": "<p>We have put the scripts and models here: <a href=\"https://github.com/ARM-software/ML-KWS-for-MCU\">https://github.com/ARM-software/ML-KWS-for-MCU</a></p>\n\n<p>We have also included the exact training commands (with all hyperparameters) to generate the models.</p>",
+      "PostDate": "12/13/2017 18:50:30",
+      "PostUserId": 1477152,
+      "RawMarkdown": "We have put the scripts and models here: https://github.com/ARM-software/ML-KWS-for-MCU\n\nWe have also included the exact training commands (with all hyperparameters) to generate the models.",
+      "ReplyToForumMessageId": 254424
+    }
+  ]
+}

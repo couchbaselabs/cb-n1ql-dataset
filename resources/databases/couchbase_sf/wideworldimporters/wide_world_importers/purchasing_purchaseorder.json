@@ -1,0 +1,250 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Comments` = \"NULL\", `ContactPersonID` = 2, `InternalComments` = \"NULL\"",
+        "properties": {
+          "Comments": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "ContactPersonID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "DeliveryMethodID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              7
+            ],
+            "type": "number"
+          },
+          "ExpectedDeliveryDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-28",
+              "2013-02-01",
+              "2013-04-10",
+              "2016-06-20"
+            ],
+            "type": "string"
+          },
+          "InternalComments": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "IsOrderFinalized": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1357714800000000,
+              1358146800000000,
+              1363935600000000,
+              1464699600000000
+            ],
+            "type": "number"
+          },
+          "OrderDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-08",
+              "2013-01-12",
+              "2013-03-21",
+              "2016-05-31"
+            ],
+            "type": "string"
+          },
+          "PurchaseOrderID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              31,
+              42,
+              138,
+              2073,
+              2074
+            ],
+            "type": "number"
+          },
+          "SupplierID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              7
+            ],
+            "type": "number"
+          },
+          "SupplierReference": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "293092",
+              "BC0280982"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "purchasing_purchaseorder::0",
+                  "purchasing_purchaseorder::1",
+                  "purchasing_purchaseorder::2",
+                  "purchasing_purchaseorder::3",
+                  "purchasing_purchaseorder::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "purchasing_purchaseorder::0"
+              },
+              {
+                "id": "purchasing_purchaseorder::1"
+              },
+              {
+                "id": "purchasing_purchaseorder::2"
+              },
+              {
+                "id": "purchasing_purchaseorder::3"
+              },
+              {
+                "id": "purchasing_purchaseorder::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Comments": "NULL",
+      "ContactPersonID": 2,
+      "DeliveryMethodID": 2,
+      "ExpectedDeliveryDate": "2013-02-01",
+      "InternalComments": "NULL",
+      "IsOrderFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1358146800000000,
+      "OrderDate": "2013-01-12",
+      "PurchaseOrderID": 42,
+      "SupplierID": 7,
+      "SupplierReference": "BC0280982"
+    },
+    {
+      "Comments": "NULL",
+      "ContactPersonID": 2,
+      "DeliveryMethodID": 7,
+      "ExpectedDeliveryDate": "2016-06-20",
+      "InternalComments": "NULL",
+      "IsOrderFinalized": 0,
+      "LastEditedBy": 1,
+      "LastEditedWhen": 1464699600000000,
+      "OrderDate": "2016-05-31",
+      "PurchaseOrderID": 2073,
+      "SupplierID": 4,
+      "SupplierReference": "293092"
+    },
+    {
+      "Comments": "NULL",
+      "ContactPersonID": 2,
+      "DeliveryMethodID": 2,
+      "ExpectedDeliveryDate": "2016-06-20",
+      "InternalComments": "NULL",
+      "IsOrderFinalized": 0,
+      "LastEditedBy": 1,
+      "LastEditedWhen": 1464699600000000,
+      "OrderDate": "2016-05-31",
+      "PurchaseOrderID": 2074,
+      "SupplierID": 7,
+      "SupplierReference": "BC0280982"
+    },
+    {
+      "Comments": "NULL",
+      "ContactPersonID": 2,
+      "DeliveryMethodID": 2,
+      "ExpectedDeliveryDate": "2013-01-28",
+      "InternalComments": "NULL",
+      "IsOrderFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1357714800000000,
+      "OrderDate": "2013-01-08",
+      "PurchaseOrderID": 31,
+      "SupplierID": 7,
+      "SupplierReference": "BC0280982"
+    },
+    {
+      "Comments": "NULL",
+      "ContactPersonID": 2,
+      "DeliveryMethodID": 2,
+      "ExpectedDeliveryDate": "2013-04-10",
+      "InternalComments": "NULL",
+      "IsOrderFinalized": 1,
+      "LastEditedBy": 2,
+      "LastEditedWhen": 1363935600000000,
+      "OrderDate": "2013-03-21",
+      "PurchaseOrderID": 138,
+      "SupplierID": 7,
+      "SupplierReference": "BC0280982"
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Brand` = \"NULL\", `ColorID` = \"NULL\", `InternalComments` = \"NULL\", `IsChillerStock` = 1, `LastEditedBy` = 1, `LeadTimeDays` = 3, `OuterPackageID` = 6, `Photo` = \"NULL\", `SupplierID` = 1, `TaxRate` = 10, `UnitPackageID` = 1, `ValidFrom` = 1464735600000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "Barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "8302039293647",
+              "8302039293929",
+              "8792838293728",
+              "8792838293820",
+              "8792838293987"
+            ],
+            "type": "string"
+          },
+          "Brand": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "ColorID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "CustomFields": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CountryOfManufacture": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "USA"
+                ],
+                "type": "string"
+              },
+              "ShelfLife": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "7 days"
+                ],
+                "type": "string"
+              },
+              "Tags": {
+                "#docs": 5,
+                "%docs": 100,
+                "items": {},
+                "maxItems": 0,
+                "minItems": 0,
+                "nestingDepth": 1,
+                "sampleSize": 0,
+                "samples": [
+                  []
+                ],
+                "type": "array"
+              }
+            },
+            "samples": [
+              {
+                "CountryOfManufacture": "USA",
+                "ShelfLife": "7 days",
+                "Tags": []
+              }
+            ],
+            "type": "object"
+          },
+          "InternalComments": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "IsChillerStock": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LeadTimeDays": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3
+            ],
+            "type": "number"
+          },
+          "MarketingComments": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Perfect for your child's party",
+              "Watch your friends faces when ..."
+            ],
+            "type": "string"
+          },
+          "OuterPackageID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6
+            ],
+            "type": "number"
+          },
+          "Photo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "QuantityPerOuter": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              24
+            ],
+            "type": "number"
+          },
+          "RecommendedRetailPrice": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12.23,
+              20.74
+            ],
+            "type": "number"
+          },
+          "SearchDetails": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Chocolate beetles 250g Perfect...",
+              "Chocolate echidnas 250g Perfec...",
+              "Chocolate frogs 250g Perfect f...",
+              "Novelty chilli chocolates 250g...",
+              "Novelty chilli chocolates 500g..."
+            ],
+            "type": "string"
+          },
+          "Size": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "250g",
+              "500g"
+            ],
+            "type": "string"
+          },
+          "StockItemID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              220,
+              221,
+              222,
+              223,
+              224
+            ],
+            "type": "number"
+          },
+          "StockItemName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Chocolate beetles 250g",
+              "Chocolate echidnas 250g",
+              "Chocolate frogs 250g",
+              "Novelty chilli chocolates 250g",
+              "Novelty chilli chocolates 500g"
+            ],
+            "type": "string"
+          },
+          "SupplierID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "Tags": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "TaxRate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10
+            ],
+            "type": "number"
+          },
+          "TypicalWeightPerUnit": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.25,
+              0.5
+            ],
+            "type": "number"
+          },
+          "UnitPackageID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "UnitPrice": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8.55,
+              14.5
+            ],
+            "type": "number"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1464735600000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_stockitems::0",
+                  "warehouse_stockitems::1",
+                  "warehouse_stockitems::2",
+                  "warehouse_stockitems::3",
+                  "warehouse_stockitems::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_stockitems::0"
+              },
+              {
+                "id": "warehouse_stockitems::1"
+              },
+              {
+                "id": "warehouse_stockitems::2"
+              },
+              {
+                "id": "warehouse_stockitems::3"
+              },
+              {
+                "id": "warehouse_stockitems::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Barcode": "8792838293987",
+      "Brand": "NULL",
+      "ColorID": "NULL",
+      "CustomFields": {
+        "CountryOfManufacture": "USA",
+        "ShelfLife": "7 days",
+        "Tags": []
+      },
+      "InternalComments": "NULL",
+      "IsChillerStock": 1,
+      "LastEditedBy": 1,
+      "LeadTimeDays": 3,
+      "MarketingComments": "Perfect for your child's party",
+      "OuterPackageID": 6,
+      "Photo": "NULL",
+      "QuantityPerOuter": 24,
+      "RecommendedRetailPrice": 12.23,
+      "SearchDetails": "Chocolate frogs 250g Perfect for your child's party",
+      "Size": "250g",
+      "StockItemID": 224,
+      "StockItemName": "Chocolate frogs 250g",
+      "SupplierID": 1,
+      "Tags": [],
+      "TaxRate": 10,
+      "TypicalWeightPerUnit": 0.25,
+      "UnitPackageID": 1,
+      "UnitPrice": 8.55,
+      "ValidFrom": 1464735600000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "Barcode": "8302039293929",
+      "Brand": "NULL",
+      "ColorID": "NULL",
+      "CustomFields": {
+        "CountryOfManufacture": "USA",
+        "ShelfLife": "7 days",
+        "Tags": []
+      },
+      "InternalComments": "NULL",
+      "IsChillerStock": 1,
+      "LastEditedBy": 1,
+      "LeadTimeDays": 3,
+      "MarketingComments": "Watch your friends faces when they eat these",
+      "OuterPackageID": 6,
+      "Photo": "NULL",
+      "QuantityPerOuter": 24,
+      "RecommendedRetailPrice": 12.23,
+      "SearchDetails": "Novelty chilli chocolates 250g Watch your friends faces when they eat these",
+      "Size": "250g",
+      "StockItemID": 220,
+      "StockItemName": "Novelty chilli chocolates 250g",
+      "SupplierID": 1,
+      "Tags": [],
+      "TaxRate": 10,
+      "TypicalWeightPerUnit": 0.25,
+      "UnitPackageID": 1,
+      "UnitPrice": 8.55,
+      "ValidFrom": 1464735600000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "Barcode": "8792838293820",
+      "Brand": "NULL",
+      "ColorID": "NULL",
+      "CustomFields": {
+        "CountryOfManufacture": "USA",
+        "ShelfLife": "7 days",
+        "Tags": []
+      },
+      "InternalComments": "NULL",
+      "IsChillerStock": 1,
+      "LastEditedBy": 1,
+      "LeadTimeDays": 3,
+      "MarketingComments": "Perfect for your child's party",
+      "OuterPackageID": 6,
+      "Photo": "NULL",
+      "QuantityPerOuter": 24,
+      "RecommendedRetailPrice": 12.23,
+      "SearchDetails": "Chocolate beetles 250g Perfect for your child's party",
+      "Size": "250g",
+      "StockItemID": 222,
+      "StockItemName": "Chocolate beetles 250g",
+      "SupplierID": 1,
+      "Tags": [],
+      "TaxRate": 10,
+      "TypicalWeightPerUnit": 0.25,
+      "UnitPackageID": 1,
+      "UnitPrice": 8.55,
+      "ValidFrom": 1464735600000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "Barcode": "8792838293728",
+      "Brand": "NULL",
+      "ColorID": "NULL",
+      "CustomFields": {
+        "CountryOfManufacture": "USA",
+        "ShelfLife": "7 days",
+        "Tags": []
+      },
+      "InternalComments": "NULL",
+      "IsChillerStock": 1,
+      "LastEditedBy": 1,
+      "LeadTimeDays": 3,
+      "MarketingComments": "Perfect for your child's party",
+      "OuterPackageID": 6,
+      "Photo": "NULL",
+      "QuantityPerOuter": 24,
+      "RecommendedRetailPrice": 12.23,
+      "SearchDetails": "Chocolate echidnas 250g Perfect for your child's party",
+      "Size": "250g",
+      "StockItemID": 223,
+      "StockItemName": "Chocolate echidnas 250g",
+      "SupplierID": 1,
+      "Tags": [],
+      "TaxRate": 10,
+      "TypicalWeightPerUnit": 0.25,
+      "UnitPackageID": 1,
+      "UnitPrice": 8.55,
+      "ValidFrom": 1464735600000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "Barcode": "8302039293647",
+      "Brand": "NULL",
+      "ColorID": "NULL",
+      "CustomFields": {
+        "CountryOfManufacture": "USA",
+        "ShelfLife": "7 days",
+        "Tags": []
+      },
+      "InternalComments": "NULL",
+      "IsChillerStock": 1,
+      "LastEditedBy": 1,
+      "LeadTimeDays": 3,
+      "MarketingComments": "Watch your friends faces when they eat these",
+      "OuterPackageID": 6,
+      "Photo": "NULL",
+      "QuantityPerOuter": 12,
+      "RecommendedRetailPrice": 20.74,
+      "SearchDetails": "Novelty chilli chocolates 500g Watch your friends faces when they eat these",
+      "Size": "500g",
+      "StockItemID": 221,
+      "StockItemName": "Novelty chilli chocolates 500g",
+      "SupplierID": 1,
+      "Tags": [],
+      "TaxRate": 10,
+      "TypicalWeightPerUnit": 0.5,
+      "UnitPackageID": 1,
+      "UnitPrice": 14.5,
+      "ValidFrom": 1464735600000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

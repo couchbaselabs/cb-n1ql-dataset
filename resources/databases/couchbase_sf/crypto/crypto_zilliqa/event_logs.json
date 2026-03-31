@@ -1,0 +1,232 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "address": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "zil12drvflckms6874ffuujcdxj75r...",
+              "zil13f36stxyqxrethgrfqmlcr87rg...",
+              "zil14d6wwelssqumu6w9c6kaucz2r5..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1292028,
+              1292250,
+              1292313,
+              1292323,
+              1292664
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1626601281000000,
+              1626609200000000,
+              1626611588000000,
+              1626611915000000,
+              1626624089000000
+            ],
+            "type": "number"
+          },
+          "event_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TransferFromSuccess",
+              "TransferSuccess"
+            ],
+            "type": "string"
+          },
+          "index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "params": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 4,
+            "minItems": 3,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"initiator\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0x2966d1cd46937efda876be88509d02cc055b69d1\",\"vname\":\"sender\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"13000000000000\",\"vname\":\"amount\"}"
+              ],
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"initiator\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0xdc180dc7f72f95ddd0d8a6e8b75bd3fa13a53fb3\",\"vname\":\"sender\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"13988546677\",\"vname\":\"amount\"}"
+              ],
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"sender\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0x5abbab562630f415b0d0707634ba82a9029faf80\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"1251993838435842\",\"vname\":\"amount\"}"
+              ],
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"sender\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0x5abbab562630f415b0d0707634ba82a9029faf80\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"696030103442616\",\"vname\":\"amount\"}"
+              ],
+              [
+                "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"sender\"}",
+                "{\"type\":\"ByStr20\",\"value\":\"0xa5d3b90d17ff0dbe4d8caf30cad1ad2108074289\",\"vname\":\"recipient\"}",
+                "{\"type\":\"Uint128\",\"value\":\"235568293162207\",\"vname\":\"amount\"}"
+              ]
+            ],
+            "type": "array"
+          },
+          "transaction_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3d9c183d4c4d2c3b40dc6fb7360a8c...",
+              "59affee306573f6918395b8bfb75f5...",
+              "78f078cfb7193db86c0cf6298c6804...",
+              "af8827f3abf77159c8b4a583685431...",
+              "d16f8a334b075dd2a6cb7f90a9c3c2..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "event_logs::0",
+                  "event_logs::1",
+                  "event_logs::2",
+                  "event_logs::3",
+                  "event_logs::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "event_logs::0"
+              },
+              {
+                "id": "event_logs::1"
+              },
+              {
+                "id": "event_logs::2"
+              },
+              {
+                "id": "event_logs::3"
+              },
+              {
+                "id": "event_logs::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "zil12drvflckms6874ffuujcdxj75raavl4yfn4ssc",
+      "block_number": 1292028,
+      "block_timestamp": 1626601281000000,
+      "event_name": "TransferSuccess",
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"sender\"}",
+        "{\"type\":\"ByStr20\",\"value\":\"0xa5d3b90d17ff0dbe4d8caf30cad1ad2108074289\",\"vname\":\"recipient\"}",
+        "{\"type\":\"Uint128\",\"value\":\"235568293162207\",\"vname\":\"amount\"}"
+      ],
+      "transaction_id": "af8827f3abf77159c8b4a5836854310cd5abea08e057dd3d6deaa0bef18a735d"
+    },
+    {
+      "address": "zil14d6wwelssqumu6w9c6kaucz2r57z34cxuh96lf",
+      "block_number": 1292323,
+      "block_timestamp": 1626611915000000,
+      "event_name": "TransferSuccess",
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"sender\"}",
+        "{\"type\":\"ByStr20\",\"value\":\"0x5abbab562630f415b0d0707634ba82a9029faf80\",\"vname\":\"recipient\"}",
+        "{\"type\":\"Uint128\",\"value\":\"696030103442616\",\"vname\":\"amount\"}"
+      ],
+      "transaction_id": "59affee306573f6918395b8bfb75f59c0d714a032dd21d0ff1e58b0a82a1b186"
+    },
+    {
+      "address": "zil14d6wwelssqumu6w9c6kaucz2r57z34cxuh96lf",
+      "block_number": 1292250,
+      "block_timestamp": 1626609200000000,
+      "event_name": "TransferFromSuccess",
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"initiator\"}",
+        "{\"type\":\"ByStr20\",\"value\":\"0x2966d1cd46937efda876be88509d02cc055b69d1\",\"vname\":\"sender\"}",
+        "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"recipient\"}",
+        "{\"type\":\"Uint128\",\"value\":\"13000000000000\",\"vname\":\"amount\"}"
+      ],
+      "transaction_id": "78f078cfb7193db86c0cf6298c68040ad72da436b7875350b615a90571a96930"
+    },
+    {
+      "address": "zil13f36stxyqxrethgrfqmlcr87rgm2chvv8rv86k",
+      "block_number": 1292664,
+      "block_timestamp": 1626624089000000,
+      "event_name": "TransferFromSuccess",
+      "index": 2,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"initiator\"}",
+        "{\"type\":\"ByStr20\",\"value\":\"0xdc180dc7f72f95ddd0d8a6e8b75bd3fa13a53fb3\",\"vname\":\"sender\"}",
+        "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"recipient\"}",
+        "{\"type\":\"Uint128\",\"value\":\"13988546677\",\"vname\":\"amount\"}"
+      ],
+      "transaction_id": "d16f8a334b075dd2a6cb7f90a9c3c22db525c57ff2991b93b64265dc4330bcdf"
+    },
+    {
+      "address": "zil14d6wwelssqumu6w9c6kaucz2r57z34cxuh96lf",
+      "block_number": 1292313,
+      "block_timestamp": 1626611588000000,
+      "event_name": "TransferSuccess",
+      "index": 1,
+      "params": [
+        "{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"sender\"}",
+        "{\"type\":\"ByStr20\",\"value\":\"0x5abbab562630f415b0d0707634ba82a9029faf80\",\"vname\":\"recipient\"}",
+        "{\"type\":\"Uint128\",\"value\":\"1251993838435842\",\"vname\":\"amount\"}"
+      ],
+      "transaction_id": "3d9c183d4c4d2c3b40dc6fb7360a8c76a17cd74581407b0d0be9c3b254aafeb1"
+    }
+  ]
+}

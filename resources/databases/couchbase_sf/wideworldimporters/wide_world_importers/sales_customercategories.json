@@ -1,0 +1,144 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 8,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`ValidTo` = 253402300799999999",
+        "properties": {
+          "CustomerCategoryID": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "CustomerCategoryName": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Corporate",
+              "Gift Store",
+              "Novelty Shop",
+              "Supermarket",
+              "Wholesaler"
+            ],
+            "type": "string"
+          },
+          "LastEditedBy": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              9
+            ],
+            "type": "number"
+          },
+          "ValidFrom": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000,
+              1388592900000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 8,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_customercategories::1",
+                  "sales_customercategories::2",
+                  "sales_customercategories::3",
+                  "sales_customercategories::5",
+                  "sales_customercategories::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_customercategories::1"
+              },
+              {
+                "id": "sales_customercategories::2"
+              },
+              {
+                "id": "sales_customercategories::3"
+              },
+              {
+                "id": "sales_customercategories::5"
+              },
+              {
+                "id": "sales_customercategories::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CustomerCategoryID": 2,
+      "CustomerCategoryName": "Wholesaler",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "CustomerCategoryID": 7,
+      "CustomerCategoryName": "Corporate",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "CustomerCategoryID": 8,
+      "CustomerCategoryName": "General Retailer",
+      "LastEditedBy": 9,
+      "ValidFrom": 1388592900000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "CustomerCategoryID": 3,
+      "CustomerCategoryName": "Novelty Shop",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "CustomerCategoryID": 1,
+      "CustomerCategoryName": "Agent",
+      "LastEditedBy": 1,
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

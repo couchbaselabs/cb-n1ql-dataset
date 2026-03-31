@@ -1,0 +1,305 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "language": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 2559,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "bytes": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    4045,
+                    4298,
+                    6230,
+                    6885,
+                    11082
+                  ],
+                  "type": "number"
+                },
+                "name": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Java",
+                    "PHP",
+                    "Python",
+                    "Ruby",
+                    "Shell"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 67,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "bytes": 4045,
+                  "name": "Java"
+                }
+              ],
+              [
+                {
+                  "bytes": 4298,
+                  "name": "Shell"
+                }
+              ],
+              [
+                {
+                  "bytes": 4528,
+                  "name": "ASP"
+                },
+                {
+                  "bytes": 10142734,
+                  "name": "Assembly"
+                },
+                {
+                  "bytes": 18681,
+                  "name": "Awk"
+                },
+                {
+                  "bytes": 491480530,
+                  "name": "C"
+                },
+                {
+                  "bytes": 4378332,
+                  "name": "C++"
+                },
+                {
+                  "bytes": 480,
+                  "name": "Clojure"
+                },
+                {
+                  "bytes": 22012,
+                  "name": "Groff"
+                },
+                {
+                  "bytes": 40805,
+                  "name": "Lex"
+                },
+                {
+                  "bytes": 1361231,
+                  "name": "Makefile"
+                },
+                {
+                  "bytes": 1216492,
+                  "name": "Objective-C"
+                },
+                {
+                  "bytes": 406175,
+                  "name": "Perl"
+                },
+                {
+                  "bytes": 37296,
+                  "name": "Python"
+                },
+                {
+                  "bytes": 21433,
+                  "name": "Scilab"
+                },
+                {
+                  "bytes": 137667,
+                  "name": "Shell"
+                },
+                {
+                  "bytes": 4687,
+                  "name": "SourcePawn"
+                },
+                {
+                  "bytes": 6113,
+                  "name": "UnrealScript"
+                },
+                {
+                  "bytes": 83091,
+                  "name": "Yacc"
+                }
+              ],
+              [
+                {
+                  "bytes": 4141210,
+                  "name": "C++"
+                },
+                {
+                  "bytes": 11784,
+                  "name": "CMake"
+                },
+                {
+                  "bytes": 161740,
+                  "name": "Cap'n Proto"
+                },
+                {
+                  "bytes": 2097,
+                  "name": "Emacs Lisp"
+                },
+                {
+                  "bytes": 5344,
+                  "name": "Protocol Buffer"
+                },
+                {
+                  "bytes": 3926,
+                  "name": "Python"
+                },
+                {
+                  "bytes": 39592,
+                  "name": "Shell"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "repo_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "FrancoisChastel/Eight-Queens",
+              "ipapa/hypermedia",
+              "satgass/android_kernel_lenovo_...",
+              "z/xonotic-rate-maps",
+              "zarvox/capnproto"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "languages::177392",
+                  "languages::1819469",
+                  "languages::1991481",
+                  "languages::2442546",
+                  "languages::2488854"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "languages::177392"
+              },
+              {
+                "id": "languages::1819469"
+              },
+              {
+                "id": "languages::1991481"
+              },
+              {
+                "id": "languages::2442546"
+              },
+              {
+                "id": "languages::2488854"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "language": [
+        {
+          "bytes": 188899,
+          "name": "CSS"
+        },
+        {
+          "bytes": 34018,
+          "name": "HTML"
+        },
+        {
+          "bytes": 15101,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "cmastery/material"
+    },
+    {
+      "language": [
+        {
+          "bytes": 4667,
+          "name": "CSS"
+        },
+        {
+          "bytes": 3744,
+          "name": "HTML"
+        },
+        {
+          "bytes": 40153,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "spatialdev/node-pg-ngMaterial-mapgl-template"
+    },
+    {
+      "language": [
+        {
+          "bytes": 5128,
+          "name": "CSS"
+        },
+        {
+          "bytes": 1005,
+          "name": "HTML"
+        },
+        {
+          "bytes": 156182,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "zhangmingkai4315/NewAssetManagement"
+    },
+    {
+      "language": [
+        {
+          "bytes": 404,
+          "name": "CSS"
+        },
+        {
+          "bytes": 1803,
+          "name": "HTML"
+        },
+        {
+          "bytes": 31859,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "supromikali/my-app"
+    },
+    {
+      "language": [
+        {
+          "bytes": 212699,
+          "name": "CSS"
+        },
+        {
+          "bytes": 118601,
+          "name": "HTML"
+        },
+        {
+          "bytes": 1604798,
+          "name": "JavaScript"
+        }
+      ],
+      "repo_name": "FAOSTAT/faostat-ui"
+    }
+  ]
+}

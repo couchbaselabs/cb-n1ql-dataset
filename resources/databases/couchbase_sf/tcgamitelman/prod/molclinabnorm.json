@@ -1,0 +1,139 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Abnormality` = \"r\", `MolClin` = \"C\"",
+        "properties": {
+          "Abnormality": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "r"
+            ],
+            "type": "string"
+          },
+          "InvNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "MolClin": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C"
+            ],
+            "type": "string"
+          },
+          "OrderNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              11
+            ],
+            "type": "number"
+          },
+          "RefNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1696,
+              2844,
+              4556,
+              15564
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "molclinabnorm::0",
+                  "molclinabnorm::1",
+                  "molclinabnorm::2",
+                  "molclinabnorm::3",
+                  "molclinabnorm::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "molclinabnorm::0"
+              },
+              {
+                "id": "molclinabnorm::1"
+              },
+              {
+                "id": "molclinabnorm::2"
+              },
+              {
+                "id": "molclinabnorm::3"
+              },
+              {
+                "id": "molclinabnorm::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Abnormality": "r",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 2844
+    },
+    {
+      "Abnormality": "r",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 15564
+    },
+    {
+      "Abnormality": "r",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 11,
+      "RefNo": 4556
+    },
+    {
+      "Abnormality": "r",
+      "InvNo": 2,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 15564
+    },
+    {
+      "Abnormality": "r",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 1696
+    }
+  ]
+}

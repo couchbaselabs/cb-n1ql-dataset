@@ -1,0 +1,566 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "block_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x1ad48931f9194c035889d0b3b28e...",
+              "0x29dd3043334619b267d81df716b3...",
+              "0x4729923df8e7b7b981869461c6a8...",
+              "0x854edb63f225515feaad82f97aa3...",
+              "0x9435fe85c96fcbd6c0ec44d8a466..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10589937,
+              11540861,
+              17066342,
+              18275158,
+              18278754
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1596498906000000,
+              1609138400000000,
+              1681732631000000,
+              1696398371000000,
+              1696441787000000
+            ],
+            "type": "number"
+          },
+          "call_type": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "call",
+                "delegatecall",
+                "staticcall"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "error": {
+            "#docs": [
+              995,
+              5
+            ],
+            "%docs": [
+              99.5,
+              0.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Bad instruction",
+                "Out of gas",
+                "Reverted"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "from_address": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x11e5cd39f19cdec570001b35b941...",
+                "0x328c4c80bc7aca0834db37e6600a...",
+                "0x7a250d5630b4cf539739df2c5dac...",
+                "0xa5f95f9a5bcde5673610e4f223da...",
+                "0xa9d1e08c7793af67e9d92fe308d5..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "gas": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                83665,
+                90000,
+                486207,
+                986680,
+                4347500
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gas_used": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                534,
+                4009,
+                8029,
+                487248
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "input": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x",
+                "0x6a938567391ece8f1d6706c10c8e...",
+                "0x70a0823100000000000000000000...",
+                "0x70a0823100000000000000000000...",
+                "0x76e9d61500000000000000000000..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "output": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x",
+                "0x0000000000000000000000000000...",
+                "0x0000000000000000000000000000...",
+                "0x0000000000000000000000000000...",
+                "0x000000000000000000000000c02a..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "reward_type": {
+            "#docs": [
+              995,
+              5
+            ],
+            "%docs": [
+              99.5,
+              0.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "block"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "subtraces": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "to_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x082b0ca59f2122c94e5f57db0085...",
+              "0x77bad3f0f33a41cf5479a256a3b2...",
+              "0xa36323597da0383065ce7571df1d...",
+              "0xb8fde0c30b1376293027835688e7...",
+              "0xc02aaa39b223fe8d0a0e5c4f27ea..."
+            ],
+            "type": "string"
+          },
+          "trace_address": {
+            "#docs": [
+              274,
+              726
+            ],
+            "%docs": [
+              27.4,
+              72.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0,1,2",
+                "0,27",
+                "2,4,0,0,2",
+                "5,1",
+                "8"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "trace_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "call_0x2db3596d70dd7df4da60765...",
+              "call_0x858719fe015e6fbe6fc9398...",
+              "call_0x8dde3619572a10667523299...",
+              "call_0xdf9e59ef3c945cbe90fb036...",
+              "call_0xe0c7207cfa42268183e993c..."
+            ],
+            "type": "string"
+          },
+          "trace_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "call",
+              "create",
+              "reward",
+              "suicide"
+            ],
+            "type": "string"
+          },
+          "transaction_hash": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x2db3596d70dd7df4da60765eac9a...",
+                "0x858719fe015e6fbe6fc939841b9b...",
+                "0x8dde3619572a10667523299c80bc...",
+                "0xdf9e59ef3c945cbe90fb03679f5d...",
+                "0xe0c7207cfa42268183e993c67373..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "transaction_index": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                51,
+                55,
+                68,
+                141,
+                144
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              51545000000000000,
+              86440908304862784,
+              101876110000000000,
+              316005708862813632
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "traces::260644",
+                  "traces::3900756",
+                  "traces::5168329",
+                  "traces::6161670",
+                  "traces::761538"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "traces::260644"
+              },
+              {
+                "id": "traces::3900756"
+              },
+              {
+                "id": "traces::5168329"
+              },
+              {
+                "id": "traces::6161670"
+              },
+              {
+                "id": "traces::761538"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "block_hash": "0xefb82382a88713a7c1f0193ab72c104fade113053bb7c2addc9919e0d64a9176",
+      "block_number": 16244726,
+      "block_timestamp": 1671766091000000,
+      "call_type": "call",
+      "error": null,
+      "from_address": "0x22e091333eed4fd5ec370992592b2a70e6042ada",
+      "gas": 108512,
+      "gas_used": 37950,
+      "input": "0xa22cb4650000000000000000000000001e0049783f008a0085193e00003d00cd54003c710000000000000000000000000000000000000000000000000000000000000001",
+      "output": "0x",
+      "reward_type": null,
+      "status": 1,
+      "subtraces": 1,
+      "to_address": "0xbb0616a03a3ecce66657c5866e8bd5ccbb867a6b",
+      "trace_address": null,
+      "trace_id": "call_0x4c6ed92bf38009d4ef657fb20ff73dcc30136516c9044f886b601bae217099c9_",
+      "trace_type": "call",
+      "transaction_hash": "0x4c6ed92bf38009d4ef657fb20ff73dcc30136516c9044f886b601bae217099c9",
+      "transaction_index": 43,
+      "value": 0
+    },
+    {
+      "block_hash": "0x1ab8ed3df3ff60eeee66c04ee1578c66d1ce10f0f4441f010144de4bef821b8c",
+      "block_number": 11544787,
+      "block_timestamp": 1609189520000000,
+      "call_type": "call",
+      "error": null,
+      "from_address": "0xdef1c0ded9bec7f1a1670819833240f027b25eff",
+      "gas": 168483,
+      "gas_used": 16960,
+      "input": "0xb68df16d000000000000000000000000da6d9fc5998f550a094585cf9171f0e8ee3ac59f00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000144832b24bb0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000b2e700c6f8e874a3381622d8c86c5f5a941103b3000000000000000000000000b2e700c6f8e874a3381622d8c86c5f5a941103b3000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000001000000000000000000000000b4d930279552397bba2ee473229f89ec245bc36500000000000000000000000000000000000000000000000000207d801c850262000000000000000000000000d041f2dc17323b6e6ab32e3887dc36b94e4c03fc00000000000000000000000000000000000000000000000000000000",
+      "output": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002013c9929e00000000000000000000000000000000000000000000000000000000",
+      "reward_type": null,
+      "status": 1,
+      "subtraces": 1,
+      "to_address": "0x22f9dcf4647084d6c31b2765f6910cd85c178c18",
+      "trace_address": "0,4",
+      "trace_id": "call_0xa2ed8c1706a5ed2e7ea6b008586e250f14fdca162f9a3eae220b4f3f1d079cc6_0_4",
+      "trace_type": "call",
+      "transaction_hash": "0xa2ed8c1706a5ed2e7ea6b008586e250f14fdca162f9a3eae220b4f3f1d079cc6",
+      "transaction_index": 113,
+      "value": 0
+    },
+    {
+      "block_hash": "0xe4169f947015ff37f8e47dd0b3980e92597b87fec5f7be201ae719d4e3a685bf",
+      "block_number": 17068273,
+      "block_timestamp": 1681756187000000,
+      "call_type": "delegatecall",
+      "error": null,
+      "from_address": "0xc04c8b02633d2de39541f25de0cd941fdb0068fe",
+      "gas": 437839,
+      "gas_used": 21568,
+      "input": "0xc658695c00000000000000000000000095ad61b0a150d79219dcf64e1e6cc01f0b64c4ce000000000000000000000000bebf1c31e05a62aa8d07003af177f07891889ad70000000000000000000000006d0cf1f651f5ae585d24dcaa188d44e389e93d2600000000000000000000000000000000000000002f27b0232db96c390fa8000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000",
+      "output": "0x",
+      "reward_type": null,
+      "status": 1,
+      "subtraces": 1,
+      "to_address": "0x83b76b11257c4ece35370b6152f1946d49479e89",
+      "trace_address": "0,0,0",
+      "trace_id": "call_0xe53d7b40b0f24c66344620b1d97729cf72ed5d24a47c6ac15ec5a8d9b58ad842_0_0_0",
+      "trace_type": "call",
+      "transaction_hash": "0xe53d7b40b0f24c66344620b1d97729cf72ed5d24a47c6ac15ec5a8d9b58ad842",
+      "transaction_index": 34,
+      "value": 0
+    },
+    {
+      "block_hash": "0x56c179072013a1b8c02dbda6fa953555143c1247b9a0dfe95859ca13666ab940",
+      "block_number": 18278644,
+      "block_timestamp": 1696440467000000,
+      "call_type": "call",
+      "error": null,
+      "from_address": "0x3fc91a3afd70395cd496c647d5a6cc9d4b2b7fad",
+      "gas": 175515,
+      "gas_used": 8062,
+      "input": "0xa9059cbb000000000000000000000000bef860db27fc2f9668d13d624563d859c65a2b25000000000000000000000000000000000000000000000000011c37937e080000",
+      "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "reward_type": null,
+      "status": 1,
+      "subtraces": 0,
+      "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "trace_address": "1",
+      "trace_id": "call_0x908c08d6bd44276115282c5307962ad1a5e73c71fccced7103d1a0609f24c3e4_1",
+      "trace_type": "call",
+      "transaction_hash": "0x908c08d6bd44276115282c5307962ad1a5e73c71fccced7103d1a0609f24c3e4",
+      "transaction_index": 106,
+      "value": 0
+    },
+    {
+      "block_hash": "0x80a2d9e68e3e50fbacc8100f817eedd93270908558086d50d0964d2b8d947489",
+      "block_number": 19226964,
+      "block_timestamp": 1707922967000000,
+      "call_type": "call",
+      "error": null,
+      "from_address": "0x1111111254eeb25477b68fb85ed929f73a960582",
+      "gas": 173615,
+      "gas_used": 8062,
+      "input": "0xa9059cbb00000000000000000000000058025c79662e81f1ee72bce632511faf4e6aee0100000000000000000000000000000000000000000000000002103e7e540a7800",
+      "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "reward_type": null,
+      "status": 1,
+      "subtraces": 0,
+      "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "trace_address": "0,0,0,1",
+      "trace_id": "call_0x0f9a207fa350efd4054f1d3c60d4f9ed65e30364782e0562f176ff52bd714ec9_0_0_0_1",
+      "trace_type": "call",
+      "transaction_hash": "0x0f9a207fa350efd4054f1d3c60d4f9ed65e30364782e0562f176ff52bd714ec9",
+      "transaction_index": 57,
+      "value": 0
+    }
+  ]
+}

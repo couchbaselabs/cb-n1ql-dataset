@@ -1,0 +1,180 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "AcceptedDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "CreationDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1589156661000000,
+              1598122407000000,
+              1602734807000000,
+              1602941845000000,
+              1603110187000000
+            ],
+            "type": "number"
+          },
+          "DatasetId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "DatasetTaskId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              512,
+              1792,
+              2304
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2295,
+              3786,
+              4677,
+              4719,
+              4743
+            ],
+            "type": "number"
+          },
+          "KernelId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9295169,
+              11324755,
+              12293266,
+              12336275,
+              12373911
+            ],
+            "type": "number"
+          },
+          "SubmittedUserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3303517,
+              3593360,
+              4348228,
+              5958643,
+              5986902
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "datasettasksubmissions::0",
+                  "datasettasksubmissions::1",
+                  "datasettasksubmissions::2",
+                  "datasettasksubmissions::3",
+                  "datasettasksubmissions::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "datasettasksubmissions::0"
+              },
+              {
+                "id": "datasettasksubmissions::1"
+              },
+              {
+                "id": "datasettasksubmissions::2"
+              },
+              {
+                "id": "datasettasksubmissions::3"
+              },
+              {
+                "id": "datasettasksubmissions::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AcceptedDate": null,
+      "CreationDate": 1602734807000000,
+      "DatasetId": null,
+      "DatasetTaskId": 2304,
+      "Id": 4677,
+      "KernelId": 12293266,
+      "SubmittedUserId": 5958643
+    },
+    {
+      "AcceptedDate": null,
+      "CreationDate": 1603110187000000,
+      "DatasetId": null,
+      "DatasetTaskId": 2304,
+      "Id": 4743,
+      "KernelId": 12373911,
+      "SubmittedUserId": 5986902
+    },
+    {
+      "AcceptedDate": null,
+      "CreationDate": 1602941845000000,
+      "DatasetId": null,
+      "DatasetTaskId": 2304,
+      "Id": 4719,
+      "KernelId": 12336275,
+      "SubmittedUserId": 4348228
+    },
+    {
+      "AcceptedDate": null,
+      "CreationDate": 1598122407000000,
+      "DatasetId": null,
+      "DatasetTaskId": 1792,
+      "Id": 3786,
+      "KernelId": 11324755,
+      "SubmittedUserId": 3593360
+    },
+    {
+      "AcceptedDate": null,
+      "CreationDate": 1589156661000000,
+      "DatasetId": null,
+      "DatasetTaskId": 512,
+      "Id": 2295,
+      "KernelId": 9295169,
+      "SubmittedUserId": 3303517
+    }
+  ]
+}

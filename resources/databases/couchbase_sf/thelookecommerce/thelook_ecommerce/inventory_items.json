@@ -1,0 +1,291 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "cost": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4.4673300468456745,
+              12.769889881551862,
+              15.727399815386534,
+              27.685219017012717,
+              92.06549975462258
+            ],
+            "type": "number"
+          },
+          "created_at": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1671598104000000,
+              1683418856000000,
+              1712580815000000,
+              1714221837000000,
+              1719252971000000
+            ],
+            "type": "number"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              152350,
+              202110,
+              251848,
+              321920,
+              453000
+            ],
+            "type": "number"
+          },
+          "product_brand": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Allegra K",
+              "I-Pink",
+              "Paul Fredrick",
+              "Quiksilver",
+              "VANCL"
+            ],
+            "type": "string"
+          },
+          "product_category": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Dresses",
+              "Intimates",
+              "Suits & Sport Coats",
+              "Sweaters",
+              "Swim"
+            ],
+            "type": "string"
+          },
+          "product_department": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Men",
+              "Women"
+            ],
+            "type": "string"
+          },
+          "product_distribution_center_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              5,
+              8,
+              9,
+              10
+            ],
+            "type": "number"
+          },
+          "product_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3332,
+              12266,
+              19611,
+              20252,
+              27592
+            ],
+            "type": "number"
+          },
+          "product_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Allegra K Woman Solid Khaki Sc...",
+              "Paul Fredrick Two-Button Cotto...",
+              "Purple Open Cupped Bra and G-S...",
+              "Quiksilver Men's Manic Boardsh...",
+              "VANCL Men Machine Wash Solid C..."
+            ],
+            "type": "string"
+          },
+          "product_retail_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10.130000114440918,
+              24.989999771118164,
+              29.899999618530277,
+              44.5099983215332,
+              249.5
+            ],
+            "type": "number"
+          },
+          "product_sku": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "25411C7A6117DCA4FCA5D84C4EE09D...",
+              "4F01F3FBC8BCF75F3290C2202361B8...",
+              "5F900ED1124063B2A8F23BBB62B05B...",
+              "B0AB42FCB7133122B38521D13DA712...",
+              "D8CDA2F35A02CA459421DED6F9A5E8..."
+            ],
+            "type": "string"
+          },
+          "sold_at": {
+            "#docs": [
+              620,
+              380
+            ],
+            "%docs": [
+              62,
+              38
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1673350404000000,
+                1684969196000000,
+                1712891195000000,
+                1719287157000000,
+                1721896451000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "inventory_items::125880",
+                  "inventory_items::156755",
+                  "inventory_items::177429",
+                  "inventory_items::304067",
+                  "inventory_items::376499"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "inventory_items::125880"
+              },
+              {
+                "id": "inventory_items::156755"
+              },
+              {
+                "id": "inventory_items::177429"
+              },
+              {
+                "id": "inventory_items::304067"
+              },
+              {
+                "id": "inventory_items::376499"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "cost": 6.032880192602873,
+      "created_at": 1617973260000000,
+      "id": 263084,
+      "product_brand": "Allegra K",
+      "product_category": "Pants & Capris",
+      "product_department": "Women",
+      "product_distribution_center_id": 9,
+      "product_id": 5494,
+      "product_name": "Allegra K Women Drawstring Waist Solid Color Casual Loose Pants Black XS",
+      "product_retail_price": 10.640000343322754,
+      "product_sku": "85F3375756047FBA207CE9B85780313B",
+      "sold_at": null
+    },
+    {
+      "cost": 24.0182809863624,
+      "created_at": 1587572220000000,
+      "id": 386767,
+      "product_brand": "Thorlo",
+      "product_category": "Socks",
+      "product_department": "Men",
+      "product_distribution_center_id": 6,
+      "product_id": 24545,
+      "product_name": "Thorlo Unisex Thick Cushion Running Rolltop Sock",
+      "product_retail_price": 41.9900016784668,
+      "product_sku": "36C21B6DB36F2C7F7791373C93CA8D20",
+      "sold_at": null
+    },
+    {
+      "cost": 8.491929884938225,
+      "created_at": 1629824820000000,
+      "id": 224794,
+      "product_brand": "Thorlo",
+      "product_category": "Socks",
+      "product_department": "Men",
+      "product_distribution_center_id": 6,
+      "product_id": 24681,
+      "product_name": "Thorlo Unisex Thick Cushion Tennis Micro-Mini Crew Sock",
+      "product_retail_price": 13.989999771118164,
+      "product_sku": "5C0E88D109ACA1E6539486D1091A5EFC",
+      "sold_at": null
+    },
+    {
+      "cost": 12.645450483988228,
+      "created_at": 1646297118000000,
+      "id": 94125,
+      "product_brand": "Thorlo",
+      "product_category": "Socks",
+      "product_department": "Men",
+      "product_distribution_center_id": 6,
+      "product_id": 24718,
+      "product_name": "Thorlo Unisex Ultra Thin High Performance Ski Sock",
+      "product_retail_price": 22.950000762939453,
+      "product_sku": "2202CD8F3D1CD174F6675FB138F652E3",
+      "sold_at": 1648383078000000
+    },
+    {
+      "cost": 14.928000032901764,
+      "created_at": 1725289683000000,
+      "id": 341582,
+      "product_brand": "Timberland",
+      "product_category": "Socks",
+      "product_department": "Men",
+      "product_distribution_center_id": 7,
+      "product_id": 24937,
+      "product_name": "Timberland Men's Comfort Crew Socks",
+      "product_retail_price": 24,
+      "product_sku": "3262C13088A37147F222C34B1A9029A4",
+      "sold_at": 1729178703000000
+    }
+  ]
+}

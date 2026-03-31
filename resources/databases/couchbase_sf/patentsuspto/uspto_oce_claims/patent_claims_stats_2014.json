@@ -1,0 +1,224 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`or_ct` = \"0\"",
+        "properties": {
+          "appl_id": {
+            "#docs": [
+              3,
+              2
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "05454265",
+                "05567427"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "char_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2076",
+              "451",
+              "53",
+              "787",
+              "904"
+            ],
+            "type": "string"
+          },
+          "claim_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "34",
+              "37",
+              "45",
+              "66",
+              "68"
+            ],
+            "type": "string"
+          },
+          "cns_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "4"
+            ],
+            "type": "string"
+          },
+          "ind_flg": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "1"
+            ],
+            "type": "string"
+          },
+          "or_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0"
+            ],
+            "type": "string"
+          },
+          "pat_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3967482",
+              "3974600",
+              "3975534",
+              "3979032",
+              "3984574"
+            ],
+            "type": "string"
+          },
+          "sf_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "3"
+            ],
+            "type": "string"
+          },
+          "word_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "124",
+              "153",
+              "316",
+              "74",
+              "9"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "patent_claims_stats_2014::0",
+                  "patent_claims_stats_2014::1",
+                  "patent_claims_stats_2014::2",
+                  "patent_claims_stats_2014::3",
+                  "patent_claims_stats_2014::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "patent_claims_stats_2014::0"
+              },
+              {
+                "id": "patent_claims_stats_2014::1"
+              },
+              {
+                "id": "patent_claims_stats_2014::2"
+              },
+              {
+                "id": "patent_claims_stats_2014::3"
+              },
+              {
+                "id": "patent_claims_stats_2014::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "appl_id": "05567427",
+      "char_ct": "787",
+      "claim_no": "45",
+      "cns_ct": "4",
+      "ind_flg": "1",
+      "or_ct": "0",
+      "pat_no": "3984574",
+      "sf_ct": "3",
+      "word_ct": "124"
+    },
+    {
+      "appl_id": null,
+      "char_ct": "904",
+      "claim_no": "68",
+      "cns_ct": "0",
+      "ind_flg": "1",
+      "or_ct": "0",
+      "pat_no": "3967482",
+      "sf_ct": "0",
+      "word_ct": "153"
+    },
+    {
+      "appl_id": "05454265",
+      "char_ct": "2076",
+      "claim_no": "34",
+      "cns_ct": "0",
+      "ind_flg": "1",
+      "or_ct": "0",
+      "pat_no": "3974600",
+      "sf_ct": "0",
+      "word_ct": "316"
+    },
+    {
+      "appl_id": null,
+      "char_ct": "451",
+      "claim_no": "37",
+      "cns_ct": "0",
+      "ind_flg": "1",
+      "or_ct": "0",
+      "pat_no": "3979032",
+      "sf_ct": "0",
+      "word_ct": "74"
+    },
+    {
+      "appl_id": null,
+      "char_ct": "53",
+      "claim_no": "66",
+      "cns_ct": "0",
+      "ind_flg": "0",
+      "or_ct": "0",
+      "pat_no": "3975534",
+      "sf_ct": "0",
+      "word_ct": "9"
+    }
+  ]
+}

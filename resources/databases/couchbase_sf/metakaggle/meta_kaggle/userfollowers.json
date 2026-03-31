@@ -1,0 +1,132 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`UserId` = 368",
+        "properties": {
+          "CreationDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-05-23",
+              "2018-08-07",
+              "2020-03-08",
+              "2020-04-27",
+              "2021-06-21"
+            ],
+            "type": "string"
+          },
+          "FollowingUserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              993,
+              67483,
+              391404,
+              769452,
+              1302389
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              64,
+              122289,
+              412502,
+              447841,
+              798317
+            ],
+            "type": "number"
+          },
+          "UserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              368
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "userfollowers::0",
+                  "userfollowers::1",
+                  "userfollowers::2",
+                  "userfollowers::3",
+                  "userfollowers::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "userfollowers::0"
+              },
+              {
+                "id": "userfollowers::1"
+              },
+              {
+                "id": "userfollowers::2"
+              },
+              {
+                "id": "userfollowers::3"
+              },
+              {
+                "id": "userfollowers::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CreationDate": "2020-03-08",
+      "FollowingUserId": 1302389,
+      "Id": 412502,
+      "UserId": 368
+    },
+    {
+      "CreationDate": "2020-04-27",
+      "FollowingUserId": 391404,
+      "Id": 447841,
+      "UserId": 368
+    },
+    {
+      "CreationDate": "2018-08-07",
+      "FollowingUserId": 67483,
+      "Id": 122289,
+      "UserId": 368
+    },
+    {
+      "CreationDate": "2017-05-23",
+      "FollowingUserId": 993,
+      "Id": 64,
+      "UserId": 368
+    },
+    {
+      "CreationDate": "2021-06-21",
+      "FollowingUserId": 769452,
+      "Id": 798317,
+      "UserId": 368
+    }
+  ]
+}

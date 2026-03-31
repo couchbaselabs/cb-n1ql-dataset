@@ -1,0 +1,876 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`DeliveryMethodID` = 3, `IsCreditNote` = 0",
+        "properties": {
+          "AccountsPersonID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1001,
+              2001,
+              3053,
+              3056,
+              3181
+            ],
+            "type": "number"
+          },
+          "BillToCustomerID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              401,
+              853,
+              856,
+              981
+            ],
+            "type": "number"
+          },
+          "Comments": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ConfirmedDeliveryTime": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-05-22 07:50:00.0000000",
+              "2014-03-21 11:05:00.0000000",
+              "2014-09-25 09:10:00.0000000",
+              "2015-05-21 07:55:00.0000000",
+              "2016-04-30 07:25:00.0000000"
+            ],
+            "type": "string"
+          },
+          "ConfirmedReceivedBy": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Afshin Djalili",
+              "Caterina Pinto",
+              "Daniella Barbosa",
+              "Satish Mittal",
+              "Vlasta Srbova"
+            ],
+            "type": "string"
+          },
+          "ContactPersonID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1141,
+              1149,
+              1339,
+              3053,
+              3056
+            ],
+            "type": "number"
+          },
+          "CreditNoteReason": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "CustomerID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              71,
+              75,
+              170,
+              853,
+              856
+            ],
+            "type": "number"
+          },
+          "CustomerPurchaseOrderNumber": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14737,
+              16012,
+              16093,
+              16494,
+              16927
+            ],
+            "type": "number"
+          },
+          "DeliveryInstructions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Shop 13, 972 Vassiljev Street",
+              "Shop 80, 2001 Rajanala Road",
+              "Suite 13, 1278 Lam Street",
+              "Unit 109, 1568 Srisati Bouleva...",
+              "Unit 276, 605 Prieditis Lane"
+            ],
+            "type": "string"
+          },
+          "DeliveryMethodID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3
+            ],
+            "type": "number"
+          },
+          "DeliveryRun": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "InternalComments": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "InvoiceDate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-05-21",
+              "2014-03-20",
+              "2014-09-24",
+              "2015-05-20",
+              "2016-04-29"
+            ],
+            "type": "string"
+          },
+          "InvoiceID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7129,
+              22964,
+              33492,
+              47425,
+              68436
+            ],
+            "type": "number"
+          },
+          "IsCreditNote": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              7,
+              8,
+              12,
+              19
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-05-22 07:00:00.0000000",
+              "2014-03-21 07:00:00.0000000",
+              "2014-09-25 07:00:00.0000000",
+              "2015-05-21 07:00:00.0000000",
+              "2016-04-30 07:00:00.0000000"
+            ],
+            "type": "string"
+          },
+          "OrderID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7343,
+              23791,
+              34779,
+              49354,
+              71405
+            ],
+            "type": "number"
+          },
+          "PackedByPersonID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              7,
+              8,
+              9,
+              17
+            ],
+            "type": "number"
+          },
+          "ReturnedDeliveryData": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "DeliveredWhen": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "2013-05-22T07:50:00",
+                  "2014-03-21T11:05:00",
+                  "2014-09-25T09:10:00",
+                  "2015-05-21T07:55:00",
+                  "2016-04-30T07:25:00"
+                ],
+                "type": "string"
+              },
+              "Events": {
+                "#docs": 1000,
+                "%docs": 100,
+                "items": [
+                  {
+                    "#docs": 1000,
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "Flavor": "",
+                    "properties": {
+                      "ConNote": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "string"
+                      },
+                      "Event": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "string"
+                      },
+                      "EventTime": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "#docs": 1000,
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "Flavor": "",
+                    "properties": {
+                      "Comment": {
+                        "#docs": 117,
+                        "%docs": 11.7,
+                        "nestingDepth": 3,
+                        "type": "string"
+                      },
+                      "ConNote": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "string"
+                      },
+                      "DriverID": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "number"
+                      },
+                      "Event": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "string"
+                      },
+                      "EventTime": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "string"
+                      },
+                      "Latitude": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "number"
+                      },
+                      "Longitude": {
+                        "#docs": 1000,
+                        "%docs": 100,
+                        "nestingDepth": 3,
+                        "type": "number"
+                      },
+                      "Status": {
+                        "#docs": 883,
+                        "%docs": 88.3,
+                        "nestingDepth": 3,
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ],
+                "maxItems": 2,
+                "minItems": 2,
+                "nestingDepth": 1,
+                "sampleSize": 0,
+                "samples": [
+                  [
+                    {
+                      "ConNote": "EAN-125-24014",
+                      "Event": "Ready for collection",
+                      "EventTime": "2014-03-20T12:00:00"
+                    },
+                    {
+                      "ConNote": "EAN-125-24014",
+                      "DriverID": 12,
+                      "Event": "DeliveryAttempt",
+                      "EventTime": "2014-03-21T11:05:00",
+                      "Latitude": 56.9455556,
+                      "Longitude": -154.1702778,
+                      "Status": "Delivered"
+                    }
+                  ],
+                  [
+                    {
+                      "ConNote": "EAN-125-34542",
+                      "Event": "Ready for collection",
+                      "EventTime": "2014-09-24T12:00:00"
+                    },
+                    {
+                      "ConNote": "EAN-125-34542",
+                      "DriverID": 8,
+                      "Event": "DeliveryAttempt",
+                      "EventTime": "2014-09-25T09:10:00",
+                      "Latitude": 41.9292639,
+                      "Longitude": -72.6273124,
+                      "Status": "Delivered"
+                    }
+                  ],
+                  [
+                    {
+                      "ConNote": "EAN-125-48475",
+                      "Event": "Ready for collection",
+                      "EventTime": "2015-05-20T12:00:00"
+                    },
+                    {
+                      "ConNote": "EAN-125-48475",
+                      "DriverID": 4,
+                      "Event": "DeliveryAttempt",
+                      "EventTime": "2015-05-21T07:55:00",
+                      "Latitude": 40.1675853,
+                      "Longitude": -77.7538812,
+                      "Status": "Delivered"
+                    }
+                  ],
+                  [
+                    {
+                      "ConNote": "EAN-125-69486",
+                      "Event": "Ready for collection",
+                      "EventTime": "2016-04-29T12:00:00"
+                    },
+                    {
+                      "ConNote": "EAN-125-69486",
+                      "DriverID": 7,
+                      "Event": "DeliveryAttempt",
+                      "EventTime": "2016-04-30T07:25:00",
+                      "Latitude": 40.8884329,
+                      "Longitude": -73.8281895,
+                      "Status": "Delivered"
+                    }
+                  ],
+                  [
+                    {
+                      "ConNote": "EAN-125-8179",
+                      "Event": "Ready for collection",
+                      "EventTime": "2013-05-21T12:00:00"
+                    },
+                    {
+                      "ConNote": "EAN-125-8179",
+                      "DriverID": 19,
+                      "Event": "DeliveryAttempt",
+                      "EventTime": "2013-05-22T07:50:00",
+                      "Latitude": 45.5672308,
+                      "Longitude": -85.113118,
+                      "Status": "Delivered"
+                    }
+                  ]
+                ],
+                "type": "array"
+              },
+              "ReceivedBy": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Afshin Djalili",
+                  "Caterina Pinto",
+                  "Daniella Barbosa",
+                  "Satish Mittal",
+                  "Vlasta Srbova"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "DeliveredWhen": "2013-05-22T07:50:00",
+                "Events": [
+                  {
+                    "ConNote": "EAN-125-8179",
+                    "Event": "Ready for collection",
+                    "EventTime": "2013-05-21T12:00:00"
+                  },
+                  {
+                    "ConNote": "EAN-125-8179",
+                    "DriverID": 19,
+                    "Event": "DeliveryAttempt",
+                    "EventTime": "2013-05-22T07:50:00",
+                    "Latitude": 45.5672308,
+                    "Longitude": -85.113118,
+                    "Status": "Delivered"
+                  }
+                ],
+                "ReceivedBy": "Afshin Djalili"
+              },
+              {
+                "DeliveredWhen": "2014-03-21T11:05:00",
+                "Events": [
+                  {
+                    "ConNote": "EAN-125-24014",
+                    "Event": "Ready for collection",
+                    "EventTime": "2014-03-20T12:00:00"
+                  },
+                  {
+                    "ConNote": "EAN-125-24014",
+                    "DriverID": 12,
+                    "Event": "DeliveryAttempt",
+                    "EventTime": "2014-03-21T11:05:00",
+                    "Latitude": 56.9455556,
+                    "Longitude": -154.1702778,
+                    "Status": "Delivered"
+                  }
+                ],
+                "ReceivedBy": "Caterina Pinto"
+              },
+              {
+                "DeliveredWhen": "2014-09-25T09:10:00",
+                "Events": [
+                  {
+                    "ConNote": "EAN-125-34542",
+                    "Event": "Ready for collection",
+                    "EventTime": "2014-09-24T12:00:00"
+                  },
+                  {
+                    "ConNote": "EAN-125-34542",
+                    "DriverID": 8,
+                    "Event": "DeliveryAttempt",
+                    "EventTime": "2014-09-25T09:10:00",
+                    "Latitude": 41.9292639,
+                    "Longitude": -72.6273124,
+                    "Status": "Delivered"
+                  }
+                ],
+                "ReceivedBy": "Vlasta Srbova"
+              },
+              {
+                "DeliveredWhen": "2015-05-21T07:55:00",
+                "Events": [
+                  {
+                    "ConNote": "EAN-125-48475",
+                    "Event": "Ready for collection",
+                    "EventTime": "2015-05-20T12:00:00"
+                  },
+                  {
+                    "ConNote": "EAN-125-48475",
+                    "DriverID": 4,
+                    "Event": "DeliveryAttempt",
+                    "EventTime": "2015-05-21T07:55:00",
+                    "Latitude": 40.1675853,
+                    "Longitude": -77.7538812,
+                    "Status": "Delivered"
+                  }
+                ],
+                "ReceivedBy": "Satish Mittal"
+              },
+              {
+                "DeliveredWhen": "2016-04-30T07:25:00",
+                "Events": [
+                  {
+                    "ConNote": "EAN-125-69486",
+                    "Event": "Ready for collection",
+                    "EventTime": "2016-04-29T12:00:00"
+                  },
+                  {
+                    "ConNote": "EAN-125-69486",
+                    "DriverID": 7,
+                    "Event": "DeliveryAttempt",
+                    "EventTime": "2016-04-30T07:25:00",
+                    "Latitude": 40.8884329,
+                    "Longitude": -73.8281895,
+                    "Status": "Delivered"
+                  }
+                ],
+                "ReceivedBy": "Daniella Barbosa"
+              }
+            ],
+            "type": "object"
+          },
+          "RunPosition": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "SalespersonPersonID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              13,
+              14,
+              15,
+              20
+            ],
+            "type": "number"
+          },
+          "TotalChillerItems": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "TotalDryItems": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_invoices::13829",
+                  "sales_invoices::14174",
+                  "sales_invoices::14205",
+                  "sales_invoices::14543",
+                  "sales_invoices::18875"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_invoices::13829"
+              },
+              {
+                "id": "sales_invoices::14174"
+              },
+              {
+                "id": "sales_invoices::14205"
+              },
+              {
+                "id": "sales_invoices::14543"
+              },
+              {
+                "id": "sales_invoices::18875"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AccountsPersonID": 2001,
+      "BillToCustomerID": 401,
+      "Comments": null,
+      "ConfirmedDeliveryTime": "2013-12-03 09:15:00.0000000",
+      "ConfirmedReceivedBy": "Deepesh Bose",
+      "ContactPersonID": 2273,
+      "CreditNoteReason": null,
+      "CustomerID": 537,
+      "CustomerPurchaseOrderNumber": 14270,
+      "DeliveryInstructions": "Unit 246, 1280 Tran Boulevard",
+      "DeliveryMethodID": 3,
+      "DeliveryRun": null,
+      "InternalComments": null,
+      "InvoiceDate": "2013-12-02",
+      "InvoiceID": 17286,
+      "IsCreditNote": 0,
+      "LastEditedBy": 19,
+      "LastEditedWhen": "2013-12-03 07:00:00.0000000",
+      "OrderID": 17896,
+      "PackedByPersonID": 14,
+      "ReturnedDeliveryData": {
+        "DeliveredWhen": "2013-12-03T09:15:00",
+        "Events": [
+          {
+            "ConNote": "EAN-125-18336",
+            "Event": "Ready for collection",
+            "EventTime": "2013-12-02T12:00:00"
+          },
+          {
+            "ConNote": "EAN-125-18336",
+            "DriverID": 19,
+            "Event": "DeliveryAttempt",
+            "EventTime": "2013-12-03T09:15:00",
+            "Latitude": 56.9455556,
+            "Longitude": -154.1702778,
+            "Status": "Delivered"
+          }
+        ],
+        "ReceivedBy": "Deepesh Bose"
+      },
+      "RunPosition": null,
+      "SalespersonPersonID": 2,
+      "TotalChillerItems": 0,
+      "TotalDryItems": 2
+    },
+    {
+      "AccountsPersonID": 2001,
+      "BillToCustomerID": 401,
+      "Comments": null,
+      "ConfirmedDeliveryTime": "2015-07-08 09:35:00.0000000",
+      "ConfirmedReceivedBy": "Deepesh Bose",
+      "ContactPersonID": 2273,
+      "CreditNoteReason": null,
+      "CustomerID": 537,
+      "CustomerPurchaseOrderNumber": 17667,
+      "DeliveryInstructions": "Unit 246, 1280 Tran Boulevard",
+      "DeliveryMethodID": 3,
+      "DeliveryRun": null,
+      "InternalComments": null,
+      "InvoiceDate": "2015-07-07",
+      "InvoiceID": 50466,
+      "IsCreditNote": 0,
+      "LastEditedBy": 4,
+      "LastEditedWhen": "2015-07-08 07:00:00.0000000",
+      "OrderID": 52561,
+      "PackedByPersonID": 18,
+      "ReturnedDeliveryData": {
+        "DeliveredWhen": "2015-07-08T09:35:00",
+        "Events": [
+          {
+            "ConNote": "EAN-125-51516",
+            "Event": "Ready for collection",
+            "EventTime": "2015-07-07T12:00:00"
+          },
+          {
+            "ConNote": "EAN-125-51516",
+            "DriverID": 4,
+            "Event": "DeliveryAttempt",
+            "EventTime": "2015-07-08T09:35:00",
+            "Latitude": 56.9455556,
+            "Longitude": -154.1702778,
+            "Status": "Delivered"
+          }
+        ],
+        "ReceivedBy": "Deepesh Bose"
+      },
+      "RunPosition": null,
+      "SalespersonPersonID": 15,
+      "TotalChillerItems": 0,
+      "TotalDryItems": 2
+    },
+    {
+      "AccountsPersonID": 1001,
+      "BillToCustomerID": 1,
+      "Comments": null,
+      "ConfirmedDeliveryTime": "2013-04-26 10:00:00.0000000",
+      "ConfirmedReceivedBy": "Dilara Ayhan",
+      "ContactPersonID": 1311,
+      "CreditNoteReason": null,
+      "CustomerID": 156,
+      "CustomerPurchaseOrderNumber": 14013,
+      "DeliveryInstructions": "Unit 178, 1948 Podnieks Road",
+      "DeliveryMethodID": 3,
+      "DeliveryRun": null,
+      "InternalComments": null,
+      "InvoiceDate": "2013-04-25",
+      "InvoiceID": 5768,
+      "IsCreditNote": 0,
+      "LastEditedBy": 10,
+      "LastEditedWhen": "2013-04-26 07:00:00.0000000",
+      "OrderID": 5932,
+      "PackedByPersonID": 11,
+      "ReturnedDeliveryData": {
+        "DeliveredWhen": "2013-04-26T10:00:00",
+        "Events": [
+          {
+            "ConNote": "EAN-125-6818",
+            "Event": "Ready for collection",
+            "EventTime": "2013-04-25T12:00:00"
+          },
+          {
+            "ConNote": "EAN-125-6818",
+            "DriverID": 10,
+            "Event": "DeliveryAttempt",
+            "EventTime": "2013-04-26T10:00:00",
+            "Latitude": 29.6005047,
+            "Longitude": -98.48724,
+            "Status": "Delivered"
+          }
+        ],
+        "ReceivedBy": "Dilara Ayhan"
+      },
+      "RunPosition": null,
+      "SalespersonPersonID": 15,
+      "TotalChillerItems": 0,
+      "TotalDryItems": 2
+    },
+    {
+      "AccountsPersonID": 3063,
+      "BillToCustomerID": 863,
+      "Comments": null,
+      "ConfirmedDeliveryTime": "2016-05-27 07:15:00.0000000",
+      "ConfirmedReceivedBy": "Jakub Lukes",
+      "ContactPersonID": 3063,
+      "CreditNoteReason": null,
+      "CustomerID": 863,
+      "CustomerPurchaseOrderNumber": 12441,
+      "DeliveryInstructions": "Shop 9, 1501 Tuntayakul Crescent",
+      "DeliveryMethodID": 3,
+      "DeliveryRun": null,
+      "InternalComments": null,
+      "InvoiceDate": "2016-05-26",
+      "InvoiceID": 70120,
+      "IsCreditNote": 0,
+      "LastEditedBy": 9,
+      "LastEditedWhen": "2016-05-27 07:00:00.0000000",
+      "OrderID": 73169,
+      "PackedByPersonID": 14,
+      "ReturnedDeliveryData": {
+        "DeliveredWhen": "2016-05-27T07:15:00",
+        "Events": [
+          {
+            "ConNote": "EAN-125-71170",
+            "Event": "Ready for collection",
+            "EventTime": "2016-05-26T12:00:00"
+          },
+          {
+            "ConNote": "EAN-125-71170",
+            "DriverID": 9,
+            "Event": "DeliveryAttempt",
+            "EventTime": "2016-05-27T07:15:00",
+            "Latitude": 41.1548173,
+            "Longitude": -74.226814,
+            "Status": "Delivered"
+          }
+        ],
+        "ReceivedBy": "Jakub Lukes"
+      },
+      "RunPosition": null,
+      "SalespersonPersonID": 14,
+      "TotalChillerItems": 0,
+      "TotalDryItems": 1
+    },
+    {
+      "AccountsPersonID": 3066,
+      "BillToCustomerID": 866,
+      "Comments": null,
+      "ConfirmedDeliveryTime": "2015-06-06 07:35:00.0000000",
+      "ConfirmedReceivedBy": "Jay Bhuiyan",
+      "ContactPersonID": 3066,
+      "CreditNoteReason": null,
+      "CustomerID": 866,
+      "CustomerPurchaseOrderNumber": 16634,
+      "DeliveryInstructions": "Suite 22, 130 Seleznyov Street",
+      "DeliveryMethodID": 3,
+      "DeliveryRun": null,
+      "InternalComments": null,
+      "InvoiceDate": "2015-06-05",
+      "InvoiceID": 48519,
+      "IsCreditNote": 0,
+      "LastEditedBy": 4,
+      "LastEditedWhen": "2015-06-06 07:00:00.0000000",
+      "OrderID": 50513,
+      "PackedByPersonID": 14,
+      "ReturnedDeliveryData": {
+        "DeliveredWhen": "2015-06-06T07:35:00",
+        "Events": [
+          {
+            "ConNote": "EAN-125-49569",
+            "Event": "Ready for collection",
+            "EventTime": "2015-06-05T12:00:00"
+          },
+          {
+            "ConNote": "EAN-125-49569",
+            "DriverID": 4,
+            "Event": "DeliveryAttempt",
+            "EventTime": "2015-06-06T07:35:00",
+            "Latitude": 41.1220337,
+            "Longitude": -75.3646282,
+            "Status": "Delivered"
+          }
+        ],
+        "ReceivedBy": "Jay Bhuiyan"
+      },
+      "RunPosition": null,
+      "SalespersonPersonID": 16,
+      "TotalChillerItems": 0,
+      "TotalDryItems": 1
+    }
+  ]
+}

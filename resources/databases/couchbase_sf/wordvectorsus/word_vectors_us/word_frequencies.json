@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "frequency": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              4,
+              6,
+              14,
+              26
+            ],
+            "type": "number"
+          },
+          "word": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "12,238,239,240",
+              "C31",
+              "Joo",
+              "potentials30",
+              "scattering15"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "word_frequencies::117960",
+                  "word_frequencies::130360",
+                  "word_frequencies::131207",
+                  "word_frequencies::134715",
+                  "word_frequencies::143588"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "word_frequencies::117960"
+              },
+              {
+                "id": "word_frequencies::130360"
+              },
+              {
+                "id": "word_frequencies::131207"
+              },
+              {
+                "id": "word_frequencies::134715"
+              },
+              {
+                "id": "word_frequencies::143588"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "frequency": 2,
+      "word": "Crossbar"
+    },
+    {
+      "frequency": 2,
+      "word": "naphthylmethyl"
+    },
+    {
+      "frequency": 2,
+      "word": "561416"
+    },
+    {
+      "frequency": 2,
+      "word": "0.0180"
+    },
+    {
+      "frequency": 2,
+      "word": "PDMS41"
+    }
+  ]
+}

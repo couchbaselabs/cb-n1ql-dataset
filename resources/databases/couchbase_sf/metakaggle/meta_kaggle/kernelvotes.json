@@ -1,0 +1,133 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21707,
+              21719,
+              22587,
+              693449,
+              711714
+            ],
+            "type": "number"
+          },
+          "KernelVersionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              216846,
+              217222,
+              217238
+            ],
+            "type": "number"
+          },
+          "UserId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              64385,
+              346581,
+              352471,
+              2302419,
+              3010112
+            ],
+            "type": "number"
+          },
+          "VoteDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-04-25",
+              "2016-05-04",
+              "2019-04-21",
+              "2019-05-06"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "kernelvotes::0",
+                  "kernelvotes::1",
+                  "kernelvotes::2",
+                  "kernelvotes::3",
+                  "kernelvotes::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "kernelvotes::0"
+              },
+              {
+                "id": "kernelvotes::1"
+              },
+              {
+                "id": "kernelvotes::2"
+              },
+              {
+                "id": "kernelvotes::3"
+              },
+              {
+                "id": "kernelvotes::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Id": 21707,
+      "KernelVersionId": 217222,
+      "UserId": 64385,
+      "VoteDate": "2016-04-25"
+    },
+    {
+      "Id": 22587,
+      "KernelVersionId": 216846,
+      "UserId": 346581,
+      "VoteDate": "2016-05-04"
+    },
+    {
+      "Id": 21719,
+      "KernelVersionId": 216846,
+      "UserId": 352471,
+      "VoteDate": "2016-04-25"
+    },
+    {
+      "Id": 711714,
+      "KernelVersionId": 216846,
+      "UserId": 3010112,
+      "VoteDate": "2019-05-06"
+    },
+    {
+      "Id": 693449,
+      "KernelVersionId": 217238,
+      "UserId": 2302419,
+      "VoteDate": "2019-04-21"
+    }
+  ]
+}

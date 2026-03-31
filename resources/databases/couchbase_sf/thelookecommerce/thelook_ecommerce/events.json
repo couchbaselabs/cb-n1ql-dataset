@@ -1,0 +1,312 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "browser": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Chrome",
+              "Firefox",
+              "IE",
+              "Other",
+              "Safari"
+            ],
+            "type": "string"
+          },
+          "city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Altzaga",
+              "Anderlecht",
+              "Marseille",
+              "Nanjing",
+              "New York"
+            ],
+            "type": "string"
+          },
+          "created_at": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1591703460000000,
+              1592710260000000,
+              1595204940000000,
+              1624369980000000,
+              1660269960000000
+            ],
+            "type": "number"
+          },
+          "event_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "cancel",
+              "cart",
+              "department",
+              "product",
+              "purchase"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1386247,
+              1518142,
+              1840411,
+              1952887,
+              2262041
+            ],
+            "type": "number"
+          },
+          "ip_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "108.246.81.160",
+              "126.175.101.209",
+              "170.194.9.254",
+              "7.9.136.174",
+              "91.162.85.32"
+            ],
+            "type": "string"
+          },
+          "postal_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1070",
+              "11101",
+              "13004",
+              "136001",
+              "48950"
+            ],
+            "type": "string"
+          },
+          "sequence_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              7,
+              10
+            ],
+            "type": "number"
+          },
+          "session_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4f173be0-5527-4387-b133-ae24ee...",
+              "52618c34-e49f-428b-aea8-992387...",
+              "f303e343-02c6-45bb-aa3b-07578d...",
+              "f5f34ffb-bf14-46ab-9eac-81d14b...",
+              "f8fbc253-5065-4494-b5e8-693080..."
+            ],
+            "type": "string"
+          },
+          "state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Brussels",
+              "Jilin",
+              "New York",
+              "Pa\u00eds Vasco",
+              "Provence-Alpes-C\u00f4te d'Azur"
+            ],
+            "type": "string"
+          },
+          "traffic_source": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Adwords",
+              "Email",
+              "Facebook",
+              "Organic",
+              "YouTube"
+            ],
+            "type": "string"
+          },
+          "uri": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "/cancel",
+              "/product/10170",
+              "/product/13780",
+              "/product/18570",
+              "/product/9514"
+            ],
+            "type": "string"
+          },
+          "user_id": {
+            "#docs": [
+              454,
+              546
+            ],
+            "%docs": [
+              45.4,
+              54.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                12751,
+                50613,
+                54637,
+                64284,
+                91383
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "events::1017882",
+                  "events::195072",
+                  "events::2174101",
+                  "events::2174492",
+                  "events::2177314"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "events::1017882"
+              },
+              {
+                "id": "events::195072"
+              },
+              {
+                "id": "events::2174101"
+              },
+              {
+                "id": "events::2174492"
+              },
+              {
+                "id": "events::2177314"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "browser": "IE",
+      "city": "Hortol\u00e2ndia",
+      "created_at": 1672348655000000,
+      "event_type": "purchase",
+      "id": 684016,
+      "ip_address": "196.192.88.207",
+      "postal_code": "13188",
+      "sequence_number": 5,
+      "session_id": "d90acce6-582e-4150-9832-cff305862fb3",
+      "state": "S\u00e3o Paulo",
+      "traffic_source": "Adwords",
+      "uri": "/purchase",
+      "user_id": 53163
+    },
+    {
+      "browser": "Chrome",
+      "city": "Chengdu",
+      "created_at": 1726641758000000,
+      "event_type": "purchase",
+      "id": 439298,
+      "ip_address": "105.131.172.104",
+      "postal_code": "132000",
+      "sequence_number": 5,
+      "session_id": "faba517c-6cb7-4bb7-a3c7-76074d7ec31e",
+      "state": "Jilin",
+      "traffic_source": "Email",
+      "uri": "/purchase",
+      "user_id": 34270
+    },
+    {
+      "browser": "Chrome",
+      "city": "Seoul",
+      "created_at": 1728862896000000,
+      "event_type": "purchase",
+      "id": 48723,
+      "ip_address": "90.141.184.255",
+      "postal_code": "139-242",
+      "sequence_number": 5,
+      "session_id": "bdea1997-fb8d-4f53-88b3-faedadcdda8b",
+      "state": "Seoul",
+      "traffic_source": "Adwords",
+      "uri": "/purchase",
+      "user_id": 3789
+    },
+    {
+      "browser": "IE",
+      "city": "C\u00f3rdoba",
+      "created_at": 1718775675000000,
+      "event_type": "purchase",
+      "id": 1222779,
+      "ip_address": "11.245.172.185",
+      "postal_code": "14014",
+      "sequence_number": 5,
+      "session_id": "7a7942f6-e3aa-4b0b-8802-a94fd2ddd56c",
+      "state": "Andaluc\u00eda",
+      "traffic_source": "Adwords",
+      "uri": "/purchase",
+      "user_id": 94714
+    },
+    {
+      "browser": "Safari",
+      "city": "Ribeir\u00e3o Preto",
+      "created_at": 1552735131000000,
+      "event_type": "purchase",
+      "id": 1277625,
+      "ip_address": "34.46.87.214",
+      "postal_code": "14080",
+      "sequence_number": 13,
+      "session_id": "f3220bd5-a6c8-43f1-a144-7c2ff923895f",
+      "state": "S\u00e3o Paulo",
+      "traffic_source": "Email",
+      "uri": "/purchase",
+      "user_id": 98901
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ee_address_1": {
+            "#docs": [
+              3,
+              2
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "65 BUCKINGHAM GATE",
+                "CRICKLEWOOD"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ee_address_2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ee_city": {
+            "#docs": [
+              3,
+              2
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "LONDON NW2 6JN",
+                "LONDON, SW1E 6AT"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ee_country": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AUSTRIA",
+              "ENGLAND",
+              "NOT PROVIDED",
+              "STATELESS"
+            ],
+            "type": "string"
+          },
+          "ee_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OSTERREICHISCHE SCHIFFSWERFTEN...",
+              "REGENTS OF THE UNIVERSITY OF C...",
+              "ROLLS-ROYCE LIMITED",
+              "SMITHS INDUSTRIES LIMITED, A B...",
+              "WHITE CONSOLIDATED INDUSTRIES,..."
+            ],
+            "type": "string"
+          },
+          "ee_postcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ee_state": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "rf_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "37950043",
+              "38100366",
+              "38130636",
+              "38150185",
+              "38180419"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "assignee::0",
+                  "assignee::1",
+                  "assignee::2",
+                  "assignee::3",
+                  "assignee::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "assignee::0"
+              },
+              {
+                "id": "assignee::1"
+              },
+              {
+                "id": "assignee::2"
+              },
+              {
+                "id": "assignee::3"
+              },
+              {
+                "id": "assignee::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ee_address_1": "CRICKLEWOOD",
+      "ee_address_2": null,
+      "ee_city": "LONDON NW2 6JN",
+      "ee_country": "ENGLAND",
+      "ee_name": "SMITHS INDUSTRIES LIMITED, A BRITISH COMPANY",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "38100366"
+    },
+    {
+      "ee_address_1": null,
+      "ee_address_2": null,
+      "ee_city": null,
+      "ee_country": "NOT PROVIDED",
+      "ee_name": "REGENTS OF THE UNIVERSITY OF CALIFORNIA, THE",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "37950043"
+    },
+    {
+      "ee_address_1": "65 BUCKINGHAM GATE",
+      "ee_address_2": null,
+      "ee_city": "LONDON, SW1E 6AT",
+      "ee_country": "ENGLAND",
+      "ee_name": "ROLLS-ROYCE LIMITED",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "38180419"
+    },
+    {
+      "ee_address_1": null,
+      "ee_address_2": null,
+      "ee_city": null,
+      "ee_country": "AUSTRIA",
+      "ee_name": "OSTERREICHISCHE SCHIFFSWERFTEN AKTIENGESELLSCHAFT LINZ-KORNEUBURG, HAFENSTRASSE 61, A-4010 LINZ, AUSTRIA",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "38150185"
+    },
+    {
+      "ee_address_1": null,
+      "ee_address_2": null,
+      "ee_city": null,
+      "ee_country": "STATELESS",
+      "ee_name": "WHITE CONSOLIDATED INDUSTRIES, INC. A CORP. OF DEL.",
+      "ee_postcode": null,
+      "ee_state": null,
+      "rf_id": "38130636"
+    }
+  ]
+}

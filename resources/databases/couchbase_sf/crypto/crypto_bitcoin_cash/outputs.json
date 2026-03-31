@@ -1,0 +1,278 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`required_signatures` = 1, `type` = \"pubkeyhash\"",
+        "properties": {
+          "addresses": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "bitcoincash:qpgyd0ut5ej4a7jehlx9q0vyue30zymlpc3xl5sn0l"
+              ],
+              [
+                "bitcoincash:qq0ucjvtc7wdf6vq8rl8sm4lx9cxwg4qacgjnv73ms"
+              ],
+              [
+                "bitcoincash:qrsa2r3fs9m2cqfyazfsv5n9dk6ta7wr4swkw4jg2k"
+              ],
+              [
+                "bitcoincash:qrw4vn4hnwp45xgftaad2x8jwj6zqtjn7sj40k5th6"
+              ],
+              [
+                "bitcoincash:qz3yu2m8dzwrw5uc85a5pz78dyxnrvdhf5v8tlf8jd"
+              ]
+            ],
+            "type": "array"
+          },
+          "block_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "000000000000000000d4196db85f0f...",
+              "0000000000000000013d5e2f2f2db6...",
+              "000000000000000002c1cf7678ed41...",
+              "00000000000000000384d615ce537c...",
+              "00000000000000000479d84c71451f..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              361665,
+              674299,
+              675685,
+              676094,
+              784995
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1434737656000000,
+              1613080526000000,
+              1613871773000000,
+              1614155518000000,
+              1679487541000000
+            ],
+            "type": "number"
+          },
+          "index": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              19
+            ],
+            "type": "number"
+          },
+          "required_signatures": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "script_asm": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OP_DUP OP_HASH160 1fcc498bc79c...",
+              "OP_DUP OP_HASH160 5046bf8ba665...",
+              "OP_DUP OP_HASH160 a24e2b67689c...",
+              "OP_DUP OP_HASH160 dd564eb79b83...",
+              "OP_DUP OP_HASH160 e1d50e298176..."
+            ],
+            "type": "string"
+          },
+          "script_hex": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "76a9141fcc498bc79cd4e98038fe78...",
+              "76a9145046bf8ba6655efa59bfcc50...",
+              "76a914a24e2b67689c3753983d3b40...",
+              "76a914dd564eb79b835a19095f7ad5...",
+              "76a914e1d50e298176ac0124e89306..."
+            ],
+            "type": "string"
+          },
+          "transaction_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "148433c20af9915be1769ea51e2b03...",
+              "3667c5d0921af52de720cda77a7678...",
+              "ad46fb02dde67537a43c83eefd6c96...",
+              "b7c1462c18d5c94b54c68ea67f424e...",
+              "cd19b7dd1a8b8d8222aab5436563fb..."
+            ],
+            "type": "string"
+          },
+          "type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "pubkeyhash"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              626898,
+              792367,
+              2127000,
+              9905029,
+              625721397
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "outputs::0",
+                  "outputs::1",
+                  "outputs::2",
+                  "outputs::3",
+                  "outputs::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "outputs::0"
+              },
+              {
+                "id": "outputs::1"
+              },
+              {
+                "id": "outputs::2"
+              },
+              {
+                "id": "outputs::3"
+              },
+              {
+                "id": "outputs::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "addresses": [
+        "bitcoincash:qq0ucjvtc7wdf6vq8rl8sm4lx9cxwg4qacgjnv73ms"
+      ],
+      "block_hash": "00000000000000000384d615ce537c5b797a39f138fb6ef0bd0d74a459718301",
+      "block_number": 361665,
+      "block_timestamp": 1434737656000000,
+      "index": 0,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 1fcc498bc79cd4e98038fe786ebf31706722a0ee OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a9141fcc498bc79cd4e98038fe786ebf31706722a0ee88ac",
+      "transaction_hash": "b7c1462c18d5c94b54c68ea67f424ea5fef17654e89956295e6fd46a1f8361dc",
+      "type": "pubkeyhash",
+      "value": 2127000
+    },
+    {
+      "addresses": [
+        "bitcoincash:qrw4vn4hnwp45xgftaad2x8jwj6zqtjn7sj40k5th6"
+      ],
+      "block_hash": "00000000000000000479d84c71451f3c2fbfeb47562fe7f709f2849df803ee74",
+      "block_number": 676094,
+      "block_timestamp": 1614155518000000,
+      "index": 1,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 dd564eb79b835a19095f7ad518f274b4202e53f4 OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a914dd564eb79b835a19095f7ad518f274b4202e53f488ac",
+      "transaction_hash": "cd19b7dd1a8b8d8222aab5436563fbef3990a2f88be2e419f2fe0eebe6d4ea8a",
+      "type": "pubkeyhash",
+      "value": 9905029
+    },
+    {
+      "addresses": [
+        "bitcoincash:qz3yu2m8dzwrw5uc85a5pz78dyxnrvdhf5v8tlf8jd"
+      ],
+      "block_hash": "0000000000000000013d5e2f2f2db660239a9f6723891db6133d23d6fcc71dfe",
+      "block_number": 784995,
+      "block_timestamp": 1679487541000000,
+      "index": 0,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 a24e2b67689c3753983d3b408bc7690d31b1b74d OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a914a24e2b67689c3753983d3b408bc7690d31b1b74d88ac",
+      "transaction_hash": "3667c5d0921af52de720cda77a76782db9e2f5ca8af0e87444b8602196fe3975",
+      "type": "pubkeyhash",
+      "value": 625721397
+    },
+    {
+      "addresses": [
+        "bitcoincash:qrsa2r3fs9m2cqfyazfsv5n9dk6ta7wr4swkw4jg2k"
+      ],
+      "block_hash": "000000000000000002c1cf7678ed41b9c2589a874a03cd76a9e7e17a852e5cc6",
+      "block_number": 674299,
+      "block_timestamp": 1613080526000000,
+      "index": 19,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 e1d50e298176ac0124e8930652656db4bef9c3ac OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a914e1d50e298176ac0124e8930652656db4bef9c3ac88ac",
+      "transaction_hash": "ad46fb02dde67537a43c83eefd6c9690c702f7b985adc156642cb7b3d2d72ce6",
+      "type": "pubkeyhash",
+      "value": 626898
+    },
+    {
+      "addresses": [
+        "bitcoincash:qpgyd0ut5ej4a7jehlx9q0vyue30zymlpc3xl5sn0l"
+      ],
+      "block_hash": "000000000000000000d4196db85f0f75a6e64b26c6a192c07c077f087fa3af3a",
+      "block_number": 675685,
+      "block_timestamp": 1613871773000000,
+      "index": 1,
+      "required_signatures": 1,
+      "script_asm": "OP_DUP OP_HASH160 5046bf8ba6655efa59bfcc503d84e662f1137f0e OP_EQUALVERIFY OP_CHECKSIG",
+      "script_hex": "76a9145046bf8ba6655efa59bfcc503d84e662f1137f0e88ac",
+      "transaction_hash": "148433c20af9915be1769ea51e2b0385ecf4b5d1c81da06b2d10e1ef3b12f3a8",
+      "type": "pubkeyhash",
+      "value": 792367
+    }
+  ]
+}

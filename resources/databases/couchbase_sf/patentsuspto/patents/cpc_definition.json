@@ -1,0 +1,1018 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`breakdownCode` = false, `ipcConcordant` = \"\", `level` = 2, `notAllocatable` = true, `status` = \"published\"",
+        "properties": {
+          "applicationReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "breakdownCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "childGroups": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 16,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    ""
+                  ],
+                  "type": "string"
+                },
+                "symbols": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 13,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "H01",
+                      "H02",
+                      "H03",
+                      "H04",
+                      "H05",
+                      "H10",
+                      "H99"
+                    ],
+                    [
+                      "Y02",
+                      "Y04",
+                      "Y10"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 6,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "description": "",
+                  "symbols": [
+                    "H01",
+                    "H02",
+                    "H03",
+                    "H04",
+                    "H05",
+                    "H10",
+                    "H99"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "",
+                  "symbols": [
+                    "Y02",
+                    "Y04",
+                    "Y10"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "ENGINES OR PUMPS",
+                  "symbols": [
+                    "F01",
+                    "F02",
+                    "F03",
+                    "F04",
+                    "F05"
+                  ]
+                },
+                {
+                  "description": "ENGINEERING IN GENERAL",
+                  "symbols": [
+                    "F15",
+                    "F16",
+                    "F17"
+                  ]
+                },
+                {
+                  "description": "LIGHTING; HEATING",
+                  "symbols": [
+                    "F21",
+                    "F22",
+                    "F23",
+                    "F24",
+                    "F25",
+                    "F26",
+                    "F27",
+                    "F28"
+                  ]
+                },
+                {
+                  "description": "WEAPONS; BLASTING",
+                  "symbols": [
+                    "F41",
+                    "F42"
+                  ]
+                },
+                {
+                  "description": "",
+                  "symbols": [
+                    "F99"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "SEPARATING; MIXING",
+                  "symbols": [
+                    "B01",
+                    "B02",
+                    "B03",
+                    "B04",
+                    "B05",
+                    "B06",
+                    "B07",
+                    "B08",
+                    "B09"
+                  ]
+                },
+                {
+                  "description": "SHAPING",
+                  "symbols": [
+                    "B21",
+                    "B22",
+                    "B23",
+                    "B24",
+                    "B25",
+                    "B26",
+                    "B27",
+                    "B28",
+                    "B29",
+                    "B30",
+                    "B31",
+                    "B32",
+                    "B33"
+                  ]
+                },
+                {
+                  "description": "PRINTING",
+                  "symbols": [
+                    "B41",
+                    "B42",
+                    "B43",
+                    "B44"
+                  ]
+                },
+                {
+                  "description": "TRANSPORTING",
+                  "symbols": [
+                    "B60",
+                    "B61",
+                    "B62",
+                    "B63",
+                    "B64",
+                    "B65",
+                    "B66",
+                    "B67",
+                    "B68"
+                  ]
+                },
+                {
+                  "description": "MICROSTRUCTURAL TECHNOLOGY; NANOTECHNOLOGY",
+                  "symbols": [
+                    "B81",
+                    "B82"
+                  ]
+                },
+                {
+                  "description": "",
+                  "symbols": [
+                    "B99"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "TEXTILES OR FLEXIBLE MATERIALS NOT OTHERWISE PROVIDED FOR",
+                  "symbols": [
+                    "D01",
+                    "D02",
+                    "D03",
+                    "D04",
+                    "D05",
+                    "D06",
+                    "D07",
+                    "D10"
+                  ]
+                },
+                {
+                  "description": "PAPER",
+                  "symbols": [
+                    "D21"
+                  ]
+                },
+                {
+                  "description": "",
+                  "symbols": [
+                    "D99"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "children": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 38,
+            "minItems": 3,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "B01",
+                "B02",
+                "B03",
+                "B04",
+                "B05",
+                "B06",
+                "B07",
+                "B08",
+                "B09",
+                "B21",
+                "B22",
+                "B23",
+                "B24",
+                "B25",
+                "B26",
+                "B27",
+                "B28",
+                "B29",
+                "B30",
+                "B31",
+                "B32",
+                "B33",
+                "B41",
+                "B42",
+                "B43",
+                "B44",
+                "B60",
+                "B61",
+                "B62",
+                "B63",
+                "B64",
+                "B65",
+                "B66",
+                "B67",
+                "B68",
+                "B81",
+                "B82",
+                "B99"
+              ],
+              [
+                "D01",
+                "D02",
+                "D03",
+                "D04",
+                "D05",
+                "D06",
+                "D07",
+                "D10",
+                "D21",
+                "D99"
+              ],
+              [
+                "F01",
+                "F02",
+                "F03",
+                "F04",
+                "F05",
+                "F15",
+                "F16",
+                "F17",
+                "F21",
+                "F22",
+                "F23",
+                "F24",
+                "F25",
+                "F26",
+                "F27",
+                "F28",
+                "F41",
+                "F42",
+                "F99"
+              ],
+              [
+                "H01",
+                "H02",
+                "H03",
+                "H04",
+                "H05",
+                "H10",
+                "H99"
+              ],
+              [
+                "Y02",
+                "Y04",
+                "Y10"
+              ]
+            ],
+            "type": "array"
+          },
+          "dateRevised": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20130101,
+              20160501,
+              20190201,
+              20200101
+            ],
+            "type": "number"
+          },
+          "definition": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "glossary": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "informativeReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "ipcConcordant": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              ""
+            ],
+            "type": "string"
+          },
+          "level": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "limitingReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "notAllocatable": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              true
+            ],
+            "type": "boolean"
+          },
+          "parents": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "precedenceLimitingReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "residualReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "rules": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "scopeLimitingReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "status": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "published"
+            ],
+            "type": "string"
+          },
+          "symbol": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "B",
+              "D",
+              "F",
+              "H",
+              "Y"
+            ],
+            "type": "string"
+          },
+          "synonyms": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "titleFull": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ELECTRICITY",
+              "GENERAL TAGGING OF NEW TECHNOL...",
+              "MECHANICAL ENGINEERING; LIGHTI...",
+              "PERFORMING OPERATIONS; TRANSPO...",
+              "TEXTILES; PAPER"
+            ],
+            "type": "string"
+          },
+          "titlePart": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 5,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "ELECTRICITY"
+              ],
+              [
+                "GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS",
+                "GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC",
+                "TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS"
+              ],
+              [
+                "MECHANICAL ENGINEERING",
+                "LIGHTING",
+                "HEATING",
+                "WEAPONS",
+                "BLASTING"
+              ],
+              [
+                "PERFORMING OPERATIONS",
+                "TRANSPORTING"
+              ],
+              [
+                "TEXTILES",
+                "PAPER"
+              ]
+            ],
+            "type": "array"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cpc_definition::0",
+                  "cpc_definition::1",
+                  "cpc_definition::2",
+                  "cpc_definition::3",
+                  "cpc_definition::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cpc_definition::0"
+              },
+              {
+                "id": "cpc_definition::1"
+              },
+              {
+                "id": "cpc_definition::2"
+              },
+              {
+                "id": "cpc_definition::3"
+              },
+              {
+                "id": "cpc_definition::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "",
+          "symbols": [
+            "Y02",
+            "Y04",
+            "Y10"
+          ]
+        }
+      ],
+      "children": [
+        "Y02",
+        "Y04",
+        "Y10"
+      ],
+      "dateRevised": 20130101,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "Y",
+      "synonyms": [],
+      "titleFull": "GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS",
+      "titlePart": [
+        "GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS",
+        "GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC",
+        "TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "TEXTILES OR FLEXIBLE MATERIALS NOT OTHERWISE PROVIDED FOR",
+          "symbols": [
+            "D01",
+            "D02",
+            "D03",
+            "D04",
+            "D05",
+            "D06",
+            "D07",
+            "D10"
+          ]
+        },
+        {
+          "description": "PAPER",
+          "symbols": [
+            "D21"
+          ]
+        },
+        {
+          "description": "",
+          "symbols": [
+            "D99"
+          ]
+        }
+      ],
+      "children": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D10",
+        "D21",
+        "D99"
+      ],
+      "dateRevised": 20130101,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "D",
+      "synonyms": [],
+      "titleFull": "TEXTILES; PAPER",
+      "titlePart": [
+        "TEXTILES",
+        "PAPER"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "SEPARATING; MIXING",
+          "symbols": [
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08",
+            "B09"
+          ]
+        },
+        {
+          "description": "SHAPING",
+          "symbols": [
+            "B21",
+            "B22",
+            "B23",
+            "B24",
+            "B25",
+            "B26",
+            "B27",
+            "B28",
+            "B29",
+            "B30",
+            "B31",
+            "B32",
+            "B33"
+          ]
+        },
+        {
+          "description": "PRINTING",
+          "symbols": [
+            "B41",
+            "B42",
+            "B43",
+            "B44"
+          ]
+        },
+        {
+          "description": "TRANSPORTING",
+          "symbols": [
+            "B60",
+            "B61",
+            "B62",
+            "B63",
+            "B64",
+            "B65",
+            "B66",
+            "B67",
+            "B68"
+          ]
+        },
+        {
+          "description": "MICROSTRUCTURAL TECHNOLOGY; NANOTECHNOLOGY",
+          "symbols": [
+            "B81",
+            "B82"
+          ]
+        },
+        {
+          "description": "",
+          "symbols": [
+            "B99"
+          ]
+        }
+      ],
+      "children": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B21",
+        "B22",
+        "B23",
+        "B24",
+        "B25",
+        "B26",
+        "B27",
+        "B28",
+        "B29",
+        "B30",
+        "B31",
+        "B32",
+        "B33",
+        "B41",
+        "B42",
+        "B43",
+        "B44",
+        "B60",
+        "B61",
+        "B62",
+        "B63",
+        "B64",
+        "B65",
+        "B66",
+        "B67",
+        "B68",
+        "B81",
+        "B82",
+        "B99"
+      ],
+      "dateRevised": 20160501,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "B",
+      "synonyms": [],
+      "titleFull": "PERFORMING OPERATIONS; TRANSPORTING",
+      "titlePart": [
+        "PERFORMING OPERATIONS",
+        "TRANSPORTING"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "",
+          "symbols": [
+            "H01",
+            "H02",
+            "H03",
+            "H04",
+            "H05",
+            "H10",
+            "H99"
+          ]
+        }
+      ],
+      "children": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H10",
+        "H99"
+      ],
+      "dateRevised": 20200101,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "H",
+      "synonyms": [],
+      "titleFull": "ELECTRICITY",
+      "titlePart": [
+        "ELECTRICITY"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "ENGINES OR PUMPS",
+          "symbols": [
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05"
+          ]
+        },
+        {
+          "description": "ENGINEERING IN GENERAL",
+          "symbols": [
+            "F15",
+            "F16",
+            "F17"
+          ]
+        },
+        {
+          "description": "LIGHTING; HEATING",
+          "symbols": [
+            "F21",
+            "F22",
+            "F23",
+            "F24",
+            "F25",
+            "F26",
+            "F27",
+            "F28"
+          ]
+        },
+        {
+          "description": "WEAPONS; BLASTING",
+          "symbols": [
+            "F41",
+            "F42"
+          ]
+        },
+        {
+          "description": "",
+          "symbols": [
+            "F99"
+          ]
+        }
+      ],
+      "children": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F15",
+        "F16",
+        "F17",
+        "F21",
+        "F22",
+        "F23",
+        "F24",
+        "F25",
+        "F26",
+        "F27",
+        "F28",
+        "F41",
+        "F42",
+        "F99"
+      ],
+      "dateRevised": 20190201,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "F",
+      "synonyms": [],
+      "titleFull": "MECHANICAL ENGINEERING; LIGHTING; HEATING; WEAPONS; BLASTING",
+      "titlePart": [
+        "MECHANICAL ENGINEERING",
+        "LIGHTING",
+        "HEATING",
+        "WEAPONS",
+        "BLASTING"
+      ]
+    }
+  ]
+}

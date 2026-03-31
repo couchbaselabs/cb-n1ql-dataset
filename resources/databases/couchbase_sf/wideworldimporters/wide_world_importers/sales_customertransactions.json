@@ -1,0 +1,284 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`FinalizationDate` = \"2013-01-02\", `IsFinalized` = 1, `LastEditedBy` = 10, `LastEditedWhen` = \"2013-01-02 11:30:00.0000000\", `OutstandingBalance` = 0, `TransactionDate` = \"2013-01-01\", `TransactionTypeID` = 1",
+        "properties": {
+          "AmountExcludingTax": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              258,
+              405,
+              430,
+              704,
+              2300
+            ],
+            "type": "number"
+          },
+          "CustomerID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              803,
+              832,
+              905,
+              964,
+              976
+            ],
+            "type": "number"
+          },
+          "CustomerTransactionID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              5,
+              15,
+              19,
+              28
+            ],
+            "type": "number"
+          },
+          "FinalizationDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-02"
+            ],
+            "type": "string"
+          },
+          "InvoiceID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              5,
+              6,
+              8
+            ],
+            "type": "number"
+          },
+          "IsFinalized": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-02 11:30:00.0000000"
+            ],
+            "type": "string"
+          },
+          "OutstandingBalance": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "PaymentMethodID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TaxAmount": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              38.7,
+              60.75,
+              64.5,
+              105.6,
+              345
+            ],
+            "type": "number"
+          },
+          "TransactionAmount": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              296.7,
+              465.75,
+              494.5,
+              809.6,
+              2645
+            ],
+            "type": "number"
+          },
+          "TransactionDate": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-01"
+            ],
+            "type": "string"
+          },
+          "TransactionTypeID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_customertransactions::0",
+                  "sales_customertransactions::1",
+                  "sales_customertransactions::2",
+                  "sales_customertransactions::3",
+                  "sales_customertransactions::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_customertransactions::0"
+              },
+              {
+                "id": "sales_customertransactions::1"
+              },
+              {
+                "id": "sales_customertransactions::2"
+              },
+              {
+                "id": "sales_customertransactions::3"
+              },
+              {
+                "id": "sales_customertransactions::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AmountExcludingTax": 2300,
+      "CustomerID": 832,
+      "CustomerTransactionID": 2,
+      "FinalizationDate": "2013-01-02",
+      "InvoiceID": 1,
+      "IsFinalized": 1,
+      "LastEditedBy": 10,
+      "LastEditedWhen": "2013-01-02 11:30:00.0000000",
+      "OutstandingBalance": 0,
+      "PaymentMethodID": null,
+      "TaxAmount": 345,
+      "TransactionAmount": 2645,
+      "TransactionDate": "2013-01-01",
+      "TransactionTypeID": 1
+    },
+    {
+      "AmountExcludingTax": 405,
+      "CustomerID": 803,
+      "CustomerTransactionID": 5,
+      "FinalizationDate": "2013-01-02",
+      "InvoiceID": 2,
+      "IsFinalized": 1,
+      "LastEditedBy": 10,
+      "LastEditedWhen": "2013-01-02 11:30:00.0000000",
+      "OutstandingBalance": 0,
+      "PaymentMethodID": null,
+      "TaxAmount": 60.75,
+      "TransactionAmount": 465.75,
+      "TransactionDate": "2013-01-01",
+      "TransactionTypeID": 1
+    },
+    {
+      "AmountExcludingTax": 430,
+      "CustomerID": 976,
+      "CustomerTransactionID": 19,
+      "FinalizationDate": "2013-01-02",
+      "InvoiceID": 6,
+      "IsFinalized": 1,
+      "LastEditedBy": 10,
+      "LastEditedWhen": "2013-01-02 11:30:00.0000000",
+      "OutstandingBalance": 0,
+      "PaymentMethodID": null,
+      "TaxAmount": 64.5,
+      "TransactionAmount": 494.5,
+      "TransactionDate": "2013-01-01",
+      "TransactionTypeID": 1
+    },
+    {
+      "AmountExcludingTax": 258,
+      "CustomerID": 964,
+      "CustomerTransactionID": 28,
+      "FinalizationDate": "2013-01-02",
+      "InvoiceID": 8,
+      "IsFinalized": 1,
+      "LastEditedBy": 10,
+      "LastEditedWhen": "2013-01-02 11:30:00.0000000",
+      "OutstandingBalance": 0,
+      "PaymentMethodID": null,
+      "TaxAmount": 38.7,
+      "TransactionAmount": 296.7,
+      "TransactionDate": "2013-01-01",
+      "TransactionTypeID": 1
+    },
+    {
+      "AmountExcludingTax": 704,
+      "CustomerID": 905,
+      "CustomerTransactionID": 15,
+      "FinalizationDate": "2013-01-02",
+      "InvoiceID": 5,
+      "IsFinalized": 1,
+      "LastEditedBy": 10,
+      "LastEditedWhen": "2013-01-02 11:30:00.0000000",
+      "OutstandingBalance": 0,
+      "PaymentMethodID": null,
+      "TaxAmount": 105.6,
+      "TransactionAmount": 809.6,
+      "TransactionDate": "2013-01-01",
+      "TransactionTypeID": 1
+    }
+  ]
+}

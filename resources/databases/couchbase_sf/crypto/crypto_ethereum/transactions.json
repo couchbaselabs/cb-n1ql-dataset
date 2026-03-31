@@ -1,0 +1,561 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "blob_versioned_hashes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "block_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x04d658ba04bfc36a62669072c066...",
+              "0x29bd322cd68ee661e9deefc30e72...",
+              "0x38cbe0a2686d6771c8762359621a...",
+              "0x3d80e87a020ade43f93e72225527...",
+              "0x6754d8d92c56b45bb1a7bc1127db..."
+            ],
+            "type": "string"
+          },
+          "block_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7225679,
+              8600454,
+              11726155,
+              12170302,
+              12726349
+            ],
+            "type": "number"
+          },
+          "block_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1550278814000000,
+              1569174727000000,
+              1611594750000000,
+              1617501733000000,
+              1624934207000000
+            ],
+            "type": "number"
+          },
+          "from_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x04668ec2f57cc15c381b461b9fed...",
+              "0x3ca38ffdd626d196d237d72b937b...",
+              "0xa7a7899d944fe658c4b0a1803bab...",
+              "0xb8773f15f358b583ea96823d3b44...",
+              "0xeb2629a2734e272bcc07bda95986..."
+            ],
+            "type": "string"
+          },
+          "gas": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21000,
+              100000,
+              200000,
+              250000,
+              400000
+            ],
+            "type": "number"
+          },
+          "gas_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1000000000,
+              15000000000,
+              16000000000,
+              60000000000,
+              141000000000
+            ],
+            "type": "number"
+          },
+          "hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x50abb9027d845b2b26f5519a433e...",
+              "0x55fa1cd4dfa43af4d44fac24ec1d...",
+              "0x8f82105329f0f4dc6b5c0ddf4f8a...",
+              "0xa559fd1dc511f52556680740ce1e...",
+              "0xab7141d3543877ec87025863af96..."
+            ],
+            "type": "string"
+          },
+          "input": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x",
+              "0x095ea7b300000000000000000000...",
+              "0x0dcd7a6c00000000000000000000...",
+              "0xa9059cbb00000000000000000000...",
+              "0xef34358800000000000000000000..."
+            ],
+            "type": "string"
+          },
+          "max_fee_per_blob_gas": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "max_fee_per_gas": {
+            "#docs": [
+              643,
+              357
+            ],
+            "%docs": [
+              64.3,
+              35.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                14747835561,
+                21183327452,
+                24017021547,
+                59843891565,
+                123304439066
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "max_priority_fee_per_gas": {
+            "#docs": [
+              643,
+              357
+            ],
+            "%docs": [
+              64.3,
+              35.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                100000000,
+                766103540,
+                1000000000,
+                2000000000,
+                2500000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "nonce": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              321,
+              365279,
+              1014884,
+              4186463
+            ],
+            "type": "number"
+          },
+          "receipt_blob_gas_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "receipt_blob_gas_used": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "receipt_contract_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "receipt_cumulative_gas_used": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              340816,
+              4005311,
+              8536305,
+              10695944,
+              12523895
+            ],
+            "type": "number"
+          },
+          "receipt_effective_gas_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1000000000,
+              15000000000,
+              16000000000,
+              60000000000,
+              141000000000
+            ],
+            "type": "number"
+          },
+          "receipt_gas_used": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21000,
+              22030,
+              45312,
+              85234,
+              142772
+            ],
+            "type": "number"
+          },
+          "receipt_root": {
+            "#docs": [
+              980,
+              20
+            ],
+            "%docs": [
+              98,
+              2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x0e51d9dd72c70a9623eadc128ac8...",
+                "0x32a0bfe57ac6c43ba730d7d0015d...",
+                "0x88d8ba6ee169323e849a3ce7d5cd...",
+                "0x9ce6f563e4261cc0ff3b4ae67216...",
+                "0xccf384eab1e59a00ec889d1beb93..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "receipt_status": {
+            "#docs": [
+              20,
+              980
+            ],
+            "%docs": [
+              2,
+              98
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "to_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x2a0c0dbecc7e4d658f48e01e3fa3...",
+              "0x6b175474e89094c44da98b954eed...",
+              "0xa6d97005b608a1dee1c364d2bb04...",
+              "0xc5f0e1f21bcf3f8c7c655254b0f0...",
+              "0xc8d5b6a20263879fdb3cd54aba70..."
+            ],
+            "type": "string"
+          },
+          "transaction_index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              91,
+              163,
+              219,
+              405
+            ],
+            "type": "number"
+          },
+          "transaction_type": {
+            "#docs": [
+              643,
+              357
+            ],
+            "%docs": [
+              64.3,
+              35.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                2
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              48053360000000000,
+              72832920000000000,
+              87708832300000000,
+              942057700000000000
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "transactions::10632721",
+                  "transactions::11946310",
+                  "transactions::12325361",
+                  "transactions::12528966",
+                  "transactions::13901026"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "transactions::10632721"
+              },
+              {
+                "id": "transactions::11946310"
+              },
+              {
+                "id": "transactions::12325361"
+              },
+              {
+                "id": "transactions::12528966"
+              },
+              {
+                "id": "transactions::13901026"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "blob_versioned_hashes": [],
+      "block_hash": "0x20873d704030b65490c0fdc867852cc9809fd4ba3ccff1bf3e65128caf2883d7",
+      "block_number": 5846234,
+      "block_timestamp": 1529847061000000,
+      "from_address": "0x52bc44d5378309ee2abf1539bf71de1b7d7be3b5",
+      "gas": 50000,
+      "gas_price": 1000000000,
+      "hash": "0x107d2e03fde71047b84561637147d7d65e0df81fd7fe2272a744d49784c84c1d",
+      "input": "0x",
+      "max_fee_per_blob_gas": null,
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 7869264,
+      "receipt_blob_gas_price": null,
+      "receipt_blob_gas_used": null,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 1532112,
+      "receipt_effective_gas_price": 1000000000,
+      "receipt_gas_used": 21000,
+      "receipt_root": null,
+      "receipt_status": 1,
+      "to_address": "0x2c8fe0033b2b4affc8bbb22bfe2268453ee9092f",
+      "transaction_index": 71,
+      "transaction_type": null,
+      "value": 202313690898796992
+    },
+    {
+      "blob_versioned_hashes": [],
+      "block_hash": "0x331388ede26768b55665296ecfbdca2a6bbe7a1d406b84a1eab6fffb6c503988",
+      "block_number": 12351124,
+      "block_timestamp": 1619909289000000,
+      "from_address": "0x52bc44d5378309ee2abf1539bf71de1b7d7be3b5",
+      "gas": 50000,
+      "gas_price": 30100000000,
+      "hash": "0x1c595440065109debbc7c68e118811d1811f7749b8169773c9929e6f5440efbb",
+      "input": "0x",
+      "max_fee_per_blob_gas": null,
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 17085418,
+      "receipt_blob_gas_price": null,
+      "receipt_blob_gas_used": null,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 42000,
+      "receipt_effective_gas_price": 30100000000,
+      "receipt_gas_used": 21000,
+      "receipt_root": null,
+      "receipt_status": 1,
+      "to_address": "0x723ab0c7337c64daba3b36dbfe2836a76e65bae7",
+      "transaction_index": 1,
+      "transaction_type": null,
+      "value": 318184988026252032
+    },
+    {
+      "blob_versioned_hashes": [],
+      "block_hash": "0x23a64543c0aa3c872bbbdccec703ba315279a1ce7322ff58dc89bd023a2b8765",
+      "block_number": 6421283,
+      "block_timestamp": 1538224564000000,
+      "from_address": "0x52bc44d5378309ee2abf1539bf71de1b7d7be3b5",
+      "gas": 50000,
+      "gas_price": 3000000000,
+      "hash": "0x07ec514bea019ea842b05f3a0d390123f418adb08dcdc1f87632fcf4066d1c62",
+      "input": "0x",
+      "max_fee_per_blob_gas": null,
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 9502140,
+      "receipt_blob_gas_price": null,
+      "receipt_blob_gas_used": null,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 724319,
+      "receipt_effective_gas_price": 3000000000,
+      "receipt_gas_used": 21000,
+      "receipt_root": null,
+      "receipt_status": 1,
+      "to_address": "0xb19d4c6a270b5e737483588da1b943b01e59dc47",
+      "transaction_index": 32,
+      "transaction_type": null,
+      "value": 212248166720152000
+    },
+    {
+      "blob_versioned_hashes": [],
+      "block_hash": "0x607b8727981358237d1ac8fe6a20aa3700c29cf7e030b5a0272a426d4e6087b3",
+      "block_number": 8536205,
+      "block_timestamp": 1568308610000000,
+      "from_address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe",
+      "gas": 50000,
+      "gas_price": 21780000000,
+      "hash": "0xb245479c51ff0b8e37bcd3307bd42fd7cb474b7d9ea8651525d2097f8a8c5e33",
+      "input": "0x",
+      "max_fee_per_blob_gas": null,
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 1449112,
+      "receipt_blob_gas_price": null,
+      "receipt_blob_gas_used": null,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 736677,
+      "receipt_effective_gas_price": 21780000000,
+      "receipt_gas_used": 21000,
+      "receipt_root": null,
+      "receipt_status": 1,
+      "to_address": "0xffbfb34bbad00f573b4afe2dc01c1e172c9a24f0",
+      "transaction_index": 25,
+      "transaction_type": null,
+      "value": 284200000000000000
+    },
+    {
+      "blob_versioned_hashes": [],
+      "block_hash": "0x7bbeab04d18d8f823477b29ec9be2e21c97ffccf88a1fa69645727b3db9a5264",
+      "block_number": 7228350,
+      "block_timestamp": 1550333892000000,
+      "from_address": "0x52bc44d5378309ee2abf1539bf71de1b7d7be3b5",
+      "gas": 50000,
+      "gas_price": 10000000000,
+      "hash": "0x5e6d796d90ede03504722064b413cdfa54d12e83546450069b2eb238cba2c67d",
+      "input": "0x",
+      "max_fee_per_blob_gas": null,
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 11563881,
+      "receipt_blob_gas_price": null,
+      "receipt_blob_gas_used": null,
+      "receipt_contract_address": null,
+      "receipt_cumulative_gas_used": 2410992,
+      "receipt_effective_gas_price": 10000000000,
+      "receipt_gas_used": 21000,
+      "receipt_root": null,
+      "receipt_status": 1,
+      "to_address": "0xd1915966824f0c305111bb9973e37db9e6192374",
+      "transaction_index": 57,
+      "transaction_type": null,
+      "value": 50093083985774904
+    }
+  ]
+}

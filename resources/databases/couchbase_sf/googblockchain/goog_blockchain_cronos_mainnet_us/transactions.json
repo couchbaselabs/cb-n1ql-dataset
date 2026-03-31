@@ -1,0 +1,659 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "access_list": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "block_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x16f7614cf233db0fa581b5111879...",
+              "0x5bc9e83b4ffaa3a92cba209e0ae5...",
+              "0x91c8fa2b8016b77375217ebd1b6d...",
+              "0xaa0494657da7f249f6c57d6c7616...",
+              "0xb9039f706c1ff841970376722070..."
+            ],
+            "type": "string"
+          },
+          "block_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-12-22T16:31:54",
+              "2021-12-23T09:12:21",
+              "2021-12-23T10:19:35",
+              "2022-12-20T15:45:05",
+              "2022-12-21T05:46:21"
+            ],
+            "type": "string"
+          },
+          "from_address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x1880c81b23feab905b8733aa888e...",
+              "0x2e174c0d6ec1db4ff139b32a663a...",
+              "0x8acafe661942c33531a0a03e66c6...",
+              "0xb4ac25c635559da51c410f1da434...",
+              "0xc9219731adfa70645be14cd5d305..."
+            ],
+            "type": "string"
+          },
+          "gas": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              94589,
+              189241,
+              260991,
+              268698,
+              350000
+            ],
+            "type": "number"
+          },
+          "gas_price": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "bignumeric_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  4850613749172,
+                  4851022172000,
+                  4851955542161,
+                  5000000000000,
+                  6000000000000
+                ],
+                "type": "number"
+              },
+              "string_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "4850613749172",
+                  "4851022172000",
+                  "4851955542161",
+                  "5000000000000",
+                  "6000000000000"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "bignumeric_value": 4850613749172,
+                "string_value": "4850613749172"
+              },
+              {
+                "bignumeric_value": 4851022172000,
+                "string_value": "4851022172000"
+              },
+              {
+                "bignumeric_value": 4851955542161,
+                "string_value": "4851955542161"
+              },
+              {
+                "bignumeric_value": 5000000000000,
+                "string_value": "5000000000000"
+              },
+              {
+                "bignumeric_value": 6000000000000,
+                "string_value": "6000000000000"
+              }
+            ],
+            "type": "object"
+          },
+          "input": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x",
+              "0x2647620400000000000000000000...",
+              "0x7ff36ab500000000000000000000...",
+              "0xf305d71900000000000000000000...",
+              "0xfb3bdb4100000000000000000000..."
+            ],
+            "type": "string"
+          },
+          "max_fee_per_gas": {
+            "#docs": [
+              928,
+              72
+            ],
+            "%docs": [
+              92.8,
+              7.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                4874056520000,
+                5000000000000,
+                5500000000000,
+                6550131018982,
+                6550886433429
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "max_priority_fee_per_gas": {
+            "#docs": [
+              928,
+              72
+            ],
+            "%docs": [
+              92.8,
+              7.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                1500000000,
+                2500000000,
+                22784180000,
+                5500000000000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "nonce": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              162,
+              186,
+              557,
+              1116,
+              420563
+            ],
+            "type": "number"
+          },
+          "r": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "string_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "100657209227184336792696495444...",
+                  "113367743829664147860770666575...",
+                  "383321676273306807649514769999...",
+                  "492101268890077187621780786570...",
+                  "859567464465998500710048094358..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "string_value": "100657209227184336792696495444846768206658883234138659050504424027293935679804"
+              },
+              {
+                "string_value": "11336774382966414786077066657575621712482710160693413403756427737939604147552"
+              },
+              {
+                "string_value": "38332167627330680764951476999966334129392410396353968776280364183558168417177"
+              },
+              {
+                "string_value": "49210126889007718762178078657057300676106788956793778042114999929829571830415"
+              },
+              {
+                "string_value": "85956746446599850071004809435890911334871027490052647971192649470417006727822"
+              }
+            ],
+            "type": "object"
+          },
+          "s": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "string_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "171877139534530555498429534876...",
+                  "339550400185274715521856092924...",
+                  "361281232489931538973935598016...",
+                  "399979695364737933862289053550...",
+                  "412093873045443672889101666084..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "string_value": "17187713953453055549842953487623771160433377617368452127958842604584328543360"
+              },
+              {
+                "string_value": "33955040018527471552185609292486705761259649156227304761403684032734129032776"
+              },
+              {
+                "string_value": "36128123248993153897393559801612974152233543007355688442990794311967315331371"
+              },
+              {
+                "string_value": "39997969536473793386228905355089391210208833201481443105183194550483125569393"
+              },
+              {
+                "string_value": "41209387304544367288910166608498222778291662404898322328880433864996344645212"
+              }
+            ],
+            "type": "object"
+          },
+          "to_address": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0x145677fc4d9b8f19b5d56d1820c4...",
+                "0x145863eb42cf62847a6ca784e641...",
+                "0x21121fadd861e4ed8c035c4d69d3...",
+                "0x9fae23a2700feecd5b93e43fdbc0...",
+                "0xfe5af9ac8098177d0a64e2578fc8..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "transaction_hash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x0323363f81672721269615cbb39a...",
+              "0x1adea33f30701a0fc83cb98439e3...",
+              "0x4c5e48fd4b670ca9bc7a9f14d6b6...",
+              "0xc91c3ecc9e27fbc8a7f5f11b0384...",
+              "0xca5f3890f0321ece4d2c5f6b74b0..."
+            ],
+            "type": "string"
+          },
+          "transaction_index": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "transaction_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "v": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "string_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "0",
+                  "1",
+                  "85",
+                  "86"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "string_value": "0"
+              },
+              {
+                "string_value": "1"
+              },
+              {
+                "string_value": "85"
+              },
+              {
+                "string_value": "86"
+              }
+            ],
+            "type": "object"
+          },
+          "value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "bignumeric_value": {
+                "#docs": [
+                  764,
+                  250
+                ],
+                "%docs": [
+                  76.4,
+                  25
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    0
+                  ],
+                  [
+                    "210134119721621589",
+                    "300000000000000000000",
+                    "373590046285741105678",
+                    "4012880000000000000000",
+                    "9800000000000000000"
+                  ]
+                ],
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "string_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "210134119721621589",
+                  "300000000000000000000",
+                  "373590046285741105678",
+                  "4012880000000000000000",
+                  "9800000000000000000"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "bignumeric_value": "210134119721621589",
+                "string_value": "210134119721621589"
+              },
+              {
+                "bignumeric_value": "300000000000000000000",
+                "string_value": "300000000000000000000"
+              },
+              {
+                "bignumeric_value": "373590046285741105678",
+                "string_value": "373590046285741105678"
+              },
+              {
+                "bignumeric_value": "4012880000000000000000",
+                "string_value": "4012880000000000000000"
+              },
+              {
+                "bignumeric_value": "9800000000000000000",
+                "string_value": "9800000000000000000"
+              }
+            ],
+            "type": "object"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "transactions::122184",
+                  "transactions::134187",
+                  "transactions::28",
+                  "transactions::88931",
+                  "transactions::95767"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "transactions::122184"
+              },
+              {
+                "id": "transactions::134187"
+              },
+              {
+                "id": "transactions::28"
+              },
+              {
+                "id": "transactions::88931"
+              },
+              {
+                "id": "transactions::95767"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "access_list": [],
+      "block_hash": "0x16e5f2e4cfa9603818eacf2124bcbc088204631a1c9b1d8761b86f01add63914",
+      "block_timestamp": "2021-12-22T09:49:48",
+      "from_address": "0xb1ad9dad1840ffe0e8966fe628d2479243176d0e",
+      "gas": 200000,
+      "gas_price": {
+        "bignumeric_value": 5000000000000,
+        "string_value": "5000000000000"
+      },
+      "input": "0xe2bbb15800000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000",
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 119,
+      "r": {
+        "string_value": "75186614888811126049344050810937472536824340387976458971572949819753979756694"
+      },
+      "s": {
+        "string_value": "11263113844256019225416495307703977471060416113323917092598258135329011376352"
+      },
+      "to_address": "0xdccd6455ae04b03d785f12196b492b18129564bc",
+      "transaction_hash": "0x555264707a6862dec558b7af347ff6058d92d189ef2854d893457fe45045f704",
+      "transaction_index": 9,
+      "transaction_type": 0,
+      "v": {
+        "string_value": "86"
+      },
+      "value": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      }
+    },
+    {
+      "access_list": [],
+      "block_hash": "0x1a3f3d2d43dcb0f79fbaa66255729f1c5ac0a2503282dbfca807341ddb348627",
+      "block_timestamp": "2021-12-23T10:01:12",
+      "from_address": "0xf85521db05f28bd986808f13e9509571b8334140",
+      "gas": 200000,
+      "gas_price": {
+        "bignumeric_value": 5000000000000,
+        "string_value": "5000000000000"
+      },
+      "input": "0xe2bbb15800000000000000000000000000000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000",
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 68,
+      "r": {
+        "string_value": "111805685296651650310304918043385735556109947798810422690080386593496236836394"
+      },
+      "s": {
+        "string_value": "20413060788702952963617724604265394751408512064706381362368880189305377868932"
+      },
+      "to_address": "0xdccd6455ae04b03d785f12196b492b18129564bc",
+      "transaction_hash": "0xa34d4cb5b621713d2a5fdd91f0a88e19cd775926c8f96ccc24f2918ff785d630",
+      "transaction_index": 13,
+      "transaction_type": 0,
+      "v": {
+        "string_value": "86"
+      },
+      "value": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      }
+    },
+    {
+      "access_list": [],
+      "block_hash": "0x93199c04f5e8f1150a0e3a3ecb13a061da27acbf11ece48a437d044a0dea4fa9",
+      "block_timestamp": "2022-12-18T14:57:44",
+      "from_address": "0xfabc4e22941853eab3cb9857d0ace710883f6f2b",
+      "gas": 228929,
+      "gas_price": {
+        "bignumeric_value": 4852463297061,
+        "string_value": "4852463297061"
+      },
+      "input": "0x4d49e87d000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000001d6b2343560125856800000000000000000000000000000000000000000000000000000000639f2f0a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000001dbdbc8565511d9a1f0000000000000000000000000000000000000000000000000000000000000000",
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 265,
+      "r": {
+        "string_value": "43801153683442241778244896216809122884936594919752159871672152015847233038810"
+      },
+      "s": {
+        "string_value": "5585170601843436425288115237187982043775408144220235364206637072969510766168"
+      },
+      "to_address": "0x1578c5cf4f8f6064deb167d1eead15df43185afa",
+      "transaction_hash": "0x785094236f7e8224ca4af33ab129b6126e4b0f5ac445a383814d603772c35131",
+      "transaction_index": 4,
+      "transaction_type": 0,
+      "v": {
+        "string_value": "86"
+      },
+      "value": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      }
+    },
+    {
+      "access_list": [],
+      "block_hash": "0x0208895b3a52932592dca592851e75ae31f02a4da6a1cbf79e9a25690f8a2839",
+      "block_timestamp": "2021-12-21T23:35:45",
+      "from_address": "0xf7a15601ae851d3ed6bd19456b8d063a88bccd76",
+      "gas": 543235,
+      "gas_price": {
+        "bignumeric_value": 5000035054306,
+        "string_value": "5000035054306"
+      },
+      "input": "0x627dd56a00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000067460000004e7c703d25cce00000000c00001e10d745f36f746ddee4b6942993cbb04544995d28f9921be5ec4d5f85d4997a51eac1e477ddb92e389a19012a9d61e28751b4c409c9b5eda1c45792ce3161f914018ad0c5a5ed51f795b57e1e1fdd24998c24db09a000000000000000000000000000000000000000000000000000",
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 3754,
+      "r": {
+        "string_value": "47048387896499494430946165939153675458631294730249373036816206037893681962652"
+      },
+      "s": {
+        "string_value": "13984374746753655914258042376660671256894836348958321407040548030070942468095"
+      },
+      "to_address": "0xb20d42e335f203d4421cab57a543b29ea590e69e",
+      "transaction_hash": "0xf610dd63d1813266e9bfba789feb13a8ba3f5f61dba6dd8310496722cdc1f23a",
+      "transaction_index": 4,
+      "transaction_type": 0,
+      "v": {
+        "string_value": "86"
+      },
+      "value": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      }
+    },
+    {
+      "access_list": [],
+      "block_hash": "0x860619c8acc880e3a40ca559215469149365e15cd60c72240e6120ed39b31ba7",
+      "block_timestamp": "2022-12-20T11:11:04",
+      "from_address": "0xf25a004f7dedb8f3a135cc92bb85f7296858aac3",
+      "gas": 108217,
+      "gas_price": {
+        "bignumeric_value": 4851156617514,
+        "string_value": "4851156617514"
+      },
+      "input": "0x42842e0e000000000000000000000000f25a004f7dedb8f3a135cc92bb85f7296858aac30000000000000000000000009aa36ba3e45ca6143ac2a21b784b929175193047000000000000000000000000000000000000000000000000000000000000014f",
+      "max_fee_per_gas": null,
+      "max_priority_fee_per_gas": null,
+      "nonce": 4634,
+      "r": {
+        "string_value": "31362518067218145824758467643550452830453682383135928749305489402679091167084"
+      },
+      "s": {
+        "string_value": "20945997872417791590538137725673864143165909872972558412079379296040029941480"
+      },
+      "to_address": "0x48a81b2120ea832cecd83f35ec5f84d4c7249b50",
+      "transaction_hash": "0x5bf921c36fe0c2bc4dd495a0186b7b6e8f2230dec3b8a69caafe35d7addab97f",
+      "transaction_index": 1,
+      "transaction_type": 0,
+      "v": {
+        "string_value": "86"
+      },
+      "value": {
+        "bignumeric_value": 0,
+        "string_value": "0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "ack_dt": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1991-09-03",
+              "1992-02-06",
+              "1992-10-29",
+              "1994-01-24",
+              "1994-05-12"
+            ],
+            "type": "string"
+          },
+          "exec_dt": {
+            "#docs": [
+              4,
+              1
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1992-02-06"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "or_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DACKLIN, KIB",
+              "HEIL, THOMAS",
+              "KONIG, CHARLES E.",
+              "LARSEN, GARY",
+              "SAWAKI, MINAKO"
+            ],
+            "type": "string"
+          },
+          "rf_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "58390327",
+              "60210958",
+              "63340294",
+              "68530195",
+              "70040714"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "assignor::0",
+                  "assignor::1",
+                  "assignor::2",
+                  "assignor::3",
+                  "assignor::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "assignor::0"
+              },
+              {
+                "id": "assignor::1"
+              },
+              {
+                "id": "assignor::2"
+              },
+              {
+                "id": "assignor::3"
+              },
+              {
+                "id": "assignor::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "ack_dt": "1991-09-03",
+      "exec_dt": null,
+      "or_name": "LARSEN, GARY",
+      "rf_id": "58390327"
+    },
+    {
+      "ack_dt": "1992-02-06",
+      "exec_dt": "1992-02-06",
+      "or_name": "HEIL, THOMAS",
+      "rf_id": "60210958"
+    },
+    {
+      "ack_dt": "1992-10-29",
+      "exec_dt": null,
+      "or_name": "KONIG, CHARLES E.",
+      "rf_id": "63340294"
+    },
+    {
+      "ack_dt": "1994-01-24",
+      "exec_dt": null,
+      "or_name": "DACKLIN, KIB",
+      "rf_id": "68530195"
+    },
+    {
+      "ack_dt": "1994-05-12",
+      "exec_dt": null,
+      "or_name": "SAWAKI, MINAKO",
+      "rf_id": "70040714"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CompetitionId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3526,
+              3948,
+              4031,
+              13242,
+              21723
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              295,
+              317,
+              335,
+              482,
+              731
+            ],
+            "type": "number"
+          },
+          "TagId": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12038,
+              13313,
+              14101
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "competitiontags::0",
+                  "competitiontags::1",
+                  "competitiontags::2",
+                  "competitiontags::3",
+                  "competitiontags::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "competitiontags::0"
+              },
+              {
+                "id": "competitiontags::1"
+              },
+              {
+                "id": "competitiontags::2"
+              },
+              {
+                "id": "competitiontags::3"
+              },
+              {
+                "id": "competitiontags::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CompetitionId": 3948,
+      "Id": 295,
+      "TagId": 14101
+    },
+    {
+      "CompetitionId": 3526,
+      "Id": 335,
+      "TagId": 14101
+    },
+    {
+      "CompetitionId": 4031,
+      "Id": 317,
+      "TagId": 14101
+    },
+    {
+      "CompetitionId": 21723,
+      "Id": 731,
+      "TagId": 13313
+    },
+    {
+      "CompetitionId": 13242,
+      "Id": 482,
+      "TagId": 12038
+    }
+  ]
+}

@@ -1,0 +1,944 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`breakdownCode` = false, `ipcConcordant` = \"\", `level` = 2, `notAllocatable` = true, `status` = \"published\"",
+        "properties": {
+          "applicationReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "breakdownCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "childGroups": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 16,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "description": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    ""
+                  ],
+                  "type": "string"
+                },
+                "symbols": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 14,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      "Y02",
+                      "Y04",
+                      "Y10"
+                    ]
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 5,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "description": "",
+                  "symbols": [
+                    "Y02",
+                    "Y04",
+                    "Y10"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "BUILDING",
+                  "symbols": [
+                    "E01",
+                    "E02",
+                    "E03",
+                    "E04",
+                    "E05",
+                    "E06"
+                  ]
+                },
+                {
+                  "description": "EARTH DRILLING; MINING",
+                  "symbols": [
+                    "E21"
+                  ]
+                },
+                {
+                  "description": "",
+                  "symbols": [
+                    "E99"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "CHEMISTRY",
+                  "symbols": [
+                    "C01",
+                    "C02",
+                    "C03",
+                    "C04",
+                    "C05",
+                    "C06",
+                    "C07",
+                    "C08",
+                    "C09",
+                    "C10",
+                    "C11",
+                    "C12",
+                    "C13",
+                    "C14"
+                  ]
+                },
+                {
+                  "description": "METALLURGY",
+                  "symbols": [
+                    "C21",
+                    "C22",
+                    "C23",
+                    "C25",
+                    "C30"
+                  ]
+                },
+                {
+                  "description": "COMBINATORIAL TECHNOLOGY",
+                  "symbols": [
+                    "C40"
+                  ]
+                },
+                {
+                  "description": "",
+                  "symbols": [
+                    "C99"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "ENGINES OR PUMPS",
+                  "symbols": [
+                    "F01",
+                    "F02",
+                    "F03",
+                    "F04",
+                    "F05"
+                  ]
+                },
+                {
+                  "description": "ENGINEERING IN GENERAL",
+                  "symbols": [
+                    "F15",
+                    "F16",
+                    "F17"
+                  ]
+                },
+                {
+                  "description": "LIGHTING; HEATING",
+                  "symbols": [
+                    "F21",
+                    "F22",
+                    "F23",
+                    "F24",
+                    "F25",
+                    "F26",
+                    "F27",
+                    "F28"
+                  ]
+                },
+                {
+                  "description": "WEAPONS; BLASTING",
+                  "symbols": [
+                    "F41",
+                    "F42"
+                  ]
+                },
+                {
+                  "description": "",
+                  "symbols": [
+                    "F99"
+                  ]
+                }
+              ],
+              [
+                {
+                  "description": "TEXTILES OR FLEXIBLE MATERIALS NOT OTHERWISE PROVIDED FOR",
+                  "symbols": [
+                    "D01",
+                    "D02",
+                    "D03",
+                    "D04",
+                    "D05",
+                    "D06",
+                    "D07",
+                    "D10"
+                  ]
+                },
+                {
+                  "description": "PAPER",
+                  "symbols": [
+                    "D21"
+                  ]
+                },
+                {
+                  "description": "",
+                  "symbols": [
+                    "D99"
+                  ]
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "children": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 21,
+            "minItems": 3,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "C01",
+                "C02",
+                "C03",
+                "C04",
+                "C05",
+                "C06",
+                "C07",
+                "C08",
+                "C09",
+                "C10",
+                "C11",
+                "C12",
+                "C13",
+                "C14",
+                "C21",
+                "C22",
+                "C23",
+                "C25",
+                "C30",
+                "C40",
+                "C99"
+              ],
+              [
+                "D01",
+                "D02",
+                "D03",
+                "D04",
+                "D05",
+                "D06",
+                "D07",
+                "D10",
+                "D21",
+                "D99"
+              ],
+              [
+                "E01",
+                "E02",
+                "E03",
+                "E04",
+                "E05",
+                "E06",
+                "E21",
+                "E99"
+              ],
+              [
+                "F01",
+                "F02",
+                "F03",
+                "F04",
+                "F05",
+                "F15",
+                "F16",
+                "F17",
+                "F21",
+                "F22",
+                "F23",
+                "F24",
+                "F25",
+                "F26",
+                "F27",
+                "F28",
+                "F41",
+                "F42",
+                "F99"
+              ],
+              [
+                "Y02",
+                "Y04",
+                "Y10"
+              ]
+            ],
+            "type": "array"
+          },
+          "dateRevised": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20130101,
+              20190201,
+              20240501
+            ],
+            "type": "number"
+          },
+          "definition": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "glossary": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "informativeReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "ipcConcordant": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              ""
+            ],
+            "type": "string"
+          },
+          "level": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "limitingReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "notAllocatable": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              true
+            ],
+            "type": "boolean"
+          },
+          "parents": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "precedenceLimitingReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "residualReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "rules": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "scopeLimitingReferences": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "status": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "published"
+            ],
+            "type": "string"
+          },
+          "symbol": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C",
+              "D",
+              "E",
+              "F",
+              "Y"
+            ],
+            "type": "string"
+          },
+          "synonyms": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "titleFull": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CHEMISTRY; METALLURGY",
+              "FIXED CONSTRUCTIONS",
+              "GENERAL TAGGING OF NEW TECHNOL...",
+              "MECHANICAL ENGINEERING; LIGHTI...",
+              "TEXTILES; PAPER"
+            ],
+            "type": "string"
+          },
+          "titlePart": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 5,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "CHEMISTRY",
+                "METALLURGY"
+              ],
+              [
+                "FIXED CONSTRUCTIONS"
+              ],
+              [
+                "GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS",
+                "GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC",
+                "TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS"
+              ],
+              [
+                "MECHANICAL ENGINEERING",
+                "LIGHTING",
+                "HEATING",
+                "WEAPONS",
+                "BLASTING"
+              ],
+              [
+                "TEXTILES",
+                "PAPER"
+              ]
+            ],
+            "type": "array"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cpc_definition::0",
+                  "cpc_definition::1",
+                  "cpc_definition::2",
+                  "cpc_definition::3",
+                  "cpc_definition::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cpc_definition::0"
+              },
+              {
+                "id": "cpc_definition::1"
+              },
+              {
+                "id": "cpc_definition::2"
+              },
+              {
+                "id": "cpc_definition::3"
+              },
+              {
+                "id": "cpc_definition::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "",
+          "symbols": [
+            "Y02",
+            "Y04",
+            "Y10"
+          ]
+        }
+      ],
+      "children": [
+        "Y02",
+        "Y04",
+        "Y10"
+      ],
+      "dateRevised": 20130101,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "Y",
+      "synonyms": [],
+      "titleFull": "GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS; GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC; TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS",
+      "titlePart": [
+        "GENERAL TAGGING OF NEW TECHNOLOGICAL DEVELOPMENTS",
+        "GENERAL TAGGING OF CROSS-SECTIONAL TECHNOLOGIES SPANNING OVER SEVERAL SECTIONS OF THE IPC",
+        "TECHNICAL SUBJECTS COVERED BY FORMER USPC CROSS-REFERENCE ART COLLECTIONS [XRACs] AND DIGESTS"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "CHEMISTRY",
+          "symbols": [
+            "C01",
+            "C02",
+            "C03",
+            "C04",
+            "C05",
+            "C06",
+            "C07",
+            "C08",
+            "C09",
+            "C10",
+            "C11",
+            "C12",
+            "C13",
+            "C14"
+          ]
+        },
+        {
+          "description": "METALLURGY",
+          "symbols": [
+            "C21",
+            "C22",
+            "C23",
+            "C25",
+            "C30"
+          ]
+        },
+        {
+          "description": "COMBINATORIAL TECHNOLOGY",
+          "symbols": [
+            "C40"
+          ]
+        },
+        {
+          "description": "",
+          "symbols": [
+            "C99"
+          ]
+        }
+      ],
+      "children": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C30",
+        "C40",
+        "C99"
+      ],
+      "dateRevised": 20240501,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "C",
+      "synonyms": [],
+      "titleFull": "CHEMISTRY; METALLURGY",
+      "titlePart": [
+        "CHEMISTRY",
+        "METALLURGY"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "ENGINES OR PUMPS",
+          "symbols": [
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05"
+          ]
+        },
+        {
+          "description": "ENGINEERING IN GENERAL",
+          "symbols": [
+            "F15",
+            "F16",
+            "F17"
+          ]
+        },
+        {
+          "description": "LIGHTING; HEATING",
+          "symbols": [
+            "F21",
+            "F22",
+            "F23",
+            "F24",
+            "F25",
+            "F26",
+            "F27",
+            "F28"
+          ]
+        },
+        {
+          "description": "WEAPONS; BLASTING",
+          "symbols": [
+            "F41",
+            "F42"
+          ]
+        },
+        {
+          "description": "",
+          "symbols": [
+            "F99"
+          ]
+        }
+      ],
+      "children": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F15",
+        "F16",
+        "F17",
+        "F21",
+        "F22",
+        "F23",
+        "F24",
+        "F25",
+        "F26",
+        "F27",
+        "F28",
+        "F41",
+        "F42",
+        "F99"
+      ],
+      "dateRevised": 20190201,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "F",
+      "synonyms": [],
+      "titleFull": "MECHANICAL ENGINEERING; LIGHTING; HEATING; WEAPONS; BLASTING",
+      "titlePart": [
+        "MECHANICAL ENGINEERING",
+        "LIGHTING",
+        "HEATING",
+        "WEAPONS",
+        "BLASTING"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "BUILDING",
+          "symbols": [
+            "E01",
+            "E02",
+            "E03",
+            "E04",
+            "E05",
+            "E06"
+          ]
+        },
+        {
+          "description": "EARTH DRILLING; MINING",
+          "symbols": [
+            "E21"
+          ]
+        },
+        {
+          "description": "",
+          "symbols": [
+            "E99"
+          ]
+        }
+      ],
+      "children": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E21",
+        "E99"
+      ],
+      "dateRevised": 20130101,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "E",
+      "synonyms": [],
+      "titleFull": "FIXED CONSTRUCTIONS",
+      "titlePart": [
+        "FIXED CONSTRUCTIONS"
+      ]
+    },
+    {
+      "applicationReferences": [],
+      "breakdownCode": false,
+      "childGroups": [
+        {
+          "description": "TEXTILES OR FLEXIBLE MATERIALS NOT OTHERWISE PROVIDED FOR",
+          "symbols": [
+            "D01",
+            "D02",
+            "D03",
+            "D04",
+            "D05",
+            "D06",
+            "D07",
+            "D10"
+          ]
+        },
+        {
+          "description": "PAPER",
+          "symbols": [
+            "D21"
+          ]
+        },
+        {
+          "description": "",
+          "symbols": [
+            "D99"
+          ]
+        }
+      ],
+      "children": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D10",
+        "D21",
+        "D99"
+      ],
+      "dateRevised": 20130101,
+      "definition": [],
+      "glossary": [],
+      "informativeReferences": [],
+      "ipcConcordant": "",
+      "level": 2,
+      "limitingReferences": [],
+      "notAllocatable": true,
+      "parents": [],
+      "precedenceLimitingReferences": [],
+      "residualReferences": [],
+      "rules": [],
+      "scopeLimitingReferences": [],
+      "status": "published",
+      "symbol": "D",
+      "synonyms": [],
+      "titleFull": "TEXTILES; PAPER",
+      "titlePart": [
+        "TEXTILES",
+        "PAPER"
+      ]
+    }
+  ]
+}

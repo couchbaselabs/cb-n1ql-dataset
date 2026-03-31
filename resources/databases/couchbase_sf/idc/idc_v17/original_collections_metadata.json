@@ -1,0 +1,484 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Species` = \"Human\", `Status` = \"Complete\"",
+        "properties": {
+          "Access": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                "Public"
+              ]
+            ],
+            "type": "array"
+          },
+          "CancerType": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Breast Cancer",
+              "Lymphadenopathy (non-cancer)",
+              "Non-small Cell Lung Cancer",
+              "Phantom"
+            ],
+            "type": "string"
+          },
+          "DOI": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10.7937/k9/tcia.2014.a2n1ixox",
+              "10.7937/k9/tcia.2015.08a1ixoo",
+              "10.7937/k9/tcia.2015.aqiidcnm",
+              "10.7937/k9/tcia.2015.npgzyzbz",
+              "10.7937/tcia.2019.ho23nxaw"
+            ],
+            "type": "string"
+          },
+          "Description": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "<p >\tThe VICTRE Trial: Open-So...",
+              "<p>\n\tThe Computed tomography (...",
+              "<p>\n\tThe FDA anthropomorphic t...",
+              "<p>\n\tThis collection consists ...",
+              "<p>\n\tThis collection of breast..."
+            ],
+            "type": "string"
+          },
+          "ImageTypes": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CT, SEG",
+              "KO, MR",
+              "MG"
+            ],
+            "type": "string"
+          },
+          "Location": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Abdomen, Mediastinum",
+              "Breast",
+              "Lung",
+              "Lung Phantom"
+            ],
+            "type": "string"
+          },
+          "Program": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Community",
+              "FDA",
+              "QIN"
+            ],
+            "type": "string"
+          },
+          "Species": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Human"
+            ],
+            "type": "string"
+          },
+          "Status": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Complete"
+            ],
+            "type": "string"
+          },
+          "Subjects": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              10,
+              47,
+              176,
+              2994
+            ],
+            "type": "number"
+          },
+          "SupportingData": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Image Analyses",
+              "Clinical, Image Analyses",
+              ""
+            ],
+            "type": "string"
+          },
+          "URL": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "https://doi.org/10.7937/k9/tci...",
+              "https://doi.org/10.7937/k9/tci...",
+              "https://doi.org/10.7937/k9/tci...",
+              "https://doi.org/10.7937/k9/tci...",
+              "https://doi.org/10.7937/tcia.2..."
+            ],
+            "type": "string"
+          },
+          "Updated": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2014-06-19",
+              "2017-07-31",
+              "2019-03-08",
+              "2019-04-18",
+              "2023-03-31"
+            ],
+            "type": "string"
+          },
+          "collection_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ct_lymph_nodes",
+              "lung_phantom",
+              "qin_breast_dce_mri",
+              "qin_lung_ct",
+              "victre"
+            ],
+            "type": "string"
+          },
+          "collection_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CT Lymph Nodes",
+              "Lung Phantom",
+              "QIN Breast DCE-MRI",
+              "QIN LUNG CT",
+              "VICTRE"
+            ],
+            "type": "string"
+          },
+          "idc_webapp_collection_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ct_lymph_nodes",
+              "lung_phantom",
+              "qin_breast_dce_mri",
+              "qin_lung_ct",
+              "victre"
+            ],
+            "type": "string"
+          },
+          "licenses": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 6,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "license_long_name": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "Creative Commons Attribution 3..."
+                  ],
+                  "type": "string"
+                },
+                "license_short_name": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "CC BY 3.0"
+                  ],
+                  "type": "string"
+                },
+                "license_url": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "https://creativecommons.org/li..."
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 2,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+                  "license_short_name": "CC BY 3.0",
+                  "license_url": "http://creativecommons.org/licenses/by/3.0/"
+                },
+                {
+                  "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+                  "license_short_name": "CC BY 3.0",
+                  "license_url": "https://creativecommons.org/licenses/by/3.0/"
+                }
+              ],
+              [
+                {
+                  "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+                  "license_short_name": "CC BY 3.0",
+                  "license_url": "https://creativecommons.org/licenses/by/3.0/"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "tcia_api_collection_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CT Lymph Nodes",
+              "Lung Phantom",
+              "QIN Breast DCE-MRI",
+              "QIN LUNG CT",
+              "VICTRE"
+            ],
+            "type": "string"
+          },
+          "tcia_wiki_collection_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CT Lymph Nodes",
+              "Lung Phantom",
+              "QIN Breast DCE-MRI",
+              "QIN LUNG CT",
+              "VICTRE"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "original_collections_metadata:...",
+                  "original_collections_metadata:...",
+                  "original_collections_metadata:...",
+                  "original_collections_metadata:...",
+                  "original_collections_metadata:..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "original_collections_metadata::0"
+              },
+              {
+                "id": "original_collections_metadata::1"
+              },
+              {
+                "id": "original_collections_metadata::2"
+              },
+              {
+                "id": "original_collections_metadata::3"
+              },
+              {
+                "id": "original_collections_metadata::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Access": [
+        "Public"
+      ],
+      "CancerType": "Lymphadenopathy (non-cancer)",
+      "DOI": "10.7937/k9/tcia.2015.aqiidcnm",
+      "Description": "<p>\n\tThis collection consists of Computed Tomography (CT) images of the mediastinum and abdomen in which lymph node positions are marked by radiologists at the National Institutes of Health, Clinical Center. <a href=\"https://www.cc.nih.gov/meet-our-doctors/rsummers.html\">Radiologists at the Imaging Biomarkers and Computer-Aided Diagnosis Laboratory</a> labeled a total of 388 mediastinal lymph nodes in CT images of 90 patients and a total of 595 abdominal lymph nodes in 86 patients.<br /></p>\n\t<br /><p>\n\tPlease see the <a href=\"\" url=\"https://doi.org/10.7937/K9/TCIA.2015.AQIIDCNM\" data-toggle=\"modal\" data-target=\"#external-web-warning\" class=\"external-link\">CT Lymph Nodes  <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a>wiki page to learn more about the images and to obtain supporting data from this collection.</p>\n",
+      "ImageTypes": "CT, SEG",
+      "Location": "Abdomen, Mediastinum",
+      "Program": "Community",
+      "Species": "Human",
+      "Status": "Complete",
+      "Subjects": 176,
+      "SupportingData": "Image Analyses",
+      "URL": "https://doi.org/10.7937/k9/tcia.2015.aqiidcnm",
+      "Updated": "2023-03-31",
+      "collection_id": "ct_lymph_nodes",
+      "collection_name": "CT Lymph Nodes",
+      "idc_webapp_collection_id": "ct_lymph_nodes",
+      "licenses": [
+        {
+          "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+          "license_short_name": "CC BY 3.0",
+          "license_url": "http://creativecommons.org/licenses/by/3.0/"
+        },
+        {
+          "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+          "license_short_name": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/"
+        }
+      ],
+      "tcia_api_collection_id": "CT Lymph Nodes",
+      "tcia_wiki_collection_id": "CT Lymph Nodes"
+    },
+    {
+      "Access": [
+        "Public"
+      ],
+      "CancerType": "Non-small Cell Lung Cancer",
+      "DOI": "10.7937/k9/tcia.2015.npgzyzbz",
+      "Description": "<p>\n\tThe Computed tomography (CT) Image data was obtained on patients diagnosed with Non-Small Cell Lung Cancer (NSCLC) with mixed stage &amp; histology from the H. Lee Moffitt Cancer Center and Research Institute. Scans were obtained from patients who underwent surgical resection and had corresponding pre-surgery diagnostic CTs.</p>\n<p>\n\t&nbsp;</p>\n<p>\n\tPlease see the <a href=\"\" url=\"https://doi.org/10.7937/K9/TCIA.2015.NPGZYZBZ\" data-toggle=\"modal\" data-target=\"#external-web-warning\" class=\"external-link\">QIN LUNG CT <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a>  page to learn more about the images and to obtain any supporting metadata for this collection.</p>\n",
+      "ImageTypes": "CT, SEG",
+      "Location": "Lung",
+      "Program": "QIN",
+      "Species": "Human",
+      "Status": "Complete",
+      "Subjects": 47,
+      "SupportingData": "",
+      "URL": "https://doi.org/10.7937/k9/tcia.2015.npgzyzbz",
+      "Updated": "2017-07-31",
+      "collection_id": "qin_lung_ct",
+      "collection_name": "QIN LUNG CT",
+      "idc_webapp_collection_id": "qin_lung_ct",
+      "licenses": [
+        {
+          "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+          "license_short_name": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/"
+        }
+      ],
+      "tcia_api_collection_id": "QIN LUNG CT",
+      "tcia_wiki_collection_id": "QIN LUNG CT"
+    },
+    {
+      "Access": [
+        "Public"
+      ],
+      "CancerType": "Phantom",
+      "DOI": "10.7937/k9/tcia.2015.08a1ixoo",
+      "Description": "<p>\n\tThe FDA anthropomorphic thorax phantom with 12 phantom lesions of different sizes (10 and 20 mm in effective diameter), shapes (spherical, elliptical, lobulated, and spiculated), and densities (&minus;630,&minus;10, and +100 HU) was scanned at Columbia University Medical Center on a 64-detector row scanner (LightSpeed VCT, GE Healthcare, Milwaukee, WI). The CT scanning parameters were 120 kVp, 100 mAs, 64x0.625 collimation, and pitch of 1.375. The images were reconstructed with the lung kernel using 1.25 mm slice thickness.</p>\n<p>\n\tPlease see the <a href=\"\" url=\"https://doi.org/10.7937/K9/TCIA.2015.08A1IXOO\" data-toggle=\"modal\" data-target=\"#external-web-warning\" class=\"external-link\">Lung Phantom <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a> wiki page to learn more about the images and to obtain any supporting metadata for this collection.</p>\n",
+      "ImageTypes": "CT, SEG",
+      "Location": "Lung Phantom",
+      "Program": "QIN",
+      "Species": "Human",
+      "Status": "Complete",
+      "Subjects": 1,
+      "SupportingData": "Image Analyses",
+      "URL": "https://doi.org/10.7937/k9/tcia.2015.08a1ixoo",
+      "Updated": "2014-06-19",
+      "collection_id": "lung_phantom",
+      "collection_name": "Lung Phantom",
+      "idc_webapp_collection_id": "lung_phantom",
+      "licenses": [
+        {
+          "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+          "license_short_name": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/"
+        }
+      ],
+      "tcia_api_collection_id": "Lung Phantom",
+      "tcia_wiki_collection_id": "Lung Phantom"
+    },
+    {
+      "Access": [
+        "Public"
+      ],
+      "CancerType": "Breast Cancer",
+      "DOI": "10.7937/tcia.2019.ho23nxaw",
+      "Description": "<p >\tThe VICTRE Trial: Open-Source, In-Silico Clinical Trial For Evaluating Digital Breast Tomosynthesis</p>\n<p>\n\t<span>A total of 2986 subjects, with breast sizes and radiographic densities representative of a screening population and compressed thicknesses from 3.5 to 6 cm, were simulated and imaged on in-silico versions of DM and DBT systems using fast Monte Carlo x-ray transport. Images were interpreted by a computational reader detecting the presence of lesions. The in-silico trial (VICTRE) was designed to replicate a comparative trial from a previous regulatory submission. The endpoint was the difference in area under the receiver-operating-characteristic curve between modalities (delta-AUC) for lesion detection.</span></p>\n<p>\n\tSee the <a href=\"\" url=\"http://doi.org/10.7937/TCIA.2019.ho23nxaw\" data-toggle=\"modal\" data-target=\"#external-web-warning\" class=\"external-link\">VICTRE Collection <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a> wiki page to learn more about the images and to obtain any supporting metadata for this collection.</p>\n",
+      "ImageTypes": "MG",
+      "Location": "Breast",
+      "Program": "FDA",
+      "Species": "Human",
+      "Status": "Complete",
+      "Subjects": 2994,
+      "SupportingData": "",
+      "URL": "https://doi.org/10.7937/tcia.2019.ho23nxaw",
+      "Updated": "2019-03-08",
+      "collection_id": "victre",
+      "collection_name": "VICTRE",
+      "idc_webapp_collection_id": "victre",
+      "licenses": [
+        {
+          "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+          "license_short_name": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/"
+        }
+      ],
+      "tcia_api_collection_id": "VICTRE",
+      "tcia_wiki_collection_id": "VICTRE"
+    },
+    {
+      "Access": [
+        "Public"
+      ],
+      "CancerType": "Breast Cancer",
+      "DOI": "10.7937/k9/tcia.2014.a2n1ixox",
+      "Description": "<p>\n\tThis collection of breast dynamic contrast-enhanced (DCE) MRI data contains images from a longitudinal study to assess breast cancer response to neoadjuvant chemotherapy. Images were acquired at four time points: prior to the start of treatment (Visit 1, V1), after the first cycle of treatment (Visit 2, V2), at midpoint of treatment course (Visit 3, V3), and after completion of treatment (prior to surgery) (Visit 4, V4). The value of this collection is to provide clinical imaging data for the development and validation of quantitative imaging methods for assessment of breast cancer response to treatment.</p>\n<p>\n\tPlease see the <a href=\"\" url=\"https://doi.org/10.7937/k9/tcia.2014.a2n1ixox\" data-toggle=\"modal\" data-target=\"#external-web-warning\" class=\"external-link\">QIN Breast DCE-MRI <i class=\"fa-solid fa-external-link external-link-icon\" aria-hidden=\"true\"></i></a> page to learn more about the images and to obtain any supporting metadata for this collection.</p>\n",
+      "ImageTypes": "KO, MR",
+      "Location": "Breast",
+      "Program": "QIN",
+      "Species": "Human",
+      "Status": "Complete",
+      "Subjects": 10,
+      "SupportingData": "Clinical, Image Analyses",
+      "URL": "https://doi.org/10.7937/k9/tcia.2014.a2n1ixox",
+      "Updated": "2019-04-18",
+      "collection_id": "qin_breast_dce_mri",
+      "collection_name": "QIN Breast DCE-MRI",
+      "idc_webapp_collection_id": "qin_breast_dce_mri",
+      "licenses": [
+        {
+          "license_long_name": "Creative Commons Attribution 3.0 Unported License",
+          "license_short_name": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/"
+        }
+      ],
+      "tcia_api_collection_id": "QIN Breast DCE-MRI",
+      "tcia_wiki_collection_id": "QIN Breast DCE-MRI"
+    }
+  ]
+}

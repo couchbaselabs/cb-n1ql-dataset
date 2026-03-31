@@ -1,0 +1,284 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Continent` = \"North America\", `CountryType` = \"UN Member State\", `LastEditedBy` = 1, `Region` = \"Americas\", `Subregion` = \"Caribbean\", `ValidFrom` = 1356998400000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "Border": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Continent": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "North America"
+            ],
+            "type": "string"
+          },
+          "CountryID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              18,
+              21,
+              54,
+              62
+            ],
+            "type": "number"
+          },
+          "CountryName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Antigua and Barb.",
+              "Bahamas",
+              "Barbados",
+              "Cuba",
+              "Dominica"
+            ],
+            "type": "string"
+          },
+          "CountryType": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "UN Member State"
+            ],
+            "type": "string"
+          },
+          "FormalName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Antigua and Barbuda",
+              "Barbados",
+              "Commonwealth of Dominica",
+              "Commonwealth of the Bahamas",
+              "Republic of Cuba"
+            ],
+            "type": "string"
+          },
+          "IsoAlpha3Code": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ATG",
+              "BHS",
+              "BRB",
+              "CUB",
+              "DMA"
+            ],
+            "type": "string"
+          },
+          "IsoNumericCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              28,
+              44,
+              52,
+              192,
+              212
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LatestRecordedPopulation": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              72660,
+              85632,
+              284589,
+              309156,
+              11451652
+            ],
+            "type": "number"
+          },
+          "Region": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Americas"
+            ],
+            "type": "string"
+          },
+          "Subregion": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Caribbean"
+            ],
+            "type": "string"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "application_countries::0",
+                  "application_countries::1",
+                  "application_countries::2",
+                  "application_countries::3",
+                  "application_countries::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "application_countries::0"
+              },
+              {
+                "id": "application_countries::1"
+              },
+              {
+                "id": "application_countries::2"
+              },
+              {
+                "id": "application_countries::3"
+              },
+              {
+                "id": "application_countries::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Border": null,
+      "Continent": "North America",
+      "CountryID": 62,
+      "CountryName": "Dominica",
+      "CountryType": "UN Member State",
+      "FormalName": "Commonwealth of Dominica",
+      "IsoAlpha3Code": "DMA",
+      "IsoNumericCode": 212,
+      "LastEditedBy": 1,
+      "LatestRecordedPopulation": 72660,
+      "Region": "Americas",
+      "Subregion": "Caribbean",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "Border": null,
+      "Continent": "North America",
+      "CountryID": 21,
+      "CountryName": "Barbados",
+      "CountryType": "UN Member State",
+      "FormalName": "Barbados",
+      "IsoAlpha3Code": "BRB",
+      "IsoNumericCode": 52,
+      "LastEditedBy": 1,
+      "LatestRecordedPopulation": 284589,
+      "Region": "Americas",
+      "Subregion": "Caribbean",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "Border": null,
+      "Continent": "North America",
+      "CountryID": 10,
+      "CountryName": "Antigua and Barb.",
+      "CountryType": "UN Member State",
+      "FormalName": "Antigua and Barbuda",
+      "IsoAlpha3Code": "ATG",
+      "IsoNumericCode": 28,
+      "LastEditedBy": 1,
+      "LatestRecordedPopulation": 85632,
+      "Region": "Americas",
+      "Subregion": "Caribbean",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "Border": null,
+      "Continent": "North America",
+      "CountryID": 54,
+      "CountryName": "Cuba",
+      "CountryType": "UN Member State",
+      "FormalName": "Republic of Cuba",
+      "IsoAlpha3Code": "CUB",
+      "IsoNumericCode": 192,
+      "LastEditedBy": 1,
+      "LatestRecordedPopulation": 11451652,
+      "Region": "Americas",
+      "Subregion": "Caribbean",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    },
+    {
+      "Border": null,
+      "Continent": "North America",
+      "CountryID": 18,
+      "CountryName": "Bahamas",
+      "CountryType": "UN Member State",
+      "FormalName": "Commonwealth of the Bahamas",
+      "IsoAlpha3Code": "BHS",
+      "IsoNumericCode": 44,
+      "LastEditedBy": 1,
+      "LatestRecordedPopulation": 309156,
+      "Region": "Americas",
+      "Subregion": "Caribbean",
+      "ValidFrom": 1356998400000000,
+      "ValidTo": 253402300799999999
+    }
+  ]
+}

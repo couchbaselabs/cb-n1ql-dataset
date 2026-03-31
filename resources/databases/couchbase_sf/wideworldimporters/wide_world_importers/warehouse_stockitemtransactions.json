@@ -1,0 +1,234 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 2, `LastEditedWhen` = \"2013-01-03 12:00:00.0000000\", `Quantity` = -10, `TransactionOccurredWhen` = \"2013-01-03 12:00:00.0000000\", `TransactionTypeID` = 10",
+        "properties": {
+          "CustomerID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              84,
+              122,
+              543,
+              563,
+              939
+            ],
+            "type": "number"
+          },
+          "InvoiceID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              129,
+              131,
+              145,
+              154,
+              162
+            ],
+            "type": "number"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-03 12:00:00.0000000"
+            ],
+            "type": "string"
+          },
+          "PurchaseOrderID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Quantity": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -10
+            ],
+            "type": "number"
+          },
+          "StockItemID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              46,
+              105,
+              118,
+              137,
+              173
+            ],
+            "type": "number"
+          },
+          "StockItemTransactionID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              630,
+              635,
+              670,
+              690,
+              719
+            ],
+            "type": "number"
+          },
+          "SupplierID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TransactionOccurredWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-01-03 12:00:00.0000000"
+            ],
+            "type": "string"
+          },
+          "TransactionTypeID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_stockitemtransaction...",
+                  "warehouse_stockitemtransaction...",
+                  "warehouse_stockitemtransaction...",
+                  "warehouse_stockitemtransaction...",
+                  "warehouse_stockitemtransaction..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_stockitemtransactions::0"
+              },
+              {
+                "id": "warehouse_stockitemtransactions::1"
+              },
+              {
+                "id": "warehouse_stockitemtransactions::2"
+              },
+              {
+                "id": "warehouse_stockitemtransactions::3"
+              },
+              {
+                "id": "warehouse_stockitemtransactions::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CustomerID": 84,
+      "InvoiceID": 154,
+      "LastEditedBy": 2,
+      "LastEditedWhen": "2013-01-03 12:00:00.0000000",
+      "PurchaseOrderID": null,
+      "Quantity": -10,
+      "StockItemID": 137,
+      "StockItemTransactionID": 690,
+      "SupplierID": null,
+      "TransactionOccurredWhen": "2013-01-03 12:00:00.0000000",
+      "TransactionTypeID": 10
+    },
+    {
+      "CustomerID": 543,
+      "InvoiceID": 131,
+      "LastEditedBy": 2,
+      "LastEditedWhen": "2013-01-03 12:00:00.0000000",
+      "PurchaseOrderID": null,
+      "Quantity": -10,
+      "StockItemID": 105,
+      "StockItemTransactionID": 635,
+      "SupplierID": null,
+      "TransactionOccurredWhen": "2013-01-03 12:00:00.0000000",
+      "TransactionTypeID": 10
+    },
+    {
+      "CustomerID": 939,
+      "InvoiceID": 145,
+      "LastEditedBy": 2,
+      "LastEditedWhen": "2013-01-03 12:00:00.0000000",
+      "PurchaseOrderID": null,
+      "Quantity": -10,
+      "StockItemID": 46,
+      "StockItemTransactionID": 670,
+      "SupplierID": null,
+      "TransactionOccurredWhen": "2013-01-03 12:00:00.0000000",
+      "TransactionTypeID": 10
+    },
+    {
+      "CustomerID": 122,
+      "InvoiceID": 129,
+      "LastEditedBy": 2,
+      "LastEditedWhen": "2013-01-03 12:00:00.0000000",
+      "PurchaseOrderID": null,
+      "Quantity": -10,
+      "StockItemID": 118,
+      "StockItemTransactionID": 630,
+      "SupplierID": null,
+      "TransactionOccurredWhen": "2013-01-03 12:00:00.0000000",
+      "TransactionTypeID": 10
+    },
+    {
+      "CustomerID": 563,
+      "InvoiceID": 162,
+      "LastEditedBy": 2,
+      "LastEditedWhen": "2013-01-03 12:00:00.0000000",
+      "PurchaseOrderID": null,
+      "Quantity": -10,
+      "StockItemID": 173,
+      "StockItemTransactionID": 719,
+      "SupplierID": null,
+      "TransactionOccurredWhen": "2013-01-03 12:00:00.0000000",
+      "TransactionTypeID": 10
+    }
+  ]
+}

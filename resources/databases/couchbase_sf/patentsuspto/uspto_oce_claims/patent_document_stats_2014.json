@@ -1,0 +1,255 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "appl_id": {
+            "#docs": [
+              2,
+              3
+            ],
+            "%docs": [
+              40,
+              60
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "06030384",
+                "06123057",
+                "06456730"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pat_clm_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "2",
+              "3",
+              "5",
+              "9"
+            ],
+            "type": "string"
+          },
+          "pat_dep_clm_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "32",
+              "33",
+              "40",
+              "53",
+              "93"
+            ],
+            "type": "string"
+          },
+          "pat_dep_wrd_avg": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10.1875",
+              "105.0377",
+              "107.7879",
+              "19.87097",
+              "52.5"
+            ],
+            "type": "string"
+          },
+          "pat_dep_wrd_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1848",
+              "2100",
+              "326",
+              "3557",
+              "5567"
+            ],
+            "type": "string"
+          },
+          "pat_dep_wrd_min": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "39",
+              "43",
+              "47",
+              "7",
+              "8"
+            ],
+            "type": "string"
+          },
+          "pat_no": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3948939",
+              "4207335",
+              "4287075",
+              "4305254",
+              "4528643"
+            ],
+            "type": "string"
+          },
+          "pat_wrd_avg": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "120",
+              "155",
+              "513",
+              "89",
+              "90.55556"
+            ],
+            "type": "string"
+          },
+          "pat_wrd_ct": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1026",
+              "465",
+              "600",
+              "815",
+              "89"
+            ],
+            "type": "string"
+          },
+          "pat_wrd_min": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "135",
+              "3",
+              "513",
+              "89"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "patent_document_stats_2014::0",
+                  "patent_document_stats_2014::1",
+                  "patent_document_stats_2014::2",
+                  "patent_document_stats_2014::3",
+                  "patent_document_stats_2014::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "patent_document_stats_2014::0"
+              },
+              {
+                "id": "patent_document_stats_2014::1"
+              },
+              {
+                "id": "patent_document_stats_2014::2"
+              },
+              {
+                "id": "patent_document_stats_2014::3"
+              },
+              {
+                "id": "patent_document_stats_2014::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "appl_id": "06456730",
+      "pat_clm_ct": "3",
+      "pat_dep_clm_ct": "53",
+      "pat_dep_wrd_avg": "105.0377",
+      "pat_dep_wrd_ct": "5567",
+      "pat_dep_wrd_min": "47",
+      "pat_no": "4528643",
+      "pat_wrd_avg": "155",
+      "pat_wrd_ct": "465",
+      "pat_wrd_min": "135"
+    },
+    {
+      "appl_id": "06030384",
+      "pat_clm_ct": "1",
+      "pat_dep_clm_ct": "40",
+      "pat_dep_wrd_avg": "52.5",
+      "pat_dep_wrd_ct": "2100",
+      "pat_dep_wrd_min": "39",
+      "pat_no": "4287075",
+      "pat_wrd_avg": "89",
+      "pat_wrd_ct": "89",
+      "pat_wrd_min": "89"
+    },
+    {
+      "appl_id": null,
+      "pat_clm_ct": "9",
+      "pat_dep_clm_ct": "32",
+      "pat_dep_wrd_avg": "10.1875",
+      "pat_dep_wrd_ct": "326",
+      "pat_dep_wrd_min": "7",
+      "pat_no": "3948939",
+      "pat_wrd_avg": "90.55556",
+      "pat_wrd_ct": "815",
+      "pat_wrd_min": "3"
+    },
+    {
+      "appl_id": null,
+      "pat_clm_ct": "5",
+      "pat_dep_clm_ct": "93",
+      "pat_dep_wrd_avg": "19.87097",
+      "pat_dep_wrd_ct": "1848",
+      "pat_dep_wrd_min": "8",
+      "pat_no": "4207335",
+      "pat_wrd_avg": "120",
+      "pat_wrd_ct": "600",
+      "pat_wrd_min": "3"
+    },
+    {
+      "appl_id": "06123057",
+      "pat_clm_ct": "2",
+      "pat_dep_clm_ct": "33",
+      "pat_dep_wrd_avg": "107.7879",
+      "pat_dep_wrd_ct": "3557",
+      "pat_dep_wrd_min": "43",
+      "pat_no": "4305254",
+      "pat_wrd_avg": "513",
+      "pat_wrd_ct": "1026",
+      "pat_wrd_min": "513"
+    }
+  ]
+}

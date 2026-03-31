@@ -1,0 +1,214 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`ds_leader_address` = \"zil103suk4xz95jmg9tfhludqezca33...\", `ds_leader_pub_key` = \"0x027454687AF99FF90BD13884FE7B2...\", `gas_price` = 1000000000",
+        "properties": {
+          "difficulty": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              32,
+              34,
+              53,
+              72,
+              73
+            ],
+            "type": "number"
+          },
+          "difficulty_ds": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              40,
+              41,
+              106,
+              128,
+              138
+            ],
+            "type": "number"
+          },
+          "ds_leader_address": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "zil103suk4xz95jmg9tfhludqezca3..."
+            ],
+            "type": "string"
+          },
+          "ds_leader_pub_key": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0x027454687AF99FF90BD13884FE7B..."
+            ],
+            "type": "string"
+          },
+          "gas_price": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1000000000
+            ],
+            "type": "number"
+          },
+          "number": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              134,
+              209,
+              581,
+              700,
+              2543
+            ],
+            "type": "number"
+          },
+          "prev_hash": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4f5195adfe4f1554ac010b20d41651...",
+              "7ee85216b0cf107ff5498793526af8...",
+              "8af3c38ef634c8fc82f3e06bbd9915...",
+              "bcb1ce1e90606f885dcdb3580db9c8...",
+              "fff1768756fac628e68298f93b1215..."
+            ],
+            "type": "string"
+          },
+          "signature": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4EC02ACC51DC6D0374DB802E6B70C9...",
+              "5FE56321B61ABD64210A63223533DF...",
+              "6A8E71E8300FD348E42C3D2FC243A4...",
+              "ADD135AAD146A68DCC8E1D473D80B4...",
+              "C1D84F8DAFD25805B2B808EE26E4C2..."
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1550318189000000,
+              1550914948000000,
+              1554006411000000,
+              1555036822000000,
+              1570060478000000
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ds_blocks::0",
+                  "ds_blocks::1",
+                  "ds_blocks::2",
+                  "ds_blocks::3",
+                  "ds_blocks::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ds_blocks::0"
+              },
+              {
+                "id": "ds_blocks::1"
+              },
+              {
+                "id": "ds_blocks::2"
+              },
+              {
+                "id": "ds_blocks::3"
+              },
+              {
+                "id": "ds_blocks::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "difficulty": 34,
+      "difficulty_ds": 40,
+      "ds_leader_address": "zil103suk4xz95jmg9tfhludqezca33t073r0n3pte",
+      "ds_leader_pub_key": "0x027454687AF99FF90BD13884FE7B2C126357BEF9502D6625E87EAE4F6147C45B6F",
+      "gas_price": 1000000000,
+      "number": 209,
+      "prev_hash": "fff1768756fac628e68298f93b1215fe4d9c5fdfd323d450b84a63db1cbf1a3c",
+      "signature": "6A8E71E8300FD348E42C3D2FC243A4B51702E49836C6F0C9953E8BB5318BC2670A91B6B43773AE8CA12F930AC387C4E6197D04D6CED11E977F97869DC97C8E4C",
+      "timestamp": 1550914948000000
+    },
+    {
+      "difficulty": 72,
+      "difficulty_ds": 138,
+      "ds_leader_address": "zil103suk4xz95jmg9tfhludqezca33t073r0n3pte",
+      "ds_leader_pub_key": "0x027454687AF99FF90BD13884FE7B2C126357BEF9502D6625E87EAE4F6147C45B6F",
+      "gas_price": 1000000000,
+      "number": 2543,
+      "prev_hash": "8af3c38ef634c8fc82f3e06bbd9915b8a48d746ac1951fa1a6679691d4e85951",
+      "signature": "C1D84F8DAFD25805B2B808EE26E4C2D4A4D2F9E2F54D8F63D57315FF6FFEDF11B4D30193EE7B23648C00CA909614FC6B08E05A6B136E3E78866D8263CBEF2951",
+      "timestamp": 1570060478000000
+    },
+    {
+      "difficulty": 73,
+      "difficulty_ds": 128,
+      "ds_leader_address": "zil103suk4xz95jmg9tfhludqezca33t073r0n3pte",
+      "ds_leader_pub_key": "0x027454687AF99FF90BD13884FE7B2C126357BEF9502D6625E87EAE4F6147C45B6F",
+      "gas_price": 1000000000,
+      "number": 700,
+      "prev_hash": "bcb1ce1e90606f885dcdb3580db9c80cd059152dc7bf1be54ead5681b24ae4a2",
+      "signature": "4EC02ACC51DC6D0374DB802E6B70C9B6E8B7BFC24184FC4BA67B38BEDBCE11F692A9033E3CFF89BF7C9E0D09E75A2E6141FB3DE0F706D04DE8E556A7BBB1FA7A",
+      "timestamp": 1555036822000000
+    },
+    {
+      "difficulty": 32,
+      "difficulty_ds": 41,
+      "ds_leader_address": "zil103suk4xz95jmg9tfhludqezca33t073r0n3pte",
+      "ds_leader_pub_key": "0x027454687AF99FF90BD13884FE7B2C126357BEF9502D6625E87EAE4F6147C45B6F",
+      "gas_price": 1000000000,
+      "number": 134,
+      "prev_hash": "7ee85216b0cf107ff5498793526af8ab116347e15db0ef25b314b514ec0dd488",
+      "signature": "5FE56321B61ABD64210A63223533DFBC6492765522BBB5E9AAF70BCF439FE1515AED6E4EDDEE958AB40DD37F06FA8F97073B95E81407A327A5E628743FE408EB",
+      "timestamp": 1550318189000000
+    },
+    {
+      "difficulty": 53,
+      "difficulty_ds": 106,
+      "ds_leader_address": "zil103suk4xz95jmg9tfhludqezca33t073r0n3pte",
+      "ds_leader_pub_key": "0x027454687AF99FF90BD13884FE7B2C126357BEF9502D6625E87EAE4F6147C45B6F",
+      "gas_price": 1000000000,
+      "number": 581,
+      "prev_hash": "4f5195adfe4f1554ac010b20d41651bca3b5413c391b945db5ef12c6a1adcc61",
+      "signature": "ADD135AAD146A68DCC8E1D473D80B40DDB636573BCD9A72136285C5126D3BE898E4BDA4F8EB19A240B7E64F8D5A83F7DBD0E7454E56F06402DE55AA6D5FDD1AF",
+      "timestamp": 1554006411000000
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "HGNC_gene_symbol": {
+            "#docs": [
+              8,
+              992
+            ],
+            "%docs": [
+              0.8,
+              99.2
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "BAIAP3",
+                "BARHL2",
+                "CENPBD1",
+                "RNF167",
+                "TAF1A"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "aliquot_barcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-DX-A6YU-01A-12R-A33J-07",
+              "TCGA-DX-AB32-01A-11R-A41I-07",
+              "TCGA-EJ-7794-01A-11R-2118-07",
+              "TCGA-L5-A43J-01A-12R-A24K-31",
+              "TCGA-M7-A720-01A-12R-A32O-07"
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-DX-A6YU",
+              "TCGA-DX-AB32",
+              "TCGA-EJ-7794",
+              "TCGA-L5-A43J",
+              "TCGA-M7-A720"
+            ],
+            "type": "string"
+          },
+          "gene_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8938,
+              9015,
+              26001,
+              92806,
+              343472
+            ],
+            "type": "number"
+          },
+          "normalized_count": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              26.6185,
+              50.1982,
+              303.7795,
+              1947.9236
+            ],
+            "type": "number"
+          },
+          "original_gene_symbol": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "BAIAP3",
+                "BARHL2",
+                "CENPBD1",
+                "RNF167",
+                "TAF1A"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IlluminaGA",
+              "IlluminaHiSeq"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-ESCA",
+              "TCGA-LUSC",
+              "TCGA-PRAD",
+              "TCGA-SARC",
+              "TCGA-TGCT"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-DX-A6YU-01A",
+              "TCGA-DX-AB32-01A",
+              "TCGA-EJ-7794-01A",
+              "TCGA-L5-A43J-01A",
+              "TCGA-M7-A720-01A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "rnaseq_hg19_gdc_2017_02::14447...",
+                  "rnaseq_hg19_gdc_2017_02::17302...",
+                  "rnaseq_hg19_gdc_2017_02::17400...",
+                  "rnaseq_hg19_gdc_2017_02::19029...",
+                  "rnaseq_hg19_gdc_2017_02::25746..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::14447923"
+              },
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::17302061"
+              },
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::17400157"
+              },
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::19029716"
+              },
+              {
+                "id": "rnaseq_hg19_gdc_2017_02::25746739"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "HGNC_gene_symbol": "LRRC46",
+      "aliquot_barcode": "TCGA-G9-6356-01A-11R-1789-07",
+      "case_barcode": "TCGA-G9-6356",
+      "gene_id": 90506,
+      "normalized_count": 33.8789,
+      "original_gene_symbol": "LRRC46",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-PRAD",
+      "sample_barcode": "TCGA-G9-6356-01A"
+    },
+    {
+      "HGNC_gene_symbol": "TNNT1",
+      "aliquot_barcode": "TCGA-AQ-A04H-01B-11R-A10J-07",
+      "case_barcode": "TCGA-AQ-A04H",
+      "gene_id": 7138,
+      "normalized_count": 12.9298,
+      "original_gene_symbol": "TNNT1",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-AQ-A04H-01B"
+    },
+    {
+      "HGNC_gene_symbol": "HLA-DRB1",
+      "aliquot_barcode": "TCGA-AQ-A04J-01A-02R-A034-07",
+      "case_barcode": "TCGA-AQ-A04J",
+      "gene_id": 3123,
+      "normalized_count": 4873.1831,
+      "original_gene_symbol": "HLA-DRB1",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-AQ-A04J-01A"
+    },
+    {
+      "HGNC_gene_symbol": "PRPF18",
+      "aliquot_barcode": "TCGA-AQ-A04L-01B-21R-A10J-07",
+      "case_barcode": "TCGA-AQ-A04L",
+      "gene_id": 8559,
+      "normalized_count": 502.4703,
+      "original_gene_symbol": "PRPF18",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-BRCA",
+      "sample_barcode": "TCGA-AQ-A04L-01B"
+    },
+    {
+      "HGNC_gene_symbol": "MTMR10",
+      "aliquot_barcode": "TCGA-G9-6356-01A-11R-1789-07",
+      "case_barcode": "TCGA-G9-6356",
+      "gene_id": 54893,
+      "normalized_count": 848.4203,
+      "original_gene_symbol": "MTMR10",
+      "platform": "IlluminaHiSeq",
+      "project_short_name": "TCGA-PRAD",
+      "sample_barcode": "TCGA-G9-6356-01A"
+    }
+  ]
+}

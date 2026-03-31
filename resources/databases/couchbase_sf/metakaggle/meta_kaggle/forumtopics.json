@@ -1,0 +1,351 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CreationDate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1596368885000000,
+              1626234689000000,
+              1640893185000000,
+              1672009610000000,
+              1718698342000000
+            ],
+            "type": "number"
+          },
+          "FirstForumMessageId": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                955151,
+                1387235,
+                1633463,
+                2075812,
+                2877168
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "ForumId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15,
+              2239,
+              817225,
+              1485708,
+              1711907
+            ],
+            "type": "number"
+          },
+          "Id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              171767,
+              252877,
+              297958,
+              374188,
+              513024
+            ],
+            "type": "number"
+          },
+          "IsSticky": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "KernelId": {
+            "#docs": [
+              653,
+              347
+            ],
+            "%docs": [
+              65.3,
+              34.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                13907260,
+                22677168,
+                27668213,
+                27731842,
+                35131798
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "LastCommentDate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1596443875000000,
+              1641146163000000,
+              1672051208000000,
+              1705174568000000,
+              1718778944000000
+            ],
+            "type": "number"
+          },
+          "LastForumMessageId": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                956105,
+                1636255,
+                2076293,
+                2600699,
+                2878762
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "Score": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              6,
+              30
+            ],
+            "type": "number"
+          },
+          "Title": {
+            "#docs": [
+              347,
+              653
+            ],
+            "%docs": [
+              34.7,
+              65.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Interview Questions!",
+                "New to Machine Learning or Kag...",
+                "Submission example using the A...",
+                "UnidentifiedImageError: cannot...",
+                "show visualizations in the R n..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "TotalMessages": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              5,
+              22,
+              116
+            ],
+            "type": "number"
+          },
+          "TotalReplies": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              4,
+              21,
+              115
+            ],
+            "type": "number"
+          },
+          "TotalViews": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              437,
+              1677,
+              2780,
+              3015
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "forumtopics::207862",
+                  "forumtopics::295972",
+                  "forumtopics::326938",
+                  "forumtopics::34560",
+                  "forumtopics::376344"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "forumtopics::207862"
+              },
+              {
+                "id": "forumtopics::295972"
+              },
+              {
+                "id": "forumtopics::326938"
+              },
+              {
+                "id": "forumtopics::34560"
+              },
+              {
+                "id": "forumtopics::376344"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CreationDate": 1617430275000000,
+      "FirstForumMessageId": 1261513,
+      "ForumId": 16860,
+      "Id": 230343,
+      "IsSticky": false,
+      "KernelId": 15851185,
+      "LastCommentDate": 1617444252000000,
+      "LastForumMessageId": 1261649,
+      "Score": 0,
+      "Title": "[Deleted Kernel]",
+      "TotalMessages": 2,
+      "TotalReplies": 2,
+      "TotalViews": 0
+    },
+    {
+      "CreationDate": 1626498588000000,
+      "FirstForumMessageId": 1390795,
+      "ForumId": 16860,
+      "Id": 253514,
+      "IsSticky": false,
+      "KernelId": 17957118,
+      "LastCommentDate": 1626500253000000,
+      "LastForumMessageId": 1390832,
+      "Score": 0,
+      "Title": null,
+      "TotalMessages": 2,
+      "TotalReplies": 2,
+      "TotalViews": 0
+    },
+    {
+      "CreationDate": 1666508746000000,
+      "FirstForumMessageId": 2000247,
+      "ForumId": 16860,
+      "Id": 361692,
+      "IsSticky": false,
+      "KernelId": 30945034,
+      "LastCommentDate": 1666732236000000,
+      "LastForumMessageId": 2003892,
+      "Score": 0,
+      "Title": "[Deleted Kernel]",
+      "TotalMessages": 2,
+      "TotalReplies": 2,
+      "TotalViews": 0
+    },
+    {
+      "CreationDate": 1590583381000000,
+      "FirstForumMessageId": 867982,
+      "ForumId": 16860,
+      "Id": 155004,
+      "IsSticky": false,
+      "KernelId": 9732711,
+      "LastCommentDate": 1591018954000000,
+      "LastForumMessageId": 870093,
+      "Score": 0,
+      "Title": "A newbie approach to breast cancer problem",
+      "TotalMessages": 2,
+      "TotalReplies": 2,
+      "TotalViews": 0
+    },
+    {
+      "CreationDate": 1584598386000000,
+      "FirstForumMessageId": 881130,
+      "ForumId": 16860,
+      "Id": 157477,
+      "IsSticky": false,
+      "KernelId": 8472694,
+      "LastCommentDate": 1592121391000000,
+      "LastForumMessageId": 885430,
+      "Score": 0,
+      "Title": "pca vs t-sne",
+      "TotalMessages": 2,
+      "TotalReplies": 2,
+      "TotalViews": 0
+    }
+  ]
+}

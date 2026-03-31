@@ -1,0 +1,96 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`watch_count` = 256",
+        "properties": {
+          "repo_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "H07000223/FlycoDialog_Master",
+              "bigcompany/hook.io",
+              "kbandla/APTnotes",
+              "oblac/jodd",
+              "veficos/reverse-engineering-fo..."
+            ],
+            "type": "string"
+          },
+          "watch_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              256
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sample_repos::0",
+                  "sample_repos::1",
+                  "sample_repos::2",
+                  "sample_repos::3",
+                  "sample_repos::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sample_repos::0"
+              },
+              {
+                "id": "sample_repos::1"
+              },
+              {
+                "id": "sample_repos::2"
+              },
+              {
+                "id": "sample_repos::3"
+              },
+              {
+                "id": "sample_repos::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "repo_name": "oblac/jodd",
+      "watch_count": 256
+    },
+    {
+      "repo_name": "bigcompany/hook.io",
+      "watch_count": 256
+    },
+    {
+      "repo_name": "H07000223/FlycoDialog_Master",
+      "watch_count": 256
+    },
+    {
+      "repo_name": "kbandla/APTnotes",
+      "watch_count": 256
+    },
+    {
+      "repo_name": "veficos/reverse-engineering-for-beginners",
+      "watch_count": 256
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `LastEditedWhen` = 1356998400000000, `StockGroupID` = 1",
+        "properties": {
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "LastEditedWhen": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998400000000
+            ],
+            "type": "number"
+          },
+          "StockGroupID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "StockItemID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "StockItemStockGroupID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              5,
+              8,
+              10,
+              13
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "warehouse_stockitemstockgroups...",
+                  "warehouse_stockitemstockgroups...",
+                  "warehouse_stockitemstockgroups...",
+                  "warehouse_stockitemstockgroups...",
+                  "warehouse_stockitemstockgroups..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "warehouse_stockitemstockgroups::0"
+              },
+              {
+                "id": "warehouse_stockitemstockgroups::1"
+              },
+              {
+                "id": "warehouse_stockitemstockgroups::2"
+              },
+              {
+                "id": "warehouse_stockitemstockgroups::3"
+              },
+              {
+                "id": "warehouse_stockitemstockgroups::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "LastEditedBy": 1,
+      "LastEditedWhen": 1356998400000000,
+      "StockGroupID": 1,
+      "StockItemID": 1,
+      "StockItemStockGroupID": 2
+    },
+    {
+      "LastEditedBy": 1,
+      "LastEditedWhen": 1356998400000000,
+      "StockGroupID": 1,
+      "StockItemID": 5,
+      "StockItemStockGroupID": 13
+    },
+    {
+      "LastEditedBy": 1,
+      "LastEditedWhen": 1356998400000000,
+      "StockGroupID": 1,
+      "StockItemID": 2,
+      "StockItemStockGroupID": 5
+    },
+    {
+      "LastEditedBy": 1,
+      "LastEditedWhen": 1356998400000000,
+      "StockGroupID": 1,
+      "StockItemID": 3,
+      "StockItemStockGroupID": 8
+    },
+    {
+      "LastEditedBy": 1,
+      "LastEditedWhen": 1356998400000000,
+      "StockGroupID": 1,
+      "StockItemID": 4,
+      "StockItemStockGroupID": 10
+    }
+  ]
+}

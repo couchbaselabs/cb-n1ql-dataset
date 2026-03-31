@@ -1,0 +1,576 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`LastEditedBy` = 1, `SupplierCategoryID` = 2, `ValidFrom` = 1356998700000000, `ValidTo` = 253402300799999999",
+        "properties": {
+          "AlternateContactPersonID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              22,
+              24,
+              30,
+              36,
+              38
+            ],
+            "type": "number"
+          },
+          "BankAccountBranch": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Woodgrove Bank Elizabeth City",
+              "Woodgrove Bank Greenbank",
+              "Woodgrove Bank Jonesborough",
+              "Woodgrove Bank Lanagan",
+              "Woodgrove Bank Zionsville"
+            ],
+            "type": "string"
+          },
+          "BankAccountCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              356981,
+              358698,
+              365985,
+              563215,
+              654789
+            ],
+            "type": "number"
+          },
+          "BankAccountName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A Datum Corporation",
+              "Contoso Ltd",
+              "Graphic Design Institute",
+              "Lucerne Publishing",
+              "Nod Publishers"
+            ],
+            "type": "string"
+          },
+          "BankAccountNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1025869354,
+              2021545878,
+              3254123658,
+              4587965215,
+              8575824136
+            ],
+            "type": "number"
+          },
+          "BankInternationalCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21569,
+              25868,
+              25986,
+              32587,
+              48758
+            ],
+            "type": "number"
+          },
+          "DeliveryAddressLine1": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Level 1",
+                "Suite 10",
+                "Suite 34",
+                "Unit 2"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "DeliveryAddressLine2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "183838 Southwest Boulevard",
+              "2934 Night Road",
+              "389 King Street",
+              "45th Street",
+              "949482 Miller Boulevard"
+            ],
+            "type": "string"
+          },
+          "DeliveryCityID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10346,
+              13870,
+              17161,
+              18634,
+              38171
+            ],
+            "type": "number"
+          },
+          "DeliveryLocation": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8.607660043233208e+52,
+              8.607660043233209e+52,
+              8.607660043233227e+52,
+              8.607660043233234e+52,
+              8.607660043233235e+52
+            ],
+            "type": "number"
+          },
+          "DeliveryMethodID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10",
+              "7",
+              "9"
+            ],
+            "type": "string"
+          },
+          "DeliveryPostalCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              27906,
+              37659,
+              46077,
+              64847,
+              98253
+            ],
+            "type": "number"
+          },
+          "FaxNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(252) 555-0101",
+              "(360) 555-0101",
+              "(406) 555-0106",
+              "(423) 555-0105",
+              "(847) 555-0101"
+            ],
+            "type": "string"
+          },
+          "InternalComments": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Marcos is not in on Mondays",
+              "NULL"
+            ],
+            "type": "string"
+          },
+          "LastEditedBy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "PaymentDays": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              7,
+              14,
+              30
+            ],
+            "type": "number"
+          },
+          "PhoneNumber": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(252) 555-0100",
+              "(360) 555-0100",
+              "(406) 555-0105",
+              "(423) 555-0103",
+              "(847) 555-0100"
+            ],
+            "type": "string"
+          },
+          "PostalAddressLine1": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PO Box 1012",
+              "PO Box 1039",
+              "PO Box 3390",
+              "PO Box 393",
+              "PO Box 8747"
+            ],
+            "type": "string"
+          },
+          "PostalAddressLine2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Anderson",
+              "Jolimont",
+              "Surrey",
+              "Westerfold",
+              "Willow"
+            ],
+            "type": "string"
+          },
+          "PostalCityID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10346,
+              13870,
+              17161,
+              18634,
+              38171
+            ],
+            "type": "number"
+          },
+          "PostalPostalCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              27906,
+              37659,
+              46077,
+              64847,
+              98253
+            ],
+            "type": "number"
+          },
+          "PrimaryContactPersonID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21,
+              23,
+              29,
+              35,
+              37
+            ],
+            "type": "number"
+          },
+          "SupplierCategoryID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "SupplierID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              5,
+              8,
+              9
+            ],
+            "type": "number"
+          },
+          "SupplierName": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A Datum Corporation",
+              "Contoso, Ltd.",
+              "Graphic Design Institute",
+              "Lucerne Publishing",
+              "Nod Publishers"
+            ],
+            "type": "string"
+          },
+          "SupplierReference": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "08803922",
+              "AA20384",
+              "B2084020",
+              "GL08029802",
+              "JQ082304802"
+            ],
+            "type": "string"
+          },
+          "ValidFrom": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1356998700000000
+            ],
+            "type": "number"
+          },
+          "ValidTo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              253402300799999999
+            ],
+            "type": "number"
+          },
+          "WebsiteURL": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "http://www.adatum.com",
+              "http://www.contoso.com",
+              "http://www.graphicdesigninstit...",
+              "http://www.lucernepublishing.c...",
+              "http://www.nodpublishers.com"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "purchasing_suppliers::0",
+                  "purchasing_suppliers::1",
+                  "purchasing_suppliers::2",
+                  "purchasing_suppliers::3",
+                  "purchasing_suppliers::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "purchasing_suppliers::0"
+              },
+              {
+                "id": "purchasing_suppliers::1"
+              },
+              {
+                "id": "purchasing_suppliers::2"
+              },
+              {
+                "id": "purchasing_suppliers::3"
+              },
+              {
+                "id": "purchasing_suppliers::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AlternateContactPersonID": 30,
+      "BankAccountBranch": "Woodgrove Bank Lanagan",
+      "BankAccountCode": 563215,
+      "BankAccountName": "Graphic Design Institute",
+      "BankAccountNumber": 1025869354,
+      "BankInternationalCode": 32587,
+      "DeliveryAddressLine1": null,
+      "DeliveryAddressLine2": "45th Street",
+      "DeliveryCityID": 18634,
+      "DeliveryLocation": 8.607660043233209e+52,
+      "DeliveryMethodID": "10",
+      "DeliveryPostalCode": 64847,
+      "FaxNumber": "(406) 555-0106",
+      "InternalComments": "NULL",
+      "LastEditedBy": 1,
+      "PaymentDays": 14,
+      "PhoneNumber": "(406) 555-0105",
+      "PostalAddressLine1": "PO Box 393",
+      "PostalAddressLine2": "Willow",
+      "PostalCityID": 18634,
+      "PostalPostalCode": 64847,
+      "PrimaryContactPersonID": 29,
+      "SupplierCategoryID": 2,
+      "SupplierID": 5,
+      "SupplierName": "Graphic Design Institute",
+      "SupplierReference": "08803922",
+      "ValidFrom": 1356998700000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.graphicdesigninstitute.com"
+    },
+    {
+      "AlternateContactPersonID": 36,
+      "BankAccountBranch": "Woodgrove Bank Jonesborough",
+      "BankAccountCode": 654789,
+      "BankAccountName": "Lucerne Publishing",
+      "BankAccountNumber": 3254123658,
+      "BankInternationalCode": 21569,
+      "DeliveryAddressLine1": "Suite 34",
+      "DeliveryAddressLine2": "949482 Miller Boulevard",
+      "DeliveryCityID": 17161,
+      "DeliveryLocation": 8.607660043233227e+52,
+      "DeliveryMethodID": "10",
+      "DeliveryPostalCode": 37659,
+      "FaxNumber": "(423) 555-0105",
+      "InternalComments": "NULL",
+      "LastEditedBy": 1,
+      "PaymentDays": 30,
+      "PhoneNumber": "(423) 555-0103",
+      "PostalAddressLine1": "PO Box 8747",
+      "PostalAddressLine2": "Westerfold",
+      "PostalCityID": 17161,
+      "PostalPostalCode": 37659,
+      "PrimaryContactPersonID": 35,
+      "SupplierCategoryID": 2,
+      "SupplierID": 8,
+      "SupplierName": "Lucerne Publishing",
+      "SupplierReference": "JQ082304802",
+      "ValidFrom": 1356998700000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.lucernepublishing.com"
+    },
+    {
+      "AlternateContactPersonID": 22,
+      "BankAccountBranch": "Woodgrove Bank Zionsville",
+      "BankAccountCode": 356981,
+      "BankAccountName": "A Datum Corporation",
+      "BankAccountNumber": 8575824136,
+      "BankInternationalCode": 25986,
+      "DeliveryAddressLine1": "Suite 10",
+      "DeliveryAddressLine2": "183838 Southwest Boulevard",
+      "DeliveryCityID": 38171,
+      "DeliveryLocation": 8.607660043233235e+52,
+      "DeliveryMethodID": "7",
+      "DeliveryPostalCode": 46077,
+      "FaxNumber": "(847) 555-0101",
+      "InternalComments": "NULL",
+      "LastEditedBy": 1,
+      "PaymentDays": 14,
+      "PhoneNumber": "(847) 555-0100",
+      "PostalAddressLine1": "PO Box 1039",
+      "PostalAddressLine2": "Surrey",
+      "PostalCityID": 38171,
+      "PostalPostalCode": 46077,
+      "PrimaryContactPersonID": 21,
+      "SupplierCategoryID": 2,
+      "SupplierID": 1,
+      "SupplierName": "A Datum Corporation",
+      "SupplierReference": "AA20384",
+      "ValidFrom": 1356998700000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.adatum.com"
+    },
+    {
+      "AlternateContactPersonID": 38,
+      "BankAccountBranch": "Woodgrove Bank Elizabeth City",
+      "BankAccountCode": 365985,
+      "BankAccountName": "Nod Publishers",
+      "BankAccountNumber": 2021545878,
+      "BankInternationalCode": 48758,
+      "DeliveryAddressLine1": "Level 1",
+      "DeliveryAddressLine2": "389 King Street",
+      "DeliveryCityID": 10346,
+      "DeliveryLocation": 8.607660043233208e+52,
+      "DeliveryMethodID": "10",
+      "DeliveryPostalCode": 27906,
+      "FaxNumber": "(252) 555-0101",
+      "InternalComments": "Marcos is not in on Mondays",
+      "LastEditedBy": 1,
+      "PaymentDays": 7,
+      "PhoneNumber": "(252) 555-0100",
+      "PostalAddressLine1": "PO Box 3390",
+      "PostalAddressLine2": "Anderson",
+      "PostalCityID": 10346,
+      "PostalPostalCode": 27906,
+      "PrimaryContactPersonID": 37,
+      "SupplierCategoryID": 2,
+      "SupplierID": 9,
+      "SupplierName": "Nod Publishers",
+      "SupplierReference": "GL08029802",
+      "ValidFrom": 1356998700000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.nodpublishers.com"
+    },
+    {
+      "AlternateContactPersonID": 24,
+      "BankAccountBranch": "Woodgrove Bank Greenbank",
+      "BankAccountCode": 358698,
+      "BankAccountName": "Contoso Ltd",
+      "BankAccountNumber": 4587965215,
+      "BankInternationalCode": 25868,
+      "DeliveryAddressLine1": "Unit 2",
+      "DeliveryAddressLine2": "2934 Night Road",
+      "DeliveryCityID": 13870,
+      "DeliveryLocation": 8.607660043233234e+52,
+      "DeliveryMethodID": "9",
+      "DeliveryPostalCode": 98253,
+      "FaxNumber": "(360) 555-0101",
+      "InternalComments": "NULL",
+      "LastEditedBy": 1,
+      "PaymentDays": 7,
+      "PhoneNumber": "(360) 555-0100",
+      "PostalAddressLine1": "PO Box 1012",
+      "PostalAddressLine2": "Jolimont",
+      "PostalCityID": 13870,
+      "PostalPostalCode": 98253,
+      "PrimaryContactPersonID": 23,
+      "SupplierCategoryID": 2,
+      "SupplierID": 2,
+      "SupplierName": "Contoso, Ltd.",
+      "SupplierReference": "B2084020",
+      "ValidFrom": 1356998700000000,
+      "ValidTo": 253402300799999999,
+      "WebsiteURL": "http://www.contoso.com"
+    }
+  ]
+}
