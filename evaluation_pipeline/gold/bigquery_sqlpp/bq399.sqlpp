@@ -1,0 +1,43 @@
+WITH country_data AS ( 
+    SELECT 
+        cs.country_code, 
+        cs.short_name AS country,
+        cs.region, 
+        cs.income_group 
+    FROM world_bank.world_bank_wdi.country_summary cs
+),
+
+birth_rate_data AS (
+    SELECT 
+        d.country_code,
+        c.country,
+        c.region,
+        AVG(d.`value`) AS avg_birth_rate
+    FROM world_bank.world_bank_wdi.indicators_data d
+    LEFT JOIN country_data c
+        ON d.country_code = c.country_code
+    WHERE d.indicator_code = "SP.DYN.CBRT.IN"
+        AND d.year BETWEEN 1980 AND 1989
+        AND c.income_group = "High income"
+    GROUP BY 
+        d.country_code,
+        c.country,
+        c.region
+),
+
+ranked_birth_rates AS (
+    SELECT
+        region,
+        country,
+        avg_birth_rate,
+        RANK() OVER (PARTITION BY region ORDER BY avg_birth_rate DESC) AS rnk
+    FROM birth_rate_data
+)
+
+SELECT 
+    region,
+    country,
+    avg_birth_rate
+FROM ranked_birth_rates
+WHERE rnk = 1
+ORDER BY region;

@@ -1,0 +1,87 @@
+WITH all_data AS (
+    SELECT fullVisitorId,
+           date,
+           visitStartTime,
+           totals.timeOnSite AS timeOnSite,
+           totals.transactions AS transactions
+    FROM (
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201608
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201609
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201610
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201611
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201612
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201701
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201702
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201703
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201704
+        UNION ALL
+        SELECT fullVisitorId, date, visitStartTime, totals FROM ga360.google_analytics_sample.ga_sessions_201705
+    ) s
+),
+
+/* TRUE first-ever visit */
+first_visits AS (
+    SELECT fullVisitorId,
+           MIN(visitStartTime) AS first_visit_ts
+    FROM all_data
+    GROUP BY fullVisitorId
+),
+
+/* Keep only users whose FIRST visit is in range */
+new_users AS (
+    SELECT f.fullVisitorId,
+           f.first_visit_ts
+    FROM first_visits f
+    JOIN all_data a
+      ON f.fullVisitorId = a.fullVisitorId
+     AND f.first_visit_ts = a.visitStartTime
+    WHERE a.date BETWEEN "20160801" AND "20170430"
+),
+
+/* Initial visit details */
+initial_visits AS (
+    SELECT a.fullVisitorId,
+           a.visitStartTime,
+           a.timeOnSite
+    FROM all_data a
+    JOIN new_users n
+      ON a.fullVisitorId = n.fullVisitorId
+     AND a.visitStartTime = n.first_visit_ts
+),
+
+/* Qualified initial visits */
+qualified_initial AS (
+    SELECT fullVisitorId,
+           visitStartTime
+    FROM initial_visits
+    WHERE timeOnSite > 300
+),
+
+/* Purchase at ANY later time */
+buyers_later AS (
+    SELECT DISTINCT q.fullVisitorId
+    FROM qualified_initial q
+    JOIN all_data a
+      ON q.fullVisitorId = a.fullVisitorId
+    WHERE a.visitStartTime > q.visitStartTime
+      AND a.transactions > 0
+),
+
+/* Final counts */
+counts AS (
+    SELECT
+        (SELECT RAW COUNT(*) FROM new_users)[0] AS total_new_users,
+        (SELECT RAW COUNT(*) FROM buyers_later)[0] AS qualified_users
+)
+
+SELECT ROUND(qualified_users * 100.0 / total_new_users, 4)
+       AS percentage_matching_criteria
+FROM counts;

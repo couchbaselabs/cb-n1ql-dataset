@@ -1,0 +1,78 @@
+SELECT
+    COUNT(*) AS total_views,
+
+    SUM(
+        CASE 
+            WHEN page_type = "PDP" THEN 1
+            ELSE 0
+        END
+    ) AS pdp_views,
+
+    (SUM(
+        CASE 
+            WHEN page_type = "PDP" THEN 1
+            ELSE 0
+        END
+    ) * 100.0) / COUNT(*) AS percentage_pdp
+
+FROM (
+
+    SELECT
+        event_timestamp,
+        user_pseudo_id,
+
+        CASE
+            -- PDP logic (your improved version)
+            WHEN ARRAY_LENGTH(parts) >= 5
+                 AND CONTAINS(parts[len - 1], "+")
+                 AND (
+                    LOWER(parts[len-2]) IN [
+                        "accessories","apparel","brands","campus+collection","drinkware",
+                "electronics","google+redesign","lifestyle","nest",
+                "new+2015+logo","notebooks+journals","office",
+                "shop+by+brand","small+goods","stationery","wearables"
+                    ]
+                    OR
+                    LOWER(parts[len-3]) IN [
+                        "accessories","apparel","brands","campus+collection","drinkware",
+                "electronics","google+redesign","lifestyle","nest",
+                "new+2015+logo","notebooks+journals","office",
+                "shop+by+brand","small+goods","stationery","wearables"
+                    ]
+                 )
+            THEN "PDP"
+
+            ELSE "OTHER"
+        END AS page_type
+
+    FROM (
+
+        SELECT
+            T.event_timestamp,
+            T.user_pseudo_id,
+
+            SPLIT(page_location, "/") AS parts,
+            ARRAY_LENGTH(SPLIT(page_location, "/")) AS len
+
+        FROM (
+
+            SELECT
+                T.event_timestamp,
+                T.user_pseudo_id,
+
+                MAX(CASE WHEN ep.`key` = "page_location"
+                         THEN ep.`value`.string_value END) AS page_location
+
+            FROM ga4.ga4_obfuscated_sample_ecommerce.events_202101 AS T
+            UNNEST T.event_params AS ep
+
+            WHERE T.event_name = "page_view"
+              AND T.event_date = "20210102"
+
+            GROUP BY T.event_timestamp, T.user_pseudo_id
+
+        ) AS extracted
+
+    ) AS with_parts
+
+) AS classified;

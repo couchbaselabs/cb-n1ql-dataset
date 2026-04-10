@@ -1,0 +1,58 @@
+WITH valid_countries AS (
+    SELECT country_code
+    FROM world_bank.world_bank_wdi.country_summary
+    WHERE region IS NOT MISSING
+      AND region != ""
+),
+
+population_growth AS (
+    SELECT 
+        p.country_code,
+        (p.year_2018 - p.year_2017) / p.year_2017 AS pop_growth
+    FROM world_bank.world_bank_global_population.population_by_country p
+    JOIN valid_countries vc
+        ON p.country_code = vc.country_code
+    WHERE p.year_2017 IS NOT NULL
+      AND p.year_2018 IS NOT NULL
+      AND p.year_2017 != 0
+),
+
+health_2017 AS (
+    SELECT 
+        country_code,
+        `value` AS val_2017
+    FROM world_bank.world_bank_health_population.health_nutrition_population
+    WHERE indicator_code = "SH.XPD.CHEX.PP.CD"
+      AND year = 2017
+      AND `value` IS NOT NULL
+),
+
+health_2018 AS (
+    SELECT 
+        country_code,
+        `value` AS val_2018
+    FROM world_bank.world_bank_health_population.health_nutrition_population
+    WHERE indicator_code = "SH.XPD.CHEX.PP.CD"
+      AND year = 2018
+      AND `value` IS NOT NULL
+),
+
+health_growth AS (
+    SELECT 
+        h17.country_code,
+        (h18.val_2018 - h17.val_2017) / h17.val_2017 AS health_growth
+    FROM health_2017 h17
+    JOIN health_2018 h18
+        ON h17.country_code = h18.country_code
+    JOIN valid_countries vc
+        ON h17.country_code = vc.country_code
+    WHERE h17.val_2017 != 0
+)
+
+SELECT 
+    COUNT(*) AS num_countries
+FROM population_growth pg
+JOIN health_growth hg
+    ON pg.country_code = hg.country_code
+WHERE pg.pop_growth > 0.01
+  AND hg.health_growth > 0.01;

@@ -1,0 +1,70 @@
+WITH acs_2018 AS (
+    SELECT 
+        a.geo_id,
+        IFMISSINGORNULL(a.unemployed_pop, 0) AS unemployed_2018
+    FROM `sdoh`.`census_bureau_acs`.`county_2018_5yr` AS a
+),
+
+acs_2015 AS (
+    SELECT 
+        a.geo_id,
+        IFMISSINGORNULL(a.unemployed_pop, 0) AS unemployed_2015
+    FROM `sdoh`.`census_bureau_acs`.`county_2015_5yr` AS a
+),
+
+unemployed_change AS (
+    SELECT
+        u18.geo_id,
+        u18.unemployed_2018,
+        u15.unemployed_2015,
+        (u18.unemployed_2018 - u15.unemployed_2015) AS u_change
+    FROM acs_2018 AS u18
+    JOIN acs_2015 AS u15
+    ON u18.geo_id = u15.geo_id
+),
+
+duals_2018 AS (
+    SELECT 
+        d.FIPS,
+        d.County_Name,
+        IFMISSINGORNULL(d.Public_Total, 0) AS duals_2018
+    FROM `sdoh`.`sdoh_cms_dual_eligible_enrollment`.`dual_eligible_enrollment_by_county_and_program` AS d
+    WHERE d.Date = "2018-12-01"
+),
+
+duals_2015 AS (
+    SELECT 
+        d.FIPS,
+        d.County_Name,
+        IFMISSINGORNULL(d.Public_Total, 0) AS duals_2015
+    FROM `sdoh`.`sdoh_cms_dual_eligible_enrollment`.`dual_eligible_enrollment_by_county_and_program` AS d
+    WHERE d.Date = "2015-12-01"
+),
+
+duals_change AS (
+    SELECT
+        d18.FIPS,
+        d18.County_Name,
+        d18.duals_2018,
+        d15.duals_2015,
+        (d18.duals_2018 - d15.duals_2015) AS total_duals_diff
+    FROM duals_2018 AS d18
+    JOIN duals_2015 AS d15
+    ON d18.FIPS = d15.FIPS
+),
+
+corr_tbl AS (
+    SELECT 
+        u.geo_id,
+        d.County_Name,
+        u.u_change,
+        d.total_duals_diff
+    FROM unemployed_change AS u
+    JOIN duals_change AS d
+    ON u.geo_id = d.FIPS
+)
+
+SELECT COUNT(*) AS county_count
+FROM corr_tbl
+WHERE u_change > 0
+  AND total_duals_diff < 0;

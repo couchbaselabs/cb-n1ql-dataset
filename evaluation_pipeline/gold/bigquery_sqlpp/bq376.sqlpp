@@ -1,0 +1,28 @@
+WITH boundary_vertices AS (
+  SELECT b.neighborhood,
+         ARRAY [TONUMBER(SPLIT(p, ' ')[0]), TONUMBER(SPLIT(p, ' ')[1])]
+           FOR p IN SPLIT(
+             SUBSTR(b.neighborhood_geom,
+                    POSITION(b.neighborhood_geom, '((') + 2,
+                    POSITION(b.neighborhood_geom, '))') - POSITION(b.neighborhood_geom, '((') - 2),
+             ', '
+           ) END AS vertices
+  FROM san_francisco_plus.san_francisco_neighborhoods.boundaries b
+)
+SELECT bv.neighborhood AS NEIGHBORHOOD,
+       COUNT(s.station_id) AS NUM_BIKE_SHARE_STATIONS,
+       0 AS NUM_CRIME_INCIDENTS
+FROM boundary_vertices bv
+LEFT JOIN san_francisco_plus.san_francisco_bikeshare.bikeshare_station_info s
+  ON (ARRAY_SUM(
+       ARRAY
+         CASE WHEN (bv.vertices[i][1] > s.lat) != (bv.vertices[((i+1) % ARRAY_LENGTH(bv.vertices))][1] > s.lat)
+              AND s.lon < (bv.vertices[((i+1) % ARRAY_LENGTH(bv.vertices))][0] - bv.vertices[i][0])
+                        * (s.lat - bv.vertices[i][1])
+                        / (bv.vertices[((i+1) % ARRAY_LENGTH(bv.vertices))][1] - bv.vertices[i][1])
+                        + bv.vertices[i][0]
+         THEN 1 ELSE 0 END
+       FOR i IN ARRAY_RANGE(0, ARRAY_LENGTH(bv.vertices) - 1) END
+     ) % 2) = 1
+GROUP BY bv.neighborhood
+ORDER BY bv.neighborhood;

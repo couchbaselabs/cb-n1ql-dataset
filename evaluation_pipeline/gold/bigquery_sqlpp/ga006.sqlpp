@@ -1,0 +1,17 @@
+SELECT
+  s.user_pseudo_id,
+  ROUND(AVG(s.session_revenue), 2) AS AVG_PURCHASE_REVENUE_PER_SESSION_USD
+FROM (
+  SELECT
+    e.user_pseudo_id,
+    (FIRST ep.`value`.int_value FOR ep IN e.event_params WHEN ep.`key` = 'ga_session_id' END) AS ga_session_id,
+    SUM(e.ecommerce.purchase_revenue_in_usd) AS session_revenue
+  FROM ga4.ga4_obfuscated_sample_ecommerce.events_202011 e
+  WHERE e.event_name = 'purchase'
+    AND e.ecommerce.purchase_revenue_in_usd IS NOT NULL
+  GROUP BY e.user_pseudo_id,
+    (FIRST ep.`value`.int_value FOR ep IN e.event_params WHEN ep.`key` = 'ga_session_id' END)
+) s
+GROUP BY s.user_pseudo_id
+HAVING COUNT(*) > 1
+ORDER BY AVG(s.session_revenue) DESC
