@@ -1,0 +1,13 @@
+WITH accident_persons AS (
+    SELECT a.consecutive_number,
+           COUNT(DISTINCT p.person_number) AS num_persons,
+           COUNT(DISTINCT CASE WHEN p.injury_severity = 4 THEN p.person_number END) AS num_severe
+    FROM nhtsa_traffic_fatalities.nhtsa_traffic_fatalities.accident_2015 a
+    JOIN nhtsa_traffic_fatalities.nhtsa_traffic_fatalities.person_2015 p
+      ON a.consecutive_number = p.consecutive_number
+    WHERE a.month_of_crash >= 1 AND a.month_of_crash <= 8
+    GROUP BY a.consecutive_number
+    HAVING COUNT(DISTINCT p.person_number) > 1
+)
+SELECT ROUND(COUNT(CASE WHEN num_severe > 1 THEN 1 END) * 100.0 / COUNT(*), 2) AS percent_with_more_than_one_severe_injury
+FROM accident_persons

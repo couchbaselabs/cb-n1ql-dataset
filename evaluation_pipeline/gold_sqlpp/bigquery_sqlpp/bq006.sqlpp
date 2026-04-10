@@ -1,0 +1,24 @@
+WITH incident_stats AS (
+  SELECT COUNT(i.descript) AS total_pub_intox
+  FROM austin.austin_incidents.incidents_2016 i
+  WHERE i.descript = 'PUBLIC INTOXICATION'
+  GROUP BY i.date
+),
+average_and_stddev AS (
+  SELECT AVG(total_pub_intox) AS avg_val,
+         STDDEV(total_pub_intox) AS stddev_val
+  FROM incident_stats
+),
+daily_z_scores AS (
+  SELECT i.date,
+         COUNT(i.descript) AS total_pub_intox,
+         ROUND((COUNT(i.descript) - a.avg_val) / a.stddev_val, 2) AS z_score
+  FROM austin.austin_incidents.incidents_2016 i,
+       average_and_stddev a
+  WHERE i.descript = 'PUBLIC INTOXICATION'
+  GROUP BY i.date, a.avg_val, a.stddev_val
+)
+SELECT d.date
+FROM daily_z_scores d
+ORDER BY d.z_score DESC
+LIMIT 1 OFFSET 1;

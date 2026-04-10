@@ -1,0 +1,41 @@
+WITH bls_avg AS (
+    SELECT
+        AVG(c.percent_asian) AS avg_asian,
+        AVG(c.percent_black_or_african_american) AS avg_black,
+        AVG(c.percent_hispanic_or_latino) AS avg_hispanic,
+        AVG(c.percent_white) AS avg_white
+    FROM google_dei.bls.cpsaat18 c
+    WHERE c.year = 2021
+      AND (c.subsector IN [
+               'Internet publishing and broadcasting and web search portals',
+               'Software publishers',
+               'Data processing, hosting, and related services'
+           ]
+           OR c.industry_group = 'Computer systems design and related services')
+),
+google_hiring AS (
+    SELECT
+        h.race_asian,
+        h.race_black,
+        h.race_hispanic_latinx,
+        h.race_white
+    FROM google_dei.google_dei.dar_non_intersectional_hiring h
+    WHERE h.report_year = 2021 AND h.workforce = 'overall'
+),
+differences AS (
+    SELECT 'White' AS race, ABS(g.race_white - b.avg_white) AS difference
+    FROM google_hiring g, bls_avg b
+    UNION ALL
+    SELECT 'Asian' AS race, ABS(g.race_asian - b.avg_asian) AS difference
+    FROM google_hiring g, bls_avg b
+    UNION ALL
+    SELECT 'Black or African American' AS race, ABS(g.race_black - b.avg_black) AS difference
+    FROM google_hiring g, bls_avg b
+    UNION ALL
+    SELECT 'Hispanic or Latino' AS race, ABS(g.race_hispanic_latinx - b.avg_hispanic) AS difference
+    FROM google_hiring g, bls_avg b
+)
+SELECT d.race, d.difference
+FROM differences d
+ORDER BY d.difference DESC
+LIMIT 3;

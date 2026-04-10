@@ -1,0 +1,25 @@
+SELECT
+    t.OrderID AS tradeID,
+    t.MaturityDate AS tradeTimestamp,
+
+    CASE SUBSTR(t.TargetCompID, 0, 4)
+        WHEN "MOMO" THEN "Momentum"
+        WHEN "LUCK" THEN "Feeling Lucky"
+        WHEN "PRED" THEN "Prediction"
+    END AS algorithm,
+
+    t.Symbol AS symbol,
+    t.LastPx AS openPrice,
+    t.StrikePrice AS closePrice,
+
+    FIRST s.Side FOR s IN t.Sides END AS tradeDirection,
+
+    CASE FIRST s.Side FOR s IN t.Sides END
+        WHEN "SHORT" THEN -1
+        WHEN "LONG" THEN 1
+    END AS tradeMultiplier
+
+FROM CYMBAL_INVESTMENTS.cymbal_investments.trade_capture_report AS t
+
+ORDER BY t.StrikePrice DESC
+LIMIT 6;

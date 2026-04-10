@@ -1,0 +1,50 @@
+WITH session_dates AS (
+    SELECT DISTINCT user_pseudo_id,
+           SUBSTR(event_date,0,4)||'-'||SUBSTR(event_date,4,2)||'-'||SUBSTR(event_date,6,2) AS edate
+    FROM firebase.analytics_153293282.events_201807 WHERE event_name = 'session_start'
+    UNION
+    SELECT DISTINCT user_pseudo_id,
+           SUBSTR(event_date,0,4)||'-'||SUBSTR(event_date,4,2)||'-'||SUBSTR(event_date,6,2) AS edate
+    FROM firebase.analytics_153293282.events_201808 WHERE event_name = 'session_start'
+    UNION
+    SELECT DISTINCT user_pseudo_id,
+           SUBSTR(event_date,0,4)||'-'||SUBSTR(event_date,4,2)||'-'||SUBSTR(event_date,6,2) AS edate
+    FROM firebase.analytics_153293282.events_201809 WHERE event_name = 'session_start'
+    UNION
+    SELECT DISTINCT user_pseudo_id,
+           SUBSTR(event_date,0,4)||'-'||SUBSTR(event_date,4,2)||'-'||SUBSTR(event_date,6,2) AS edate
+    FROM firebase.analytics_153293282.events_201810 WHERE event_name = 'session_start'
+),
+new_users AS (
+    SELECT user_pseudo_id, MIN(edate) AS first_session_date
+    FROM session_dates
+    GROUP BY user_pseudo_id
+),
+cohort_users AS (
+    SELECT n.user_pseudo_id,
+           DATE_ADD_STR("2018-07-02",
+               FLOOR(DATE_DIFF_STR(n.first_session_date, "2018-07-02", "day") / 7) * 7,
+               "day") AS cohort_monday
+    FROM new_users n
+    WHERE n.first_session_date >= "2018-07-02"
+      AND n.first_session_date < "2018-10-01"
+),
+cohort_sizes AS (
+    SELECT cohort_monday, COUNT(*) AS cohort_size
+    FROM cohort_users
+    GROUP BY cohort_monday
+),
+week4_retained AS (
+    SELECT c.cohort_monday, COUNT(DISTINCT c.user_pseudo_id) AS retained
+    FROM cohort_users c
+    JOIN session_dates s ON c.user_pseudo_id = s.user_pseudo_id
+    WHERE s.edate >= DATE_ADD_STR(c.cohort_monday, 28, "day")
+      AND s.edate < DATE_ADD_STR(c.cohort_monday, 35, "day")
+    GROUP BY c.cohort_monday
+)
+SELECT cs.cohort_monday
+FROM cohort_sizes cs
+LEFT JOIN week4_retained w ON cs.cohort_monday = w.cohort_monday
+WHERE cs.cohort_monday <= "2018-09-17"
+ORDER BY (CASE WHEN cs.cohort_size > 0 THEN IFNULL(w.retained,0) * 1.0 / cs.cohort_size ELSE 0 END) DESC, cs.cohort_monday
+LIMIT 1

@@ -1,0 +1,14 @@
+SELECT d.board_type AS BOARD, AVG(d.score) AS AVG_SCORE
+FROM (
+    SELECT e.user_pseudo_id, e.event_timestamp,
+           MAX(CASE WHEN p.`key` = "board" THEN p.`value`.string_value END) AS board_type,
+           MAX(CASE WHEN p.`key` = "value" THEN p.`value`.int_value END) AS score
+    FROM firebase.analytics_153293282.events_201809 e
+    UNNEST e.event_params AS p
+    WHERE e.event_name = "level_complete_quickplay"
+      AND e.event_date = "20180915"
+      AND p.`key` IN ["board", "value"]
+    GROUP BY e.user_pseudo_id, e.event_timestamp
+) d
+GROUP BY d.board_type
+ORDER BY d.board_type

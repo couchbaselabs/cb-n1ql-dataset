@@ -1,0 +1,28 @@
+WITH homeless_2012 AS (
+    SELECT
+        h.Homeless_Veterans AS Vet12,
+        h.CoC_Name,
+        h.CoC_Number
+    FROM sdoh.sdoh_hud_pit_homelessness.hud_pit_by_coc AS h
+    WHERE SUBSTR(h.CoC_Number, 0, 2) = "NY"
+      AND h.Count_Year = 2012
+),
+
+homeless_2018 AS (
+    SELECT
+        h.Homeless_Veterans AS Vet18,
+        h.CoC_Name,
+        h.CoC_Number
+    FROM sdoh.sdoh_hud_pit_homelessness.hud_pit_by_coc AS h
+    WHERE SUBSTR(h.CoC_Number, 0, 2) = "NY"
+      AND h.Count_Year = 2018
+)
+
+SELECT
+    h12.CoC_Name,
+    (IFMISSINGORNULL(h18.Vet18, 0) - IFMISSINGORNULL(h12.Vet12, 0)) AS VetChange
+FROM homeless_2018 h18
+JOIN homeless_2012 h12
+ON h18.CoC_Number = h12.CoC_Number
+
+ORDER BY h12.CoC_Name;
