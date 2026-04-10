@@ -1,7 +1,0 @@
-SELECT c.year, SUM(c.`value`) AS TOTAL_OTHER_THEFT_INCIDENTS
-FROM london.london_crime.crime_by_lsoa c
-WHERE c.borough = 'Westminster'
-  AND c.major_category = 'Theft and Handling'
-  AND c.minor_category = 'Other Theft'
-GROUP BY c.year
-ORDER BY c.year
