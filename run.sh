@@ -8,6 +8,7 @@
 #   ./run.sh --model claude-opus-4.6 --provider openai
 #   ./run.sh --model gemini-3.1-pro  --provider openai
 #   ./run.sh --limit 5                               # test with N instances
+#   ./run.sh --questions_file baselines/promptSQL++/prompts/questions_failed_only.json
 #   ./run.sh --skip_eval                             # generate only, skip eval
 #   ./run.sh --eval_only                             # evaluate existing submissions
 #   ./run.sh --tag v2                                # custom run tag
@@ -47,6 +48,13 @@ fi
 DEFAULT_PROVIDER="${LLM_PROVIDER:-openai}"
 DEFAULT_MODEL="${LLM_MODEL:-gpt-5.1}"
 
+# ---------- Python interpreter ----------
+PYTHON_BIN="$(command -v python || command -v python3 || true)"
+if [[ -z "$PYTHON_BIN" ]]; then
+    echo "Error: neither 'python' nor 'python3' was found in PATH"
+    exit 1
+fi
+
 # ---------- Parse arguments ----------
 LIMIT=0
 MODE="sqlite"
@@ -56,6 +64,9 @@ PROMPT_MODE="basic"
 SKIP_EVAL=false
 EVAL_ONLY=false
 RUN_TAG=""
+THINKING=false
+THINKING_EFFORT="high"
+QUESTIONS_FILE=""
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -67,18 +78,39 @@ while [[ $# -gt 0 ]]; do
         --skip_eval)   SKIP_EVAL=true; shift ;;
         --eval_only)   EVAL_ONLY=true; shift ;;
         --tag)         RUN_TAG="$2"; shift 2 ;;
+        --thinking)    THINKING=true; shift ;;
+        --thinking_effort) THINKING=true; THINKING_EFFORT="$2"; shift 2 ;;
+        --questions_file) QUESTIONS_FILE="$2"; shift 2 ;;
         *) echo "Unknown arg: $1"; exit 1 ;;
     esac
 done
 
 # Validate mode
-if [[ "$MODE" != "sqlite" && "$MODE" != "bigquery" ]]; then
-    echo "Error: --mode must be 'sqlite' or 'bigquery' (got '$MODE')"
+if [[ "$MODE" != "sqlite" && "$MODE" != "bigquery" && "$MODE" != "snowflake" ]]; then
+    echo "Error: --mode must be 'sqlite', 'bigquery', or 'snowflake' (got '$MODE')"
     exit 1
+fi
+
+if [[ -n "$QUESTIONS_FILE" ]]; then
+    if [[ "$QUESTIONS_FILE" != /* ]]; then
+        QUESTIONS_FILE="${ROOT_DIR}/${QUESTIONS_FILE}"
+    fi
+    if [[ ! -f "$QUESTIONS_FILE" ]]; then
+        echo "Error: --questions_file not found: $QUESTIONS_FILE"
+        exit 1
+    fi
+fi
+
+QUESTIONS_FILE_JSON="null"
+if [[ -n "$QUESTIONS_FILE" ]]; then
+    QUESTIONS_FILE_JSON="\"$QUESTIONS_FILE\""
 fi
 
 # ---------- Build run name ----------
 MODEL_SLUG=$(echo "$MODEL" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/_/g')
+if [[ "$THINKING" == "true" ]]; then
+    MODEL_SLUG="${MODEL_SLUG}_thinking_${THINKING_EFFORT}"
+fi
 if [[ -n "$RUN_TAG" ]]; then
     RUN_NAME="${MODEL_SLUG}_${RUN_TAG}"
 else
@@ -114,6 +146,9 @@ cat > "${RUN_DIR}/run_meta.json" <<EOF
     "pipeline_mode": "$MODE",
     "run_name": "$RUN_NAME",
     "run_tag": "$RUN_TAG",
+    "thinking": $THINKING,
+    "thinking_effort": "$THINKING_EFFORT",
+    "questions_file": $QUESTIONS_FILE_JSON,
     "limit": $LIMIT,
     "started_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
@@ -124,15 +159,22 @@ EOF
 # ============================================================
 if [[ "$EVAL_ONLY" == "false" ]]; then
 
-    # Step 1: Preprocess
-    echo "▶ Step 1/5: Preprocess (load instances + schemas)"
-    python "${BASELINE_DIR}/preprocess.py" --mode "$MODE"
-    echo ""
+    if [[ -n "$QUESTIONS_FILE" ]]; then
+        echo "▶ Step 1/5: Using custom questions file"
+        echo "  Skipping preprocess/build_prompt"
+        echo "  Questions file: $QUESTIONS_FILE"
+        echo ""
+    else
+        # Step 1: Preprocess
+        echo "▶ Step 1/5: Preprocess (load instances + schemas)"
+        "$PYTHON_BIN" "${BASELINE_DIR}/preprocess.py" --mode "$MODE"
+        echo ""
 
-    # Step 2: Build prompts
-    echo "▶ Step 2/5: Build prompts (${PROMPT_MODE})"
-    python "${BASELINE_DIR}/build_prompt.py" --prompt_mode "$PROMPT_MODE" --mode "$MODE"
-    echo ""
+        # Step 2: Build prompts
+        echo "▶ Step 2/5: Build prompts (${PROMPT_MODE})"
+        "$PYTHON_BIN" "${BASELINE_DIR}/build_prompt.py" --prompt_mode "$PROMPT_MODE" --mode "$MODE"
+        echo ""
+    fi
 
     # Step 3: Ask LLM
     echo "▶ Step 3/5: Ask LLM ($PROVIDER / $MODEL)"
@@ -140,17 +182,32 @@ if [[ "$EVAL_ONLY" == "false" ]]; then
     if [ "$LIMIT" -gt 0 ]; then
         LIMIT_ARG="--limit $LIMIT"
     fi
-    python "${BASELINE_DIR}/ask_llm.py" \
-        --provider "$PROVIDER" \
-        --model "$MODEL" \
-        --output_dir "$RAW_OUTPUT_DIR" \
-        --skip_existing \
-        $LIMIT_ARG
+    THINKING_ARG=""
+    if [[ "$THINKING" == "true" ]]; then
+        THINKING_ARG="--thinking --thinking_effort $THINKING_EFFORT"
+    fi
+    ASK_LLM_CMD=(
+        "$PYTHON_BIN" "${BASELINE_DIR}/ask_llm.py"
+        --provider "$PROVIDER"
+        --model "$MODEL"
+        --output_dir "$RAW_OUTPUT_DIR"
+        --skip_existing
+    )
+    if [[ -n "$QUESTIONS_FILE" ]]; then
+        ASK_LLM_CMD+=(--input "$QUESTIONS_FILE")
+    fi
+    if [ "$LIMIT" -gt 0 ]; then
+        ASK_LLM_CMD+=(--limit "$LIMIT")
+    fi
+    if [[ "$THINKING" == "true" ]]; then
+        ASK_LLM_CMD+=(--thinking --thinking_effort "$THINKING_EFFORT")
+    fi
+    "${ASK_LLM_CMD[@]}"
     echo ""
 
     # Step 4: Postprocess
     echo "▶ Step 4/5: Postprocess"
-    python "${BASELINE_DIR}/postprocess.py" \
+    "$PYTHON_BIN" "${BASELINE_DIR}/postprocess.py" \
         --input_dir "$RAW_OUTPUT_DIR" \
         --output_dir "$SUBMISSION_DIR"
     echo ""
@@ -167,11 +224,11 @@ fi
 if [[ "$SKIP_EVAL" == "false" ]]; then
     echo "▶ Step 5/5: Evaluate against Couchbase"
 
-    python "${EVAL_DIR}/evaluate_sqlpp_sqlite.py" \
+    "$PYTHON_BIN" "${EVAL_DIR}/evaluate_sqlpp_sqlite.py" \
         --mode sql \
         --result_dir "$SUBMISSION_DIR" \
         --gold_dir "$GOLD_DIR" \
-        --max_workers 20 \
+        --max_workers 1 \
         --timeout 1200 \
         2>&1 | tee "${LOG_DIR}/evaluate.log"
 
@@ -183,7 +240,7 @@ if [[ "$SKIP_EVAL" == "false" ]]; then
     # Run log analysis
     echo ""
     echo "▶ Analyzing evaluation log..."
-    python "${EVAL_DIR}/analyze_log.py" 2>&1 | tee "${LOG_DIR}/analysis_report.txt" || true
+    "$PYTHON_BIN" "${EVAL_DIR}/analyze_log.py" 2>&1 | tee "${LOG_DIR}/analysis_report.txt" || true
 
     # Also copy the analysis report if generated in eval dir
     if [[ -f "${EVAL_DIR}/analysis_report.txt" ]]; then
@@ -199,7 +256,7 @@ fi
 # ============================================================
 # Update run metadata with completion + scores
 # ============================================================
-python3 -c "
+"$PYTHON_BIN" -c "
 import json, os
 meta_path = '${RUN_DIR}/run_meta.json'
 with open(meta_path) as f:

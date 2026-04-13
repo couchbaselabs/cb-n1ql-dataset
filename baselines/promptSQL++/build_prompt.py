@@ -5,7 +5,7 @@ Step 2: Build Prompts
 Constructs LLM prompts for each instance using a Code Representation (CR)
 format adapted for Couchbase SQL++.
 
-Supports --mode {sqlite,bigquery} for pipeline routing (both generate SQL++).
+Supports --mode {sqlite,bigquery,snowflake} for pipeline routing (all generate SQL++).
 
 Input:  preprocessed/instances.json
 Output: prompts/questions.json
@@ -154,8 +154,8 @@ def main():
     parser.add_argument("--prompt_mode", type=str, default="basic",
                         help="Prompt mode (kept for CLI compatibility, uses basic)")
     parser.add_argument("--mode", type=str, default="sqlite",
-                        choices=["sqlite", "bigquery"],
-                        help="Instance mode for pipeline routing (sqlite or bigquery)")
+                        choices=["sqlite", "bigquery", "snowflake"],
+                        help="Instance mode for pipeline routing (sqlite, bigquery, or snowflake)")
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent

@@ -217,6 +217,19 @@ def db_to_bucket_scope(db_name: str):
     return bucket_name, scope_name
 
 
+def db_to_bucket_scope_sf(db_name: str):
+    """
+    Match load_snowflake_to_couchbase.py bucket naming for Snowflake-sourced instances.
+    Bucket = db_name lowercased with underscores removed.
+    e.g. PATENTS -> patents, GITHUB_REPOS -> githubrepos
+    Queries generated for sf* instances use fully-qualified keyspace paths so the
+    query_context is a fallback only.
+    """
+    bucket_name = db_name.lower().replace("_", "").replace(" ", "")
+    scope_name = "_default"
+    return bucket_name, scope_name
+
+
 def get_couchbase_sqlpp_result(
     cluster,
     sqlpp_query: str,
@@ -345,7 +358,11 @@ def evaluate_single_sql_instance(
                 "error_info": error_info,
             }
 
-        bucket_name, scope_name = db_to_bucket_scope(db_name)
+        # Snowflake-sourced instances use a different bucket naming convention
+        if instance_id.startswith("sf"):
+            bucket_name, scope_name = db_to_bucket_scope_sf(db_name)
+        else:
+            bucket_name, scope_name = db_to_bucket_scope(db_name)
 
         result_file = f"{instance_id}.csv"
 

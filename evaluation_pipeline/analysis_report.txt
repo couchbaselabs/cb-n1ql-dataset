@@ -2,13 +2,13 @@
 SQL++ EVALUATION LOG ANALYSIS REPORT
 ======================================================================
 
-Final Score: 0.0000 (0/1 correct)
-Error Rate: 1/1 = 100.0%
+Final Score: 0.1189 (17/143 correct)
+Error Rate: 126/143 = 88.1%
 Total local questions: 547
 
-Total errors captured: 1
-  - N1QL query errors: 1
-  - Wrong output (result mismatch): 0
+Total errors captured: 126
+  - N1QL query errors: 116
+  - Wrong output (result mismatch): 10
   - Evaluation errors: 0
   - Comparison errors: 0
 
@@ -16,19 +16,78 @@ Total errors captured: 1
 ERROR CATEGORIES (sorted by frequency)
 ======================================================================
 
-[1] Other syntax error (3000)
-    Instances: local002
+[48] Other syntax error (3000)
+    Instances: sf_bq029, sf_bq033, sf_bq057, sf_bq068, sf_bq069, sf_bq093, sf_bq100, sf_bq101, sf_bq107, sf_bq136, sf_bq158, sf_bq180, sf_bq182, sf_bq192, sf_bq193, sf_bq194, sf_bq195, sf_bq210, sf_bq215, sf_bq216, sf_bq217, sf_bq221, sf_bq222, sf_bq223, sf_bq225, sf_bq233, sf_bq248, sf_bq249, sf_bq252, sf_bq256, sf_bq292, sf_bq295, sf_bq334, sf_bq335, sf_bq340, sf_bq341, sf_bq347, sf_bq359, sf_bq375, sf_bq377, sf_bq450, sf_bq451, sf_bq452, sf_bq453, sf_bq454, sf_bq455, sf_bq456, sf_bq458
+
+[32] Other error (1080)
+    Instances: sf_bq012, sf_bq036, sf_bq043, sf_bq070, sf_bq080, sf_bq084, sf_bq091, sf_bq099, sf_bq147, sf_bq148, sf_bq153, sf_bq154, sf_bq157, sf_bq159, sf_bq170, sf_bq171, sf_bq175, sf_bq176, sf_bq184, sf_bq188, sf_bq209, sf_bq224, sf_bq255, sf_bq259, sf_bq345, sf_bq346, sf_bq390, sf_bq415, sf_bq417, sf_bq422, sf_bq444, sf_bq459
+
+[18] Other error (0)
+    Instances: sf_bq160, sf_bq166, sf_bq167, sf_bq191, sf_bq207, sf_bq211, sf_bq212, sf_bq213, sf_bq214, sf_bq247, sf_bq320, sf_bq321, sf_bq323, sf_bq324, sf_bq333, sf_bq342, sf_bq370, sf_bq380
+
+[5] LET assignment syntax error
+    Instances: sf_bq005, sf_bq189, sf_bq258, sf_bq262, sf_bq273
+
+[4] Invalid function: ARRAY_TO_STRING
+    Instances: sf_bq026, sf_bq044, sf_bq092, sf_bq127
+
+[3] Out of memory
+    Instances: sf_bq331, sf_bq420, sf_bq460
+
+[1] Invalid function: USD
+    Instances: sf_bq083
+
+[1] Other error (12021)
+    Instances: sf_bq058
+
+[1] CROSS JOIN not supported
+    Instances: sf_bq156
+
+[1] Other error (12008)
+    Instances: sf_bq027
+
+[1] Other error (4036)
+    Instances: sf_bq372
+
+[1] Invalid function: hexToTron
+    Instances: sf_bq416
 
 ======================================================================
 ROOT CAUSE ANALYSIS
 ======================================================================
 
-Other: 1 instances
+SQL dialect mismatch (SQL vs SQL++): 1 instances
+
+Missing/unsupported functions: 6 instances
+
+Couchbase syntax restrictions: 5 instances
+
+Resource constraints: 3 instances
+
+Other: 101 instances
 
 ======================================================================
 ERRORS BY DATABASE
 ======================================================================
-  e_commerce: 1 errors
+  1000genomes: 4 errors
+  crypto: 18 errors
+  ethereumblockchain: 2 errors
+  genomicscannabis: 1 errors
+  githubrepos: 15 errors
+  githubreposdate: 6 errors
+  googblockchain: 3 errors
+  humangenomevariants: 1 errors
+  idc: 14 errors
+  metakaggle: 5 errors
+  pancanceratlas1: 6 errors
+  patents: 15 errors
+  patentsgoogle: 4 errors
+  patentsuspto: 2 errors
+  tcga: 4 errors
+  tcgamitelman: 4 errors
+  thelookecommerce: 7 errors
+  wideworldimporters: 2 errors
+  wordvectorsus: 3 errors
 
 ======================================================================
 TOP 10 SLOWEST QUERIES
@@ -36,7 +95,16 @@ TOP 10 SLOWEST QUERIES
 
 Instance ID     Duration (s)   Rows     Event
 -------------------------------------------------------
-local002        0.004          ?        query_error
+sf_bq321        1200.451       ?        query_error
+sf_bq323        1200.38        ?        query_error
+sf_bq324        1200.3         ?        query_error
+sf_bq333        1200.275       ?        query_error
+sf_bq342        1200.174       ?        query_error
+sf_bq167        1200.058       ?        query_error
+sf_bq320        1200.053       ?        query_error
+sf_bq166        1200.046       ?        query_error
+sf_bq380        1200.042       ?        query_error
+sf_bq214        1200.02        ?        query_error
 
 ======================================================================
 PASS RATE BY DATABASE
@@ -44,17 +112,562 @@ PASS RATE BY DATABASE
 
 Database                  Pass     Fail     Rate
 --------------------------------------------------
-e_commerce                0        1        0.0%
+1000genomes               0        4        0.0%
+censusbureauacs2          1        3        25.0%
+crypto                    2        18       10.0%
+ethereumblockchain        1        2        33.3%
+genomicscannabis          0        2        0.0%
+githubrepos               0        15       0.0%
+githubreposdate           0        6        0.0%
+googblockchain            1        3        25.0%
+googleads                 2        0        100.0%
+humangenomevariants       0        2        0.0%
+idc                       0        15       0.0%
+metakaggle                0        5        0.0%
+pancanceratlas1           0        6        0.0%
+patents                   0        15       0.0%
+patentsgoogle             0        4        0.0%
+patentsuspto              0        2        0.0%
+tcga                      0        4        0.0%
+tcgamitelman              0        4        0.0%
+thelookecommerce          9        10       47.4%
+wideworldimporters        1        3        25.0%
+wordvectorsus             0        3        0.0%
 
 ======================================================================
 WRONG OUTPUT ANALYSIS (queries that ran but produced incorrect results)
 ======================================================================
 
-  No result mismatches found — all executed queries matched gold!
+Total result mismatches: 10
+  - Shape mismatch (different rows/cols): 10
+  - Value mismatch (same shape, wrong values): 0
+
+Instance ID     DB                   Pred Shape     Gold Shape     Issue
+---------------------------------------------------------------------------
+sf_bq020        GENOMICS_CANNABIS    1x0            1x1            SHAPE
+sf_bq037        HUMAN_GENOME_VARIANTS 1x4            2x5 | 2x8      SHAPE
+sf_bq073        CENSUS_BUREAU_ACS_2  55x4           55x4 | 55x4 | 52x4 SHAPE
+sf_bq263        THELOOK_ECOMMERCE    12x6           12x6 | 12x6 | 12x6 SHAPE
+sf_bq265        THELOOK_ECOMMERCE    10x2           10x1 | 10x2 | 10x1 | 10x2 SHAPE
+sf_bq272        THELOOK_ECOMMERCE    0x0            132x3 | 132x4 | 132x5 | 132x3 SHAPE
+sf_bq373        WIDE_WORLD_IMPORTERS 1x1            1x1 | 1x1      SHAPE
+sf_bq410        CENSUS_BUREAU_ACS_2  3x4            3x4 | 3x4 | 3x4 SHAPE
+sf_bq421        IDC                  0x0            4x3            SHAPE
+sf_bq429        CENSUS_BUREAU_ACS_2  5x3            5x3 | 5x3 | 5x3 SHAPE
+
+  Wrong output by database:
+    CENSUS_BUREAU_ACS_2: 3
+    GENOMICS_CANNABIS: 1
+    HUMAN_GENOME_VARIANTS: 1
+    IDC: 1
+    THELOOK_ECOMMERCE: 3
+    WIDE_WORLD_IMPORTERS: 1
+
+======================================================================
+DETAILED DIFF FOR EACH MISMATCH
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq020  (db: GENOMICS_CANNABIS)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT RAW r.`name`
+    FROM `genomicscannabis`.`genomics_cannabis`.`mnpr01_reference_201703` AS r
+    JOIN (
+        SELECT m.reference_name, COUNT(1) AS variant_count
+        FROM `genomicscannabis`.`genomics_cannabis`.`mnpr01_201703` AS m
+        GROUP BY m.reference_name
+    ) AS v
+        ON r.`name` = v.reference_name
+    WHERE r.`length` > 0
+    ORDER BY (1.0 * v.variant_count / r.`length`) DESC, v.variant_count DESC, r.`name`
+    LIMIT 1;
+
+  Column differences:
+    Gold-only columns: ['REFERENCE_SEQUENCE_NAME']
+
+  Gold head (1 rows):
+  REFERENCE_SEQUENCE_NAME       
+  ------------------------------
+  gi|1098476186|gb|MNPR010105...
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq037  (db: HUMAN_GENOME_VARIANTS)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+        MIN(v.start_position) AS min_start_position,
+        MAX(v.start_position) AS max_start_position,
+        CASE WHEN COUNT(1) > 0 THEN 1.0 * SUM(CASE WHEN v.reference_bases = 'AT' THEN 1 ELSE 0 END) / COUNT(1) END AS proportion_at,
+        CASE WHEN COUNT(1) > 0 THEN 1.0 * SUM(CASE WHEN v.reference_bases = 'TA' THEN 1 ELSE 0 END) / COUNT(1) END AS proportion_ta
+    FROM `humangenomevariants`.`human_genome_variants`.`t__1000_genomes_phase_3_optimized_schema_variants_20150220` AS v
+    WHERE v.partition_dat
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['max_start_position', 'min_start_position', 'proportion_at', 'proportion_ta']
+    Gold-only columns: ['MAX_POSITION_PROPORTION', 'MAX_START_POSITION', 'MIN_POSITION_PROPORTION', 'MIN_START_POSITION', 'reference_bases']
+
+  Pred head (1 rows):
+  max_start_position | min_start_position | proportion_at      | proportion_ta     
+  -------------------+--------------------+--------------------+-------------------
+  138735543          | 29784267           | 0.5525291828793775 | 0.4474708171206226
+
+  Gold head (2 rows):
+  reference_bases | MIN_START_POSITION | MAX_START_POSITION | MIN_POSITION_PROPORTION | MAX_POSITION_PROPORTION
+  ----------------+--------------------+--------------------+-------------------------+------------------------
+  AT              | 29784267           | 138735543          | 0.704225                | 0.704225               
+  TA              | 29816555           | 138696638          | 0.869565                | 0.869565               
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq073  (db: CENSUS_BUREAU_ACS_2)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH zip_income_diffs AS (
+        SELECT DISTINCT
+            z15.geo_id AS zip_code,
+            g.state_name AS state_name,
+            z18.median_income - z15.median_income AS median_income_diff
+        FROM `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2015_5yr` AS z15
+        JOIN `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2018_5yr` AS z18
+            ON z15.geo_id = z18.geo_id
+        JOIN `censusbureauacs2`.`geo_us_boundaries`.`zip_codes` AS g
+            ON z15.geo_id = g.zip_code
+        WHERE z15.median_income IS
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['state', 'total_vulnerable_workers', 'vulnerable_manufacturing_workers', 'vulnerable_wholesale_trade_workers']
+    Gold-only columns: ['STATE', 'TOTAL_VULNERABLE_WORKERS', 'VULNERABLE_MANUFACTURING_WORKERS', 'VULNERABLE_WHOLESALE_WORKERS']
+
+  Pred head (5 rows):
+  state      | total_vulnerable_workers | vulnerable_manufacturing_workers | vulnerable_wholesale_trade_workers
+  -----------+--------------------------+----------------------------------+-----------------------------------
+  California | 903685.01                | 701564.53                        | 202120.48                         
+  Texas      | 602247.44                | 457286.94                        | 144960.5                          
+  Ohio       | 404102.76                | 347856.3                         | 56246.46                          
+  Illinois   | 384767.24                | 312266.66                        | 72500.58                          
+  Michigan   | 382049.56                | 340851.86                        | 41197.7                           
+
+  Gold head (5 rows):
+  STATE      | VULNERABLE_WHOLESALE_WORKERS | VULNERABLE_MANUFACTURING_WORKERS | TOTAL_VULNERABLE_WORKERS
+  -----------+------------------------------+----------------------------------+-------------------------
+  California | 202120.0                     | 701565.0                         | 903685.0                
+  Texas      | 144961.0                     | 457287.0                         | 602247.0                
+  Ohio       | 56246.0                      | 347856.0                         | 404103.0                
+  Illinois   | 72511.0                      | 312316.0                         | 384827.0                
+  Michigan   | 41198.0                      | 340852.0                         | 382050.0                
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq263  (db: THELOOK_ECOMMERCE)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+      DATE_PART_MILLIS(o.created_at / 1000, 'month') AS month_num,
+      SUM(oi.sale_price) AS total_sales,
+      SUM(ii.cost) AS total_cost,
+      COUNT(DISTINCT o.order_id) AS complete_orders,
+      SUM(oi.sale_price) - SUM(ii.cost) AS total_profit,
+      CASE
+        WHEN SUM(ii.cost) = 0 THEN NULL
+        ELSE (SUM(oi.sale_price) - SUM(ii.cost)) / SUM(ii.cost)
+      END AS profit_to_cost_ratio
+    FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+      ON o
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['month_num']
+    Gold-only columns: ['month']
+    Common columns:    ['complete_orders', 'profit_to_cost_ratio', 'total_cost', 'total_profit', 'total_sales']
+
+  Pred head (5 rows):
+  complete_orders | month_num | profit_to_cost_ratio | total_cost         | total_profit       | total_sales       
+  ----------------+-----------+----------------------+--------------------+--------------------+-------------------
+  49              | 1         | 1.051837522366666    | 1448.2433421481085 | 1523.3166887890864 | 2971.560030937195 
+  58              | 2         | 1.012695145043768    | 1443.2290067101012 | 1461.551008281659  | 2904.7800149917603
+  47              | 3         | 1.0476460302549302   | 1147.771620988776  | 1202.4583823681576 | 2350.2300033569336
+  41              | 4         | 0.9235059695982935   | 1156.804309571175  | 1068.3156855460124 | 2225.1199951171875
+  50              | 5         | 1.057167213596667    | 1451.9043453983809 | 1534.9056712336992 | 2986.81001663208  
+
+  Gold head (5 rows):
+  month      | total_sales        | total_cost         | complete_orders | total_profit       | profit_to_cost_ratio
+  -----------+--------------------+--------------------+-----------------+--------------------+---------------------
+  2023-01-01 | 2971.560030937195  | 1448.2433421481085 | 49              | 1523.3166887890864 | 1.051837522366666   
+  2023-02-01 | 2904.7800149917603 | 1443.2290067101012 | 58              | 1461.551008281659  | 1.012695145043768   
+  2023-03-01 | 2350.2300033569336 | 1147.771620988776  | 47              | 1202.4583823681576 | 1.0476460302549302  
+  2023-04-01 | 2262.3099937438965 | 1177.7794689096904 | 42              | 1084.530524834206  | 0.9208264819204158  
+  2023-05-01 | 2949.620018005371  | 1430.9291860598655 | 49              | 1518.6908319455056 | 1.0613319280510982  
+
+  Value mismatches (first 5):
+    Row    Column                    Pred                      Gold                     
+    ------ ------------------------- ------------------------- -------------------------
+    3      complete_orders           41                        42                       
+    4      complete_orders           50                        49                       
+    3      profit_to_cost_ratio      0.9235059695982935        0.9208264819204158       
+    4      profit_to_cost_ratio      1.057167213596667         1.0613319280510982       
+    5      profit_to_cost_ratio      1.0844933054545491        1.084493305454549        
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq265  (db: THELOOK_ECOMMERCE)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+      u.email,
+      SUM(po.order_value) / COUNT(po.order_id) AS avg_order_value
+    FROM `thelookecommerce`.`thelook_ecommerce`.`users` AS u
+    JOIN (
+      SELECT
+        o.user_id,
+        o.order_id,
+        o.num_of_item * AVG(oi.sale_price) AS order_value
+      FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+      JOIN `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+        ON o.order_id = oi.order_id
+      WHERE DATE_PART_STR(MILLIS_TO_STR(FLOOR(o.created_at / 1000)), 'year') = 2019
+        AND o.status IN ['Co
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['avg_order_value']
+    Common columns:    ['email']
+
+  Pred head (5 rows):
+  avg_order_value   | email                    
+  ------------------+--------------------------
+  903.0             | brandonmartin@example.net
+  903.0             | rossthompson@example.org 
+  680.8099994659424 | lisawebster@example.org  
+  494.5             | angieellis@example.org   
+  486.4900007247925 | johnpeters@example.com   
+
+  Gold head (5 rows):
+  email                    
+  -------------------------
+  matthewmiller@example.org
+  rossthompson@example.org 
+  adammcdowell@example.net 
+  karenphillips@example.net
+  johnpeters@example.com   
+
+  Value mismatches (first 5):
+    Row    Column                    Pred                      Gold                     
+    ------ ------------------------- ------------------------- -------------------------
+    0      email                     brandonmartin@example.net matthewmiller@example.org
+    2      email                     lisawebster@example.org   adammcdowell@example.net 
+    3      email                     angieellis@example.org    karenphillips@example.net
+    5      email                     peggygreene@example.org   johnflynn@example.org    
+    6      email                     samanthabarnett@example.o michaelclark@example.org 
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq272  (db: THELOOK_ECOMMERCE)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+        r.yr AS year,
+        r.mo AS month,
+        r.product_id,
+        r.product_name,
+        r.profit,
+        r.rn AS profit_rank
+    FROM (
+        SELECT
+            m.yr,
+            m.mo,
+            m.product_id,
+            m.product_name,
+            m.profit,
+            ROW_NUMBER() OVER (
+                PARTITION BY m.yr, m.mo
+                ORDER BY m.profit DESC, m.product_name ASC
+            ) AS rn
+        FROM (
+            SELECT
+                DATE_PART_STR(MILLIS_TO_UTC(FLOOR(ii.sold_at / 1000)), 'year') AS yr,
+                DATE_PART_STR(M
+        ... (truncated)
+
+  Column differences:
+    Gold-only columns: ['month', 'product_name', 'profit']
+
+  Gold head (5 rows):
+  month   | product_name                   | profit            
+  --------+--------------------------------+-------------------
+  2019-01 | Robert Rodriguez Women's Tu... | 114.55874954117462
+  2019-01 | Sutton Studio Women's Singl... | 51.6735384483552  
+  2019-01 | L*Space Sahara's Dream Tab ... | 40.1249997317791  
+  2019-02 | Alpha Industries A-2 Leathe... | 237.99999943003056
+  2019-02 | True Religion Men's TRBJ Fl... | 120.85195460764407
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq373  (db: WIDE_WORLD_IMPORTERS)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT AVG(r.avg_monthly_spending) AS median_avg_monthly_spending
+    FROM (
+        SELECT
+            ca.avg_monthly_spending,
+            ROW_NUMBER() OVER (ORDER BY ca.avg_monthly_spending) AS rn,
+            COUNT(*) OVER () AS cnt
+        FROM (
+            SELECT
+                ms.CustomerID,
+                AVG(ms.monthly_spending) AS avg_monthly_spending
+            FROM (
+                SELECT
+                    i.CustomerID,
+                    DATE_PART_STR(i.InvoiceDate, 'month') AS invoice_month,
+                    SUM(il.ExtendedPr
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['median_avg_monthly_spending']
+    Gold-only columns: ['median_avg_monthly_spend']
+
+  Pred head (1 rows):
+  median_avg_monthly_spending
+  ---------------------------
+  8020.995454545454          
+
+  Gold head (1 rows):
+  median_avg_monthly_spend
+  ------------------------
+  7264.369166666671       
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq410  (db: CENSUS_BUREAU_ACS_2)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+        sf.postal_code AS state_abbreviation,
+        SUM(t18.median_income - t15.median_income) AS total_median_income_change,
+        SUM(
+            CASE
+                WHEN (t17.unemployed_pop + t17.not_in_labor_force - t17.group_quarters) < 0 THEN 0
+                ELSE (t17.unemployed_pop + t17.not_in_labor_force - t17.group_quarters)
+            END
+        ) AS total_adjusted_non_labor_force_population,
+        AVG(
+            CASE
+                WHEN t17.total_pop > 0 THEN
+                    (CASE
+                        WHEN
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['avg_population_adjusted_proportion', 'state_abbreviation', 'total_adjusted_non_labor_force_population', 'total_median_income_change']
+    Gold-only columns: ['AVG_ADJUSTED_PROPORTION', 'STATE_ABBREVIATION', 'TOTAL_ADJUSTED_NON_LABOR_FORCE', 'TOTAL_MEDIAN_INCOME_CHANGE']
+
+  Pred head (3 rows):
+  avg_population_adjusted_proportion | state_abbreviation | total_adjusted_non_labor_force_population | total_median_income_change
+  -----------------------------------+--------------------+-------------------------------------------+---------------------------
+  0.2625292706147263                 | WY                 | 149782                                    | 442048                    
+  0.23666828783758748                | ND                 | 161287                                    | 1119503                   
+  0.28011170136297986                | VT                 | 168333                                    | 864329                    
+
+  Gold head (3 rows):
+  STATE_ABBREVIATION | TOTAL_MEDIAN_INCOME_CHANGE | TOTAL_ADJUSTED_NON_LABOR_FORCE | AVG_ADJUSTED_PROPORTION
+  -------------------+----------------------------+--------------------------------+------------------------
+  WY                 | 442048.0                   | 149782.0                       | 0.2589145552939778     
+  ND                 | 1119503.0                  | 161287.0                       | 0.2342866591787999     
+  DC                 | 2033926.0                  | 166472.0                       | 0.2523514091219645     
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq421  (db: IDC)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH embedding AS (
+        SELECT DISTINCT
+            dm.SeriesInstanceUID,
+            COALESCE(sd.SpecimenUID, dm.SeriesInstanceUID) AS specimen_key,
+            FIRST cc.CodeValue FOR cc IN item.ConceptCodeSequence WHEN cc.CodingSchemeDesignator = "SCT" END AS embedding_code,
+            FIRST cc.CodeMeaning FOR cc IN item.ConceptCodeSequence WHEN cc.CodingSchemeDesignator = "SCT" END AS embedding_medium_code_meaning
+        FROM `idc`.`idc_v17`.`dicom_metadata` AS dm
+        UNNEST IFMISSINGORNULL(dm.SpecimenDescript
+        ... (truncated)
+
+  Column differences:
+    Gold-only columns: ['embeddingMedium_CodeMeaning', 'f0_', 'staining_usingSubstance_CodeMeaning']
+
+  Gold head (4 rows):
+  embeddingMedium_CodeMeaning | staining_usingSubstance_CodeMeaning | f0_ 
+  ----------------------------+-------------------------------------+-----
+  Paraffin wax                | water soluble eosin stain           | 2795
+  Tissue freezing medium      | water soluble eosin stain           | 3351
+  Paraffin wax                | hematoxylin stain                   | 2795
+  Tissue freezing medium      | hematoxylin stain                   | 3351
+
+──────────────────────────────────────────────────────────────────────
+  sf_bq429  (db: CENSUS_BUREAU_ACS_2)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH zip_to_state AS (
+        SELECT DISTINCT
+            b.zip_code,
+            b.state_name
+        FROM `censusbureauacs2`.`geo_us_boundaries`.`zip_codes` AS b
+    ),
+    income_diff AS (
+        SELECT
+            zts.state_name AS state,
+            AVG(z18.median_income - z15.median_income) AS avg_median_income_difference_2015_2018
+        FROM `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2015_5yr` AS z15
+        JOIN `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2018_5yr` AS z18
+            ON z15.geo_id = z18.geo_id
+        JOI
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['avg_median_income_difference_2015_2018', 'avg_vulnerable_employees_2017', 'state']
+    Gold-only columns: ['AVG_INCOME_DIFFERENCE', 'AVG_VULNERABLE_EMPLOYEES', 'state_name']
+
+  Pred head (5 rows):
+  avg_median_income_difference_2015_2018 | avg_vulnerable_employees_2017 | state               
+  ---------------------------------------+-------------------------------+---------------------
+  16522.466666666667                     | 365.38619599040396            | Georgia (U.S. state)
+  10497.681818181818                     | 2144.167902431892             | District of Columbia
+  9121.021442495126                      | 1157.223646520482             | Massachusetts       
+  9077.418488444722                      | 2136.8630037655757            | California          
+  8674.214788732394                      | 1344.175502031993             | New Jersey          
+
+  Gold head (5 rows):
+  state_name           | AVG_INCOME_DIFFERENCE | AVG_VULNERABLE_EMPLOYEES
+  ---------------------+-----------------------+-------------------------
+  Georgia (U.S. state) | 17459.4               | 890.8621058064839       
+  Washington (state)   | 11468.894736842103    | 1456.3717438823276      
+  California           | 11050.242973141789    | 2350.5447899488213      
+  Maryland             | 10901.747641509432    | 1233.6418112978893      
+  New Jersey           | 10797.6161971831      | 1407.0383953967964      
 
 ====================================================================================================
 Instance ID     Error Code   Error Description
 ====================================================================================================
-local002        3000         syntax error - line 53, column 5, at: )
+sf_bq005        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq012        1080         Timeout 19m59.5s exceeded
+sf_bq026        3000         Invalid function ARRAY_TO_STRING (resolving to default:patents._default.ARRAY...
+sf_bq027        12008        Error performing bulk get operation  - cause: {1 errors, starting with read t...
+sf_bq029        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq033        3000         syntax error - line 3, column 31, near \
+sf_bq036        1080         Timeout 19m59.5s exceeded
+sf_bq043        1080         Timeout 19m59.5s exceeded
+sf_bq044        3000         Invalid function ARRAY_TO_STRING (resolving to default:tcga._default.ARRAY_TO...
+sf_bq057        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq058        12021        Scope not found in CB datastore default:googblockchain.goog_blockchain_optimi...
+sf_bq068        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq069        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq070        1080         Timeout 19m59.5s exceeded
+sf_bq080        1080         Timeout 19m59.5s exceeded
+sf_bq083        3000         Invalid function USD (resolving to default:crypto._default.USD) (near line 3,...
+sf_bq084        1080         Timeout 19m59.5s exceeded
+sf_bq091        1080         Timeout 19m59.5s exceeded
+sf_bq092        3000         Invalid function ARRAY_TO_STRING (resolving to default:crypto._default.ARRAY_...
+sf_bq093        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq099        1080         Timeout 19m59.5s exceeded
+sf_bq100        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq101        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq107        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq127        3000         Invalid function ARRAY_TO_STRING (resolving to default:patentsgoogle._default...
+sf_bq136        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq147        1080         Timeout 19m59.5s exceeded
+sf_bq148        1080         Timeout 19m59.5s exceeded
+sf_bq153        1080         Timeout 19m59.5s exceeded
+sf_bq154        1080         Timeout 19m59.5s exceeded
+sf_bq156        3000         syntax error - line 52, column 1, at: CROSS
+sf_bq157        1080         Timeout 19m59.5s exceeded
+sf_bq158        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq159        1080         Timeout 19m59.5s exceeded
+sf_bq160        N/A          
+sf_bq166        N/A          
+sf_bq167        N/A          
+sf_bq170        1080         Timeout 19m59.5s exceeded
+sf_bq171        1080         Timeout 19m59.5s exceeded
+sf_bq175        1080         Timeout 19m59.5s exceeded
+sf_bq176        1080         Timeout 19m59.5s exceeded
+sf_bq180        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq182        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq184        1080         Timeout 19m59.5s exceeded
+sf_bq188        1080         Timeout 19m59.5s exceeded
+sf_bq189        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq191        N/A          
+sf_bq192        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq193        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq194        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq195        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq207        N/A          
+sf_bq209        1080         Timeout 19m59.5s exceeded
+sf_bq210        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq211        N/A          
+sf_bq212        N/A          
+sf_bq213        N/A          
+sf_bq214        N/A          
+sf_bq215        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq216        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq217        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq221        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq222        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq223        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq224        1080         Timeout 19m59.5s exceeded
+sf_bq225        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq233        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq247        N/A          
+sf_bq248        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq249        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq252        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq255        1080         Timeout 19m59.5s exceeded
+sf_bq256        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq258        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq259        1080         Timeout 19m59.5s exceeded
+sf_bq262        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq273        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq292        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq295        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq320        N/A          
+sf_bq321        N/A          
+sf_bq323        N/A          
+sf_bq324        N/A          
+sf_bq331        5600         Query node has run out of memory (curr: 4180672512 limit: 4179623936)
+sf_bq333        N/A          
+sf_bq334        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq335        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq340        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq341        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq342        N/A          
+sf_bq345        1080         Timeout 19m59.5s exceeded
+sf_bq346        1080         Timeout 19m59.5s exceeded
+sf_bq347        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq359        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq370        N/A          
+sf_bq372        4036         <ec=201, category=couchbase.query, message=planning_failure (201), context=Qu...
+sf_bq375        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq377        3000         syntax error - line 8, column 1, at: UNNEST (reserved word)
+sf_bq380        N/A          
+sf_bq390        1080         Timeout 19m59.5s exceeded
+sf_bq415        1080         Timeout 19m59.5s exceeded
+sf_bq416        3000         Invalid function hexToTron (resolving to default:googblockchain._default.hexT...
+sf_bq417        1080         Timeout 19m59.5s exceeded
+sf_bq420        5600         Query node has run out of memory (curr: 4180672512 limit: 4179623936)
+sf_bq422        1080         Timeout 19m59.5s exceeded
+sf_bq444        1080         Timeout 19m59.5s exceeded
+sf_bq450        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq451        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq452        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq453        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq454        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq455        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq456        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+sf_bq458        3000         syntax error - line 39, column 5, at: UNNEST (reserved word)
+sf_bq459        1080         Timeout 19m59.5s exceeded
+sf_bq460        5600         Query node has run out of memory (curr: 4179671596 limit: 4179623936)
 ====================================================================================================
-Total: 1 errors out of 1 evaluated queries
+Total: 116 errors out of 143 evaluated queries

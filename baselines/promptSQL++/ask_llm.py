@@ -32,9 +32,11 @@ except ImportError:
 class LLMClient:
     """Unified interface for calling different LLM providers."""
 
-    def __init__(self, provider: str, model: str):
+    def __init__(self, provider: str, model: str, thinking: bool = False, reasoning_effort: str = "high"):
         self.provider = provider.lower()
         self.model = model
+        self.thinking = thinking
+        self.reasoning_effort = reasoning_effort
         self._client = None
         self._init_client()
 
@@ -85,16 +87,41 @@ class LLMClient:
         )
         return response.text.strip()
 
-    def _generate_openai(self, system: str, prompt: str) -> str:
-        response = self._client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": system},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0.0,
-        )
-        return response.choices[0].message.content.strip()
+    def _generate_openai(self, system: str, prompt: str, _retries: int = 3) -> str:
+        for attempt in range(1, _retries + 1):
+            try:
+                if self.thinking:
+                    response = self._client.chat.completions.create(
+                        model=self.model,
+                        messages=[
+                            {"role": "developer", "content": system},
+                            {"role": "user", "content": prompt},
+                        ],
+                        reasoning_effort=self.reasoning_effort,
+                    )
+                else:
+                    response = self._client.chat.completions.create(
+                        model=self.model,
+                        messages=[
+                            {"role": "system", "content": system},
+                            {"role": "user", "content": prompt},
+                        ],
+                        temperature=0.0,
+                    )
+                return response.choices[0].message.content.strip()
+            except Exception as e:
+                err_str = str(e)
+                is_transient = any(k in err_str for k in [
+                    "could not parse the JSON body",
+                    "502", "503", "429", "rate_limit", "timeout",
+                    "overloaded", "server_error",
+                ])
+                if is_transient and attempt < _retries:
+                    wait = 2 ** attempt * 5  # 10s, 20s, 40s
+                    print(f"\n  ⚠️  Transient error (attempt {attempt}/{_retries}), retrying in {wait}s: {err_str[:120]}")
+                    time.sleep(wait)
+                else:
+                    raise
 
 
 def main():
@@ -120,6 +147,13 @@ def main():
                         help="Process only N instances (0 = all)")
     parser.add_argument("--skip_existing", action="store_true",
                         help="Skip instances that already have output files")
+    parser.add_argument("--thinking", action="store_true", default=False,
+                        help="Enable reasoning/thinking mode (for OpenAI models like gpt-5.4). "
+                             "Uses 'developer' role and reasoning_effort.")
+    parser.add_argument("--thinking_effort", type=str, default="high",
+                        choices=["low", "medium", "high", "xhigh"],
+                        help="Reasoning effort level when --thinking is enabled (default: high). "
+                             "xhigh supported on gpt-5.4+")
     args = parser.parse_args()
 
     input_path = (script_dir / args.input).resolve()
@@ -151,7 +185,8 @@ def main():
         return
 
     # Initialize LLM client
-    client = LLMClient(provider=args.provider, model=args.model)
+    client = LLMClient(provider=args.provider, model=args.model,
+                        thinking=args.thinking, reasoning_effort=args.thinking_effort)
     print(f"\nProcessing {len(questions)} instances...\n")
 
     successes = 0

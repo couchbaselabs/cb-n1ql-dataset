@@ -6,8 +6,9 @@ Loads spider2-lite.jsonl instances and merges each with its Couchbase INFER
 schema + sample rows.
 
 Modes:
-  sqlite   — local* instances, schemas from resources/databases/couchbase_sqlite/
-  bigquery — bq*/ga* instances, schemas from resources/databases/couchbase_bigquery/
+  sqlite    — local* instances, schemas from resources/databases/couchbase_sqlite/
+  bigquery  — bq*/ga* instances, schemas from resources/databases/couchbase_bigquery/
+  snowflake — sf* instances (sf001, sf_bq*), schemas from resources/databases/couchbase_sf/
 
 Output: preprocessed/instances.json
 """
@@ -26,10 +27,20 @@ MODE_PRESETS = {
     "sqlite": {
         "prefixes": ("local",),
         "schema_dir": "../../resources/databases/couchbase_sqlite",
+        "db_name_transform": None,  # use db_name as-is
     },
     "bigquery": {
-        "prefixes": ("bq", "ga", "sf_bq"),
+        "prefixes": ("bq", "ga"),
         "schema_dir": "../../resources/databases/couchbase_bigquery",
+        "db_name_transform": None,
+    },
+    "snowflake": {
+        # sf* covers sf001, sf002, sf_bq029, etc. — all Snowflake-sourced instances
+        "prefixes": ("sf",),
+        "schema_dir": "../../resources/databases/couchbase_sf",
+        # Couchbase bucket names strip underscores and lowercase the DB name
+        # e.g. PATENTS -> patents, GITHUB_REPOS -> githubrepos
+        "db_name_transform": lambda name: name.lower().replace("_", "").replace(" ", ""),
     },
 }
 
@@ -85,11 +96,19 @@ def load_couchbase_schema(schema_dir: str, db_name: str) -> list:
             print(f"  Warning: failed to read {json_file}: {e}")
             continue
 
-        # Use embedded keyspace if present (BigQuery), otherwise derive (SQLite)
+        # Use embedded keyspace if present (BigQuery), otherwise derive from dir layout
         if "keyspace" in data:
             keyspace = data["keyspace"]
         else:
-            keyspace = f"`{bucket_name}`.`{scope_name}`.`{collection_name}`"
+            # Nested layout (Snowflake): <db>/<scope>/<collection>.json
+            # Flat layout (SQLite):      <db>/<collection>.json
+            relative = json_file.relative_to(db_path)
+            if len(relative.parts) == 2:
+                # scope is the parent directory name
+                scope_in_path = relative.parts[0]
+                keyspace = f"`{bucket_name}`.`{scope_in_path}`.`{collection_name}`"
+            else:
+                keyspace = f"`{bucket_name}`.`{scope_name}`.`{collection_name}`"
 
         # Parse INFER schema to extract fields
         fields = []
@@ -128,7 +147,7 @@ def main():
     parser = argparse.ArgumentParser(description="Preprocess NL_questions instances with Couchbase schemas")
     parser.add_argument("--mode", type=str, choices=list(MODE_PRESETS.keys()),
                         default="sqlite",
-                        help="Instance mode: 'sqlite' (local*) or 'bigquery' (bq*/ga*)")
+                        help="Instance mode: 'sqlite' (local*), 'bigquery' (bq*/ga*), or 'snowflake' (sf*)")
     parser.add_argument("--NL_questions_jsonl", type=str,
                         default="../../evaluation_pipeline/NL_questions.jsonl",
                         help="Path to NL_questions.jsonl")
@@ -147,6 +166,7 @@ def main():
     preset = MODE_PRESETS[args.mode]
     prefixes = (args.prefix,) if args.prefix else preset["prefixes"]
     schema_dir_default = args.schema_dir or preset["schema_dir"]
+    db_name_transform = preset.get("db_name_transform")
 
     # Resolve paths relative to this script
     script_dir = Path(__file__).parent
@@ -165,12 +185,20 @@ def main():
 
     # Enrich each instance with schema + external knowledge content
     enriched = []
+    skipped_no_schema = []
     ext_knowledge_count = 0
     ext_knowledge_missing = []
 
     for item in tqdm(instances, desc="Loading schemas"):
         db_name = item["db"]
-        schema = load_couchbase_schema(str(schema_dir), db_name)
+        # Transform db_name to the schema directory name if needed (e.g. snowflake)
+        schema_db_name = db_name_transform(db_name) if db_name_transform else db_name
+        schema = load_couchbase_schema(str(schema_dir), schema_db_name)
+
+        # Skip instance if no schema found
+        if not schema:
+            skipped_no_schema.append(f"{item['instance_id']} (db={db_name})")
+            continue
 
         # Load external knowledge content if referenced
         ext_knowledge_file = item.get("external_knowledge")
@@ -204,10 +232,10 @@ def main():
     print(f"\nSaved {len(enriched)} instances to: {output_path}")
     print(f"External knowledge loaded: {ext_knowledge_count} instances")
 
-    # Quick stats
-    no_schema = sum(1 for item in enriched if len(item["schema"]) == 0)
-    if no_schema > 0:
-        print(f"Warning: {no_schema} instances have no schema (missing db in {schema_dir.name})")
+    if skipped_no_schema:
+        print(f"Skipped {len(skipped_no_schema)} instances (no schema found):")
+        for msg in skipped_no_schema:
+            print(f"  - {msg}")
     if ext_knowledge_missing:
         print(f"Warning: {len(ext_knowledge_missing)} external knowledge files missing:")
         for msg in ext_knowledge_missing:
