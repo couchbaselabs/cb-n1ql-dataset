@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BEL",
+              "HPC",
+              "IDN",
+              "LAO",
+              "YEM"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Belgium",
+              "Heavily indebted poor countrie...",
+              "Indonesia",
+              "Lao PDR",
+              "Yemen, Rep."
+            ],
+            "type": "string"
+          },
+          "indicator_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SH.ALC.PCAP.MA.LI",
+              "SH.MED.BEDS.ZS",
+              "SP.DYN.CBRT.IN",
+              "SP.POP.0014.TO.ZS",
+              "SP.POP.AG03.FE.IN"
+            ],
+            "type": "string"
+          },
+          "indicator_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Age population, age 03, female...",
+              "Birth rate, crude (per 1,000 p...",
+              "Hospital beds (per 1,000 peopl...",
+              "Population ages 0-14 (% of tot...",
+              "Total alcohol consumption per ..."
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.088,
+              1,
+              6.12,
+              18.79,
+              44.3637788937461
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1973,
+              2010,
+              2012,
+              2016,
+              2018
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "health_nutrition_population::1...",
+                  "health_nutrition_population::1...",
+                  "health_nutrition_population::1...",
+                  "health_nutrition_population::1...",
+                  "health_nutrition_population::1..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "health_nutrition_population::1092055"
+              },
+              {
+                "id": "health_nutrition_population::1392771"
+              },
+              {
+                "id": "health_nutrition_population::1593732"
+              },
+              {
+                "id": "health_nutrition_population::161545"
+              },
+              {
+                "id": "health_nutrition_population::1760291"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "DJI",
+      "country_name": "Djibouti",
+      "indicator_code": "SP.POP.AG20.FE.IN",
+      "indicator_name": "Age population, age 20, female, interpolated",
+      "value": 1,
+      "year": 2007
+    },
+    {
+      "country_code": "DOM",
+      "country_name": "Dominican Republic",
+      "indicator_code": "SH.VAC.TTNS.ZS",
+      "indicator_name": "Newborns protected against tetanus (%)",
+      "value": 1,
+      "year": 2011
+    },
+    {
+      "country_code": "MDA",
+      "country_name": "Moldova",
+      "indicator_code": "SH.IMM.IBCG",
+      "indicator_name": "Immunization, BCG (% of one-year-old children)",
+      "value": 1,
+      "year": 2015
+    },
+    {
+      "country_code": "NAM",
+      "country_name": "Namibia",
+      "indicator_code": "SP.POP.AG04.MA.IN",
+      "indicator_name": "Age population, age 04, male, interpolated",
+      "value": 1,
+      "year": 1960
+    },
+    {
+      "country_code": "NAM",
+      "country_name": "Namibia",
+      "indicator_code": "SP.RUR.TOTL",
+      "indicator_name": "Rural population",
+      "value": 1,
+      "year": 1974
+    }
+  ]
+}

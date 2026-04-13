@@ -1,0 +1,295 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "CENTERS": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MUTECT|MUSE",
+              "MUTECT|RADIA|SOMATICSNIPER|MUS...",
+              "RADIA|MUTECT|MUSE|VARSCANS",
+              "RADIA|VARSCANS",
+              "SOMATICSNIPER|RADIA|MUTECT|MUS..."
+            ],
+            "type": "string"
+          },
+          "FILTER": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PASS",
+              "common_in_exac",
+              "native_wga_mix",
+              "oxog",
+              "wga"
+            ],
+            "type": "string"
+          },
+          "HGVSc": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "c.1090C>T",
+              "c.1215C>A",
+              "c.1324A>T",
+              "c.274C>A",
+              "c.474G>C"
+            ],
+            "type": "string"
+          },
+          "HGVSp_Short": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "p.D405E",
+              "p.E158D",
+              "p.I442F",
+              "p.R364C",
+              "p.R92S"
+            ],
+            "type": "string"
+          },
+          "Hugo_Symbol": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ATP8A2",
+              "DNM3",
+              "PCDHGB6",
+              "PTPRZ1",
+              "SYNDIG1"
+            ],
+            "type": "string"
+          },
+          "Normal_AliquotBarcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-55-8094-10A-01D-2238-08",
+              "TCGA-55-8505-10A-01D-2393-08",
+              "TCGA-EI-6917-10A-01D-1924-10",
+              "TCGA-FD-A3N5-10A-01D-A21A-08",
+              "TCGA-ZU-A8S4-10A-01D-A41A-09"
+            ],
+            "type": "string"
+          },
+          "Normal_SampleBarcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-55-8094-10A",
+              "TCGA-55-8505-10A",
+              "TCGA-EI-6917-10A",
+              "TCGA-FD-A3N5-10A",
+              "TCGA-ZU-A8S4-10A"
+            ],
+            "type": "string"
+          },
+          "Normal_SampleTypeLetterCode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NB",
+              "NT"
+            ],
+            "type": "string"
+          },
+          "ParticipantBarcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-55-8094",
+              "TCGA-55-8505",
+              "TCGA-EI-6917",
+              "TCGA-FD-A3N5",
+              "TCGA-ZU-A8S4"
+            ],
+            "type": "string"
+          },
+          "Study": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BLCA",
+              "CHOL",
+              "LUAD",
+              "READ",
+              "SKCM"
+            ],
+            "type": "string"
+          },
+          "Tumor_AliquotBarcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-55-8094-01A-11D-2238-08",
+              "TCGA-55-8505-01A-11D-2393-08",
+              "TCGA-EI-6917-01A-11D-1924-10",
+              "TCGA-FD-A3N5-01A-11D-A21A-08",
+              "TCGA-ZU-A8S4-01A-11D-A417-09"
+            ],
+            "type": "string"
+          },
+          "Tumor_SampleBarcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-55-8094-01A",
+              "TCGA-55-8505-01A",
+              "TCGA-EI-6917-01A",
+              "TCGA-FD-A3N5-01A",
+              "TCGA-ZU-A8S4-01A"
+            ],
+            "type": "string"
+          },
+          "Variant_Classification": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Frame_Shift_Del",
+              "In_Frame_Del",
+              "Missense_Mutation",
+              "Nonsense_Mutation",
+              "Splice_Site"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mc3_maf_v5_one_per_tumor_sampl...",
+                  "mc3_maf_v5_one_per_tumor_sampl...",
+                  "mc3_maf_v5_one_per_tumor_sampl...",
+                  "mc3_maf_v5_one_per_tumor_sampl...",
+                  "mc3_maf_v5_one_per_tumor_sampl..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mc3_maf_v5_one_per_tumor_sample::1017341"
+              },
+              {
+                "id": "mc3_maf_v5_one_per_tumor_sample::102575"
+              },
+              {
+                "id": "mc3_maf_v5_one_per_tumor_sample::1125178"
+              },
+              {
+                "id": "mc3_maf_v5_one_per_tumor_sample::1159606"
+              },
+              {
+                "id": "mc3_maf_v5_one_per_tumor_sample::1229325"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CENTERS": "INDELOCATOR|VARSCANI",
+      "FILTER": "ndp",
+      "HGVSc": "c.3098delC",
+      "HGVSp_Short": "p.P1033Rfs*46",
+      "Hugo_Symbol": "GLI3",
+      "Normal_AliquotBarcode": "TCGA-AX-A3G8-10A-01D-A22A-09",
+      "Normal_SampleBarcode": "TCGA-AX-A3G8-10A",
+      "Normal_SampleTypeLetterCode": "NB",
+      "ParticipantBarcode": "TCGA-AX-A3G8",
+      "Study": "UCEC",
+      "Tumor_AliquotBarcode": "TCGA-AX-A3G8-01A-11D-A228-09",
+      "Tumor_SampleBarcode": "TCGA-AX-A3G8-01A",
+      "Variant_Classification": "Frame_Shift_Del"
+    },
+    {
+      "CENTERS": "INDELOCATOR|VARSCANI",
+      "FILTER": "ndp",
+      "HGVSc": "c.399dupA",
+      "HGVSp_Short": "p.Y134Ifs*5",
+      "Hugo_Symbol": "MUM1L1",
+      "Normal_AliquotBarcode": "TCGA-EO-A22U-10B-01D-A17W-09",
+      "Normal_SampleBarcode": "TCGA-EO-A22U-10B",
+      "Normal_SampleTypeLetterCode": "NB",
+      "ParticipantBarcode": "TCGA-EO-A22U",
+      "Study": "UCEC",
+      "Tumor_AliquotBarcode": "TCGA-EO-A22U-01A-11D-A17W-09",
+      "Tumor_SampleBarcode": "TCGA-EO-A22U-01A",
+      "Variant_Classification": "Frame_Shift_Ins"
+    },
+    {
+      "CENTERS": "MUTECT|MUSE",
+      "FILTER": "wga",
+      "HGVSc": "c.541G>T",
+      "HGVSp_Short": "p.E181*",
+      "Hugo_Symbol": "SIRT2",
+      "Normal_AliquotBarcode": "TCGA-04-1331-10A-01W-0486-08",
+      "Normal_SampleBarcode": "TCGA-04-1331-10A",
+      "Normal_SampleTypeLetterCode": "NB",
+      "ParticipantBarcode": "TCGA-04-1331",
+      "Study": "OV",
+      "Tumor_AliquotBarcode": "TCGA-04-1331-01A-01W-0486-08",
+      "Tumor_SampleBarcode": "TCGA-04-1331-01A",
+      "Variant_Classification": "Nonsense_Mutation"
+    },
+    {
+      "CENTERS": "SOMATICSNIPER|RADIA|MUTECT|MUSE|VARSCANS",
+      "FILTER": "wga",
+      "HGVSc": "c.1565G>T",
+      "HGVSp_Short": "p.G522V",
+      "Hugo_Symbol": "UGT2B4",
+      "Normal_AliquotBarcode": "TCGA-04-1651-11A-01W-0639-09",
+      "Normal_SampleBarcode": "TCGA-04-1651-11A",
+      "Normal_SampleTypeLetterCode": "NT",
+      "ParticipantBarcode": "TCGA-04-1651",
+      "Study": "OV",
+      "Tumor_AliquotBarcode": "TCGA-04-1651-01A-01W-0639-09",
+      "Tumor_SampleBarcode": "TCGA-04-1651-01A",
+      "Variant_Classification": "Missense_Mutation"
+    },
+    {
+      "CENTERS": "SOMATICSNIPER|VARSCANS",
+      "FILTER": "wga",
+      "HGVSc": "c.1328A>T",
+      "HGVSp_Short": "p.K443I",
+      "Hugo_Symbol": "GBP3",
+      "Normal_AliquotBarcode": "TCGA-14-1795-10A-01W-0643-08",
+      "Normal_SampleBarcode": "TCGA-14-1795-10A",
+      "Normal_SampleTypeLetterCode": "NB",
+      "ParticipantBarcode": "TCGA-14-1795",
+      "Study": "GBM",
+      "Tumor_AliquotBarcode": "TCGA-14-1795-01A-01W-0643-08",
+      "Tumor_SampleBarcode": "TCGA-14-1795-01A",
+      "Variant_Classification": "Missense_Mutation"
+    }
+  ]
+}

@@ -1,0 +1,4994 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`AN` = 2, `FS` = 0, `MQ0` = 0, `partition_date_please_ignore` = \"2018-05-23\", `reference_name` = \"11\"",
+        "properties": {
+          "AN": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "BaseCounts": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 4,
+            "minItems": 4,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ],
+            "type": "array"
+          },
+          "BaseQRankSum": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -1.787,
+                0.736,
+                0.804,
+                1.537
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "DB": {
+            "#docs": [
+              3,
+              2
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                true
+              ],
+              [
+                null
+              ]
+            ],
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "DP": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              35,
+              41,
+              45,
+              56
+            ],
+            "type": "number"
+          },
+          "DS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Dels": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.9,
+              0.97,
+              0.98
+            ],
+            "type": "number"
+          },
+          "FS": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "GC": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              27.18,
+              29.93,
+              31.92,
+              32.67,
+              44.89
+            ],
+            "type": "number"
+          },
+          "HaplotypeScore": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              23.1962,
+              32.7269,
+              38.6603,
+              105.9342
+            ],
+            "type": "number"
+          },
+          "InbreedingCoeff": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "MQ": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              56.46,
+              60
+            ],
+            "type": "number"
+          },
+          "MQ0": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "MQRankSum": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -0.406,
+                -0.076,
+                0.736,
+                0.804
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "QD": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.65,
+              0.67,
+              0.88,
+              1.05,
+              4.38
+            ],
+            "type": "number"
+          },
+          "RPA": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "RU": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "ReadPosRankSum": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -3.045,
+                0.406,
+                0.736,
+                0.804
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "STR": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "alternate_bases": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 5,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "AC": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    2
+                  ],
+                  "type": "number"
+                },
+                "AF": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    1
+                  ],
+                  "type": "number"
+                },
+                "MLEAC": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    2
+                  ],
+                  "type": "number"
+                },
+                "MLEAF": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    1
+                  ],
+                  "type": "number"
+                },
+                "alt": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "T"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "AC": 2,
+                  "AF": 1,
+                  "MLEAC": 2,
+                  "MLEAF": 1,
+                  "alt": "T"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "call": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "#docs": 105,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "AD": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 2,
+                  "minItems": 2,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "type": "array"
+                },
+                "DP": {
+                  "nestingDepth": 2,
+                  "type": "number"
+                },
+                "FL": {
+                  "nestingDepth": 2,
+                  "type": "string"
+                },
+                "GQ": {
+                  "nestingDepth": 2,
+                  "type": "number"
+                },
+                "PL": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 3,
+                  "minItems": 3,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "type": "array"
+                },
+                "genotype": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 2,
+                  "minItems": 2,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "type": "array"
+                },
+                "name": {
+                  "nestingDepth": 2,
+                  "type": "string"
+                },
+                "quality": {
+                  "nestingDepth": 2,
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 89,
+            "minItems": 3,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "9",
+                  "GQ": 3,
+                  "PL": [
+                    31,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_F04",
+                  "quality": 32.78
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "9",
+                  "GQ": 3,
+                  "PL": [
+                    38,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_F01",
+                  "quality": 39.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "1",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_E09",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "6",
+                  "GQ": 3,
+                  "PL": [
+                    35,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_H05",
+                  "quality": 36.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "6",
+                  "GQ": 3,
+                  "PL": [
+                    35,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_H01",
+                  "quality": 36.77
+                }
+              ],
+              [
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "9",
+                  "GQ": 3,
+                  "PL": [
+                    36,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_B06",
+                  "quality": 37.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "4",
+                  "GQ": 3,
+                  "PL": [
+                    37,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_H03",
+                  "quality": 38.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "5",
+                  "GQ": 3,
+                  "PL": [
+                    25,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_G01",
+                  "quality": 26.78
+                }
+              ],
+              [
+                {
+                  "AD": [
+                    0,
+                    8
+                  ],
+                  "DP": 8,
+                  "FL": "N",
+                  "GQ": 24,
+                  "PL": [
+                    322,
+                    24,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_A01",
+                  "quality": 322.03
+                },
+                {
+                  "AD": [
+                    0,
+                    3
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 9,
+                  "PL": [
+                    121,
+                    9,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_D09",
+                  "quality": 121.52
+                },
+                {
+                  "AD": [
+                    1,
+                    2
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 25,
+                  "PL": [
+                    72,
+                    0,
+                    25
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_E04",
+                  "quality": 72.02
+                },
+                {
+                  "AD": [
+                    1,
+                    5
+                  ],
+                  "DP": 6,
+                  "FL": "N",
+                  "GQ": 15,
+                  "PL": [
+                    204,
+                    15,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005677-DNA_D03",
+                  "quality": 204.14
+                },
+                {
+                  "AD": [
+                    1,
+                    7
+                  ],
+                  "DP": 8,
+                  "FL": "N",
+                  "GQ": 21,
+                  "PL": [
+                    283,
+                    21,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_A06",
+                  "quality": 283.04
+                },
+                {
+                  "AD": [
+                    2,
+                    3
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 11,
+                  "PL": [
+                    113,
+                    0,
+                    11
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_F07",
+                  "quality": 113.34
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "SS6004469",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    3,
+                    1
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 29,
+                  "PL": [
+                    29,
+                    0,
+                    34
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_E09",
+                  "quality": 29.02
+                },
+                {
+                  "AD": [
+                    0,
+                    3
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 6,
+                  "PL": [
+                    84,
+                    6,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_H07",
+                  "quality": 84.98
+                },
+                {
+                  "AD": [
+                    0,
+                    2
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_A01",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    18,
+                    8
+                  ],
+                  "DP": 25,
+                  "FL": "N",
+                  "GQ": 99,
+                  "PL": [
+                    211,
+                    0,
+                    633
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_F01",
+                  "quality": 211.01
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 26,
+                  "PL": [
+                    33,
+                    0,
+                    26
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005677-DNA_D01",
+                  "quality": 33.02
+                },
+                {
+                  "AD": [
+                    4,
+                    4
+                  ],
+                  "DP": 8,
+                  "FL": "N",
+                  "GQ": 12,
+                  "PL": [
+                    163,
+                    12,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_E02",
+                  "quality": 163.27
+                },
+                {
+                  "AD": [
+                    4,
+                    1
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 34,
+                  "PL": [
+                    34,
+                    0,
+                    35
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005592-DNA_C01",
+                  "quality": 34.01
+                },
+                {
+                  "AD": [
+                    3,
+                    4
+                  ],
+                  "DP": 7,
+                  "FL": "N",
+                  "GQ": 16,
+                  "PL": [
+                    143,
+                    0,
+                    16
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005592-DNA_C03",
+                  "quality": 143.12
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    32,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_G03",
+                  "quality": 33.77
+                },
+                {
+                  "AD": [
+                    2,
+                    4
+                  ],
+                  "DP": 6,
+                  "FL": "N",
+                  "GQ": 26,
+                  "PL": [
+                    148,
+                    0,
+                    26
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_F06",
+                  "quality": 148.02
+                },
+                {
+                  "AD": [
+                    3,
+                    6
+                  ],
+                  "DP": 9,
+                  "FL": "N",
+                  "GQ": 21,
+                  "PL": [
+                    150,
+                    0,
+                    21
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_C03",
+                  "quality": 150.04
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 33,
+                  "PL": [
+                    33,
+                    0,
+                    66
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_B03",
+                  "quality": 33.01
+                },
+                {
+                  "AD": [
+                    1,
+                    2
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 32,
+                  "PL": [
+                    71,
+                    0,
+                    32
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_D04",
+                  "quality": 71.01
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    37,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_A03",
+                  "quality": 38.77
+                },
+                {
+                  "AD": [
+                    4,
+                    17
+                  ],
+                  "DP": 20,
+                  "FL": "N",
+                  "GQ": 16,
+                  "PL": [
+                    626,
+                    16,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_G08",
+                  "quality": 626.12
+                },
+                {
+                  "AD": [
+                    6,
+                    1
+                  ],
+                  "DP": 7,
+                  "FL": "N",
+                  "GQ": 27,
+                  "PL": [
+                    27,
+                    0,
+                    134
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_D01",
+                  "quality": 27.02
+                },
+                {
+                  "AD": [
+                    4,
+                    9
+                  ],
+                  "DP": 13,
+                  "FL": "N",
+                  "GQ": 99,
+                  "PL": [
+                    279,
+                    0,
+                    127
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_B10",
+                  "quality": 279.01
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    38,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_E07",
+                  "quality": 39.77
+                },
+                {
+                  "AD": [
+                    0,
+                    3
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 9,
+                  "PL": [
+                    121,
+                    9,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_B08",
+                  "quality": 121.52
+                },
+                {
+                  "AD": [
+                    3,
+                    4
+                  ],
+                  "DP": 7,
+                  "FL": "N",
+                  "GQ": 45,
+                  "PL": [
+                    127,
+                    0,
+                    45
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_D07",
+                  "quality": 127.01
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_H02",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    1,
+                    7
+                  ],
+                  "DP": 8,
+                  "FL": "N",
+                  "GQ": 21,
+                  "PL": [
+                    276,
+                    21,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_H09",
+                  "quality": 276.04
+                },
+                {
+                  "AD": [
+                    4,
+                    1
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 33,
+                  "PL": [
+                    33,
+                    0,
+                    70
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_C06",
+                  "quality": 33.01
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_A10",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    0,
+                    4
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 12,
+                  "PL": [
+                    161,
+                    12,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "SS6004471",
+                  "quality": 161.27
+                },
+                {
+                  "AD": [
+                    2,
+                    4
+                  ],
+                  "DP": 6,
+                  "FL": "N",
+                  "GQ": 12,
+                  "PL": [
+                    164,
+                    12,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005592-DNA_F01",
+                  "quality": 164.27
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005677-DNA_B01",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    41,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_C10",
+                  "quality": 42.77
+                },
+                {
+                  "AD": [
+                    2,
+                    3
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 26,
+                  "PL": [
+                    110,
+                    0,
+                    26
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_F08",
+                  "quality": 110.02
+                },
+                {
+                  "AD": [
+                    7,
+                    4
+                  ],
+                  "DP": 11,
+                  "FL": "N",
+                  "GQ": 53,
+                  "PL": [
+                    53,
+                    0,
+                    161
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_G02",
+                  "quality": 53.01
+                },
+                {
+                  "AD": [
+                    12,
+                    6
+                  ],
+                  "DP": 18,
+                  "FL": "N",
+                  "GQ": 99,
+                  "PL": [
+                    181,
+                    0,
+                    327
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_B09",
+                  "quality": 181.01
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    41,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005592-DNA_B04",
+                  "quality": 42.77
+                },
+                {
+                  "AD": [
+                    3,
+                    9
+                  ],
+                  "DP": 12,
+                  "FL": "N",
+                  "GQ": 51,
+                  "PL": [
+                    252,
+                    0,
+                    51
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005619-DNA_C01",
+                  "quality": 252.01
+                },
+                {
+                  "AD": [
+                    1,
+                    3
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 6,
+                  "PL": [
+                    84,
+                    6,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_D11",
+                  "quality": 84.98
+                },
+                {
+                  "AD": [
+                    2,
+                    2
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 61,
+                  "PL": [
+                    69,
+                    0,
+                    61
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_C07",
+                  "quality": 69.01
+                },
+                {
+                  "AD": [
+                    1,
+                    3
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 31,
+                  "PL": [
+                    69,
+                    0,
+                    31
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_B11",
+                  "quality": 69.01
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_C05",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 35,
+                  "PL": [
+                    35,
+                    0,
+                    35
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_G03",
+                  "quality": 35.01
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_D06",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    1,
+                    10
+                  ],
+                  "DP": 11,
+                  "FL": "N",
+                  "GQ": 5,
+                  "PL": [
+                    372,
+                    0,
+                    5
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_E07",
+                  "quality": 373.2
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    41,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_B02",
+                  "quality": 42.77
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 33,
+                  "PL": [
+                    33,
+                    0,
+                    54
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_B10",
+                  "quality": 33.01
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    41,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_C03",
+                  "quality": 42.77
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 23,
+                  "PL": [
+                    35,
+                    0,
+                    23
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_D03",
+                  "quality": 35.03
+                },
+                {
+                  "AD": [
+                    1,
+                    3
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 29,
+                  "PL": [
+                    111,
+                    0,
+                    29
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_C09",
+                  "quality": 111.01
+                },
+                {
+                  "AD": [
+                    3,
+                    1
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 30,
+                  "PL": [
+                    30,
+                    0,
+                    104
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_H10",
+                  "quality": 30.01
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 33,
+                  "PL": [
+                    33,
+                    0,
+                    71
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_G12",
+                  "quality": 33.01
+                },
+                {
+                  "AD": [
+                    0,
+                    2
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 6,
+                  "PL": [
+                    84,
+                    6,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_F04",
+                  "quality": 84.98
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    40,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_G10",
+                  "quality": 41.77
+                },
+                {
+                  "AD": [
+                    1,
+                    4
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 9,
+                  "PL": [
+                    119,
+                    9,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_F04",
+                  "quality": 119.52
+                },
+                {
+                  "AD": [
+                    0,
+                    2
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 6,
+                  "PL": [
+                    83,
+                    6,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_H10",
+                  "quality": 83.98
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    39,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_D08",
+                  "quality": 40.77
+                },
+                {
+                  "AD": [
+                    2,
+                    3
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 9,
+                  "PL": [
+                    122,
+                    9,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_F11",
+                  "quality": 122.52
+                },
+                {
+                  "AD": [
+                    1,
+                    4
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 12,
+                  "PL": [
+                    151,
+                    12,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_D12",
+                  "quality": 151.27
+                },
+                {
+                  "AD": [
+                    2,
+                    7
+                  ],
+                  "DP": 9,
+                  "FL": "N",
+                  "GQ": 21,
+                  "PL": [
+                    271,
+                    21,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_H12",
+                  "quality": 271.04
+                },
+                {
+                  "AD": [
+                    1,
+                    6
+                  ],
+                  "DP": 7,
+                  "FL": "N",
+                  "GQ": 18,
+                  "PL": [
+                    231,
+                    18,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_H08",
+                  "quality": 231.08
+                },
+                {
+                  "AD": [
+                    8,
+                    8
+                  ],
+                  "DP": 16,
+                  "FL": "N",
+                  "GQ": 99,
+                  "PL": [
+                    274,
+                    0,
+                    260
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_G02",
+                  "quality": 274.01
+                },
+                {
+                  "AD": [
+                    1,
+                    2
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 6,
+                  "PL": [
+                    83,
+                    6,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_A04",
+                  "quality": 83.98
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    23,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005592-DNA_B02",
+                  "quality": 24.79
+                },
+                {
+                  "AD": [
+                    3,
+                    6
+                  ],
+                  "DP": 9,
+                  "FL": "N",
+                  "GQ": 59,
+                  "PL": [
+                    183,
+                    0,
+                    59
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_H02",
+                  "quality": 183.01
+                },
+                {
+                  "AD": [
+                    5,
+                    3
+                  ],
+                  "DP": 8,
+                  "FL": "N",
+                  "GQ": 81,
+                  "PL": [
+                    81,
+                    0,
+                    180
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_E06",
+                  "quality": 81.01
+                },
+                {
+                  "AD": [
+                    0,
+                    9
+                  ],
+                  "DP": 9,
+                  "FL": "N",
+                  "GQ": 27,
+                  "PL": [
+                    328,
+                    27,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005677-DNA_G01",
+                  "quality": 328.02
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 29,
+                  "PL": [
+                    29,
+                    0,
+                    64
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_D01",
+                  "quality": 29.01
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 33,
+                  "PL": [
+                    35,
+                    0,
+                    33
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "SS6004478",
+                  "quality": 35.01
+                },
+                {
+                  "AD": [
+                    3,
+                    1
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 28,
+                  "PL": [
+                    28,
+                    0,
+                    91
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005592-DNA_A02",
+                  "quality": 28.02
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    39,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_D08",
+                  "quality": 40.77
+                },
+                {
+                  "AD": [
+                    0,
+                    2
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    39,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_C08",
+                  "quality": 40.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    40,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_H09",
+                  "quality": 41.77
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 30,
+                  "PL": [
+                    30,
+                    0,
+                    34
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_A06",
+                  "quality": 30.01
+                },
+                {
+                  "AD": [
+                    2,
+                    3
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 67,
+                  "PL": [
+                    88,
+                    0,
+                    67
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_C05",
+                  "quality": 88.01
+                },
+                {
+                  "AD": [
+                    0,
+                    2
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 6,
+                  "PL": [
+                    84,
+                    6,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_B08",
+                  "quality": 84.98
+                },
+                {
+                  "AD": [
+                    1,
+                    1
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 32,
+                  "PL": [
+                    36,
+                    0,
+                    32
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_E05",
+                  "quality": 36.01
+                },
+                {
+                  "AD": [
+                    0,
+                    6
+                  ],
+                  "DP": 6,
+                  "FL": "N",
+                  "GQ": 18,
+                  "PL": [
+                    237,
+                    18,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "SS6004470",
+                  "quality": 237.08
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    33,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_G11",
+                  "quality": 34.77
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 28,
+                  "PL": [
+                    28,
+                    0,
+                    62
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_H07",
+                  "quality": 28.02
+                },
+                {
+                  "AD": [
+                    1,
+                    3
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 17,
+                  "PL": [
+                    111,
+                    0,
+                    17
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_A11",
+                  "quality": 111.09
+                },
+                {
+                  "AD": [
+                    0,
+                    4
+                  ],
+                  "DP": 4,
+                  "FL": "N",
+                  "GQ": 12,
+                  "PL": [
+                    162,
+                    12,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_C04",
+                  "quality": 162.27
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_B01",
+                  "quality": 43.77
+                },
+                {
+                  "AD": [
+                    0,
+                    2
+                  ],
+                  "DP": 2,
+                  "FL": "N",
+                  "GQ": 6,
+                  "PL": [
+                    78,
+                    6,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_A08",
+                  "quality": 78.98
+                },
+                {
+                  "AD": [
+                    1,
+                    3
+                  ],
+                  "DP": 5,
+                  "FL": "N",
+                  "GQ": 28,
+                  "PL": [
+                    114,
+                    0,
+                    28
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_A04",
+                  "quality": 114.02
+                },
+                {
+                  "AD": [
+                    2,
+                    1
+                  ],
+                  "DP": 3,
+                  "FL": "N",
+                  "GQ": 34,
+                  "PL": [
+                    36,
+                    0,
+                    34
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_B08",
+                  "quality": 36.01
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "N",
+                  "GQ": 3,
+                  "PL": [
+                    42,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005442-DNA_D03",
+                  "quality": 43.77
+                }
+              ],
+              [
+                {
+                  "AD": [
+                    4,
+                    3
+                  ],
+                  "DP": 7,
+                  "FL": "9",
+                  "GQ": 91,
+                  "PL": [
+                    96,
+                    0,
+                    91
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_B06",
+                  "quality": 96.01
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "6",
+                  "GQ": 3,
+                  "PL": [
+                    38,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_G02",
+                  "quality": 39.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "9",
+                  "GQ": 3,
+                  "PL": [
+                    38,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_B07",
+                  "quality": 39.77
+                }
+              ],
+              [
+                {
+                  "AD": [
+                    32,
+                    4
+                  ],
+                  "DP": 36,
+                  "FL": "9",
+                  "GQ": 44,
+                  "PL": [
+                    44,
+                    0,
+                    1151
+                  ],
+                  "genotype": [
+                    0,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_C02",
+                  "quality": 44.01
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "9",
+                  "GQ": 3,
+                  "PL": [
+                    39,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_B04",
+                  "quality": 40.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "9",
+                  "GQ": 3,
+                  "PL": [
+                    39,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005519-DNA_G02",
+                  "quality": 40.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "9",
+                  "GQ": 3,
+                  "PL": [
+                    38,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005441-DNA_C05",
+                  "quality": 39.77
+                },
+                {
+                  "AD": [
+                    0,
+                    1
+                  ],
+                  "DP": 1,
+                  "FL": "9",
+                  "GQ": 3,
+                  "PL": [
+                    36,
+                    3,
+                    0
+                  ],
+                  "genotype": [
+                    1,
+                    1
+                  ],
+                  "name": "LP6005443-DNA_G01",
+                  "quality": 37.77
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "end_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21826941,
+              21853286,
+              21872930,
+              21892434,
+              22381361
+            ],
+            "type": "number"
+          },
+          "filter": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "names": {
+            "#docs": 5,
+            "%docs": 100,
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 1,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                "rs200808089"
+              ],
+              [
+                "rs4551768"
+              ]
+            ],
+            "type": "array"
+          },
+          "partition_date_please_ignore": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-05-23"
+            ],
+            "type": "string"
+          },
+          "quality": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              38.77,
+              43.77,
+              44.01,
+              96.01,
+              626.12
+            ],
+            "type": "number"
+          },
+          "reference_bases": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A",
+              "C",
+              "G"
+            ],
+            "type": "string"
+          },
+          "reference_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "11"
+            ],
+            "type": "string"
+          },
+          "start_position": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21826940,
+              21853285,
+              21872929,
+              21892433,
+              22381360
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "simons_genome_diversity_projec...",
+                  "simons_genome_diversity_projec...",
+                  "simons_genome_diversity_projec...",
+                  "simons_genome_diversity_projec...",
+                  "simons_genome_diversity_projec..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "simons_genome_diversity_project_sample_variants::0"
+              },
+              {
+                "id": "simons_genome_diversity_project_sample_variants::1"
+              },
+              {
+                "id": "simons_genome_diversity_project_sample_variants::2"
+              },
+              {
+                "id": "simons_genome_diversity_project_sample_variants::3"
+              },
+              {
+                "id": "simons_genome_diversity_project_sample_variants::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AN": 2,
+      "BaseCounts": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "BaseQRankSum": -1.787,
+      "DB": null,
+      "DP": 56,
+      "DS": null,
+      "Dels": 0.98,
+      "FS": 0,
+      "GC": 29.93,
+      "HaplotypeScore": 105.9342,
+      "InbreedingCoeff": null,
+      "MQ": 60,
+      "MQ0": 0,
+      "MQRankSum": -0.076,
+      "QD": 0.67,
+      "RPA": [],
+      "RU": null,
+      "ReadPosRankSum": -3.045,
+      "STR": null,
+      "alternate_bases": [
+        {
+          "AC": 2,
+          "AF": 1,
+          "MLEAC": 2,
+          "MLEAF": 1,
+          "alt": "T"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            32,
+            4
+          ],
+          "DP": 36,
+          "FL": "9",
+          "GQ": 44,
+          "PL": [
+            44,
+            0,
+            1151
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_C02",
+          "quality": 44.01
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "9",
+          "GQ": 3,
+          "PL": [
+            39,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_B04",
+          "quality": 40.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "9",
+          "GQ": 3,
+          "PL": [
+            39,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005519-DNA_G02",
+          "quality": 40.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "9",
+          "GQ": 3,
+          "PL": [
+            38,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_C05",
+          "quality": 39.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "9",
+          "GQ": 3,
+          "PL": [
+            36,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_G01",
+          "quality": 37.77
+        }
+      ],
+      "end_position": 21892434,
+      "filter": [],
+      "names": [],
+      "partition_date_please_ignore": "2018-05-23",
+      "quality": 44.01,
+      "reference_bases": "A",
+      "reference_name": "11",
+      "start_position": 21892433
+    },
+    {
+      "AN": 2,
+      "BaseCounts": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "BaseQRankSum": null,
+      "DB": null,
+      "DP": 41,
+      "DS": null,
+      "Dels": 0.98,
+      "FS": 0,
+      "GC": 32.67,
+      "HaplotypeScore": 38.6603,
+      "InbreedingCoeff": null,
+      "MQ": 60,
+      "MQ0": 0,
+      "MQRankSum": null,
+      "QD": 0.65,
+      "RPA": [],
+      "RU": null,
+      "ReadPosRankSum": null,
+      "STR": null,
+      "alternate_bases": [
+        {
+          "AC": 2,
+          "AF": 1,
+          "MLEAC": 2,
+          "MLEAF": 1,
+          "alt": "T"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "9",
+          "GQ": 3,
+          "PL": [
+            36,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005519-DNA_B06",
+          "quality": 37.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "4",
+          "GQ": 3,
+          "PL": [
+            37,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_H03",
+          "quality": 38.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "5",
+          "GQ": 3,
+          "PL": [
+            25,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_G01",
+          "quality": 26.78
+        }
+      ],
+      "end_position": 21853286,
+      "filter": [],
+      "names": [],
+      "partition_date_please_ignore": "2018-05-23",
+      "quality": 38.77,
+      "reference_bases": "C",
+      "reference_name": "11",
+      "start_position": 21853285
+    },
+    {
+      "AN": 2,
+      "BaseCounts": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "BaseQRankSum": 0.804,
+      "DB": true,
+      "DP": 35,
+      "DS": null,
+      "Dels": 0.97,
+      "FS": 0,
+      "GC": 31.92,
+      "HaplotypeScore": 32.7269,
+      "InbreedingCoeff": null,
+      "MQ": 60,
+      "MQ0": 0,
+      "MQRankSum": 0.804,
+      "QD": 1.05,
+      "RPA": [],
+      "RU": null,
+      "ReadPosRankSum": 0.804,
+      "STR": null,
+      "alternate_bases": [
+        {
+          "AC": 2,
+          "AF": 1,
+          "MLEAC": 2,
+          "MLEAF": 1,
+          "alt": "T"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "9",
+          "GQ": 3,
+          "PL": [
+            31,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_F04",
+          "quality": 32.78
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "9",
+          "GQ": 3,
+          "PL": [
+            38,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_F01",
+          "quality": 39.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "1",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_E09",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "6",
+          "GQ": 3,
+          "PL": [
+            35,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_H05",
+          "quality": 36.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "6",
+          "GQ": 3,
+          "PL": [
+            35,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_H01",
+          "quality": 36.77
+        }
+      ],
+      "end_position": 22381361,
+      "filter": [],
+      "names": [
+        "rs200808089"
+      ],
+      "partition_date_please_ignore": "2018-05-23",
+      "quality": 43.77,
+      "reference_bases": "G",
+      "reference_name": "11",
+      "start_position": 22381360
+    },
+    {
+      "AN": 2,
+      "BaseCounts": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "BaseQRankSum": 0.736,
+      "DB": true,
+      "DP": 10,
+      "DS": null,
+      "Dels": 0.9,
+      "FS": 0,
+      "GC": 27.18,
+      "HaplotypeScore": 23.1962,
+      "InbreedingCoeff": null,
+      "MQ": 56.46,
+      "MQ0": 0,
+      "MQRankSum": 0.736,
+      "QD": 4.38,
+      "RPA": [],
+      "RU": null,
+      "ReadPosRankSum": 0.736,
+      "STR": null,
+      "alternate_bases": [
+        {
+          "AC": 2,
+          "AF": 1,
+          "MLEAC": 2,
+          "MLEAF": 1,
+          "alt": "T"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            0,
+            8
+          ],
+          "DP": 8,
+          "FL": "N",
+          "GQ": 24,
+          "PL": [
+            322,
+            24,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_A01",
+          "quality": 322.03
+        },
+        {
+          "AD": [
+            0,
+            3
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 9,
+          "PL": [
+            121,
+            9,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_D09",
+          "quality": 121.52
+        },
+        {
+          "AD": [
+            1,
+            2
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 25,
+          "PL": [
+            72,
+            0,
+            25
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005442-DNA_E04",
+          "quality": 72.02
+        },
+        {
+          "AD": [
+            1,
+            5
+          ],
+          "DP": 6,
+          "FL": "N",
+          "GQ": 15,
+          "PL": [
+            204,
+            15,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005677-DNA_D03",
+          "quality": 204.14
+        },
+        {
+          "AD": [
+            1,
+            7
+          ],
+          "DP": 8,
+          "FL": "N",
+          "GQ": 21,
+          "PL": [
+            283,
+            21,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_A06",
+          "quality": 283.04
+        },
+        {
+          "AD": [
+            2,
+            3
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 11,
+          "PL": [
+            113,
+            0,
+            11
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_F07",
+          "quality": 113.34
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "SS6004469",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            3,
+            1
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 29,
+          "PL": [
+            29,
+            0,
+            34
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_E09",
+          "quality": 29.02
+        },
+        {
+          "AD": [
+            0,
+            3
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 6,
+          "PL": [
+            84,
+            6,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_H07",
+          "quality": 84.98
+        },
+        {
+          "AD": [
+            0,
+            2
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_A01",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            18,
+            8
+          ],
+          "DP": 25,
+          "FL": "N",
+          "GQ": 99,
+          "PL": [
+            211,
+            0,
+            633
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_F01",
+          "quality": 211.01
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 26,
+          "PL": [
+            33,
+            0,
+            26
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005677-DNA_D01",
+          "quality": 33.02
+        },
+        {
+          "AD": [
+            4,
+            4
+          ],
+          "DP": 8,
+          "FL": "N",
+          "GQ": 12,
+          "PL": [
+            163,
+            12,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_E02",
+          "quality": 163.27
+        },
+        {
+          "AD": [
+            4,
+            1
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 34,
+          "PL": [
+            34,
+            0,
+            35
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005592-DNA_C01",
+          "quality": 34.01
+        },
+        {
+          "AD": [
+            3,
+            4
+          ],
+          "DP": 7,
+          "FL": "N",
+          "GQ": 16,
+          "PL": [
+            143,
+            0,
+            16
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005592-DNA_C03",
+          "quality": 143.12
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            32,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_G03",
+          "quality": 33.77
+        },
+        {
+          "AD": [
+            2,
+            4
+          ],
+          "DP": 6,
+          "FL": "N",
+          "GQ": 26,
+          "PL": [
+            148,
+            0,
+            26
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005519-DNA_F06",
+          "quality": 148.02
+        },
+        {
+          "AD": [
+            3,
+            6
+          ],
+          "DP": 9,
+          "FL": "N",
+          "GQ": 21,
+          "PL": [
+            150,
+            0,
+            21
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005519-DNA_C03",
+          "quality": 150.04
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 33,
+          "PL": [
+            33,
+            0,
+            66
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_B03",
+          "quality": 33.01
+        },
+        {
+          "AD": [
+            1,
+            2
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 32,
+          "PL": [
+            71,
+            0,
+            32
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005519-DNA_D04",
+          "quality": 71.01
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            37,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_A03",
+          "quality": 38.77
+        },
+        {
+          "AD": [
+            4,
+            17
+          ],
+          "DP": 20,
+          "FL": "N",
+          "GQ": 16,
+          "PL": [
+            626,
+            16,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_G08",
+          "quality": 626.12
+        },
+        {
+          "AD": [
+            6,
+            1
+          ],
+          "DP": 7,
+          "FL": "N",
+          "GQ": 27,
+          "PL": [
+            27,
+            0,
+            134
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005519-DNA_D01",
+          "quality": 27.02
+        },
+        {
+          "AD": [
+            4,
+            9
+          ],
+          "DP": 13,
+          "FL": "N",
+          "GQ": 99,
+          "PL": [
+            279,
+            0,
+            127
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005442-DNA_B10",
+          "quality": 279.01
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            38,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_E07",
+          "quality": 39.77
+        },
+        {
+          "AD": [
+            0,
+            3
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 9,
+          "PL": [
+            121,
+            9,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_B08",
+          "quality": 121.52
+        },
+        {
+          "AD": [
+            3,
+            4
+          ],
+          "DP": 7,
+          "FL": "N",
+          "GQ": 45,
+          "PL": [
+            127,
+            0,
+            45
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_D07",
+          "quality": 127.01
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_H02",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            1,
+            7
+          ],
+          "DP": 8,
+          "FL": "N",
+          "GQ": 21,
+          "PL": [
+            276,
+            21,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_H09",
+          "quality": 276.04
+        },
+        {
+          "AD": [
+            4,
+            1
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 33,
+          "PL": [
+            33,
+            0,
+            70
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_C06",
+          "quality": 33.01
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_A10",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            0,
+            4
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 12,
+          "PL": [
+            161,
+            12,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "SS6004471",
+          "quality": 161.27
+        },
+        {
+          "AD": [
+            2,
+            4
+          ],
+          "DP": 6,
+          "FL": "N",
+          "GQ": 12,
+          "PL": [
+            164,
+            12,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005592-DNA_F01",
+          "quality": 164.27
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005677-DNA_B01",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            41,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_C10",
+          "quality": 42.77
+        },
+        {
+          "AD": [
+            2,
+            3
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 26,
+          "PL": [
+            110,
+            0,
+            26
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_F08",
+          "quality": 110.02
+        },
+        {
+          "AD": [
+            7,
+            4
+          ],
+          "DP": 11,
+          "FL": "N",
+          "GQ": 53,
+          "PL": [
+            53,
+            0,
+            161
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005519-DNA_G02",
+          "quality": 53.01
+        },
+        {
+          "AD": [
+            12,
+            6
+          ],
+          "DP": 18,
+          "FL": "N",
+          "GQ": 99,
+          "PL": [
+            181,
+            0,
+            327
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_B09",
+          "quality": 181.01
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            41,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005592-DNA_B04",
+          "quality": 42.77
+        },
+        {
+          "AD": [
+            3,
+            9
+          ],
+          "DP": 12,
+          "FL": "N",
+          "GQ": 51,
+          "PL": [
+            252,
+            0,
+            51
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005619-DNA_C01",
+          "quality": 252.01
+        },
+        {
+          "AD": [
+            1,
+            3
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 6,
+          "PL": [
+            84,
+            6,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_D11",
+          "quality": 84.98
+        },
+        {
+          "AD": [
+            2,
+            2
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 61,
+          "PL": [
+            69,
+            0,
+            61
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_C07",
+          "quality": 69.01
+        },
+        {
+          "AD": [
+            1,
+            3
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 31,
+          "PL": [
+            69,
+            0,
+            31
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_B11",
+          "quality": 69.01
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_C05",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 35,
+          "PL": [
+            35,
+            0,
+            35
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005442-DNA_G03",
+          "quality": 35.01
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_D06",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            1,
+            10
+          ],
+          "DP": 11,
+          "FL": "N",
+          "GQ": 5,
+          "PL": [
+            372,
+            0,
+            5
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_E07",
+          "quality": 373.2
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            41,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_B02",
+          "quality": 42.77
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 33,
+          "PL": [
+            33,
+            0,
+            54
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_B10",
+          "quality": 33.01
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            41,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_C03",
+          "quality": 42.77
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 23,
+          "PL": [
+            35,
+            0,
+            23
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_D03",
+          "quality": 35.03
+        },
+        {
+          "AD": [
+            1,
+            3
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 29,
+          "PL": [
+            111,
+            0,
+            29
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_C09",
+          "quality": 111.01
+        },
+        {
+          "AD": [
+            3,
+            1
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 30,
+          "PL": [
+            30,
+            0,
+            104
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_H10",
+          "quality": 30.01
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 33,
+          "PL": [
+            33,
+            0,
+            71
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005442-DNA_G12",
+          "quality": 33.01
+        },
+        {
+          "AD": [
+            0,
+            2
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 6,
+          "PL": [
+            84,
+            6,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_F04",
+          "quality": 84.98
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            40,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_G10",
+          "quality": 41.77
+        },
+        {
+          "AD": [
+            1,
+            4
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 9,
+          "PL": [
+            119,
+            9,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005519-DNA_F04",
+          "quality": 119.52
+        },
+        {
+          "AD": [
+            0,
+            2
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 6,
+          "PL": [
+            83,
+            6,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_H10",
+          "quality": 83.98
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            39,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_D08",
+          "quality": 40.77
+        },
+        {
+          "AD": [
+            2,
+            3
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 9,
+          "PL": [
+            122,
+            9,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_F11",
+          "quality": 122.52
+        },
+        {
+          "AD": [
+            1,
+            4
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 12,
+          "PL": [
+            151,
+            12,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_D12",
+          "quality": 151.27
+        },
+        {
+          "AD": [
+            2,
+            7
+          ],
+          "DP": 9,
+          "FL": "N",
+          "GQ": 21,
+          "PL": [
+            271,
+            21,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_H12",
+          "quality": 271.04
+        },
+        {
+          "AD": [
+            1,
+            6
+          ],
+          "DP": 7,
+          "FL": "N",
+          "GQ": 18,
+          "PL": [
+            231,
+            18,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_H08",
+          "quality": 231.08
+        },
+        {
+          "AD": [
+            8,
+            8
+          ],
+          "DP": 16,
+          "FL": "N",
+          "GQ": 99,
+          "PL": [
+            274,
+            0,
+            260
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_G02",
+          "quality": 274.01
+        },
+        {
+          "AD": [
+            1,
+            2
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 6,
+          "PL": [
+            83,
+            6,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005519-DNA_A04",
+          "quality": 83.98
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            23,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005592-DNA_B02",
+          "quality": 24.79
+        },
+        {
+          "AD": [
+            3,
+            6
+          ],
+          "DP": 9,
+          "FL": "N",
+          "GQ": 59,
+          "PL": [
+            183,
+            0,
+            59
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_H02",
+          "quality": 183.01
+        },
+        {
+          "AD": [
+            5,
+            3
+          ],
+          "DP": 8,
+          "FL": "N",
+          "GQ": 81,
+          "PL": [
+            81,
+            0,
+            180
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_E06",
+          "quality": 81.01
+        },
+        {
+          "AD": [
+            0,
+            9
+          ],
+          "DP": 9,
+          "FL": "N",
+          "GQ": 27,
+          "PL": [
+            328,
+            27,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005677-DNA_G01",
+          "quality": 328.02
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 29,
+          "PL": [
+            29,
+            0,
+            64
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_D01",
+          "quality": 29.01
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 33,
+          "PL": [
+            35,
+            0,
+            33
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "SS6004478",
+          "quality": 35.01
+        },
+        {
+          "AD": [
+            3,
+            1
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 28,
+          "PL": [
+            28,
+            0,
+            91
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005592-DNA_A02",
+          "quality": 28.02
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            39,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_D08",
+          "quality": 40.77
+        },
+        {
+          "AD": [
+            0,
+            2
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            39,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_C08",
+          "quality": 40.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            40,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_H09",
+          "quality": 41.77
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 30,
+          "PL": [
+            30,
+            0,
+            34
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005519-DNA_A06",
+          "quality": 30.01
+        },
+        {
+          "AD": [
+            2,
+            3
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 67,
+          "PL": [
+            88,
+            0,
+            67
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005519-DNA_C05",
+          "quality": 88.01
+        },
+        {
+          "AD": [
+            0,
+            2
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 6,
+          "PL": [
+            84,
+            6,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_B08",
+          "quality": 84.98
+        },
+        {
+          "AD": [
+            1,
+            1
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 32,
+          "PL": [
+            36,
+            0,
+            32
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_E05",
+          "quality": 36.01
+        },
+        {
+          "AD": [
+            0,
+            6
+          ],
+          "DP": 6,
+          "FL": "N",
+          "GQ": 18,
+          "PL": [
+            237,
+            18,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "SS6004470",
+          "quality": 237.08
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            33,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_G11",
+          "quality": 34.77
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 28,
+          "PL": [
+            28,
+            0,
+            62
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005443-DNA_H07",
+          "quality": 28.02
+        },
+        {
+          "AD": [
+            1,
+            3
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 17,
+          "PL": [
+            111,
+            0,
+            17
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_A11",
+          "quality": 111.09
+        },
+        {
+          "AD": [
+            0,
+            4
+          ],
+          "DP": 4,
+          "FL": "N",
+          "GQ": 12,
+          "PL": [
+            162,
+            12,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_C04",
+          "quality": 162.27
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_B01",
+          "quality": 43.77
+        },
+        {
+          "AD": [
+            0,
+            2
+          ],
+          "DP": 2,
+          "FL": "N",
+          "GQ": 6,
+          "PL": [
+            78,
+            6,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005441-DNA_A08",
+          "quality": 78.98
+        },
+        {
+          "AD": [
+            1,
+            3
+          ],
+          "DP": 5,
+          "FL": "N",
+          "GQ": 28,
+          "PL": [
+            114,
+            0,
+            28
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005441-DNA_A04",
+          "quality": 114.02
+        },
+        {
+          "AD": [
+            2,
+            1
+          ],
+          "DP": 3,
+          "FL": "N",
+          "GQ": 34,
+          "PL": [
+            36,
+            0,
+            34
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005442-DNA_B08",
+          "quality": 36.01
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "N",
+          "GQ": 3,
+          "PL": [
+            42,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005442-DNA_D03",
+          "quality": 43.77
+        }
+      ],
+      "end_position": 21826941,
+      "filter": [],
+      "names": [
+        "rs4551768"
+      ],
+      "partition_date_please_ignore": "2018-05-23",
+      "quality": 626.12,
+      "reference_bases": "A",
+      "reference_name": "11",
+      "start_position": 21826940
+    },
+    {
+      "AN": 2,
+      "BaseCounts": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "BaseQRankSum": 1.537,
+      "DB": null,
+      "DP": 45,
+      "DS": null,
+      "Dels": 0.98,
+      "FS": 0,
+      "GC": 44.89,
+      "HaplotypeScore": 38.6603,
+      "InbreedingCoeff": null,
+      "MQ": 60,
+      "MQ0": 0,
+      "MQRankSum": -0.406,
+      "QD": 0.88,
+      "RPA": [],
+      "RU": null,
+      "ReadPosRankSum": 0.406,
+      "STR": null,
+      "alternate_bases": [
+        {
+          "AC": 2,
+          "AF": 1,
+          "MLEAC": 2,
+          "MLEAF": 1,
+          "alt": "T"
+        }
+      ],
+      "call": [
+        {
+          "AD": [
+            4,
+            3
+          ],
+          "DP": 7,
+          "FL": "9",
+          "GQ": 91,
+          "PL": [
+            96,
+            0,
+            91
+          ],
+          "genotype": [
+            0,
+            1
+          ],
+          "name": "LP6005519-DNA_B06",
+          "quality": 96.01
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "6",
+          "GQ": 3,
+          "PL": [
+            38,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005519-DNA_G02",
+          "quality": 39.77
+        },
+        {
+          "AD": [
+            0,
+            1
+          ],
+          "DP": 1,
+          "FL": "9",
+          "GQ": 3,
+          "PL": [
+            38,
+            3,
+            0
+          ],
+          "genotype": [
+            1,
+            1
+          ],
+          "name": "LP6005443-DNA_B07",
+          "quality": 39.77
+        }
+      ],
+      "end_position": 21872930,
+      "filter": [],
+      "names": [],
+      "partition_date_please_ignore": "2018-05-23",
+      "quality": 96.01,
+      "reference_bases": "G",
+      "reference_name": "11",
+      "start_position": 21872929
+    }
+  ]
+}

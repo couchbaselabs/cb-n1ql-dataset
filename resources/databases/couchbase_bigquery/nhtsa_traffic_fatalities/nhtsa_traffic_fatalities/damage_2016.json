@@ -1,0 +1,138 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`damaged_areas` = 13, `damaged_areas_name` = \"Top\", `state_number` = 1, `vehicle_number` = 1",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10442,
+              10446,
+              10449,
+              10457,
+              10458
+            ],
+            "type": "number"
+          },
+          "damaged_areas": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13
+            ],
+            "type": "number"
+          },
+          "damaged_areas_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Top"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "damage_2016::1",
+                  "damage_2016::2",
+                  "damage_2016::3",
+                  "damage_2016::6",
+                  "damage_2016::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "damage_2016::1"
+              },
+              {
+                "id": "damage_2016::2"
+              },
+              {
+                "id": "damage_2016::3"
+              },
+              {
+                "id": "damage_2016::6"
+              },
+              {
+                "id": "damage_2016::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 10455,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 1,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 10449,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 1,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 10446,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 1,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 10458,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 1,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 10442,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 1,
+      "vehicle_number": 1
+    }
+  ]
+}

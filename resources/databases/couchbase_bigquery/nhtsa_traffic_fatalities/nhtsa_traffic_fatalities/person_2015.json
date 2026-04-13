@@ -1,0 +1,1736 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`related_factors_person_level2` = 0, `related_factors_person_level3` = 0",
+        "properties": {
+          "age": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              22,
+              24,
+              40,
+              63,
+              85
+            ],
+            "type": "number"
+          },
+          "air_bag_deployed": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              9,
+              20
+            ],
+            "type": "number"
+          },
+          "air_bag_deployed_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Deployed: Front",
+              "Deployed: Side (Door, Seatback...",
+              "Deployed: Unknown Location",
+              "Not Applicable",
+              "Not Deployed"
+            ],
+            "type": "string"
+          },
+          "alcohol_test_status1": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Reported",
+              "Test Given",
+              "Test Not Given",
+              "Test Refused",
+              "Unknown if Tested"
+            ],
+            "type": "string"
+          },
+          "alcohol_test_status2": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Blood Test",
+              "Breath Test (AC)",
+              "Not Reported",
+              "Not Tested for Alcohol",
+              "Unknown if Tested"
+            ],
+            "type": "string"
+          },
+          "alcohol_test_status3": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "112",
+              "235",
+              "996",
+              "999"
+            ],
+            "type": "string"
+          },
+          "alcohol_test_status3_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AC Test Performed, Results Unk...",
+              "Actual Value of BAC Test",
+              "None Given",
+              "Not Reported",
+              "Unknown if Tested"
+            ],
+            "type": "string"
+          },
+          "body_type": {
+            "#docs": [
+              56,
+              944
+            ],
+            "%docs": [
+              5.6,
+              94.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                4,
+                15,
+                20,
+                31,
+                67
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "body_type_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4-Door Sedan/Hardtop",
+              "Large Utility (ANSI D-16 Utili...",
+              "Medium/Heavy Pickup (GVWR > 10...",
+              "Minivan",
+              "Standard Pickup"
+            ],
+            "type": "string"
+          },
+          "consecutive_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              190157,
+              200025,
+              300034,
+              370363,
+              510197
+            ],
+            "type": "number"
+          },
+          "county": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37,
+              39,
+              45,
+              193,
+              640
+            ],
+            "type": "number"
+          },
+          "day_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              5,
+              17,
+              21
+            ],
+            "type": "number"
+          },
+          "day_of_death": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              16,
+              21,
+              26,
+              88
+            ],
+            "type": "number"
+          },
+          "death_time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1316,
+              2020,
+              2112,
+              2125,
+              8888
+            ],
+            "type": "number"
+          },
+          "died_at_scene_en_route": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Died En Route",
+              "Died at Scene",
+              "Not Applicable"
+            ],
+            "type": "string"
+          },
+          "drug_test_status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Reported",
+              "Test Given",
+              "Test Not Given",
+              "Unknown if Tested"
+            ],
+            "type": "string"
+          },
+          "drug_test_type1": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Blood Test",
+              "Both Blood and Urine Tests",
+              "Not Reported",
+              "Test Not Given",
+              "Urine Test"
+            ],
+            "type": "string"
+          },
+          "drug_test_type2": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Blood Test",
+              "Both Blood and Urine Tests",
+              "Other Test Type",
+              "Test Not Given",
+              "Urine Test"
+            ],
+            "type": "string"
+          },
+          "drug_test_type3": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Blood Test",
+              "Both Blood and Urine Tests",
+              "Other Test Type",
+              "Test Not Given",
+              "Urine Test"
+            ],
+            "type": "string"
+          },
+          "drug_test_type4": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              155,
+              600,
+              996
+            ],
+            "type": "number"
+          },
+          "drug_test_type4_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cannabinoid*",
+              "Narcotic*",
+              "No Drugs Reported/Negative",
+              "Not Tested for Drugs",
+              "Other Drugs"
+            ],
+            "type": "string"
+          },
+          "drug_test_type5": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              304,
+              417,
+              605,
+              996
+            ],
+            "type": "number"
+          },
+          "drug_test_type5_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cannabinoid*",
+              "Depressant*",
+              "Not Tested for Drugs",
+              "Other Drugs",
+              "Stimulant*"
+            ],
+            "type": "string"
+          },
+          "drug_test_type6": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              355,
+              401,
+              605,
+              996
+            ],
+            "type": "number"
+          },
+          "drug_test_type6_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cannabinoid*",
+              "Depressant*",
+              "Not Tested for Drugs",
+              "Other Drugs",
+              "Stimulant*"
+            ],
+            "type": "string"
+          },
+          "ejection": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              8,
+              9
+            ],
+            "type": "number"
+          },
+          "ejection_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Applicable",
+              "Not Ejected",
+              "Partially Ejected",
+              "Totally Ejected",
+              "Unknown if Ejected (Since 2009..."
+            ],
+            "type": "string"
+          },
+          "ejection_path": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              2,
+              3,
+              8,
+              9
+            ],
+            "type": "number"
+          },
+          "ejection_path_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Ejection Path Not Applicable",
+              "Ejection Path Unknown",
+              "Other Path (e.g., Back of Pick...",
+              "Through Side Window (All Side ...",
+              "Through Windshield (Front Wind..."
+            ],
+            "type": "string"
+          },
+          "emergency_motor_vehicle_use": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Unknown",
+              "Not Applicable",
+              "Not Reported",
+              ""
+            ],
+            "type": "string"
+          },
+          "extrication": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Extricated",
+              "Not Extricated/Not Applicable",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "fatal_injury_at_work": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No (The Injury Was Not At Work...",
+              "Not Applicable (Not A Fatality...",
+              "Unknown",
+              "Yes (The Injury Was At Work)"
+            ],
+            "type": "string"
+          },
+          "fire_occurrence": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Yes",
+              "No or Not Reported",
+              ""
+            ],
+            "type": "string"
+          },
+          "first_harmful_event": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5,
+              12,
+              31,
+              33
+            ],
+            "type": "number"
+          },
+          "first_harmful_event_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Curb",
+              "Fell/Jumped from Vehicle",
+              "Motor Vehicle in Transport",
+              "Other Post, Other Pole, or Oth...",
+              "Rollover/Overturn"
+            ],
+            "type": "string"
+          },
+          "functional_system": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2",
+              "3",
+              "4",
+              "5",
+              "7"
+            ],
+            "type": "string"
+          },
+          "functional_system_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Local",
+              "Major Collector",
+              "Minor Arterial",
+              "Principal Arterial \u2013 Other",
+              "Principal Arterial \u2013 Other F..."
+            ],
+            "type": "string"
+          },
+          "hispanic_origin": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              5,
+              7,
+              99
+            ],
+            "type": "number"
+          },
+          "hispanic_origin_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "European Spanish (Since 2000)",
+              "Mexican",
+              "Non-Hispanic",
+              "Not A Fatality (Not Applicable...",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "hour_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              14,
+              18,
+              19,
+              20
+            ],
+            "type": "number"
+          },
+          "hour_of_death": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              13,
+              20,
+              21,
+              88
+            ],
+            "type": "number"
+          },
+          "indication_of_misuse_of_restraint_system_helmet": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No",
+              "Not a Motor Vehicle Occupant",
+              "Yes "
+            ],
+            "type": "string"
+          },
+          "initial_contact_point": {
+            "#docs": [
+              56,
+              944
+            ],
+            "%docs": [
+              5.6,
+              94.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                11,
+                12,
+                14,
+                81
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "initial_contact_point_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Clock points",
+              "Non-Collision",
+              "Not Reported",
+              "Right",
+              "Undercarriage"
+            ],
+            "type": "string"
+          },
+          "injury_severity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            "type": "number"
+          },
+          "injury_severity_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Fatal Injury (K)",
+              "Injured, Severity Unknown (U) ...",
+              "No Apparent Injury (O)",
+              "Possible Injury (C)",
+              "Suspected Minor Injury (B)"
+            ],
+            "type": "string"
+          },
+          "lag_hours": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              104,
+              999
+            ],
+            "type": "number"
+          },
+          "lag_minutes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              15,
+              21,
+              38,
+              99
+            ],
+            "type": "number"
+          },
+          "land_use": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "2",
+              "6"
+            ],
+            "type": "string"
+          },
+          "land_use_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Rural",
+              "Trafficway Not in State Invent...",
+              "Urban"
+            ],
+            "type": "string"
+          },
+          "make_model_combined": {
+            "#docs": [
+              56,
+              944
+            ],
+            "%docs": [
+              5.6,
+              94.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                12481,
+                20481,
+                22020,
+                23481,
+                37441
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "manner_of_collision": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              6,
+              8
+            ],
+            "type": "number"
+          },
+          "manner_of_collision_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Angle",
+              "Front-to-Front",
+              "Front-to-Rear",
+              "Not Collision with Motor Vehic...",
+              "Sideswipe \u2013 Opposite Directi..."
+            ],
+            "type": "string"
+          },
+          "method_of_alcohol_determination_by_police": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Behavioral",
+              "Evidential Test (Breath, Blood...",
+              "Not Reported",
+              "Observed",
+              "Preliminary Breath Test (PBT)"
+            ],
+            "type": "string"
+          },
+          "method_of_drug_determination_by_police": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Behavioral",
+              "Drug Recognition Technician (D...",
+              "Evidential Test (Blood, Urine)",
+              "Not Reported",
+              "Other"
+            ],
+            "type": "string"
+          },
+          "minute_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              8,
+              23,
+              27,
+              58
+            ],
+            "type": "number"
+          },
+          "minute_of_death": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              16,
+              20,
+              25,
+              88
+            ],
+            "type": "number"
+          },
+          "month_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              4,
+              5,
+              8,
+              9
+            ],
+            "type": "number"
+          },
+          "month_of_death": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              8,
+              9,
+              88
+            ],
+            "type": "number"
+          },
+          "non_motorist_location_at_time_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              11
+            ],
+            "type": "number"
+          },
+          "non_motorist_location_at_time_of_crash_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "At Intersection-In Marked Cros...",
+              "At Intersection-Not in Crosswa...",
+              "At Intersection-Unmarked/Unkno...",
+              "Non At Intersection-On Roadway...",
+              "Occupant of a Motor Vehicle (I..."
+            ],
+            "type": "string"
+          },
+          "number_of_motor_vehicle_striking_non_motorist": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "number_of_motor_vehicles_in_transport_mvit": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "type": "number"
+          },
+          "person_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            "type": "number"
+          },
+          "person_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              5,
+              9
+            ],
+            "type": "number"
+          },
+          "person_type_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Driver of a Motor Vehicle In-T...",
+              "Occupant of a Motor Vehicle No...",
+              "Passenger of a Motor Vehicle I...",
+              "Pedestrian",
+              "Unknown Occupant Type in a Mot..."
+            ],
+            "type": "string"
+          },
+          "police_reported_alcohol_involvement": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No (Alcohol Not Involved)",
+              "Not Reported",
+              "Unknown (Police Reported)",
+              "Yes (Alcohol Involved)"
+            ],
+            "type": "string"
+          },
+          "police_reported_drug_involvement": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No (Drugs Not Involved)",
+              "Not Reported",
+              "Unknown (Police Reported)",
+              "Yes (Drugs Involved)"
+            ],
+            "type": "string"
+          },
+          "race": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              7,
+              99
+            ],
+            "type": "number"
+          },
+          "race_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Black",
+              "Filipino",
+              "Not A Fatality (Not Applicable...",
+              "Unknown",
+              "White"
+            ],
+            "type": "string"
+          },
+          "related_factors_person_level1": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              37,
+              56
+            ],
+            "type": "number"
+          },
+          "related_factors_person_level2": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "related_factors_person_level3": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "restraint_system_helmet_use": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              3,
+              7,
+              17,
+              99
+            ],
+            "type": "number"
+          },
+          "restraint_system_helmet_use_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Lap and Shoulder Belt Used",
+              "No Helmet",
+              "None Used",
+              "Not Applicable",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "rollover": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Rollover, Untripped",
+              "No Rollover",
+              "Rollover, Tripped by Object/Ve...",
+              "Rollover, Unknown Type",
+              ""
+            ],
+            "type": "string"
+          },
+          "school_bus_related": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "seating_position": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              13,
+              23,
+              33,
+              52
+            ],
+            "type": "number"
+          },
+          "seating_position_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Front Seat \u2013 Left Side (Driv...",
+              "Front Seat \u2013 Right Side",
+              "Other Passenger in Unenclosed ...",
+              "Second Seat \u2013 Right Side",
+              "Third Seat \u2013 Right Side"
+            ],
+            "type": "string"
+          },
+          "sex": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Female",
+              "Male",
+              "Not Reported",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "special_use": {
+            "#docs": [
+              56,
+              944
+            ],
+            "%docs": [
+              5.6,
+              94.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                2,
+                3,
+                5,
+                99
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "special_use_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Special Use",
+              "Police",
+              "Unknown",
+              "Vehicle Used as Other Bus",
+              "Vehicle Used as School Transpo..."
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              19,
+              20,
+              30,
+              37,
+              51
+            ],
+            "type": "number"
+          },
+          "timestamp_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2015-02-05T20:02:00+00:00",
+              "2015-04-04T13:23:00+00:00",
+              "2015-05-03T14:58:00+00:00",
+              "2015-05-17T18:08:00+00:00",
+              "2015-05-21T18:27:00+00:00"
+            ],
+            "type": "string"
+          },
+          "transported_to_first_treatment_facility": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              3,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "transported_to_first_treatment_facility_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "EMS Air",
+              "EMS Ground",
+              "EMS Unknown Mode",
+              "Not Transported",
+              "Other"
+            ],
+            "type": "string"
+          },
+          "vehicle_make": {
+            "#docs": [
+              56,
+              944
+            ],
+            "%docs": [
+              5.6,
+              94.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                12,
+                20,
+                22,
+                23,
+                37
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "vehicle_make_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Chevrolet",
+              "Ford",
+              "GMC",
+              "Honda",
+              "Pontiac"
+            ],
+            "type": "string"
+          },
+          "vehicle_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              5,
+              57
+            ],
+            "type": "number"
+          },
+          "vehicle_trailing": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Yes, Two Trailing Units",
+              "No Trailing Unit",
+              "Unknown",
+              "Yes, One Trailing Unit",
+              ""
+            ],
+            "type": "string"
+          },
+          "year_of_death": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2015,
+              8888
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "person_2015::13754",
+                  "person_2015::18479",
+                  "person_2015::19532",
+                  "person_2015::20345",
+                  "person_2015::26707"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "person_2015::13754"
+              },
+              {
+                "id": "person_2015::18479"
+              },
+              {
+                "id": "person_2015::19532"
+              },
+              {
+                "id": "person_2015::20345"
+              },
+              {
+                "id": "person_2015::26707"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "age": 23,
+      "air_bag_deployed": 20,
+      "air_bag_deployed_name": "Not Deployed",
+      "alcohol_test_status1": "Test Given",
+      "alcohol_test_status2": "Blood Test",
+      "alcohol_test_status3": "174",
+      "alcohol_test_status3_name": "Actual Value of BAC Test",
+      "body_type": 4,
+      "body_type_name": "4-Door Sedan/Hardtop",
+      "consecutive_number": 390301,
+      "county": 35,
+      "day_of_crash": 6,
+      "day_of_death": 6,
+      "death_time": 45,
+      "died_at_scene_en_route": "Not Applicable",
+      "drug_test_status": "Test Given",
+      "drug_test_type1": "Both Blood and Urine Tests",
+      "drug_test_type2": "Both Blood and Urine Tests",
+      "drug_test_type3": "Test Not Given",
+      "drug_test_type4": 600,
+      "drug_test_type4_name": "Cannabinoid*",
+      "drug_test_type5": 996,
+      "drug_test_type5_name": "Other Drugs",
+      "drug_test_type6": 0,
+      "drug_test_type6_name": "Not Tested for Drugs",
+      "ejection": 0,
+      "ejection_name": "Not Ejected",
+      "ejection_path": 0,
+      "ejection_path_name": "Ejection Path Not Applicable",
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extrication": "Extricated",
+      "fatal_injury_at_work": "No (The Injury Was Not At Work)",
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 33,
+      "first_harmful_event_name": "Curb",
+      "functional_system": "98",
+      "functional_system_name": "Not Reported",
+      "hispanic_origin": 7,
+      "hispanic_origin_name": "Non-Hispanic",
+      "hour_of_crash": 0,
+      "hour_of_death": 0,
+      "indication_of_misuse_of_restraint_system_helmet": "No",
+      "initial_contact_point": 12,
+      "initial_contact_point_name": "Clock points",
+      "injury_severity": 4,
+      "injury_severity_name": "Fatal Injury (K)",
+      "lag_hours": 0,
+      "lag_minutes": 20,
+      "land_use": "8",
+      "land_use_name": "Not Reported",
+      "make_model_combined": 49045,
+      "manner_of_collision": 0,
+      "manner_of_collision_name": "Not Collision with Motor Vehicle in Transport (Not Necessarily in Transport for\n2005-2009)",
+      "method_of_alcohol_determination_by_police": "Not Reported",
+      "method_of_drug_determination_by_police": "Not Reported",
+      "minute_of_crash": 25,
+      "minute_of_death": 45,
+      "month_of_crash": 5,
+      "month_of_death": 5,
+      "non_motorist_location_at_time_of_crash": 0,
+      "non_motorist_location_at_time_of_crash_name": "Occupant of a Motor Vehicle (Includes Railway Train Occupants\nSince 2006)",
+      "number_of_motor_vehicle_striking_non_motorist": 0,
+      "number_of_motor_vehicles_in_transport_mvit": 1,
+      "person_number": 1,
+      "person_type": 1,
+      "person_type_name": "Driver of a Motor Vehicle In-Transport",
+      "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+      "police_reported_drug_involvement": "No (Drugs Not Involved)",
+      "race": 2,
+      "race_name": "Black",
+      "related_factors_person_level1": 0,
+      "related_factors_person_level2": 0,
+      "related_factors_person_level3": 0,
+      "restraint_system_helmet_use": 7,
+      "restraint_system_helmet_use_name": "None Used",
+      "rollover": "No Rollover",
+      "school_bus_related": "No",
+      "seating_position": 11,
+      "seating_position_name": "Front Seat \u2013 Left Side (Driver's Side)",
+      "sex": "Male",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 39,
+      "timestamp_of_crash": "2015-05-06T00:25:00+00:00",
+      "transported_to_first_treatment_facility": 5,
+      "transported_to_first_treatment_facility_name": "EMS Ground",
+      "vehicle_make": 49,
+      "vehicle_make_name": "Toyota",
+      "vehicle_number": 1,
+      "vehicle_trailing": "No Trailing Unit",
+      "year_of_death": 2015
+    },
+    {
+      "age": 83,
+      "air_bag_deployed": 8,
+      "air_bag_deployed_name": "Deployed: Combination",
+      "alcohol_test_status1": "Test Given",
+      "alcohol_test_status2": "Blood Test",
+      "alcohol_test_status3": "0",
+      "alcohol_test_status3_name": "Actual Value of BAC Test",
+      "body_type": 4,
+      "body_type_name": "4-Door Sedan/Hardtop",
+      "consecutive_number": 240301,
+      "county": 27,
+      "day_of_crash": 14,
+      "day_of_death": 14,
+      "death_time": 1701,
+      "died_at_scene_en_route": "Not Applicable",
+      "drug_test_status": "Test Given",
+      "drug_test_type1": "Urine Test",
+      "drug_test_type2": "Urine Test",
+      "drug_test_type3": "Test Not Given",
+      "drug_test_type4": 239,
+      "drug_test_type4_name": "Narcotic*",
+      "drug_test_type5": 996,
+      "drug_test_type5_name": "Other Drugs",
+      "drug_test_type6": 0,
+      "drug_test_type6_name": "Not Tested for Drugs",
+      "ejection": 0,
+      "ejection_name": "Not Ejected",
+      "ejection_path": 0,
+      "ejection_path_name": "Ejection Path Not Applicable",
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extrication": "Extricated",
+      "fatal_injury_at_work": "No (The Injury Was Not At Work)",
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 39,
+      "first_harmful_event_name": "Wall",
+      "functional_system": "98",
+      "functional_system_name": "Not Reported",
+      "hispanic_origin": 7,
+      "hispanic_origin_name": "Non-Hispanic",
+      "hour_of_crash": 15,
+      "hour_of_death": 17,
+      "indication_of_misuse_of_restraint_system_helmet": "No",
+      "initial_contact_point": 1,
+      "initial_contact_point_name": "Clock points",
+      "injury_severity": 4,
+      "injury_severity_name": "Fatal Injury (K)",
+      "lag_hours": 1,
+      "lag_minutes": 6,
+      "land_use": "8",
+      "land_use_name": "Not Reported",
+      "make_model_combined": 55033,
+      "manner_of_collision": 0,
+      "manner_of_collision_name": "Not Collision with Motor Vehicle in Transport (Not Necessarily in Transport for\n2005-2009)",
+      "method_of_alcohol_determination_by_police": "Not Reported",
+      "method_of_drug_determination_by_police": "Not Reported",
+      "minute_of_crash": 55,
+      "minute_of_death": 1,
+      "month_of_crash": 6,
+      "month_of_death": 6,
+      "non_motorist_location_at_time_of_crash": 0,
+      "non_motorist_location_at_time_of_crash_name": "Occupant of a Motor Vehicle (Includes Railway Train Occupants\nSince 2006)",
+      "number_of_motor_vehicle_striking_non_motorist": 0,
+      "number_of_motor_vehicles_in_transport_mvit": 1,
+      "person_number": 1,
+      "person_type": 1,
+      "person_type_name": "Driver of a Motor Vehicle In-Transport",
+      "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+      "police_reported_drug_involvement": "No (Drugs Not Involved)",
+      "race": 1,
+      "race_name": "White",
+      "related_factors_person_level1": 0,
+      "related_factors_person_level2": 0,
+      "related_factors_person_level3": 0,
+      "restraint_system_helmet_use": 7,
+      "restraint_system_helmet_use_name": "None Used",
+      "rollover": "No Rollover",
+      "school_bus_related": "No",
+      "seating_position": 11,
+      "seating_position_name": "Front Seat \u2013 Left Side (Driver's Side)",
+      "sex": "Female",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 24,
+      "timestamp_of_crash": "2015-06-14T15:55:00+00:00",
+      "transported_to_first_treatment_facility": 5,
+      "transported_to_first_treatment_facility_name": "EMS Ground",
+      "vehicle_make": 55,
+      "vehicle_make_name": "Hyundai",
+      "vehicle_number": 1,
+      "vehicle_trailing": "No Trailing Unit",
+      "year_of_death": 2015
+    },
+    {
+      "age": 86,
+      "air_bag_deployed": 8,
+      "air_bag_deployed_name": "Deployed: Combination",
+      "alcohol_test_status1": "Test Given",
+      "alcohol_test_status2": "Blood Test",
+      "alcohol_test_status3": "0",
+      "alcohol_test_status3_name": "Actual Value of BAC Test",
+      "body_type": 5,
+      "body_type_name": "5-Door/4-Door Hatchback",
+      "consecutive_number": 170342,
+      "county": 199,
+      "day_of_crash": 25,
+      "day_of_death": 25,
+      "death_time": 925,
+      "died_at_scene_en_route": "Died at Scene",
+      "drug_test_status": "Test Given",
+      "drug_test_type1": "Both Blood and Urine Tests",
+      "drug_test_type2": "Both Blood and Urine Tests",
+      "drug_test_type3": "Test Not Given",
+      "drug_test_type4": 304,
+      "drug_test_type4_name": "Depressant*",
+      "drug_test_type5": 996,
+      "drug_test_type5_name": "Other Drugs",
+      "drug_test_type6": 0,
+      "drug_test_type6_name": "Not Tested for Drugs",
+      "ejection": 0,
+      "ejection_name": "Not Ejected",
+      "ejection_path": 0,
+      "ejection_path_name": "Ejection Path Not Applicable",
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extrication": "Extricated",
+      "fatal_injury_at_work": "No (The Injury Was Not At Work)",
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "functional_system": "3",
+      "functional_system_name": "Principal Arterial \u2013 Other",
+      "hispanic_origin": 7,
+      "hispanic_origin_name": "Non-Hispanic",
+      "hour_of_crash": 9,
+      "hour_of_death": 9,
+      "indication_of_misuse_of_restraint_system_helmet": "No",
+      "initial_contact_point": 3,
+      "initial_contact_point_name": "Clock points",
+      "injury_severity": 4,
+      "injury_severity_name": "Fatal Injury (K)",
+      "lag_hours": 0,
+      "lag_minutes": 0,
+      "land_use": "1",
+      "land_use_name": "Rural",
+      "make_model_combined": 7025,
+      "manner_of_collision": 6,
+      "manner_of_collision_name": "Angle",
+      "method_of_alcohol_determination_by_police": "Not Reported",
+      "method_of_drug_determination_by_police": "Evidential Test (Blood, Urine)",
+      "minute_of_crash": 25,
+      "minute_of_death": 25,
+      "month_of_crash": 6,
+      "month_of_death": 6,
+      "non_motorist_location_at_time_of_crash": 0,
+      "non_motorist_location_at_time_of_crash_name": "Occupant of a Motor Vehicle (Includes Railway Train Occupants\nSince 2006)",
+      "number_of_motor_vehicle_striking_non_motorist": 0,
+      "number_of_motor_vehicles_in_transport_mvit": 2,
+      "person_number": 1,
+      "person_type": 1,
+      "person_type_name": "Driver of a Motor Vehicle In-Transport",
+      "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+      "police_reported_drug_involvement": "Yes (Drugs Involved)",
+      "race": 1,
+      "race_name": "White",
+      "related_factors_person_level1": 0,
+      "related_factors_person_level2": 0,
+      "related_factors_person_level3": 0,
+      "restraint_system_helmet_use": 3,
+      "restraint_system_helmet_use_name": "Lap and Shoulder Belt Used",
+      "rollover": "No Rollover",
+      "school_bus_related": "No",
+      "seating_position": 11,
+      "seating_position_name": "Front Seat \u2013 Left Side (Driver's Side)",
+      "sex": "Female",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 17,
+      "timestamp_of_crash": "2015-06-25T09:25:00+00:00",
+      "transported_to_first_treatment_facility": 0,
+      "transported_to_first_treatment_facility_name": "Not Transported",
+      "vehicle_make": 7,
+      "vehicle_make_name": "Dodge",
+      "vehicle_number": 1,
+      "vehicle_trailing": "No Trailing Unit",
+      "year_of_death": 2015
+    },
+    {
+      "age": 53,
+      "air_bag_deployed": 20,
+      "air_bag_deployed_name": "Not Deployed",
+      "alcohol_test_status1": "Test Given",
+      "alcohol_test_status2": "Blood Test",
+      "alcohol_test_status3": "0",
+      "alcohol_test_status3_name": "Actual Value of BAC Test",
+      "body_type": 30,
+      "body_type_name": "Compact Pickup (Gross Vehicle Weight, GVWR, < 4,500 lbs)",
+      "consecutive_number": 390194,
+      "county": 127,
+      "day_of_crash": 12,
+      "day_of_death": 12,
+      "death_time": 1116,
+      "died_at_scene_en_route": "Died at Scene",
+      "drug_test_status": "Test Given",
+      "drug_test_type1": "Blood Test",
+      "drug_test_type2": "Both Blood and Urine Tests",
+      "drug_test_type3": "Both Blood and Urine Tests",
+      "drug_test_type4": 605,
+      "drug_test_type4_name": "Cannabinoid*",
+      "drug_test_type5": 155,
+      "drug_test_type5_name": "Narcotic*",
+      "drug_test_type6": 189,
+      "drug_test_type6_name": "Narcotic*",
+      "ejection": 0,
+      "ejection_name": "Not Ejected",
+      "ejection_path": 0,
+      "ejection_path_name": "Ejection Path Not Applicable",
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extrication": "Extricated",
+      "fatal_injury_at_work": "No (The Injury Was Not At Work)",
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 42,
+      "first_harmful_event_name": "Tree (Standing Only)",
+      "functional_system": "5",
+      "functional_system_name": "Major Collector",
+      "hispanic_origin": 7,
+      "hispanic_origin_name": "Non-Hispanic",
+      "hour_of_crash": 11,
+      "hour_of_death": 11,
+      "indication_of_misuse_of_restraint_system_helmet": "No",
+      "initial_contact_point": 12,
+      "initial_contact_point_name": "Clock points",
+      "injury_severity": 4,
+      "injury_severity_name": "Fatal Injury (K)",
+      "lag_hours": 0,
+      "lag_minutes": 0,
+      "land_use": "1",
+      "land_use_name": "Rural",
+      "make_model_combined": 12471,
+      "manner_of_collision": 0,
+      "manner_of_collision_name": "Not Collision with Motor Vehicle in Transport (Not Necessarily in Transport for\n2005-2009)",
+      "method_of_alcohol_determination_by_police": "Not Reported",
+      "method_of_drug_determination_by_police": "Not Reported",
+      "minute_of_crash": 16,
+      "minute_of_death": 16,
+      "month_of_crash": 4,
+      "month_of_death": 4,
+      "non_motorist_location_at_time_of_crash": 0,
+      "non_motorist_location_at_time_of_crash_name": "Occupant of a Motor Vehicle (Includes Railway Train Occupants\nSince 2006)",
+      "number_of_motor_vehicle_striking_non_motorist": 0,
+      "number_of_motor_vehicles_in_transport_mvit": 1,
+      "person_number": 1,
+      "person_type": 1,
+      "person_type_name": "Driver of a Motor Vehicle In-Transport",
+      "police_reported_alcohol_involvement": "No (Alcohol Not Involved)",
+      "police_reported_drug_involvement": "No (Drugs Not Involved)",
+      "race": 1,
+      "race_name": "White",
+      "related_factors_person_level1": 0,
+      "related_factors_person_level2": 0,
+      "related_factors_person_level3": 0,
+      "restraint_system_helmet_use": 7,
+      "restraint_system_helmet_use_name": "None Used",
+      "rollover": "No Rollover",
+      "school_bus_related": "No",
+      "seating_position": 11,
+      "seating_position_name": "Front Seat \u2013 Left Side (Driver's Side)",
+      "sex": "Male",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 39,
+      "timestamp_of_crash": "2015-04-12T11:16:00+00:00",
+      "transported_to_first_treatment_facility": 0,
+      "transported_to_first_treatment_facility_name": "Not Transported",
+      "vehicle_make": 12,
+      "vehicle_make_name": "Ford",
+      "vehicle_number": 1,
+      "vehicle_trailing": "No Trailing Unit",
+      "year_of_death": 2015
+    },
+    {
+      "age": 58,
+      "air_bag_deployed": 99,
+      "air_bag_deployed_name": "Deployment Unknown",
+      "alcohol_test_status1": "Test Given",
+      "alcohol_test_status2": "Blood Test",
+      "alcohol_test_status3": "197",
+      "alcohol_test_status3_name": "Actual Value of BAC Test",
+      "body_type": 31,
+      "body_type_name": "Standard Pickup",
+      "consecutive_number": 310180,
+      "county": 55,
+      "day_of_crash": 5,
+      "day_of_death": 5,
+      "death_time": 220,
+      "died_at_scene_en_route": "Died at Scene",
+      "drug_test_status": "Test Given",
+      "drug_test_type1": "Blood Test",
+      "drug_test_type2": "Blood Test",
+      "drug_test_type3": "Test Not Given",
+      "drug_test_type4": 304,
+      "drug_test_type4_name": "Depressant*",
+      "drug_test_type5": 189,
+      "drug_test_type5_name": "Narcotic*",
+      "drug_test_type6": 0,
+      "drug_test_type6_name": "Not Tested for Drugs",
+      "ejection": 0,
+      "ejection_name": "Not Ejected",
+      "ejection_path": 0,
+      "ejection_path_name": "Ejection Path Not Applicable",
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extrication": "Extricated",
+      "fatal_injury_at_work": "No (The Injury Was Not At Work)",
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 19,
+      "first_harmful_event_name": "Building",
+      "functional_system": "4",
+      "functional_system_name": "Minor Arterial",
+      "hispanic_origin": 7,
+      "hispanic_origin_name": "Non-Hispanic",
+      "hour_of_crash": 2,
+      "hour_of_death": 2,
+      "indication_of_misuse_of_restraint_system_helmet": "No",
+      "initial_contact_point": 12,
+      "initial_contact_point_name": "Clock points",
+      "injury_severity": 4,
+      "injury_severity_name": "Fatal Injury (K)",
+      "lag_hours": 0,
+      "lag_minutes": 0,
+      "land_use": "1",
+      "land_use_name": "Rural",
+      "make_model_combined": 20481,
+      "manner_of_collision": 0,
+      "manner_of_collision_name": "Not Collision with Motor Vehicle in Transport (Not Necessarily in Transport for\n2005-2009)",
+      "method_of_alcohol_determination_by_police": "Not Reported",
+      "method_of_drug_determination_by_police": "Not Reported",
+      "minute_of_crash": 20,
+      "minute_of_death": 20,
+      "month_of_crash": 11,
+      "month_of_death": 11,
+      "non_motorist_location_at_time_of_crash": 0,
+      "non_motorist_location_at_time_of_crash_name": "Occupant of a Motor Vehicle (Includes Railway Train Occupants\nSince 2006)",
+      "number_of_motor_vehicle_striking_non_motorist": 0,
+      "number_of_motor_vehicles_in_transport_mvit": 1,
+      "person_number": 1,
+      "person_type": 1,
+      "person_type_name": "Driver of a Motor Vehicle In-Transport",
+      "police_reported_alcohol_involvement": "Yes (Alcohol Involved)",
+      "police_reported_drug_involvement": "No (Drugs Not Involved)",
+      "race": 1,
+      "race_name": "White",
+      "related_factors_person_level1": 0,
+      "related_factors_person_level2": 0,
+      "related_factors_person_level3": 0,
+      "restraint_system_helmet_use": 99,
+      "restraint_system_helmet_use_name": "Unknown",
+      "rollover": "No Rollover",
+      "school_bus_related": "No",
+      "seating_position": 11,
+      "seating_position_name": "Front Seat \u2013 Left Side (Driver's Side)",
+      "sex": "Male",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 31,
+      "timestamp_of_crash": "2015-11-05T02:20:00+00:00",
+      "transported_to_first_treatment_facility": 0,
+      "transported_to_first_treatment_facility_name": "Not Transported",
+      "vehicle_make": 20,
+      "vehicle_make_name": "Chevrolet",
+      "vehicle_number": 1,
+      "vehicle_trailing": "No Trailing Unit",
+      "year_of_death": 2015
+    }
+  ]
+}

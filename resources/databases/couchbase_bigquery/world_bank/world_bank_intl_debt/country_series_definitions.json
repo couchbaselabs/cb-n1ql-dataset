@@ -1,0 +1,110 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`description` = \"Data on Foreign Direct Investme...\", `series_code` = \"BX.KLT.DINV.CD.DT\"",
+        "properties": {
+          "country_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ALB",
+              "ARG",
+              "AZE",
+              "BDI",
+              "BFA"
+            ],
+            "type": "string"
+          },
+          "description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Data on Foreign Direct Investm..."
+            ],
+            "type": "string"
+          },
+          "series_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BX.KLT.DINV.CD.DT"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "country_series_definitions::2",
+                  "country_series_definitions::3",
+                  "country_series_definitions::5",
+                  "country_series_definitions::6",
+                  "country_series_definitions::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "country_series_definitions::2"
+              },
+              {
+                "id": "country_series_definitions::3"
+              },
+              {
+                "id": "country_series_definitions::5"
+              },
+              {
+                "id": "country_series_definitions::6"
+              },
+              {
+                "id": "country_series_definitions::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "AZE",
+      "description": "Data on Foreign Direct Investment are based on Balance of Payments reported by the International Monetary Fund. Unless otherwise specified in the specific years.",
+      "series_code": "BX.KLT.DINV.CD.DT"
+    },
+    {
+      "country_code": "BFA",
+      "description": "Data on Foreign Direct Investment are based on Balance of Payments reported by the International Monetary Fund. Unless otherwise specified in the specific years.",
+      "series_code": "BX.KLT.DINV.CD.DT"
+    },
+    {
+      "country_code": "BDI",
+      "description": "Data on Foreign Direct Investment are based on Balance of Payments reported by the International Monetary Fund. Unless otherwise specified in the specific years.",
+      "series_code": "BX.KLT.DINV.CD.DT"
+    },
+    {
+      "country_code": "ALB",
+      "description": "Data on Foreign Direct Investment are based on Balance of Payments reported by the International Monetary Fund. Unless otherwise specified in the specific years.",
+      "series_code": "BX.KLT.DINV.CD.DT"
+    },
+    {
+      "country_code": "ARM",
+      "description": "Data on Foreign Direct Investment are based on Balance of Payments reported by the International Monetary Fund. Unless otherwise specified in the specific years.",
+      "series_code": "BX.KLT.DINV.CD.DT"
+    }
+  ]
+}

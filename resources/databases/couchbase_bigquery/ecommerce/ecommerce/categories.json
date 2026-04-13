@@ -1,0 +1,97 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "category": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bags",
+              "Fun"
+            ],
+            "type": "string"
+          },
+          "productSKU": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GGOEGBCR024399",
+              "GGOEGBJL013999",
+              "GGOEGBRB013899",
+              "GGOEGCMB020932",
+              "GGOEGOBC078699"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "categories::0",
+                  "categories::4",
+                  "categories::5",
+                  "categories::6",
+                  "categories::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "categories::0"
+              },
+              {
+                "id": "categories::4"
+              },
+              {
+                "id": "categories::5"
+              },
+              {
+                "id": "categories::6"
+              },
+              {
+                "id": "categories::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "category": "Bags",
+      "productSKU": "GGOEGBCR024399"
+    },
+    {
+      "category": "Bags",
+      "productSKU": "GGOEGBJL013999"
+    },
+    {
+      "category": "Fun",
+      "productSKU": "GGOEAOBH078799"
+    },
+    {
+      "category": "Bags",
+      "productSKU": "GGOEGBRB013899"
+    },
+    {
+      "category": "Bags",
+      "productSKU": "GGOEGBJC019999"
+    }
+  ]
+}

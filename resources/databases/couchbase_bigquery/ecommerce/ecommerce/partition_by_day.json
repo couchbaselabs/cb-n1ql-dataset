@@ -1,0 +1,96 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`date_formatted` = \"2017-01-07\"",
+        "properties": {
+          "date_formatted": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-01-07"
+            ],
+            "type": "string"
+          },
+          "fullvisitorId": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "36795211203604863",
+              "6738952039587290285",
+              "6931275720910258278",
+              "8698198567195866886",
+              "9417745171596243636"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "partition_by_day::0",
+                  "partition_by_day::1",
+                  "partition_by_day::2",
+                  "partition_by_day::4",
+                  "partition_by_day::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "partition_by_day::0"
+              },
+              {
+                "id": "partition_by_day::1"
+              },
+              {
+                "id": "partition_by_day::2"
+              },
+              {
+                "id": "partition_by_day::4"
+              },
+              {
+                "id": "partition_by_day::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "date_formatted": "2017-01-07",
+      "fullvisitorId": "525415745727848140"
+    },
+    {
+      "date_formatted": "2017-01-07",
+      "fullvisitorId": "6738952039587290285"
+    },
+    {
+      "date_formatted": "2017-01-07",
+      "fullvisitorId": "5239189779319162258"
+    },
+    {
+      "date_formatted": "2017-01-07",
+      "fullvisitorId": "9417745171596243636"
+    },
+    {
+      "date_formatted": "2017-01-07",
+      "fullvisitorId": "36795211203604863"
+    }
+  ]
+}

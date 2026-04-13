@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "global": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.054,
+              0.056,
+              0.069,
+              0.075,
+              0.085
+            ],
+            "type": "number"
+          },
+          "report_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "type": "number"
+          },
+          "workforce": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "selfid_disability",
+              "selfid_lgbtq",
+              "selfid_military"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dar_selfid_representation::0",
+                  "dar_selfid_representation::2",
+                  "dar_selfid_representation::4",
+                  "dar_selfid_representation::6",
+                  "dar_selfid_representation::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "dar_selfid_representation::0"
+              },
+              {
+                "id": "dar_selfid_representation::2"
+              },
+              {
+                "id": "dar_selfid_representation::4"
+              },
+              {
+                "id": "dar_selfid_representation::6"
+              },
+              {
+                "id": "dar_selfid_representation::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "global": 0.085,
+      "report_year": 2019,
+      "workforce": "selfid_lgbtq"
+    },
+    {
+      "global": 0.054,
+      "report_year": 2022,
+      "workforce": "selfid_disability"
+    },
+    {
+      "global": 0.061,
+      "report_year": 2020,
+      "workforce": "selfid_disability"
+    },
+    {
+      "global": 0.052,
+      "report_year": 2019,
+      "workforce": "selfid_military"
+    },
+    {
+      "global": 0.056,
+      "report_year": 2021,
+      "workforce": "selfid_disability"
+    }
+  ]
+}

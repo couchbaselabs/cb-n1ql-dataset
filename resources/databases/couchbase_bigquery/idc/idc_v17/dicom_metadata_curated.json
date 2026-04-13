@@ -1,0 +1,146 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "BodyPartExamined": {
+            "#docs": [
+              177,
+              823
+            ],
+            "%docs": [
+              17.7,
+              82.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "ABDOMEN",
+                "BREAST",
+                "CHEST",
+                "COLON",
+                "LUNG"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "SOPInstanceUID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.2.840.113654.2.55.2940760251...",
+              "1.2.840.113654.2.55.4128770922...",
+              "1.2.840.113654.2.55.5610610417...",
+              "1.2.840.113654.2.55.6887811145...",
+              "1.3.6.1.4.1.14519.5.2.1.6450.4..."
+            ],
+            "type": "string"
+          },
+          "SliceThickness": {
+            "#docs": [
+              11,
+              989
+            ],
+            "%docs": [
+              1.1,
+              98.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                2,
+                2.5,
+                3,
+                3.75,
+                4
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dicom_metadata_curated::111955",
+                  "dicom_metadata_curated::128741",
+                  "dicom_metadata_curated::139016",
+                  "dicom_metadata_curated::164151",
+                  "dicom_metadata_curated::175174"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "dicom_metadata_curated::111955"
+              },
+              {
+                "id": "dicom_metadata_curated::128741"
+              },
+              {
+                "id": "dicom_metadata_curated::139016"
+              },
+              {
+                "id": "dicom_metadata_curated::164151"
+              },
+              {
+                "id": "dicom_metadata_curated::175174"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "BodyPartExamined": null,
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.256138300526606000032977075491703168954",
+      "SliceThickness": 1.6
+    },
+    {
+      "BodyPartExamined": null,
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1620.1225.222879847804437208624119594968",
+      "SliceThickness": 1.6
+    },
+    {
+      "BodyPartExamined": null,
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.98663372278497157754106596917328951221",
+      "SliceThickness": 1.6
+    },
+    {
+      "BodyPartExamined": null,
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.148682714386697512881905230954113496298",
+      "SliceThickness": 1.6
+    },
+    {
+      "BodyPartExamined": null,
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.22980946702058939648790193308929411913",
+      "SliceThickness": 1.6
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "borough": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bexley",
+              "Enfield",
+              "Hillingdon",
+              "Newham",
+              "Wandsworth"
+            ],
+            "type": "string"
+          },
+          "lsoa_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "E01000367",
+              "E01001450",
+              "E01002543",
+              "E01003532",
+              "E01004587"
+            ],
+            "type": "string"
+          },
+          "major_category": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Criminal Damage",
+              "Other Notifiable Offences",
+              "Robbery",
+              "Theft and Handling",
+              "Violence Against the Person"
+            ],
+            "type": "string"
+          },
+          "minor_category": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Common Assault",
+              "Criminal Damage To Dwelling",
+              "Criminal Damage To Other Build...",
+              "Personal Property",
+              "Theft/Taking Of Motor Vehicle"
+            ],
+            "type": "string"
+          },
+          "month": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              7,
+              8,
+              12
+            ],
+            "type": "number"
+          },
+          "value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2008,
+              2009,
+              2010,
+              2013,
+              2015
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "crime_by_lsoa::10254058",
+                  "crime_by_lsoa::11186935",
+                  "crime_by_lsoa::11960278",
+                  "crime_by_lsoa::12829475",
+                  "crime_by_lsoa::12930156"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "crime_by_lsoa::10254058"
+              },
+              {
+                "id": "crime_by_lsoa::11186935"
+              },
+              {
+                "id": "crime_by_lsoa::11960278"
+              },
+              {
+                "id": "crime_by_lsoa::12829475"
+              },
+              {
+                "id": "crime_by_lsoa::12930156"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "borough": "Hammersmith and Fulham",
+      "lsoa_code": "E01001959",
+      "major_category": "Burglary",
+      "minor_category": "Burglary in a Dwelling",
+      "month": 3,
+      "value": 4,
+      "year": 2008
+    },
+    {
+      "borough": "Barnet",
+      "lsoa_code": "E01000118",
+      "major_category": "Violence Against the Person",
+      "minor_category": "Common Assault",
+      "month": 9,
+      "value": 0,
+      "year": 2008
+    },
+    {
+      "borough": "Brent",
+      "lsoa_code": "E01000471",
+      "major_category": "Violence Against the Person",
+      "minor_category": "Common Assault",
+      "month": 12,
+      "value": 0,
+      "year": 2008
+    },
+    {
+      "borough": "Camden",
+      "lsoa_code": "E01000934",
+      "major_category": "Violence Against the Person",
+      "minor_category": "Common Assault",
+      "month": 11,
+      "value": 0,
+      "year": 2008
+    },
+    {
+      "borough": "Hounslow",
+      "lsoa_code": "E01002605",
+      "major_category": "Violence Against the Person",
+      "minor_category": "Common Assault",
+      "month": 10,
+      "value": 3,
+      "year": 2008
+    }
+  ]
+}

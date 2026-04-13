@@ -1,0 +1,584 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`borough_code` = \"E00000000\", `borough_name` = \" NOT GEO-CODED\", `cal_year` = 2017, `frs` = \"OverTheBorder\", `incident_station_ground` = \"OverTheBorder\", `proper_case` = \"Not geo-coded\", `property_category` = \"Outdoor\", `ward_code` = \"E00000000\", `ward_name` = \" Not geo-coded\", `ward_name_new` = \"Not geo-coded\"",
+        "properties": {
+          "address_qualifier": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "In street outside gazetteer lo...",
+              "On land associated with buildi...",
+              "On motorway / elevated road",
+              "Open land/water - nearest gaze..."
+            ],
+            "type": "string"
+          },
+          "borough_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "E00000000"
+            ],
+            "type": "string"
+          },
+          "borough_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " NOT GEO-CODED"
+            ],
+            "type": "string"
+          },
+          "cal_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2017
+            ],
+            "type": "number"
+          },
+          "date_of_call": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-02-04",
+              "2017-02-08",
+              "2017-02-23",
+              "2017-04-10",
+              "2017-04-22"
+            ],
+            "type": "string"
+          },
+          "easting_m": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              504537,
+              521947,
+              523403,
+              527754,
+              557544
+            ],
+            "type": "number"
+          },
+          "easting_rounded": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              504550,
+              521950,
+              523450,
+              527750,
+              557550
+            ],
+            "type": "number"
+          },
+          "first_pump_arriving_attendance_time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "first_pump_arriving_deployed_from_station": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "frs": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OverTheBorder"
+            ],
+            "type": "string"
+          },
+          "hour_of_call": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              15,
+              18,
+              19,
+              20
+            ],
+            "type": "number"
+          },
+          "incident_group": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Fire",
+              "Special Service"
+            ],
+            "type": "string"
+          },
+          "incident_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "014812-04022017",
+              "016200-08022017",
+              "022779-23022017",
+              "044075-10042017",
+              "050267-22042017"
+            ],
+            "type": "string"
+          },
+          "incident_station_ground": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OverTheBorder"
+            ],
+            "type": "string"
+          },
+          "northing_m": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              159151,
+              162750,
+              180094,
+              186262,
+              199565
+            ],
+            "type": "number"
+          },
+          "northing_rounded": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              159150,
+              162750,
+              180050,
+              186250,
+              199550
+            ],
+            "type": "number"
+          },
+          "num_pumps_attending": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              4
+            ],
+            "type": "number"
+          },
+          "num_stations_with_pumps_attending": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              4
+            ],
+            "type": "number"
+          },
+          "postcode_district": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "EN5",
+              "KT17",
+              "RM15",
+              "SM7",
+              "UB9"
+            ],
+            "type": "string"
+          },
+          "postcode_full": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "EN5 4RX",
+              "KT17 1UD",
+              "RM15 4AA",
+              "SM7 3PF",
+              "UB9 5BW"
+            ],
+            "type": "string"
+          },
+          "proper_case": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not geo-coded"
+            ],
+            "type": "string"
+          },
+          "property_category": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Outdoor"
+            ],
+            "type": "string"
+          },
+          "property_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Heathland ",
+              "Loose refuse ",
+              "River/canal ",
+              "Road surface/pavement ",
+              "Scrub land "
+            ],
+            "type": "string"
+          },
+          "second_pump_arriving_attendance_time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "second_pump_arriving_deployed_from_station": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "special_service_type": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Making Safe (not RTC)",
+                "No action (not false alarm)"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "stop_code_description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Secondary Fire",
+              "Special Service"
+            ],
+            "type": "string"
+          },
+          "time_of_call": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "04:57:33",
+              "15:49:24",
+              "18:20:10",
+              "19:17:24",
+              "20:38:57"
+            ],
+            "type": "string"
+          },
+          "timestamp_of_call": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2017-02-04T19:17:24+00:00",
+              "2017-02-08T04:57:33+00:00",
+              "2017-02-23T15:49:24+00:00",
+              "2017-04-10T18:20:10+00:00",
+              "2017-04-22T20:38:57+00:00"
+            ],
+            "type": "string"
+          },
+          "ward_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "E00000000"
+            ],
+            "type": "string"
+          },
+          "ward_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " Not geo-coded"
+            ],
+            "type": "string"
+          },
+          "ward_name_new": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not geo-coded"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "fire_brigade_service_calls::3",
+                  "fire_brigade_service_calls::5",
+                  "fire_brigade_service_calls::7",
+                  "fire_brigade_service_calls::8",
+                  "fire_brigade_service_calls::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "fire_brigade_service_calls::3"
+              },
+              {
+                "id": "fire_brigade_service_calls::5"
+              },
+              {
+                "id": "fire_brigade_service_calls::7"
+              },
+              {
+                "id": "fire_brigade_service_calls::8"
+              },
+              {
+                "id": "fire_brigade_service_calls::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address_qualifier": "Open land/water - nearest gazetteer location",
+      "borough_code": "E00000000",
+      "borough_name": " NOT GEO-CODED",
+      "cal_year": 2017,
+      "date_of_call": "2017-04-10",
+      "easting_m": 552218,
+      "easting_rounded": 552250,
+      "first_pump_arriving_attendance_time": null,
+      "first_pump_arriving_deployed_from_station": null,
+      "frs": "OverTheBorder",
+      "hour_of_call": 14,
+      "incident_group": "Fire",
+      "incident_number": "043965-10042017",
+      "incident_station_ground": "OverTheBorder",
+      "northing_m": 173317,
+      "northing_rounded": 173350,
+      "num_pumps_attending": 1,
+      "num_stations_with_pumps_attending": 1,
+      "postcode_district": "DA1",
+      "postcode_full": "DA1 2PN",
+      "proper_case": "Not geo-coded",
+      "property_category": "Outdoor",
+      "property_type": "Heathland ",
+      "second_pump_arriving_attendance_time": null,
+      "second_pump_arriving_deployed_from_station": null,
+      "special_service_type": null,
+      "stop_code_description": "Secondary Fire",
+      "time_of_call": "14:52:13",
+      "timestamp_of_call": "2017-04-10T14:52:13+00:00",
+      "ward_code": "E00000000",
+      "ward_name": " Not geo-coded",
+      "ward_name_new": "Not geo-coded"
+    },
+    {
+      "address_qualifier": "Open land/water - nearest gazetteer location",
+      "borough_code": "E00000000",
+      "borough_name": " NOT GEO-CODED",
+      "cal_year": 2017,
+      "date_of_call": "2017-03-19",
+      "easting_m": 557845,
+      "easting_rounded": 557850,
+      "first_pump_arriving_attendance_time": null,
+      "first_pump_arriving_deployed_from_station": null,
+      "frs": "OverTheBorder",
+      "hour_of_call": 14,
+      "incident_group": "Fire",
+      "incident_number": "033152-19032017",
+      "incident_station_ground": "OverTheBorder",
+      "northing_m": 180497,
+      "northing_rounded": 180450,
+      "num_pumps_attending": 1,
+      "num_stations_with_pumps_attending": 1,
+      "postcode_district": "RM15",
+      "postcode_full": "RM15 6RL",
+      "proper_case": "Not geo-coded",
+      "property_category": "Outdoor",
+      "property_type": "Tree scrub ",
+      "second_pump_arriving_attendance_time": null,
+      "second_pump_arriving_deployed_from_station": null,
+      "special_service_type": null,
+      "stop_code_description": "Secondary Fire",
+      "time_of_call": "14:09:14",
+      "timestamp_of_call": "2017-03-19T14:09:14+00:00",
+      "ward_code": "E00000000",
+      "ward_name": " Not geo-coded",
+      "ward_name_new": "Not geo-coded"
+    },
+    {
+      "address_qualifier": "Open land/water - nearest gazetteer location",
+      "borough_code": "E00000000",
+      "borough_name": " NOT GEO-CODED",
+      "cal_year": 2017,
+      "date_of_call": "2017-02-04",
+      "easting_m": 521947,
+      "easting_rounded": 521950,
+      "first_pump_arriving_attendance_time": null,
+      "first_pump_arriving_deployed_from_station": null,
+      "frs": "OverTheBorder",
+      "hour_of_call": 19,
+      "incident_group": "Special Service",
+      "incident_number": "014812-04022017",
+      "incident_station_ground": "OverTheBorder",
+      "northing_m": 162750,
+      "northing_rounded": 162750,
+      "num_pumps_attending": 1,
+      "num_stations_with_pumps_attending": 1,
+      "postcode_district": "KT17",
+      "postcode_full": "KT17 1UD",
+      "proper_case": "Not geo-coded",
+      "property_category": "Outdoor",
+      "property_type": "River/canal ",
+      "second_pump_arriving_attendance_time": null,
+      "second_pump_arriving_deployed_from_station": null,
+      "special_service_type": "No action (not false alarm)",
+      "stop_code_description": "Special Service",
+      "time_of_call": "19:17:24",
+      "timestamp_of_call": "2017-02-04T19:17:24+00:00",
+      "ward_code": "E00000000",
+      "ward_name": " Not geo-coded",
+      "ward_name_new": "Not geo-coded"
+    },
+    {
+      "address_qualifier": "Open land/water - nearest gazetteer location",
+      "borough_code": "E00000000",
+      "borough_name": " NOT GEO-CODED",
+      "cal_year": 2017,
+      "date_of_call": "2017-04-10",
+      "easting_m": 504537,
+      "easting_rounded": 504550,
+      "first_pump_arriving_attendance_time": null,
+      "first_pump_arriving_deployed_from_station": null,
+      "frs": "OverTheBorder",
+      "hour_of_call": 18,
+      "incident_group": "Fire",
+      "incident_number": "044075-10042017",
+      "incident_station_ground": "OverTheBorder",
+      "northing_m": 186262,
+      "northing_rounded": 186250,
+      "num_pumps_attending": 1,
+      "num_stations_with_pumps_attending": 1,
+      "postcode_district": "UB9",
+      "postcode_full": "UB9 5BW",
+      "proper_case": "Not geo-coded",
+      "property_category": "Outdoor",
+      "property_type": "Scrub land ",
+      "second_pump_arriving_attendance_time": null,
+      "second_pump_arriving_deployed_from_station": null,
+      "special_service_type": null,
+      "stop_code_description": "Secondary Fire",
+      "time_of_call": "18:20:10",
+      "timestamp_of_call": "2017-04-10T18:20:10+00:00",
+      "ward_code": "E00000000",
+      "ward_name": " Not geo-coded",
+      "ward_name_new": "Not geo-coded"
+    },
+    {
+      "address_qualifier": "Open land/water - nearest gazetteer location",
+      "borough_code": "E00000000",
+      "borough_name": " NOT GEO-CODED",
+      "cal_year": 2017,
+      "date_of_call": "2017-04-22",
+      "easting_m": 523403,
+      "easting_rounded": 523450,
+      "first_pump_arriving_attendance_time": null,
+      "first_pump_arriving_deployed_from_station": null,
+      "frs": "OverTheBorder",
+      "hour_of_call": 20,
+      "incident_group": "Fire",
+      "incident_number": "050267-22042017",
+      "incident_station_ground": "OverTheBorder",
+      "northing_m": 199565,
+      "northing_rounded": 199550,
+      "num_pumps_attending": 1,
+      "num_stations_with_pumps_attending": 1,
+      "postcode_district": "EN5",
+      "postcode_full": "EN5 4RX",
+      "proper_case": "Not geo-coded",
+      "property_category": "Outdoor",
+      "property_type": "Loose refuse ",
+      "second_pump_arriving_attendance_time": null,
+      "second_pump_arriving_deployed_from_station": null,
+      "special_service_type": null,
+      "stop_code_description": "Secondary Fire",
+      "time_of_call": "20:38:57",
+      "timestamp_of_call": "2017-04-22T20:38:57+00:00",
+      "ward_code": "E00000000",
+      "ward_name": " Not geo-coded",
+      "ward_name_new": "Not geo-coded"
+    }
+  ]
+}

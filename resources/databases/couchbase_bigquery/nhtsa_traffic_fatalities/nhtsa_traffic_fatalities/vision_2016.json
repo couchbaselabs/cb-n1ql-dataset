@@ -1,0 +1,143 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`drivers_vision_obscured_by` = 99, `drivers_vision_obscured_by_name` = \"Unknown\"",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              230004,
+              230018,
+              230048,
+              330056,
+              380091
+            ],
+            "type": "number"
+          },
+          "drivers_vision_obscured_by": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              99
+            ],
+            "type": "number"
+          },
+          "drivers_vision_obscured_by_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              23,
+              29,
+              33,
+              38,
+              46
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "vision_2016::2",
+                  "vision_2016::4",
+                  "vision_2016::6",
+                  "vision_2016::7",
+                  "vision_2016::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "vision_2016::2"
+              },
+              {
+                "id": "vision_2016::4"
+              },
+              {
+                "id": "vision_2016::6"
+              },
+              {
+                "id": "vision_2016::7"
+              },
+              {
+                "id": "vision_2016::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 230004,
+      "drivers_vision_obscured_by": 99,
+      "drivers_vision_obscured_by_name": "Unknown",
+      "state_number": 23,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 460022,
+      "drivers_vision_obscured_by": 99,
+      "drivers_vision_obscured_by_name": "Unknown",
+      "state_number": 46,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 330056,
+      "drivers_vision_obscured_by": 99,
+      "drivers_vision_obscured_by_name": "Unknown",
+      "state_number": 33,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 190336,
+      "drivers_vision_obscured_by": 99,
+      "drivers_vision_obscured_by_name": "Unknown",
+      "state_number": 19,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 230153,
+      "drivers_vision_obscured_by": 99,
+      "drivers_vision_obscured_by_name": "Unknown",
+      "state_number": 23,
+      "vehicle_number": 1
+    }
+  ]
+}

@@ -1,0 +1,2142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "app_info": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "firebase_app_id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "1:300830567303:android:9b9ba2c...",
+                  "1:300830567303:ios:09b1ab1d3ca..."
+                ],
+                "type": "string"
+              },
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "com.google.flood2",
+                  "com.labpixies.flood"
+                ],
+                "type": "string"
+              },
+              "install_source": {
+                "#docs": [
+                  816,
+                  820
+                ],
+                "%docs": [
+                  81.6,
+                  82
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    "com.android.vending",
+                    "iTunes"
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "install_store": {
+                "#docs": [
+                  820,
+                  816
+                ],
+                "%docs": [
+                  82,
+                  81.6
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    "com.android.vending",
+                    "iTunes"
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "version": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "2.59",
+                  "2.6.10",
+                  "2.6.26",
+                  "2.6.30",
+                  "2.62"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+                "id": "com.labpixies.flood",
+                "install_source": "com.android.vending",
+                "install_store": null,
+                "version": "2.62"
+              },
+              {
+                "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+                "id": "com.labpixies.flood",
+                "install_source": "com.android.vending",
+                "install_store": null,
+                "version": "2.62"
+              },
+              {
+                "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+                "id": "com.labpixies.flood",
+                "install_source": "com.android.vending",
+                "install_store": null,
+                "version": "2.62"
+              },
+              {
+                "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+                "id": "com.labpixies.flood",
+                "install_source": "com.android.vending",
+                "install_store": null,
+                "version": "2.62"
+              },
+              {
+                "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+                "id": "com.labpixies.flood",
+                "install_source": "com.android.vending",
+                "install_store": null,
+                "version": "2.62"
+              }
+            ],
+            "type": "object"
+          },
+          "device": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "advertising_id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "category": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mobile",
+                  "tablet"
+                ],
+                "type": "string"
+              },
+              "is_limited_ad_tracking": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "No",
+                  "Yes"
+                ],
+                "type": "string"
+              },
+              "language": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "en-au",
+                  "en-gb",
+                  "en-us",
+                  "ja-jp",
+                  "pt-br"
+                ],
+                "type": "string"
+              },
+              "mobile_brand_name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "not available in demo dataset"
+                ],
+                "type": "string"
+              },
+              "mobile_marketing_name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "not available in demo dataset"
+                ],
+                "type": "string"
+              },
+              "mobile_model_name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "not available in demo dataset"
+                ],
+                "type": "string"
+              },
+              "mobile_os_hardware_model": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "not available in demo dataset"
+                ],
+                "type": "string"
+              },
+              "operating_system": {
+                "#docs": [
+                  816,
+                  820
+                ],
+                "%docs": [
+                  81.6,
+                  82
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    "ANDROID",
+                    "IOS"
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "operating_system_version": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "not available in demo dataset"
+                ],
+                "type": "string"
+              },
+              "time_zone_offset_seconds": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  -18000,
+                  -10800,
+                  10800,
+                  19800,
+                  32400
+                ],
+                "type": "number"
+              },
+              "vendor_id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              }
+            },
+            "samples": [
+              {
+                "advertising_id": null,
+                "category": "mobile",
+                "is_limited_ad_tracking": "No",
+                "language": "en-nz",
+                "mobile_brand_name": "not available in demo dataset",
+                "mobile_marketing_name": "not available in demo dataset",
+                "mobile_model_name": "not available in demo dataset",
+                "mobile_os_hardware_model": "not available in demo dataset",
+                "operating_system": "ANDROID",
+                "operating_system_version": "not available in demo dataset",
+                "time_zone_offset_seconds": 43200,
+                "vendor_id": null
+              },
+              {
+                "advertising_id": null,
+                "category": "mobile",
+                "is_limited_ad_tracking": "No",
+                "language": "en-us",
+                "mobile_brand_name": "not available in demo dataset",
+                "mobile_marketing_name": "not available in demo dataset",
+                "mobile_model_name": "not available in demo dataset",
+                "mobile_os_hardware_model": "not available in demo dataset",
+                "operating_system": "ANDROID",
+                "operating_system_version": "not available in demo dataset",
+                "time_zone_offset_seconds": -18000,
+                "vendor_id": null
+              },
+              {
+                "advertising_id": null,
+                "category": "mobile",
+                "is_limited_ad_tracking": "No",
+                "language": "en-us",
+                "mobile_brand_name": "not available in demo dataset",
+                "mobile_marketing_name": "not available in demo dataset",
+                "mobile_model_name": "not available in demo dataset",
+                "mobile_os_hardware_model": "not available in demo dataset",
+                "operating_system": "ANDROID",
+                "operating_system_version": "not available in demo dataset",
+                "time_zone_offset_seconds": -14400,
+                "vendor_id": null
+              },
+              {
+                "advertising_id": null,
+                "category": "mobile",
+                "is_limited_ad_tracking": "No",
+                "language": "en-us",
+                "mobile_brand_name": "not available in demo dataset",
+                "mobile_marketing_name": "not available in demo dataset",
+                "mobile_model_name": "not available in demo dataset",
+                "mobile_os_hardware_model": "not available in demo dataset",
+                "operating_system": "ANDROID",
+                "operating_system_version": "not available in demo dataset",
+                "time_zone_offset_seconds": 10800,
+                "vendor_id": null
+              },
+              {
+                "advertising_id": null,
+                "category": "mobile",
+                "is_limited_ad_tracking": "No",
+                "language": "en-us",
+                "mobile_brand_name": "not available in demo dataset",
+                "mobile_marketing_name": "not available in demo dataset",
+                "mobile_model_name": "not available in demo dataset",
+                "mobile_os_hardware_model": "not available in demo dataset",
+                "operating_system": "ANDROID",
+                "operating_system_version": "not available in demo dataset",
+                "time_zone_offset_seconds": 10800,
+                "vendor_id": null
+              }
+            ],
+            "type": "object"
+          },
+          "event_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20180614",
+              "20180615",
+              "20180616",
+              "20180617",
+              "20180630"
+            ],
+            "type": "string"
+          },
+          "event_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "level_reset_quickplay",
+              "level_start_quickplay",
+              "screen_view",
+              "select_content",
+              "user_engagement"
+            ],
+            "type": "string"
+          },
+          "event_params": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 4,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "Flavor": "`key` = \"firebase_screen_id\"",
+              "properties": {
+                "key": {
+                  "#docs": 4,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "firebase_screen_id"
+                  ],
+                  "type": "string"
+                },
+                "value": {
+                  "#docs": 4,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "properties": {
+                    "double_value": {
+                      "#docs": 4,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "samples": [
+                        null
+                      ],
+                      "type": "null"
+                    },
+                    "float_value": {
+                      "#docs": 4,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "samples": [
+                        null
+                      ],
+                      "type": "null"
+                    },
+                    "int_value": {
+                      "#docs": [
+                        3,
+                        1
+                      ],
+                      "%docs": [
+                        75,
+                        25
+                      ],
+                      "nestingDepth": 3,
+                      "samples": [
+                        [],
+                        [
+                          -8182998293412887290,
+                          -3467413893370975102,
+                          -2422358771763015728,
+                          -1681281413180983899,
+                          -1375019908352821045
+                        ]
+                      ],
+                      "type": [
+                        "null",
+                        "number"
+                      ]
+                    },
+                    "string_value": {
+                      "#docs": [
+                        1,
+                        3
+                      ],
+                      "%docs": [
+                        25,
+                        75
+                      ],
+                      "nestingDepth": 3,
+                      "samples": [
+                        [
+                          null
+                        ],
+                        []
+                      ],
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 7,
+            "minItems": 2,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "key": "firebase_previous_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 677118014763047498,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "firebase_event_origin",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "auto"
+                  }
+                },
+                {
+                  "key": "firebase_screen_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 677118014763047499,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "firebase_previous_class",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "GADNFullScreenAdViewController"
+                  }
+                },
+                {
+                  "key": "firebase_screen",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "FIRootViewController/Interstitial"
+                  }
+                },
+                {
+                  "key": "firebase_screen_class",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "GADNFullScreenAdViewController"
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "firebase_screen_class",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "GADNFullScreenAdViewController"
+                  }
+                },
+                {
+                  "key": "firebase_event_origin",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "auto"
+                  }
+                },
+                {
+                  "key": "firebase_screen_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": -3081566247566630852,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "engagement_time_msec",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 11842,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "firebase_screen",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "FIRootViewController/Interstitial"
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "firebase_screen_class",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "game_board"
+                  }
+                },
+                {
+                  "key": "firebase_event_origin",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "app+gtm"
+                  }
+                },
+                {
+                  "key": "firebase_screen_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": -1375019908352821045,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "board",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "S"
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "firebase_screen_class",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "game_over"
+                  }
+                },
+                {
+                  "key": "firebase_event_origin",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "auto"
+                  }
+                },
+                {
+                  "key": "firebase_screen_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": -5215528234115611449,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "engagement_time_msec",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 2280,
+                    "string_value": null
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "firebase_screen_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 5417352709358138902,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "engagement_time_msec",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 48921,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "firebase_screen_class",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "FIRootViewController"
+                  }
+                },
+                {
+                  "key": "firebase_event_origin",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "auto"
+                  }
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "event_previous_timestamp": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1529009355366077,
+                1529144322189425,
+                1529194748108052,
+                1529254616777047,
+                1530348001956011
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "event_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1529009412288077,
+              1529144387032425,
+              1529194843111052,
+              1529254669354047,
+              1530348027412011
+            ],
+            "type": "number"
+          },
+          "event_value_in_usd": {
+            "#docs": 183,
+            "%docs": 18.29,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "geo": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "city": {
+                "#docs": [
+                  979,
+                  334
+                ],
+                "%docs": [
+                  97.9,
+                  33.4
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    "Chicago",
+                    "Dallas",
+                    "New York",
+                    "Osaka",
+                    "Philadelphia"
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "continent": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Africa",
+                  "Americas",
+                  "Asia",
+                  "Europe",
+                  "Oceania"
+                ],
+                "type": "string"
+              },
+              "country": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Brazil",
+                  "India",
+                  "Japan",
+                  "Saudi Arabia",
+                  "United States"
+                ],
+                "type": "string"
+              },
+              "region": {
+                "#docs": [
+                  979,
+                  334
+                ],
+                "%docs": [
+                  97.9,
+                  33.4
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    "Illinois",
+                    "New York",
+                    "Osaka Prefecture",
+                    "Pennsylvania",
+                    "Texas"
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "samples": [
+              {
+                "city": null,
+                "continent": "Americas",
+                "country": "Brazil",
+                "region": null
+              },
+              {
+                "city": null,
+                "continent": "Americas",
+                "country": "United States",
+                "region": null
+              },
+              {
+                "city": null,
+                "continent": "Asia",
+                "country": "India",
+                "region": null
+              },
+              {
+                "city": null,
+                "continent": "Asia",
+                "country": "Japan",
+                "region": null
+              },
+              {
+                "city": null,
+                "continent": "Asia",
+                "country": "Saudi Arabia",
+                "region": null
+              }
+            ],
+            "type": "object"
+          },
+          "platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ANDROID",
+              "IOS"
+            ],
+            "type": "string"
+          },
+          "stream_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1051193346",
+              "1051193347"
+            ],
+            "type": "string"
+          },
+          "traffic_source": {
+            "#docs": [
+              704,
+              116,
+              116
+            ],
+            "%docs": [
+              70.4,
+              11.6,
+              11.6
+            ],
+            "nestingDepth": 0,
+            "properties": {
+              "medium": {
+                "#docs": 116,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "(none)"
+                ],
+                "type": "string"
+              },
+              "name": {
+                "#docs": 180,
+                "%docs": 155.17,
+                "nestingDepth": 1,
+                "samples": [
+                  "(direct)"
+                ],
+                "type": "string"
+              },
+              "source": {
+                "#docs": 116,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "(direct)"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              [
+                null
+              ],
+              [
+                {
+                  "medium": "(none)",
+                  "name": "(direct)",
+                  "source": "(direct)"
+                }
+              ],
+              [
+                {
+                  "medium": "(none)",
+                  "name": "(direct)",
+                  "source": "(direct)"
+                }
+              ]
+            ],
+            "type": [
+              "null",
+              "object",
+              "object"
+            ]
+          },
+          "user_first_touch_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1466443512658000,
+              1518714176651000,
+              1519252202385000,
+              1529252332620000,
+              1530347993207000
+            ],
+            "type": "number"
+          },
+          "user_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "user_ltv": {
+            "#docs": [
+              987,
+              13
+            ],
+            "%docs": [
+              98.7,
+              1.3
+            ],
+            "nestingDepth": 0,
+            "properties": {
+              "currency": {
+                "#docs": 13,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "USD"
+                ],
+                "type": "string"
+              },
+              "revenue": {
+                "#docs": 13,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  0.99,
+                  4.99
+                ],
+                "type": "number"
+              }
+            },
+            "samples": [
+              [
+                null
+              ],
+              [
+                {
+                  "currency": "USD",
+                  "revenue": 0.99
+                },
+                {
+                  "currency": "USD",
+                  "revenue": 4.99
+                }
+              ]
+            ],
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "user_properties": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 3,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "Flavor": "`key` = \"first_open_time\"",
+              "properties": {
+                "key": {
+                  "#docs": 3,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "first_open_time"
+                  ],
+                  "type": "string"
+                },
+                "value": {
+                  "#docs": 3,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "properties": {
+                    "double_value": {
+                      "#docs": 3,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "samples": [
+                        null
+                      ],
+                      "type": "null"
+                    },
+                    "float_value": {
+                      "#docs": 3,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "samples": [
+                        null
+                      ],
+                      "type": "null"
+                    },
+                    "int_value": {
+                      "#docs": [
+                        2,
+                        1
+                      ],
+                      "%docs": [
+                        66.66,
+                        33.33
+                      ],
+                      "nestingDepth": 3,
+                      "samples": [
+                        [],
+                        [
+                          1466443512658000,
+                          1518714176651000,
+                          1519252202385000,
+                          1529252332620000,
+                          1530347993207000
+                        ]
+                      ],
+                      "type": [
+                        "null",
+                        "number"
+                      ]
+                    },
+                    "set_timestamp_micros": {
+                      "#docs": 3,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "samples": [
+                        1530347997207000
+                      ],
+                      "type": "number"
+                    },
+                    "string_value": {
+                      "#docs": [
+                        1,
+                        2
+                      ],
+                      "%docs": [
+                        33.33,
+                        66.66
+                      ],
+                      "nestingDepth": 3,
+                      "samples": [
+                        [
+                          null
+                        ],
+                        []
+                      ],
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 8,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "key": "ad_frequency",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1486473371019000,
+                    "string_value": "3"
+                  }
+                },
+                {
+                  "key": "initial_extra_steps",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1466443669524000,
+                    "string_value": "10"
+                  }
+                },
+                {
+                  "key": "first_open_time",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1466443512658000,
+                    "set_timestamp_micros": 1466443583658000,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "firebase_exp_3",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1528320703079000,
+                    "string_value": "2"
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "ad_frequency",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1518714193754000,
+                    "string_value": "2"
+                  }
+                },
+                {
+                  "key": "initial_extra_steps",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1518714193822000,
+                    "string_value": "20"
+                  }
+                },
+                {
+                  "key": "first_open_time",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1518714176651000,
+                    "set_timestamp_micros": 1518714186651000,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "firebase_exp_3",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1528316635848000,
+                    "string_value": "0"
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "ad_frequency",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1519252125796000,
+                    "string_value": "3"
+                  }
+                },
+                {
+                  "key": "initial_extra_steps",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1519252126189000,
+                    "string_value": "5"
+                  }
+                },
+                {
+                  "key": "first_open_time",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1519252202385000,
+                    "set_timestamp_micros": 1519252124385000,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "firebase_exp_3",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1528318892113000,
+                    "string_value": "1"
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "num_levels_available",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1529254528011000,
+                    "string_value": "30"
+                  }
+                },
+                {
+                  "key": "plays_progressive",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1529252349592000,
+                    "string_value": "true"
+                  }
+                },
+                {
+                  "key": "initial_extra_steps",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1529252340139000,
+                    "string_value": "3"
+                  }
+                },
+                {
+                  "key": "first_open_time",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1529252332620000,
+                    "set_timestamp_micros": 1529252334620000,
+                    "string_value": null
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "num_levels_available",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1530347997284000,
+                    "string_value": "30"
+                  }
+                },
+                {
+                  "key": "initial_extra_steps",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "set_timestamp_micros": 1530347998088000,
+                    "string_value": "3"
+                  }
+                },
+                {
+                  "key": "first_open_time",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1530347993207000,
+                    "set_timestamp_micros": 1530347997207000,
+                    "string_value": null
+                  }
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "user_pseudo_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0B08423CCD5F1503B5A8B306FFED99...",
+              "2F09E506A0B41203B4A979B17D2A4F...",
+              "316C478F300B0BA8DAFF7995336802...",
+              "326651F167D600272DA4EC5EE0618D...",
+              "6AEA6D01FCA11A2C9FC07FF2E3D790..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "events_201806::events_20180614...",
+                  "events_201806::events_20180616...",
+                  "events_201806::events_20180616...",
+                  "events_201806::events_20180617...",
+                  "events_201806::events_20180630..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "events_201806::events_20180614::20508"
+              },
+              {
+                "id": "events_201806::events_20180616::17090"
+              },
+              {
+                "id": "events_201806::events_20180616::37957"
+              },
+              {
+                "id": "events_201806::events_20180617::10874"
+              },
+              {
+                "id": "events_201806::events_20180630::21468"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "app_info": {
+        "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+        "id": "com.labpixies.flood",
+        "install_source": null,
+        "install_store": "com.android.vending",
+        "version": "2.62"
+      },
+      "device": {
+        "advertising_id": null,
+        "category": "mobile",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "not available in demo dataset",
+        "mobile_marketing_name": "not available in demo dataset",
+        "mobile_model_name": "not available in demo dataset",
+        "mobile_os_hardware_model": "not available in demo dataset",
+        "operating_system": null,
+        "operating_system_version": "not available in demo dataset",
+        "time_zone_offset_seconds": -25200,
+        "vendor_id": null
+      },
+      "event_date": "20180612",
+      "event_name": "screen_view",
+      "event_params": [
+        {
+          "key": "firebase_screen_class",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "game_board"
+          }
+        },
+        {
+          "key": "firebase_event_origin",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "auto"
+          }
+        },
+        {
+          "key": "firebase_screen_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 5257123077986255290,
+            "string_value": null
+          }
+        },
+        {
+          "key": "firebase_previous_class",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "game_over"
+          }
+        },
+        {
+          "key": "firebase_previous_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 5257123077986256152,
+            "string_value": null
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_timestamp": 1528846288930297,
+      "geo": {
+        "city": null,
+        "continent": "Americas",
+        "country": "United States",
+        "region": null
+      },
+      "platform": "ANDROID",
+      "stream_id": "1051193346",
+      "traffic_source": {
+        "medium": "organic",
+        "name": null,
+        "source": "google-play"
+      },
+      "user_first_touch_timestamp": 1528064675522000,
+      "user_id": null,
+      "user_ltv": null,
+      "user_properties": [
+        {
+          "key": "plays_quickplay",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064740354000,
+            "string_value": "true"
+          }
+        },
+        {
+          "key": "num_levels_available",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528845806614000,
+            "string_value": "30"
+          }
+        },
+        {
+          "key": "firebase_exp_4",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064628831000,
+            "string_value": "0"
+          }
+        },
+        {
+          "key": "first_open_time",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1528064675522000,
+            "set_timestamp_micros": 1528064623522000,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ad_frequency",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064628774000,
+            "string_value": "2"
+          }
+        },
+        {
+          "key": "initial_extra_steps",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064628774000,
+            "string_value": "20"
+          }
+        }
+      ],
+      "user_pseudo_id": "9245B5CB02DD3705AA94778F256D5A53"
+    },
+    {
+      "app_info": {
+        "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+        "id": "com.labpixies.flood",
+        "install_source": null,
+        "install_store": "com.android.vending",
+        "version": "2.62"
+      },
+      "device": {
+        "advertising_id": null,
+        "category": "mobile",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "not available in demo dataset",
+        "mobile_marketing_name": "not available in demo dataset",
+        "mobile_model_name": "not available in demo dataset",
+        "mobile_os_hardware_model": "not available in demo dataset",
+        "operating_system": null,
+        "operating_system_version": "not available in demo dataset",
+        "time_zone_offset_seconds": -25200,
+        "vendor_id": null
+      },
+      "event_date": "20180612",
+      "event_name": "screen_view",
+      "event_params": [
+        {
+          "key": "firebase_screen_class",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "game_over"
+          }
+        },
+        {
+          "key": "firebase_event_origin",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "auto"
+          }
+        },
+        {
+          "key": "firebase_screen_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 5257123077986258187,
+            "string_value": null
+          }
+        },
+        {
+          "key": "firebase_previous_class",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "GameFinishedActivity"
+          }
+        },
+        {
+          "key": "firebase_previous_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 5257123077986258186,
+            "string_value": null
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_timestamp": 1528847295586204,
+      "geo": {
+        "city": null,
+        "continent": "Americas",
+        "country": "United States",
+        "region": null
+      },
+      "platform": "ANDROID",
+      "stream_id": "1051193346",
+      "traffic_source": {
+        "medium": "organic",
+        "name": null,
+        "source": "google-play"
+      },
+      "user_first_touch_timestamp": 1528064675522000,
+      "user_id": null,
+      "user_ltv": null,
+      "user_properties": [
+        {
+          "key": "plays_quickplay",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064814354000,
+            "string_value": "true"
+          }
+        },
+        {
+          "key": "num_levels_available",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528845880614000,
+            "string_value": "30"
+          }
+        },
+        {
+          "key": "firebase_exp_4",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064702831000,
+            "string_value": "0"
+          }
+        },
+        {
+          "key": "first_open_time",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1528064675522000,
+            "set_timestamp_micros": 1528064697522000,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ad_frequency",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064702774000,
+            "string_value": "2"
+          }
+        },
+        {
+          "key": "initial_extra_steps",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064702774000,
+            "string_value": "20"
+          }
+        }
+      ],
+      "user_pseudo_id": "9245B5CB02DD3705AA94778F256D5A53"
+    },
+    {
+      "app_info": {
+        "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+        "id": "com.labpixies.flood",
+        "install_source": null,
+        "install_store": "com.android.vending",
+        "version": "2.62"
+      },
+      "device": {
+        "advertising_id": null,
+        "category": "mobile",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "not available in demo dataset",
+        "mobile_marketing_name": "not available in demo dataset",
+        "mobile_model_name": "not available in demo dataset",
+        "mobile_os_hardware_model": "not available in demo dataset",
+        "operating_system": null,
+        "operating_system_version": "not available in demo dataset",
+        "time_zone_offset_seconds": -25200,
+        "vendor_id": null
+      },
+      "event_date": "20180612",
+      "event_name": "screen_view",
+      "event_params": [
+        {
+          "key": "firebase_screen_class",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "game_board"
+          }
+        },
+        {
+          "key": "firebase_event_origin",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "auto"
+          }
+        },
+        {
+          "key": "firebase_screen_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 5257123077986255290,
+            "string_value": null
+          }
+        },
+        {
+          "key": "firebase_previous_class",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "game_over"
+          }
+        },
+        {
+          "key": "firebase_previous_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 5257123077986258141,
+            "string_value": null
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_timestamp": 1528847266536179,
+      "geo": {
+        "city": null,
+        "continent": "Americas",
+        "country": "United States",
+        "region": null
+      },
+      "platform": "ANDROID",
+      "stream_id": "1051193346",
+      "traffic_source": {
+        "medium": "organic",
+        "name": null,
+        "source": "google-play"
+      },
+      "user_first_touch_timestamp": 1528064675522000,
+      "user_id": null,
+      "user_ltv": null,
+      "user_properties": [
+        {
+          "key": "plays_quickplay",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064821354000,
+            "string_value": "true"
+          }
+        },
+        {
+          "key": "num_levels_available",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528845887614000,
+            "string_value": "30"
+          }
+        },
+        {
+          "key": "firebase_exp_4",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064709831000,
+            "string_value": "0"
+          }
+        },
+        {
+          "key": "first_open_time",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1528064675522000,
+            "set_timestamp_micros": 1528064704522000,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ad_frequency",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064709774000,
+            "string_value": "2"
+          }
+        },
+        {
+          "key": "initial_extra_steps",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528064709774000,
+            "string_value": "20"
+          }
+        }
+      ],
+      "user_pseudo_id": "9245B5CB02DD3705AA94778F256D5A53"
+    },
+    {
+      "app_info": {
+        "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+        "id": "com.labpixies.flood",
+        "install_source": null,
+        "install_store": "com.android.vending",
+        "version": "2.62"
+      },
+      "device": {
+        "advertising_id": null,
+        "category": "mobile",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "not available in demo dataset",
+        "mobile_marketing_name": "not available in demo dataset",
+        "mobile_model_name": "not available in demo dataset",
+        "mobile_os_hardware_model": "not available in demo dataset",
+        "operating_system": null,
+        "operating_system_version": "not available in demo dataset",
+        "time_zone_offset_seconds": -14400,
+        "vendor_id": null
+      },
+      "event_date": "20180612",
+      "event_name": "user_engagement",
+      "event_params": [
+        {
+          "key": "firebase_screen_class",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "game_board"
+          }
+        },
+        {
+          "key": "firebase_event_origin",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "auto"
+          }
+        },
+        {
+          "key": "firebase_screen_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 6912402984622655832,
+            "string_value": null
+          }
+        },
+        {
+          "key": "engagement_time_msec",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 91465,
+            "string_value": null
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_timestamp": 1528800622547020,
+      "geo": {
+        "city": null,
+        "continent": "Americas",
+        "country": "Dominican Republic",
+        "region": null
+      },
+      "platform": "ANDROID",
+      "stream_id": "1051193346",
+      "traffic_source": {
+        "medium": "(none)",
+        "name": "(direct)",
+        "source": "(direct)"
+      },
+      "user_first_touch_timestamp": 1527539891585000,
+      "user_id": null,
+      "user_ltv": null,
+      "user_properties": [
+        {
+          "key": "num_levels_available",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528800426919000,
+            "string_value": "30"
+          }
+        },
+        {
+          "key": "firebase_exp_4",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1527539902485000,
+            "string_value": "1"
+          }
+        },
+        {
+          "key": "plays_progressive",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1527539911822000,
+            "string_value": "true"
+          }
+        },
+        {
+          "key": "first_open_time",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1527539891585000,
+            "set_timestamp_micros": 1527539900585000,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ad_frequency",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1527539902441000,
+            "string_value": "3"
+          }
+        },
+        {
+          "key": "initial_extra_steps",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1527539902440000,
+            "string_value": "10"
+          }
+        }
+      ],
+      "user_pseudo_id": "9196683C62B3E1E8D7C7FA5AEE69676E"
+    },
+    {
+      "app_info": {
+        "firebase_app_id": "1:300830567303:android:9b9ba2ce17104d0c",
+        "id": "com.labpixies.flood",
+        "install_source": null,
+        "install_store": "com.android.vending",
+        "version": "2.62"
+      },
+      "device": {
+        "advertising_id": null,
+        "category": "mobile",
+        "is_limited_ad_tracking": "Yes",
+        "language": "en-us",
+        "mobile_brand_name": "not available in demo dataset",
+        "mobile_marketing_name": "not available in demo dataset",
+        "mobile_model_name": "not available in demo dataset",
+        "mobile_os_hardware_model": "not available in demo dataset",
+        "operating_system": null,
+        "operating_system_version": "not available in demo dataset",
+        "time_zone_offset_seconds": -14400,
+        "vendor_id": null
+      },
+      "event_date": "20180612",
+      "event_name": "level_complete_quickplay",
+      "event_params": [
+        {
+          "key": "value",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 22,
+            "string_value": null
+          }
+        },
+        {
+          "key": "firebase_screen_class",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "game_board"
+          }
+        },
+        {
+          "key": "firebase_event_origin",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "app+gtm"
+          }
+        },
+        {
+          "key": "firebase_screen_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 7263892966419147066,
+            "string_value": null
+          }
+        },
+        {
+          "key": "board",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "S"
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_timestamp": 1528838856339000,
+      "geo": {
+        "city": null,
+        "continent": "Americas",
+        "country": "United States",
+        "region": null
+      },
+      "platform": "ANDROID",
+      "stream_id": "1051193346",
+      "traffic_source": {
+        "medium": "(none)",
+        "name": "(direct)",
+        "source": "(direct)"
+      },
+      "user_first_touch_timestamp": 1501254851137000,
+      "user_id": null,
+      "user_ltv": null,
+      "user_properties": [
+        {
+          "key": "plays_quickplay",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1501255018702000,
+            "string_value": "true"
+          }
+        },
+        {
+          "key": "num_levels_available",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1528838785377000,
+            "string_value": "30"
+          }
+        },
+        {
+          "key": "firebase_exp_4",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1523844149724000,
+            "string_value": "1"
+          }
+        },
+        {
+          "key": "first_open_time",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1501254851137000,
+            "set_timestamp_micros": 1501254901137000,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ad_frequency",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1501254902407000,
+            "string_value": "16"
+          }
+        },
+        {
+          "key": "initial_extra_steps",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "set_timestamp_micros": 1501254902406000,
+            "string_value": "10"
+          }
+        }
+      ],
+      "user_pseudo_id": "3E14E34FCCAB1D2D4917BD264F03594D"
+    }
+  ]
+}

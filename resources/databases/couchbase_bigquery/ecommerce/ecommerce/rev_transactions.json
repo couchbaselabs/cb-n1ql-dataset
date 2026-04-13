@@ -1,0 +1,536 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`hits_item_currencyCode` = \"USD\", `hits_page_pagePathLevel1` = \"/ordercompleted.html\", `hits_page_pageTitle` = \"Checkout Confirmation\", `hits_type` = \"PAGE\"",
+        "properties": {
+          "channelGrouping": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Direct",
+              "Display",
+              "Organic Search",
+              "Paid Search",
+              "Referral"
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20160825",
+              "20160829",
+              "20161022",
+              "20170322",
+              "20170512"
+            ],
+            "type": "string"
+          },
+          "fullVisitorId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0820978656614964451",
+              "2425521720354546737",
+              "6022958438984686375",
+              "9029794295932939024",
+              "9377429831454005466"
+            ],
+            "type": "string"
+          },
+          "geoNetwork_city": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Kirkland",
+              "New York",
+              "Palo Alto",
+              "Sunnyvale",
+              "not available in demo dataset"
+            ],
+            "type": "string"
+          },
+          "geoNetwork_country": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Russia",
+              "Singapore",
+              "Switzerland",
+              "United States",
+              "Venezuela"
+            ],
+            "type": "string"
+          },
+          "hits_item_currencyCode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "USD"
+            ],
+            "type": "string"
+          },
+          "hits_item_itemQuantity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "hits_item_itemRevenue": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "hits_page_pagePathLevel1": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "/ordercompleted.html"
+            ],
+            "type": "string"
+          },
+          "hits_page_pageTitle": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Checkout Confirmation"
+            ],
+            "type": "string"
+          },
+          "hits_page_searchKeyword": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "hits_product_productPrice": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1990000,
+              15190000,
+              16990000,
+              44790000,
+              109990000
+            ],
+            "type": "number"
+          },
+          "hits_product_productQuantity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              10,
+              50
+            ],
+            "type": "number"
+          },
+          "hits_product_productRefundAmount": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "hits_product_productRevenue": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15523333,
+              17275714,
+              45790000,
+              99583333,
+              118990000
+            ],
+            "type": "number"
+          },
+          "hits_product_productSKU": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GGOEGAAJ032614",
+              "GGOEGADJ056814",
+              "GGOEGALB034113",
+              "GGOEGAQB036013",
+              "GGOEGFYQ016599"
+            ],
+            "type": "string"
+          },
+          "hits_product_productVariant": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " BLUE",
+              " LG",
+              " MD",
+              " SM",
+              "Single Option Only"
+            ],
+            "type": "string"
+          },
+          "hits_product_v2ProductCategory": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(not set)",
+              "Apparel",
+              "Drinkware",
+              "Lifestyle",
+              "Nest-USA"
+            ],
+            "type": "string"
+          },
+          "hits_product_v2ProductName": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Foam Can and Bottle Cooler",
+              "Google Men's Short Sleeve Badg...",
+              "Google Men's Watershed Full Zi...",
+              "Google Women's Fleece Hoodie",
+              "Google Women's Vintage T-Shirt..."
+            ],
+            "type": "string"
+          },
+          "hits_time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              825935,
+              831792,
+              864917,
+              1573042,
+              2212296
+            ],
+            "type": "number"
+          },
+          "hits_transaction_transactionId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ORD201608251570",
+              "ORD201608291596",
+              "ORD201610221394",
+              "ORD201703222332",
+              "ORD201705122037"
+            ],
+            "type": "string"
+          },
+          "hits_transaction_transactionRevenue": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              100010000,
+              118990000,
+              362790000,
+              393460000,
+              1223120000
+            ],
+            "type": "number"
+          },
+          "hits_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PAGE"
+            ],
+            "type": "string"
+          },
+          "totals_pageviews": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              28,
+              31,
+              45,
+              82,
+              87
+            ],
+            "type": "number"
+          },
+          "totals_timeOnSite": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              832,
+              865,
+              1573,
+              2108,
+              2212
+            ],
+            "type": "number"
+          },
+          "totals_totalTransactionRevenue": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              100010000,
+              118990000,
+              362790000,
+              393460000,
+              1223120000
+            ],
+            "type": "number"
+          },
+          "totals_transactions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              6,
+              10
+            ],
+            "type": "number"
+          },
+          "visitId": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1472105984,
+              1472508498,
+              1477184504,
+              1490215541,
+              1494638980
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "rev_transactions::16646",
+                  "rev_transactions::18462",
+                  "rev_transactions::26307",
+                  "rev_transactions::43386",
+                  "rev_transactions::45499"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "rev_transactions::16646"
+              },
+              {
+                "id": "rev_transactions::18462"
+              },
+              {
+                "id": "rev_transactions::26307"
+              },
+              {
+                "id": "rev_transactions::43386"
+              },
+              {
+                "id": "rev_transactions::45499"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "channelGrouping": "Direct",
+      "date": "20170318",
+      "fullVisitorId": "7229994429253580812",
+      "geoNetwork_city": "not available in demo dataset",
+      "geoNetwork_country": "United States",
+      "hits_item_currencyCode": "USD",
+      "hits_item_itemQuantity": null,
+      "hits_item_itemRevenue": null,
+      "hits_page_pagePathLevel1": "/ordercompleted.html",
+      "hits_page_pageTitle": "Checkout Confirmation",
+      "hits_page_searchKeyword": null,
+      "hits_product_productPrice": 10990000,
+      "hits_product_productQuantity": 1,
+      "hits_product_productRefundAmount": null,
+      "hits_product_productRevenue": 15490000,
+      "hits_product_productSKU": "GGOEYHPB072210",
+      "hits_product_productVariant": "Single Option Only",
+      "hits_product_v2ProductCategory": "Apparel",
+      "hits_product_v2ProductName": "YouTube Twill Cap",
+      "hits_time": 615304,
+      "hits_transaction_transactionId": "ORD201703181266",
+      "hits_transaction_transactionRevenue": 38980000,
+      "hits_type": "PAGE",
+      "totals_pageviews": 14,
+      "totals_timeOnSite": 615,
+      "totals_totalTransactionRevenue": 38980000,
+      "totals_transactions": 1,
+      "visitId": 1489871818
+    },
+    {
+      "channelGrouping": "Direct",
+      "date": "20170217",
+      "fullVisitorId": "7345128727363764298",
+      "geoNetwork_city": "not available in demo dataset",
+      "geoNetwork_country": "United States",
+      "hits_item_currencyCode": "USD",
+      "hits_item_itemQuantity": null,
+      "hits_item_itemRevenue": null,
+      "hits_page_pagePathLevel1": "/ordercompleted.html",
+      "hits_page_pageTitle": "Checkout Confirmation",
+      "hits_page_searchKeyword": null,
+      "hits_product_productPrice": 33590000,
+      "hits_product_productQuantity": 1,
+      "hits_product_productRefundAmount": null,
+      "hits_product_productRevenue": 35090000,
+      "hits_product_productSKU": "GGOEGAEB084514",
+      "hits_product_productVariant": " MD",
+      "hits_product_v2ProductCategory": "Apparel",
+      "hits_product_v2ProductName": "BLM Sweatshirt",
+      "hits_time": 366113,
+      "hits_transaction_transactionId": "ORD201702172435",
+      "hits_transaction_transactionRevenue": 70180000,
+      "hits_type": "PAGE",
+      "totals_pageviews": 18,
+      "totals_timeOnSite": 397,
+      "totals_totalTransactionRevenue": 70180000,
+      "totals_transactions": 1,
+      "visitId": 1487370461
+    },
+    {
+      "channelGrouping": "Direct",
+      "date": "20170517",
+      "fullVisitorId": "9428659505903216368",
+      "geoNetwork_city": "not available in demo dataset",
+      "geoNetwork_country": "United States",
+      "hits_item_currencyCode": "USD",
+      "hits_item_itemQuantity": null,
+      "hits_item_itemRevenue": null,
+      "hits_page_pagePathLevel1": "/ordercompleted.html",
+      "hits_page_pageTitle": "Checkout Confirmation",
+      "hits_page_searchKeyword": null,
+      "hits_product_productPrice": 10630000,
+      "hits_product_productQuantity": 1,
+      "hits_product_productRefundAmount": null,
+      "hits_product_productRevenue": 11963333,
+      "hits_product_productSKU": "GGOEGAAB033816",
+      "hits_product_productVariant": " XL",
+      "hits_product_v2ProductCategory": "Apparel",
+      "hits_product_v2ProductName": "Google Men's Vintage Badge Tee Black",
+      "hits_time": 1241172,
+      "hits_transaction_transactionId": "ORD201705173292",
+      "hits_transaction_transactionRevenue": 75620000,
+      "hits_type": "PAGE",
+      "totals_pageviews": 37,
+      "totals_timeOnSite": 1241,
+      "totals_totalTransactionRevenue": 75620000,
+      "totals_transactions": 1,
+      "visitId": 1495076026
+    },
+    {
+      "channelGrouping": "Direct",
+      "date": "20170517",
+      "fullVisitorId": "9428659505903216368",
+      "geoNetwork_city": "not available in demo dataset",
+      "geoNetwork_country": "United States",
+      "hits_item_currencyCode": "USD",
+      "hits_item_itemQuantity": null,
+      "hits_item_itemRevenue": null,
+      "hits_page_pagePathLevel1": "/ordercompleted.html",
+      "hits_page_pageTitle": "Checkout Confirmation",
+      "hits_page_searchKeyword": null,
+      "hits_product_productPrice": 13590000,
+      "hits_product_productQuantity": 1,
+      "hits_product_productRefundAmount": null,
+      "hits_product_productRevenue": 14923333,
+      "hits_product_productSKU": "GGOEGAAR010716",
+      "hits_product_productVariant": " XL",
+      "hits_product_v2ProductCategory": "Apparel",
+      "hits_product_v2ProductName": "Google Men's 100% Cotton Short Sleeve Hero Tee Red",
+      "hits_time": 1241172,
+      "hits_transaction_transactionId": "ORD201705173292",
+      "hits_transaction_transactionRevenue": 75620000,
+      "hits_type": "PAGE",
+      "totals_pageviews": 37,
+      "totals_timeOnSite": 1241,
+      "totals_totalTransactionRevenue": 75620000,
+      "totals_transactions": 1,
+      "visitId": 1495076026
+    },
+    {
+      "channelGrouping": "Direct",
+      "date": "20170526",
+      "fullVisitorId": "1794229321970124318",
+      "geoNetwork_city": "not available in demo dataset",
+      "geoNetwork_country": "United States",
+      "hits_item_currencyCode": "USD",
+      "hits_item_itemQuantity": null,
+      "hits_item_itemRevenue": null,
+      "hits_page_pagePathLevel1": "/ordercompleted.html",
+      "hits_page_pageTitle": "Checkout Confirmation",
+      "hits_page_searchKeyword": null,
+      "hits_product_productPrice": 13290000,
+      "hits_product_productQuantity": 1,
+      "hits_product_productRefundAmount": null,
+      "hits_product_productRevenue": 13540000,
+      "hits_product_productSKU": "GGOEGAAB033814",
+      "hits_product_productVariant": " MD",
+      "hits_product_v2ProductCategory": "Apparel",
+      "hits_product_v2ProductName": "Google Men's Vintage Badge Tee Black",
+      "hits_time": 1235375,
+      "hits_transaction_transactionId": "ORD201705262123",
+      "hits_transaction_transactionRevenue": 85060000,
+      "hits_type": "PAGE",
+      "totals_pageviews": 34,
+      "totals_timeOnSite": 1235,
+      "totals_totalTransactionRevenue": 85060000,
+      "totals_transactions": 1,
+      "visitId": 1495865985
+    }
+  ]
+}

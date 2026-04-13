@@ -1,0 +1,287 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`KodTyp` = \"GEO\"",
+        "properties": {
+          "Aktiv": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " ",
+              "J"
+            ],
+            "type": "string"
+          },
+          "Benamning": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " ",
+              "Africa unspec",
+              "Dominican Republic",
+              "Latin America unspec",
+              "Tunisia"
+            ],
+            "type": "string"
+          },
+          "Flagga1": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Flagga2": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Flagga3": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Flagga4": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "GiltigFran": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "GiltigTill": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Inregdatum": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Intern": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " ",
+              "N"
+            ],
+            "type": "string"
+          },
+          "Kod": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " ",
+              "1000",
+              "1075",
+              "2000",
+              "2043"
+            ],
+            "type": "string"
+          },
+          "KodTyp": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GEO"
+            ],
+            "type": "string"
+          },
+          "Kortnamn": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Afr",
+                "DO",
+                "Lat Am",
+                "TN"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "Notering": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "koder::0",
+                  "koder::1",
+                  "koder::2",
+                  "koder::3",
+                  "koder::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "koder::0"
+              },
+              {
+                "id": "koder::1"
+              },
+              {
+                "id": "koder::2"
+              },
+              {
+                "id": "koder::3"
+              },
+              {
+                "id": "koder::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Aktiv": " ",
+      "Benamning": " ",
+      "Flagga1": null,
+      "Flagga2": null,
+      "Flagga3": null,
+      "Flagga4": null,
+      "GiltigFran": null,
+      "GiltigTill": null,
+      "Inregdatum": null,
+      "Intern": " ",
+      "Kod": " ",
+      "KodTyp": "GEO",
+      "Kortnamn": null,
+      "Notering": null
+    },
+    {
+      "Aktiv": "J",
+      "Benamning": "Dominican Republic",
+      "Flagga1": null,
+      "Flagga2": null,
+      "Flagga3": null,
+      "Flagga4": null,
+      "GiltigFran": null,
+      "GiltigTill": null,
+      "Inregdatum": null,
+      "Intern": "N",
+      "Kod": "2043",
+      "KodTyp": "GEO",
+      "Kortnamn": "DO",
+      "Notering": null
+    },
+    {
+      "Aktiv": "J",
+      "Benamning": "Africa unspec",
+      "Flagga1": null,
+      "Flagga2": null,
+      "Flagga3": null,
+      "Flagga4": null,
+      "GiltigFran": null,
+      "GiltigTill": null,
+      "Inregdatum": null,
+      "Intern": "N",
+      "Kod": "1000",
+      "KodTyp": "GEO",
+      "Kortnamn": "Afr",
+      "Notering": null
+    },
+    {
+      "Aktiv": "J",
+      "Benamning": "Tunisia",
+      "Flagga1": null,
+      "Flagga2": null,
+      "Flagga3": null,
+      "Flagga4": null,
+      "GiltigFran": null,
+      "GiltigTill": null,
+      "Inregdatum": null,
+      "Intern": "N",
+      "Kod": "1075",
+      "KodTyp": "GEO",
+      "Kortnamn": "TN",
+      "Notering": null
+    },
+    {
+      "Aktiv": "J",
+      "Benamning": "Latin America unspec",
+      "Flagga1": null,
+      "Flagga2": null,
+      "Flagga3": null,
+      "Flagga4": null,
+      "GiltigFran": null,
+      "GiltigTill": null,
+      "Inregdatum": null,
+      "Intern": "N",
+      "Kod": "2000",
+      "KodTyp": "GEO",
+      "Kortnamn": "Lat Am",
+      "Notering": null
+    }
+  ]
+}

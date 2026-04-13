@@ -1,0 +1,110 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`description` = \"Averages for regions/groups are...\", `year` = 1990",
+        "properties": {
+          "description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Averages for regions/groups ar..."
+            ],
+            "type": "string"
+          },
+          "series_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SH.STA.ANVC.ZS",
+              "SH.STA.BRTC.ZS",
+              "SH.STA.ORCF.ZS",
+              "SP.DYN.CONM.ZS",
+              "SP.DYN.CONU.ZS"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1990
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "series_time::0",
+                  "series_time::2",
+                  "series_time::5",
+                  "series_time::6",
+                  "series_time::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "series_time::0"
+              },
+              {
+                "id": "series_time::2"
+              },
+              {
+                "id": "series_time::5"
+              },
+              {
+                "id": "series_time::6"
+              },
+              {
+                "id": "series_time::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "description": "Averages for regions/groups are based on country-level data around 1990.",
+      "series_code": "SP.DYN.CONU.ZS",
+      "year": 1990
+    },
+    {
+      "description": "Averages for regions/groups are based on country-level data around 1990.",
+      "series_code": "SP.UWT.TFRT",
+      "year": 1990
+    },
+    {
+      "description": "Averages for regions/groups are based on country-level data around 1990.",
+      "series_code": "SH.STA.BRTC.ZS",
+      "year": 1990
+    },
+    {
+      "description": "Averages for regions/groups are based on country-level data around 1990.",
+      "series_code": "SP.REG.DTHS.ZS",
+      "year": 1990
+    },
+    {
+      "description": "Averages for regions/groups are based on country-level data around 1990.",
+      "series_code": "SH.STA.BFED.ZS",
+      "year": 1990
+    }
+  ]
+}

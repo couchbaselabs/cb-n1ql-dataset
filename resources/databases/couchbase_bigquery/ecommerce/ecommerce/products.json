@@ -1,0 +1,215 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "SKU": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GGOEGAAX0365",
+              "GGOEGAAX0366",
+              "GGOEGAAX0591",
+              "GGOEGAAX0597",
+              "GGOEGAAX0605"
+            ],
+            "type": "string"
+          },
+          "name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " Men's Quilted Insulated Vest ...",
+              " Men's Short Sleeve Performanc...",
+              " Women's Quilted Insulated Ves...",
+              " Women's Scoop Neck Tee Black",
+              " Women's Scoop Neck Tee White"
+            ],
+            "type": "string"
+          },
+          "orderedQuantity": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              24,
+              27,
+              51,
+              65
+            ],
+            "type": "number"
+          },
+          "restockingLeadTime": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              9,
+              11,
+              15,
+              18
+            ],
+            "type": "number"
+          },
+          "sentimentMagnitude": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.5,
+                1.6,
+                1.7,
+                2
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "sentimentScore": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                0.6,
+                0.8
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "stockLevel": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              16,
+              29,
+              45,
+              73,
+              81
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "products::3",
+                  "products::4",
+                  "products::5",
+                  "products::6",
+                  "products::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "products::3"
+              },
+              {
+                "id": "products::4"
+              },
+              {
+                "id": "products::5"
+              },
+              {
+                "id": "products::6"
+              },
+              {
+                "id": "products::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "SKU": "GGOEGEVB070899",
+      "name": " Bongo Cupholder Bluetooth Speaker",
+      "orderedQuantity": 85,
+      "restockingLeadTime": 8,
+      "sentimentMagnitude": 0.5,
+      "sentimentScore": 0,
+      "stockLevel": 115
+    },
+    {
+      "SKU": "GGOEGESC014699",
+      "name": "Aluminum Handy Emergency Flashlight",
+      "orderedQuantity": 66,
+      "restockingLeadTime": 9,
+      "sentimentMagnitude": 0.5,
+      "sentimentScore": 0,
+      "stockLevel": 90
+    },
+    {
+      "SKU": "GGOEGAAX0581",
+      "name": " Women's Colorblock Tee White",
+      "orderedQuantity": 0,
+      "restockingLeadTime": 8,
+      "sentimentMagnitude": 2,
+      "sentimentScore": 0.8,
+      "stockLevel": 0
+    },
+    {
+      "SKU": "GGOEGAAX0366",
+      "name": " Women's Scoop Neck Tee White",
+      "orderedQuantity": 51,
+      "restockingLeadTime": 18,
+      "sentimentMagnitude": 1.6,
+      "sentimentScore": 0.6,
+      "stockLevel": 81
+    },
+    {
+      "SKU": "GGOEGAAX0365",
+      "name": " Women's Scoop Neck Tee Black",
+      "orderedQuantity": 65,
+      "restockingLeadTime": 6,
+      "sentimentMagnitude": 0.5,
+      "sentimentScore": 0,
+      "stockLevel": 73
+    }
+  ]
+}

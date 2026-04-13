@@ -1,0 +1,223 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`aliquot_barcode` = \"TCGA-01-0628-11A-01D-0356-01\", `case_barcode` = \"TCGA-01-0628\", `platform` = \"Genome_Wide_SNP_6\", `project_short_name` = \"TCGA-OV\", `sample_barcode` = \"TCGA-01-0628-11A\"",
+        "properties": {
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-01-0628-11A-01D-0356-01"
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-01-0628"
+            ],
+            "type": "string"
+          },
+          "chromosome": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10",
+              "14",
+              "4",
+              "6"
+            ],
+            "type": "string"
+          },
+          "end_pos": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              24604992,
+              105988038,
+              134697015,
+              155912754,
+              188763651
+            ],
+            "type": "number"
+          },
+          "num_probes": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              80,
+              5870,
+              7427,
+              102781
+            ],
+            "type": "number"
+          },
+          "platform": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Genome_Wide_SNP_6"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-OV"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-01-0628-11A"
+            ],
+            "type": "string"
+          },
+          "segment_mean": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -0.6218,
+              -0.0159,
+              0.0018,
+              0.0024,
+              0.0068
+            ],
+            "type": "number"
+          },
+          "start_pos": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1053934,
+              24602382,
+              93426811,
+              134557132,
+              147484238
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "copy_number_segment_masked_hg1...",
+                  "copy_number_segment_masked_hg1...",
+                  "copy_number_segment_masked_hg1...",
+                  "copy_number_segment_masked_hg1...",
+                  "copy_number_segment_masked_hg1..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "copy_number_segment_masked_hg19_gdc_2017_02::0"
+              },
+              {
+                "id": "copy_number_segment_masked_hg19_gdc_2017_02::1"
+              },
+              {
+                "id": "copy_number_segment_masked_hg19_gdc_2017_02::2"
+              },
+              {
+                "id": "copy_number_segment_masked_hg19_gdc_2017_02::3"
+              },
+              {
+                "id": "copy_number_segment_masked_hg19_gdc_2017_02::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "case_barcode": "TCGA-01-0628",
+      "chromosome": "14",
+      "end_pos": 105988038,
+      "num_probes": 7427,
+      "platform": "Genome_Wide_SNP_6",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "segment_mean": 0.0024,
+      "start_pos": 93426811
+    },
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "case_barcode": "TCGA-01-0628",
+      "chromosome": "6",
+      "end_pos": 155912754,
+      "num_probes": 5870,
+      "platform": "Genome_Wide_SNP_6",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "segment_mean": 0.0018,
+      "start_pos": 147484238
+    },
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "case_barcode": "TCGA-01-0628",
+      "chromosome": "4",
+      "end_pos": 188763651,
+      "num_probes": 102781,
+      "platform": "Genome_Wide_SNP_6",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "segment_mean": 0.0068,
+      "start_pos": 1053934
+    },
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "case_barcode": "TCGA-01-0628",
+      "chromosome": "6",
+      "end_pos": 134697015,
+      "num_probes": 80,
+      "platform": "Genome_Wide_SNP_6",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "segment_mean": -0.0159,
+      "start_pos": 134557132
+    },
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "case_barcode": "TCGA-01-0628",
+      "chromosome": "10",
+      "end_pos": 24604992,
+      "num_probes": 10,
+      "platform": "Genome_Wide_SNP_6",
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "segment_mean": -0.6218,
+      "start_pos": 24602382
+    }
+  ]
+}

@@ -1,0 +1,1113 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`bus_use` = \"Not a Bus\", `cargo_body_type` = 0, `emergency_motor_vehicle_use` = \"Not Applicable\", `fatalities_in_vehicle` = 0, `fire_occurrence` = \"No or Not Reported\", `first_harmful_event` = 12, `first_harmful_event_name` = \"Motor Vehicle in Transport\", `gross_vehicle_weight_rating` = 0, `hazardous_material_class_number` = 0, `hazardous_material_identification_number` = 0, `hazardous_material_involvement` = \"No\", `hazardous_material_placard` = \"Not Applicable\", `hit_and_run` = \"No / No Hit-and-Run\", `manner_of_collision` = 6...",
+        "properties": {
+          "body_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              4,
+              9,
+              20,
+              30
+            ],
+            "type": "number"
+          },
+          "body_type_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2-Door Sedan/Hardtop/Coupe",
+              "4-Door Sedan/Hardtop",
+              "Compact Pickup (Gross Vehicle ...",
+              "Minivan",
+              "Other or Unknown Automobile Ty..."
+            ],
+            "type": "string"
+          },
+          "bus_use": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Bus"
+            ],
+            "type": "string"
+          },
+          "cargo_body_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              60299,
+              61187,
+              121227,
+              240134,
+              360270
+            ],
+            "type": "number"
+          },
+          "day_of_crash": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              6,
+              10,
+              18,
+              21
+            ],
+            "type": "number"
+          },
+          "emergency_motor_vehicle_use": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Applicable"
+            ],
+            "type": "string"
+          },
+          "extent_of_damage": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Disabling Damage",
+              "Functional Damage",
+              "Minor Damage",
+              "Not Reported"
+            ],
+            "type": "string"
+          },
+          "fatalities_in_vehicle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "fire_occurrence": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No or Not Reported"
+            ],
+            "type": "string"
+          },
+          "first_harmful_event": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12
+            ],
+            "type": "number"
+          },
+          "first_harmful_event_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Motor Vehicle in Transport"
+            ],
+            "type": "string"
+          },
+          "gross_vehicle_weight_rating": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "hazardous_material_class_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "hazardous_material_identification_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "hazardous_material_involvement": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No"
+            ],
+            "type": "string"
+          },
+          "hazardous_material_placard": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Applicable"
+            ],
+            "type": "string"
+          },
+          "hit_and_run": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No / No Hit-and-Run"
+            ],
+            "type": "string"
+          },
+          "hour_of_crash": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              9,
+              14,
+              19,
+              22
+            ],
+            "type": "number"
+          },
+          "initial_contact_point": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              6,
+              11,
+              12,
+              98
+            ],
+            "type": "number"
+          },
+          "make_model_combined": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6441,
+              30032,
+              32043,
+              37031,
+              52035
+            ],
+            "type": "number"
+          },
+          "manner_of_collision": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6
+            ],
+            "type": "number"
+          },
+          "manner_of_collision_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Angle"
+            ],
+            "type": "string"
+          },
+          "mcid_identification_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "000000000"
+            ],
+            "type": "string"
+          },
+          "mcid_issuing_authority": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "mcid_issuing_authority_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Applicable"
+            ],
+            "type": "string"
+          },
+          "minute_of_crash": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              10,
+              21,
+              50,
+              55
+            ],
+            "type": "number"
+          },
+          "month_of_crash": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              5,
+              6,
+              7,
+              9
+            ],
+            "type": "number"
+          },
+          "most_harmful_event": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12
+            ],
+            "type": "number"
+          },
+          "motor_carrier_identification_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "00000000000"
+            ],
+            "type": "string"
+          },
+          "number_of_motor_vehicles_in_transport_mvit": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              4
+            ],
+            "type": "number"
+          },
+          "number_of_occupants": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "registered_vehicle_owner": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6
+            ],
+            "type": "number"
+          },
+          "registered_vehicle_owner_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Driverless/Motor Vehicle Parke..."
+            ],
+            "type": "string"
+          },
+          "registration_state": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5,
+              6,
+              12,
+              36
+            ],
+            "type": "number"
+          },
+          "registration_state_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Arkansas",
+              "California",
+              "Florida",
+              "New York",
+              "Not Applicable"
+            ],
+            "type": "string"
+          },
+          "related_factors_vehicle_level1": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "related_factors_vehicle_level2": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "release_of_hazardous_material_from_the_cargo_compartment": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Applicable"
+            ],
+            "type": "string"
+          },
+          "special_use": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "special_use_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Special Use"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              12,
+              24,
+              36
+            ],
+            "type": "number"
+          },
+          "underride_override": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "underride_override_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Underride or Override Noted..."
+            ],
+            "type": "string"
+          },
+          "unit_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Motor Vehicle Not in Transport...",
+              "Motor Vehicle Not in Transport..."
+            ],
+            "type": "string"
+          },
+          "vehicle_configuration": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "vehicle_identification_number_vin": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "115161409",
+              "19XFB2F5XEE2",
+              "2A8HR54139R6",
+              "JA3AY26C21U0",
+              "WAUDC68D31A1"
+            ],
+            "type": "string"
+          },
+          "vehicle_make": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              30,
+              32,
+              37,
+              52
+            ],
+            "type": "number"
+          },
+          "vehicle_make_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Audi",
+              "Chrysler",
+              "Honda",
+              "Mitsubishi",
+              "Volkswagen"
+            ],
+            "type": "string"
+          },
+          "vehicle_model": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              31,
+              32,
+              35,
+              43,
+              441
+            ],
+            "type": "number"
+          },
+          "vehicle_model_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1965,
+              2001,
+              2005,
+              2009,
+              2014
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              4,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "vehicle_removal": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Towed",
+              "Towed Due to Disabling Damage"
+            ],
+            "type": "string"
+          },
+          "vehicle_trailing": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Trailing Unit"
+            ],
+            "type": "string"
+          },
+          "vin_character_1": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "2",
+              "8",
+              "J",
+              "W"
+            ],
+            "type": "string"
+          },
+          "vin_character_10": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "E",
+              "1",
+              "8",
+              "9",
+              ""
+            ],
+            "type": "string"
+          },
+          "vin_character_11": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U",
+              "A",
+              "E",
+              "R",
+              ""
+            ],
+            "type": "string"
+          },
+          "vin_character_12": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "6",
+              "0",
+              "1",
+              "2",
+              ""
+            ],
+            "type": "string"
+          },
+          "vin_character_2": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "8",
+              "9",
+              "A",
+              "B"
+            ],
+            "type": "string"
+          },
+          "vin_character_3": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3",
+              "5",
+              "8",
+              "U",
+              "X"
+            ],
+            "type": "string"
+          },
+          "vin_character_4": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "A",
+              "D",
+              "F",
+              "H"
+            ],
+            "type": "string"
+          },
+          "vin_character_5": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "6",
+              "B",
+              "C",
+              "R",
+              "Y"
+            ],
+            "type": "string"
+          },
+          "vin_character_6": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "2",
+              "5",
+              "6",
+              "8"
+            ],
+            "type": "string"
+          },
+          "vin_character_7": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4",
+              "6",
+              "8",
+              "C",
+              "F"
+            ],
+            "type": "string"
+          },
+          "vin_character_8": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "1",
+              "5",
+              "C",
+              "D"
+            ],
+            "type": "string"
+          },
+          "vin_character_9": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2",
+              "3",
+              "8",
+              "9",
+              "X"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "parkwork_2015::0",
+                  "parkwork_2015::4",
+                  "parkwork_2015::6",
+                  "parkwork_2015::7",
+                  "parkwork_2015::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "parkwork_2015::0"
+              },
+              {
+                "id": "parkwork_2015::4"
+              },
+              {
+                "id": "parkwork_2015::6"
+              },
+              {
+                "id": "parkwork_2015::7"
+              },
+              {
+                "id": "parkwork_2015::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "body_type": 4,
+      "body_type_name": "4-Door Sedan/Hardtop",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "consecutive_number": 420769,
+      "day_of_crash": 12,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Minor Damage",
+      "fatalities_in_vehicle": 0,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": 0,
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": "Not Applicable",
+      "hit_and_run": "No / No Hit-and-Run",
+      "hour_of_crash": 3,
+      "initial_contact_point": 5,
+      "make_model_combined": 52034,
+      "manner_of_collision": 6,
+      "manner_of_collision_name": "Angle",
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "mcid_issuing_authority_name": "Not Applicable",
+      "minute_of_crash": 6,
+      "month_of_crash": 7,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number": "00000000000",
+      "number_of_motor_vehicles_in_transport_mvit": 2,
+      "number_of_occupants": 0,
+      "registered_vehicle_owner": 6,
+      "registered_vehicle_owner_name": "Driverless/Motor Vehicle Parked/Stopped Off Roadway",
+      "registration_state": 42,
+      "registration_state_name": "Pennsylvania",
+      "related_factors_vehicle_level1": 0,
+      "related_factors_vehicle_level2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 42,
+      "underride_override": 0,
+      "underride_override_name": "No Underride or Override Noted (2012-Later)",
+      "unit_type": "Motor Vehicle Not in Transport Within the Trafficway",
+      "vehicle_configuration": 0,
+      "vehicle_identification_number_vin": "4A3AA46G73E1",
+      "vehicle_make": 52,
+      "vehicle_make_name": "Mitsubishi",
+      "vehicle_model": 34,
+      "vehicle_model_year": 2003,
+      "vehicle_number": 4,
+      "vehicle_removal": "Not Towed",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "4",
+      "vin_character_10": "3",
+      "vin_character_11": "E",
+      "vin_character_12": "1",
+      "vin_character_2": "A",
+      "vin_character_3": "3",
+      "vin_character_4": "A",
+      "vin_character_5": "A",
+      "vin_character_6": "4",
+      "vin_character_7": "6",
+      "vin_character_8": "G",
+      "vin_character_9": "7"
+    },
+    {
+      "body_type": 4,
+      "body_type_name": "4-Door Sedan/Hardtop",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "consecutive_number": 62930,
+      "day_of_crash": 27,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Minor Damage",
+      "fatalities_in_vehicle": 0,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": 0,
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": "Not Applicable",
+      "hit_and_run": "No / No Hit-and-Run",
+      "hour_of_crash": 18,
+      "initial_contact_point": 61,
+      "make_model_combined": 54035,
+      "manner_of_collision": 6,
+      "manner_of_collision_name": "Angle",
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "mcid_issuing_authority_name": "Not Applicable",
+      "minute_of_crash": 4,
+      "month_of_crash": 5,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number": "00000000000",
+      "number_of_motor_vehicles_in_transport_mvit": 2,
+      "number_of_occupants": 0,
+      "registered_vehicle_owner": 6,
+      "registered_vehicle_owner_name": "Driverless/Motor Vehicle Parked/Stopped Off Roadway",
+      "registration_state": 6,
+      "registration_state_name": "California",
+      "related_factors_vehicle_level1": 0,
+      "related_factors_vehicle_level2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 6,
+      "underride_override": 0,
+      "underride_override_name": "No Underride or Override Noted (2012-Later)",
+      "unit_type": "Motor Vehicle Not in Transport Within the Trafficway",
+      "vehicle_configuration": 0,
+      "vehicle_identification_number_vin": "19UUA5640XA8",
+      "vehicle_make": 54,
+      "vehicle_make_name": "Acura",
+      "vehicle_model": 35,
+      "vehicle_model_year": 1999,
+      "vehicle_number": 3,
+      "vehicle_removal": "Not Towed",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "1",
+      "vin_character_10": "X",
+      "vin_character_11": "A",
+      "vin_character_12": "8",
+      "vin_character_2": "9",
+      "vin_character_3": "U",
+      "vin_character_4": "U",
+      "vin_character_5": "A",
+      "vin_character_6": "5",
+      "vin_character_7": "6",
+      "vin_character_8": "4",
+      "vin_character_9": "0"
+    },
+    {
+      "body_type": 4,
+      "body_type_name": "4-Door Sedan/Hardtop",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "consecutive_number": 482263,
+      "day_of_crash": 20,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Minor Damage",
+      "fatalities_in_vehicle": 0,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": 0,
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": "Not Applicable",
+      "hit_and_run": "No / No Hit-and-Run",
+      "hour_of_crash": 21,
+      "initial_contact_point": 6,
+      "make_model_combined": 7024,
+      "manner_of_collision": 6,
+      "manner_of_collision_name": "Angle",
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "mcid_issuing_authority_name": "Not Applicable",
+      "minute_of_crash": 21,
+      "month_of_crash": 9,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number": "00000000000",
+      "number_of_motor_vehicles_in_transport_mvit": 4,
+      "number_of_occupants": 0,
+      "registered_vehicle_owner": 6,
+      "registered_vehicle_owner_name": "Driverless/Motor Vehicle Parked/Stopped Off Roadway",
+      "registration_state": 48,
+      "registration_state_name": "Texas",
+      "related_factors_vehicle_level1": 0,
+      "related_factors_vehicle_level2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 48,
+      "underride_override": 0,
+      "underride_override_name": "No Underride or Override Noted (2012-Later)",
+      "unit_type": "Motor Vehicle Not in Transport Within the Trafficway",
+      "vehicle_configuration": 0,
+      "vehicle_identification_number_vin": "2B3CA3CV5AH1",
+      "vehicle_make": 7,
+      "vehicle_make_name": "Dodge",
+      "vehicle_model": 24,
+      "vehicle_model_year": 2010,
+      "vehicle_number": 6,
+      "vehicle_removal": "Not Towed",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "2",
+      "vin_character_10": "A",
+      "vin_character_11": "H",
+      "vin_character_12": "1",
+      "vin_character_2": "B",
+      "vin_character_3": "3",
+      "vin_character_4": "C",
+      "vin_character_5": "A",
+      "vin_character_6": "3",
+      "vin_character_7": "C",
+      "vin_character_8": "V",
+      "vin_character_9": "5"
+    },
+    {
+      "body_type": 4,
+      "body_type_name": "4-Door Sedan/Hardtop",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "consecutive_number": 121227,
+      "day_of_crash": 3,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Minor Damage",
+      "fatalities_in_vehicle": 0,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": 0,
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": "Not Applicable",
+      "hit_and_run": "No / No Hit-and-Run",
+      "hour_of_crash": 19,
+      "initial_contact_point": 4,
+      "make_model_combined": 52035,
+      "manner_of_collision": 6,
+      "manner_of_collision_name": "Angle",
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "mcid_issuing_authority_name": "Not Applicable",
+      "minute_of_crash": 10,
+      "month_of_crash": 7,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number": "00000000000",
+      "number_of_motor_vehicles_in_transport_mvit": 2,
+      "number_of_occupants": 0,
+      "registered_vehicle_owner": 6,
+      "registered_vehicle_owner_name": "Driverless/Motor Vehicle Parked/Stopped Off Roadway",
+      "registration_state": 12,
+      "registration_state_name": "Florida",
+      "related_factors_vehicle_level1": 0,
+      "related_factors_vehicle_level2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 12,
+      "underride_override": 0,
+      "underride_override_name": "No Underride or Override Noted (2012-Later)",
+      "unit_type": "Motor Vehicle Not in Transport Outside the Trafficway",
+      "vehicle_configuration": 0,
+      "vehicle_identification_number_vin": "JA3AY26C21U0",
+      "vehicle_make": 52,
+      "vehicle_make_name": "Mitsubishi",
+      "vehicle_model": 35,
+      "vehicle_model_year": 2001,
+      "vehicle_number": 3,
+      "vehicle_removal": "Not Towed",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "J",
+      "vin_character_10": "1",
+      "vin_character_11": "U",
+      "vin_character_12": "0",
+      "vin_character_2": "A",
+      "vin_character_3": "3",
+      "vin_character_4": "A",
+      "vin_character_5": "Y",
+      "vin_character_6": "2",
+      "vin_character_7": "6",
+      "vin_character_8": "C",
+      "vin_character_9": "2"
+    },
+    {
+      "body_type": 2,
+      "body_type_name": "2-Door Sedan/Hardtop/Coupe",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "consecutive_number": 240134,
+      "day_of_crash": 6,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Functional Damage",
+      "fatalities_in_vehicle": 0,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": 0,
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": "Not Applicable",
+      "hit_and_run": "No / No Hit-and-Run",
+      "hour_of_crash": 9,
+      "initial_contact_point": 98,
+      "make_model_combined": 30032,
+      "manner_of_collision": 6,
+      "manner_of_collision_name": "Angle",
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "mcid_issuing_authority_name": "Not Applicable",
+      "minute_of_crash": 8,
+      "month_of_crash": 5,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number": "00000000000",
+      "number_of_motor_vehicles_in_transport_mvit": 2,
+      "number_of_occupants": 0,
+      "registered_vehicle_owner": 6,
+      "registered_vehicle_owner_name": "Driverless/Motor Vehicle Parked/Stopped Off Roadway",
+      "registration_state": 5,
+      "registration_state_name": "Arkansas",
+      "related_factors_vehicle_level1": 0,
+      "related_factors_vehicle_level2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "state_number": 24,
+      "underride_override": 0,
+      "underride_override_name": "No Underride or Override Noted (2012-Later)",
+      "unit_type": "Motor Vehicle Not in Transport Outside the Trafficway",
+      "vehicle_configuration": 0,
+      "vehicle_identification_number_vin": "115161409",
+      "vehicle_make": 30,
+      "vehicle_make_name": "Volkswagen",
+      "vehicle_model": 32,
+      "vehicle_model_year": 1965,
+      "vehicle_number": 5,
+      "vehicle_removal": "Not Towed",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "1",
+      "vin_character_10": "",
+      "vin_character_11": "",
+      "vin_character_12": "",
+      "vin_character_2": "1",
+      "vin_character_3": "5",
+      "vin_character_4": "1",
+      "vin_character_5": "6",
+      "vin_character_6": "1",
+      "vin_character_7": "4",
+      "vin_character_8": "0",
+      "vin_character_9": "9"
+    }
+  ]
+}

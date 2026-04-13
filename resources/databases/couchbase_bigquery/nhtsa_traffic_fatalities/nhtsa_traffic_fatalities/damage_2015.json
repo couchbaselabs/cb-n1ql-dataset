@@ -1,0 +1,142 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`damaged_areas` = 13, `damaged_areas_name` = \"Top\"",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10141,
+              50474,
+              62448,
+              62491,
+              62748
+            ],
+            "type": "number"
+          },
+          "damaged_areas": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13
+            ],
+            "type": "number"
+          },
+          "damaged_areas_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Top"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "damage_2015::1",
+                  "damage_2015::5",
+                  "damage_2015::6",
+                  "damage_2015::8",
+                  "damage_2015::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "damage_2015::1"
+              },
+              {
+                "id": "damage_2015::5"
+              },
+              {
+                "id": "damage_2015::6"
+              },
+              {
+                "id": "damage_2015::8"
+              },
+              {
+                "id": "damage_2015::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 62491,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 6,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 10141,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 1,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 10343,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 1,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 62491,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 6,
+      "vehicle_number": 6
+    },
+    {
+      "consecutive_number": 50474,
+      "damaged_areas": 13,
+      "damaged_areas_name": "Top",
+      "state_number": 5,
+      "vehicle_number": 5
+    }
+  ]
+}

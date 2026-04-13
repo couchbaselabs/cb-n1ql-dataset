@@ -1,0 +1,388 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "County_Name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "HUGHES",
+              "McClain",
+              "PIATT",
+              "Redwood",
+              "Washington"
+            ],
+            "type": "string"
+          },
+          "Date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2015-03-01",
+              "2016-03-01",
+              "2017-09-01",
+              "2017-12-01",
+              "2018-12-01"
+            ],
+            "type": "string"
+          },
+          "FIPS": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "17147",
+              "27127",
+              "40063",
+              "40087",
+              "40147"
+            ],
+            "type": "string"
+          },
+          "Other_full": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                59,
+                61,
+                89,
+                104,
+                126
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "Public_Total": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                291,
+                394,
+                631,
+                799,
+                1498
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "QDWI": {
+            "#docs": [
+              19,
+              981
+            ],
+            "%docs": [
+              1.9,
+              98.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "QI": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                20,
+                26,
+                35,
+                53,
+                119
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "QMB_Only": {
+            "#docs": [
+              426,
+              574
+            ],
+            "%docs": [
+              42.6,
+              57.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                45,
+                211,
+                300,
+                398,
+                1028
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "QMB_plus_Full": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                151,
+                207,
+                431,
+                494,
+                933
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "SLMB_only": {
+            "#docs": [
+              14,
+              986
+            ],
+            "%docs": [
+              1.4,
+              98.6
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                25,
+                38,
+                64,
+                108,
+                226
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "SLMB_plus_Full": {
+            "#docs": [
+              1,
+              999
+            ],
+            "%docs": [
+              0.1,
+              99.9
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                28,
+                40,
+                42,
+                78,
+                94
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "State_Abbr": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IL",
+              "MI",
+              "MN",
+              "NE",
+              "OK"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dual_eligible_enrollment_by_co...",
+                  "dual_eligible_enrollment_by_co...",
+                  "dual_eligible_enrollment_by_co...",
+                  "dual_eligible_enrollment_by_co...",
+                  "dual_eligible_enrollment_by_co..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "dual_eligible_enrollment_by_county_and_program::10191"
+              },
+              {
+                "id": "dual_eligible_enrollment_by_county_and_program::21355"
+              },
+              {
+                "id": "dual_eligible_enrollment_by_county_and_program::33338"
+              },
+              {
+                "id": "dual_eligible_enrollment_by_county_and_program::33523"
+              },
+              {
+                "id": "dual_eligible_enrollment_by_county_and_program::33999"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "County_Name": "MENARD",
+      "Date": "2016-12-01",
+      "FIPS": "17129",
+      "Other_full": 55,
+      "Public_Total": 231,
+      "QDWI": 0,
+      "QI": 18,
+      "QMB_Only": null,
+      "QMB_plus_Full": 125,
+      "SLMB_only": 12,
+      "SLMB_plus_Full": 21,
+      "State_Abbr": "IL"
+    },
+    {
+      "County_Name": "Monroe",
+      "Date": "2018-12-01",
+      "FIPS": "17133",
+      "Other_full": 133,
+      "Public_Total": 394,
+      "QDWI": 0,
+      "QI": 21,
+      "QMB_Only": null,
+      "QMB_plus_Full": 172,
+      "SLMB_only": 20,
+      "SLMB_plus_Full": 48,
+      "State_Abbr": "IL"
+    },
+    {
+      "County_Name": "Monroe",
+      "Date": "2018-06-01",
+      "FIPS": "17133",
+      "Other_full": 139,
+      "Public_Total": 411,
+      "QDWI": 0,
+      "QI": 20,
+      "QMB_Only": 14,
+      "QMB_plus_Full": 176,
+      "SLMB_only": 25,
+      "SLMB_plus_Full": 37,
+      "State_Abbr": "IL"
+    },
+    {
+      "County_Name": "RICHLAND",
+      "Date": "2015-09-01",
+      "FIPS": "17159",
+      "Other_full": 146,
+      "Public_Total": 697,
+      "QDWI": 0,
+      "QI": 57,
+      "QMB_Only": 21,
+      "QMB_plus_Full": 358,
+      "SLMB_only": 45,
+      "SLMB_plus_Full": 70,
+      "State_Abbr": "IL"
+    },
+    {
+      "County_Name": "RICHLAND",
+      "Date": "2015-03-01",
+      "FIPS": "17159",
+      "Other_full": 152,
+      "Public_Total": 706,
+      "QDWI": 0,
+      "QI": 54,
+      "QMB_Only": 22,
+      "QMB_plus_Full": 368,
+      "SLMB_only": 43,
+      "SLMB_plus_Full": 67,
+      "State_Abbr": "IL"
+    }
+  ]
+}

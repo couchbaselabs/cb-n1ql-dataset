@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 320,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "chromosome": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "chr12",
+              "chr14",
+              "chr4",
+              "chr7",
+              "chr9"
+            ],
+            "type": "string"
+          },
+          "cytoband_name": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "12p12",
+              "14q31",
+              "4q21",
+              "7q35",
+              "9q31"
+            ],
+            "type": "string"
+          },
+          "hg38_start": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              14600000,
+              75300000,
+              78800000,
+              99800000,
+              143400000
+            ],
+            "type": "number"
+          },
+          "hg38_stop": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              26300000,
+              87100000,
+              89300000,
+              112100000,
+              148200000
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 320,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 320,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cytobands_hg38::146",
+                  "cytobands_hg38::172",
+                  "cytobands_hg38::203",
+                  "cytobands_hg38::237",
+                  "cytobands_hg38::81"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cytobands_hg38::146"
+              },
+              {
+                "id": "cytobands_hg38::172"
+              },
+              {
+                "id": "cytobands_hg38::203"
+              },
+              {
+                "id": "cytobands_hg38::237"
+              },
+              {
+                "id": "cytobands_hg38::81"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "chromosome": "chr1",
+      "cytoband_name": "1p36",
+      "hg38_start": 0,
+      "hg38_stop": 27600000
+    },
+    {
+      "chromosome": "chr1",
+      "cytoband_name": "1p35",
+      "hg38_start": 27600000,
+      "hg38_stop": 34300000
+    },
+    {
+      "chromosome": "chr1",
+      "cytoband_name": "1p11",
+      "hg38_start": 120400000,
+      "hg38_stop": 123400000
+    },
+    {
+      "chromosome": "chr5",
+      "cytoband_name": "5q12",
+      "hg38_start": 59600000,
+      "hg38_stop": 67400000
+    },
+    {
+      "chromosome": "chr5",
+      "cytoband_name": "5q13",
+      "hg38_start": 67400000,
+      "hg38_stop": 77600000
+    }
+  ]
+}

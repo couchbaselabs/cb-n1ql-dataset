@@ -1,0 +1,145 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`non_motorist_safety_equipment_use` = \"None Used\", `vehicle_number` = 0",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10381,
+              62896,
+              120665,
+              180096,
+              250313
+            ],
+            "type": "number"
+          },
+          "non_motorist_safety_equipment_use": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "None Used"
+            ],
+            "type": "string"
+          },
+          "person_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              6,
+              12,
+              18,
+              25
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "safetyeq_2016::0",
+                  "safetyeq_2016::2",
+                  "safetyeq_2016::3",
+                  "safetyeq_2016::7",
+                  "safetyeq_2016::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "safetyeq_2016::0"
+              },
+              {
+                "id": "safetyeq_2016::2"
+              },
+              {
+                "id": "safetyeq_2016::3"
+              },
+              {
+                "id": "safetyeq_2016::7"
+              },
+              {
+                "id": "safetyeq_2016::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 10381,
+      "non_motorist_safety_equipment_use": "None Used",
+      "person_number": 5,
+      "state_number": 1,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 62896,
+      "non_motorist_safety_equipment_use": "None Used",
+      "person_number": 5,
+      "state_number": 6,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 250313,
+      "non_motorist_safety_equipment_use": "None Used",
+      "person_number": 4,
+      "state_number": 25,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 10381,
+      "non_motorist_safety_equipment_use": "None Used",
+      "person_number": 6,
+      "state_number": 1,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 10381,
+      "non_motorist_safety_equipment_use": "None Used",
+      "person_number": 7,
+      "state_number": 1,
+      "vehicle_number": 0
+    }
+  ]
+}

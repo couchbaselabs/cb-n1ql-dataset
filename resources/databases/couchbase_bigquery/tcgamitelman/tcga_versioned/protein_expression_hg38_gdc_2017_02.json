@@ -1,0 +1,236 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`antibody_source` = \"R\", `gene_name` = \"AR\", `protein_base_name` = \"AR\", `protein_name` = \"AR\", `validation_status` = \"V\"",
+        "properties": {
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-4G-AAZT-01A-21-A45N-20",
+              "TCGA-FA-A4BB-01A-21-A45K-20",
+              "TCGA-V4-A9EJ-01A-21-A41Z-20",
+              "TCGA-W5-AA2Q-01A-21-A45N-20",
+              "TCGA-ZH-A8Y1-01A-21-A45N-20"
+            ],
+            "type": "string"
+          },
+          "antibody_source": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "R"
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-4G-AAZT",
+              "TCGA-FA-A4BB",
+              "TCGA-V4-A9EJ",
+              "TCGA-W5-AA2Q",
+              "TCGA-ZH-A8Y1"
+            ],
+            "type": "string"
+          },
+          "gene_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AR"
+            ],
+            "type": "string"
+          },
+          "phospho": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-CHOL",
+              "TCGA-DLBC",
+              "TCGA-UVM"
+            ],
+            "type": "string"
+          },
+          "protein_base_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AR"
+            ],
+            "type": "string"
+          },
+          "protein_expression": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -0.260880929,
+              -0.220865179,
+              -0.000939914500000028,
+              0.036646008,
+              0.42619968075
+            ],
+            "type": "number"
+          },
+          "protein_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AR"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-4G-AAZT-01A",
+              "TCGA-FA-A4BB-01A",
+              "TCGA-V4-A9EJ-01A",
+              "TCGA-W5-AA2Q-01A",
+              "TCGA-ZH-A8Y1-01A"
+            ],
+            "type": "string"
+          },
+          "validation_status": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "V"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "protein_expression_hg38_gdc_20...",
+                  "protein_expression_hg38_gdc_20...",
+                  "protein_expression_hg38_gdc_20...",
+                  "protein_expression_hg38_gdc_20...",
+                  "protein_expression_hg38_gdc_20..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "protein_expression_hg38_gdc_2017_02::0"
+              },
+              {
+                "id": "protein_expression_hg38_gdc_2017_02::1"
+              },
+              {
+                "id": "protein_expression_hg38_gdc_2017_02::2"
+              },
+              {
+                "id": "protein_expression_hg38_gdc_2017_02::3"
+              },
+              {
+                "id": "protein_expression_hg38_gdc_2017_02::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_barcode": "TCGA-ZH-A8Y1-01A-21-A45N-20",
+      "antibody_source": "R",
+      "case_barcode": "TCGA-ZH-A8Y1",
+      "gene_name": "AR",
+      "phospho": null,
+      "project_short_name": "TCGA-CHOL",
+      "protein_base_name": "AR",
+      "protein_expression": -0.260880929,
+      "protein_name": "AR",
+      "sample_barcode": "TCGA-ZH-A8Y1-01A",
+      "validation_status": "V"
+    },
+    {
+      "aliquot_barcode": "TCGA-W5-AA2Q-01A-21-A45N-20",
+      "antibody_source": "R",
+      "case_barcode": "TCGA-W5-AA2Q",
+      "gene_name": "AR",
+      "phospho": null,
+      "project_short_name": "TCGA-CHOL",
+      "protein_base_name": "AR",
+      "protein_expression": -0.000939914500000028,
+      "protein_name": "AR",
+      "sample_barcode": "TCGA-W5-AA2Q-01A",
+      "validation_status": "V"
+    },
+    {
+      "aliquot_barcode": "TCGA-FA-A4BB-01A-21-A45K-20",
+      "antibody_source": "R",
+      "case_barcode": "TCGA-FA-A4BB",
+      "gene_name": "AR",
+      "phospho": null,
+      "project_short_name": "TCGA-DLBC",
+      "protein_base_name": "AR",
+      "protein_expression": -0.220865179,
+      "protein_name": "AR",
+      "sample_barcode": "TCGA-FA-A4BB-01A",
+      "validation_status": "V"
+    },
+    {
+      "aliquot_barcode": "TCGA-V4-A9EJ-01A-21-A41Z-20",
+      "antibody_source": "R",
+      "case_barcode": "TCGA-V4-A9EJ",
+      "gene_name": "AR",
+      "phospho": null,
+      "project_short_name": "TCGA-UVM",
+      "protein_base_name": "AR",
+      "protein_expression": 0.036646008,
+      "protein_name": "AR",
+      "sample_barcode": "TCGA-V4-A9EJ-01A",
+      "validation_status": "V"
+    },
+    {
+      "aliquot_barcode": "TCGA-4G-AAZT-01A-21-A45N-20",
+      "antibody_source": "R",
+      "case_barcode": "TCGA-4G-AAZT",
+      "gene_name": "AR",
+      "phospho": null,
+      "project_short_name": "TCGA-CHOL",
+      "protein_base_name": "AR",
+      "protein_expression": 0.42619968075,
+      "protein_name": "AR",
+      "sample_barcode": "TCGA-4G-AAZT-01A",
+      "validation_status": "V"
+    }
+  ]
+}

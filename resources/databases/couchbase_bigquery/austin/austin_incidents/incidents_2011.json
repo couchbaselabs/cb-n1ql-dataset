@@ -1,0 +1,208 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`date` = \"2011-05-10\"",
+        "properties": {
+          "address": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "500 BLOCK WOODWARD ST",
+              "5200 BLOCK E STASSNEY LN",
+              "5700 BLOCK LAS ALAS TRL",
+              "5900 BLOCK BURNET RD",
+              "9700 BLOCK NORTH LAKE CREEK PK..."
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-05-10"
+            ],
+            "type": "string"
+          },
+          "descript": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DWI",
+              "RAPE",
+              "THEFT"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "location": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "longitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "11:54:00",
+              "16:30:00",
+              "20:06:00",
+              "21:41:00",
+              "23:33:00"
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2011-05-10T17:54:00+00:00",
+              "2011-05-10T22:30:00+00:00",
+              "2011-05-11T02:06:00+00:00",
+              "2011-05-11T03:41:00+00:00",
+              "2011-05-11T05:33:00+00:00"
+            ],
+            "type": "string"
+          },
+          "unique_key": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20111301818,
+              20111302003,
+              20111302219,
+              20111312329,
+              20115023478
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "incidents_2011::0",
+                  "incidents_2011::1",
+                  "incidents_2011::2",
+                  "incidents_2011::3",
+                  "incidents_2011::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "incidents_2011::0"
+              },
+              {
+                "id": "incidents_2011::1"
+              },
+              {
+                "id": "incidents_2011::2"
+              },
+              {
+                "id": "incidents_2011::3"
+              },
+              {
+                "id": "incidents_2011::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "5900 BLOCK BURNET RD",
+      "date": "2011-05-10",
+      "descript": "THEFT",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "16:30:00",
+      "timestamp": "2011-05-10T22:30:00+00:00",
+      "unique_key": 20115023478
+    },
+    {
+      "address": "2700 BLOCK E 7TH ST",
+      "date": "2011-05-10",
+      "descript": "THEFT",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "16:04:00",
+      "timestamp": "2011-05-10T22:04:00+00:00",
+      "unique_key": 20111301193
+    },
+    {
+      "address": "10700 BLOCK LAKE CREEK PKWY",
+      "date": "2011-05-10",
+      "descript": "RAPE",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "15:13:00",
+      "timestamp": "2011-05-10T21:13:00+00:00",
+      "unique_key": 20111301226
+    },
+    {
+      "address": "5100 BLOCK HARMON AVE",
+      "date": "2011-05-10",
+      "descript": "THEFT",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "13:05:00",
+      "timestamp": "2011-05-10T19:05:00+00:00",
+      "unique_key": 20111301020
+    },
+    {
+      "address": "11200 BLOCK FM 2222 RD",
+      "date": "2011-05-10",
+      "descript": "THEFT",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "14:23:00",
+      "timestamp": "2011-05-10T20:23:00+00:00",
+      "unique_key": 20115023812
+    }
+  ]
+}

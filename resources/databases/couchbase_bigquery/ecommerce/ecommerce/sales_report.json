@@ -1,0 +1,202 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`sentimentScore` = 0",
+        "properties": {
+          "name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " Men's 100% Cotton Short Sleev...",
+              " Protect Smoke + CO White Wire...",
+              " Rucksack",
+              " Women's Scoop Neck Tee White",
+              " Women's Short Sleeve Badge Te..."
+            ],
+            "type": "string"
+          },
+          "productSKU": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GGOEGAAR010715",
+              "GGOEGALL074614",
+              "GGOEGALQ036616",
+              "GGOEGBRJ037399",
+              "GGOENEBQ079199"
+            ],
+            "type": "string"
+          },
+          "ratio": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.03085966201322557,
+              0.04824561403508772,
+              0.1095890410958904,
+              0.1935483870967742,
+              0.25925925925925924
+            ],
+            "type": "number"
+          },
+          "restockingLeadTime": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              10,
+              13,
+              14,
+              19
+            ],
+            "type": "number"
+          },
+          "sentimentMagnitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.1,
+              0.2,
+              0.5
+            ],
+            "type": "number"
+          },
+          "sentimentScore": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "stockLevel": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              27,
+              31,
+              146,
+              228,
+              1361
+            ],
+            "type": "number"
+          },
+          "total_ordered": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              7,
+              11,
+              16,
+              42
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_report::4",
+                  "sales_report::5",
+                  "sales_report::6",
+                  "sales_report::7",
+                  "sales_report::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_report::4"
+              },
+              {
+                "id": "sales_report::5"
+              },
+              {
+                "id": "sales_report::6"
+              },
+              {
+                "id": "sales_report::7"
+              },
+              {
+                "id": "sales_report::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "Waterproof Backpack",
+      "productSKU": "GGOEGBRA037499",
+      "ratio": 0.021739130434782608,
+      "restockingLeadTime": 10,
+      "sentimentMagnitude": 0.1,
+      "sentimentScore": 0,
+      "stockLevel": 230,
+      "total_ordered": 5
+    },
+    {
+      "name": " Canvas Tote Natural/Navy",
+      "productSKU": "GGOEGBJL013999",
+      "ratio": 0.10299003322259136,
+      "restockingLeadTime": 3,
+      "sentimentMagnitude": 0.2,
+      "sentimentScore": 0,
+      "stockLevel": 602,
+      "total_ordered": 62
+    },
+    {
+      "name": " Men's Short Sleeve Hero Tee Charcoal",
+      "productSKU": "GGOEGAAX0325",
+      "ratio": 0.057692307692307696,
+      "restockingLeadTime": 12,
+      "sentimentMagnitude": 0.5,
+      "sentimentScore": 0,
+      "stockLevel": 104,
+      "total_ordered": 6
+    },
+    {
+      "name": " Women's Short Sleeve Badge Tee Navy",
+      "productSKU": "GGOEGALL074614",
+      "ratio": 0.1935483870967742,
+      "restockingLeadTime": 19,
+      "sentimentMagnitude": 0.2,
+      "sentimentScore": 0,
+      "stockLevel": 31,
+      "total_ordered": 6
+    },
+    {
+      "name": " Mood Original Window Decal",
+      "productSKU": "GGOEWFKA083199",
+      "ratio": 0.07575757575757576,
+      "restockingLeadTime": 8,
+      "sentimentMagnitude": 0.1,
+      "sentimentScore": 0,
+      "stockLevel": 66,
+      "total_ordered": 5
+    }
+  ]
+}

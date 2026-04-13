@@ -1,0 +1,236 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`end_period` = \"M12\", `end_year` = 2021, `footnote_codes` = \"nan\", `seasonal` = \"S\"",
+        "properties": {
+          "begin_period": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "M01",
+              "M03",
+              "M04"
+            ],
+            "type": "string"
+          },
+          "begin_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1939,
+              1964,
+              2006
+            ],
+            "type": "number"
+          },
+          "data_type_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              6,
+              7,
+              8,
+              10
+            ],
+            "type": "number"
+          },
+          "end_period": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "M12"
+            ],
+            "type": "string"
+          },
+          "end_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2021
+            ],
+            "type": "number"
+          },
+          "footnote_codes": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "nan"
+            ],
+            "type": "string"
+          },
+          "industry_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5000000
+            ],
+            "type": "number"
+          },
+          "seasonal": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "S"
+            ],
+            "type": "string"
+          },
+          "series_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CES0000000010",
+              "CES0500000003",
+              "CES0500000006",
+              "CES0500000007",
+              "CES0500000008"
+            ],
+            "type": "string"
+          },
+          "series_title": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Average hourly earnings of all...",
+              "Average hourly earnings of pro...",
+              "Average weekly hours of produc...",
+              "Production and nonsupervisory ...",
+              "Women employees, thousands, to..."
+            ],
+            "type": "string"
+          },
+          "supersector_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "employment_hours_earnings_seri...",
+                  "employment_hours_earnings_seri...",
+                  "employment_hours_earnings_seri...",
+                  "employment_hours_earnings_seri...",
+                  "employment_hours_earnings_seri..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "employment_hours_earnings_series::1"
+              },
+              {
+                "id": "employment_hours_earnings_series::6"
+              },
+              {
+                "id": "employment_hours_earnings_series::7"
+              },
+              {
+                "id": "employment_hours_earnings_series::8"
+              },
+              {
+                "id": "employment_hours_earnings_series::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "begin_period": "M03",
+      "begin_year": 1939,
+      "data_type_code": 25,
+      "end_period": "M12",
+      "end_year": 2021,
+      "footnote_codes": "nan",
+      "industry_code": 0,
+      "seasonal": "S",
+      "series_id": "CES0000000025",
+      "series_title": "All employees, quarterly averages, seasonally adjusted, thousands, total nonfarm, seasonally adjusted",
+      "supersector_code": 0
+    },
+    {
+      "begin_period": "M01",
+      "begin_year": 1939,
+      "data_type_code": 1,
+      "end_period": "M12",
+      "end_year": 2021,
+      "footnote_codes": "nan",
+      "industry_code": 0,
+      "seasonal": "S",
+      "series_id": "CES0000000001",
+      "series_title": "All employees, thousands, total nonfarm, seasonally adjusted",
+      "supersector_code": 0
+    },
+    {
+      "begin_period": "M04",
+      "begin_year": 1939,
+      "data_type_code": 26,
+      "end_period": "M12",
+      "end_year": 2021,
+      "footnote_codes": "nan",
+      "industry_code": 0,
+      "seasonal": "S",
+      "series_id": "CES0000000026",
+      "series_title": "All employees, 3-month average change, seasonally adjusted, thousands, total nonfarm, seasonally adjusted",
+      "supersector_code": 0
+    },
+    {
+      "begin_period": "M03",
+      "begin_year": 2006,
+      "data_type_code": 3,
+      "end_period": "M12",
+      "end_year": 2021,
+      "footnote_codes": "nan",
+      "industry_code": 5000000,
+      "seasonal": "S",
+      "series_id": "CES0500000003",
+      "series_title": "Average hourly earnings of all employees, total private, seasonally adjusted",
+      "supersector_code": 5
+    },
+    {
+      "begin_period": "M01",
+      "begin_year": 1964,
+      "data_type_code": 10,
+      "end_period": "M12",
+      "end_year": 2021,
+      "footnote_codes": "nan",
+      "industry_code": 0,
+      "seasonal": "S",
+      "series_id": "CES0000000010",
+      "series_title": "Women employees, thousands, total nonfarm, seasonally adjusted",
+      "supersector_code": 0
+    }
+  ]
+}

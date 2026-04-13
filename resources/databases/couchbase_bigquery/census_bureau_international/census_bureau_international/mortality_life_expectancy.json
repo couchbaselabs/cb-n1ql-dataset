@@ -1,0 +1,323 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`country_code` = \"AA\", `country_name` = \"Aruba\"",
+        "properties": {
+          "country_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AA"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aruba"
+            ],
+            "type": "string"
+          },
+          "infant_mortality": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              21.2,
+              22.07,
+              22.79,
+              23.04,
+              23.3
+            ],
+            "type": "number"
+          },
+          "infant_mortality_female": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              16.38,
+              18.12,
+              19.55,
+              20.05,
+              20.56
+            ],
+            "type": "number"
+          },
+          "infant_mortality_male": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              26.09,
+              26.1
+            ],
+            "type": "number"
+          },
+          "life_expectancy": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              72.86,
+              72.88,
+              72.9,
+              72.94,
+              72.97
+            ],
+            "type": "number"
+          },
+          "life_expectancy_female": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              76.36,
+              76.47,
+              76.53,
+              76.55,
+              76.56
+            ],
+            "type": "number"
+          },
+          "life_expectancy_male": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              69.09,
+              69.14,
+              69.19,
+              69.34,
+              69.51
+            ],
+            "type": "number"
+          },
+          "mortality_rate_1to4": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2.82,
+              2.83,
+              2.89,
+              2.94,
+              2.97
+            ],
+            "type": "number"
+          },
+          "mortality_rate_1to4_female": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2.08,
+              2.22,
+              2.33,
+              2.36,
+              2.4
+            ],
+            "type": "number"
+          },
+          "mortality_rate_1to4_male": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3.24,
+              3.3,
+              3.36,
+              3.57,
+              3.87
+            ],
+            "type": "number"
+          },
+          "mortality_rate_under5": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              24.1,
+              24.89,
+              25.56,
+              25.79,
+              26.05
+            ],
+            "type": "number"
+          },
+          "mortality_rate_under5_female": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              18.43,
+              20.3,
+              21.83,
+              22.36,
+              22.91
+            ],
+            "type": "number"
+          },
+          "mortality_rate_under5_male": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              29.25,
+              29.31,
+              29.37,
+              29.58,
+              29.87
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1981,
+              1982,
+              1983,
+              1986,
+              1990
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mortality_life_expectancy::0",
+                  "mortality_life_expectancy::1",
+                  "mortality_life_expectancy::2",
+                  "mortality_life_expectancy::5",
+                  "mortality_life_expectancy::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mortality_life_expectancy::0"
+              },
+              {
+                "id": "mortality_life_expectancy::1"
+              },
+              {
+                "id": "mortality_life_expectancy::2"
+              },
+              {
+                "id": "mortality_life_expectancy::5"
+              },
+              {
+                "id": "mortality_life_expectancy::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "infant_mortality": 21.41,
+      "infant_mortality_female": 16.8,
+      "infant_mortality_male": 26.1,
+      "life_expectancy": 72.96,
+      "life_expectancy_female": 76.39,
+      "life_expectancy_male": 69.47,
+      "mortality_rate_1to4": 2.94,
+      "mortality_rate_1to4_female": 2.12,
+      "mortality_rate_1to4_male": 3.79,
+      "mortality_rate_under5": 24.29,
+      "mortality_rate_under5_female": 18.88,
+      "mortality_rate_under5_male": 29.79,
+      "year": 1989
+    },
+    {
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "infant_mortality": 22.07,
+      "infant_mortality_female": 18.12,
+      "infant_mortality_male": 26.1,
+      "life_expectancy": 72.94,
+      "life_expectancy_female": 76.47,
+      "life_expectancy_male": 69.34,
+      "mortality_rate_1to4": 2.89,
+      "mortality_rate_1to4_female": 2.22,
+      "mortality_rate_1to4_male": 3.57,
+      "mortality_rate_under5": 24.89,
+      "mortality_rate_under5_female": 20.3,
+      "mortality_rate_under5_male": 29.58,
+      "year": 1986
+    },
+    {
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "infant_mortality": 21.62,
+      "infant_mortality_female": 17.23,
+      "infant_mortality_male": 26.1,
+      "life_expectancy": 72.95,
+      "life_expectancy_female": 76.42,
+      "life_expectancy_male": 69.43,
+      "mortality_rate_1to4": 2.93,
+      "mortality_rate_1to4_female": 2.16,
+      "mortality_rate_1to4_male": 3.72,
+      "mortality_rate_under5": 24.48,
+      "mortality_rate_under5_female": 19.35,
+      "mortality_rate_under5_male": 29.72,
+      "year": 1988
+    },
+    {
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "infant_mortality": 21.85,
+      "infant_mortality_female": 17.67,
+      "infant_mortality_male": 26.1,
+      "life_expectancy": 72.95,
+      "life_expectancy_female": 76.44,
+      "life_expectancy_male": 69.38,
+      "mortality_rate_1to4": 2.91,
+      "mortality_rate_1to4_female": 2.19,
+      "mortality_rate_1to4_male": 3.65,
+      "mortality_rate_under5": 24.69,
+      "mortality_rate_under5_female": 19.82,
+      "mortality_rate_under5_male": 29.65,
+      "year": 1987
+    },
+    {
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "infant_mortality": 21.2,
+      "infant_mortality_female": 16.38,
+      "infant_mortality_male": 26.1,
+      "life_expectancy": 72.97,
+      "life_expectancy_female": 76.36,
+      "life_expectancy_male": 69.51,
+      "mortality_rate_1to4": 2.97,
+      "mortality_rate_1to4_female": 2.08,
+      "mortality_rate_1to4_male": 3.87,
+      "mortality_rate_under5": 24.1,
+      "mortality_rate_under5_female": 18.43,
+      "mortality_rate_under5_male": 29.87,
+      "year": 1990
+    }
+  ]
+}

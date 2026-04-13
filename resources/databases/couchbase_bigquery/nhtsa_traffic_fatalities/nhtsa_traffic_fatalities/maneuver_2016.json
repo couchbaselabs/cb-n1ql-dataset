@@ -1,0 +1,144 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`driver_maneuvered_to_avoid` = 0, `driver_maneuvered_to_avoid_name` = \"Driver Did Not Maneuver To Avoi...\"",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10264,
+              10762,
+              10878,
+              330102,
+              560070
+            ],
+            "type": "number"
+          },
+          "driver_maneuvered_to_avoid": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "driver_maneuvered_to_avoid_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Driver Did Not Maneuver To Avo..."
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              33,
+              44,
+              56
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "maneuver_2016::0",
+                  "maneuver_2016::1",
+                  "maneuver_2016::4",
+                  "maneuver_2016::6",
+                  "maneuver_2016::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "maneuver_2016::0"
+              },
+              {
+                "id": "maneuver_2016::1"
+              },
+              {
+                "id": "maneuver_2016::4"
+              },
+              {
+                "id": "maneuver_2016::6"
+              },
+              {
+                "id": "maneuver_2016::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 10845,
+      "driver_maneuvered_to_avoid": 0,
+      "driver_maneuvered_to_avoid_name": "Driver Did Not Maneuver To Avoid",
+      "state_number": 1,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 10878,
+      "driver_maneuvered_to_avoid": 0,
+      "driver_maneuvered_to_avoid_name": "Driver Did Not Maneuver To Avoid",
+      "state_number": 1,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 10762,
+      "driver_maneuvered_to_avoid": 0,
+      "driver_maneuvered_to_avoid_name": "Driver Did Not Maneuver To Avoid",
+      "state_number": 1,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 440044,
+      "driver_maneuvered_to_avoid": 0,
+      "driver_maneuvered_to_avoid_name": "Driver Did Not Maneuver To Avoid",
+      "state_number": 44,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 330102,
+      "driver_maneuvered_to_avoid": 0,
+      "driver_maneuvered_to_avoid_name": "Driver Did Not Maneuver To Avoid",
+      "state_number": 33,
+      "vehicle_number": 5
+    }
+  ]
+}

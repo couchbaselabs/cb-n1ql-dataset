@@ -1,0 +1,368 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`location` = \"(0         \\n1         \\n2     ...\", `year` = 2015",
+        "properties": {
+          "address": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "census_tract": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "clearance_date": {
+            "#docs": [
+              3,
+              7
+            ],
+            "%docs": [
+              30,
+              70
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2015-02-11T00:00:00+00:00",
+                "2015-02-12T00:00:00+00:00",
+                "2015-02-17T00:00:00+00:00",
+                "2015-03-25T00:00:00+00:00",
+                "2015-05-18T00:00:00+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "clearance_status": {
+            "#docs": [
+              3,
+              7
+            ],
+            "%docs": [
+              30,
+              70
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Cleared by Arrest",
+                "Not cleared"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "council_district_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BURGLARY OF VEHICLE           ",
+              "RAPE                          ",
+              "THEFT                         ",
+              "THEFT FROM PERSON             ",
+              "THEFT OF HEAVY EQUIPMENT      "
+            ],
+            "type": "string"
+          },
+          "district": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "B",
+              "E",
+              "UK"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "location": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(0         \n1         \n2      ..."
+            ],
+            "type": "string"
+          },
+          "location_description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1713 MULLEN DR",
+              "5510 S IH 35 SVRD",
+              "7928 US HWY 71 W",
+              "9700 WILLER WAY",
+              "LOYOLA LN"
+            ],
+            "type": "string"
+          },
+          "longitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "primary_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Rape",
+              "Theft"
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2015-02-02T00:00:00+00:00",
+              "2015-02-05T00:00:00+00:00",
+              "2015-02-13T00:00:00+00:00",
+              "2015-03-23T00:00:00+00:00",
+              "2015-05-15T00:00:00+00:00"
+            ],
+            "type": "string"
+          },
+          "unique_key": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2015331238,
+              2015331540,
+              2015821204,
+              20151342090,
+              20155005182
+            ],
+            "type": "number"
+          },
+          "x_coordinate": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "y_coordinate": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2015
+            ],
+            "type": "number"
+          },
+          "zipcode": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "crime::0",
+                  "crime::2",
+                  "crime::3",
+                  "crime::4",
+                  "crime::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "crime::0"
+              },
+              {
+                "id": "crime::2"
+              },
+              {
+                "id": "crime::3"
+              },
+              {
+                "id": "crime::4"
+              },
+              {
+                "id": "crime::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": null,
+      "census_tract": null,
+      "clearance_date": "2015-02-12T00:00:00+00:00",
+      "clearance_status": "Not cleared",
+      "council_district_code": null,
+      "description": "THEFT OF HEAVY EQUIPMENT      ",
+      "district": "UK",
+      "latitude": null,
+      "location": "(0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: latitude, Length: 38572, dtype: object,0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: longitude, Length: 38572, dtype: object)",
+      "location_description": "7928 US HWY 71 W",
+      "longitude": null,
+      "primary_type": "Theft",
+      "timestamp": "2015-02-02T00:00:00+00:00",
+      "unique_key": 2015331238,
+      "x_coordinate": null,
+      "y_coordinate": null,
+      "year": 2015,
+      "zipcode": null
+    },
+    {
+      "address": null,
+      "census_tract": null,
+      "clearance_date": "2015-02-17T00:00:00+00:00",
+      "clearance_status": "Not cleared",
+      "council_district_code": null,
+      "description": "BURGLARY OF VEHICLE           ",
+      "district": "UK",
+      "latitude": null,
+      "location": "(0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: latitude, Length: 38572, dtype: object,0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: longitude, Length: 38572, dtype: object)",
+      "location_description": "LOYOLA LN",
+      "longitude": null,
+      "primary_type": "Theft",
+      "timestamp": "2015-02-05T00:00:00+00:00",
+      "unique_key": 20155005182,
+      "x_coordinate": null,
+      "y_coordinate": null,
+      "year": 2015,
+      "zipcode": null
+    },
+    {
+      "address": null,
+      "census_tract": null,
+      "clearance_date": null,
+      "clearance_status": null,
+      "council_district_code": null,
+      "description": "THEFT OF BICYCLE              ",
+      "district": "UK",
+      "latitude": null,
+      "location": "(0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: latitude, Length: 38572, dtype: object,0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: longitude, Length: 38572, dtype: object)",
+      "location_description": "120 W. 4TH ST",
+      "longitude": null,
+      "primary_type": "Theft",
+      "timestamp": "2015-02-09T00:00:00+00:00",
+      "unique_key": 20158000456,
+      "x_coordinate": null,
+      "y_coordinate": null,
+      "year": 2015,
+      "zipcode": null
+    },
+    {
+      "address": null,
+      "census_tract": null,
+      "clearance_date": "2015-03-25T00:00:00+00:00",
+      "clearance_status": "Not cleared",
+      "council_district_code": null,
+      "description": "THEFT                         ",
+      "district": "UK",
+      "latitude": null,
+      "location": "(0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: latitude, Length: 38572, dtype: object,0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: longitude, Length: 38572, dtype: object)",
+      "location_description": "1713 MULLEN DR",
+      "longitude": null,
+      "primary_type": "Theft",
+      "timestamp": "2015-03-23T00:00:00+00:00",
+      "unique_key": 2015821204,
+      "x_coordinate": null,
+      "y_coordinate": null,
+      "year": 2015,
+      "zipcode": null
+    },
+    {
+      "address": null,
+      "census_tract": null,
+      "clearance_date": "2015-01-27T00:00:00+00:00",
+      "clearance_status": "Not cleared",
+      "council_district_code": null,
+      "description": "RAPE                          ",
+      "district": "B",
+      "latitude": null,
+      "location": "(0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: latitude, Length: 38572, dtype: object,0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: longitude, Length: 38572, dtype: object)",
+      "location_description": "nan",
+      "longitude": null,
+      "primary_type": "Rape",
+      "timestamp": "2015-01-15T00:00:00+00:00",
+      "unique_key": 2015150483,
+      "x_coordinate": null,
+      "y_coordinate": null,
+      "year": 2015,
+      "zipcode": null
+    }
+  ]
+}

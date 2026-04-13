@@ -1,0 +1,233 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 8,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "exception_type": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "exceptions": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2019-12-25",
+              "2020-01-01",
+              "2020-01-20",
+              "2020-02-17"
+            ],
+            "type": "string"
+          },
+          "friday": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "monday": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "saturday": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "service_desc": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Saturday",
+              "Sunday",
+              "Weekday"
+            ],
+            "type": "string"
+          },
+          "service_id": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "73692",
+              "73693",
+              "73694"
+            ],
+            "type": "string"
+          },
+          "sunday": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "thursday": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "tuesday": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "wednesday": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "~meta": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 8,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "calendar::0",
+                  "calendar::1",
+                  "calendar::2",
+                  "calendar::5",
+                  "calendar::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "calendar::0"
+              },
+              {
+                "id": "calendar::1"
+              },
+              {
+                "id": "calendar::2"
+              },
+              {
+                "id": "calendar::5"
+              },
+              {
+                "id": "calendar::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "exception_type": true,
+      "exceptions": "2020-01-01",
+      "friday": false,
+      "monday": false,
+      "saturday": true,
+      "service_desc": "Sunday",
+      "service_id": "73694",
+      "sunday": false,
+      "thursday": false,
+      "tuesday": false,
+      "wednesday": false
+    },
+    {
+      "exception_type": true,
+      "exceptions": "2020-02-17",
+      "friday": false,
+      "monday": false,
+      "saturday": true,
+      "service_desc": "Sunday",
+      "service_id": "73694",
+      "sunday": false,
+      "thursday": false,
+      "tuesday": false,
+      "wednesday": false
+    },
+    {
+      "exception_type": false,
+      "exceptions": "2020-01-01",
+      "friday": false,
+      "monday": true,
+      "saturday": false,
+      "service_desc": "Weekday",
+      "service_id": "73692",
+      "sunday": true,
+      "thursday": true,
+      "tuesday": true,
+      "wednesday": true
+    },
+    {
+      "exception_type": false,
+      "exceptions": "2020-02-17",
+      "friday": false,
+      "monday": true,
+      "saturday": false,
+      "service_desc": "Weekday",
+      "service_id": "73692",
+      "sunday": true,
+      "thursday": true,
+      "tuesday": true,
+      "wednesday": true
+    },
+    {
+      "exception_type": false,
+      "exceptions": "2020-01-20",
+      "friday": false,
+      "monday": true,
+      "saturday": false,
+      "service_desc": "Weekday",
+      "service_id": "73692",
+      "sunday": true,
+      "thursday": true,
+      "tuesday": true,
+      "wednesday": true
+    }
+  ]
+}

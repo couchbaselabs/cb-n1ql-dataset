@@ -1,0 +1,154 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "stop_geom": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "POINT(-122.39565 37.75374)",
+              "POINT(-122.436743 37.771231)",
+              "POINT(-122.452868 37.775014)",
+              "POINT(-122.471533 37.719719)",
+              "POINT(-122.479266 37.780453)"
+            ],
+            "type": "string"
+          },
+          "stop_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "14233",
+              "14245",
+              "14265",
+              "14343",
+              "14951"
+            ],
+            "type": "string"
+          },
+          "stop_lat": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37.719719,
+              37.75374,
+              37.771231,
+              37.775014,
+              37.780453
+            ],
+            "type": "number"
+          },
+          "stop_lon": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -122.479266,
+              -122.471533,
+              -122.452868,
+              -122.436743,
+              -122.39565
+            ],
+            "type": "number"
+          },
+          "stop_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "101 Dakota St",
+              "Fulton St & Parker Ave",
+              "Garfield St & Beverly St",
+              "Geary Blvd & 20th Ave",
+              "Haight St & Divisadero St"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "stops::1",
+                  "stops::1499",
+                  "stops::1509",
+                  "stops::1525",
+                  "stops::1660"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "stops::1"
+              },
+              {
+                "id": "stops::1499"
+              },
+              {
+                "id": "stops::1509"
+              },
+              {
+                "id": "stops::1525"
+              },
+              {
+                "id": "stops::1660"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "stop_geom": "POINT(-122.445 37.7467)",
+      "stop_id": "14072",
+      "stop_lat": 37.7467,
+      "stop_lon": -122.445,
+      "stop_name": "Clipper St & Portola Dr"
+    },
+    {
+      "stop_geom": "POINT(-122.414586 37.80341)",
+      "stop_id": "14104",
+      "stop_lat": 37.80341,
+      "stop_lon": -122.414586,
+      "stop_name": "Columbus Ave & Chestnut St"
+    },
+    {
+      "stop_geom": "POINT(-122.403682 37.79591)",
+      "stop_id": "14121",
+      "stop_lat": 37.79591,
+      "stop_lon": -122.403682,
+      "stop_name": "Columbus Ave & Washington St"
+    },
+    {
+      "stop_geom": "POINT(-122.474538 37.731041)",
+      "stop_id": "14545",
+      "stop_lat": 37.731041,
+      "stop_lon": -122.474538,
+      "stop_name": "Eucalyptus Dr & 19th Ave"
+    },
+    {
+      "stop_geom": "POINT(-122.43828 37.761594)",
+      "stop_id": "14543",
+      "stop_lat": 37.761594,
+      "stop_lon": -122.43828,
+      "stop_name": "Eureka St & Market St"
+    }
+  ]
+}

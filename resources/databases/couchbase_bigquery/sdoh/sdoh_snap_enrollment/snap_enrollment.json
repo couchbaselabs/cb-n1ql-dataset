@@ -1,0 +1,363 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2012-07-01",
+              "2013-07-01",
+              "2014-07-01",
+              "2017-01-01",
+              "2018-01-01"
+            ],
+            "type": "string"
+          },
+          "FIPS": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "05055",
+              "05083",
+              "08039",
+              "18033",
+              "55045"
+            ],
+            "type": "string"
+          },
+          "GeoDesc": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0505501 AR EBT GREENE COUNTY",
+              "0508301 AR EBT LOGAN COUNTY",
+              "0803901 CO EBT ELBERT CO DSS",
+              "1803301 IN EBT DEKALB CO DPW",
+              "5504501 WI EBT GREEN CO DSS"
+            ],
+            "type": "string"
+          },
+          "Program": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "EBT",
+              "GRH",
+              "SSI",
+              "WRI"
+            ],
+            "type": "string"
+          },
+          "SNAP_All_Issuance": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              112547,
+              244306,
+              437507,
+              564216,
+              898685
+            ],
+            "type": "number"
+          },
+          "SNAP_All_Participation_Households": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                398,
+                1392,
+                1709,
+                1939,
+                2837
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "SNAP_All_Participation_Persons": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                897,
+                2757,
+                4010,
+                4614,
+                7166
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "SNAP_NPA_Participation_Households": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                360,
+                1240,
+                1357,
+                1881,
+                2772
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "SNAP_NPA_Participation_Persons": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                821,
+                2493,
+                3511,
+                4414,
+                6969
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "SNAP_PA_Participation_Households": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                38,
+                58,
+                65,
+                152,
+                352
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "SNAP_PA_Participation_Persons": {
+            "#docs": [
+              16,
+              984
+            ],
+            "%docs": [
+              1.6,
+              98.4
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                76,
+                197,
+                200,
+                264,
+                499
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "SubCounty": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "01",
+              "02",
+              "03",
+              "24",
+              "35"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "snap_enrollment::10009",
+                  "snap_enrollment::12409",
+                  "snap_enrollment::12599",
+                  "snap_enrollment::12845",
+                  "snap_enrollment::13228"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "snap_enrollment::10009"
+              },
+              {
+                "id": "snap_enrollment::12409"
+              },
+              {
+                "id": "snap_enrollment::12599"
+              },
+              {
+                "id": "snap_enrollment::12845"
+              },
+              {
+                "id": "snap_enrollment::13228"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Date": "2018-01-01",
+      "FIPS": "08075",
+      "GeoDesc": "0807501 CO EBT LOGAN CO DSS",
+      "Program": "EBT",
+      "SNAP_All_Issuance": 249233,
+      "SNAP_All_Participation_Households": 1079,
+      "SNAP_All_Participation_Persons": 2153,
+      "SNAP_NPA_Participation_Households": 962,
+      "SNAP_NPA_Participation_Persons": 1964,
+      "SNAP_PA_Participation_Households": 117,
+      "SNAP_PA_Participation_Persons": 189,
+      "SubCounty": "01"
+    },
+    {
+      "Date": "2017-01-01",
+      "FIPS": "08075",
+      "GeoDesc": "0807501 CO EBT LOGAN CO DSS",
+      "Program": "EBT",
+      "SNAP_All_Issuance": 245029,
+      "SNAP_All_Participation_Households": 1025,
+      "SNAP_All_Participation_Persons": 2095,
+      "SNAP_NPA_Participation_Households": 911,
+      "SNAP_NPA_Participation_Persons": 1913,
+      "SNAP_PA_Participation_Households": 114,
+      "SNAP_PA_Participation_Persons": 182,
+      "SubCounty": "01"
+    },
+    {
+      "Date": "2018-07-01",
+      "FIPS": "08089",
+      "GeoDesc": "0808901 CO EBT OTERO CO DSS",
+      "Program": "EBT",
+      "SNAP_All_Issuance": 443074,
+      "SNAP_All_Participation_Households": 1993,
+      "SNAP_All_Participation_Persons": 4107,
+      "SNAP_NPA_Participation_Households": 1679,
+      "SNAP_NPA_Participation_Persons": 3610,
+      "SNAP_PA_Participation_Households": 314,
+      "SNAP_PA_Participation_Persons": 497,
+      "SubCounty": "01"
+    },
+    {
+      "Date": "2016-01-01",
+      "FIPS": "08127",
+      "GeoDesc": "0812701 CO EBT ADAMS CO DSS",
+      "Program": "EBT",
+      "SNAP_All_Issuance": 6607003,
+      "SNAP_All_Participation_Households": 21413,
+      "SNAP_All_Participation_Persons": 50863,
+      "SNAP_NPA_Participation_Households": 19091,
+      "SNAP_NPA_Participation_Persons": 46278,
+      "SNAP_PA_Participation_Households": 2322,
+      "SNAP_PA_Participation_Persons": 4585,
+      "SubCounty": "01"
+    },
+    {
+      "Date": "2013-01-01",
+      "FIPS": "08127",
+      "GeoDesc": "0812701 CO EBT ADAMS CO DSS",
+      "Program": "EBT",
+      "SNAP_All_Issuance": 7998146,
+      "SNAP_All_Participation_Households": 23532,
+      "SNAP_All_Participation_Persons": 57954,
+      "SNAP_NPA_Participation_Households": 21717,
+      "SNAP_NPA_Participation_Persons": 54440,
+      "SNAP_PA_Participation_Households": 1815,
+      "SNAP_PA_Participation_Persons": 3514,
+      "SubCounty": "01"
+    }
+  ]
+}

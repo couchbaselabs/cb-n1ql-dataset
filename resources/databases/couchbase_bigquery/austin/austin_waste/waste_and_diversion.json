@@ -1,0 +1,192 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`dropoff_site` = \"AUSTIN IRON AND METAL\", `load_type` = \"RECYCLED METAL\", `route_number` = \"OCPBU09\", `route_type` = \"ON CALL BULK\"",
+        "properties": {
+          "dropoff_site": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AUSTIN IRON AND METAL"
+            ],
+            "type": "string"
+          },
+          "load_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              808425,
+              828282,
+              869450,
+              869670,
+              895316
+            ],
+            "type": "number"
+          },
+          "load_time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-12-18T15:09:00+00:00",
+              "2019-05-29T09:50:00+00:00",
+              "2020-04-14T00:00:00+00:00",
+              "2020-04-15T14:10:00+00:00",
+              "2020-11-10T14:55:00+00:00"
+            ],
+            "type": "string"
+          },
+          "load_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "RECYCLED METAL"
+            ],
+            "type": "string"
+          },
+          "load_weight": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              240,
+              470,
+              480,
+              600,
+              710
+            ],
+            "type": "number"
+          },
+          "report_date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-12-18",
+              "2019-05-29",
+              "2020-04-14",
+              "2020-04-15",
+              "2020-11-10"
+            ],
+            "type": "string"
+          },
+          "route_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OCPBU09"
+            ],
+            "type": "string"
+          },
+          "route_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ON CALL BULK"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "waste_and_diversion::0",
+                  "waste_and_diversion::3",
+                  "waste_and_diversion::7",
+                  "waste_and_diversion::8",
+                  "waste_and_diversion::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "waste_and_diversion::0"
+              },
+              {
+                "id": "waste_and_diversion::3"
+              },
+              {
+                "id": "waste_and_diversion::7"
+              },
+              {
+                "id": "waste_and_diversion::8"
+              },
+              {
+                "id": "waste_and_diversion::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "dropoff_site": "AUSTIN IRON AND METAL",
+      "load_id": 869450,
+      "load_time": "2020-04-14T00:00:00+00:00",
+      "load_type": "RECYCLED METAL",
+      "load_weight": 240,
+      "report_date": "2020-04-14",
+      "route_number": "OCPBU09",
+      "route_type": "ON CALL BULK"
+    },
+    {
+      "dropoff_site": "AUSTIN IRON AND METAL",
+      "load_id": 895316,
+      "load_time": "2020-11-10T14:55:00+00:00",
+      "load_type": "RECYCLED METAL",
+      "load_weight": 710,
+      "report_date": "2020-11-10",
+      "route_number": "OCPBU09",
+      "route_type": "ON CALL BULK"
+    },
+    {
+      "dropoff_site": "AUSTIN IRON AND METAL",
+      "load_id": 869670,
+      "load_time": "2020-04-15T14:10:00+00:00",
+      "load_type": "RECYCLED METAL",
+      "load_weight": 600,
+      "report_date": "2020-04-15",
+      "route_number": "OCPBU09",
+      "route_type": "ON CALL BULK"
+    },
+    {
+      "dropoff_site": "AUSTIN IRON AND METAL",
+      "load_id": 827324,
+      "load_time": "2019-05-21T13:40:00+00:00",
+      "load_type": "RECYCLED METAL",
+      "load_weight": 230,
+      "report_date": "2019-05-21",
+      "route_number": "OCPBU09",
+      "route_type": "ON CALL BULK"
+    },
+    {
+      "dropoff_site": "AUSTIN IRON AND METAL",
+      "load_id": 859153,
+      "load_time": "2020-01-29T16:11:00+00:00",
+      "load_type": "RECYCLED METAL",
+      "load_weight": 490,
+      "report_date": "2020-01-29",
+      "route_number": "OCPBU09",
+      "route_type": "ON CALL BULK"
+    }
+  ]
+}

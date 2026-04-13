@@ -1,0 +1,213 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`dropoff_type` = \"regular\"",
+        "properties": {
+          "arrival_time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "06:25:53",
+              "17:04:26",
+              "17:28:45",
+              "19:27:19",
+              "23:30:53"
+            ],
+            "type": "string"
+          },
+          "arrives_next_day": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "departs_next_day": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "departure_time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "06:25:53",
+              "17:04:26",
+              "17:28:45",
+              "19:27:19",
+              "23:30:53"
+            ],
+            "type": "string"
+          },
+          "dropoff_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "regular"
+            ],
+            "type": "string"
+          },
+          "exact_timepoint": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "stop_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15007,
+              15896,
+              16306,
+              16357,
+              17841
+            ],
+            "type": "number"
+          },
+          "stop_sequence": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              19,
+              20,
+              23,
+              26,
+              29
+            ],
+            "type": "number"
+          },
+          "trip_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8943139,
+              8949861,
+              8957176,
+              8958869,
+              8962806
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "stop_times::1036590",
+                  "stop_times::1040118",
+                  "stop_times::1049635",
+                  "stop_times::1058624",
+                  "stop_times::1067845"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "stop_times::1036590"
+              },
+              {
+                "id": "stop_times::1040118"
+              },
+              {
+                "id": "stop_times::1049635"
+              },
+              {
+                "id": "stop_times::1058624"
+              },
+              {
+                "id": "stop_times::1067845"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "arrival_time": "11:17:26",
+      "arrives_next_day": true,
+      "departs_next_day": true,
+      "departure_time": "11:17:26",
+      "dropoff_type": "regular",
+      "exact_timepoint": false,
+      "stop_id": 16513,
+      "stop_sequence": 9,
+      "trip_id": 8953031
+    },
+    {
+      "arrival_time": "11:49:26",
+      "arrives_next_day": true,
+      "departs_next_day": true,
+      "departure_time": "11:49:26",
+      "dropoff_type": "regular",
+      "exact_timepoint": false,
+      "stop_id": 16513,
+      "stop_sequence": 9,
+      "trip_id": 8953035
+    },
+    {
+      "arrival_time": "08:27:36",
+      "arrives_next_day": true,
+      "departs_next_day": true,
+      "departure_time": "08:27:36",
+      "dropoff_type": "regular",
+      "exact_timepoint": false,
+      "stop_id": 13846,
+      "stop_sequence": 9,
+      "trip_id": 8945811
+    },
+    {
+      "arrival_time": "06:11:25",
+      "arrives_next_day": true,
+      "departs_next_day": true,
+      "departure_time": "06:11:25",
+      "dropoff_type": "regular",
+      "exact_timepoint": false,
+      "stop_id": 14223,
+      "stop_sequence": 9,
+      "trip_id": 8946421
+    },
+    {
+      "arrival_time": "13:24:34",
+      "arrives_next_day": true,
+      "departs_next_day": true,
+      "departure_time": "13:24:34",
+      "dropoff_type": "regular",
+      "exact_timepoint": false,
+      "stop_id": 13061,
+      "stop_sequence": 9,
+      "trip_id": 8961490
+    }
+  ]
+}

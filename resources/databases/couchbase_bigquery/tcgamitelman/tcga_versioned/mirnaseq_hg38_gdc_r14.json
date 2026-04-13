@@ -1,0 +1,188 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`aliquot_barcode` = \"TCGA-04-1331-01A-01R-1569-13\", `case_barcode` = \"TCGA-04-1331\", `cross_mapped` = \"N\", `project_short_name` = \"TCGA-OV\", `sample_barcode` = \"TCGA-04-1331-01A\"",
+        "properties": {
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331-01A-01R-1569-13"
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331"
+            ],
+            "type": "string"
+          },
+          "cross_mapped": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N"
+            ],
+            "type": "string"
+          },
+          "mirna_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "hsa-mir-1269a",
+              "hsa-mir-223",
+              "hsa-mir-3619",
+              "hsa-mir-6803",
+              "hsa-mir-8085"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-OV"
+            ],
+            "type": "string"
+          },
+          "read_count": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              10,
+              278,
+              477
+            ],
+            "type": "number"
+          },
+          "reads_per_million_miRNA_mapped": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.287477,
+              0.574955,
+              2.874773,
+              79.918701,
+              137.126693
+            ],
+            "type": "number"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1331-01A"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mirnaseq_hg38_gdc_r14::0",
+                  "mirnaseq_hg38_gdc_r14::1",
+                  "mirnaseq_hg38_gdc_r14::2",
+                  "mirnaseq_hg38_gdc_r14::3",
+                  "mirnaseq_hg38_gdc_r14::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mirnaseq_hg38_gdc_r14::0"
+              },
+              {
+                "id": "mirnaseq_hg38_gdc_r14::1"
+              },
+              {
+                "id": "mirnaseq_hg38_gdc_r14::2"
+              },
+              {
+                "id": "mirnaseq_hg38_gdc_r14::3"
+              },
+              {
+                "id": "mirnaseq_hg38_gdc_r14::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "case_barcode": "TCGA-04-1331",
+      "cross_mapped": "N",
+      "mirna_id": "hsa-mir-3619",
+      "project_short_name": "TCGA-OV",
+      "read_count": 2,
+      "reads_per_million_miRNA_mapped": 0.574955,
+      "sample_barcode": "TCGA-04-1331-01A"
+    },
+    {
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "case_barcode": "TCGA-04-1331",
+      "cross_mapped": "N",
+      "mirna_id": "hsa-mir-6803",
+      "project_short_name": "TCGA-OV",
+      "read_count": 10,
+      "reads_per_million_miRNA_mapped": 2.874773,
+      "sample_barcode": "TCGA-04-1331-01A"
+    },
+    {
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "case_barcode": "TCGA-04-1331",
+      "cross_mapped": "N",
+      "mirna_id": "hsa-mir-223",
+      "project_short_name": "TCGA-OV",
+      "read_count": 477,
+      "reads_per_million_miRNA_mapped": 137.126693,
+      "sample_barcode": "TCGA-04-1331-01A"
+    },
+    {
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "case_barcode": "TCGA-04-1331",
+      "cross_mapped": "N",
+      "mirna_id": "hsa-mir-1269a",
+      "project_short_name": "TCGA-OV",
+      "read_count": 278,
+      "reads_per_million_miRNA_mapped": 79.918701,
+      "sample_barcode": "TCGA-04-1331-01A"
+    },
+    {
+      "aliquot_barcode": "TCGA-04-1331-01A-01R-1569-13",
+      "case_barcode": "TCGA-04-1331",
+      "cross_mapped": "N",
+      "mirna_id": "hsa-mir-8085",
+      "project_short_name": "TCGA-OV",
+      "read_count": 1,
+      "reads_per_million_miRNA_mapped": 0.287477,
+      "sample_barcode": "TCGA-04-1331-01A"
+    }
+  ]
+}

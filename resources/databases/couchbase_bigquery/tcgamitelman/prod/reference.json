@@ -1,0 +1,309 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Flag` = \" \"",
+        "properties": {
+          "Abbreviation": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Fleischmann et al 1972",
+              "Hellstrom et al 1971",
+              "Lobb et al 1972",
+              "Manolov & Manolova 1972",
+              "Mark et al 1972"
+            ],
+            "type": "string"
+          },
+          "AuthorsLength": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "21",
+              "27",
+              "29",
+              "46",
+              "71"
+            ],
+            "type": "string"
+          },
+          "AuthorsLong": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "AuthorsShort": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Fleischmann T, Hakansson CH, L...",
+              "Hellstrom K, Hagenfeldt L, Lar...",
+              "Lobb DS, Reeves BR, Lawler SD",
+              "Manolov G, Manolova Y",
+              "Mark J, Mitelman F, Levan G"
+            ],
+            "type": "string"
+          },
+          "Flag": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              " "
+            ],
+            "type": "string"
+          },
+          "Journal": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "APMIS",
+              "Hereditas",
+              "Lancet",
+              "Nature",
+              "Scand J Haematol"
+            ],
+            "type": "string"
+          },
+          "Pubmed": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "4111610",
+                "4113130",
+                "4681795",
+                "5134476"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "RefNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              32,
+              79,
+              102,
+              106,
+              114
+            ],
+            "type": "number"
+          },
+          "Text": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TitleLength": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              56,
+              60,
+              98,
+              130
+            ],
+            "type": "number"
+          },
+          "TitleLong": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "TitleShort": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "An extra C chromosome and vari...",
+              "Identification of isochromosom...",
+              "Marker band in one chromosome ...",
+              "Multiple chromosome aberration...",
+              "On the specificity of the G ab..."
+            ],
+            "type": "string"
+          },
+          "Volume": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(1):849-850",
+              "237:33-34",
+              "70:243-258",
+              "80:812-820",
+              "8:293-306"
+            ],
+            "type": "string"
+          },
+          "Year": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1971,
+              1972
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "reference::0",
+                  "reference::1",
+                  "reference::2",
+                  "reference::3",
+                  "reference::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "reference::0"
+              },
+              {
+                "id": "reference::1"
+              },
+              {
+                "id": "reference::2"
+              },
+              {
+                "id": "reference::3"
+              },
+              {
+                "id": "reference::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Abbreviation": "Lobb et al 1972",
+      "AuthorsLength": "29",
+      "AuthorsLong": null,
+      "AuthorsShort": "Lobb DS, Reeves BR, Lawler SD",
+      "Flag": " ",
+      "Journal": "Lancet",
+      "Pubmed": "4111610",
+      "RefNo": 32,
+      "Text": null,
+      "TitleLength": 56,
+      "TitleLong": null,
+      "TitleShort": "Identification of isochromosome 17 in myeloid leukaemia.",
+      "Volume": "(1):849-850",
+      "Year": 1972
+    },
+    {
+      "Abbreviation": "Mark et al 1972",
+      "AuthorsLength": "27",
+      "AuthorsLong": null,
+      "AuthorsShort": "Mark J, Mitelman F, Levan G",
+      "Flag": " ",
+      "Journal": "APMIS",
+      "Pubmed": null,
+      "RefNo": 114,
+      "Text": null,
+      "TitleLength": 98,
+      "TitleLong": null,
+      "TitleShort": "On the specificity of the G abnormality in human meningomas studied by the fluorescence technique.",
+      "Volume": "80:812-820",
+      "Year": 1972
+    },
+    {
+      "Abbreviation": "Hellstrom et al 1971",
+      "AuthorsLength": "71",
+      "AuthorsLong": null,
+      "AuthorsShort": "Hellstrom K, Hagenfeldt L, Larsson A, Lindsten J, Sundelin P, Tiepolo L",
+      "Flag": " ",
+      "Journal": "Scand J Haematol",
+      "Pubmed": "5134476",
+      "RefNo": 79,
+      "Text": null,
+      "TitleLength": 130,
+      "TitleLong": null,
+      "TitleShort": "An extra C chromosome and various metabolic abnormalities in the bone marrow from a patient with refractory sideroblastic anaemia.",
+      "Volume": "8:293-306",
+      "Year": 1971
+    },
+    {
+      "Abbreviation": "Fleischmann et al 1972",
+      "AuthorsLength": "46",
+      "AuthorsLong": null,
+      "AuthorsShort": "Fleischmann T, Hakansson CH, Levan A, Moller T",
+      "Flag": " ",
+      "Journal": "Hereditas",
+      "Pubmed": "4681795",
+      "RefNo": 102,
+      "Text": null,
+      "TitleLength": 60,
+      "TitleLong": null,
+      "TitleShort": "Multiple chromosome aberrations in a lymphosarcomatous tumor",
+      "Volume": "70:243-258",
+      "Year": 1972
+    },
+    {
+      "Abbreviation": "Manolov & Manolova 1972",
+      "AuthorsLength": "21",
+      "AuthorsLong": null,
+      "AuthorsShort": "Manolov G, Manolova Y",
+      "Flag": " ",
+      "Journal": "Nature",
+      "Pubmed": "4113130",
+      "RefNo": 106,
+      "Text": null,
+      "TitleLength": 56,
+      "TitleLong": null,
+      "TitleShort": "Marker band in one chromosome 14 from Burkitt lymphomas.",
+      "Volume": "237:33-34",
+      "Year": 1972
+    }
+  ]
+}

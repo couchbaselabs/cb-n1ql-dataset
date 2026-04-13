@@ -1,0 +1,220 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`age_group_indicator` = \"+\", `country_code` = \"AA\", `country_name` = \"Aruba\", `ending_age` = 0, `starting_age` = 0, `total_flag` = \"*\"",
+        "properties": {
+          "age_group_indicator": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "+"
+            ],
+            "type": "string"
+          },
+          "country_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AA"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aruba"
+            ],
+            "type": "string"
+          },
+          "ending_age": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "midyear_population": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              59499,
+              60308,
+              60687,
+              61043,
+              63032
+            ],
+            "type": "number"
+          },
+          "midyear_population_female": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30976,
+              31019,
+              31374,
+              31578,
+              32719
+            ],
+            "type": "number"
+          },
+          "midyear_population_male": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              28523,
+              29109,
+              29332,
+              29669,
+              30313
+            ],
+            "type": "number"
+          },
+          "starting_age": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "total_flag": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "*"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1981,
+              1982,
+              1988,
+              1989,
+              1990
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "midyear_population_5yr_age_sex...",
+                  "midyear_population_5yr_age_sex...",
+                  "midyear_population_5yr_age_sex...",
+                  "midyear_population_5yr_age_sex...",
+                  "midyear_population_5yr_age_sex..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "midyear_population_5yr_age_sex::0"
+              },
+              {
+                "id": "midyear_population_5yr_age_sex::1"
+              },
+              {
+                "id": "midyear_population_5yr_age_sex::7"
+              },
+              {
+                "id": "midyear_population_5yr_age_sex::8"
+              },
+              {
+                "id": "midyear_population_5yr_age_sex::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "age_group_indicator": "+",
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "ending_age": 0,
+      "midyear_population": 60308,
+      "midyear_population_female": 30976,
+      "midyear_population_male": 29332,
+      "starting_age": 0,
+      "total_flag": "*",
+      "year": 1981
+    },
+    {
+      "age_group_indicator": "+",
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "ending_age": 0,
+      "midyear_population": 62683,
+      "midyear_population_female": 32251,
+      "midyear_population_male": 30432,
+      "starting_age": 0,
+      "total_flag": "*",
+      "year": 1984
+    },
+    {
+      "age_group_indicator": "+",
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "ending_age": 0,
+      "midyear_population": 62019,
+      "midyear_population_female": 31885,
+      "midyear_population_male": 30134,
+      "starting_age": 0,
+      "total_flag": "*",
+      "year": 1983
+    },
+    {
+      "age_group_indicator": "+",
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "ending_age": 0,
+      "midyear_population": 59804,
+      "midyear_population_female": 31019,
+      "midyear_population_male": 28785,
+      "starting_age": 0,
+      "total_flag": "*",
+      "year": 1986
+    },
+    {
+      "age_group_indicator": "+",
+      "country_code": "AA",
+      "country_name": "Aruba",
+      "ending_age": 0,
+      "midyear_population": 60687,
+      "midyear_population_female": 31578,
+      "midyear_population_male": 29109,
+      "starting_age": 0,
+      "total_flag": "*",
+      "year": 1989
+    }
+  ]
+}

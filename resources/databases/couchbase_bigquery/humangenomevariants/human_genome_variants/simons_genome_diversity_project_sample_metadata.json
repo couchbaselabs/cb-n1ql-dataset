@@ -1,0 +1,238 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Panel` = \"C\", `Region` = \"Africa\"",
+        "properties": {
+          "Contributor": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1KG",
+              "Howard Cann"
+            ],
+            "type": "string"
+          },
+          "Country": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Algeria",
+              "Nigeria",
+              "Senegal"
+            ],
+            "type": "string"
+          },
+          "Coverage": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              34,
+              36,
+              37,
+              38,
+              39
+            ],
+            "type": "number"
+          },
+          "Gender": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "F",
+              "M"
+            ],
+            "type": "string"
+          },
+          "HetRateAuto": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.00078,
+              0.00082,
+              0.00096
+            ],
+            "type": "number"
+          },
+          "Latitude": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6.5,
+              12,
+              32
+            ],
+            "type": "number"
+          },
+          "Longitude": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -12,
+              3,
+              6
+            ],
+            "type": "number"
+          },
+          "Panel": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C"
+            ],
+            "type": "string"
+          },
+          "Population_ID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Esan",
+              "Mandenka",
+              "Mozabite"
+            ],
+            "type": "string"
+          },
+          "Region": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Africa"
+            ],
+            "type": "string"
+          },
+          "SGDP_ID": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "S_Esan-1",
+              "S_Esan-2",
+              "S_Mandenka-2",
+              "S_Mozabite-1",
+              "S_Mozabite-2"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "simons_genome_diversity_projec...",
+                  "simons_genome_diversity_projec...",
+                  "simons_genome_diversity_projec...",
+                  "simons_genome_diversity_projec...",
+                  "simons_genome_diversity_projec..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "simons_genome_diversity_project_sample_metadata::0"
+              },
+              {
+                "id": "simons_genome_diversity_project_sample_metadata::1"
+              },
+              {
+                "id": "simons_genome_diversity_project_sample_metadata::2"
+              },
+              {
+                "id": "simons_genome_diversity_project_sample_metadata::3"
+              },
+              {
+                "id": "simons_genome_diversity_project_sample_metadata::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Contributor": "Howard Cann",
+      "Country": "Senegal",
+      "Coverage": 37,
+      "Gender": "F",
+      "HetRateAuto": 0.00096,
+      "Latitude": 12,
+      "Longitude": -12,
+      "Panel": "C",
+      "Population_ID": "Mandenka",
+      "Region": "Africa",
+      "SGDP_ID": "S_Mandenka-2"
+    },
+    {
+      "Contributor": "Howard Cann",
+      "Country": "Algeria",
+      "Coverage": 36,
+      "Gender": "M",
+      "HetRateAuto": 0.00078,
+      "Latitude": 32,
+      "Longitude": 3,
+      "Panel": "C",
+      "Population_ID": "Mozabite",
+      "Region": "Africa",
+      "SGDP_ID": "S_Mozabite-1"
+    },
+    {
+      "Contributor": "1KG",
+      "Country": "Nigeria",
+      "Coverage": 34,
+      "Gender": "M",
+      "HetRateAuto": 0.00096,
+      "Latitude": 6.5,
+      "Longitude": 6,
+      "Panel": "C",
+      "Population_ID": "Esan",
+      "Region": "Africa",
+      "SGDP_ID": "S_Esan-1"
+    },
+    {
+      "Contributor": "Howard Cann",
+      "Country": "Algeria",
+      "Coverage": 38,
+      "Gender": "F",
+      "HetRateAuto": 0.00082,
+      "Latitude": 32,
+      "Longitude": 3,
+      "Panel": "C",
+      "Population_ID": "Mozabite",
+      "Region": "Africa",
+      "SGDP_ID": "S_Mozabite-2"
+    },
+    {
+      "Contributor": "1KG",
+      "Country": "Nigeria",
+      "Coverage": 39,
+      "Gender": "F",
+      "HetRateAuto": 0.00096,
+      "Latitude": 6.5,
+      "Longitude": 6,
+      "Panel": "C",
+      "Population_ID": "Esan",
+      "Region": "Africa",
+      "SGDP_ID": "S_Esan-2"
+    }
+  ]
+}

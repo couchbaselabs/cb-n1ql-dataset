@@ -1,0 +1,197 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`AliquotBarcode` = \"TCGA-04-1335-01A-21-20\", `ParticipantBarcode` = \"TCGA-04-1335\", `SampleBarcode` = \"TCGA-04-1335-01A\", `SampleType` = \"Primary solid Tumor\", `SampleTypeLetterCode` = \"TP\", `Study` = \"OV\"",
+        "properties": {
+          "AliquotBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1335-01A-21-20"
+            ],
+            "type": "string"
+          },
+          "ParticipantBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1335"
+            ],
+            "type": "string"
+          },
+          "Protein": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BCL2",
+              "BECLIN",
+              "EIF4E",
+              "PDCD1",
+              "SF2"
+            ],
+            "type": "string"
+          },
+          "SampleBarcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-04-1335-01A"
+            ],
+            "type": "string"
+          },
+          "SampleType": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Primary solid Tumor"
+            ],
+            "type": "string"
+          },
+          "SampleTypeLetterCode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TP"
+            ],
+            "type": "string"
+          },
+          "Study": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OV"
+            ],
+            "type": "string"
+          },
+          "Value": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -0.91868,
+                -0.020116,
+                0.018487,
+                0.077853
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "tcga_rppa_pancan_clean_filtere...",
+                  "tcga_rppa_pancan_clean_filtere...",
+                  "tcga_rppa_pancan_clean_filtere...",
+                  "tcga_rppa_pancan_clean_filtere...",
+                  "tcga_rppa_pancan_clean_filtere..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "tcga_rppa_pancan_clean_filtered::0"
+              },
+              {
+                "id": "tcga_rppa_pancan_clean_filtered::1"
+              },
+              {
+                "id": "tcga_rppa_pancan_clean_filtered::2"
+              },
+              {
+                "id": "tcga_rppa_pancan_clean_filtered::3"
+              },
+              {
+                "id": "tcga_rppa_pancan_clean_filtered::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AliquotBarcode": "TCGA-04-1335-01A-21-20",
+      "ParticipantBarcode": "TCGA-04-1335",
+      "Protein": "SF2",
+      "SampleBarcode": "TCGA-04-1335-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "Value": 0.018487
+    },
+    {
+      "AliquotBarcode": "TCGA-04-1335-01A-21-20",
+      "ParticipantBarcode": "TCGA-04-1335",
+      "Protein": "PDCD1",
+      "SampleBarcode": "TCGA-04-1335-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "Value": null
+    },
+    {
+      "AliquotBarcode": "TCGA-04-1335-01A-21-20",
+      "ParticipantBarcode": "TCGA-04-1335",
+      "Protein": "EIF4E",
+      "SampleBarcode": "TCGA-04-1335-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "Value": -0.91868
+    },
+    {
+      "AliquotBarcode": "TCGA-04-1335-01A-21-20",
+      "ParticipantBarcode": "TCGA-04-1335",
+      "Protein": "BCL2",
+      "SampleBarcode": "TCGA-04-1335-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "Value": 0.077853
+    },
+    {
+      "AliquotBarcode": "TCGA-04-1335-01A-21-20",
+      "ParticipantBarcode": "TCGA-04-1335",
+      "Protein": "BECLIN",
+      "SampleBarcode": "TCGA-04-1335-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "OV",
+      "Value": -0.020116
+    }
+  ]
+}

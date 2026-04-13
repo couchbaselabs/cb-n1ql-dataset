@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "productSKU": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "GGOEADHH073999",
+              "GGOEGFYQ016599",
+              "GGOEGOAQ012899",
+              "GGOEGOCB017499",
+              "GGOENEBQ078999"
+            ],
+            "type": "string"
+          },
+          "total_ordered": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              112,
+              167,
+              253,
+              319,
+              456
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sales_by_sku::0",
+                  "sales_by_sku::2",
+                  "sales_by_sku::4",
+                  "sales_by_sku::7",
+                  "sales_by_sku::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sales_by_sku::0"
+              },
+              {
+                "id": "sales_by_sku::2"
+              },
+              {
+                "id": "sales_by_sku::4"
+              },
+              {
+                "id": "sales_by_sku::7"
+              },
+              {
+                "id": "sales_by_sku::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "productSKU": "GGOEGOCC077999",
+      "total_ordered": 290
+    },
+    {
+      "productSKU": "GGOEGDHC074099",
+      "total_ordered": 334
+    },
+    {
+      "productSKU": "GGOEGOCB017499",
+      "total_ordered": 319
+    },
+    {
+      "productSKU": "GGOEGFYQ016599",
+      "total_ordered": 253
+    },
+    {
+      "productSKU": "GGOEGOAQ012899",
+      "total_ordered": 456
+    }
+  ]
+}

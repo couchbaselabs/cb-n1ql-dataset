@@ -1,0 +1,111 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`description` = \"Aggregate data are based on UNI...\"",
+        "properties": {
+          "country_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "EAS",
+              "ECS",
+              "LCN",
+              "MEA",
+              "NAC"
+            ],
+            "type": "string"
+          },
+          "description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aggregate data are based on UN..."
+            ],
+            "type": "string"
+          },
+          "series_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SH.STA.OWGH.ME.ZS",
+              "SH.STA.STNT.ME.ZS"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "country_series_definitions::3",
+                  "country_series_definitions::4",
+                  "country_series_definitions::5",
+                  "country_series_definitions::7",
+                  "country_series_definitions::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "country_series_definitions::3"
+              },
+              {
+                "id": "country_series_definitions::4"
+              },
+              {
+                "id": "country_series_definitions::5"
+              },
+              {
+                "id": "country_series_definitions::7"
+              },
+              {
+                "id": "country_series_definitions::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "ECS",
+      "description": "Aggregate data are based on UNICEF, WHO, and the World Bank harmonized JME dataset.",
+      "series_code": "SH.STA.STNT.ME.ZS"
+    },
+    {
+      "country_code": "EAS",
+      "description": "Aggregate data are based on UNICEF, WHO, and the World Bank harmonized JME dataset.",
+      "series_code": "SH.STA.STNT.ME.ZS"
+    },
+    {
+      "country_code": "NAC",
+      "description": "Aggregate data are based on UNICEF, WHO, and the World Bank harmonized JME dataset.",
+      "series_code": "SH.STA.STNT.ME.ZS"
+    },
+    {
+      "country_code": "NAC",
+      "description": "Aggregate data are based on UNICEF, WHO, and the World Bank harmonized JME dataset.",
+      "series_code": "SH.STA.OWGH.ME.ZS"
+    },
+    {
+      "country_code": "LCN",
+      "description": "Aggregate data are based on UNICEF, WHO, and the World Bank harmonized JME dataset.",
+      "series_code": "SH.STA.STNT.ME.ZS"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Breakpoint` = \"1\", `InvNo` = 1, `MolClin` = \"C\", `OrderNo` = 1",
+        "properties": {
+          "Breakpoint": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1"
+            ],
+            "type": "string"
+          },
+          "InvNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "MolClin": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C"
+            ],
+            "type": "string"
+          },
+          "OrderNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "RefNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              579,
+              2514,
+              5581,
+              6551,
+              7542
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "molclinbreak::0",
+                  "molclinbreak::1",
+                  "molclinbreak::2",
+                  "molclinbreak::3",
+                  "molclinbreak::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "molclinbreak::0"
+              },
+              {
+                "id": "molclinbreak::1"
+              },
+              {
+                "id": "molclinbreak::2"
+              },
+              {
+                "id": "molclinbreak::3"
+              },
+              {
+                "id": "molclinbreak::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Breakpoint": "1",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 6551
+    },
+    {
+      "Breakpoint": "1",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 2514
+    },
+    {
+      "Breakpoint": "1",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 5581
+    },
+    {
+      "Breakpoint": "1",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 579
+    },
+    {
+      "Breakpoint": "1",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "RefNo": 7542
+    }
+  ]
+}

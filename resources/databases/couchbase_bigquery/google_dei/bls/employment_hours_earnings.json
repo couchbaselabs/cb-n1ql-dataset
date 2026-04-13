@@ -1,0 +1,182 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`footnote_codes` = \"nan\", `period` = \"M01\"",
+        "properties": {
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1940-01-01",
+              "1941-01-01",
+              "1942-01-01",
+              "1943-01-01",
+              "1944-01-01"
+            ],
+            "type": "string"
+          },
+          "footnote_codes": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "nan"
+            ],
+            "type": "string"
+          },
+          "period": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "M01"
+            ],
+            "type": "string"
+          },
+          "series_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CES3200000001",
+              "CES3200000007",
+              "CES9091100001",
+              "CEU3000000034",
+              "CEU6000000001"
+            ],
+            "type": "string"
+          },
+          "series_title": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "All employees, thousands, fede...",
+              "All employees, thousands, nond...",
+              "All employees, thousands, prof...",
+              "Average weekly hours of produc...",
+              "Indexes of aggregate weekly ho..."
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37.4,
+              108.6,
+              2005,
+              2615.4,
+              5537
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1940,
+              1941,
+              1942,
+              1943,
+              1944
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "employment_hours_earnings::1",
+                  "employment_hours_earnings::2",
+                  "employment_hours_earnings::3",
+                  "employment_hours_earnings::5",
+                  "employment_hours_earnings::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "employment_hours_earnings::1"
+              },
+              {
+                "id": "employment_hours_earnings::2"
+              },
+              {
+                "id": "employment_hours_earnings::3"
+              },
+              {
+                "id": "employment_hours_earnings::5"
+              },
+              {
+                "id": "employment_hours_earnings::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "date": "1940-01-01",
+      "footnote_codes": "nan",
+      "period": "M01",
+      "series_id": "CES3200000007",
+      "series_title": "Average weekly hours of production and nonsupervisory employees, nondurable goods, seasonally adjusted",
+      "value": 37,
+      "year": 1940
+    },
+    {
+      "date": "1940-01-01",
+      "footnote_codes": "nan",
+      "period": "M01",
+      "series_id": "CEU6000000001",
+      "series_title": "All employees, thousands, professional and business services, not seasonally adjusted",
+      "value": 2005,
+      "year": 1940
+    },
+    {
+      "date": "1944-01-01",
+      "footnote_codes": "nan",
+      "period": "M01",
+      "series_id": "CES3100000007",
+      "series_title": "Average weekly hours of production and nonsupervisory employees, durable goods, seasonally adjusted",
+      "value": 46.8,
+      "year": 1944
+    },
+    {
+      "date": "1943-01-01",
+      "footnote_codes": "nan",
+      "period": "M01",
+      "series_id": "CEU1000000001",
+      "series_title": "All employees, thousands, mining and logging, not seasonally adjusted",
+      "value": 970,
+      "year": 1943
+    },
+    {
+      "date": "1944-01-01",
+      "footnote_codes": "nan",
+      "period": "M01",
+      "series_id": "CES3200000001",
+      "series_title": "All employees, thousands, nondurable goods, seasonally adjusted",
+      "value": 5537,
+      "year": 1944
+    }
+  ]
+}

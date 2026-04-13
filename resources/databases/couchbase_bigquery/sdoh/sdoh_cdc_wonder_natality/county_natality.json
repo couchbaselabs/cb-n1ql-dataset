@@ -1,0 +1,242 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "Ave_Age_of_Mother": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              26.12,
+              28.7,
+              29.13,
+              29.48,
+              31.22
+            ],
+            "type": "number"
+          },
+          "Ave_Birth_Weight_gms": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3163.87,
+              3231.74,
+              3267.95,
+              3282.77,
+              3364.96
+            ],
+            "type": "number"
+          },
+          "Ave_LMP_Gestational_Age_Wks": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              38.13,
+              38.39,
+              38.6,
+              38.7,
+              38.86
+            ],
+            "type": "number"
+          },
+          "Ave_Number_of_Prenatal_Wks": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9.75,
+              10.08,
+              12.51,
+              12.99,
+              13.05
+            ],
+            "type": "number"
+          },
+          "Ave_OE_Gestational_Age_Wks": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              38,
+              38.38,
+              38.5,
+              38.61,
+              38.72
+            ],
+            "type": "number"
+          },
+          "Ave_Pre_pregnancy_BMI": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              25.76,
+              26.25,
+              26.34,
+              26.74,
+              27.5
+            ],
+            "type": "number"
+          },
+          "Births": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1277,
+              1496,
+              2241,
+              2814,
+              16653
+            ],
+            "type": "number"
+          },
+          "County_of_Residence": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Ector County, TX",
+              "Indian River County, FL",
+              "Middlesex County, CT",
+              "New Hanover County, NC",
+              "Orange County, FL"
+            ],
+            "type": "string"
+          },
+          "County_of_Residence_FIPS": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "09007",
+              "12061",
+              "12095",
+              "37129",
+              "48135"
+            ],
+            "type": "string"
+          },
+          "Year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-01-01",
+              "2017-01-01",
+              "2018-01-01"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "county_natality::1122",
+                  "county_natality::1253",
+                  "county_natality::1267",
+                  "county_natality::1485",
+                  "county_natality::1515"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "county_natality::1122"
+              },
+              {
+                "id": "county_natality::1253"
+              },
+              {
+                "id": "county_natality::1267"
+              },
+              {
+                "id": "county_natality::1485"
+              },
+              {
+                "id": "county_natality::1515"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Ave_Age_of_Mother": 29.45,
+      "Ave_Birth_Weight_gms": 3329.54,
+      "Ave_LMP_Gestational_Age_Wks": 38.85,
+      "Ave_Number_of_Prenatal_Wks": 12.79,
+      "Ave_OE_Gestational_Age_Wks": 38.67,
+      "Ave_Pre_pregnancy_BMI": 27.01,
+      "Births": 2603,
+      "County_of_Residence": "New London County, CT",
+      "County_of_Residence_FIPS": "09011",
+      "Year": "2017-01-01"
+    },
+    {
+      "Ave_Age_of_Mother": 28.43,
+      "Ave_Birth_Weight_gms": 3316.7,
+      "Ave_LMP_Gestational_Age_Wks": 38.76,
+      "Ave_Number_of_Prenatal_Wks": 12.65,
+      "Ave_OE_Gestational_Age_Wks": 38.5,
+      "Ave_Pre_pregnancy_BMI": 27.49,
+      "Births": 2311,
+      "County_of_Residence": "Clermont County, OH",
+      "County_of_Residence_FIPS": "39025",
+      "Year": "2017-01-01"
+    },
+    {
+      "Ave_Age_of_Mother": 28.78,
+      "Ave_Birth_Weight_gms": 3298.09,
+      "Ave_LMP_Gestational_Age_Wks": 38.59,
+      "Ave_Number_of_Prenatal_Wks": 10.21,
+      "Ave_OE_Gestational_Age_Wks": 38.45,
+      "Ave_Pre_pregnancy_BMI": 26.5,
+      "Births": 7139,
+      "County_of_Residence": "Montgomery County, TX",
+      "County_of_Residence_FIPS": "48339",
+      "Year": "2017-01-01"
+    },
+    {
+      "Ave_Age_of_Mother": 27.55,
+      "Ave_Birth_Weight_gms": 3274.63,
+      "Ave_LMP_Gestational_Age_Wks": 38.67,
+      "Ave_Number_of_Prenatal_Wks": 11.05,
+      "Ave_OE_Gestational_Age_Wks": 38.49,
+      "Ave_Pre_pregnancy_BMI": 27.52,
+      "Births": 4025,
+      "County_of_Residence": "Stark County, OH",
+      "County_of_Residence_FIPS": "39151",
+      "Year": "2017-01-01"
+    },
+    {
+      "Ave_Age_of_Mother": 27.1,
+      "Ave_Birth_Weight_gms": 3206.53,
+      "Ave_LMP_Gestational_Age_Wks": 38.47,
+      "Ave_Number_of_Prenatal_Wks": 11.78,
+      "Ave_OE_Gestational_Age_Wks": 38.23,
+      "Ave_Pre_pregnancy_BMI": 27.65,
+      "Births": 4819,
+      "County_of_Residence": "Genesee County, MI",
+      "County_of_Residence_FIPS": "26049",
+      "Year": "2016-01-01"
+    }
+  ]
+}

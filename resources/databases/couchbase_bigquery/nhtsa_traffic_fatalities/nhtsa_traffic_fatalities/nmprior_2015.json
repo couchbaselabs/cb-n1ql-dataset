@@ -1,0 +1,158 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`person_number` = 1, `vehicle_number` = 0",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              40312,
+              40334,
+              40614,
+              200273,
+              210469
+            ],
+            "type": "number"
+          },
+          "non_motorist_action_circumstances": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "non_motorist_action_circumstances_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Going to or from School (K-12)",
+              "Waiting to Cross Roadway"
+            ],
+            "type": "string"
+          },
+          "person_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              6,
+              13,
+              20,
+              21
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "nmprior_2015::2",
+                  "nmprior_2015::3",
+                  "nmprior_2015::5",
+                  "nmprior_2015::6",
+                  "nmprior_2015::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "nmprior_2015::2"
+              },
+              {
+                "id": "nmprior_2015::3"
+              },
+              {
+                "id": "nmprior_2015::5"
+              },
+              {
+                "id": "nmprior_2015::6"
+              },
+              {
+                "id": "nmprior_2015::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 210469,
+      "non_motorist_action_circumstances": 1,
+      "non_motorist_action_circumstances_name": "Going to or from School (K-12)",
+      "person_number": 1,
+      "state_number": 21,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 40312,
+      "non_motorist_action_circumstances": 2,
+      "non_motorist_action_circumstances_name": "Waiting to Cross Roadway",
+      "person_number": 1,
+      "state_number": 4,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 560042,
+      "non_motorist_action_circumstances": 1,
+      "non_motorist_action_circumstances_name": "Going to or from School (K-12)",
+      "person_number": 1,
+      "state_number": 56,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 490258,
+      "non_motorist_action_circumstances": 1,
+      "non_motorist_action_circumstances_name": "Going to or from School (K-12)",
+      "person_number": 1,
+      "state_number": 49,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 40614,
+      "non_motorist_action_circumstances": 2,
+      "non_motorist_action_circumstances_name": "Waiting to Cross Roadway",
+      "person_number": 1,
+      "state_number": 4,
+      "vehicle_number": 0
+    }
+  ]
+}

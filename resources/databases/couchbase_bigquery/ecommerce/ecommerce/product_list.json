@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "productSKU": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "9180757",
+              "9182788",
+              "GGOEGAAX0213",
+              "GGOEGBMJ013399",
+              "GGOEGFSR022099"
+            ],
+            "type": "string"
+          },
+          "v2ProductName": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Kick Ball",
+              "Maze Pen",
+              "Sport Bag",
+              "Yoga Block",
+              "Yoga Mat"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "product_list::3",
+                  "product_list::4",
+                  "product_list::5",
+                  "product_list::7",
+                  "product_list::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "product_list::3"
+              },
+              {
+                "id": "product_list::4"
+              },
+              {
+                "id": "product_list::5"
+              },
+              {
+                "id": "product_list::7"
+              },
+              {
+                "id": "product_list::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "productSKU": "A12345",
+      "v2ProductName": "My T-Shirt"
+    },
+    {
+      "productSKU": "GGOEGBMJ013399",
+      "v2ProductName": "Sport Bag"
+    },
+    {
+      "productSKU": "10 55401",
+      "v2ProductName": "Lip Balm"
+    },
+    {
+      "productSKU": "GGOEGGOA017399",
+      "v2ProductName": "Maze Pen"
+    },
+    {
+      "productSKU": "9182788",
+      "v2ProductName": "Yoga Mat"
+    }
+  ]
+}

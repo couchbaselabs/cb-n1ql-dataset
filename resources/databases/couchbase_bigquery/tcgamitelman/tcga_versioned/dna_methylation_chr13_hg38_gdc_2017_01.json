@@ -1,0 +1,219 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-12-1601-01A-01D-0595-05",
+              "TCGA-32-2498-01A-01D-1228-05"
+            ],
+            "type": "string"
+          },
+          "aliquot_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "6e65d823-0d94-4d26-b60a-2f168c...",
+              "aa761ca4-e8f0-4a43-8262-bd84ee..."
+            ],
+            "type": "string"
+          },
+          "beta_value": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.00387369335511696,
+              0.0136268366154034,
+              0.0170613072889561,
+              0.0605913965435117,
+              0.36490753178819
+            ],
+            "type": "number"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-12-1601",
+              "TCGA-32-2498"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0d5e5a6b-5113-43f2-836c-776207...",
+              "cc1459be-de8f-482e-9efe-65937d..."
+            ],
+            "type": "string"
+          },
+          "file_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "5cd6f2f6-7278-4757-be8e-a8ae3a...",
+              "6db4187c-5e48-45ac-8ae3-6b5519..."
+            ],
+            "type": "string"
+          },
+          "platform": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "probe_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "cg02296128",
+              "cg16114640",
+              "cg18540305",
+              "cg19385139",
+              "cg25938646"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-12-1601-01A",
+              "TCGA-32-2498-01A"
+            ],
+            "type": "string"
+          },
+          "sample_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "58af038c-bd40-4123-a6d3-11061f...",
+              "b02fd704-03a6-44c4-b224-f5f457..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dna_methylation_chr13_hg38_gdc...",
+                  "dna_methylation_chr13_hg38_gdc...",
+                  "dna_methylation_chr13_hg38_gdc...",
+                  "dna_methylation_chr13_hg38_gdc...",
+                  "dna_methylation_chr13_hg38_gdc..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "dna_methylation_chr13_hg38_gdc_2017_01::0"
+              },
+              {
+                "id": "dna_methylation_chr13_hg38_gdc_2017_01::1"
+              },
+              {
+                "id": "dna_methylation_chr13_hg38_gdc_2017_01::2"
+              },
+              {
+                "id": "dna_methylation_chr13_hg38_gdc_2017_01::3"
+              },
+              {
+                "id": "dna_methylation_chr13_hg38_gdc_2017_01::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_barcode": "TCGA-32-2498-01A-01D-1228-05",
+      "aliquot_gdc_id": "6e65d823-0d94-4d26-b60a-2f168cbe2ba8",
+      "beta_value": 0.0136268366154034,
+      "case_barcode": "TCGA-32-2498",
+      "case_gdc_id": "0d5e5a6b-5113-43f2-836c-776207b21b56",
+      "file_gdc_id": "6db4187c-5e48-45ac-8ae3-6b55198ff65a",
+      "platform": null,
+      "probe_id": "cg02296128",
+      "sample_barcode": "TCGA-32-2498-01A",
+      "sample_gdc_id": "58af038c-bd40-4123-a6d3-11061f0d38e1"
+    },
+    {
+      "aliquot_barcode": "TCGA-12-1601-01A-01D-0595-05",
+      "aliquot_gdc_id": "aa761ca4-e8f0-4a43-8262-bd84eedb459a",
+      "beta_value": 0.00387369335511696,
+      "case_barcode": "TCGA-12-1601",
+      "case_gdc_id": "cc1459be-de8f-482e-9efe-65937db9dc45",
+      "file_gdc_id": "5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3",
+      "platform": null,
+      "probe_id": "cg18540305",
+      "sample_barcode": "TCGA-12-1601-01A",
+      "sample_gdc_id": "b02fd704-03a6-44c4-b224-f5f457e733f3"
+    },
+    {
+      "aliquot_barcode": "TCGA-12-1601-01A-01D-0595-05",
+      "aliquot_gdc_id": "aa761ca4-e8f0-4a43-8262-bd84eedb459a",
+      "beta_value": 0.36490753178819,
+      "case_barcode": "TCGA-12-1601",
+      "case_gdc_id": "cc1459be-de8f-482e-9efe-65937db9dc45",
+      "file_gdc_id": "5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3",
+      "platform": null,
+      "probe_id": "cg19385139",
+      "sample_barcode": "TCGA-12-1601-01A",
+      "sample_gdc_id": "b02fd704-03a6-44c4-b224-f5f457e733f3"
+    },
+    {
+      "aliquot_barcode": "TCGA-12-1601-01A-01D-0595-05",
+      "aliquot_gdc_id": "aa761ca4-e8f0-4a43-8262-bd84eedb459a",
+      "beta_value": 0.0170613072889561,
+      "case_barcode": "TCGA-12-1601",
+      "case_gdc_id": "cc1459be-de8f-482e-9efe-65937db9dc45",
+      "file_gdc_id": "5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3",
+      "platform": null,
+      "probe_id": "cg25938646",
+      "sample_barcode": "TCGA-12-1601-01A",
+      "sample_gdc_id": "b02fd704-03a6-44c4-b224-f5f457e733f3"
+    },
+    {
+      "aliquot_barcode": "TCGA-32-2498-01A-01D-1228-05",
+      "aliquot_gdc_id": "6e65d823-0d94-4d26-b60a-2f168cbe2ba8",
+      "beta_value": 0.0605913965435117,
+      "case_barcode": "TCGA-32-2498",
+      "case_gdc_id": "0d5e5a6b-5113-43f2-836c-776207b21b56",
+      "file_gdc_id": "6db4187c-5e48-45ac-8ae3-6b55198ff65a",
+      "platform": null,
+      "probe_id": "cg16114640",
+      "sample_barcode": "TCGA-32-2498-01A",
+      "sample_gdc_id": "58af038c-bd40-4123-a6d3-11061f0d38e1"
+    }
+  ]
+}

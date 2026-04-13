@@ -1,0 +1,70 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`description` = \"Present value calculations for ...\", `series_code` = \"DT.DOD.PVLX.CD\", `year` = 2018",
+        "properties": {
+          "description": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Present value calculations for..."
+            ],
+            "type": "string"
+          },
+          "series_code": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DT.DOD.PVLX.CD"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2018
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "series_times::0"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "series_times::0"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "description": "Present value calculations for these countries are for public and publicly guaranteed debt only.",
+      "series_code": "DT.DOD.PVLX.CD",
+      "year": 2018
+    }
+  ]
+}

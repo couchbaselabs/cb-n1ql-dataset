@@ -1,0 +1,144 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`violations_charged` = \"0\", `violations_charged_name` = \"None\"",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              100079,
+              330102,
+              560014,
+              560028,
+              560070
+            ],
+            "type": "number"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              33,
+              56
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "type": "number"
+          },
+          "violations_charged": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0"
+            ],
+            "type": "string"
+          },
+          "violations_charged_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "None"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "violatn_2016::2",
+                  "violatn_2016::3",
+                  "violatn_2016::5",
+                  "violatn_2016::8",
+                  "violatn_2016::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "violatn_2016::2"
+              },
+              {
+                "id": "violatn_2016::3"
+              },
+              {
+                "id": "violatn_2016::5"
+              },
+              {
+                "id": "violatn_2016::8"
+              },
+              {
+                "id": "violatn_2016::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 560014,
+      "state_number": 56,
+      "vehicle_number": 9,
+      "violations_charged": "0",
+      "violations_charged_name": "None"
+    },
+    {
+      "consecutive_number": 560014,
+      "state_number": 56,
+      "vehicle_number": 7,
+      "violations_charged": "0",
+      "violations_charged_name": "None"
+    },
+    {
+      "consecutive_number": 560014,
+      "state_number": 56,
+      "vehicle_number": 8,
+      "violations_charged": "0",
+      "violations_charged_name": "None"
+    },
+    {
+      "consecutive_number": 560014,
+      "state_number": 56,
+      "vehicle_number": 6,
+      "violations_charged": "0",
+      "violations_charged_name": "None"
+    },
+    {
+      "consecutive_number": 560028,
+      "state_number": 56,
+      "vehicle_number": 6,
+      "violations_charged": "0",
+      "violations_charged_name": "None"
+    }
+  ]
+}

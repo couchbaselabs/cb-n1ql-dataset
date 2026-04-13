@@ -1,0 +1,529 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`CFICode` = \"MMMXXX\", `Quantity` = 1, `SenderCompID` = \"MDOC\"",
+        "properties": {
+          "CFICode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MMMXXX"
+            ],
+            "type": "string"
+          },
+          "LastPx": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2964.75,
+              9672.5,
+              9787.5,
+              10867.5,
+              10943.625
+            ],
+            "type": "number"
+          },
+          "MaturityDate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-05-19T23:11:32.743000+00:...",
+              "2020-05-25T04:52:43.400000+00:...",
+              "2020-06-03T04:36:00.658000+00:...",
+              "2020-09-17T14:45:30.669000+00:...",
+              "2020-09-21T02:07:51.939000+00:..."
+            ],
+            "type": "string"
+          },
+          "OrderID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "08e948a1-a3dc-4b46-aaf5-f44828...",
+              "2e8bcb7e-c823-45bd-b190-f49127...",
+              "55b913eb-69ad-4620-8252-a7ea55...",
+              "78b2f5e5-9cfe-44a5-a2ec-f95eb8...",
+              "b58ad7c3-1b60-44ac-aff0-49a22f..."
+            ],
+            "type": "string"
+          },
+          "Quantity": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "SenderCompID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MDOC"
+            ],
+            "type": "string"
+          },
+          "SendingTime": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-05-19T23:10:32+00:00",
+              "2020-05-25T04:51:42+00:00",
+              "2020-06-03T04:35:00+00:00",
+              "2020-09-17T14:44:30+00:00",
+              "2020-09-21T02:06:44+00:00"
+            ],
+            "type": "string"
+          },
+          "Sides": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 1000,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "OrderID": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "08e948a1-a3dc-4b46-aaf5-f44828...",
+                    "2e8bcb7e-c823-45bd-b190-f49127...",
+                    "55b913eb-69ad-4620-8252-a7ea55...",
+                    "78b2f5e5-9cfe-44a5-a2ec-f95eb8...",
+                    "b58ad7c3-1b60-44ac-aff0-49a22f..."
+                  ],
+                  "type": "string"
+                },
+                "PartyIDs": {
+                  "items": {
+                    "#docs": 1000,
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "properties": {
+                      "PartyID": {
+                        "nestingDepth": 4,
+                        "samples": [
+                          "LUCKYNQ",
+                          "MOMOBTC",
+                          "MOMONQ",
+                          "PREDICTBTC",
+                          "PREDICTES"
+                        ],
+                        "type": "string"
+                      },
+                      "PartyIDSource": {
+                        "nestingDepth": 4,
+                        "samples": [
+                          "PROP CODE"
+                        ],
+                        "type": "string"
+                      },
+                      "PartyRole": {
+                        "nestingDepth": 4,
+                        "samples": [
+                          "INITIATING TRADER"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "maxItems": 1,
+                  "minItems": 1,
+                  "nestingDepth": 2,
+                  "sampleSize": 0,
+                  "samples": [
+                    [
+                      {
+                        "PartyID": "LUCKYNQ",
+                        "PartyIDSource": "PROP CODE",
+                        "PartyRole": "INITIATING TRADER"
+                      }
+                    ],
+                    [
+                      {
+                        "PartyID": "MOMOBTC",
+                        "PartyIDSource": "PROP CODE",
+                        "PartyRole": "INITIATING TRADER"
+                      }
+                    ],
+                    [
+                      {
+                        "PartyID": "MOMONQ",
+                        "PartyIDSource": "PROP CODE",
+                        "PartyRole": "INITIATING TRADER"
+                      }
+                    ],
+                    [
+                      {
+                        "PartyID": "PREDICTBTC",
+                        "PartyIDSource": "PROP CODE",
+                        "PartyRole": "INITIATING TRADER"
+                      }
+                    ],
+                    [
+                      {
+                        "PartyID": "PREDICTES",
+                        "PartyIDSource": "PROP CODE",
+                        "PartyRole": "INITIATING TRADER"
+                      }
+                    ]
+                  ],
+                  "type": "array"
+                },
+                "Side": {
+                  "nestingDepth": 2,
+                  "samples": [
+                    "LONG",
+                    "SHORT"
+                  ],
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 1,
+            "minItems": 1,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "OrderID": "08e948a1-a3dc-4b46-aaf5-f4482830c989",
+                  "PartyIDs": [
+                    {
+                      "PartyID": "PREDICTES",
+                      "PartyIDSource": "PROP CODE",
+                      "PartyRole": "INITIATING TRADER"
+                    }
+                  ],
+                  "Side": "LONG"
+                }
+              ],
+              [
+                {
+                  "OrderID": "2e8bcb7e-c823-45bd-b190-f49127cf6058",
+                  "PartyIDs": [
+                    {
+                      "PartyID": "LUCKYNQ",
+                      "PartyIDSource": "PROP CODE",
+                      "PartyRole": "INITIATING TRADER"
+                    }
+                  ],
+                  "Side": "SHORT"
+                }
+              ],
+              [
+                {
+                  "OrderID": "55b913eb-69ad-4620-8252-a7ea55de66d7",
+                  "PartyIDs": [
+                    {
+                      "PartyID": "MOMOBTC",
+                      "PartyIDSource": "PROP CODE",
+                      "PartyRole": "INITIATING TRADER"
+                    }
+                  ],
+                  "Side": "LONG"
+                }
+              ],
+              [
+                {
+                  "OrderID": "78b2f5e5-9cfe-44a5-a2ec-f95eb843173d",
+                  "PartyIDs": [
+                    {
+                      "PartyID": "MOMONQ",
+                      "PartyIDSource": "PROP CODE",
+                      "PartyRole": "INITIATING TRADER"
+                    }
+                  ],
+                  "Side": "LONG"
+                }
+              ],
+              [
+                {
+                  "OrderID": "b58ad7c3-1b60-44ac-aff0-49a22f06aecd",
+                  "PartyIDs": [
+                    {
+                      "PartyID": "MOMOBTC",
+                      "PartyIDSource": "PROP CODE",
+                      "PartyRole": "INITIATING TRADER"
+                    }
+                  ],
+                  "Side": "LONG"
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "StrikePrice": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2964.375,
+              9672.25,
+              9780,
+              10882.5,
+              10940
+            ],
+            "type": "number"
+          },
+          "Symbol": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BTCK0",
+              "BTCU0",
+              "ESM0",
+              "NQM0",
+              "NQZ0"
+            ],
+            "type": "string"
+          },
+          "TargetCompID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LUCKYNQ-COMPID",
+              "MOMOBTC-COMPID",
+              "MOMONQ-COMPID",
+              "PREDICTBTC-COMPID",
+              "PREDICTES-COMPID"
+            ],
+            "type": "string"
+          },
+          "TradeDate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-05-19",
+              "2020-05-25",
+              "2020-06-03",
+              "2020-09-17",
+              "2020-09-21"
+            ],
+            "type": "string"
+          },
+          "TradeReportID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "08e948a1-a3dc-4b46-aaf5-f44828...",
+              "2e8bcb7e-c823-45bd-b190-f49127...",
+              "55b913eb-69ad-4620-8252-a7ea55...",
+              "78b2f5e5-9cfe-44a5-a2ec-f95eb8...",
+              "b58ad7c3-1b60-44ac-aff0-49a22f..."
+            ],
+            "type": "string"
+          },
+          "TransactTime": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-05-19T23:10:32.743000+00:...",
+              "2020-05-25T04:51:43.400000+00:...",
+              "2020-06-03T04:35:00.658000+00:...",
+              "2020-09-17T14:44:30.669000+00:...",
+              "2020-09-21T02:06:51.939000+00:..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "trade_capture_report::1029840",
+                  "trade_capture_report::1169851",
+                  "trade_capture_report::127801",
+                  "trade_capture_report::252715",
+                  "trade_capture_report::39432"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "trade_capture_report::1029840"
+              },
+              {
+                "id": "trade_capture_report::1169851"
+              },
+              {
+                "id": "trade_capture_report::127801"
+              },
+              {
+                "id": "trade_capture_report::252715"
+              },
+              {
+                "id": "trade_capture_report::39432"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "CFICode": "MMMXXX",
+      "LastPx": 9292.5,
+      "MaturityDate": "2020-07-02T05:53:37.649000+00:00",
+      "OrderID": "bd610b44-6cd3-41b5-b2a4-b3c6edcdf435",
+      "Quantity": 1,
+      "SenderCompID": "MDOC",
+      "SendingTime": "2020-07-02T05:52:37+00:00",
+      "Sides": [
+        {
+          "OrderID": "bd610b44-6cd3-41b5-b2a4-b3c6edcdf435",
+          "PartyIDs": [
+            {
+              "PartyID": "PREDICTBTC",
+              "PartyIDSource": "PROP CODE",
+              "PartyRole": "INITIATING TRADER"
+            }
+          ],
+          "Side": "LONG"
+        }
+      ],
+      "StrikePrice": 9290,
+      "Symbol": "BTCN0",
+      "TargetCompID": "PREDICTBTC-COMPID",
+      "TradeDate": "2020-07-02",
+      "TradeReportID": "bd610b44-6cd3-41b5-b2a4-b3c6edcdf435-0",
+      "TransactTime": "2020-07-02T05:52:37.649000+00:00"
+    },
+    {
+      "CFICode": "MMMXXX",
+      "LastPx": 9232.5,
+      "MaturityDate": "2020-07-02T08:48:50.036000+00:00",
+      "OrderID": "512343da-839e-4dd7-839d-5bafda0e9266",
+      "Quantity": 1,
+      "SenderCompID": "MDOC",
+      "SendingTime": "2020-07-02T08:47:49+00:00",
+      "Sides": [
+        {
+          "OrderID": "512343da-839e-4dd7-839d-5bafda0e9266",
+          "PartyIDs": [
+            {
+              "PartyID": "PREDICTBTC",
+              "PartyIDSource": "PROP CODE",
+              "PartyRole": "INITIATING TRADER"
+            }
+          ],
+          "Side": "LONG"
+        }
+      ],
+      "StrikePrice": 9242.5,
+      "Symbol": "BTCN0",
+      "TargetCompID": "PREDICTBTC-COMPID",
+      "TradeDate": "2020-07-02",
+      "TradeReportID": "512343da-839e-4dd7-839d-5bafda0e9266-0",
+      "TransactTime": "2020-07-02T08:47:50.036000+00:00"
+    },
+    {
+      "CFICode": "MMMXXX",
+      "LastPx": 9090,
+      "MaturityDate": "2020-07-02T18:15:15.205000+00:00",
+      "OrderID": "1059d67a-9c30-4d80-a868-f5e5b0da397a",
+      "Quantity": 1,
+      "SenderCompID": "MDOC",
+      "SendingTime": "2020-07-02T18:14:14+00:00",
+      "Sides": [
+        {
+          "OrderID": "1059d67a-9c30-4d80-a868-f5e5b0da397a",
+          "PartyIDs": [
+            {
+              "PartyID": "PREDICTBTC",
+              "PartyIDSource": "PROP CODE",
+              "PartyRole": "INITIATING TRADER"
+            }
+          ],
+          "Side": "LONG"
+        }
+      ],
+      "StrikePrice": 9092.5,
+      "Symbol": "BTCN0",
+      "TargetCompID": "PREDICTBTC-COMPID",
+      "TradeDate": "2020-07-02",
+      "TradeReportID": "1059d67a-9c30-4d80-a868-f5e5b0da397a-0",
+      "TransactTime": "2020-07-02T18:14:15.205000+00:00"
+    },
+    {
+      "CFICode": "MMMXXX",
+      "LastPx": 9327.5,
+      "MaturityDate": "2020-07-07T18:31:40.334000+00:00",
+      "OrderID": "268685d7-1d1b-4ae6-8932-54ed7e54697c",
+      "Quantity": 1,
+      "SenderCompID": "MDOC",
+      "SendingTime": "2020-07-07T18:30:39+00:00",
+      "Sides": [
+        {
+          "OrderID": "268685d7-1d1b-4ae6-8932-54ed7e54697c",
+          "PartyIDs": [
+            {
+              "PartyID": "PREDICTBTC",
+              "PartyIDSource": "PROP CODE",
+              "PartyRole": "INITIATING TRADER"
+            }
+          ],
+          "Side": "LONG"
+        }
+      ],
+      "StrikePrice": 9327.5,
+      "Symbol": "BTCN0",
+      "TargetCompID": "PREDICTBTC-COMPID",
+      "TradeDate": "2020-07-07",
+      "TradeReportID": "268685d7-1d1b-4ae6-8932-54ed7e54697c-0",
+      "TransactTime": "2020-07-07T18:30:40.334000+00:00"
+    },
+    {
+      "CFICode": "MMMXXX",
+      "LastPx": 9360,
+      "MaturityDate": "2020-07-08T09:10:48.588000+00:00",
+      "OrderID": "84fac353-a4bd-44a5-a30b-f98611ed0e59",
+      "Quantity": 1,
+      "SenderCompID": "MDOC",
+      "SendingTime": "2020-07-08T09:09:48+00:00",
+      "Sides": [
+        {
+          "OrderID": "84fac353-a4bd-44a5-a30b-f98611ed0e59",
+          "PartyIDs": [
+            {
+              "PartyID": "PREDICTBTC",
+              "PartyIDSource": "PROP CODE",
+              "PartyRole": "INITIATING TRADER"
+            }
+          ],
+          "Side": "LONG"
+        }
+      ],
+      "StrikePrice": 9352.5,
+      "Symbol": "BTCN0",
+      "TargetCompID": "PREDICTBTC-COMPID",
+      "TradeDate": "2020-07-08",
+      "TradeReportID": "84fac353-a4bd-44a5-a30b-f98611ed0e59-0",
+      "TransactTime": "2020-07-08T09:09:48.588000+00:00"
+    }
+  ]
+}

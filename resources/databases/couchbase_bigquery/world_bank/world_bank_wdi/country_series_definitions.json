@@ -1,0 +1,115 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AUS",
+              "AUT",
+              "COL",
+              "JPN",
+              "SYR"
+            ],
+            "type": "string"
+          },
+          "description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1950-1999 SIPRI estimates.",
+              "1957-2001 SIPRI estimates.",
+              "1960-1964 SIPRI estimates.",
+              "1960-1969 & 1986-1992 SIPRI es...",
+              "1960-1969 SIPRI estimates."
+            ],
+            "type": "string"
+          },
+          "series_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MS.MIL.XPND.CD",
+              "MS.MIL.XPND.CN"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "country_series_definitions::0",
+                  "country_series_definitions::2",
+                  "country_series_definitions::3",
+                  "country_series_definitions::6",
+                  "country_series_definitions::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "country_series_definitions::0"
+              },
+              {
+                "id": "country_series_definitions::2"
+              },
+              {
+                "id": "country_series_definitions::3"
+              },
+              {
+                "id": "country_series_definitions::6"
+              },
+              {
+                "id": "country_series_definitions::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "COL",
+      "description": "1960-1969 SIPRI estimates.",
+      "series_code": "MS.MIL.XPND.CD"
+    },
+    {
+      "country_code": "JPN",
+      "description": "1960-1964 SIPRI estimates.",
+      "series_code": "MS.MIL.XPND.CD"
+    },
+    {
+      "country_code": "TUN",
+      "description": "1960-1964 SIPRI estimates.",
+      "series_code": "MS.MIL.XPND.CD"
+    },
+    {
+      "country_code": "AUS",
+      "description": "1950-1999 SIPRI estimates.",
+      "series_code": "MS.MIL.XPND.CN"
+    },
+    {
+      "country_code": "JPN",
+      "description": "1960-1964 SIPRI estimates.",
+      "series_code": "MS.MIL.XPND.CN"
+    }
+  ]
+}

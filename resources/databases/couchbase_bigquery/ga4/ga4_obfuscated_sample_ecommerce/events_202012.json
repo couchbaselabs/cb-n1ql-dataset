@@ -1,0 +1,4036 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`platform` = \"WEB\", `stream_id` = 2100450278",
+        "properties": {
+          "app_info": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "device": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "advertising_id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "category": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "desktop",
+                  "mobile",
+                  "tablet"
+                ],
+                "type": "string"
+              },
+              "is_limited_ad_tracking": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "No"
+                ],
+                "type": "string"
+              },
+              "language": {
+                "#docs": [
+                  439,
+                  670
+                ],
+                "%docs": [
+                  43.9,
+                  67
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    "en",
+                    "en-gb",
+                    "en-us",
+                    "es-es",
+                    "fr"
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "mobile_brand_name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "<Other>",
+                  "Apple",
+                  "Google",
+                  "Microsoft",
+                  "Samsung"
+                ],
+                "type": "string"
+              },
+              "mobile_marketing_name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "<Other>"
+                ],
+                "type": "string"
+              },
+              "mobile_model_name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "<Other>",
+                  "Chrome",
+                  "ChromeBook",
+                  "Edge",
+                  "iPhone"
+                ],
+                "type": "string"
+              },
+              "mobile_os_hardware_model": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "operating_system": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "<Other>",
+                  "Macintosh",
+                  "Web",
+                  "Windows",
+                  "iOS"
+                ],
+                "type": "string"
+              },
+              "operating_system_version": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "10",
+                  "<Other>",
+                  "Android 10",
+                  "Windows 10",
+                  "iOS 14.3"
+                ],
+                "type": "string"
+              },
+              "time_zone_offset_seconds": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "vendor_id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "web_info": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "properties": {
+                  "browser": {
+                    "#docs": 1000,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "<Other>",
+                      "Android Webview",
+                      "Chrome",
+                      "Edge",
+                      "Safari"
+                    ],
+                    "type": "string"
+                  },
+                  "browser_version": {
+                    "#docs": 1000,
+                    "%docs": 100,
+                    "nestingDepth": 2,
+                    "samples": [
+                      "13.1",
+                      "14.0",
+                      "86.0",
+                      "87.0",
+                      "<Other>"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "samples": [
+                  {
+                    "browser": "<Other>",
+                    "browser_version": "<Other>"
+                  },
+                  {
+                    "browser": "Chrome",
+                    "browser_version": "86.0"
+                  },
+                  {
+                    "browser": "Chrome",
+                    "browser_version": "87.0"
+                  },
+                  {
+                    "browser": "Edge",
+                    "browser_version": "87.0"
+                  },
+                  {
+                    "browser": "Safari",
+                    "browser_version": "14.0"
+                  }
+                ],
+                "type": "object"
+              }
+            },
+            "samples": [
+              {
+                "advertising_id": null,
+                "category": "desktop",
+                "is_limited_ad_tracking": "No",
+                "language": "en-us",
+                "mobile_brand_name": "Google",
+                "mobile_marketing_name": "<Other>",
+                "mobile_model_name": "Chrome",
+                "mobile_os_hardware_model": null,
+                "operating_system": "Windows",
+                "operating_system_version": "Windows 10",
+                "time_zone_offset_seconds": null,
+                "vendor_id": null,
+                "web_info": {
+                  "browser": "Chrome",
+                  "browser_version": "87.0"
+                }
+              },
+              {
+                "advertising_id": null,
+                "category": "desktop",
+                "is_limited_ad_tracking": "No",
+                "language": "en-us",
+                "mobile_brand_name": "Google",
+                "mobile_marketing_name": "<Other>",
+                "mobile_model_name": "ChromeBook",
+                "mobile_os_hardware_model": null,
+                "operating_system": "<Other>",
+                "operating_system_version": "<Other>",
+                "time_zone_offset_seconds": null,
+                "vendor_id": null,
+                "web_info": {
+                  "browser": "Chrome",
+                  "browser_version": "87.0"
+                }
+              },
+              {
+                "advertising_id": null,
+                "category": "desktop",
+                "is_limited_ad_tracking": "No",
+                "language": "en-us",
+                "mobile_brand_name": "Microsoft",
+                "mobile_marketing_name": "<Other>",
+                "mobile_model_name": "Edge",
+                "mobile_os_hardware_model": null,
+                "operating_system": "Web",
+                "operating_system_version": "10",
+                "time_zone_offset_seconds": null,
+                "vendor_id": null,
+                "web_info": {
+                  "browser": "Edge",
+                  "browser_version": "87.0"
+                }
+              },
+              {
+                "advertising_id": null,
+                "category": "mobile",
+                "is_limited_ad_tracking": "No",
+                "language": "en",
+                "mobile_brand_name": "Apple",
+                "mobile_marketing_name": "<Other>",
+                "mobile_model_name": "iPhone",
+                "mobile_os_hardware_model": null,
+                "operating_system": "iOS",
+                "operating_system_version": "iOS 14.3",
+                "time_zone_offset_seconds": null,
+                "vendor_id": null,
+                "web_info": {
+                  "browser": "Safari",
+                  "browser_version": "14.0"
+                }
+              },
+              {
+                "advertising_id": null,
+                "category": "mobile",
+                "is_limited_ad_tracking": "No",
+                "language": "en-us",
+                "mobile_brand_name": "Samsung",
+                "mobile_marketing_name": "<Other>",
+                "mobile_model_name": "<Other>",
+                "mobile_os_hardware_model": null,
+                "operating_system": "Web",
+                "operating_system_version": "10",
+                "time_zone_offset_seconds": null,
+                "vendor_id": null,
+                "web_info": {
+                  "browser": "<Other>",
+                  "browser_version": "<Other>"
+                }
+              }
+            ],
+            "type": "object"
+          },
+          "ecommerce": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "purchase_revenue": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "purchase_revenue_in_usd": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "refund_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "refund_value_in_usd": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "shipping_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "shipping_value_in_usd": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "tax_value": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "tax_value_in_usd": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "total_item_quantity": {
+                "#docs": [
+                  988,
+                  12
+                ],
+                "%docs": [
+                  98.8,
+                  1.2
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    1,
+                    3,
+                    5
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "transaction_id": {
+                "#docs": [
+                  941,
+                  64
+                ],
+                "%docs": [
+                  94.1,
+                  6.4
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    "(not set)"
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "unique_items": {
+                "#docs": [
+                  941,
+                  64
+                ],
+                "%docs": [
+                  94.1,
+                  6.4
+                ],
+                "nestingDepth": 1,
+                "samples": [
+                  [
+                    null
+                  ],
+                  [
+                    1,
+                    10,
+                    11,
+                    12
+                  ]
+                ],
+                "type": [
+                  "null",
+                  "number"
+                ]
+              }
+            },
+            "samples": [
+              {
+                "purchase_revenue": null,
+                "purchase_revenue_in_usd": null,
+                "refund_value": null,
+                "refund_value_in_usd": null,
+                "shipping_value": null,
+                "shipping_value_in_usd": null,
+                "tax_value": null,
+                "tax_value_in_usd": null,
+                "total_item_quantity": null,
+                "transaction_id": null,
+                "unique_items": null
+              },
+              {
+                "purchase_revenue": null,
+                "purchase_revenue_in_usd": null,
+                "refund_value": null,
+                "refund_value_in_usd": null,
+                "shipping_value": null,
+                "shipping_value_in_usd": null,
+                "tax_value": null,
+                "tax_value_in_usd": null,
+                "total_item_quantity": null,
+                "transaction_id": null,
+                "unique_items": null
+              },
+              {
+                "purchase_revenue": null,
+                "purchase_revenue_in_usd": null,
+                "refund_value": null,
+                "refund_value_in_usd": null,
+                "shipping_value": null,
+                "shipping_value_in_usd": null,
+                "tax_value": null,
+                "tax_value_in_usd": null,
+                "total_item_quantity": null,
+                "transaction_id": null,
+                "unique_items": null
+              },
+              {
+                "purchase_revenue": null,
+                "purchase_revenue_in_usd": null,
+                "refund_value": null,
+                "refund_value_in_usd": null,
+                "shipping_value": null,
+                "shipping_value_in_usd": null,
+                "tax_value": null,
+                "tax_value_in_usd": null,
+                "total_item_quantity": null,
+                "transaction_id": null,
+                "unique_items": null
+              },
+              {
+                "purchase_revenue": null,
+                "purchase_revenue_in_usd": null,
+                "refund_value": null,
+                "refund_value_in_usd": null,
+                "shipping_value": null,
+                "shipping_value_in_usd": null,
+                "tax_value": null,
+                "tax_value_in_usd": null,
+                "total_item_quantity": null,
+                "transaction_id": null,
+                "unique_items": null
+              }
+            ],
+            "type": "object"
+          },
+          "event_bundle_sequence_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -7002695970,
+              -5975662467,
+              -5223465518,
+              7857940029,
+              8399110716
+            ],
+            "type": "number"
+          },
+          "event_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20201201",
+              "20201207",
+              "20201208",
+              "20201209",
+              "20201211"
+            ],
+            "type": "string"
+          },
+          "event_dimensions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "event_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "first_visit",
+              "page_view",
+              "scroll",
+              "session_start",
+              "user_engagement"
+            ],
+            "type": "string"
+          },
+          "event_params": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {
+              "#docs": 5156,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "Flavor": "",
+              "properties": {
+                "key": {
+                  "#docs": 5156,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "samples": [
+                    "all_data",
+                    "page_location",
+                    "page_referrer"
+                  ],
+                  "type": "string"
+                },
+                "value": {
+                  "#docs": 5156,
+                  "%docs": 100,
+                  "nestingDepth": 2,
+                  "properties": {
+                    "double_value": {
+                      "#docs": 5156,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "samples": [
+                        null
+                      ],
+                      "type": "null"
+                    },
+                    "float_value": {
+                      "#docs": 5156,
+                      "%docs": 100,
+                      "nestingDepth": 3,
+                      "samples": [
+                        null
+                      ],
+                      "type": "null"
+                    },
+                    "int_value": {
+                      "#docs": [
+                        3015,
+                        2141
+                      ],
+                      "%docs": [
+                        58.47,
+                        41.52
+                      ],
+                      "nestingDepth": 3,
+                      "samples": [
+                        [
+                          null
+                        ],
+                        []
+                      ],
+                      "type": [
+                        "null",
+                        "number"
+                      ]
+                    },
+                    "string_value": {
+                      "#docs": [
+                        2141,
+                        3015
+                      ],
+                      "%docs": [
+                        41.52,
+                        58.47
+                      ],
+                      "nestingDepth": 3,
+                      "samples": [
+                        [],
+                        [
+                          "https://shop.googlemerchandise...",
+                          "https://shop.googlemerchandise..."
+                        ]
+                      ],
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  },
+                  "samples": [
+                    {
+                      "double_value": null,
+                      "float_value": null,
+                      "int_value": null,
+                      "string_value": "https://shop.googlemerchandisestore.com/Google+Redesign/Apparel/YouTube+Icon+Hoodie+Black"
+                    },
+                    {
+                      "double_value": null,
+                      "float_value": null,
+                      "int_value": null,
+                      "string_value": "https://shop.googlemerchandisestore.com/Google+Redesign/Apparel/YouTube+Icon+Hoodie+Black"
+                    },
+                    {
+                      "double_value": null,
+                      "float_value": null,
+                      "int_value": null,
+                      "string_value": "https://shop.googlemerchandisestore.com/special-request-form/"
+                    },
+                    {
+                      "double_value": null,
+                      "float_value": null,
+                      "int_value": null,
+                      "string_value": "https://shop.googlemerchandisestore.com/special-request-form/"
+                    }
+                  ],
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 17,
+            "minItems": 4,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "key": "all_data",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "page_location",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "https://shop.googlemerchandisestore.com/"
+                  }
+                },
+                {
+                  "key": "ga_session_number",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 2,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "ga_session_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 4115329181,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "clean_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "gtm.js"
+                  }
+                },
+                {
+                  "key": "session_engaged",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "1"
+                  }
+                },
+                {
+                  "key": "page_referrer",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "https://shop.googlemerchandisestore.com/store.html?"
+                  }
+                },
+                {
+                  "key": "campaign",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "(referral)"
+                  }
+                },
+                {
+                  "key": "source",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "shop.googlemerchandisestore.com"
+                  }
+                },
+                {
+                  "key": "medium",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "referral"
+                  }
+                },
+                {
+                  "key": "engagement_time_msec",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 17410,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "page_title",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "Home"
+                  }
+                },
+                {
+                  "key": "debug_mode",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "engaged_session_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "engagement_time_msec",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 7655,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "session_engaged",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "1"
+                  }
+                },
+                {
+                  "key": "clean_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "gtm.js"
+                  }
+                },
+                {
+                  "key": "page_title",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "Google | Shop by Brand | Google Merchandise Store"
+                  }
+                },
+                {
+                  "key": "ga_session_number",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "page_referrer",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "engaged_session_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "medium",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "referral"
+                  }
+                },
+                {
+                  "key": "ga_session_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 5331423376,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "campaign",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "(referral)"
+                  }
+                },
+                {
+                  "key": "debug_mode",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "source",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "shop.googlemerchandisestore.com"
+                  }
+                },
+                {
+                  "key": "page_location",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "https://shop.googlemerchandisestore.com/Google+Redesign/Shop+by+Brand/Google"
+                  }
+                },
+                {
+                  "key": "all_data",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": null
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "page_location",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "https://shop.googlemerchandisestore.com/Google+Redesign/Apparel/Google+Heather+Green+Speckled+Tee"
+                  }
+                },
+                {
+                  "key": "all_data",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "engaged_session_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "session_engaged",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "1"
+                  }
+                },
+                {
+                  "key": "page_title",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "Google Heather Green Speckled Tee"
+                  }
+                },
+                {
+                  "key": "ga_session_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 9889177200,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "ga_session_number",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 2,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "clean_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "gtm.js"
+                  }
+                },
+                {
+                  "key": "medium",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "referral"
+                  }
+                },
+                {
+                  "key": "source",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "shop.googlemerchandisestore.com"
+                  }
+                },
+                {
+                  "key": "debug_mode",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "campaign",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "(referral)"
+                  }
+                },
+                {
+                  "key": "page_referrer",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "https://shop.googlemerchandisestore.com/Google+Redesign/Apparel/Mens?"
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "page_location",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "https://shop.googlemerchandisestore.com/myaccount.html"
+                  }
+                },
+                {
+                  "key": "ga_session_number",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 9,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "session_engaged",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "1"
+                  }
+                },
+                {
+                  "key": "campaign",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "(referral)"
+                  }
+                },
+                {
+                  "key": "engaged_session_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "ga_session_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 4460362594,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "page_title",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "The Google Merchandise Store - My Account"
+                  }
+                },
+                {
+                  "key": "clean_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "gtm.js"
+                  }
+                },
+                {
+                  "key": "all_data",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "medium",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "referral"
+                  }
+                },
+                {
+                  "key": "debug_mode",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "page_referrer",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "https://shop.googlemerchandisestore.com/myaccount.html?"
+                  }
+                },
+                {
+                  "key": "source",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "<Other>"
+                  }
+                }
+              ],
+              [
+                {
+                  "key": "page_location",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "https://shop.googlemerchandisestore.com/ordercompleted.html"
+                  }
+                },
+                {
+                  "key": "engagement_time_msec",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 3813,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "engaged_session_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "clean_event",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "gtm.js"
+                  }
+                },
+                {
+                  "key": "session_engaged",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "1"
+                  }
+                },
+                {
+                  "key": "page_title",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": "Checkout Confirmation"
+                  }
+                },
+                {
+                  "key": "ga_session_number",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 5,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "ga_session_id",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1221594038,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "all_data",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": null,
+                    "string_value": null
+                  }
+                },
+                {
+                  "key": "debug_mode",
+                  "value": {
+                    "double_value": null,
+                    "float_value": null,
+                    "int_value": 1,
+                    "string_value": null
+                  }
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "event_previous_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "event_server_timestamp_offset": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "event_timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1606849808233392,
+              1607346490540511,
+              1607414203671811,
+              1607493204127926,
+              1607645105921778
+            ],
+            "type": "number"
+          },
+          "event_value_in_usd": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "geo": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "city": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "(not set)",
+                  "Chennai",
+                  "Denver",
+                  "Prague",
+                  "Vancouver"
+                ],
+                "type": "string"
+              },
+              "continent": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "(not set)",
+                  "Americas",
+                  "Asia",
+                  "Europe",
+                  "Oceania"
+                ],
+                "type": "string"
+              },
+              "country": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Australia",
+                  "Canada",
+                  "Czechia",
+                  "India",
+                  "United States"
+                ],
+                "type": "string"
+              },
+              "metro": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "(not set)"
+                ],
+                "type": "string"
+              },
+              "region": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Alberta",
+                  "British Columbia",
+                  "Colorado",
+                  "Connecticut",
+                  "Prague"
+                ],
+                "type": "string"
+              },
+              "sub_continent": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Australasia",
+                  "Eastern Europe",
+                  "Northern America",
+                  "Southern Asia",
+                  "Southern Europe"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "city": "(not set)",
+                "continent": "Americas",
+                "country": "Canada",
+                "metro": "(not set)",
+                "region": "Alberta",
+                "sub_continent": "Northern America"
+              },
+              {
+                "city": "(not set)",
+                "continent": "Americas",
+                "country": "United States",
+                "metro": "(not set)",
+                "region": "Connecticut",
+                "sub_continent": "Northern America"
+              },
+              {
+                "city": "Denver",
+                "continent": "Americas",
+                "country": "United States",
+                "metro": "(not set)",
+                "region": "Colorado",
+                "sub_continent": "Northern America"
+              },
+              {
+                "city": "Prague",
+                "continent": "Europe",
+                "country": "Czechia",
+                "metro": "(not set)",
+                "region": "Prague",
+                "sub_continent": "Eastern Europe"
+              },
+              {
+                "city": "Vancouver",
+                "continent": "Americas",
+                "country": "Canada",
+                "metro": "(not set)",
+                "region": "British Columbia",
+                "sub_continent": "Northern America"
+              }
+            ],
+            "type": "object"
+          },
+          "items": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 12,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [],
+              [
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1342",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "11",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Crewneck Sweatshirt Green",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 55,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1344",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "2",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Navy Speckled Tee",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 30,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX0913",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "4",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Crewneck Sweatshirt Navy",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 55,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1385",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "9",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Men's Tech Fleece Grey",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 89,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1193",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "10",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Campus Bike Eco Tee Navy",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 25,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Men's / Unisex",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGCOGXXX1609",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "15",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Land & Sea French Terry Sweatshirt",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 55,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1038",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "7",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google F/C Long Sleeve Tee Charcoal",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 30,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1352",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "12",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Sherpa Zip Hoodie Charcoal",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 69,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1039",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "8",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google F/C Long Sleeve Tee Ash",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 30,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1109",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "6",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Zip Hoodie F/C",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 60,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1340",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "5",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Badge Heavyweight Pullover Black",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 58,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Apparel/Men's / Unisex/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1613",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "3",
+                  "item_list_name": "(not set)",
+                  "item_name": "Super G Unisex Joggers",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 37,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                }
+              ],
+              [
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYDWB123299",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "5",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Play Mug",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 13,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYXXX1207",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "11",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Standards Zip Hoodie Black",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 60,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYOLB151999",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "12",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Jotter Task Pad",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 3,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYXXX1202",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "7",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Icon Tee Charcoal",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 22,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYOCR125599",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "9",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Transmission Journal Red",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 16,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYXXX1203",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "8",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Icon Tee Grey",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 22,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYHPB121110",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "6",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Leather Strap Hat Black",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 17,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYCBR138999",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "10",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Iconic Play Pin",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 8,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYHBB102199",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "2",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Twill Sandwich Cap Black",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 13,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "YouTube",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYDHB098499",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "1",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube 25 oz Gear Cap Bottle Black",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 27,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYAEA105610",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "3",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Crew Socks",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 16,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Shop by Brand/YouTube/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEYFKQ105899",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "4",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Small Sticker Sheet",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 3,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                }
+              ],
+              [
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDHB137399",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "5",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Woodtop Bottle Black",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 30,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDHL116999",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "3",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Campus Bike Bottle",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 27,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Drinkware",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDNL108699",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "18",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Thermal Tumbler Navy",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 18,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDHJ116899",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "2",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Glass Bottle",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 23,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEADWJ129399",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "11",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Android Iconic Mug Gray",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 17,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEADHH129499",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "8",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Android Iconic Glass Bottle Green",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 24,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDHJ136799",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "6",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Cup Cap Tumbler Grey",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 30,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGCOGDHC101099",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "10",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "#IamRemarkable Water Bottle",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 15,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDBJ132299",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "12",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Stainless Bent Straw/Cleaner",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 4,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDBD132099",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "9",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Bottle Cleaner",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 10,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDHQ127799",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "4",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Mural Bottle",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 24,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Lifestyle/Drinkware/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGDNQ138099",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "7",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Cork Base Tumbler",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 28,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                }
+              ],
+              [
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Sale",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX0904",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "18",
+                  "item_list_name": "Not available in demo dataset",
+                  "item_name": "Google Tee Red",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 11,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGOCL092999",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "9",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Small Standard Journal Navy",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 13,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX0906",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "2",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Tee Green",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 22,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEAFKA087599",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "11",
+                  "item_list_name": "(not set)",
+                  "item_name": "Android Large Removable Sticker Sheet",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 3,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX0905",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "3",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Tee Yellow",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 22,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEAFBA115599",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "6",
+                  "item_list_name": "(not set)",
+                  "item_name": "Android Super Hero 3D Framed Art",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 40,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEAFBA115499",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "5",
+                  "item_list_name": "(not set)",
+                  "item_name": "Android Techie 3D Framed Art",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 40,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX1181",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "12",
+                  "item_list_name": "(not set)",
+                  "item_name": "Google Women's Striped L/S",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 29,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEAOCB092799",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "7",
+                  "item_list_name": "(not set)",
+                  "item_name": "Android Large Trace Journal Black",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 16,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEACBA104599",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "10",
+                  "item_list_name": "(not set)",
+                  "item_name": "Android SM S/F18 Sticker Sheet",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 3,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEAOCB092899",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "8",
+                  "item_list_name": "(not set)",
+                  "item_name": "Android Small Trace Journal Black",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 13,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                },
+                {
+                  "affiliation": "(not set)",
+                  "coupon": "(not set)",
+                  "creative_name": "(not set)",
+                  "creative_slot": "(not set)",
+                  "item_brand": "(not set)",
+                  "item_category": "Home/Sale/",
+                  "item_category2": "(not set)",
+                  "item_category3": "(not set)",
+                  "item_category4": "(not set)",
+                  "item_category5": "(not set)",
+                  "item_id": "GGOEGXXX0919",
+                  "item_list_id": "(not set)",
+                  "item_list_index": "4",
+                  "item_list_name": "(not set)",
+                  "item_name": "YouTube Women's Favorite Tee White",
+                  "item_refund": null,
+                  "item_refund_in_usd": null,
+                  "item_revenue": null,
+                  "item_revenue_in_usd": null,
+                  "item_variant": "(not set)",
+                  "location_id": "(not set)",
+                  "price": 22,
+                  "price_in_usd": null,
+                  "promotion_id": "(not set)",
+                  "promotion_name": "(not set)",
+                  "quantity": null
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "platform": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WEB"
+            ],
+            "type": "string"
+          },
+          "privacy_info": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "ads_storage": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "analytics_storage": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  null
+                ],
+                "type": "null"
+              },
+              "uses_transient_token": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "No"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "ads_storage": null,
+                "analytics_storage": null,
+                "uses_transient_token": "No"
+              },
+              {
+                "ads_storage": null,
+                "analytics_storage": null,
+                "uses_transient_token": "No"
+              },
+              {
+                "ads_storage": null,
+                "analytics_storage": null,
+                "uses_transient_token": "No"
+              },
+              {
+                "ads_storage": null,
+                "analytics_storage": null,
+                "uses_transient_token": "No"
+              },
+              {
+                "ads_storage": null,
+                "analytics_storage": null,
+                "uses_transient_token": "No"
+              }
+            ],
+            "type": "object"
+          },
+          "stream_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2100450278
+            ],
+            "type": "number"
+          },
+          "traffic_source": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "medium": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "(data deleted)",
+                  "(none)",
+                  "<Other>",
+                  "organic",
+                  "referral"
+                ],
+                "type": "string"
+              },
+              "name": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "(data deleted)",
+                  "(direct)",
+                  "(organic)",
+                  "(referral)",
+                  "<Other>"
+                ],
+                "type": "string"
+              },
+              "source": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "(data deleted)",
+                  "(direct)",
+                  "<Other>",
+                  "google",
+                  "shop.googlemerchandisestore.co..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "medium": "(data deleted)",
+                "name": "(data deleted)",
+                "source": "(data deleted)"
+              },
+              {
+                "medium": "(none)",
+                "name": "(direct)",
+                "source": "(direct)"
+              },
+              {
+                "medium": "organic",
+                "name": "(organic)",
+                "source": "google"
+              },
+              {
+                "medium": "referral",
+                "name": "(referral)",
+                "source": "<Other>"
+              },
+              {
+                "medium": "referral",
+                "name": "(referral)",
+                "source": "shop.googlemerchandisestore.com"
+              }
+            ],
+            "type": "object"
+          },
+          "user_first_touch_timestamp": {
+            "#docs": [
+              5,
+              995
+            ],
+            "%docs": [
+              0.5,
+              99.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1606531073262181,
+                1606886062133799,
+                1607337279512599,
+                1607414152871637,
+                1607556196945638
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "user_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "user_ltv": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "currency": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "USD"
+                ],
+                "type": "string"
+              },
+              "revenue": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  0,
+                  22,
+                  35,
+                  136,
+                  140
+                ],
+                "type": "number"
+              }
+            },
+            "samples": [
+              {
+                "currency": "USD",
+                "revenue": 0
+              },
+              {
+                "currency": "USD",
+                "revenue": 22
+              },
+              {
+                "currency": "USD",
+                "revenue": 35
+              },
+              {
+                "currency": "USD",
+                "revenue": 136
+              },
+              {
+                "currency": "USD",
+                "revenue": 140
+              }
+            ],
+            "type": "object"
+          },
+          "user_properties": {
+            "#docs": 1000,
+            "%docs": 100,
+            "items": {},
+            "maxItems": 0,
+            "minItems": 0,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              []
+            ],
+            "type": "array"
+          },
+          "user_pseudo_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1280111349.1479378569",
+              "1318733.0567000195",
+              "5502112.0184769802",
+              "63091336.7649951306",
+              "8372614.9857181671"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "events_202012::events_20201201...",
+                  "events_202012::events_20201207...",
+                  "events_202012::events_20201208...",
+                  "events_202012::events_20201209...",
+                  "events_202012::events_20201211..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "events_202012::events_20201201::14209"
+              },
+              {
+                "id": "events_202012::events_20201207::46125"
+              },
+              {
+                "id": "events_202012::events_20201208::28531"
+              },
+              {
+                "id": "events_202012::events_20201209::1033"
+              },
+              {
+                "id": "events_202012::events_20201211::61055"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "app_info": null,
+      "device": {
+        "advertising_id": null,
+        "category": "desktop",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "Apple",
+        "mobile_marketing_name": "<Other>",
+        "mobile_model_name": "Safari",
+        "mobile_os_hardware_model": null,
+        "operating_system": "Macintosh",
+        "operating_system_version": "Macintosh Intel 10.15",
+        "time_zone_offset_seconds": null,
+        "vendor_id": null,
+        "web_info": {
+          "browser": "Chrome",
+          "browser_version": "87.0"
+        }
+      },
+      "ecommerce": {
+        "purchase_revenue": null,
+        "purchase_revenue_in_usd": null,
+        "refund_value": null,
+        "refund_value_in_usd": null,
+        "shipping_value": null,
+        "shipping_value_in_usd": null,
+        "tax_value": null,
+        "tax_value_in_usd": null,
+        "total_item_quantity": null,
+        "transaction_id": null,
+        "unique_items": null
+      },
+      "event_bundle_sequence_id": -7591512864,
+      "event_date": "20201201",
+      "event_dimensions": null,
+      "event_name": "page_view",
+      "event_params": [
+        {
+          "key": "campaign",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "(referral)"
+          }
+        },
+        {
+          "key": "page_referrer",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "https://shop.googlemerchandisestore.com/?"
+          }
+        },
+        {
+          "key": "source",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "shop.googlemerchandisestore.com"
+          }
+        },
+        {
+          "key": "ga_session_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 5381389438,
+            "string_value": null
+          }
+        },
+        {
+          "key": "clean_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "gtm.js"
+          }
+        },
+        {
+          "key": "engaged_session_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "debug_mode",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "all_data",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ga_session_number",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "session_engaged",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "1"
+          }
+        },
+        {
+          "key": "medium",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "referral"
+          }
+        },
+        {
+          "key": "page_title",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "New | Google Merchandise Store"
+          }
+        },
+        {
+          "key": "page_location",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "https://shop.googlemerchandisestore.com/Google+Redesign/New"
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_server_timestamp_offset": null,
+      "event_timestamp": 1606851389119104,
+      "event_value_in_usd": null,
+      "geo": {
+        "city": "(not set)",
+        "continent": "Americas",
+        "country": "United States",
+        "metro": "(not set)",
+        "region": "Florida",
+        "sub_continent": "Northern America"
+      },
+      "items": [],
+      "platform": "WEB",
+      "privacy_info": {
+        "ads_storage": null,
+        "analytics_storage": null,
+        "uses_transient_token": "No"
+      },
+      "stream_id": 2100450278,
+      "traffic_source": {
+        "medium": "cpc",
+        "name": "<Other>",
+        "source": "google"
+      },
+      "user_first_touch_timestamp": 1606851379696833,
+      "user_id": null,
+      "user_ltv": {
+        "currency": "USD",
+        "revenue": 0
+      },
+      "user_properties": [],
+      "user_pseudo_id": "1002254.4814908022"
+    },
+    {
+      "app_info": null,
+      "device": {
+        "advertising_id": null,
+        "category": "desktop",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "Apple",
+        "mobile_marketing_name": "<Other>",
+        "mobile_model_name": "Safari",
+        "mobile_os_hardware_model": null,
+        "operating_system": "Macintosh",
+        "operating_system_version": "Macintosh Intel 10.15",
+        "time_zone_offset_seconds": null,
+        "vendor_id": null,
+        "web_info": {
+          "browser": "Chrome",
+          "browser_version": "87.0"
+        }
+      },
+      "ecommerce": {
+        "purchase_revenue": null,
+        "purchase_revenue_in_usd": null,
+        "refund_value": null,
+        "refund_value_in_usd": null,
+        "shipping_value": null,
+        "shipping_value_in_usd": null,
+        "tax_value": null,
+        "tax_value_in_usd": null,
+        "total_item_quantity": null,
+        "transaction_id": null,
+        "unique_items": null
+      },
+      "event_bundle_sequence_id": 8286308183,
+      "event_date": "20201201",
+      "event_dimensions": null,
+      "event_name": "page_view",
+      "event_params": [
+        {
+          "key": "source",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "google"
+          }
+        },
+        {
+          "key": "entrances",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "campaign",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "<Other>"
+          }
+        },
+        {
+          "key": "medium",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "cpc"
+          }
+        },
+        {
+          "key": "page_title",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "Home"
+          }
+        },
+        {
+          "key": "ga_session_number",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ga_session_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 5381389438,
+            "string_value": null
+          }
+        },
+        {
+          "key": "all_data",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": null
+          }
+        },
+        {
+          "key": "session_engaged",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "0"
+          }
+        },
+        {
+          "key": "debug_mode",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "clean_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "gtm.js"
+          }
+        },
+        {
+          "key": "term",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "<obfuscated>"
+          }
+        },
+        {
+          "key": "page_location",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "https://shop.googlemerchandisestore.com/"
+          }
+        },
+        {
+          "key": "engaged_session_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "page_referrer",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": null
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_server_timestamp_offset": null,
+      "event_timestamp": 1606851379696833,
+      "event_value_in_usd": null,
+      "geo": {
+        "city": "(not set)",
+        "continent": "Americas",
+        "country": "United States",
+        "metro": "(not set)",
+        "region": "Florida",
+        "sub_continent": "Northern America"
+      },
+      "items": [],
+      "platform": "WEB",
+      "privacy_info": {
+        "ads_storage": null,
+        "analytics_storage": null,
+        "uses_transient_token": "No"
+      },
+      "stream_id": 2100450278,
+      "traffic_source": {
+        "medium": "cpc",
+        "name": "<Other>",
+        "source": "google"
+      },
+      "user_first_touch_timestamp": 1606851379696833,
+      "user_id": null,
+      "user_ltv": {
+        "currency": "USD",
+        "revenue": 0
+      },
+      "user_properties": [],
+      "user_pseudo_id": "1002254.4814908022"
+    },
+    {
+      "app_info": null,
+      "device": {
+        "advertising_id": null,
+        "category": "desktop",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "Apple",
+        "mobile_marketing_name": "<Other>",
+        "mobile_model_name": "Safari",
+        "mobile_os_hardware_model": null,
+        "operating_system": "Macintosh",
+        "operating_system_version": "Macintosh Intel 10.15",
+        "time_zone_offset_seconds": null,
+        "vendor_id": null,
+        "web_info": {
+          "browser": "Chrome",
+          "browser_version": "87.0"
+        }
+      },
+      "ecommerce": {
+        "purchase_revenue": null,
+        "purchase_revenue_in_usd": null,
+        "refund_value": null,
+        "refund_value_in_usd": null,
+        "shipping_value": null,
+        "shipping_value_in_usd": null,
+        "tax_value": null,
+        "tax_value_in_usd": null,
+        "total_item_quantity": null,
+        "transaction_id": null,
+        "unique_items": null
+      },
+      "event_bundle_sequence_id": -1865125252,
+      "event_date": "20201201",
+      "event_dimensions": null,
+      "event_name": "session_start",
+      "event_params": [
+        {
+          "key": "ga_session_number",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "page_location",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "https://shop.googlemerchandisestore.com/"
+          }
+        },
+        {
+          "key": "ga_session_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 9935606366,
+            "string_value": null
+          }
+        },
+        {
+          "key": "page_title",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "Home"
+          }
+        },
+        {
+          "key": "engaged_session_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_server_timestamp_offset": null,
+      "event_timestamp": 1606787923404782,
+      "event_value_in_usd": null,
+      "geo": {
+        "city": "Seoul",
+        "continent": "Asia",
+        "country": "South Korea",
+        "metro": "(not set)",
+        "region": "Seoul",
+        "sub_continent": "Eastern Asia"
+      },
+      "items": [],
+      "platform": "WEB",
+      "privacy_info": {
+        "ads_storage": null,
+        "analytics_storage": null,
+        "uses_transient_token": "No"
+      },
+      "stream_id": 2100450278,
+      "traffic_source": {
+        "medium": "organic",
+        "name": "(organic)",
+        "source": "google"
+      },
+      "user_first_touch_timestamp": 1606787923404782,
+      "user_id": null,
+      "user_ltv": {
+        "currency": "USD",
+        "revenue": 0
+      },
+      "user_properties": [],
+      "user_pseudo_id": "1015554.3085728071"
+    },
+    {
+      "app_info": null,
+      "device": {
+        "advertising_id": null,
+        "category": "desktop",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "Google",
+        "mobile_marketing_name": "<Other>",
+        "mobile_model_name": "Chrome",
+        "mobile_os_hardware_model": null,
+        "operating_system": "Windows",
+        "operating_system_version": "Windows 10",
+        "time_zone_offset_seconds": null,
+        "vendor_id": null,
+        "web_info": {
+          "browser": "Chrome",
+          "browser_version": "87.0"
+        }
+      },
+      "ecommerce": {
+        "purchase_revenue": null,
+        "purchase_revenue_in_usd": null,
+        "refund_value": null,
+        "refund_value_in_usd": null,
+        "shipping_value": null,
+        "shipping_value_in_usd": null,
+        "tax_value": null,
+        "tax_value_in_usd": null,
+        "total_item_quantity": null,
+        "transaction_id": null,
+        "unique_items": null
+      },
+      "event_bundle_sequence_id": -4722356545,
+      "event_date": "20201201",
+      "event_dimensions": null,
+      "event_name": "user_engagement",
+      "event_params": [
+        {
+          "key": "page_location",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "https://shop.googlemerchandisestore.com/revieworder.html"
+          }
+        },
+        {
+          "key": "engagement_time_msec",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 4731,
+            "string_value": null
+          }
+        },
+        {
+          "key": "engaged_session_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "page_title",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "Checkout Review"
+          }
+        },
+        {
+          "key": "debug_mode",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "all_data",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ga_session_number",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "clean_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "gtm.js"
+          }
+        },
+        {
+          "key": "session_engaged",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "1"
+          }
+        },
+        {
+          "key": "ga_session_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 8144402352,
+            "string_value": null
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_server_timestamp_offset": null,
+      "event_timestamp": 1606815536194634,
+      "event_value_in_usd": null,
+      "geo": {
+        "city": "San Francisco",
+        "continent": "Americas",
+        "country": "United States",
+        "metro": "(not set)",
+        "region": "California",
+        "sub_continent": "Northern America"
+      },
+      "items": [],
+      "platform": "WEB",
+      "privacy_info": {
+        "ads_storage": null,
+        "analytics_storage": null,
+        "uses_transient_token": "No"
+      },
+      "stream_id": 2100450278,
+      "traffic_source": {
+        "medium": "<Other>",
+        "name": "<Other>",
+        "source": "<Other>"
+      },
+      "user_first_touch_timestamp": 1606814706389678,
+      "user_id": null,
+      "user_ltv": {
+        "currency": "USD",
+        "revenue": 0
+      },
+      "user_properties": [],
+      "user_pseudo_id": "1026932.0858862293"
+    },
+    {
+      "app_info": null,
+      "device": {
+        "advertising_id": null,
+        "category": "desktop",
+        "is_limited_ad_tracking": "No",
+        "language": "en-us",
+        "mobile_brand_name": "Google",
+        "mobile_marketing_name": "<Other>",
+        "mobile_model_name": "Chrome",
+        "mobile_os_hardware_model": null,
+        "operating_system": "Web",
+        "operating_system_version": "<Other>",
+        "time_zone_offset_seconds": null,
+        "vendor_id": null,
+        "web_info": {
+          "browser": "Chrome",
+          "browser_version": "86.0"
+        }
+      },
+      "ecommerce": {
+        "purchase_revenue": null,
+        "purchase_revenue_in_usd": null,
+        "refund_value": null,
+        "refund_value_in_usd": null,
+        "shipping_value": null,
+        "shipping_value_in_usd": null,
+        "tax_value": null,
+        "tax_value_in_usd": null,
+        "total_item_quantity": null,
+        "transaction_id": null,
+        "unique_items": null
+      },
+      "event_bundle_sequence_id": 971340547,
+      "event_date": "20201201",
+      "event_dimensions": null,
+      "event_name": "scroll",
+      "event_params": [
+        {
+          "key": "ga_session_id",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 2170301538,
+            "string_value": null
+          }
+        },
+        {
+          "key": "all_data",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": null
+          }
+        },
+        {
+          "key": "clean_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "gtm.js"
+          }
+        },
+        {
+          "key": "session_engaged",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "0"
+          }
+        },
+        {
+          "key": "engaged_session_event",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "page_title",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "Google Online Store"
+          }
+        },
+        {
+          "key": "page_location",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "https://googlemerchandisestore.com/"
+          }
+        },
+        {
+          "key": "medium",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "organic"
+          }
+        },
+        {
+          "key": "engagement_time_msec",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 466,
+            "string_value": null
+          }
+        },
+        {
+          "key": "ga_session_number",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "term",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "<obfuscated>"
+          }
+        },
+        {
+          "key": "debug_mode",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 1,
+            "string_value": null
+          }
+        },
+        {
+          "key": "source",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "google"
+          }
+        },
+        {
+          "key": "page_referrer",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": null
+          }
+        },
+        {
+          "key": "percent_scrolled",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": 90,
+            "string_value": null
+          }
+        },
+        {
+          "key": "campaign",
+          "value": {
+            "double_value": null,
+            "float_value": null,
+            "int_value": null,
+            "string_value": "(organic)"
+          }
+        }
+      ],
+      "event_previous_timestamp": null,
+      "event_server_timestamp_offset": null,
+      "event_timestamp": 1606808101706980,
+      "event_value_in_usd": null,
+      "geo": {
+        "city": "(not set)",
+        "continent": "Americas",
+        "country": "Canada",
+        "metro": "(not set)",
+        "region": "Ontario",
+        "sub_continent": "Northern America"
+      },
+      "items": [],
+      "platform": "WEB",
+      "privacy_info": {
+        "ads_storage": null,
+        "analytics_storage": null,
+        "uses_transient_token": "No"
+      },
+      "stream_id": 2100450278,
+      "traffic_source": {
+        "medium": "organic",
+        "name": "(organic)",
+        "source": "google"
+      },
+      "user_first_touch_timestamp": 1606808096238690,
+      "user_id": null,
+      "user_ltv": {
+        "currency": "USD",
+        "revenue": 0
+      },
+      "user_properties": [],
+      "user_pseudo_id": "1384325.6848760393"
+    }
+  ]
+}

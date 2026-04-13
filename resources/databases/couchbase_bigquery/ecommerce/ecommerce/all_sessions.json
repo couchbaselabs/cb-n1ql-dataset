@@ -1,0 +1,609 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`currencyCode` = \"USD\", `eCommerceAction_step` = 1, `eCommerceAction_type` = \"0\", `pagePathLevel1` = \"/storeitem.html\", `productPrice` = 0, `productVariant` = \"(not set)\", `type` = \"PAGE\", `v2ProductCategory` = \"(not set)\"",
+        "properties": {
+          "channelGrouping": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Organic Search",
+              "Referral"
+            ],
+            "type": "string"
+          },
+          "city": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(not set)",
+              "Ann Arbor",
+              "Atlanta",
+              "New York",
+              "not available in demo dataset"
+            ],
+            "type": "string"
+          },
+          "country": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Germany",
+              "Peru",
+              "Thailand",
+              "United States"
+            ],
+            "type": "string"
+          },
+          "currencyCode": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "USD"
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20170110",
+              "20170201",
+              "20170202",
+              "20170418",
+              "20170517"
+            ],
+            "type": "string"
+          },
+          "eCommerceAction_option": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "eCommerceAction_step": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "eCommerceAction_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0"
+            ],
+            "type": "string"
+          },
+          "fullVisitorId": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0319620292000180209",
+              "0726998433628146455",
+              "1477606480597254796",
+              "3757025105964843707",
+              "5924991425667195701"
+            ],
+            "type": "string"
+          },
+          "itemQuantity": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "itemRevenue": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "pagePathLevel1": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "/storeitem.html"
+            ],
+            "type": "string"
+          },
+          "pageTitle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "pageviews": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10,
+              34,
+              48,
+              62,
+              65
+            ],
+            "type": "number"
+          },
+          "productPrice": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "productQuantity": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "productRefundAmount": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "productRevenue": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "productSKU": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "9180781",
+              "9180824",
+              "9180833",
+              "9180838"
+            ],
+            "type": "string"
+          },
+          "productVariant": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(not set)"
+            ],
+            "type": "string"
+          },
+          "searchKeyword": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "sessionQualityDim": {
+            "#docs": [
+              8,
+              2
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1,
+                7
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              48982,
+              182354,
+              373124,
+              1667685,
+              2280462
+            ],
+            "type": "number"
+          },
+          "timeOnSite": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                203,
+                1542,
+                2135,
+                2532,
+                5358
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "totalTransactionRevenue": {
+            "#docs": [
+              4,
+              6
+            ],
+            "%docs": [
+              40,
+              60
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                20980000,
+                106080000,
+                155350000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "transactionId": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "transactionRevenue": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "transactions": {
+            "#docs": [
+              4,
+              6
+            ],
+            "%docs": [
+              40,
+              60
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PAGE"
+            ],
+            "type": "string"
+          },
+          "v2ProductCategory": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(not set)"
+            ],
+            "type": "string"
+          },
+          "v2ProductName": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Foam Can and Bottle Cooler",
+              "Metal Texture Roller Pen",
+              "Rubber Grip Ballpoint Pen 4 Pa...",
+              "Suitcase Organizer Cubes"
+            ],
+            "type": "string"
+          },
+          "visitId": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1484075014,
+              1485982066,
+              1486004391,
+              1492555713,
+              1495045211
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "all_sessions::0",
+                  "all_sessions::3",
+                  "all_sessions::4",
+                  "all_sessions::5",
+                  "all_sessions::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "all_sessions::0"
+              },
+              {
+                "id": "all_sessions::3"
+              },
+              {
+                "id": "all_sessions::4"
+              },
+              {
+                "id": "all_sessions::5"
+              },
+              {
+                "id": "all_sessions::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "channelGrouping": "Organic Search",
+      "city": "not available in demo dataset",
+      "country": "United States",
+      "currencyCode": "USD",
+      "date": "20170108",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "5504767650716007519",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 9,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180781",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 325644,
+      "timeOnSite": 326,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Suitcase Organizer Cubes",
+      "visitId": 1483893305
+    },
+    {
+      "channelGrouping": "Organic Search",
+      "city": "not available in demo dataset",
+      "country": "Germany",
+      "currencyCode": "USD",
+      "date": "20170201",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "1477606480597254796",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 34,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180833",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 182354,
+      "timeOnSite": 1542,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Rubber Grip Ballpoint Pen 4 Pack",
+      "visitId": 1485982066
+    },
+    {
+      "channelGrouping": "Organic Search",
+      "city": "Atlanta",
+      "country": "United States",
+      "currencyCode": "USD",
+      "date": "20170517",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "5924991425667195701",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 10,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180824",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 48982,
+      "timeOnSite": 203,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Foam Can and Bottle Cooler",
+      "visitId": 1495045211
+    },
+    {
+      "channelGrouping": "Organic Search",
+      "city": "not available in demo dataset",
+      "country": "Thailand",
+      "currencyCode": "USD",
+      "date": "20170202",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "9667370902477939448",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 14,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180833",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 307809,
+      "timeOnSite": 472,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Rubber Grip Ballpoint Pen 4 Pack",
+      "visitId": 1486027058
+    },
+    {
+      "channelGrouping": "Organic Search",
+      "city": "not available in demo dataset",
+      "country": "United States",
+      "currencyCode": "USD",
+      "date": "20170201",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "0319620292000180209",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 48,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180833",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 373124,
+      "timeOnSite": 5358,
+      "totalTransactionRevenue": 20980000,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": 1,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Rubber Grip Ballpoint Pen 4 Pack",
+      "visitId": 1486004391
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ALB",
+              "KEN",
+              "TKM",
+              "UGA",
+              "XKX"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Albania",
+              "Kenya",
+              "Kosovo",
+              "Turkmenistan",
+              "Uganda"
+            ],
+            "type": "string"
+          },
+          "indicator_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BN.CAB.XOKA.CD",
+              "DT.COM.OFFT.CD",
+              "DT.NFL.PROP.OPS.CD",
+              "DT.TDS.PBND.CD",
+              "DT.TDS.PROP.PRVG.CD"
+            ],
+            "type": "string"
+          },
+          "indicator_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Commitments, official creditor...",
+              "Current account balance (curre...",
+              "OPS, other private creditors (...",
+              "PPG, bonds (TDS, current US$)",
+              "PRVG, other private creditors ..."
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": [
+              952,
+              48
+            ],
+            "%docs": [
+              95.2,
+              4.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                68765148.8,
+                491807591,
+                587115000,
+                2579385788.9
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "international_debt::1268415",
+                  "international_debt::13623",
+                  "international_debt::1525678",
+                  "international_debt::239497",
+                  "international_debt::2422120"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "international_debt::1268415"
+              },
+              {
+                "id": "international_debt::13623"
+              },
+              {
+                "id": "international_debt::1525678"
+              },
+              {
+                "id": "international_debt::239497"
+              },
+              {
+                "id": "international_debt::2422120"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "ZWE",
+      "country_name": "Zimbabwe",
+      "indicator_code": "DT.INR.DPPG",
+      "indicator_name": "Average interest on new external debt commitments (%)",
+      "value": null,
+      "year": null
+    },
+    {
+      "country_code": "NIC",
+      "country_name": "Nicaragua",
+      "indicator_code": "DT.INR.DPPG",
+      "indicator_name": "Average interest on new external debt commitments (%)",
+      "value": null,
+      "year": null
+    },
+    {
+      "country_code": "MEX",
+      "country_name": "Mexico",
+      "indicator_code": "DT.DOD.ALLC.CD",
+      "indicator_name": "External debt stocks, concessional (DOD, current US$)",
+      "value": null,
+      "year": null
+    },
+    {
+      "country_code": "EGY",
+      "country_name": "Egypt, Arab Rep.",
+      "indicator_code": "DT.DOD.ALLC.CD",
+      "indicator_name": "External debt stocks, concessional (DOD, current US$)",
+      "value": null,
+      "year": null
+    },
+    {
+      "country_code": "LMY",
+      "country_name": "Low & middle income",
+      "indicator_code": "DT.DOD.ALLC.CD",
+      "indicator_name": "External debt stocks, concessional (DOD, current US$)",
+      "value": null,
+      "year": null
+    }
+  ]
+}

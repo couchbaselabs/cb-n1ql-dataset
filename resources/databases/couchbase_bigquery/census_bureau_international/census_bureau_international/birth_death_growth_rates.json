@@ -1,0 +1,208 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CB",
+              "CF",
+              "CT",
+              "NP",
+              "SC"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Cambodia",
+              "Central African Republic",
+              "Congo (Brazzaville)",
+              "Nepal",
+              "Saint Kitts and Nevis"
+            ],
+            "type": "string"
+          },
+          "crude_birth_rate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9.99,
+              25.38,
+              27.34,
+              37.67,
+              48.93
+            ],
+            "type": "number"
+          },
+          "crude_death_rate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6.41,
+              7.47,
+              9.33,
+              16.52,
+              16.77
+            ],
+            "type": "number"
+          },
+          "growth_rate": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.177,
+              0.892,
+              1.897,
+              2.115,
+              3.64
+            ],
+            "type": "number"
+          },
+          "net_migration": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -17.85,
+              -10.94,
+              0,
+              1.1,
+              4.24
+            ],
+            "type": "number"
+          },
+          "rate_natural_increase": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.066,
+              1.897,
+              1.987,
+              2.115,
+              3.216
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1988,
+              2005,
+              2007,
+              2034,
+              2049
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "birth_death_growth_rates::1186...",
+                  "birth_death_growth_rates::1278...",
+                  "birth_death_growth_rates::1377...",
+                  "birth_death_growth_rates::1494...",
+                  "birth_death_growth_rates::1497..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "birth_death_growth_rates::11864"
+              },
+              {
+                "id": "birth_death_growth_rates::12781"
+              },
+              {
+                "id": "birth_death_growth_rates::13776"
+              },
+              {
+                "id": "birth_death_growth_rates::14941"
+              },
+              {
+                "id": "birth_death_growth_rates::14975"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "UV",
+      "country_name": "Burkina Faso",
+      "crude_birth_rate": 47.77,
+      "crude_death_rate": 15.13,
+      "growth_rate": 4.612,
+      "net_migration": 13.48,
+      "rate_natural_increase": 3.264,
+      "year": 2001
+    },
+    {
+      "country_code": "UV",
+      "country_name": "Burkina Faso",
+      "crude_birth_rate": 42.74,
+      "crude_death_rate": 10.67,
+      "growth_rate": 2.939,
+      "net_migration": -2.68,
+      "rate_natural_increase": 3.207,
+      "year": 2011
+    },
+    {
+      "country_code": "UV",
+      "country_name": "Burkina Faso",
+      "crude_birth_rate": 20.92,
+      "crude_death_rate": 5.45,
+      "growth_rate": 1.509,
+      "net_migration": -0.39,
+      "rate_natural_increase": 1.547,
+      "year": 2045
+    },
+    {
+      "country_code": "KN",
+      "country_name": "Korea, North",
+      "crude_birth_rate": 11.37,
+      "crude_death_rate": 10.18,
+      "growth_rate": 0.115,
+      "net_migration": -0.04,
+      "rate_natural_increase": 0.119,
+      "year": 2036
+    },
+    {
+      "country_code": "KS",
+      "country_name": "Korea, South",
+      "crude_birth_rate": 11.81,
+      "crude_death_rate": 5.14,
+      "growth_rate": 0.598,
+      "net_migration": -0.68,
+      "rate_natural_increase": 0.667,
+      "year": 2001
+    }
+  ]
+}

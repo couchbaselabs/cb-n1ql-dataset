@@ -1,0 +1,206 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`date` = \"2008-07-20\", `descript` = \"DWI\"",
+        "properties": {
+          "address": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "100 BLOCK E BEN WHITE BLVD WB",
+              "12100 BLOCK N IH 35 NB",
+              "12400 BLOCK LAMPLIGHT VILLAGE ...",
+              "1500 BLOCK BURTON DR",
+              "9400 BLOCK N IH 35 SVRD NB"
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2008-07-20"
+            ],
+            "type": "string"
+          },
+          "descript": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DWI"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "location": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "longitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "02:28:00",
+              "02:58:00",
+              "04:47:00",
+              "18:50:00",
+              "21:28:00"
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2008-07-20T08:28:00+00:00",
+              "2008-07-20T08:58:00+00:00",
+              "2008-07-20T10:47:00+00:00",
+              "2008-07-21T00:50:00+00:00",
+              "2008-07-21T03:28:00+00:00"
+            ],
+            "type": "string"
+          },
+          "unique_key": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20082020246,
+              20082020342,
+              20082020396,
+              20082021651,
+              20082021975
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "incidents_2008::1",
+                  "incidents_2008::2",
+                  "incidents_2008::6",
+                  "incidents_2008::8",
+                  "incidents_2008::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "incidents_2008::1"
+              },
+              {
+                "id": "incidents_2008::2"
+              },
+              {
+                "id": "incidents_2008::6"
+              },
+              {
+                "id": "incidents_2008::8"
+              },
+              {
+                "id": "incidents_2008::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "9400 BLOCK N IH 35 SVRD NB",
+      "date": "2008-07-20",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "04:47:00",
+      "timestamp": "2008-07-20T10:47:00+00:00",
+      "unique_key": 20082020246
+    },
+    {
+      "address": "5100 BLOCK S 1ST ST",
+      "date": "2008-07-20",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "00:28:00",
+      "timestamp": "2008-07-20T06:28:00+00:00",
+      "unique_key": 20082020068
+    },
+    {
+      "address": "6100 BLOCK N LAMAR BLVD",
+      "date": "2008-07-20",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "04:19:00",
+      "timestamp": "2008-07-20T10:19:00+00:00",
+      "unique_key": 20082020511
+    },
+    {
+      "address": "12400 BLOCK LAMPLIGHT VILLAGE AVE",
+      "date": "2008-07-20",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "21:28:00",
+      "timestamp": "2008-07-21T03:28:00+00:00",
+      "unique_key": 20082021975
+    },
+    {
+      "address": "2500 BLOCK DOVE SPRINGS DR",
+      "date": "2008-07-20",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "04:50:00",
+      "timestamp": "2008-07-20T10:50:00+00:00",
+      "unique_key": 20082020550
+    }
+  ]
+}

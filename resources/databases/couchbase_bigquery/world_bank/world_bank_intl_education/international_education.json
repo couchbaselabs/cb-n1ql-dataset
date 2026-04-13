@@ -1,0 +1,164 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`country_code` = \"ABW\", `country_name` = \"Aruba\"",
+        "properties": {
+          "country_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ABW"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Aruba"
+            ],
+            "type": "string"
+          },
+          "indicator_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "UIS.E.2",
+              "UIS.E.3",
+              "UIS.E.4",
+              "UIS.E.6",
+              "UIS.R.1"
+            ],
+            "type": "string"
+          },
+          "indicator_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Enrolment in lower secondary e...",
+              "Enrolment in post-secondary no...",
+              "Enrolment in tertiary educatio...",
+              "Enrolment in upper secondary e...",
+              "Repeaters in primary education..."
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              825,
+              872,
+              3110,
+              3438,
+              3525
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2001,
+              2002,
+              2005,
+              2007,
+              2013
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "international_education::2",
+                  "international_education::3",
+                  "international_education::6",
+                  "international_education::8",
+                  "international_education::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "international_education::2"
+              },
+              {
+                "id": "international_education::3"
+              },
+              {
+                "id": "international_education::6"
+              },
+              {
+                "id": "international_education::8"
+              },
+              {
+                "id": "international_education::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "ABW",
+      "country_name": "Aruba",
+      "indicator_code": "UIS.E.2",
+      "indicator_name": "Enrolment in lower secondary education, both sexes (number)",
+      "value": 3110,
+      "year": 2001
+    },
+    {
+      "country_code": "ABW",
+      "country_name": "Aruba",
+      "indicator_code": "UIS.E.2",
+      "indicator_name": "Enrolment in lower secondary education, both sexes (number)",
+      "value": 3438,
+      "year": 2005
+    },
+    {
+      "country_code": "ABW",
+      "country_name": "Aruba",
+      "indicator_code": "UIS.E.3",
+      "indicator_name": "Enrolment in upper secondary education, both sexes (number)",
+      "value": 3318,
+      "year": 2001
+    },
+    {
+      "country_code": "ABW",
+      "country_name": "Aruba",
+      "indicator_code": "UIS.E.2",
+      "indicator_name": "Enrolment in lower secondary education, both sexes (number)",
+      "value": 3059,
+      "year": 2000
+    },
+    {
+      "country_code": "ABW",
+      "country_name": "Aruba",
+      "indicator_code": "UIS.E.2",
+      "indicator_name": "Enrolment in lower secondary education, both sexes (number)",
+      "value": 3210,
+      "year": 2008
+    }
+  ]
+}

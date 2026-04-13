@@ -1,0 +1,144 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`contributing_circumstances_motor_vehicle` = 0, `contributing_circumstances_motor_vehicle_name` = \"None\"",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              330102,
+              440044,
+              560014,
+              560028,
+              560070
+            ],
+            "type": "number"
+          },
+          "contributing_circumstances_motor_vehicle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "contributing_circumstances_motor_vehicle_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "None"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              33,
+              44,
+              56
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "factor_2016::1",
+                  "factor_2016::5",
+                  "factor_2016::6",
+                  "factor_2016::7",
+                  "factor_2016::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "factor_2016::1"
+              },
+              {
+                "id": "factor_2016::5"
+              },
+              {
+                "id": "factor_2016::6"
+              },
+              {
+                "id": "factor_2016::7"
+              },
+              {
+                "id": "factor_2016::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 560014,
+      "contributing_circumstances_motor_vehicle": 0,
+      "contributing_circumstances_motor_vehicle_name": "None",
+      "state_number": 56,
+      "vehicle_number": 9
+    },
+    {
+      "consecutive_number": 560028,
+      "contributing_circumstances_motor_vehicle": 0,
+      "contributing_circumstances_motor_vehicle_name": "None",
+      "state_number": 56,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 330102,
+      "contributing_circumstances_motor_vehicle": 0,
+      "contributing_circumstances_motor_vehicle_name": "None",
+      "state_number": 33,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 440044,
+      "contributing_circumstances_motor_vehicle": 0,
+      "contributing_circumstances_motor_vehicle_name": "None",
+      "state_number": 44,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 560028,
+      "contributing_circumstances_motor_vehicle": 0,
+      "contributing_circumstances_motor_vehicle_name": "None",
+      "state_number": 56,
+      "vehicle_number": 6
+    }
+  ]
+}

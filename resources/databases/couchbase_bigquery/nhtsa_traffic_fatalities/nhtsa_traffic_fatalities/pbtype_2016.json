@@ -1,0 +1,504 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`crash_group_bicycle` = 290, `crash_group_bicycle_name` = \"Parallel Paths \u2013 Other Circum...\", `crash_group_pedestrian` = 0, `crash_group_pedestrian_name` = \"Not a Pedestrian\", `crash_location_pedestrian` = \"Not a Pedestrian\", `crash_type_bicycle` = 280, `crash_type_bicycle_name` = \"Parallel Paths \u2013 Other/Unknow...\", `crash_type_pedestrian` = 0, `crash_type_pedestrian_name` = \"Not a Pedestrian\", `intersection_leg` = \"Not a Pedestrian\", `motorist_initial_direction_of_travel` = \"Not a Pedestrian\", `motorist_maneuver` = \"Not a Pedestrian\"...",
+        "properties": {
+          "age": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              24,
+              44,
+              53,
+              56,
+              62
+            ],
+            "type": "number"
+          },
+          "bicyclist_initial_direction_of_travel": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Facing Traffic",
+              "Not Applicable",
+              "Unknown",
+              "With Traffic"
+            ],
+            "type": "string"
+          },
+          "bicyclist_position": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bicycle Lane/Paved Shoulder/Pa...",
+              "Sidewalk/Crosswalk/Driveway Ac...",
+              "Travel Lane"
+            ],
+            "type": "string"
+          },
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              60274,
+              480229,
+              481298,
+              482456,
+              530223
+            ],
+            "type": "number"
+          },
+          "crash_group_bicycle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              290
+            ],
+            "type": "number"
+          },
+          "crash_group_bicycle_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Parallel Paths \u2013 Other Circu..."
+            ],
+            "type": "string"
+          },
+          "crash_group_pedestrian": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "crash_group_pedestrian_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "crash_location_bicycle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "At Intersection",
+              "Intersection-Related",
+              "Not At Intersection"
+            ],
+            "type": "string"
+          },
+          "crash_location_pedestrian": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "crash_type_bicycle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              280
+            ],
+            "type": "number"
+          },
+          "crash_type_bicycle_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Parallel Paths \u2013 Other/Unkno..."
+            ],
+            "type": "string"
+          },
+          "crash_type_pedestrian": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "crash_type_pedestrian_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "intersection_leg": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "marked_crosswalk_present": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "None Noted",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "motorist_initial_direction_of_travel": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "motorist_maneuver": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "pedestrian_initial_direction_of_travel": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "pedestrian_position": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "pedestrian_scenario": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "7"
+            ],
+            "type": "string"
+          },
+          "pedestrian_scenario_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Pedestrian"
+            ],
+            "type": "string"
+          },
+          "person_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "person_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6
+            ],
+            "type": "number"
+          },
+          "person_type_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bicyclist"
+            ],
+            "type": "string"
+          },
+          "school_zone": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "None Noted"
+            ],
+            "type": "string"
+          },
+          "sex": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Male"
+            ],
+            "type": "string"
+          },
+          "sidewalk_present": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              36,
+              42,
+              48,
+              53
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pbtype_2016::4",
+                  "pbtype_2016::5",
+                  "pbtype_2016::7",
+                  "pbtype_2016::8",
+                  "pbtype_2016::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pbtype_2016::4"
+              },
+              {
+                "id": "pbtype_2016::5"
+              },
+              {
+                "id": "pbtype_2016::7"
+              },
+              {
+                "id": "pbtype_2016::8"
+              },
+              {
+                "id": "pbtype_2016::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "age": 56,
+      "bicyclist_initial_direction_of_travel": "With Traffic",
+      "bicyclist_position": "Travel Lane",
+      "consecutive_number": 481298,
+      "crash_group_bicycle": 290,
+      "crash_group_bicycle_name": "Parallel Paths \u2013 Other Circumstances",
+      "crash_group_pedestrian": 0,
+      "crash_group_pedestrian_name": "Not a Pedestrian",
+      "crash_location_bicycle": "Not At Intersection",
+      "crash_location_pedestrian": "Not a Pedestrian",
+      "crash_type_bicycle": 280,
+      "crash_type_bicycle_name": "Parallel Paths \u2013 Other/Unknown",
+      "crash_type_pedestrian": 0,
+      "crash_type_pedestrian_name": "Not a Pedestrian",
+      "intersection_leg": "Not a Pedestrian",
+      "marked_crosswalk_present": "None Noted",
+      "motorist_initial_direction_of_travel": "Not a Pedestrian",
+      "motorist_maneuver": "Not a Pedestrian",
+      "pedestrian_initial_direction_of_travel": "Not a Pedestrian",
+      "pedestrian_position": "Not a Pedestrian",
+      "pedestrian_scenario": "7",
+      "pedestrian_scenario_name": "Not a Pedestrian",
+      "person_number": 1,
+      "person_type": 6,
+      "person_type_name": "Bicyclist",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "Yes",
+      "state_number": 48,
+      "vehicle_number": 0
+    },
+    {
+      "age": 44,
+      "bicyclist_initial_direction_of_travel": "With Traffic",
+      "bicyclist_position": "Travel Lane",
+      "consecutive_number": 60274,
+      "crash_group_bicycle": 290,
+      "crash_group_bicycle_name": "Parallel Paths \u2013 Other Circumstances",
+      "crash_group_pedestrian": 0,
+      "crash_group_pedestrian_name": "Not a Pedestrian",
+      "crash_location_bicycle": "Not At Intersection",
+      "crash_location_pedestrian": "Not a Pedestrian",
+      "crash_type_bicycle": 280,
+      "crash_type_bicycle_name": "Parallel Paths \u2013 Other/Unknown",
+      "crash_type_pedestrian": 0,
+      "crash_type_pedestrian_name": "Not a Pedestrian",
+      "intersection_leg": "Not a Pedestrian",
+      "marked_crosswalk_present": "None Noted",
+      "motorist_initial_direction_of_travel": "Not a Pedestrian",
+      "motorist_maneuver": "Not a Pedestrian",
+      "pedestrian_initial_direction_of_travel": "Not a Pedestrian",
+      "pedestrian_position": "Not a Pedestrian",
+      "pedestrian_scenario": "7",
+      "pedestrian_scenario_name": "Not a Pedestrian",
+      "person_number": 1,
+      "person_type": 6,
+      "person_type_name": "Bicyclist",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "Yes",
+      "state_number": 6,
+      "vehicle_number": 0
+    },
+    {
+      "age": 51,
+      "bicyclist_initial_direction_of_travel": "Unknown",
+      "bicyclist_position": "Bicycle Lane/Paved Shoulder/Parking Lane",
+      "consecutive_number": 360540,
+      "crash_group_bicycle": 290,
+      "crash_group_bicycle_name": "Parallel Paths \u2013 Other Circumstances",
+      "crash_group_pedestrian": 0,
+      "crash_group_pedestrian_name": "Not a Pedestrian",
+      "crash_location_bicycle": "Not At Intersection",
+      "crash_location_pedestrian": "Not a Pedestrian",
+      "crash_type_bicycle": 280,
+      "crash_type_bicycle_name": "Parallel Paths \u2013 Other/Unknown",
+      "crash_type_pedestrian": 0,
+      "crash_type_pedestrian_name": "Not a Pedestrian",
+      "intersection_leg": "Not a Pedestrian",
+      "marked_crosswalk_present": "None Noted",
+      "motorist_initial_direction_of_travel": "Not a Pedestrian",
+      "motorist_maneuver": "Not a Pedestrian",
+      "pedestrian_initial_direction_of_travel": "Not a Pedestrian",
+      "pedestrian_position": "Not a Pedestrian",
+      "pedestrian_scenario": "7",
+      "pedestrian_scenario_name": "Not a Pedestrian",
+      "person_number": 1,
+      "person_type": 6,
+      "person_type_name": "Bicyclist",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "Yes",
+      "state_number": 36,
+      "vehicle_number": 0
+    },
+    {
+      "age": 62,
+      "bicyclist_initial_direction_of_travel": "Not Applicable",
+      "bicyclist_position": "Travel Lane",
+      "consecutive_number": 62975,
+      "crash_group_bicycle": 290,
+      "crash_group_bicycle_name": "Parallel Paths \u2013 Other Circumstances",
+      "crash_group_pedestrian": 0,
+      "crash_group_pedestrian_name": "Not a Pedestrian",
+      "crash_location_bicycle": "At Intersection",
+      "crash_location_pedestrian": "Not a Pedestrian",
+      "crash_type_bicycle": 280,
+      "crash_type_bicycle_name": "Parallel Paths \u2013 Other/Unknown",
+      "crash_type_pedestrian": 0,
+      "crash_type_pedestrian_name": "Not a Pedestrian",
+      "intersection_leg": "Not a Pedestrian",
+      "marked_crosswalk_present": "Yes",
+      "motorist_initial_direction_of_travel": "Not a Pedestrian",
+      "motorist_maneuver": "Not a Pedestrian",
+      "pedestrian_initial_direction_of_travel": "Not a Pedestrian",
+      "pedestrian_position": "Not a Pedestrian",
+      "pedestrian_scenario": "7",
+      "pedestrian_scenario_name": "Not a Pedestrian",
+      "person_number": 1,
+      "person_type": 6,
+      "person_type_name": "Bicyclist",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "Yes",
+      "state_number": 6,
+      "vehicle_number": 0
+    },
+    {
+      "age": 64,
+      "bicyclist_initial_direction_of_travel": "With Traffic",
+      "bicyclist_position": "Travel Lane",
+      "consecutive_number": 480070,
+      "crash_group_bicycle": 290,
+      "crash_group_bicycle_name": "Parallel Paths \u2013 Other Circumstances",
+      "crash_group_pedestrian": 0,
+      "crash_group_pedestrian_name": "Not a Pedestrian",
+      "crash_location_bicycle": "Intersection-Related",
+      "crash_location_pedestrian": "Not a Pedestrian",
+      "crash_type_bicycle": 280,
+      "crash_type_bicycle_name": "Parallel Paths \u2013 Other/Unknown",
+      "crash_type_pedestrian": 0,
+      "crash_type_pedestrian_name": "Not a Pedestrian",
+      "intersection_leg": "Not a Pedestrian",
+      "marked_crosswalk_present": "Yes",
+      "motorist_initial_direction_of_travel": "Not a Pedestrian",
+      "motorist_maneuver": "Not a Pedestrian",
+      "pedestrian_initial_direction_of_travel": "Not a Pedestrian",
+      "pedestrian_position": "Not a Pedestrian",
+      "pedestrian_scenario": "7",
+      "pedestrian_scenario_name": "Not a Pedestrian",
+      "person_number": 1,
+      "person_type": 6,
+      "person_type_name": "Bicyclist",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "Yes",
+      "state_number": 48,
+      "vehicle_number": 0
+    }
+  ]
+}

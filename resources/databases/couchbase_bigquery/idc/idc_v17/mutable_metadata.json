@@ -1,0 +1,235 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`access` = \"Public\", `license_long_name` = \"Creative Commons Attribution 4....\", `license_short_name` = \"CC BY 4.0\", `license_url` = \"https://creativecommons.org/lic...\", `source_doi` = \"10.7937/2BAS-HR33\", `source_url` = \"https://doi.org/10.7937/2BAS-HR...\"",
+        "properties": {
+          "access": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Public"
+            ],
+            "type": "string"
+          },
+          "aws_url": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "s3://idc-open-data/1361fd90-61...",
+              "s3://idc-open-data/1830693b-5a...",
+              "s3://idc-open-data/1e14226a-64...",
+              "s3://idc-open-data/1e14226a-64...",
+              "s3://idc-open-data/1e3cc7f6-b2..."
+            ],
+            "type": "string"
+          },
+          "crdc_instance_uuid": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "22eea09d-f28e-4580-9cfb-146863...",
+              "35d6efef-c859-43f4-b9f9-3f77eb...",
+              "9cd01460-a765-4eb2-ae7b-c36cc5...",
+              "b985c5ea-d623-4415-a1a5-f89978...",
+              "d95aefde-b4fd-48c8-affb-c49807..."
+            ],
+            "type": "string"
+          },
+          "crdc_series_uuid": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1361fd90-6104-4252-a0fd-cea2a5...",
+              "1830693b-5af7-47bd-bfb1-fd590a...",
+              "1e14226a-6481-464a-982c-4271d1...",
+              "1e3cc7f6-b203-4c66-8520-4c7ec9..."
+            ],
+            "type": "string"
+          },
+          "crdc_study_uuid": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "a51ec67b-8316-46d9-9105-f2bc3b...",
+              "a523a01f-715b-456e-bf9c-206e38...",
+              "a535108f-718a-4869-b352-255742..."
+            ],
+            "type": "string"
+          },
+          "gcs_url": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "gs://public-datasets-idc/1361f...",
+              "gs://public-datasets-idc/18306...",
+              "gs://public-datasets-idc/1e142...",
+              "gs://public-datasets-idc/1e142...",
+              "gs://public-datasets-idc/1e3cc..."
+            ],
+            "type": "string"
+          },
+          "license_long_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Creative Commons Attribution 4..."
+            ],
+            "type": "string"
+          },
+          "license_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CC BY 4.0"
+            ],
+            "type": "string"
+          },
+          "license_url": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "https://creativecommons.org/li..."
+            ],
+            "type": "string"
+          },
+          "source_doi": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10.7937/2BAS-HR33"
+            ],
+            "type": "string"
+          },
+          "source_url": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "https://doi.org/10.7937/2BAS-H..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "mutable_metadata::0",
+                  "mutable_metadata::1",
+                  "mutable_metadata::2",
+                  "mutable_metadata::3",
+                  "mutable_metadata::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "mutable_metadata::0"
+              },
+              {
+                "id": "mutable_metadata::1"
+              },
+              {
+                "id": "mutable_metadata::2"
+              },
+              {
+                "id": "mutable_metadata::3"
+              },
+              {
+                "id": "mutable_metadata::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "access": "Public",
+      "aws_url": "s3://idc-open-data/1e14226a-6481-464a-982c-4271d1f90ffd/35d6efef-c859-43f4-b9f9-3f77ebda8b68.dcm",
+      "crdc_instance_uuid": "35d6efef-c859-43f4-b9f9-3f77ebda8b68",
+      "crdc_series_uuid": "1e14226a-6481-464a-982c-4271d1f90ffd",
+      "crdc_study_uuid": "a523a01f-715b-456e-bf9c-206e382f2b7b",
+      "gcs_url": "gs://public-datasets-idc/1e14226a-6481-464a-982c-4271d1f90ffd/35d6efef-c859-43f4-b9f9-3f77ebda8b68.dcm",
+      "license_long_name": "Creative Commons Attribution 4.0 International License",
+      "license_short_name": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_doi": "10.7937/2BAS-HR33",
+      "source_url": "https://doi.org/10.7937/2BAS-HR33"
+    },
+    {
+      "access": "Public",
+      "aws_url": "s3://idc-open-data/1e14226a-6481-464a-982c-4271d1f90ffd/22eea09d-f28e-4580-9cfb-14686317def9.dcm",
+      "crdc_instance_uuid": "22eea09d-f28e-4580-9cfb-14686317def9",
+      "crdc_series_uuid": "1e14226a-6481-464a-982c-4271d1f90ffd",
+      "crdc_study_uuid": "a523a01f-715b-456e-bf9c-206e382f2b7b",
+      "gcs_url": "gs://public-datasets-idc/1e14226a-6481-464a-982c-4271d1f90ffd/22eea09d-f28e-4580-9cfb-14686317def9.dcm",
+      "license_long_name": "Creative Commons Attribution 4.0 International License",
+      "license_short_name": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_doi": "10.7937/2BAS-HR33",
+      "source_url": "https://doi.org/10.7937/2BAS-HR33"
+    },
+    {
+      "access": "Public",
+      "aws_url": "s3://idc-open-data/1361fd90-6104-4252-a0fd-cea2a557f052/d95aefde-b4fd-48c8-affb-c49807df63f1.dcm",
+      "crdc_instance_uuid": "d95aefde-b4fd-48c8-affb-c49807df63f1",
+      "crdc_series_uuid": "1361fd90-6104-4252-a0fd-cea2a557f052",
+      "crdc_study_uuid": "a535108f-718a-4869-b352-255742444e8c",
+      "gcs_url": "gs://public-datasets-idc/1361fd90-6104-4252-a0fd-cea2a557f052/d95aefde-b4fd-48c8-affb-c49807df63f1.dcm",
+      "license_long_name": "Creative Commons Attribution 4.0 International License",
+      "license_short_name": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_doi": "10.7937/2BAS-HR33",
+      "source_url": "https://doi.org/10.7937/2BAS-HR33"
+    },
+    {
+      "access": "Public",
+      "aws_url": "s3://idc-open-data/1830693b-5af7-47bd-bfb1-fd590ae4bfdf/b985c5ea-d623-4415-a1a5-f899781c0612.dcm",
+      "crdc_instance_uuid": "b985c5ea-d623-4415-a1a5-f899781c0612",
+      "crdc_series_uuid": "1830693b-5af7-47bd-bfb1-fd590ae4bfdf",
+      "crdc_study_uuid": "a51ec67b-8316-46d9-9105-f2bc3bd4cf0f",
+      "gcs_url": "gs://public-datasets-idc/1830693b-5af7-47bd-bfb1-fd590ae4bfdf/b985c5ea-d623-4415-a1a5-f899781c0612.dcm",
+      "license_long_name": "Creative Commons Attribution 4.0 International License",
+      "license_short_name": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_doi": "10.7937/2BAS-HR33",
+      "source_url": "https://doi.org/10.7937/2BAS-HR33"
+    },
+    {
+      "access": "Public",
+      "aws_url": "s3://idc-open-data/1e3cc7f6-b203-4c66-8520-4c7ec989da04/9cd01460-a765-4eb2-ae7b-c36cc5320c87.dcm",
+      "crdc_instance_uuid": "9cd01460-a765-4eb2-ae7b-c36cc5320c87",
+      "crdc_series_uuid": "1e3cc7f6-b203-4c66-8520-4c7ec989da04",
+      "crdc_study_uuid": "a51ec67b-8316-46d9-9105-f2bc3bd4cf0f",
+      "gcs_url": "gs://public-datasets-idc/1e3cc7f6-b203-4c66-8520-4c7ec989da04/9cd01460-a765-4eb2-ae7b-c36cc5320c87.dcm",
+      "license_long_name": "Creative Commons Attribution 4.0 International License",
+      "license_short_name": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_doi": "10.7937/2BAS-HR33",
+      "source_url": "https://doi.org/10.7937/2BAS-HR33"
+    }
+  ]
+}

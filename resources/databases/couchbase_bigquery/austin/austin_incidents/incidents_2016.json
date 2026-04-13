@@ -1,0 +1,268 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1100 BLOCK LILY TER",
+              "3400 BLOCK W WILLIAM CANNON DR",
+              "5400 BLOCK CHESTERFIELD AVE",
+              "6000 BLOCK S IH 35 SVRD SB",
+              "700 BLOCK SAN JACINTO BLVD"
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-01-05",
+              "2016-04-11",
+              "2016-05-31",
+              "2016-06-10",
+              "2016-07-19"
+            ],
+            "type": "string"
+          },
+          "descript": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ASSAULT WITH INJURY",
+              "CRIMINAL TRESPASS NOTICE",
+              "DISTURBANCE - OTHER",
+              "POSS CONTROLLED SUB/NARCOTIC",
+              "THEFT"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": [
+              949,
+              51
+            ],
+            "%docs": [
+              94.9,
+              5.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                30.21377383,
+                30.26706768,
+                30.2690229,
+                30.27046992,
+                30.41940457
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "location": {
+            "#docs": [
+              949,
+              51
+            ],
+            "%docs": [
+              94.9,
+              5.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "(30.21377383,-97.83038456)",
+                "(30.26706768,-97.73934174)",
+                "(30.2690229,-97.74626636)",
+                "(30.27046992,-97.74043221)",
+                "(30.41940457,-97.6609531)"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "longitude": {
+            "#docs": [
+              949,
+              51
+            ],
+            "%docs": [
+              94.9,
+              5.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -97.83038456,
+                -97.74626636,
+                -97.74043221,
+                -97.73934174,
+                -97.6609531
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "03:25:00",
+              "04:50:00",
+              "06:12:00",
+              "21:39:00",
+              "23:42:00"
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-04-11T12:12:00+00:00",
+              "2016-05-31T10:50:00+00:00",
+              "2016-06-01T05:42:00+00:00",
+              "2016-06-10T09:25:00+00:00",
+              "2016-07-20T03:39:00+00:00"
+            ],
+            "type": "string"
+          },
+          "unique_key": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20161020307,
+              20161520235,
+              20161521895,
+              20161620215,
+              20162011600
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "incidents_2016::17281",
+                  "incidents_2016::17325",
+                  "incidents_2016::2029",
+                  "incidents_2016::20359",
+                  "incidents_2016::32145"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "incidents_2016::17281"
+              },
+              {
+                "id": "incidents_2016::17325"
+              },
+              {
+                "id": "incidents_2016::2029"
+              },
+              {
+                "id": "incidents_2016::20359"
+              },
+              {
+                "id": "incidents_2016::32145"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "400 BLOCK E 6TH ST",
+      "date": "2016-05-07",
+      "descript": "ASSAULT WITH INJURY",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "00:25:00",
+      "timestamp": "2016-05-07T06:25:00+00:00",
+      "unique_key": 20161280067
+    },
+    {
+      "address": "8800 BLOCK PARKFIELD DR",
+      "date": "2016-05-07",
+      "descript": "DISTURBANCE - OTHER",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "12:40:00",
+      "timestamp": "2016-05-07T18:40:00+00:00",
+      "unique_key": 20161280837
+    },
+    {
+      "address": "1500 BLOCK REAGAN HILL DR",
+      "date": "2016-04-08",
+      "descript": "IDENTITY THEFT",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "11:37:00",
+      "timestamp": "2016-04-08T17:37:00+00:00",
+      "unique_key": 20165014608
+    },
+    {
+      "address": "1000 BLOCK NORWOOD PARK BLVD",
+      "date": "2016-05-08",
+      "descript": "THEFT",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "13:09:00",
+      "timestamp": "2016-05-08T19:09:00+00:00",
+      "unique_key": 20161290837
+    },
+    {
+      "address": "3800 BLOCK LAKE AUSTIN BLVD",
+      "date": "2016-04-08",
+      "descript": "THEFT BY CHECK",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "13:51:00",
+      "timestamp": "2016-04-08T19:51:00+00:00",
+      "unique_key": 20165016284
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 616,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`eightd_has_available_keys` = false, `is_installed` = true, `is_renting` = true, `is_returning` = true",
+        "properties": {
+          "eightd_has_available_keys": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false
+            ],
+            "type": "boolean"
+          },
+          "is_installed": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              true
+            ],
+            "type": "boolean"
+          },
+          "is_renting": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              true
+            ],
+            "type": "boolean"
+          },
+          "is_returning": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              true
+            ],
+            "type": "boolean"
+          },
+          "last_reported": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1774483071,
+              1774483122,
+              1774483132,
+              1774483140,
+              1774483158
+            ],
+            "type": "number"
+          },
+          "num_bikes_available": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              3,
+              5,
+              8,
+              17
+            ],
+            "type": "number"
+          },
+          "num_bikes_disabled": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              6
+            ],
+            "type": "number"
+          },
+          "num_docks_available": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              16,
+              17,
+              22,
+              31
+            ],
+            "type": "number"
+          },
+          "num_docks_disabled": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "num_ebikes_available": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              3,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "station_id": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "218e755d-c0d3-4b33-8afc-b4b0e8...",
+              "49cb42b6-8a2e-4e19-a4b5-0f70c5...",
+              "51e8e63d-0883-47e0-b280-210e0c...",
+              "be15716e-f097-437b-8738-1db234...",
+              "e0ae39c6-90d9-4302-8da9-582cda..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 616,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 616,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "bikeshare_station_status::143",
+                  "bikeshare_station_status::177",
+                  "bikeshare_station_status::206",
+                  "bikeshare_station_status::232",
+                  "bikeshare_station_status::396"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "bikeshare_station_status::143"
+              },
+              {
+                "id": "bikeshare_station_status::177"
+              },
+              {
+                "id": "bikeshare_station_status::206"
+              },
+              {
+                "id": "bikeshare_station_status::232"
+              },
+              {
+                "id": "bikeshare_station_status::396"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "eightd_has_available_keys": false,
+      "is_installed": true,
+      "is_renting": true,
+      "is_returning": true,
+      "last_reported": 1774483106,
+      "num_bikes_available": 12,
+      "num_bikes_disabled": 0,
+      "num_docks_available": 7,
+      "num_docks_disabled": 0,
+      "num_ebikes_available": 1,
+      "station_id": "492edeb7-7c9f-4845-b5cc-442faedb3a56"
+    },
+    {
+      "eightd_has_available_keys": false,
+      "is_installed": true,
+      "is_renting": true,
+      "is_returning": true,
+      "last_reported": 1774483157,
+      "num_bikes_available": 18,
+      "num_bikes_disabled": 0,
+      "num_docks_available": 1,
+      "num_docks_disabled": 0,
+      "num_ebikes_available": 1,
+      "station_id": "f665c653-569b-4a5d-b80d-67f2e4191f77"
+    },
+    {
+      "eightd_has_available_keys": false,
+      "is_installed": true,
+      "is_renting": true,
+      "is_returning": true,
+      "last_reported": 1774483130,
+      "num_bikes_available": 4,
+      "num_bikes_disabled": 0,
+      "num_docks_available": 23,
+      "num_docks_disabled": 0,
+      "num_ebikes_available": 2,
+      "station_id": "bb54f5c8-5578-4167-9599-8e55154de4fd"
+    },
+    {
+      "eightd_has_available_keys": false,
+      "is_installed": true,
+      "is_renting": true,
+      "is_returning": true,
+      "last_reported": 1774483131,
+      "num_bikes_available": 4,
+      "num_bikes_disabled": 2,
+      "num_docks_available": 25,
+      "num_docks_disabled": 0,
+      "num_ebikes_available": 2,
+      "station_id": "6ab85eb1-e112-4c57-8a44-110120d68a1d"
+    },
+    {
+      "eightd_has_available_keys": false,
+      "is_installed": true,
+      "is_renting": true,
+      "is_returning": true,
+      "last_reported": 1774483143,
+      "num_bikes_available": 9,
+      "num_bikes_disabled": 0,
+      "num_docks_available": 10,
+      "num_docks_disabled": 0,
+      "num_ebikes_available": 4,
+      "station_id": "f1987d85-0da3-4a03-b947-8c6c72947f32"
+    }
+  ]
+}

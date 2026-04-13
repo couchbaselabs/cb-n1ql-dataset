@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "date_formatted": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2016-10-22",
+              "2016-12-13",
+              "2017-01-20",
+              "2017-04-03",
+              "2017-05-21"
+            ],
+            "type": "string"
+          },
+          "total_transactions": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              53,
+              97,
+              131,
+              147,
+              437
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "partitions::2",
+                  "partitions::3",
+                  "partitions::6",
+                  "partitions::7",
+                  "partitions::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "partitions::2"
+              },
+              {
+                "id": "partitions::3"
+              },
+              {
+                "id": "partitions::6"
+              },
+              {
+                "id": "partitions::7"
+              },
+              {
+                "id": "partitions::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "date_formatted": "2017-04-03",
+      "total_transactions": 147
+    },
+    {
+      "date_formatted": "2016-12-13",
+      "total_transactions": 437
+    },
+    {
+      "date_formatted": "2017-01-06",
+      "total_transactions": 174
+    },
+    {
+      "date_formatted": "2016-10-22",
+      "total_transactions": 53
+    },
+    {
+      "date_formatted": "2017-05-24",
+      "total_transactions": 202
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`country_code` = \"ABW\"",
+        "properties": {
+          "country_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ABW"
+            ],
+            "type": "string"
+          },
+          "description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not specified",
+              "Source: United Nations Confere..."
+            ],
+            "type": "string"
+          },
+          "series_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AG.LND.FRST.K2",
+              "BM.KLT.DINV.CD.WD"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1989",
+              "1991",
+              "1992",
+              "1994",
+              "1995"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "footnotes::3",
+                  "footnotes::4",
+                  "footnotes::6",
+                  "footnotes::7",
+                  "footnotes::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "footnotes::3"
+              },
+              {
+                "id": "footnotes::4"
+              },
+              {
+                "id": "footnotes::6"
+              },
+              {
+                "id": "footnotes::7"
+              },
+              {
+                "id": "footnotes::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "ABW",
+      "description": "Source: United Nations Conference on Trade and Development,  Foreign Direct Investment Online database.",
+      "series_code": "BM.KLT.DINV.CD.WD",
+      "year": "1989"
+    },
+    {
+      "country_code": "ABW",
+      "description": "Not specified",
+      "series_code": "AG.LND.FRST.K2",
+      "year": "    "
+    },
+    {
+      "country_code": "ABW",
+      "description": "Source: United Nations Conference on Trade and Development,  Foreign Direct Investment Online database.",
+      "series_code": "BM.KLT.DINV.CD.WD",
+      "year": "1990"
+    },
+    {
+      "country_code": "ABW",
+      "description": "Source: United Nations Conference on Trade and Development,  Foreign Direct Investment Online database.",
+      "series_code": "BM.KLT.DINV.CD.WD",
+      "year": "1994"
+    },
+    {
+      "country_code": "ABW",
+      "description": "Source: United Nations Conference on Trade and Development,  Foreign Direct Investment Online database.",
+      "series_code": "BM.KLT.DINV.CD.WD",
+      "year": "1991"
+    }
+  ]
+}

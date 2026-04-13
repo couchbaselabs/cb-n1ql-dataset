@@ -1,0 +1,136 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AC",
+              "BF",
+              "PA",
+              "SE",
+              "SZ"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Antigua and Barbuda",
+              "Bahamas, The",
+              "Paraguay",
+              "Seychelles",
+              "Switzerland"
+            ],
+            "type": "string"
+          },
+          "midyear_population": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              60676,
+              88340,
+              105999,
+              5728549,
+              8851213
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1976,
+              2003,
+              2010,
+              2027,
+              2029
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "midyear_population::15708",
+                  "midyear_population::178",
+                  "midyear_population::17802",
+                  "midyear_population::17836",
+                  "midyear_population::19269"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "midyear_population::15708"
+              },
+              {
+                "id": "midyear_population::178"
+              },
+              {
+                "id": "midyear_population::17802"
+              },
+              {
+                "id": "midyear_population::17836"
+              },
+              {
+                "id": "midyear_population::19269"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "IV",
+      "country_name": "Cote d'Ivoire",
+      "midyear_population": 20056679,
+      "year": 2007
+    },
+    {
+      "country_code": "IV",
+      "country_name": "Cote d'Ivoire",
+      "midyear_population": 23286988,
+      "year": 2013
+    },
+    {
+      "country_code": "JA",
+      "country_name": "Japan",
+      "midyear_population": 119587464,
+      "year": 2032
+    },
+    {
+      "country_code": "JE",
+      "country_name": "Jersey",
+      "midyear_population": 63647,
+      "year": 1961
+    },
+    {
+      "country_code": "JE",
+      "country_name": "Jersey",
+      "midyear_population": 72289,
+      "year": 1975
+    }
+  ]
+}

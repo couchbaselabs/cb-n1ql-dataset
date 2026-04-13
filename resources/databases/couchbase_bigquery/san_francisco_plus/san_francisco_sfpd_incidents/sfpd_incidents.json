@@ -1,0 +1,280 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "address": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0 Block of KEARNY ST",
+              "1200 Block of CORTLAND AV",
+              "3900 Block of LAWTON ST",
+              "400 Block of BROADWAY ST",
+              "SAN JOSE AV / SICKLES AV"
+            ],
+            "type": "string"
+          },
+          "category": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ASSAULT",
+              "MISSING PERSON",
+              "NON-CRIMINAL",
+              "OTHER OFFENSES",
+              "WARRANTS"
+            ],
+            "type": "string"
+          },
+          "dayofweek": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Friday",
+              "Monday",
+              "Sunday",
+              "Tuesday",
+              "Wednesday"
+            ],
+            "type": "string"
+          },
+          "descript": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DRIVERS LICENSE, SUSPENDED OR ...",
+              "ENROUTE TO OUTSIDE JURISDICTIO...",
+              "LOST PROPERTY",
+              "MISSING ADULT",
+              "THREATS AGAINST LIFE"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37.7112226803075,
+              37.7397963067675,
+              37.7566613907763,
+              37.7886533755147,
+              37.7982249345487
+            ],
+            "type": "number"
+          },
+          "location": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "POINT (-122.403688848 37.78865...",
+              "POINT (-122.404282498 37.79822...",
+              "POINT (-122.411709035 37.73979...",
+              "POINT (-122.455815338 37.71122...",
+              "POINT (-122.50513625 37.756661..."
+            ],
+            "type": "string"
+          },
+          "longitude": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -122.505136250303,
+              -122.455815337851,
+              -122.411709034636,
+              -122.404282497745,
+              -122.40368884812
+            ],
+            "type": "number"
+          },
+          "pddistrict": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CENTRAL",
+              "INGLESIDE",
+              "NORTHERN",
+              "TARAVAL",
+              "TENDERLOIN"
+            ],
+            "type": "string"
+          },
+          "pdid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3028449065016,
+              3052586819057,
+              4016592119057,
+              4045540974000,
+              5001779862050
+            ],
+            "type": "number"
+          },
+          "resolution": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ARREST, BOOKED",
+              "ARREST, CITED",
+              "LOCATED",
+              "NONE",
+              "NOT PROSECUTED"
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2003-03-09T19:10:00",
+              "2003-05-05T14:00:00",
+              "2004-02-10T16:00:00",
+              "2004-04-16T19:30:00",
+              "2005-01-05T20:20:00"
+            ],
+            "type": "string"
+          },
+          "unique_key": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30284490,
+              30525868,
+              40165921,
+              40455409,
+              50017798
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sfpd_incidents::1004125",
+                  "sfpd_incidents::1174694",
+                  "sfpd_incidents::1353974",
+                  "sfpd_incidents::1522415",
+                  "sfpd_incidents::1623970"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sfpd_incidents::1004125"
+              },
+              {
+                "id": "sfpd_incidents::1174694"
+              },
+              {
+                "id": "sfpd_incidents::1353974"
+              },
+              {
+                "id": "sfpd_incidents::1522415"
+              },
+              {
+                "id": "sfpd_incidents::1623970"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "1100 Block of MISSION ST",
+      "category": "SUSPICIOUS OCC",
+      "dayofweek": "Monday",
+      "descript": "SUSPICIOUS OCCURRENCE",
+      "latitude": 37.7786674439132,
+      "location": "POINT (-122.411723778 37.778667444)",
+      "longitude": -122.411723778126,
+      "pddistrict": "SOUTHERN",
+      "pdid": 10091595964070,
+      "resolution": "NONE",
+      "timestamp": "2010-09-20T09:00:00",
+      "unique_key": 100915959
+    },
+    {
+      "address": "300 Block of 9TH ST",
+      "category": "SUSPICIOUS OCC",
+      "dayofweek": "Wednesday",
+      "descript": "SUSPICIOUS OCCURRENCE",
+      "latitude": 37.7735786121372,
+      "location": "POINT (-122.41127797 37.773578612)",
+      "longitude": -122.411277969882,
+      "pddistrict": "SOUTHERN",
+      "pdid": 10011229664070,
+      "resolution": "NONE",
+      "timestamp": "2010-02-03T12:37:00",
+      "unique_key": 100112296
+    },
+    {
+      "address": "100 Block of LANGTON ST",
+      "category": "SUSPICIOUS OCC",
+      "dayofweek": "Friday",
+      "descript": "SUSPICIOUS OCCURRENCE",
+      "latitude": 37.7755204237187,
+      "location": "POINT (-122.407470899 37.775520424)",
+      "longitude": -122.407470899419,
+      "pddistrict": "SOUTHERN",
+      "pdid": 14011251364070,
+      "resolution": "NONE",
+      "timestamp": "2014-02-07T14:00:00",
+      "unique_key": 140112513
+    },
+    {
+      "address": "800 Block of BRYANT ST",
+      "category": "SUSPICIOUS OCC",
+      "dayofweek": "Thursday",
+      "descript": "SUSPICIOUS OCCURRENCE",
+      "latitude": 37.775420706711,
+      "location": "POINT (-122.403404791 37.775420707)",
+      "longitude": -122.403404791479,
+      "pddistrict": "SOUTHERN",
+      "pdid": 9123721064070,
+      "resolution": "PSYCHOPATHIC CASE",
+      "timestamp": "2009-12-03T08:15:00",
+      "unique_key": 91237210
+    },
+    {
+      "address": "300 Block of 5TH ST",
+      "category": "SUSPICIOUS OCC",
+      "dayofweek": "Monday",
+      "descript": "SUSPICIOUS OCCURRENCE",
+      "latitude": 37.77919333663891,
+      "location": "POINT (-122.402142725 37.779193337)",
+      "longitude": -122.4021427253112,
+      "pddistrict": "SOUTHERN",
+      "pdid": 18004018464070,
+      "resolution": "NONE",
+      "timestamp": "2018-01-15T22:25:00",
+      "unique_key": 180040184
+    }
+  ]
+}

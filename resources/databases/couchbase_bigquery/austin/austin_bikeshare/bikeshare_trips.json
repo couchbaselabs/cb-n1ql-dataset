@@ -1,0 +1,269 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "bike_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1565",
+              "16456",
+              "16845",
+              "21428",
+              "21829"
+            ],
+            "type": "string"
+          },
+          "bike_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "classic",
+              "electric"
+            ],
+            "type": "string"
+          },
+          "duration_minutes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              5,
+              14,
+              41
+            ],
+            "type": "number"
+          },
+          "end_station_id": {
+            "#docs": [
+              12,
+              988
+            ],
+            "%docs": [
+              1.2,
+              98.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2504",
+                "2552",
+                "3621",
+                "3799",
+                "7186"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "end_station_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "23rd/San Jacinto @ DKR Stadium",
+              "3rd/Nueces",
+              "3rd/West",
+              "One Texas Center",
+              "South Congress & Elizabeth"
+            ],
+            "type": "string"
+          },
+          "start_station_id": {
+            "#docs": [
+              2,
+              998
+            ],
+            "%docs": [
+              0.2,
+              99.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                2496,
+                3685,
+                3799,
+                4050,
+                7186
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "start_station_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "23rd/San Jacinto @ DKR Stadium",
+              "5th/Campbell",
+              "8th & Congress",
+              "9th/Henderson",
+              "One Texas Center"
+            ],
+            "type": "string"
+          },
+          "start_time": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-05-05T23:36:21+00:00",
+              "2022-08-03T13:54:27+00:00",
+              "2022-10-03T07:36:14+00:00",
+              "2023-10-31T15:41:59+00:00",
+              "2024-06-27T11:57:50+00:00"
+            ],
+            "type": "string"
+          },
+          "subscriber_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Local365",
+              "Pay-as-you-ride",
+              "Student Membership",
+              "U.T. Student Membership",
+              "Walk Up"
+            ],
+            "type": "string"
+          },
+          "trip_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "17291897",
+              "27373677",
+              "28059010",
+              "31735611",
+              "33830224"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "bikeshare_trips::1036092",
+                  "bikeshare_trips::1115306",
+                  "bikeshare_trips::1271990",
+                  "bikeshare_trips::1458493",
+                  "bikeshare_trips::1461777"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "bikeshare_trips::1036092"
+              },
+              {
+                "id": "bikeshare_trips::1115306"
+              },
+              {
+                "id": "bikeshare_trips::1271990"
+              },
+              {
+                "id": "bikeshare_trips::1458493"
+              },
+              {
+                "id": "bikeshare_trips::1461777"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "bike_id": "19704",
+      "bike_type": "electric",
+      "duration_minutes": 24,
+      "end_station_id": "2494",
+      "end_station_name": "2nd/Congress",
+      "start_station_id": 3621,
+      "start_station_name": "3rd/Nueces",
+      "start_time": "2021-07-04T20:37:49+00:00",
+      "subscriber_type": "Local31",
+      "trip_id": "24495223"
+    },
+    {
+      "bike_id": "19418",
+      "bike_type": "electric",
+      "duration_minutes": 6,
+      "end_station_id": "2495",
+      "end_station_name": "4th/Congress",
+      "start_station_id": 3455,
+      "start_station_name": "4th/Guadalupe @ Republic Square",
+      "start_time": "2022-10-08T22:56:53+00:00",
+      "subscriber_type": "3-Day Weekender",
+      "trip_id": "28128333"
+    },
+    {
+      "bike_id": "2034",
+      "bike_type": "classic",
+      "duration_minutes": 2,
+      "end_station_id": null,
+      "end_station_name": "4th/Congress",
+      "start_station_id": 3455,
+      "start_station_name": "4th/Guadalupe @ Republic Square",
+      "start_time": "2022-11-04T10:44:50+00:00",
+      "subscriber_type": "Local365",
+      "trip_id": "28399899"
+    },
+    {
+      "bike_id": "21747",
+      "bike_type": "electric",
+      "duration_minutes": 3,
+      "end_station_id": null,
+      "end_station_name": "2nd/Congress",
+      "start_station_id": 2539,
+      "start_station_name": "3rd/Trinity @ The Convention Center",
+      "start_time": "2022-11-12T01:19:03+00:00",
+      "subscriber_type": "3-Day Weekender",
+      "trip_id": "28466530"
+    },
+    {
+      "bike_id": "18726",
+      "bike_type": "electric",
+      "duration_minutes": 52,
+      "end_station_id": "2494",
+      "end_station_name": "2nd/Congress",
+      "start_station_id": 2539,
+      "start_station_name": "3rd/Trinity @ The Convention Center",
+      "start_time": "2021-01-02T09:23:25+00:00",
+      "subscriber_type": "Local365",
+      "trip_id": "23372928"
+    }
+  ]
+}

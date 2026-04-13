@@ -1,0 +1,1512 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`time_recorded` = \"2021-12-12T07:57:44+00:00\", `trip_date` = \"2021-12-11\"",
+        "properties": {
+          "direction": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "IB",
+              "OB"
+            ],
+            "type": "string"
+          },
+          "next_stop_aimed_arrival_time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-12-12T07:45:00+00:00",
+              "2021-12-12T07:45:05+00:00",
+              "2021-12-12T07:57:31+00:00",
+              "2021-12-12T07:58:02+00:00",
+              "2021-12-12T08:03:45+00:00"
+            ],
+            "type": "string"
+          },
+          "next_stop_aimed_departure_time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-12-12T07:45:00+00:00",
+              "2021-12-12T07:45:05+00:00",
+              "2021-12-12T07:57:31+00:00",
+              "2021-12-12T07:58:02+00:00",
+              "2021-12-12T08:03:45+00:00"
+            ],
+            "type": "string"
+          },
+          "next_stop_expected_arrival_time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-12-12T07:57:29+00:00",
+              "2021-12-12T07:57:36+00:00",
+              "2021-12-12T07:57:47+00:00",
+              "2021-12-12T07:58:08+00:00",
+              "2021-12-12T07:58:28+00:00"
+            ],
+            "type": "string"
+          },
+          "next_stop_expected_departure_time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "next_stop_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "14017",
+              "15790",
+              "15796",
+              "16492",
+              "17301"
+            ],
+            "type": "string"
+          },
+          "next_stop_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Clay St & Front St",
+              "O'Farrell St&Taylor St",
+              "Ocean Ave & Howth St",
+              "Ocean Ave & Mission St",
+              "Steiner St & Vallejo St"
+            ],
+            "type": "string"
+          },
+          "onward_stop_aimed_arrival_time_1": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:45:42+00:00",
+                "2021-12-12T07:58:30+00:00",
+                "2021-12-12T07:59:00+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_arrival_time_10": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_aimed_arrival_time_2": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:46:17+00:00",
+                "2021-12-12T07:59:00+00:00",
+                "2021-12-12T08:00:25+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_arrival_time_3": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:47:26+00:00",
+                "2021-12-12T07:59:57+00:00",
+                "2021-12-12T08:02:00+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_arrival_time_4": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:47:58+00:00",
+                "2021-12-12T08:01:17+00:00",
+                "2021-12-12T08:04:46+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_arrival_time_5": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:48:45+00:00",
+                "2021-12-12T08:02:04+00:00",
+                "2021-12-12T08:06:22+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_arrival_time_6": {
+            "#docs": [
+              8,
+              2
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T08:02:17+00:00",
+                "2021-12-12T08:02:53+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_arrival_time_7": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_aimed_arrival_time_8": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_aimed_arrival_time_9": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_aimed_departure_time_1": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:45:42+00:00",
+                "2021-12-12T07:58:30+00:00",
+                "2021-12-12T07:59:00+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_departure_time_10": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_aimed_departure_time_2": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:46:17+00:00",
+                "2021-12-12T07:59:00+00:00",
+                "2021-12-12T08:00:25+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_departure_time_3": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:47:26+00:00",
+                "2021-12-12T07:59:57+00:00",
+                "2021-12-12T08:02:00+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_departure_time_4": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:47:58+00:00",
+                "2021-12-12T08:01:17+00:00",
+                "2021-12-12T08:04:46+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_departure_time_5": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:48:45+00:00",
+                "2021-12-12T08:02:04+00:00",
+                "2021-12-12T08:06:22+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_departure_time_6": {
+            "#docs": [
+              8,
+              2
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T08:02:17+00:00",
+                "2021-12-12T08:02:53+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_aimed_departure_time_7": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_aimed_departure_time_8": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_aimed_departure_time_9": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_expected_arrival_time_1": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:57:56+00:00",
+                "2021-12-12T07:58:55+00:00",
+                "2021-12-12T07:59:09+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_expected_arrival_time_10": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_expected_arrival_time_2": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T07:58:21+00:00",
+                "2021-12-12T07:59:20+00:00",
+                "2021-12-12T08:01:19+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_expected_arrival_time_3": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T08:00:01+00:00",
+                "2021-12-12T08:00:04+00:00",
+                "2021-12-12T08:02:25+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_expected_arrival_time_4": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T08:00:37+00:00",
+                "2021-12-12T08:02:55+00:00",
+                "2021-12-12T08:03:51+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_expected_arrival_time_5": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T08:01:24+00:00",
+                "2021-12-12T08:03:53+00:00",
+                "2021-12-12T08:05:04+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_expected_arrival_time_6": {
+            "#docs": [
+              8,
+              2
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2021-12-12T08:04:28+00:00",
+                "2021-12-12T08:04:32+00:00"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_expected_arrival_time_7": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_expected_arrival_time_8": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_expected_arrival_time_9": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_id_1": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "O'Farrell St & Powell St",
+                "Ocean Ave & Cayuga Ave",
+                "Steiner St & Green St"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_id_10": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_id_2": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "O'Farrell St & Grant Ave",
+                "Ocean Ave & Otsego Ave",
+                "Steiner St & Union St"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_id_3": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Fillmore St & Union St",
+                "Market St & 3rd St",
+                "Ocean Ave & San Jose Ave"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_id_4": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Fillmore St & Lombard St",
+                "Market St & 1st St",
+                "Ocean Ave & I-280 On Ramp"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_id_5": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Beale St & Mission St",
+                "Fillmore St & Chestnut St",
+                "Ocean Ave & Howth St"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_id_6": {
+            "#docs": [
+              8,
+              2
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Church St & Market St",
+                "San Jose Ave & Niagra Ave"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_id_7": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_id_8": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_id_9": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_name_1": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "15782",
+                "15817",
+                "16487"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_name_10": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_name_2": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "15810",
+                "16490",
+                "17638"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_name_3": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "14643",
+                "15641",
+                "15804"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_name_4": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "14626",
+                "15638",
+                "17804"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_name_5": {
+            "#docs": [
+              7,
+              3
+            ],
+            "%docs": [
+              70,
+              30
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "13089",
+                "14608",
+                "15790"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_name_6": {
+            "#docs": [
+              8,
+              2
+            ],
+            "%docs": [
+              80,
+              20
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "16269",
+                "17073"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "onward_stop_name_7": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_name_8": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "onward_stop_name_9": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "route_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "22",
+              "38",
+              "49",
+              "N"
+            ],
+            "type": "string"
+          },
+          "route_long_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CALIFORNIA",
+              "FILLMORE",
+              "GEARY",
+              "JUDAH",
+              "VAN NESS-MISSION"
+            ],
+            "type": "string"
+          },
+          "time_recorded": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-12-12T07:57:44+00:00"
+            ],
+            "type": "string"
+          },
+          "trip_date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2021-12-11"
+            ],
+            "type": "string"
+          },
+          "trip_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10302269",
+              "10326861",
+              "10341911",
+              "10354208",
+              "10354209"
+            ],
+            "type": "string"
+          },
+          "vehicle_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "5713",
+              "5883",
+              "6517",
+              "6619",
+              "6702"
+            ],
+            "type": "string"
+          },
+          "vehicle_location": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "POINT(-122.400627 37.7949295)",
+              "POINT(-122.411766 37.7859344)",
+              "POINT(-122.433632 37.7263947)",
+              "POINT(-122.434929 37.794239)",
+              "POINT(-122.446793 37.7229996)"
+            ],
+            "type": "string"
+          },
+          "vehicle_location_lat": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37.723,
+              37.726395,
+              37.785934,
+              37.79424,
+              37.79493
+            ],
+            "type": "number"
+          },
+          "vehicle_location_lon": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -122.44679,
+              -122.43493,
+              -122.43363,
+              -122.411766,
+              -122.40063
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "vehicle_monitoring::5",
+                  "vehicle_monitoring::6",
+                  "vehicle_monitoring::7",
+                  "vehicle_monitoring::8",
+                  "vehicle_monitoring::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "vehicle_monitoring::5"
+              },
+              {
+                "id": "vehicle_monitoring::6"
+              },
+              {
+                "id": "vehicle_monitoring::7"
+              },
+              {
+                "id": "vehicle_monitoring::8"
+              },
+              {
+                "id": "vehicle_monitoring::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "direction": "IB",
+      "next_stop_aimed_arrival_time": "2021-12-12T07:55:41+00:00",
+      "next_stop_aimed_departure_time": "2021-12-12T07:55:41+00:00",
+      "next_stop_expected_arrival_time": "2021-12-12T07:57:13+00:00",
+      "next_stop_expected_departure_time": null,
+      "next_stop_id": "13994",
+      "next_stop_name": "Church St & 22nd St",
+      "onward_stop_aimed_arrival_time_1": "2021-12-12T07:56:42+00:00",
+      "onward_stop_aimed_arrival_time_10": null,
+      "onward_stop_aimed_arrival_time_2": "2021-12-12T07:57:08+00:00",
+      "onward_stop_aimed_arrival_time_3": "2021-12-12T07:57:54+00:00",
+      "onward_stop_aimed_arrival_time_4": "2021-12-12T07:59:29+00:00",
+      "onward_stop_aimed_arrival_time_5": "2021-12-12T08:01:13+00:00",
+      "onward_stop_aimed_arrival_time_6": "2021-12-12T08:02:53+00:00",
+      "onward_stop_aimed_arrival_time_7": null,
+      "onward_stop_aimed_arrival_time_8": null,
+      "onward_stop_aimed_arrival_time_9": null,
+      "onward_stop_aimed_departure_time_1": "2021-12-12T07:56:42+00:00",
+      "onward_stop_aimed_departure_time_10": null,
+      "onward_stop_aimed_departure_time_2": "2021-12-12T07:57:08+00:00",
+      "onward_stop_aimed_departure_time_3": "2021-12-12T07:57:54+00:00",
+      "onward_stop_aimed_departure_time_4": "2021-12-12T07:59:29+00:00",
+      "onward_stop_aimed_departure_time_5": "2021-12-12T08:01:13+00:00",
+      "onward_stop_aimed_departure_time_6": "2021-12-12T08:02:53+00:00",
+      "onward_stop_aimed_departure_time_7": null,
+      "onward_stop_aimed_departure_time_8": null,
+      "onward_stop_aimed_departure_time_9": null,
+      "onward_stop_expected_arrival_time_1": "2021-12-12T07:58:03+00:00",
+      "onward_stop_expected_arrival_time_10": null,
+      "onward_stop_expected_arrival_time_2": "2021-12-12T07:58:26+00:00",
+      "onward_stop_expected_arrival_time_3": "2021-12-12T07:59:20+00:00",
+      "onward_stop_expected_arrival_time_4": "2021-12-12T08:01:01+00:00",
+      "onward_stop_expected_arrival_time_5": "2021-12-12T08:02:30+00:00",
+      "onward_stop_expected_arrival_time_6": "2021-12-12T08:04:28+00:00",
+      "onward_stop_expected_arrival_time_7": null,
+      "onward_stop_expected_arrival_time_8": null,
+      "onward_stop_expected_arrival_time_9": null,
+      "onward_stop_id_1": "Right Of Way/21st St",
+      "onward_stop_id_10": null,
+      "onward_stop_id_2": "Right Of Way/Liberty St",
+      "onward_stop_id_3": "Right Of Way/20th St",
+      "onward_stop_id_4": "Right Of Way/18th St",
+      "onward_stop_id_5": "Church St & 16th St",
+      "onward_stop_id_6": "Church St & Market St",
+      "onward_stop_id_7": null,
+      "onward_stop_id_8": null,
+      "onward_stop_id_9": null,
+      "onward_stop_name_1": "16217",
+      "onward_stop_name_10": null,
+      "onward_stop_name_2": "16222",
+      "onward_stop_name_3": "16215",
+      "onward_stop_name_4": "16213",
+      "onward_stop_name_5": "13985",
+      "onward_stop_name_6": "17073",
+      "onward_stop_name_7": null,
+      "onward_stop_name_8": null,
+      "onward_stop_name_9": null,
+      "route_id": "J",
+      "route_long_name": "CHURCH",
+      "time_recorded": "2021-12-12T07:57:44+00:00",
+      "trip_date": "2021-12-11",
+      "trip_id": "10419857",
+      "vehicle_id": "1431",
+      "vehicle_location": "POINT(-122.427559 37.7550659)",
+      "vehicle_location_lat": 37.755066,
+      "vehicle_location_lon": -122.42756
+    },
+    {
+      "direction": "IB",
+      "next_stop_aimed_arrival_time": "2021-12-12T07:58:00+00:00",
+      "next_stop_aimed_departure_time": "2021-12-12T07:58:00+00:00",
+      "next_stop_expected_arrival_time": "2021-12-12T07:59:07+00:00",
+      "next_stop_expected_departure_time": null,
+      "next_stop_id": "14509",
+      "next_stop_name": "The Embarcadero & Folsom St",
+      "onward_stop_aimed_arrival_time_1": "2021-12-12T08:01:38+00:00",
+      "onward_stop_aimed_arrival_time_10": null,
+      "onward_stop_aimed_arrival_time_2": "2021-12-12T08:04:25+00:00",
+      "onward_stop_aimed_arrival_time_3": "2021-12-12T08:07:00+00:00",
+      "onward_stop_aimed_arrival_time_4": null,
+      "onward_stop_aimed_arrival_time_5": null,
+      "onward_stop_aimed_arrival_time_6": null,
+      "onward_stop_aimed_arrival_time_7": null,
+      "onward_stop_aimed_arrival_time_8": null,
+      "onward_stop_aimed_arrival_time_9": null,
+      "onward_stop_aimed_departure_time_1": "2021-12-12T08:01:38+00:00",
+      "onward_stop_aimed_departure_time_10": null,
+      "onward_stop_aimed_departure_time_2": "2021-12-12T08:04:25+00:00",
+      "onward_stop_aimed_departure_time_3": "2021-12-12T08:07:00+00:00",
+      "onward_stop_aimed_departure_time_4": null,
+      "onward_stop_aimed_departure_time_5": null,
+      "onward_stop_aimed_departure_time_6": null,
+      "onward_stop_aimed_departure_time_7": null,
+      "onward_stop_aimed_departure_time_8": null,
+      "onward_stop_aimed_departure_time_9": null,
+      "onward_stop_expected_arrival_time_1": "2021-12-12T08:00:35+00:00",
+      "onward_stop_expected_arrival_time_10": null,
+      "onward_stop_expected_arrival_time_2": "2021-12-12T08:02:28+00:00",
+      "onward_stop_expected_arrival_time_3": "2021-12-12T08:06:21+00:00",
+      "onward_stop_expected_arrival_time_4": null,
+      "onward_stop_expected_arrival_time_5": null,
+      "onward_stop_expected_arrival_time_6": null,
+      "onward_stop_expected_arrival_time_7": null,
+      "onward_stop_expected_arrival_time_8": null,
+      "onward_stop_expected_arrival_time_9": null,
+      "onward_stop_id_1": "The Embarcadero & Brannan St",
+      "onward_stop_id_10": null,
+      "onward_stop_id_2": "King St & 2nd St",
+      "onward_stop_id_3": "King St & 4th St",
+      "onward_stop_id_4": null,
+      "onward_stop_id_5": null,
+      "onward_stop_id_6": null,
+      "onward_stop_id_7": null,
+      "onward_stop_id_8": null,
+      "onward_stop_id_9": null,
+      "onward_stop_name_1": "14506",
+      "onward_stop_name_10": null,
+      "onward_stop_name_2": "15234",
+      "onward_stop_name_3": "15239",
+      "onward_stop_name_4": null,
+      "onward_stop_name_5": null,
+      "onward_stop_name_6": null,
+      "onward_stop_name_7": null,
+      "onward_stop_name_8": null,
+      "onward_stop_name_9": null,
+      "route_id": "N",
+      "route_long_name": "JUDAH",
+      "time_recorded": "2021-12-12T07:57:44+00:00",
+      "trip_date": "2021-12-11",
+      "trip_id": "10420258",
+      "vehicle_id": "1442",
+      "vehicle_location": "POINT(-122.395187 37.7940903)",
+      "vehicle_location_lat": 37.79409,
+      "vehicle_location_lon": -122.39519
+    },
+    {
+      "direction": "OB",
+      "next_stop_aimed_arrival_time": "2021-12-12T07:45:00+00:00",
+      "next_stop_aimed_departure_time": "2021-12-12T07:45:00+00:00",
+      "next_stop_expected_arrival_time": "2021-12-12T07:58:08+00:00",
+      "next_stop_expected_departure_time": null,
+      "next_stop_id": "15796",
+      "next_stop_name": "Ocean Ave & Mission St",
+      "onward_stop_aimed_arrival_time_1": "2021-12-12T07:45:42+00:00",
+      "onward_stop_aimed_arrival_time_10": null,
+      "onward_stop_aimed_arrival_time_2": "2021-12-12T07:46:17+00:00",
+      "onward_stop_aimed_arrival_time_3": "2021-12-12T07:47:26+00:00",
+      "onward_stop_aimed_arrival_time_4": "2021-12-12T07:47:58+00:00",
+      "onward_stop_aimed_arrival_time_5": "2021-12-12T07:48:45+00:00",
+      "onward_stop_aimed_arrival_time_6": null,
+      "onward_stop_aimed_arrival_time_7": null,
+      "onward_stop_aimed_arrival_time_8": null,
+      "onward_stop_aimed_arrival_time_9": null,
+      "onward_stop_aimed_departure_time_1": "2021-12-12T07:45:42+00:00",
+      "onward_stop_aimed_departure_time_10": null,
+      "onward_stop_aimed_departure_time_2": "2021-12-12T07:46:17+00:00",
+      "onward_stop_aimed_departure_time_3": "2021-12-12T07:47:26+00:00",
+      "onward_stop_aimed_departure_time_4": "2021-12-12T07:47:58+00:00",
+      "onward_stop_aimed_departure_time_5": "2021-12-12T07:48:45+00:00",
+      "onward_stop_aimed_departure_time_6": null,
+      "onward_stop_aimed_departure_time_7": null,
+      "onward_stop_aimed_departure_time_8": null,
+      "onward_stop_aimed_departure_time_9": null,
+      "onward_stop_expected_arrival_time_1": "2021-12-12T07:58:55+00:00",
+      "onward_stop_expected_arrival_time_10": null,
+      "onward_stop_expected_arrival_time_2": "2021-12-12T07:59:20+00:00",
+      "onward_stop_expected_arrival_time_3": "2021-12-12T08:00:04+00:00",
+      "onward_stop_expected_arrival_time_4": "2021-12-12T08:00:37+00:00",
+      "onward_stop_expected_arrival_time_5": "2021-12-12T08:01:24+00:00",
+      "onward_stop_expected_arrival_time_6": null,
+      "onward_stop_expected_arrival_time_7": null,
+      "onward_stop_expected_arrival_time_8": null,
+      "onward_stop_expected_arrival_time_9": null,
+      "onward_stop_id_1": "Ocean Ave & Cayuga Ave",
+      "onward_stop_id_10": null,
+      "onward_stop_id_2": "Ocean Ave & Otsego Ave",
+      "onward_stop_id_3": "Ocean Ave & San Jose Ave",
+      "onward_stop_id_4": "Ocean Ave & I-280 On Ramp",
+      "onward_stop_id_5": "Ocean Ave & Howth St",
+      "onward_stop_id_6": null,
+      "onward_stop_id_7": null,
+      "onward_stop_id_8": null,
+      "onward_stop_id_9": null,
+      "onward_stop_name_1": "15782",
+      "onward_stop_name_10": null,
+      "onward_stop_name_2": "17638",
+      "onward_stop_name_3": "15804",
+      "onward_stop_name_4": "17804",
+      "onward_stop_name_5": "15790",
+      "onward_stop_name_6": null,
+      "onward_stop_name_7": null,
+      "onward_stop_name_8": null,
+      "onward_stop_name_9": null,
+      "route_id": "49",
+      "route_long_name": "VAN NESS-MISSION",
+      "time_recorded": "2021-12-12T07:57:44+00:00",
+      "trip_date": "2021-12-11",
+      "trip_id": "10354209",
+      "vehicle_id": "6619",
+      "vehicle_location": "POINT(-122.433632 37.7263947)",
+      "vehicle_location_lat": 37.726395,
+      "vehicle_location_lon": -122.43363
+    },
+    {
+      "direction": "OB",
+      "next_stop_aimed_arrival_time": "2021-12-12T07:54:55+00:00",
+      "next_stop_aimed_departure_time": "2021-12-12T07:54:55+00:00",
+      "next_stop_expected_arrival_time": "2021-12-12T07:57:54+00:00",
+      "next_stop_expected_departure_time": null,
+      "next_stop_id": "15825",
+      "next_stop_name": "Orizaba Ave & Broad St",
+      "onward_stop_aimed_arrival_time_1": "2021-12-12T07:56:02+00:00",
+      "onward_stop_aimed_arrival_time_10": null,
+      "onward_stop_aimed_arrival_time_2": "2021-12-12T07:57:00+00:00",
+      "onward_stop_aimed_arrival_time_3": "2021-12-12T07:58:45+00:00",
+      "onward_stop_aimed_arrival_time_4": "2021-12-12T08:00:06+00:00",
+      "onward_stop_aimed_arrival_time_5": "2021-12-12T08:01:30+00:00",
+      "onward_stop_aimed_arrival_time_6": "2021-12-12T08:02:17+00:00",
+      "onward_stop_aimed_arrival_time_7": null,
+      "onward_stop_aimed_arrival_time_8": null,
+      "onward_stop_aimed_arrival_time_9": null,
+      "onward_stop_aimed_departure_time_1": "2021-12-12T07:56:02+00:00",
+      "onward_stop_aimed_departure_time_10": null,
+      "onward_stop_aimed_departure_time_2": "2021-12-12T07:57:00+00:00",
+      "onward_stop_aimed_departure_time_3": "2021-12-12T07:58:45+00:00",
+      "onward_stop_aimed_departure_time_4": "2021-12-12T08:00:06+00:00",
+      "onward_stop_aimed_departure_time_5": "2021-12-12T08:01:30+00:00",
+      "onward_stop_aimed_departure_time_6": "2021-12-12T08:02:17+00:00",
+      "onward_stop_aimed_departure_time_7": null,
+      "onward_stop_aimed_departure_time_8": null,
+      "onward_stop_aimed_departure_time_9": null,
+      "onward_stop_expected_arrival_time_1": "2021-12-12T07:58:54+00:00",
+      "onward_stop_expected_arrival_time_10": null,
+      "onward_stop_expected_arrival_time_2": "2021-12-12T07:59:40+00:00",
+      "onward_stop_expected_arrival_time_3": "2021-12-12T08:01:15+00:00",
+      "onward_stop_expected_arrival_time_4": "2021-12-12T08:02:08+00:00",
+      "onward_stop_expected_arrival_time_5": "2021-12-12T08:03:06+00:00",
+      "onward_stop_expected_arrival_time_6": "2021-12-12T08:04:32+00:00",
+      "onward_stop_expected_arrival_time_7": null,
+      "onward_stop_expected_arrival_time_8": null,
+      "onward_stop_expected_arrival_time_9": null,
+      "onward_stop_id_1": "Broad St & Capitol Ave",
+      "onward_stop_id_10": null,
+      "onward_stop_id_2": "Broad St & Plymouth Ave",
+      "onward_stop_id_3": "San Jose Ave & Farallones St",
+      "onward_stop_id_4": "San Jose Ave & Lakeview Ave",
+      "onward_stop_id_5": "San Jose Ave & Mt Vernon Ave",
+      "onward_stop_id_6": "San Jose Ave & Niagra Ave",
+      "onward_stop_id_7": null,
+      "onward_stop_id_8": null,
+      "onward_stop_id_9": null,
+      "onward_stop_name_1": "13716",
+      "onward_stop_name_10": null,
+      "onward_stop_name_2": "13719",
+      "onward_stop_name_3": "16259",
+      "onward_stop_name_4": "16266",
+      "onward_stop_name_5": "16268",
+      "onward_stop_name_6": "16269",
+      "onward_stop_name_7": null,
+      "onward_stop_name_8": null,
+      "onward_stop_name_9": null,
+      "route_id": "M",
+      "route_long_name": "OCEAN VIEW",
+      "time_recorded": "2021-12-12T07:57:44+00:00",
+      "trip_date": "2021-12-11",
+      "trip_id": "10421801",
+      "vehicle_id": "1488",
+      "vehicle_location": "POINT(-122.462669 37.7140388)",
+      "vehicle_location_lat": 37.71404,
+      "vehicle_location_lon": -122.46267
+    },
+    {
+      "direction": "IB",
+      "next_stop_aimed_arrival_time": "2021-12-12T07:57:31+00:00",
+      "next_stop_aimed_departure_time": "2021-12-12T07:57:31+00:00",
+      "next_stop_expected_arrival_time": "2021-12-12T07:57:47+00:00",
+      "next_stop_expected_departure_time": null,
+      "next_stop_id": "17301",
+      "next_stop_name": "O'Farrell St&Taylor St",
+      "onward_stop_aimed_arrival_time_1": "2021-12-12T07:59:00+00:00",
+      "onward_stop_aimed_arrival_time_10": null,
+      "onward_stop_aimed_arrival_time_2": "2021-12-12T08:00:25+00:00",
+      "onward_stop_aimed_arrival_time_3": "2021-12-12T08:02:00+00:00",
+      "onward_stop_aimed_arrival_time_4": "2021-12-12T08:04:46+00:00",
+      "onward_stop_aimed_arrival_time_5": "2021-12-12T08:06:22+00:00",
+      "onward_stop_aimed_arrival_time_6": null,
+      "onward_stop_aimed_arrival_time_7": null,
+      "onward_stop_aimed_arrival_time_8": null,
+      "onward_stop_aimed_arrival_time_9": null,
+      "onward_stop_aimed_departure_time_1": "2021-12-12T07:59:00+00:00",
+      "onward_stop_aimed_departure_time_10": null,
+      "onward_stop_aimed_departure_time_2": "2021-12-12T08:00:25+00:00",
+      "onward_stop_aimed_departure_time_3": "2021-12-12T08:02:00+00:00",
+      "onward_stop_aimed_departure_time_4": "2021-12-12T08:04:46+00:00",
+      "onward_stop_aimed_departure_time_5": "2021-12-12T08:06:22+00:00",
+      "onward_stop_aimed_departure_time_6": null,
+      "onward_stop_aimed_departure_time_7": null,
+      "onward_stop_aimed_departure_time_8": null,
+      "onward_stop_aimed_departure_time_9": null,
+      "onward_stop_expected_arrival_time_1": "2021-12-12T07:59:09+00:00",
+      "onward_stop_expected_arrival_time_10": null,
+      "onward_stop_expected_arrival_time_2": "2021-12-12T08:01:19+00:00",
+      "onward_stop_expected_arrival_time_3": "2021-12-12T08:02:25+00:00",
+      "onward_stop_expected_arrival_time_4": "2021-12-12T08:03:51+00:00",
+      "onward_stop_expected_arrival_time_5": "2021-12-12T08:05:04+00:00",
+      "onward_stop_expected_arrival_time_6": null,
+      "onward_stop_expected_arrival_time_7": null,
+      "onward_stop_expected_arrival_time_8": null,
+      "onward_stop_expected_arrival_time_9": null,
+      "onward_stop_id_1": "O'Farrell St & Powell St",
+      "onward_stop_id_10": null,
+      "onward_stop_id_2": "O'Farrell St & Grant Ave",
+      "onward_stop_id_3": "Market St & 3rd St",
+      "onward_stop_id_4": "Market St & 1st St",
+      "onward_stop_id_5": "Beale St & Mission St",
+      "onward_stop_id_6": null,
+      "onward_stop_id_7": null,
+      "onward_stop_id_8": null,
+      "onward_stop_id_9": null,
+      "onward_stop_name_1": "15817",
+      "onward_stop_name_10": null,
+      "onward_stop_name_2": "15810",
+      "onward_stop_name_3": "15641",
+      "onward_stop_name_4": "15638",
+      "onward_stop_name_5": "13089",
+      "onward_stop_name_6": null,
+      "onward_stop_name_7": null,
+      "onward_stop_name_8": null,
+      "onward_stop_name_9": null,
+      "route_id": "38",
+      "route_long_name": "GEARY",
+      "time_recorded": "2021-12-12T07:57:44+00:00",
+      "trip_date": "2021-12-11",
+      "trip_id": "10341911",
+      "vehicle_id": "6517",
+      "vehicle_location": "POINT(-122.411766 37.7859344)",
+      "vehicle_location_lat": 37.785934,
+      "vehicle_location_lon": -122.411766
+    }
+  ]
+}

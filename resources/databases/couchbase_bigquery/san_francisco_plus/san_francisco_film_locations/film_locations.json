@@ -1,0 +1,303 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "actor_1": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Al Jolson",
+              "Charles Chaplin",
+              "Clark Gable",
+              "William Powell",
+              "Zasu Pitts"
+            ],
+            "type": "string"
+          },
+          "actor_2": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Edna Purviance",
+              "Gibson Gowland",
+              "Jeanette MacDonald",
+              "May McAvoy",
+              "Myrna Loy"
+            ],
+            "type": "string"
+          },
+          "actor_3": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "James Stewart",
+                "Jean Hersholt",
+                "Joel McCrea",
+                "Spencer Tracy",
+                "Warner Oland"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "director": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alan Crosland",
+              "Charles Chaplin",
+              "Eric von Stroheim",
+              "Howard Hawks",
+              "W.S. Van Dyke"
+            ],
+            "type": "string"
+          },
+          "distributor": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "General Film Company",
+              "Metro-Goldwyn Mayer",
+              "Metro-Goldwyn-Mayer (MGM)",
+              "United Artists",
+              "Warner Bros. Pictures"
+            ],
+            "type": "string"
+          },
+          "fun_facts": {
+            "#docs": [
+              6,
+              4
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "In 1887, the Cliff House was s...",
+                "The Barbary Coast was a red-li...",
+                "The Tower was funded by a gift...",
+                "The dome of SF's City Hall is ..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "locations": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Bush and Sutter Streets",
+                "Coffee Dan's (O'Farrell Street...",
+                "Coit Tower",
+                "Hayes Street at Laguna",
+                "The Barbary Coast"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "production_company": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Metro-Goldwyn Mayer",
+              "Metro-Goldwyn-Mayer (MGM)",
+              "The Essanay Film Manufacturing...",
+              "The Samuel Goldwyn Company",
+              "Warner Bros. Pictures"
+            ],
+            "type": "string"
+          },
+          "release_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1915,
+              1924,
+              1927,
+              1935,
+              1936
+            ],
+            "type": "number"
+          },
+          "title": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A Jitney Elopement",
+              "After the Thin Man",
+              "Greed",
+              "San Francisco",
+              "The Jazz Singer"
+            ],
+            "type": "string"
+          },
+          "writer": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Alfred A. Cohn",
+              "Anita Loos",
+              "Charles Chaplin",
+              "Eric von Stroheim",
+              "Frances Goodrich"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "film_locations::3",
+                  "film_locations::4",
+                  "film_locations::5",
+                  "film_locations::7",
+                  "film_locations::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "film_locations::3"
+              },
+              {
+                "id": "film_locations::4"
+              },
+              {
+                "id": "film_locations::5"
+              },
+              {
+                "id": "film_locations::7"
+              },
+              {
+                "id": "film_locations::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "actor_1": "Clark Gable",
+      "actor_2": "Jeanette MacDonald",
+      "actor_3": "Spencer Tracy",
+      "director": "W.S. Van Dyke",
+      "distributor": "Metro-Goldwyn Mayer",
+      "fun_facts": "The Barbary Coast was a red-light district that was largely destroyed in the 1906 earthquake. Though some of the establishments were rebuilt after the earthquake, an anti-vice campaign put the establishments out of business.",
+      "locations": "The Barbary Coast",
+      "production_company": "Metro-Goldwyn Mayer",
+      "release_year": 1936,
+      "title": "San Francisco",
+      "writer": "Anita Loos"
+    },
+    {
+      "actor_1": "Mariam Hopkins",
+      "actor_2": "Edward G. Robinson",
+      "actor_3": "Joel McCrea",
+      "director": "Howard Hawks",
+      "distributor": "United Artists",
+      "fun_facts": null,
+      "locations": null,
+      "production_company": "The Samuel Goldwyn Company",
+      "release_year": 1935,
+      "title": "Barbary Coast",
+      "writer": "Ben Hecht"
+    },
+    {
+      "actor_1": "Zasu Pitts",
+      "actor_2": "Gibson Gowland",
+      "actor_3": "Jean Hersholt",
+      "director": "Eric von Stroheim",
+      "distributor": "Metro-Goldwyn-Mayer (MGM)",
+      "fun_facts": "In 1887, the Cliff House was severely damaged when the schooner Parallel, abandoned and loaded with dynamite, ran aground on the rocks below.",
+      "locations": "Cliff House (1090 Point Lobos Avenue)",
+      "production_company": "Metro-Goldwyn-Mayer (MGM)",
+      "release_year": 1924,
+      "title": "Greed",
+      "writer": "Eric von Stroheim"
+    },
+    {
+      "actor_1": "Clark Gable",
+      "actor_2": "Jeanette MacDonald",
+      "actor_3": "Spencer Tracy",
+      "director": "W.S. Van Dyke",
+      "distributor": "Metro-Goldwyn Mayer",
+      "fun_facts": "The dome of SF's City Hall is almost a foot taller than that of the US Capitol Building. In 1954, Joe DiMaggio and Marilyn Monroe married at the Beaux Arts-style building.",
+      "locations": "City Hall",
+      "production_company": "Metro-Goldwyn Mayer",
+      "release_year": 1936,
+      "title": "San Francisco",
+      "writer": "Anita Loos"
+    },
+    {
+      "actor_1": "William Powell",
+      "actor_2": "Myrna Loy",
+      "actor_3": "James Stewart",
+      "director": "W.S. Van Dyke",
+      "distributor": "Metro-Goldwyn Mayer",
+      "fun_facts": "The Tower was funded by a gift bequeathed by Lillie Hitchcock Coit, a socialite who reportedly liked to chase fires. Though the tower resembles a firehose nozzle, it was not designed this way.",
+      "locations": "Coit Tower",
+      "production_company": "Metro-Goldwyn Mayer",
+      "release_year": 1936,
+      "title": "After the Thin Man",
+      "writer": "Frances Goodrich"
+    }
+  ]
+}

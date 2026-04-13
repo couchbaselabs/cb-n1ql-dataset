@@ -1,0 +1,821 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "AnatomicRegion": {
+            "#docs": [
+              326,
+              674
+            ],
+            "%docs": [
+              32.59,
+              67.4
+            ],
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 522,
+                "%docs": 77.44,
+                "nestingDepth": 1,
+                "samples": [
+                  "Breast",
+                  "Entire body",
+                  "Liver",
+                  "Lung",
+                  "Peripheral zone of the prostat..."
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 522,
+                "%docs": 77.44,
+                "nestingDepth": 1,
+                "samples": [
+                  "10200004",
+                  "39607008",
+                  "76752008",
+                  "T-04000",
+                  "T-28000"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 522,
+                "%docs": 77.44,
+                "nestingDepth": 1,
+                "samples": [
+                  "SCT",
+                  "SRT"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              [
+                null
+              ],
+              [
+                {
+                  "CodeMeaning": "Breast",
+                  "CodeValue": "76752008",
+                  "CodingSchemeDesignator": "SCT"
+                },
+                {
+                  "CodeMeaning": "Breast",
+                  "CodeValue": "T-04000",
+                  "CodingSchemeDesignator": "SRT"
+                },
+                {
+                  "CodeMeaning": "Liver",
+                  "CodeValue": "10200004",
+                  "CodingSchemeDesignator": "SCT"
+                },
+                {
+                  "CodeMeaning": "Lung",
+                  "CodeValue": "39607008",
+                  "CodingSchemeDesignator": "SCT"
+                },
+                {
+                  "CodeMeaning": "Lung",
+                  "CodeValue": "T-28000",
+                  "CodingSchemeDesignator": "SRT"
+                }
+              ]
+            ],
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "AnatomicRegionModifier": {
+            "#docs": [
+              768,
+              232
+            ],
+            "%docs": [
+              76.8,
+              23.2
+            ],
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 232,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Left",
+                  "Right",
+                  "Right and left"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 232,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "51440002",
+                  "G-A100",
+                  "G-A101"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 232,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "SCT",
+                  "SRT"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              [
+                null
+              ],
+              [
+                {
+                  "CodeMeaning": "Left",
+                  "CodeValue": "G-A101",
+                  "CodingSchemeDesignator": "SRT"
+                },
+                {
+                  "CodeMeaning": "Right",
+                  "CodeValue": "G-A100",
+                  "CodingSchemeDesignator": "SRT"
+                },
+                {
+                  "CodeMeaning": "Right and left",
+                  "CodeValue": "51440002",
+                  "CodingSchemeDesignator": "SCT"
+                }
+              ]
+            ],
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "FrameOfReferenceUID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.3.6.1.4.1.14519.5.2.1.531320...",
+              "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+              "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+              "1.3.6.1.4.1.14519.5.2.1.9203.8...",
+              "1.3.6.1.4.1.9590.100.1.2.24267..."
+            ],
+            "type": "string"
+          },
+          "PatientID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "ACRIN-6698-293142",
+              "ACRIN-6698-597907",
+              "Breast_MRI_561",
+              "CRLM-CT-1096",
+              "interobs12"
+            ],
+            "type": "string"
+          },
+          "SOPInstanceUID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.2.276.0.7230010.3.1.4.832332...",
+              "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+              "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+              "1.3.6.1.4.1.14519.5.2.1.889728...",
+              "1.3.6.1.4.1.14519.5.2.1.9203.8..."
+            ],
+            "type": "string"
+          },
+          "SegmentAlgorithmName": {
+            "#docs": [
+              975,
+              25
+            ],
+            "%docs": [
+              97.5,
+              2.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Random Walker Algorithm"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "SegmentAlgorithmType": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AUTOMATIC",
+              "MANUAL",
+              "SEMIAUTOMATED",
+              "SEMIAUTOMATIC"
+            ],
+            "type": "string"
+          },
+          "SegmentNumber": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              4,
+              5,
+              6,
+              8
+            ],
+            "type": "number"
+          },
+          "SegmentedPropertyCategory": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "CodeMeaning": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "Anatomical Structure",
+                  "Morphological Abnormal Structu...",
+                  "Morphologically Altered Struct...",
+                  "Spatial and Relational Concept",
+                  "Tissue"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "123037004",
+                  "49755003",
+                  "85756007",
+                  "M-01000",
+                  "T-D0050"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "NCIt",
+                  "SCT",
+                  "SRT"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "CodeMeaning": "Morphological Abnormal Structure",
+                "CodeValue": "M-01000",
+                "CodingSchemeDesignator": "SRT"
+              },
+              {
+                "CodeMeaning": "Morphologically Altered Structure",
+                "CodeValue": "49755003",
+                "CodingSchemeDesignator": "SCT"
+              },
+              {
+                "CodeMeaning": "Morphologically Altered Structure",
+                "CodeValue": "M-01000",
+                "CodingSchemeDesignator": "SRT"
+              },
+              {
+                "CodeMeaning": "Tissue",
+                "CodeValue": "85756007",
+                "CodingSchemeDesignator": "SCT"
+              },
+              {
+                "CodeMeaning": "Tissue",
+                "CodeValue": "T-D0050",
+                "CodingSchemeDesignator": "SRT"
+              }
+            ],
+            "type": "object"
+          },
+          "SegmentedPropertyType": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "AnatomicRegionModifierSequence": {
+                "#docs": 1000,
+                "%docs": 100,
+                "items": {},
+                "maxItems": 0,
+                "minItems": 0,
+                "nestingDepth": 1,
+                "sampleSize": 0,
+                "samples": [
+                  []
+                ],
+                "type": "array"
+              },
+              "CodeMeaning": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "DWI Tumor",
+                  "Fatty tissue of breast",
+                  "Mass",
+                  "Neoplasm, Primary",
+                  "Vein"
+                ],
+                "type": "string"
+              },
+              "CodeValue": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "29092000",
+                  "4147007",
+                  "89749009",
+                  "B-6000",
+                  "M-80003"
+                ],
+                "type": "string"
+              },
+              "CodingSchemeDesignator": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "DCM",
+                  "MRSC",
+                  "NCIt",
+                  "SCT",
+                  "SRT"
+                ],
+                "type": "string"
+              },
+              "SegmentedPropertyTypeModifierCodeSequence": {
+                "#docs": 1000,
+                "%docs": 100,
+                "items": {},
+                "maxItems": 1,
+                "minItems": 0,
+                "nestingDepth": 1,
+                "sampleSize": 0,
+                "samples": [
+                  [],
+                  [
+                    {
+                      "CodeMeaning": "Left",
+                      "CodeValue": "7771000",
+                      "CodingSchemeDesignator": "SCT"
+                    }
+                  ],
+                  [
+                    {
+                      "CodeMeaning": "Right",
+                      "CodeValue": "24028007",
+                      "CodingSchemeDesignator": "SCT"
+                    }
+                  ],
+                  [
+                    {
+                      "CodeMeaning": "Right and left",
+                      "CodeValue": "51440002",
+                      "CodingSchemeDesignator": "SCT"
+                    }
+                  ],
+                  [
+                    {
+                      "CodeMeaning": "Right and left",
+                      "CodeValue": "G-A102",
+                      "CodingSchemeDesignator": "SRT"
+                    }
+                  ]
+                ],
+                "type": "array"
+              }
+            },
+            "samples": [
+              {
+                "AnatomicRegionModifierSequence": [],
+                "CodeMeaning": "DWI Tumor",
+                "CodeValue": "B-6000",
+                "CodingSchemeDesignator": "MRSC",
+                "SegmentedPropertyTypeModifierCodeSequence": []
+              },
+              {
+                "AnatomicRegionModifierSequence": [],
+                "CodeMeaning": "Fatty tissue of breast",
+                "CodeValue": "89749009",
+                "CodingSchemeDesignator": "SCT",
+                "SegmentedPropertyTypeModifierCodeSequence": []
+              },
+              {
+                "AnatomicRegionModifierSequence": [],
+                "CodeMeaning": "Mass",
+                "CodeValue": "4147007",
+                "CodingSchemeDesignator": "SCT",
+                "SegmentedPropertyTypeModifierCodeSequence": []
+              },
+              {
+                "AnatomicRegionModifierSequence": [],
+                "CodeMeaning": "Neoplasm, Primary",
+                "CodeValue": "M-80003",
+                "CodingSchemeDesignator": "SRT",
+                "SegmentedPropertyTypeModifierCodeSequence": []
+              },
+              {
+                "AnatomicRegionModifierSequence": [],
+                "CodeMeaning": "Vein",
+                "CodeValue": "29092000",
+                "CodingSchemeDesignator": "SCT",
+                "SegmentedPropertyTypeModifierCodeSequence": []
+              }
+            ],
+            "type": "object"
+          },
+          "SeriesInstanceUID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.2.276.0.7230010.3.1.3.832332...",
+              "1.3.6.1.4.1.14519.5.2.1.193164...",
+              "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+              "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+              "1.3.6.1.4.1.14519.5.2.1.9203.8..."
+            ],
+            "type": "string"
+          },
+          "StudyInstanceUID": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1.3.6.1.4.1.14519.5.2.1.220169...",
+              "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+              "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+              "1.3.6.1.4.1.14519.5.2.1.9203.8...",
+              "1.3.6.1.4.1.9590.100.1.2.99918..."
+            ],
+            "type": "string"
+          },
+          "TrackingID": {
+            "#docs": [
+              859,
+              141
+            ],
+            "%docs": [
+              85.9,
+              14.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Nodule 1",
+                "Nodule 2",
+                "Nodule 4",
+                "Nodule 5",
+                "Nodule 6"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "TrackingUID": {
+            "#docs": [
+              859,
+              141
+            ],
+            "%docs": [
+              85.9,
+              14.1
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2.25.1157637622908478219290990...",
+                "2.25.1321565076195726520839243...",
+                "2.25.3728488536294526866080031...",
+                "2.25.4314981337663187917854613...",
+                "2.25.7145073494563694185994596..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "segmented_SeriesInstanceUID": {
+            "#docs": [
+              25,
+              975
+            ],
+            "%docs": [
+              2.5,
+              97.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1.3.6.1.4.1.14519.5.2.1.318473...",
+                "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+                "1.3.6.1.4.1.14519.5.2.1.7695.4...",
+                "1.3.6.1.4.1.14519.5.2.1.9203.8...",
+                "1.3.6.1.4.1.9590.100.1.2.12607..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "viewer_url": {
+            "#docs": [
+              25,
+              975
+            ],
+            "%docs": [
+              2.5,
+              97.5
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "https://viewer.imaging.datacom...",
+                "https://viewer.imaging.datacom...",
+                "https://viewer.imaging.datacom...",
+                "https://viewer.imaging.datacom...",
+                "https://viewer.imaging.datacom..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "segmentations::16523",
+                  "segmentations::17977",
+                  "segmentations::22691",
+                  "segmentations::24280",
+                  "segmentations::9535"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "segmentations::16523"
+              },
+              {
+                "id": "segmentations::17977"
+              },
+              {
+                "id": "segmentations::22691"
+              },
+              {
+                "id": "segmentations::24280"
+              },
+              {
+                "id": "segmentations::9535"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AnatomicRegion": {
+        "CodeMeaning": "Breast",
+        "CodeValue": "T-04000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "AnatomicRegionModifier": {
+        "CodeMeaning": "Right",
+        "CodeValue": "G-A100",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "FrameOfReferenceUID": "1.3.6.1.4.1.14519.5.2.1.261480066168657499846764993861911000254",
+      "PatientID": "ISPY2-111881",
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.45374025645154763783741627126081487035",
+      "SegmentAlgorithmName": "Background Threshold, PE threshold and connectivity filter",
+      "SegmentAlgorithmType": "SEMIAUTOMATIC",
+      "SegmentNumber": 1,
+      "SegmentedPropertyCategory": {
+        "CodeMeaning": "Tissue",
+        "CodeValue": "T-D0050",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "SegmentedPropertyType": {
+        "AnatomicRegionModifierSequence": [],
+        "CodeMeaning": "Breast",
+        "CodeValue": "B-1000",
+        "CodingSchemeDesignator": "MRSC",
+        "SegmentedPropertyTypeModifierCodeSequence": []
+      },
+      "SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.3603814139041346234948972500522323016",
+      "StudyInstanceUID": "1.3.6.1.4.1.14519.5.2.1.10416371496422664671247986238222471399",
+      "TrackingID": null,
+      "TrackingUID": null,
+      "segmented_SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.58621289242420164344980232003936509787",
+      "viewer_url": "https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.10416371496422664671247986238222471399?seriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.3603814139041346234948972500522323016,1.3.6.1.4.1.14519.5.2.1.58621289242420164344980232003936509787"
+    },
+    {
+      "AnatomicRegion": {
+        "CodeMeaning": "Breast",
+        "CodeValue": "T-04000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "AnatomicRegionModifier": {
+        "CodeMeaning": "Left",
+        "CodeValue": "G-A101",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "FrameOfReferenceUID": "1.3.6.1.4.1.14519.5.2.1.87138618879850693993532620436492766565",
+      "PatientID": "ISPY2-130892",
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.169745975794360610403815407634791012261",
+      "SegmentAlgorithmName": "Background Threshold, PE threshold and connectivity filter",
+      "SegmentAlgorithmType": "SEMIAUTOMATIC",
+      "SegmentNumber": 1,
+      "SegmentedPropertyCategory": {
+        "CodeMeaning": "Tissue",
+        "CodeValue": "T-D0050",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "SegmentedPropertyType": {
+        "AnatomicRegionModifierSequence": [],
+        "CodeMeaning": "Breast",
+        "CodeValue": "B-1000",
+        "CodingSchemeDesignator": "MRSC",
+        "SegmentedPropertyTypeModifierCodeSequence": []
+      },
+      "SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1258903923277238017750094010664387932",
+      "StudyInstanceUID": "1.3.6.1.4.1.14519.5.2.1.100757722149316970062817571467908294650",
+      "TrackingID": null,
+      "TrackingUID": null,
+      "segmented_SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.51872235031144187031702005224589814024",
+      "viewer_url": "https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.100757722149316970062817571467908294650?seriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.1258903923277238017750094010664387932,1.3.6.1.4.1.14519.5.2.1.51872235031144187031702005224589814024"
+    },
+    {
+      "AnatomicRegion": {
+        "CodeMeaning": "Breast",
+        "CodeValue": "T-04000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "AnatomicRegionModifier": {
+        "CodeMeaning": "Right",
+        "CodeValue": "G-A100",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "FrameOfReferenceUID": "1.3.6.1.4.1.14519.5.2.1.151425565341506644914830975425725007220",
+      "PatientID": "ISPY2-284355",
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.319946747480586929708544519826925658179",
+      "SegmentAlgorithmName": "Background Threshold, PE threshold and connectivity filter",
+      "SegmentAlgorithmType": "SEMIAUTOMATIC",
+      "SegmentNumber": 1,
+      "SegmentedPropertyCategory": {
+        "CodeMeaning": "Tissue",
+        "CodeValue": "T-D0050",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "SegmentedPropertyType": {
+        "AnatomicRegionModifierSequence": [],
+        "CodeMeaning": "Breast",
+        "CodeValue": "B-1000",
+        "CodingSchemeDesignator": "MRSC",
+        "SegmentedPropertyTypeModifierCodeSequence": []
+      },
+      "SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.20638358800104318409650548536405036453",
+      "StudyInstanceUID": "1.3.6.1.4.1.14519.5.2.1.112479575810721429293564495488555663391",
+      "TrackingID": null,
+      "TrackingUID": null,
+      "segmented_SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.7151650115279825342104731259058267083",
+      "viewer_url": "https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.112479575810721429293564495488555663391?seriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.20638358800104318409650548536405036453,1.3.6.1.4.1.14519.5.2.1.7151650115279825342104731259058267083"
+    },
+    {
+      "AnatomicRegion": {
+        "CodeMeaning": "Breast",
+        "CodeValue": "T-04000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "AnatomicRegionModifier": {
+        "CodeMeaning": "Right",
+        "CodeValue": "G-A100",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "FrameOfReferenceUID": "1.3.6.1.4.1.14519.5.2.1.41524111560919564191040389066800316090",
+      "PatientID": "ISPY2-146033",
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.140552433298117465482954826703102353981",
+      "SegmentAlgorithmName": "Background Threshold, PE threshold and connectivity filter",
+      "SegmentAlgorithmType": "SEMIAUTOMATIC",
+      "SegmentNumber": 1,
+      "SegmentedPropertyCategory": {
+        "CodeMeaning": "Tissue",
+        "CodeValue": "T-D0050",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "SegmentedPropertyType": {
+        "AnatomicRegionModifierSequence": [],
+        "CodeMeaning": "Breast",
+        "CodeValue": "B-1000",
+        "CodingSchemeDesignator": "MRSC",
+        "SegmentedPropertyTypeModifierCodeSequence": []
+      },
+      "SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.62282949206920572151428398421114782917",
+      "StudyInstanceUID": "1.3.6.1.4.1.14519.5.2.1.8702661074293194852208922554949042228",
+      "TrackingID": null,
+      "TrackingUID": null,
+      "segmented_SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.263865588452272628625648793348772239191",
+      "viewer_url": "https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.8702661074293194852208922554949042228?seriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.62282949206920572151428398421114782917,1.3.6.1.4.1.14519.5.2.1.263865588452272628625648793348772239191"
+    },
+    {
+      "AnatomicRegion": {
+        "CodeMeaning": "Breast",
+        "CodeValue": "T-04000",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "AnatomicRegionModifier": {
+        "CodeMeaning": "Left",
+        "CodeValue": "G-A101",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "FrameOfReferenceUID": "1.3.6.1.4.1.14519.5.2.1.117083568105518620975683818560554422254",
+      "PatientID": "ISPY2-347516",
+      "SOPInstanceUID": "1.3.6.1.4.1.14519.5.2.1.110993018748162967579812048217055431928",
+      "SegmentAlgorithmName": "Background Threshold, PE threshold and connectivity filter",
+      "SegmentAlgorithmType": "SEMIAUTOMATIC",
+      "SegmentNumber": 1,
+      "SegmentedPropertyCategory": {
+        "CodeMeaning": "Tissue",
+        "CodeValue": "T-D0050",
+        "CodingSchemeDesignator": "SRT"
+      },
+      "SegmentedPropertyType": {
+        "AnatomicRegionModifierSequence": [],
+        "CodeMeaning": "Breast",
+        "CodeValue": "B-1000",
+        "CodingSchemeDesignator": "MRSC",
+        "SegmentedPropertyTypeModifierCodeSequence": []
+      },
+      "SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.1748563242453151518803461753078425409",
+      "StudyInstanceUID": "1.3.6.1.4.1.14519.5.2.1.101444770972221822202280461481322062539",
+      "TrackingID": null,
+      "TrackingUID": null,
+      "segmented_SeriesInstanceUID": "1.3.6.1.4.1.14519.5.2.1.274817946215965465726188577359398567067",
+      "viewer_url": "https://viewer.imaging.datacommons.cancer.gov/viewer/1.3.6.1.4.1.14519.5.2.1.101444770972221822202280461481322062539?seriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.1748563242453151518803461753078425409,1.3.6.1.4.1.14519.5.2.1.274817946215965465726188577359398567067"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`date` = \"2020-12-31\", `footnote_codes` = \"nan\", `period` = \"A01\", `year` = 2020",
+        "properties": {
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2020-12-31"
+            ],
+            "type": "string"
+          },
+          "footnote_codes": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "nan"
+            ],
+            "type": "string"
+          },
+          "period": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A01"
+            ],
+            "type": "string"
+          },
+          "series_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "WMU00217801020000003530310001",
+              "WMU00217801020000003530312601",
+              "WMU28000001020000003530312601",
+              "WMU37000031020000003530312601",
+              "WMU37000031020000003530312602"
+            ],
+            "type": "string"
+          },
+          "series_title": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Average hourly wage for waiter...",
+              "Average hourly wage for waiter...",
+              "Average hourly wage for waiter...",
+              "Average hourly wage for waiter...",
+              "Average hourly wage for waiter..."
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8.55,
+              8.56,
+              8.59,
+              8.62,
+              8.64
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2020
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "wm::0",
+                  "wm::1",
+                  "wm::2",
+                  "wm::5",
+                  "wm::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "wm::0"
+              },
+              {
+                "id": "wm::1"
+              },
+              {
+                "id": "wm::2"
+              },
+              {
+                "id": "wm::5"
+              },
+              {
+                "id": "wm::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "date": "2020-12-31",
+      "footnote_codes": "nan",
+      "period": "A01",
+      "series_id": "WMU37000031020000003530310001",
+      "series_title": "Average hourly wage for waiters and waitresses, in Piedmont North Carolina nonmetropolitan area, Level 01",
+      "value": 8.59,
+      "year": 2020
+    },
+    {
+      "date": "2020-12-31",
+      "footnote_codes": "nan",
+      "period": "A01",
+      "series_id": "WMU00217801020000003530312601",
+      "series_title": "Average hourly wage for waiters and waitresses, part-time, in Evansville, IN-KY, Level 01",
+      "value": 8.55,
+      "year": 2020
+    },
+    {
+      "date": "2020-12-31",
+      "footnote_codes": "nan",
+      "period": "A01",
+      "series_id": "WMU37000031020000003530312601",
+      "series_title": "Average hourly wage for waiters and waitresses, part-time, in Piedmont North Carolina nonmetropolitan area, Level 01",
+      "value": 8.56,
+      "year": 2020
+    },
+    {
+      "date": "2020-12-31",
+      "footnote_codes": "nan",
+      "period": "A01",
+      "series_id": "WMU22000031020000003720120001",
+      "series_title": "Average hourly wage for maids and housekeeping cleaners, in Northeast Louisiana nonmetropolitan area, Level 01",
+      "value": 8.62,
+      "year": 2020
+    },
+    {
+      "date": "2020-12-31",
+      "footnote_codes": "nan",
+      "period": "A01",
+      "series_id": "WMU37000031020000003530312602",
+      "series_title": "Average hourly wage for waiters and waitresses, part-time, in Piedmont North Carolina nonmetropolitan area, Level 02",
+      "value": 8.64,
+      "year": 2020
+    }
+  ]
+}

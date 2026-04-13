@@ -1,0 +1,179 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`footnote_codes` = \"nan\"",
+        "properties": {
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1946-12-31",
+              "1947-12-31",
+              "1948-01-01"
+            ],
+            "type": "string"
+          },
+          "footnote_codes": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "nan"
+            ],
+            "type": "string"
+          },
+          "period": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "A01",
+              "M01"
+            ],
+            "type": "string"
+          },
+          "series_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "LNS11000024",
+              "LNS12000164",
+              "LNS13025702",
+              "LNU00000154",
+              "LNU03000327"
+            ],
+            "type": "string"
+          },
+          "series_title": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(Seas) Civilian Labor Force Le...",
+              "(Seas) Employment Level - 25-3...",
+              "(Seas) Of Total Unemployed, Pe...",
+              "(Unadj) Population Level - 18-...",
+              "(Unadj) Unemployment Level - 2..."
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              9.1,
+              163,
+              1905,
+              10082,
+              55593
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1946,
+              1947,
+              1948
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "unemployment_cps::2",
+                  "unemployment_cps::4",
+                  "unemployment_cps::5",
+                  "unemployment_cps::7",
+                  "unemployment_cps::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "unemployment_cps::2"
+              },
+              {
+                "id": "unemployment_cps::4"
+              },
+              {
+                "id": "unemployment_cps::5"
+              },
+              {
+                "id": "unemployment_cps::7"
+              },
+              {
+                "id": "unemployment_cps::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "date": "1947-12-31",
+      "footnote_codes": "nan",
+      "period": "A01",
+      "series_id": "LNU05023554",
+      "series_title": "(unadj) Not in labor force - 14 years and over",
+      "value": 45850,
+      "year": 1947
+    },
+    {
+      "date": "1948-01-01",
+      "footnote_codes": "nan",
+      "period": "M01",
+      "series_id": "LNS12000014",
+      "series_title": "(Seas) Employment Level - 16-19 yrs., Women",
+      "value": 1769,
+      "year": 1948
+    },
+    {
+      "date": "1946-12-31",
+      "footnote_codes": "nan",
+      "period": "A01",
+      "series_id": "LNU04023554",
+      "series_title": "(Unadj) Unemployment rate - 14 years and over",
+      "value": 3.9,
+      "year": 1946
+    },
+    {
+      "date": "1948-01-01",
+      "footnote_codes": "nan",
+      "period": "M01",
+      "series_id": "LNS12300050",
+      "series_title": "(Seas) Employment-Population Ratio - 25 yrs. & over, Women",
+      "value": 28,
+      "year": 1948
+    },
+    {
+      "date": "1948-01-01",
+      "footnote_codes": "nan",
+      "period": "M01",
+      "series_id": "LNU00000154",
+      "series_title": "(Unadj) Population Level - 18-19 yrs., Men",
+      "value": 1905,
+      "year": 1948
+    }
+  ]
+}

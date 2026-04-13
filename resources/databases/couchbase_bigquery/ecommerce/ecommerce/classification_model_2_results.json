@@ -1,0 +1,375 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`channelGrouping` = \"Organic Search\", `deviceCategory` = \"desktop\", `medium` = \"organic\", `predicted_will_buy_on_return_visit` = 0, `will_buy_on_return_visit` = 0",
+        "properties": {
+          "bounces": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "channelGrouping": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Organic Search"
+            ],
+            "type": "string"
+          },
+          "country": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Algeria",
+              "China",
+              "France",
+              "United Kingdom",
+              "United States"
+            ],
+            "type": "string"
+          },
+          "deviceCategory": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "desktop"
+            ],
+            "type": "string"
+          },
+          "latest_ecommerce_progress": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              2
+            ],
+            "type": "number"
+          },
+          "medium": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "organic"
+            ],
+            "type": "string"
+          },
+          "pageviews": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              4
+            ],
+            "type": "number"
+          },
+          "predicted_will_buy_on_return_visit": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "predicted_will_buy_on_return_visit_probs": {
+            "#docs": 10,
+            "%docs": 100,
+            "items": {
+              "#docs": 20,
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "properties": {
+                "label": {
+                  "nestingDepth": 2,
+                  "type": "number"
+                },
+                "prob": {
+                  "nestingDepth": 2,
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "nestingDepth": 0,
+            "sampleSize": 0,
+            "samples": [
+              [
+                {
+                  "label": 1,
+                  "prob": 0.005052577106272613
+                },
+                {
+                  "label": 0,
+                  "prob": 0.9949474228937274
+                }
+              ],
+              [
+                {
+                  "label": 1,
+                  "prob": 0.00628555672342287
+                },
+                {
+                  "label": 0,
+                  "prob": 0.9937144432765771
+                }
+              ],
+              [
+                {
+                  "label": 1,
+                  "prob": 0.0067305160238551485
+                },
+                {
+                  "label": 0,
+                  "prob": 0.9932694839761449
+                }
+              ],
+              [
+                {
+                  "label": 1,
+                  "prob": 0.006927288242416253
+                },
+                {
+                  "label": 0,
+                  "prob": 0.9930727117575837
+                }
+              ],
+              [
+                {
+                  "label": 1,
+                  "prob": 0.013042697894138379
+                },
+                {
+                  "label": 0,
+                  "prob": 0.9869573021058616
+                }
+              ]
+            ],
+            "type": "array"
+          },
+          "source": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "aol",
+              "ask"
+            ],
+            "type": "string"
+          },
+          "time_on_site": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              30,
+              50,
+              74,
+              399
+            ],
+            "type": "number"
+          },
+          "unique_session_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "5058462368676868416-1499908457",
+              "7239412501820855280-1499201744",
+              "8515268164140442346-1499821254",
+              "9168679048978216092-1499245605",
+              "9765264964826089297-1499114058"
+            ],
+            "type": "string"
+          },
+          "will_buy_on_return_visit": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "classification_model_2_results...",
+                  "classification_model_2_results...",
+                  "classification_model_2_results...",
+                  "classification_model_2_results...",
+                  "classification_model_2_results..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "classification_model_2_results::1"
+              },
+              {
+                "id": "classification_model_2_results::4"
+              },
+              {
+                "id": "classification_model_2_results::5"
+              },
+              {
+                "id": "classification_model_2_results::7"
+              },
+              {
+                "id": "classification_model_2_results::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "bounces": 1,
+      "channelGrouping": "Organic Search",
+      "country": "Algeria",
+      "deviceCategory": "desktop",
+      "latest_ecommerce_progress": 0,
+      "medium": "organic",
+      "pageviews": 1,
+      "predicted_will_buy_on_return_visit": 0,
+      "predicted_will_buy_on_return_visit_probs": [
+        {
+          "label": 1,
+          "prob": 0.005052577106272613
+        },
+        {
+          "label": 0,
+          "prob": 0.9949474228937274
+        }
+      ],
+      "source": "ask",
+      "time_on_site": 0,
+      "unique_session_id": "9168679048978216092-1499245605",
+      "will_buy_on_return_visit": 0
+    },
+    {
+      "bounces": 1,
+      "channelGrouping": "Organic Search",
+      "country": "Algeria",
+      "deviceCategory": "desktop",
+      "latest_ecommerce_progress": 0,
+      "medium": "organic",
+      "pageviews": 1,
+      "predicted_will_buy_on_return_visit": 0,
+      "predicted_will_buy_on_return_visit_probs": [
+        {
+          "label": 1,
+          "prob": 0.005052577106272613
+        },
+        {
+          "label": 0,
+          "prob": 0.9949474228937274
+        }
+      ],
+      "source": "ask",
+      "time_on_site": 0,
+      "unique_session_id": "9536220745884523933-1501603578",
+      "will_buy_on_return_visit": 0
+    },
+    {
+      "bounces": 0,
+      "channelGrouping": "Organic Search",
+      "country": "United States",
+      "deviceCategory": "desktop",
+      "latest_ecommerce_progress": 0,
+      "medium": "organic",
+      "pageviews": 2,
+      "predicted_will_buy_on_return_visit": 0,
+      "predicted_will_buy_on_return_visit_probs": [
+        {
+          "label": 1,
+          "prob": 0.013042697894138379
+        },
+        {
+          "label": 0,
+          "prob": 0.9869573021058616
+        }
+      ],
+      "source": "ask",
+      "time_on_site": 399,
+      "unique_session_id": "5058462368676868416-1499908457",
+      "will_buy_on_return_visit": 0
+    },
+    {
+      "bounces": 0,
+      "channelGrouping": "Organic Search",
+      "country": "China",
+      "deviceCategory": "desktop",
+      "latest_ecommerce_progress": 0,
+      "medium": "organic",
+      "pageviews": 2,
+      "predicted_will_buy_on_return_visit": 0,
+      "predicted_will_buy_on_return_visit_probs": [
+        {
+          "label": 1,
+          "prob": 0.006927288242416253
+        },
+        {
+          "label": 0,
+          "prob": 0.9930727117575837
+        }
+      ],
+      "source": "ask",
+      "time_on_site": 74,
+      "unique_session_id": "8515268164140442346-1499821254",
+      "will_buy_on_return_visit": 0
+    },
+    {
+      "bounces": 0,
+      "channelGrouping": "Organic Search",
+      "country": "United States",
+      "deviceCategory": "desktop",
+      "latest_ecommerce_progress": 0,
+      "medium": "organic",
+      "pageviews": 2,
+      "predicted_will_buy_on_return_visit": 0,
+      "predicted_will_buy_on_return_visit_probs": [
+        {
+          "label": 1,
+          "prob": 0.012139064587584451
+        },
+        {
+          "label": 0,
+          "prob": 0.9878609354124156
+        }
+      ],
+      "source": "ask",
+      "time_on_site": 3,
+      "unique_session_id": "1975246996530624105-1501551347",
+      "will_buy_on_return_visit": 0
+    }
+  ]
+}

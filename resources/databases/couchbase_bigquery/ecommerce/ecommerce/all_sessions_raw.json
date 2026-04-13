@@ -1,0 +1,611 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`currencyCode` = \"USD\", `eCommerceAction_step` = 1, `eCommerceAction_type` = \"0\", `pagePathLevel1` = \"/storeitem.html\", `productPrice` = 0, `productVariant` = \"(not set)\", `type` = \"PAGE\", `v2ProductCategory` = \"(not set)\"",
+        "properties": {
+          "channelGrouping": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Affiliates",
+              "Direct",
+              "Display",
+              "Organic Search",
+              "Social"
+            ],
+            "type": "string"
+          },
+          "city": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Austin",
+              "Bogota",
+              "Goose Creek",
+              "Sydney",
+              "not available in demo dataset"
+            ],
+            "type": "string"
+          },
+          "country": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Australia",
+              "Colombia",
+              "Norway",
+              "United States"
+            ],
+            "type": "string"
+          },
+          "currencyCode": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "USD"
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "20170304",
+              "20170305",
+              "20170327",
+              "20170418",
+              "20170629"
+            ],
+            "type": "string"
+          },
+          "eCommerceAction_option": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "eCommerceAction_step": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "eCommerceAction_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0"
+            ],
+            "type": "string"
+          },
+          "fullVisitorId": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "087764313242225532",
+              "3180916602712601530",
+              "4784312403795214032",
+              "7478927596935085715",
+              "780799721992794759"
+            ],
+            "type": "string"
+          },
+          "itemQuantity": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "itemRevenue": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "pagePathLevel1": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "/storeitem.html"
+            ],
+            "type": "string"
+          },
+          "pageTitle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "pageviews": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              5,
+              7,
+              10
+            ],
+            "type": "number"
+          },
+          "productPrice": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "productQuantity": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "productRefundAmount": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "productRevenue": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "productSKU": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "9180793",
+              "9180833",
+              "9180840",
+              "9180842",
+              "9180844"
+            ],
+            "type": "string"
+          },
+          "productVariant": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(not set)"
+            ],
+            "type": "string"
+          },
+          "searchKeyword": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "sessionQualityDim": {
+            "#docs": [
+              9,
+              1
+            ],
+            "%docs": [
+              90,
+              10
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                7
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              150385,
+              173348,
+              1352591,
+              1435681
+            ],
+            "type": "number"
+          },
+          "timeOnSite": {
+            "#docs": [
+              4,
+              6
+            ],
+            "%docs": [
+              40,
+              60
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                212,
+                1151,
+                1263,
+                1353,
+                1840
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "totalTransactionRevenue": {
+            "#docs": [
+              9,
+              1
+            ],
+            "%docs": [
+              90,
+              10
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                37680000
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "transactionId": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "transactionRevenue": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "transactions": {
+            "#docs": [
+              9,
+              1
+            ],
+            "%docs": [
+              90,
+              10
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "PAGE"
+            ],
+            "type": "string"
+          },
+          "v2ProductCategory": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(not set)"
+            ],
+            "type": "string"
+          },
+          "v2ProductName": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "26 oz Double Wall Insulated Bo...",
+              "Gunmetal Roller Ball Pen",
+              "Maze Pen",
+              "Rubber Grip Ballpoint Pen 4 Pa...",
+              "Satin Black Ballpoint Pen"
+            ],
+            "type": "string"
+          },
+          "visitId": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1488654607,
+              1488703212,
+              1490660222,
+              1492543687,
+              1498796579
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "all_sessions_raw::0",
+                  "all_sessions_raw::1",
+                  "all_sessions_raw::6",
+                  "all_sessions_raw::7",
+                  "all_sessions_raw::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "all_sessions_raw::0"
+              },
+              {
+                "id": "all_sessions_raw::1"
+              },
+              {
+                "id": "all_sessions_raw::6"
+              },
+              {
+                "id": "all_sessions_raw::7"
+              },
+              {
+                "id": "all_sessions_raw::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "channelGrouping": "Display",
+      "city": "not available in demo dataset",
+      "country": "United States",
+      "currencyCode": "USD",
+      "date": "20170305",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "780799721992794759",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 5,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180842",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 1435681,
+      "timeOnSite": 1840,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Maze Pen",
+      "visitId": 1488703212
+    },
+    {
+      "channelGrouping": "Organic Search",
+      "city": "not available in demo dataset",
+      "country": "Norway",
+      "currencyCode": "USD",
+      "date": "20170725",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "3191331120052940349",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 15,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180838",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": 7,
+      "time": 294833,
+      "timeOnSite": 355,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Metal Texture Roller Pen",
+      "visitId": 1501026159
+    },
+    {
+      "channelGrouping": "Social",
+      "city": "not available in demo dataset",
+      "country": "United States",
+      "currencyCode": "USD",
+      "date": "20170301",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "5760915586630062463",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 51,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180840",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 173348,
+      "timeOnSite": 1263,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Satin Black Ballpoint Pen",
+      "visitId": 1488407180
+    },
+    {
+      "channelGrouping": "Direct",
+      "city": "Goose Creek",
+      "country": "United States",
+      "currencyCode": "USD",
+      "date": "20170418",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "7478927596935085715",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 2,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180833",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 0,
+      "timeOnSite": 1151,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Rubber Grip Ballpoint Pen 4 Pack",
+      "visitId": 1492543687
+    },
+    {
+      "channelGrouping": "Display",
+      "city": "not available in demo dataset",
+      "country": "United States",
+      "currencyCode": "USD",
+      "date": "20170305",
+      "eCommerceAction_option": null,
+      "eCommerceAction_step": 1,
+      "eCommerceAction_type": "0",
+      "fullVisitorId": "780799721992794759",
+      "itemQuantity": null,
+      "itemRevenue": null,
+      "pagePathLevel1": "/storeitem.html",
+      "pageTitle": null,
+      "pageviews": 5,
+      "productPrice": 0,
+      "productQuantity": null,
+      "productRefundAmount": null,
+      "productRevenue": null,
+      "productSKU": "9180844",
+      "productVariant": "(not set)",
+      "searchKeyword": null,
+      "sessionQualityDim": null,
+      "time": 0,
+      "timeOnSite": 1840,
+      "totalTransactionRevenue": null,
+      "transactionId": null,
+      "transactionRevenue": null,
+      "transactions": null,
+      "type": "PAGE",
+      "v2ProductCategory": "(not set)",
+      "v2ProductName": "Gunmetal Roller Ball Pen",
+      "visitId": 1488703212
+    }
+  ]
+}

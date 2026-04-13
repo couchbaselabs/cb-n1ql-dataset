@@ -1,0 +1,541 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 7,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "%docs": 100,
+        "Flavor": "",
+        "nestingDepth": 0,
+        "samples": [
+          "<binary (1007 b)>",
+          "<binary (990 b)>",
+          "<binary (990 b)>",
+          "<binary (1007 b)>",
+          "<binary (1007 b)>"
+        ],
+        "type": "binary"
+      },
+      {
+        "#docs": 3,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`call_final_disposition` = \"Other\", `city` = \"SF\", `final_priority` = 3, `number_of_alarms` = 1, `priority` = \"3\"",
+        "properties": {
+          "address": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "09TH AVE/LINCOLN WAY",
+              "35TH AVE/JUDAH ST",
+              "BALBOA ST/GREAT HWY"
+            ],
+            "type": "string"
+          },
+          "als_unit": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "available_timestamp": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2000-05-09T11:41:11",
+              "2005-12-30T10:51:08",
+              "2006-01-08T05:05:15"
+            ],
+            "type": "string"
+          },
+          "battalion": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "B02",
+              "B07"
+            ],
+            "type": "string"
+          },
+          "box": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "call_date": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2000-05-09",
+              "2005-12-30",
+              "2006-01-08"
+            ],
+            "type": "string"
+          },
+          "call_final_disposition": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Other"
+            ],
+            "type": "string"
+          },
+          "call_number": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1300075,
+              53640111,
+              60080231
+            ],
+            "type": "number"
+          },
+          "call_type": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Medical Incident",
+              "Water Rescue"
+            ],
+            "type": "string"
+          },
+          "call_type_group": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "city": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SF"
+            ],
+            "type": "string"
+          },
+          "dispatch_timestamp": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2000-05-09T10:40:12",
+              "2005-12-30T10:39:42",
+              "2006-01-08T04:52:24"
+            ],
+            "type": "string"
+          },
+          "entry_timestamp": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2000-05-09T10:35:41",
+              "2005-12-30T10:38:26",
+              "2006-01-08T04:51:54"
+            ],
+            "type": "string"
+          },
+          "final_priority": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3
+            ],
+            "type": "number"
+          },
+          "fire_prevention_district": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "7",
+              "8"
+            ],
+            "type": "string"
+          },
+          "hospital_timestamp": {
+            "#docs": [
+              2,
+              1
+            ],
+            "%docs": [
+              66.66,
+              33.33
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2000-05-09T11:16:13"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "incident_number": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              38714,
+              5098982,
+              6002271
+            ],
+            "type": "number"
+          },
+          "latitude": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37.760944,
+              37.765926,
+              37.775078
+            ],
+            "type": "number"
+          },
+          "location_geom": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "POINT(-122.466446 37.765926)",
+              "POINT(-122.49414 37.760944)",
+              "POINT(-122.51129 37.775078)"
+            ],
+            "type": "string"
+          },
+          "longitude": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -122.51129,
+              -122.49414,
+              -122.466446
+            ],
+            "type": "number"
+          },
+          "neighborhood_name": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Inner Sunset",
+              "Outer Richmond",
+              "Sunset/Parkside"
+            ],
+            "type": "string"
+          },
+          "number_of_alarms": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "on_scene_timestamp": {
+            "#docs": [
+              2,
+              1
+            ],
+            "%docs": [
+              66.66,
+              33.33
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2000-05-09T10:46:48"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "original_priority": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2",
+              "3",
+              "E"
+            ],
+            "type": "string"
+          },
+          "priority": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3"
+            ],
+            "type": "string"
+          },
+          "received_timestamp": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2000-05-09T10:33:07",
+              "2005-12-30T10:35:13",
+              "2006-01-08T04:50:41"
+            ],
+            "type": "string"
+          },
+          "response_timestamp": {
+            "#docs": [
+              2,
+              1
+            ],
+            "%docs": [
+              66.66,
+              33.33
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2000-05-09T10:40:54"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "row_id": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "001300075-M14",
+              "053640111-E18",
+              "060080231-D2"
+            ],
+            "type": "string"
+          },
+          "station_area": {
+            "#docs": [
+              1,
+              2
+            ],
+            "%docs": [
+              33.33,
+              66.66
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "23",
+                "34"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "supervisor_district": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "4",
+              "5"
+            ],
+            "type": "string"
+          },
+          "transport_timestamp": {
+            "#docs": [
+              2,
+              1
+            ],
+            "%docs": [
+              66.66,
+              33.33
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "2000-05-09T11:10:35"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "unit_id": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "D2",
+              "E18",
+              "M14"
+            ],
+            "type": "string"
+          },
+          "unit_sequence_in_call_dispatch": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5,
+              11
+            ],
+            "type": "number"
+          },
+          "unit_type": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CHIEF",
+              "ENGINE",
+              "MEDIC"
+            ],
+            "type": "string"
+          },
+          "watch_date": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2000-05-09",
+              "2005-12-30",
+              "2006-01-08"
+            ],
+            "type": "string"
+          },
+          "zipcode_of_incident": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "94121",
+              "94122"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 3,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 3,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "sffd_service_calls::7",
+                  "sffd_service_calls::8",
+                  "sffd_service_calls::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "sffd_service_calls::7"
+              },
+              {
+                "id": "sffd_service_calls::8"
+              },
+              {
+                "id": "sffd_service_calls::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {},
+    {},
+    {},
+    {},
+    {
+      "address": "35TH AVE/JUDAH ST",
+      "als_unit": true,
+      "available_timestamp": "2005-12-30T10:51:08",
+      "battalion": "B07",
+      "box": null,
+      "call_date": "2005-12-30",
+      "call_final_disposition": "Other",
+      "call_number": 53640111,
+      "call_type": "Medical Incident",
+      "call_type_group": null,
+      "city": "SF",
+      "dispatch_timestamp": "2005-12-30T10:39:42",
+      "entry_timestamp": "2005-12-30T10:38:26",
+      "final_priority": 3,
+      "fire_prevention_district": "8",
+      "hospital_timestamp": null,
+      "incident_number": 5098982,
+      "latitude": 37.760944,
+      "location_geom": "POINT(-122.49414 37.760944)",
+      "longitude": -122.49414,
+      "neighborhood_name": "Sunset/Parkside",
+      "number_of_alarms": 1,
+      "on_scene_timestamp": null,
+      "original_priority": "2",
+      "priority": "3",
+      "received_timestamp": "2005-12-30T10:35:13",
+      "response_timestamp": "2005-12-30T10:49:43",
+      "row_id": "053640111-E18",
+      "station_area": "23",
+      "supervisor_district": "4",
+      "transport_timestamp": null,
+      "unit_id": "E18",
+      "unit_sequence_in_call_dispatch": 5,
+      "unit_type": "ENGINE",
+      "watch_date": "2005-12-30",
+      "zipcode_of_incident": "94122"
+    }
+  ]
+}

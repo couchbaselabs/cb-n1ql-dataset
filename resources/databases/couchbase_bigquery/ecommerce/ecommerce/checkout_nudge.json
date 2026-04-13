@@ -1,0 +1,143 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`eCommerceAction_type_max` = \"5\", `number_of_sessions` = 1",
+        "properties": {
+          "eCommerceAction_type_max": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "5"
+            ],
+            "type": "string"
+          },
+          "fullVisitorID": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1787441764324785547",
+              "3236452398585475632",
+              "3611642825351953439",
+              "5385229023191936063",
+              "7564646136287671879"
+            ],
+            "type": "string"
+          },
+          "number_of_products_viewed": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              256
+            ],
+            "type": "number"
+          },
+          "number_of_sessions": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "session_time_on_site_minutes_max": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              15.933333333333334,
+              18.65,
+              19.683333333333334,
+              23.133333333333333,
+              24.35
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "checkout_nudge::3",
+                  "checkout_nudge::4",
+                  "checkout_nudge::6",
+                  "checkout_nudge::7",
+                  "checkout_nudge::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "checkout_nudge::3"
+              },
+              {
+                "id": "checkout_nudge::4"
+              },
+              {
+                "id": "checkout_nudge::6"
+              },
+              {
+                "id": "checkout_nudge::7"
+              },
+              {
+                "id": "checkout_nudge::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "eCommerceAction_type_max": "5",
+      "fullVisitorID": "0697698087141419098",
+      "number_of_products_viewed": 256,
+      "number_of_sessions": 1,
+      "session_time_on_site_minutes_max": 7.2
+    },
+    {
+      "eCommerceAction_type_max": "5",
+      "fullVisitorID": "2728377808603106296",
+      "number_of_products_viewed": 1,
+      "number_of_sessions": 1,
+      "session_time_on_site_minutes_max": 30.066666666666666
+    },
+    {
+      "eCommerceAction_type_max": "5",
+      "fullVisitorID": "7564646136287671879",
+      "number_of_products_viewed": 1,
+      "number_of_sessions": 1,
+      "session_time_on_site_minutes_max": 24.35
+    },
+    {
+      "eCommerceAction_type_max": "5",
+      "fullVisitorID": "0191163329372979137",
+      "number_of_products_viewed": 1,
+      "number_of_sessions": 1,
+      "session_time_on_site_minutes_max": 20.2
+    },
+    {
+      "eCommerceAction_type_max": "5",
+      "fullVisitorID": "0821246536464441878",
+      "number_of_products_viewed": 1,
+      "number_of_sessions": 1,
+      "session_time_on_site_minutes_max": 16.583333333333332
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`area_of_impact_this_vehicle` = 13, `area_of_impact_this_vehicle_name` = \"Top\", `sequence_of_events` = 12, `sequence_of_events_name` = \"Motor Vehicle in Transport\", `vehicle_number_other_vehicle` = 1",
+        "properties": {
+          "area_of_impact_other_vehicle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              7,
+              9,
+              14,
+              83
+            ],
+            "type": "number"
+          },
+          "area_of_impact_other_vehicle_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Clock Points",
+              "Right-Back Side",
+              "Undercarriage"
+            ],
+            "type": "string"
+          },
+          "area_of_impact_this_vehicle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13
+            ],
+            "type": "number"
+          },
+          "area_of_impact_this_vehicle_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Top"
+            ],
+            "type": "string"
+          },
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10675,
+              120625,
+              120972,
+              270212,
+              420481
+            ],
+            "type": "number"
+          },
+          "event_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              5
+            ],
+            "type": "number"
+          },
+          "sequence_of_events": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12
+            ],
+            "type": "number"
+          },
+          "sequence_of_events_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Motor Vehicle in Transport"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              12,
+              27,
+              42,
+              48
+            ],
+            "type": "number"
+          },
+          "vehicle_number_other_vehicle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "vehicle_number_this_vehicle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cevent_2015::0",
+                  "cevent_2015::1",
+                  "cevent_2015::3",
+                  "cevent_2015::4",
+                  "cevent_2015::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cevent_2015::0"
+              },
+              {
+                "id": "cevent_2015::1"
+              },
+              {
+                "id": "cevent_2015::3"
+              },
+              {
+                "id": "cevent_2015::4"
+              },
+              {
+                "id": "cevent_2015::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "area_of_impact_other_vehicle": 7,
+      "area_of_impact_other_vehicle_name": "Clock Points",
+      "area_of_impact_this_vehicle": 13,
+      "area_of_impact_this_vehicle_name": "Top",
+      "consecutive_number": 420481,
+      "event_number": 2,
+      "sequence_of_events": 12,
+      "sequence_of_events_name": "Motor Vehicle in Transport",
+      "state_number": 42,
+      "vehicle_number_other_vehicle": 1,
+      "vehicle_number_this_vehicle": 2
+    },
+    {
+      "area_of_impact_other_vehicle": 9,
+      "area_of_impact_other_vehicle_name": "Clock Points",
+      "area_of_impact_this_vehicle": 13,
+      "area_of_impact_this_vehicle_name": "Top",
+      "consecutive_number": 10675,
+      "event_number": 1,
+      "sequence_of_events": 12,
+      "sequence_of_events_name": "Motor Vehicle in Transport",
+      "state_number": 1,
+      "vehicle_number_other_vehicle": 1,
+      "vehicle_number_this_vehicle": 2
+    },
+    {
+      "area_of_impact_other_vehicle": 83,
+      "area_of_impact_other_vehicle_name": "Right-Back Side",
+      "area_of_impact_this_vehicle": 13,
+      "area_of_impact_this_vehicle_name": "Top",
+      "consecutive_number": 482129,
+      "event_number": 2,
+      "sequence_of_events": 12,
+      "sequence_of_events_name": "Motor Vehicle in Transport",
+      "state_number": 48,
+      "vehicle_number_other_vehicle": 1,
+      "vehicle_number_this_vehicle": 2
+    },
+    {
+      "area_of_impact_other_vehicle": 9,
+      "area_of_impact_other_vehicle_name": "Clock Points",
+      "area_of_impact_this_vehicle": 13,
+      "area_of_impact_this_vehicle_name": "Top",
+      "consecutive_number": 120625,
+      "event_number": 1,
+      "sequence_of_events": 12,
+      "sequence_of_events_name": "Motor Vehicle in Transport",
+      "state_number": 12,
+      "vehicle_number_other_vehicle": 1,
+      "vehicle_number_this_vehicle": 2
+    },
+    {
+      "area_of_impact_other_vehicle": 14,
+      "area_of_impact_other_vehicle_name": "Undercarriage",
+      "area_of_impact_this_vehicle": 13,
+      "area_of_impact_this_vehicle_name": "Top",
+      "consecutive_number": 482390,
+      "event_number": 3,
+      "sequence_of_events": 12,
+      "sequence_of_events_name": "Motor Vehicle in Transport",
+      "state_number": 48,
+      "vehicle_number_other_vehicle": 1,
+      "vehicle_number_this_vehicle": 2
+    }
+  ]
+}

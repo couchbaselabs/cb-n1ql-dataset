@@ -1,0 +1,169 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "age": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              34,
+              40,
+              49,
+              74,
+              86
+            ],
+            "type": "number"
+          },
+          "country_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AC",
+              "BA",
+              "EC",
+              "MX",
+              "SU"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Antigua and Barbuda",
+              "Bahrain",
+              "Ecuador",
+              "Mexico",
+              "Sudan"
+            ],
+            "type": "string"
+          },
+          "population": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              28,
+              12466,
+              36501,
+              382707,
+              955151
+            ],
+            "type": "number"
+          },
+          "sex": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Female",
+              "Male"
+            ],
+            "type": "string"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1993,
+              2025,
+              2031,
+              2036,
+              2050
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "midyear_population_agespecific...",
+                  "midyear_population_agespecific...",
+                  "midyear_population_agespecific...",
+                  "midyear_population_agespecific...",
+                  "midyear_population_agespecific..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "midyear_population_agespecific::1035384"
+              },
+              {
+                "id": "midyear_population_agespecific::1065580"
+              },
+              {
+                "id": "midyear_population_agespecific::1260912"
+              },
+              {
+                "id": "midyear_population_agespecific::1396032"
+              },
+              {
+                "id": "midyear_population_agespecific::1457374"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "age": 31,
+      "country_code": "VE",
+      "country_name": "Venezuela",
+      "population": 250695,
+      "sex": "Female",
+      "year": 2015
+    },
+    {
+      "age": 34,
+      "country_code": "VE",
+      "country_name": "Venezuela",
+      "population": 233564,
+      "sex": "Female",
+      "year": 2015
+    },
+    {
+      "age": 7,
+      "country_code": "VE",
+      "country_name": "Venezuela",
+      "population": 279319,
+      "sex": "Female",
+      "year": 2016
+    },
+    {
+      "age": 32,
+      "country_code": "VE",
+      "country_name": "Venezuela",
+      "population": 261597,
+      "sex": "Female",
+      "year": 2023
+    },
+    {
+      "age": 25,
+      "country_code": "VE",
+      "country_name": "Venezuela",
+      "population": 258445,
+      "sex": "Female",
+      "year": 2024
+    }
+  ]
+}

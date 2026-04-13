@@ -1,0 +1,586 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "bike_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              462,
+              774,
+              1275,
+              1839,
+              2090
+            ],
+            "type": "number"
+          },
+          "bike_share_for_all_trip": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "No",
+                "Yes"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "c_subscription_type": {
+            "#docs": [
+              513,
+              487
+            ],
+            "%docs": [
+              51.3,
+              48.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Customer",
+                "Subscriber"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "duration_sec": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              214,
+              425,
+              490,
+              688,
+              824
+            ],
+            "type": "number"
+          },
+          "end_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-02-20T08:40:06+00:00",
+              "2018-02-27T14:33:08+00:00",
+              "2018-03-18T17:38:53+00:00",
+              "2018-04-09T08:23:54+00:00",
+              "2018-04-19T08:42:14+00:00"
+            ],
+            "type": "string"
+          },
+          "end_station_geom": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "POINT(-121.8879312 37.3229796)",
+                "POINT(-122.2913761 37.8467842)",
+                "POINT(-122.3911984 37.7704074)",
+                "POINT(-122.395282 37.776598)",
+                "POINT(-122.399749159813 37.780..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "end_station_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30,
+              47,
+              93,
+              157,
+              297
+            ],
+            "type": "number"
+          },
+          "end_station_latitude": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                37.3229796,
+                37.7704074,
+                37.776598,
+                37.78095459960753,
+                37.8467842
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "end_station_longitude": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -122.39974915981291,
+                -122.395282,
+                -122.3911984,
+                -122.2913761,
+                -121.8879312
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "end_station_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4th St at Harrison St",
+              "4th St at Mission Bay Blvd S",
+              "65th St at Hollis St",
+              "Locust St at Grant St",
+              "San Francisco Caltrain (Townse..."
+            ],
+            "type": "string"
+          },
+          "member_birth_year": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                1962,
+                1976,
+                1984,
+                1986,
+                1993
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "member_gender": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "Female",
+                "Male",
+                "Other"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "start_date": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2018-02-20T08:26:22+00:00",
+              "2018-02-27T14:26:02+00:00",
+              "2018-03-18T17:35:18+00:00",
+              "2018-04-09T08:12:26+00:00",
+              "2018-04-19T08:34:03+00:00"
+            ],
+            "type": "string"
+          },
+          "start_station_geom": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "POINT(-121.885831 37.330165)",
+                "POINT(-122.2894154 37.8534894)",
+                "POINT(-122.394203 37.795392)",
+                "POINT(-122.40490436554 37.7863...",
+                "POINT(-122.4154425 37.7670373)"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "start_station_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              15,
+              99,
+              270,
+              316
+            ],
+            "type": "number"
+          },
+          "start_station_latitude": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                37.330165,
+                37.7670373,
+                37.78637526861584,
+                37.795392,
+                37.8534894
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "start_station_longitude": {
+            "#docs": [
+              487,
+              513
+            ],
+            "%docs": [
+              48.7,
+              51.3
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                -122.4154425,
+                -122.40490436553954,
+                -122.394203,
+                -122.2894154,
+                -121.885831
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "start_station_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Folsom St at 15th St",
+              "Ninth St at Heinz Ave",
+              "Powell St BART Station (Market...",
+              "San Francisco Ferry Building (...",
+              "San Salvador St at 1st St"
+            ],
+            "type": "string"
+          },
+          "subscriber_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Customer",
+              "Subscriber",
+              "nan"
+            ],
+            "type": "string"
+          },
+          "trip_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "201802200826221275",
+              "201802271426021839",
+              "201803181735182090",
+              "20180409081226462",
+              "20180419083403774"
+            ],
+            "type": "string"
+          },
+          "zip_code": {
+            "#docs": [
+              513,
+              487
+            ],
+            "%docs": [
+              51.3,
+              48.7
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "94061",
+                "94103",
+                "94117",
+                "94403",
+                "95113"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "bikeshare_trips::1135951",
+                  "bikeshare_trips::1169509",
+                  "bikeshare_trips::1372316",
+                  "bikeshare_trips::1457296",
+                  "bikeshare_trips::1514979"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "bikeshare_trips::1135951"
+              },
+              {
+                "id": "bikeshare_trips::1169509"
+              },
+              {
+                "id": "bikeshare_trips::1372316"
+              },
+              {
+                "id": "bikeshare_trips::1457296"
+              },
+              {
+                "id": "bikeshare_trips::1514979"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "bike_number": 398,
+      "bike_share_for_all_trip": null,
+      "c_subscription_type": "Subscriber",
+      "duration_sec": 659,
+      "end_date": "2016-07-19T17:22:00+00:00",
+      "end_station_geom": null,
+      "end_station_id": 69,
+      "end_station_latitude": null,
+      "end_station_longitude": null,
+      "end_station_name": "San Francisco Caltrain 2 (330 Townsend)",
+      "member_birth_year": null,
+      "member_gender": null,
+      "start_date": "2016-07-19T17:11:00+00:00",
+      "start_station_geom": null,
+      "start_station_id": 66,
+      "start_station_latitude": null,
+      "start_station_longitude": null,
+      "start_station_name": "South Van Ness at Market",
+      "subscriber_type": "nan",
+      "trip_id": "1282587",
+      "zip_code": "95119"
+    },
+    {
+      "bike_number": 587,
+      "bike_share_for_all_trip": null,
+      "c_subscription_type": "Subscriber",
+      "duration_sec": 844,
+      "end_date": "2015-04-16T17:00:00+00:00",
+      "end_station_geom": null,
+      "end_station_id": 69,
+      "end_station_latitude": null,
+      "end_station_longitude": null,
+      "end_station_name": "San Francisco Caltrain 2 (330 Townsend)",
+      "member_birth_year": null,
+      "member_gender": null,
+      "start_date": "2015-04-16T16:46:00+00:00",
+      "start_station_geom": null,
+      "start_station_id": 66,
+      "start_station_latitude": null,
+      "start_station_longitude": null,
+      "start_station_name": "South Van Ness at Market",
+      "subscriber_type": "nan",
+      "trip_id": "728748",
+      "zip_code": "95122"
+    },
+    {
+      "bike_number": 624,
+      "bike_share_for_all_trip": null,
+      "c_subscription_type": "Subscriber",
+      "duration_sec": 547,
+      "end_date": "2014-01-14T09:45:00+00:00",
+      "end_station_geom": null,
+      "end_station_id": 69,
+      "end_station_latitude": null,
+      "end_station_longitude": null,
+      "end_station_name": "San Francisco Caltrain 2 (330 Townsend)",
+      "member_birth_year": null,
+      "member_gender": null,
+      "start_date": "2014-01-14T09:35:00+00:00",
+      "start_station_geom": null,
+      "start_station_id": 49,
+      "start_station_latitude": null,
+      "start_station_longitude": null,
+      "start_station_name": "Spear at Folsom",
+      "subscriber_type": "nan",
+      "trip_id": "152671",
+      "zip_code": "94105"
+    },
+    {
+      "bike_number": 632,
+      "bike_share_for_all_trip": null,
+      "c_subscription_type": "Subscriber",
+      "duration_sec": 646,
+      "end_date": "2014-07-28T18:44:00+00:00",
+      "end_station_geom": null,
+      "end_station_id": 69,
+      "end_station_latitude": null,
+      "end_station_longitude": null,
+      "end_station_name": "San Francisco Caltrain 2 (330 Townsend)",
+      "member_birth_year": null,
+      "member_gender": null,
+      "start_date": "2014-07-28T18:33:00+00:00",
+      "start_station_geom": null,
+      "start_station_id": 55,
+      "start_station_latitude": null,
+      "start_station_longitude": null,
+      "start_station_name": "Temporary Transbay Terminal (Howard at Beale)",
+      "subscriber_type": "nan",
+      "trip_id": "383789",
+      "zip_code": "94403"
+    },
+    {
+      "bike_number": 318,
+      "bike_share_for_all_trip": null,
+      "c_subscription_type": "Subscriber",
+      "duration_sec": 656,
+      "end_date": "2014-05-19T20:04:00+00:00",
+      "end_station_geom": null,
+      "end_station_id": 69,
+      "end_station_latitude": null,
+      "end_station_longitude": null,
+      "end_station_name": "San Francisco Caltrain 2 (330 Townsend)",
+      "member_birth_year": null,
+      "member_gender": null,
+      "start_date": "2014-05-19T19:53:00+00:00",
+      "start_station_geom": null,
+      "start_station_id": 55,
+      "start_station_latitude": null,
+      "start_station_longitude": null,
+      "start_station_name": "Temporary Transbay Terminal (Howard at Beale)",
+      "subscriber_type": "nan",
+      "trip_id": "290579",
+      "zip_code": "94105"
+    }
+  ]
+}

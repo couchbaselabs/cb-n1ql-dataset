@@ -1,0 +1,175 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "gender_men": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.636,
+                0.659,
+                0.715,
+                0.75,
+                0.768
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "gender_women": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.232,
+                0.25,
+                0.285,
+                0.341,
+                0.364
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "region": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AMERICAS (non-US)",
+              "APAC"
+            ],
+            "type": "string"
+          },
+          "report_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2021,
+              2022
+            ],
+            "type": "number"
+          },
+          "workforce": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "leadership",
+              "non_tech",
+              "overall",
+              "tech"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dar_region_non_intersectional_...",
+                  "dar_region_non_intersectional_...",
+                  "dar_region_non_intersectional_...",
+                  "dar_region_non_intersectional_...",
+                  "dar_region_non_intersectional_..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "dar_region_non_intersectional_hiring::0"
+              },
+              {
+                "id": "dar_region_non_intersectional_hiring::1"
+              },
+              {
+                "id": "dar_region_non_intersectional_hiring::2"
+              },
+              {
+                "id": "dar_region_non_intersectional_hiring::8"
+              },
+              {
+                "id": "dar_region_non_intersectional_hiring::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "gender_men": 0.715,
+      "gender_women": 0.285,
+      "region": "AMERICAS (non-US)",
+      "report_year": 2021,
+      "workforce": "overall"
+    },
+    {
+      "gender_men": 0.768,
+      "gender_women": 0.232,
+      "region": "AMERICAS (non-US)",
+      "report_year": 2021,
+      "workforce": "tech"
+    },
+    {
+      "gender_men": 0.659,
+      "gender_women": 0.341,
+      "region": "AMERICAS (non-US)",
+      "report_year": 2021,
+      "workforce": "non_tech"
+    },
+    {
+      "gender_men": 0.636,
+      "gender_women": 0.364,
+      "region": "APAC",
+      "report_year": 2021,
+      "workforce": "overall"
+    },
+    {
+      "gender_men": null,
+      "gender_women": null,
+      "region": "AMERICAS (non-US)",
+      "report_year": 2022,
+      "workforce": "leadership"
+    }
+  ]
+}

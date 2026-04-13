@@ -1,0 +1,100 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 6,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "name": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "8D",
+              "Berkeley",
+              "Emeryville",
+              "San Francisco",
+              "San Jose"
+            ],
+            "type": "string"
+          },
+          "region_id": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              5,
+              13,
+              14,
+              23
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 6,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 6,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "bikeshare_regions::0",
+                  "bikeshare_regions::1",
+                  "bikeshare_regions::3",
+                  "bikeshare_regions::4",
+                  "bikeshare_regions::5"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "bikeshare_regions::0"
+              },
+              {
+                "id": "bikeshare_regions::1"
+              },
+              {
+                "id": "bikeshare_regions::3"
+              },
+              {
+                "id": "bikeshare_regions::4"
+              },
+              {
+                "id": "bikeshare_regions::5"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "name": "Emeryville",
+      "region_id": 13
+    },
+    {
+      "name": "San Jose",
+      "region_id": 5
+    },
+    {
+      "name": "Oakland",
+      "region_id": 12
+    },
+    {
+      "name": "San Francisco",
+      "region_id": 3
+    },
+    {
+      "name": "Berkeley",
+      "region_id": 14
+    }
+  ]
+}

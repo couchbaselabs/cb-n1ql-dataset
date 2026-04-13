@@ -1,0 +1,166 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "shape_distance_traveled": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5348,
+              7417,
+              10989,
+              16200,
+              21512
+            ],
+            "type": "number"
+          },
+          "shape_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "174271",
+              "174273",
+              "174274",
+              "174275",
+              "174284"
+            ],
+            "type": "string"
+          },
+          "shape_point_geom": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "POINT(-122.424956 37.715079)",
+              "POINT(-122.440596 37.760837)",
+              "POINT(-122.538276 37.832971)"
+            ],
+            "type": "string"
+          },
+          "shape_point_lat": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37.715079,
+              37.760837,
+              37.832971
+            ],
+            "type": "number"
+          },
+          "shape_point_lon": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -122.538276,
+              -122.440596,
+              -122.424956
+            ],
+            "type": "number"
+          },
+          "shape_point_sequence": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              92,
+              108,
+              232,
+              283,
+              303
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "shapes::3",
+                  "shapes::5",
+                  "shapes::6",
+                  "shapes::7",
+                  "shapes::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "shapes::3"
+              },
+              {
+                "id": "shapes::5"
+              },
+              {
+                "id": "shapes::6"
+              },
+              {
+                "id": "shapes::7"
+              },
+              {
+                "id": "shapes::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "shape_distance_traveled": 21512,
+      "shape_id": "174183",
+      "shape_point_geom": "POINT(-122.538276 37.832971)",
+      "shape_point_lat": 37.832971,
+      "shape_point_lon": -122.538276,
+      "shape_point_sequence": 283
+    },
+    {
+      "shape_distance_traveled": 5348,
+      "shape_id": "174273",
+      "shape_point_geom": "POINT(-122.440596 37.760837)",
+      "shape_point_lat": 37.760837,
+      "shape_point_lon": -122.440596,
+      "shape_point_sequence": 92
+    },
+    {
+      "shape_distance_traveled": 7417,
+      "shape_id": "174284",
+      "shape_point_geom": "POINT(-122.440596 37.760837)",
+      "shape_point_lat": 37.760837,
+      "shape_point_lon": -122.440596,
+      "shape_point_sequence": 108
+    },
+    {
+      "shape_distance_traveled": 7430,
+      "shape_id": "174282",
+      "shape_point_geom": "POINT(-122.440596 37.760837)",
+      "shape_point_lat": 37.760837,
+      "shape_point_lon": -122.440596,
+      "shape_point_sequence": 111
+    },
+    {
+      "shape_distance_traveled": 14437,
+      "shape_id": "173975",
+      "shape_point_geom": "POINT(-122.424956 37.715079)",
+      "shape_point_lat": 37.715079,
+      "shape_point_lon": -122.424956,
+      "shape_point_sequence": 197
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 228,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_area": {
+            "#docs": 228,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              360,
+              51060,
+              143351,
+              769632,
+              2149690
+            ],
+            "type": "number"
+          },
+          "country_code": {
+            "#docs": 228,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CS",
+              "GZ",
+              "NP",
+              "SA",
+              "TU"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 228,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Costa Rica",
+              "Gaza Strip",
+              "Nepal",
+              "Saudi Arabia",
+              "Turkey"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 228,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 228,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "country_names_area::143",
+                  "country_names_area::177",
+                  "country_names_area::206",
+                  "country_names_area::47",
+                  "country_names_area::73"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "country_names_area::143"
+              },
+              {
+                "id": "country_names_area::177"
+              },
+              {
+                "id": "country_names_area::206"
+              },
+              {
+                "id": "country_names_area::47"
+              },
+              {
+                "id": "country_names_area::73"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_area": 823290,
+      "country_code": "WA",
+      "country_name": "Namibia"
+    },
+    {
+      "country_area": 298170,
+      "country_code": "RP",
+      "country_name": "Philippines"
+    },
+    {
+      "country_area": 61,
+      "country_code": "SM",
+      "country_name": "San Marino"
+    },
+    {
+      "country_area": 5128,
+      "country_code": "TD",
+      "country_name": "Trinidad and Tobago"
+    },
+    {
+      "country_area": 2267048,
+      "country_code": "CG",
+      "country_name": "Congo (Kinshasa)"
+    }
+  ]
+}

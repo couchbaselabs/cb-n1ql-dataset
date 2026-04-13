@@ -1,0 +1,265 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`aliquot_barcode` = \"TCGA-01-0628-11A-01D-0356-01\", `aliquot_gdc_id` = \"1592cfef-f2b8-48f5-b61d-9c467b6...\", `case_barcode` = \"TCGA-01-0628\", `case_gdc_id` = \"f88560c8-3475-47f2-9d48-4b8311b...\", `file_gdc_id` = \"d09a6e75-b4c8-4575-afe4-d08b8ce...\", `project_short_name` = \"TCGA-OV\", `sample_barcode` = \"TCGA-01-0628-11A\", `sample_gdc_id` = \"2a91428d-7099-4635-b059-9e5bad0...\"",
+        "properties": {
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-01-0628-11A-01D-0356-01"
+            ],
+            "type": "string"
+          },
+          "aliquot_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1592cfef-f2b8-48f5-b61d-9c467b..."
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-01-0628"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "f88560c8-3475-47f2-9d48-4b8311..."
+            ],
+            "type": "string"
+          },
+          "chromosome": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "11",
+              "14",
+              "2",
+              "5"
+            ],
+            "type": "string"
+          },
+          "end_pos": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2792302,
+              29017353,
+              29023197,
+              56724495,
+              73765366
+            ],
+            "type": "number"
+          },
+          "file_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "d09a6e75-b4c8-4575-afe4-d08b8c..."
+            ],
+            "type": "string"
+          },
+          "num_probes": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              832,
+              16719,
+              30278,
+              30953
+            ],
+            "type": "number"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-OV"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-01-0628-11A"
+            ],
+            "type": "string"
+          },
+          "sample_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2a91428d-7099-4635-b059-9e5bad..."
+            ],
+            "type": "string"
+          },
+          "segment_mean": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -2.3849,
+              0.0108,
+              0.0222,
+              0.0229,
+              0.0236
+            ],
+            "type": "number"
+          },
+          "start_pos": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              456012,
+              480597,
+              913983,
+              20033191,
+              29018092
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "copy_number_segment_masked_hg3...",
+                  "copy_number_segment_masked_hg3...",
+                  "copy_number_segment_masked_hg3...",
+                  "copy_number_segment_masked_hg3...",
+                  "copy_number_segment_masked_hg3..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "copy_number_segment_masked_hg38_gdc_r14::0"
+              },
+              {
+                "id": "copy_number_segment_masked_hg38_gdc_r14::1"
+              },
+              {
+                "id": "copy_number_segment_masked_hg38_gdc_r14::2"
+              },
+              {
+                "id": "copy_number_segment_masked_hg38_gdc_r14::3"
+              },
+              {
+                "id": "copy_number_segment_masked_hg38_gdc_r14::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "aliquot_gdc_id": "1592cfef-f2b8-48f5-b61d-9c467b608671",
+      "case_barcode": "TCGA-01-0628",
+      "case_gdc_id": "f88560c8-3475-47f2-9d48-4b8311bc1132",
+      "chromosome": "5",
+      "end_pos": 29017353,
+      "file_gdc_id": "d09a6e75-b4c8-4575-afe4-d08b8ce33c2d",
+      "num_probes": 16719,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "sample_gdc_id": "2a91428d-7099-4635-b059-9e5bad09b68a",
+      "segment_mean": 0.0222,
+      "start_pos": 913983
+    },
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "aliquot_gdc_id": "1592cfef-f2b8-48f5-b61d-9c467b608671",
+      "case_barcode": "TCGA-01-0628",
+      "case_gdc_id": "f88560c8-3475-47f2-9d48-4b8311bc1132",
+      "chromosome": "14",
+      "end_pos": 73765366,
+      "file_gdc_id": "d09a6e75-b4c8-4575-afe4-d08b8ce33c2d",
+      "num_probes": 30278,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "sample_gdc_id": "2a91428d-7099-4635-b059-9e5bad09b68a",
+      "segment_mean": 0.0236,
+      "start_pos": 20033191
+    },
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "aliquot_gdc_id": "1592cfef-f2b8-48f5-b61d-9c467b608671",
+      "case_barcode": "TCGA-01-0628",
+      "case_gdc_id": "f88560c8-3475-47f2-9d48-4b8311bc1132",
+      "chromosome": "11",
+      "end_pos": 56724495,
+      "file_gdc_id": "d09a6e75-b4c8-4575-afe4-d08b8ce33c2d",
+      "num_probes": 30953,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "sample_gdc_id": "2a91428d-7099-4635-b059-9e5bad09b68a",
+      "segment_mean": 0.0229,
+      "start_pos": 456012
+    },
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "aliquot_gdc_id": "1592cfef-f2b8-48f5-b61d-9c467b608671",
+      "case_barcode": "TCGA-01-0628",
+      "case_gdc_id": "f88560c8-3475-47f2-9d48-4b8311bc1132",
+      "chromosome": "2",
+      "end_pos": 2792302,
+      "file_gdc_id": "d09a6e75-b4c8-4575-afe4-d08b8ce33c2d",
+      "num_probes": 832,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "sample_gdc_id": "2a91428d-7099-4635-b059-9e5bad09b68a",
+      "segment_mean": 0.0108,
+      "start_pos": 480597
+    },
+    {
+      "aliquot_barcode": "TCGA-01-0628-11A-01D-0356-01",
+      "aliquot_gdc_id": "1592cfef-f2b8-48f5-b61d-9c467b608671",
+      "case_barcode": "TCGA-01-0628",
+      "case_gdc_id": "f88560c8-3475-47f2-9d48-4b8311bc1132",
+      "chromosome": "5",
+      "end_pos": 29023197,
+      "file_gdc_id": "d09a6e75-b4c8-4575-afe4-d08b8ce33c2d",
+      "num_probes": 2,
+      "project_short_name": "TCGA-OV",
+      "sample_barcode": "TCGA-01-0628-11A",
+      "sample_gdc_id": "2a91428d-7099-4635-b059-9e5bad09b68a",
+      "segment_mean": -2.3849,
+      "start_pos": 29018092
+    }
+  ]
+}

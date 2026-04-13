@@ -1,0 +1,279 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 472,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "capacity": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              19,
+              23,
+              27,
+              31,
+              32
+            ],
+            "type": "number"
+          },
+          "eightd_has_key_dispenser": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "external_id": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "has_kiosk": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              false,
+              true
+            ],
+            "type": "boolean"
+          },
+          "lat": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              37.775211,
+              37.7770527,
+              37.7813455,
+              37.799952999999995,
+              37.80403678
+            ],
+            "type": "number"
+          },
+          "lon": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -122.511208,
+              -122.4295585,
+              -122.418409,
+              -122.398525,
+              -122.26240933
+            ],
+            "type": "number"
+          },
+          "name": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Golden Gate Ave at Polk St",
+              "Great Hwy at Balboa St",
+              "Madison St at 17th St",
+              "The Embarcadero at Vallejo St",
+              "Webster St at Grove St"
+            ],
+            "type": "string"
+          },
+          "region_id": {
+            "#docs": [
+              9,
+              463
+            ],
+            "%docs": [
+              1.9,
+              98.09
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                3,
+                5,
+                12,
+                13,
+                14
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "rental_methods": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "short_name": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "OK-K7",
+              "SF-C28-1",
+              "SF-H0",
+              "SF-I23-1",
+              "SF-J20"
+            ],
+            "type": "string"
+          },
+          "station_geom": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "POINT(-122.262409329 37.804036...",
+              "POINT(-122.398525 37.799953)",
+              "POINT(-122.418409 37.7813455)",
+              "POINT(-122.4295585 37.7770527)",
+              "POINT(-122.511208 37.775211)"
+            ],
+            "type": "string"
+          },
+          "station_id": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "372",
+              "41",
+              "543",
+              "55",
+              "8"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 472,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 472,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "bikeshare_station_info::147",
+                  "bikeshare_station_info::173",
+                  "bikeshare_station_info::202",
+                  "bikeshare_station_info::236",
+                  "bikeshare_station_info::392"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "bikeshare_station_info::147"
+              },
+              {
+                "id": "bikeshare_station_info::173"
+              },
+              {
+                "id": "bikeshare_station_info::202"
+              },
+              {
+                "id": "bikeshare_station_info::236"
+              },
+              {
+                "id": "bikeshare_station_info::392"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "capacity": 19,
+      "eightd_has_key_dispenser": null,
+      "external_id": null,
+      "has_kiosk": true,
+      "lat": 37.72939321,
+      "lon": -122.3865366,
+      "name": "Jennings St at Revere Ave",
+      "region_id": 3,
+      "rental_methods": null,
+      "short_name": "SF-Y30",
+      "station_geom": "POINT(-122.386536598 37.729393207)",
+      "station_id": "435"
+    },
+    {
+      "capacity": 23,
+      "eightd_has_key_dispenser": null,
+      "external_id": null,
+      "has_kiosk": true,
+      "lat": 37.7592103,
+      "lon": -122.4213392,
+      "name": "Mission Playground",
+      "region_id": 3,
+      "rental_methods": null,
+      "short_name": "SF-O22",
+      "station_geom": "POINT(-122.4213392 37.7592103)",
+      "station_id": "121"
+    },
+    {
+      "capacity": 31,
+      "eightd_has_key_dispenser": null,
+      "external_id": null,
+      "has_kiosk": true,
+      "lat": 37.78383,
+      "lon": -122.39887,
+      "name": "Folsom St at 3rd St",
+      "region_id": 3,
+      "rental_methods": null,
+      "short_name": "SF-H28",
+      "station_geom": "POINT(-122.39887 37.78383)",
+      "station_id": "36"
+    },
+    {
+      "capacity": 15,
+      "eightd_has_key_dispenser": null,
+      "external_id": null,
+      "has_kiosk": true,
+      "lat": 37.33846801,
+      "lon": -121.86652064,
+      "name": "19th St at William St",
+      "region_id": 5,
+      "rental_methods": null,
+      "short_name": "SJ-N14-2",
+      "station_geom": "POINT(-121.866520643 37.338468014)",
+      "station_id": "476"
+    },
+    {
+      "capacity": 19,
+      "eightd_has_key_dispenser": null,
+      "external_id": null,
+      "has_kiosk": true,
+      "lat": 37.76578299,
+      "lon": -122.45763659,
+      "name": "Frederick St at Arguello Blvd",
+      "region_id": 3,
+      "rental_methods": null,
+      "short_name": "SF-M13",
+      "station_geom": "POINT(-122.457636595 37.765782987)",
+      "station_id": "458"
+    }
+  ]
+}

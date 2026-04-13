@@ -1,0 +1,196 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`diag__treat__state` = \"released\", `diag__treat__treatment_type` = \"Pharmaceutical Therapy, NOS\"",
+        "properties": {
+          "case_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2429c7d4-ae27-432d-9adf-1c6d19...",
+              "2a192049-6435-49ab-8444-ddeb2b...",
+              "5f22e050-c172-4f2d-a1f9-6cb749...",
+              "a436f4d7-018e-44e3-a615-9c33fc...",
+              "cf286533-5c8a-40f3-9c69-f46264..."
+            ],
+            "type": "string"
+          },
+          "diag__diagnosis_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "65f2ce31-2974-5d46-8360-a831e8...",
+              "6fbb0e59-acad-5a63-ac6e-c6eee1...",
+              "cdddbff2-75cb-5952-bdf3-ae41ca...",
+              "cfc339af-f6b7-55e0-8a5f-1d3f7d...",
+              "f8dcf514-12ed-54c3-8772-e7658d..."
+            ],
+            "type": "string"
+          },
+          "diag__treat__created_datetime": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1556466135017293,
+              1556471390270155,
+              1556472623859466,
+              1556481133487312,
+              1556481576123655
+            ],
+            "type": "number"
+          },
+          "diag__treat__state": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "released"
+            ],
+            "type": "string"
+          },
+          "diag__treat__treatment_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "278be024-2282-5010-aead-5e055c...",
+              "33dadc60-c143-58a9-907b-8a5e46...",
+              "34674e20-dca3-5e9a-bc05-64d8a6...",
+              "4df147b2-4805-52f1-a55d-a90983...",
+              "fddc01c2-9679-5e47-8940-db49de..."
+            ],
+            "type": "string"
+          },
+          "diag__treat__treatment_or_therapy": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "diag__treat__treatment_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Pharmaceutical Therapy, NOS"
+            ],
+            "type": "string"
+          },
+          "diag__treat__updated_datetime": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1564613363187437,
+              1564619772652492,
+              1564621315107572,
+              1564631817007617,
+              1564632362128491
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "clinical_diagnosis_treatment_g...",
+                  "clinical_diagnosis_treatment_g...",
+                  "clinical_diagnosis_treatment_g...",
+                  "clinical_diagnosis_treatment_g...",
+                  "clinical_diagnosis_treatment_g..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "clinical_diagnosis_treatment_gdc_r38::0"
+              },
+              {
+                "id": "clinical_diagnosis_treatment_gdc_r38::1"
+              },
+              {
+                "id": "clinical_diagnosis_treatment_gdc_r38::2"
+              },
+              {
+                "id": "clinical_diagnosis_treatment_gdc_r38::3"
+              },
+              {
+                "id": "clinical_diagnosis_treatment_gdc_r38::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "case_id": "2429c7d4-ae27-432d-9adf-1c6d192bf13c",
+      "diag__diagnosis_id": "f8dcf514-12ed-54c3-8772-e7658d035f73",
+      "diag__treat__created_datetime": 1556481576123655,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "278be024-2282-5010-aead-5e055c2c87ab",
+      "diag__treat__treatment_or_therapy": null,
+      "diag__treat__treatment_type": "Pharmaceutical Therapy, NOS",
+      "diag__treat__updated_datetime": 1564632362128491
+    },
+    {
+      "case_id": "5f22e050-c172-4f2d-a1f9-6cb749b6ef98",
+      "diag__diagnosis_id": "6fbb0e59-acad-5a63-ac6e-c6eee1f9f56b",
+      "diag__treat__created_datetime": 1556466135017293,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "fddc01c2-9679-5e47-8940-db49de93764d",
+      "diag__treat__treatment_or_therapy": null,
+      "diag__treat__treatment_type": "Pharmaceutical Therapy, NOS",
+      "diag__treat__updated_datetime": 1564613363187437
+    },
+    {
+      "case_id": "a436f4d7-018e-44e3-a615-9c33fcc1167d",
+      "diag__diagnosis_id": "cdddbff2-75cb-5952-bdf3-ae41cafd2c44",
+      "diag__treat__created_datetime": 1556472623859466,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "34674e20-dca3-5e9a-bc05-64d8a6ae7100",
+      "diag__treat__treatment_or_therapy": null,
+      "diag__treat__treatment_type": "Pharmaceutical Therapy, NOS",
+      "diag__treat__updated_datetime": 1564621315107572
+    },
+    {
+      "case_id": "2a192049-6435-49ab-8444-ddeb2b9ee774",
+      "diag__diagnosis_id": "65f2ce31-2974-5d46-8360-a831e8325f2d",
+      "diag__treat__created_datetime": 1556471390270155,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "33dadc60-c143-58a9-907b-8a5e4623d830",
+      "diag__treat__treatment_or_therapy": null,
+      "diag__treat__treatment_type": "Pharmaceutical Therapy, NOS",
+      "diag__treat__updated_datetime": 1564619772652492
+    },
+    {
+      "case_id": "cf286533-5c8a-40f3-9c69-f46264c7893b",
+      "diag__diagnosis_id": "cfc339af-f6b7-55e0-8a5f-1d3f7d3ddd73",
+      "diag__treat__created_datetime": 1556481133487312,
+      "diag__treat__state": "released",
+      "diag__treat__treatment_id": "4df147b2-4805-52f1-a55d-a909832d40fa",
+      "diag__treat__treatment_or_therapy": null,
+      "diag__treat__treatment_type": "Pharmaceutical Therapy, NOS",
+      "diag__treat__updated_datetime": 1564631817007617
+    }
+  ]
+}

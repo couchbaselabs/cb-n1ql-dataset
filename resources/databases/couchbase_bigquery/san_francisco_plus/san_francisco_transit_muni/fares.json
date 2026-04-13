@@ -1,0 +1,185 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 8,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`payment_method` = \"0\"",
+        "properties": {
+          "fare_id": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "5398",
+              "5399"
+            ],
+            "type": "string"
+          },
+          "payment_method": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0"
+            ],
+            "type": "string"
+          },
+          "price": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              7
+            ],
+            "type": "number"
+          },
+          "rider_desc": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Child",
+              "Disabled",
+              "Senior",
+              "Youth"
+            ],
+            "type": "string"
+          },
+          "rider_id": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "type": "string"
+          },
+          "transfer_duration": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5400
+            ],
+            "type": "number"
+          },
+          "transfers_permitted": {
+            "#docs": [
+              4,
+              4
+            ],
+            "%docs": [
+              50,
+              50
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0.0"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "~meta": {
+            "#docs": 8,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 8,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "fares::3",
+                  "fares::4",
+                  "fares::5",
+                  "fares::6",
+                  "fares::7"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "fares::3"
+              },
+              {
+                "id": "fares::4"
+              },
+              {
+                "id": "fares::5"
+              },
+              {
+                "id": "fares::6"
+              },
+              {
+                "id": "fares::7"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "fare_id": "5398",
+      "payment_method": "0",
+      "price": 3,
+      "rider_desc": "Senior",
+      "rider_id": "2",
+      "transfer_duration": 5400,
+      "transfers_permitted": null
+    },
+    {
+      "fare_id": "5399",
+      "payment_method": "0",
+      "price": 7,
+      "rider_desc": "Youth",
+      "rider_id": "5",
+      "transfer_duration": 0,
+      "transfers_permitted": "0.0"
+    },
+    {
+      "fare_id": "5399",
+      "payment_method": "0",
+      "price": 7,
+      "rider_desc": "Disabled",
+      "rider_id": "6",
+      "transfer_duration": 0,
+      "transfers_permitted": "0.0"
+    },
+    {
+      "fare_id": "5398",
+      "payment_method": "0",
+      "price": 3,
+      "rider_desc": "Disabled",
+      "rider_id": "6",
+      "transfer_duration": 5400,
+      "transfers_permitted": null
+    },
+    {
+      "fare_id": "5398",
+      "payment_method": "0",
+      "price": 3,
+      "rider_desc": "Child",
+      "rider_id": "3",
+      "transfer_duration": 5400,
+      "transfers_permitted": null
+    }
+  ]
+}

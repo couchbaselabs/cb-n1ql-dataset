@@ -1,0 +1,515 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`bicyclist_initial_direction_of_travel` = \"Not a Cyclist\", `bicyclist_position` = \"Not a Cyclist\", `crash_group_bicycle` = 0, `crash_group_bicycle_name` = \"Not a Cyclist\", `crash_group_pedestrian` = 990, `crash_group_pedestrian_name` = \"Other/Unknown \u2013 Insufficient ...\", `crash_location_bicycle` = \"Not a Cyclist\", `crash_location_pedestrian` = \"Unknown/Insufficient Informatio...\", `crash_type_bicycle` = 0, `crash_type_bicycle_name` = \"Not a Cyclist\", `crash_type_pedestrian` = 900, `crash_type_pedestrian_name` = \"Other \u2013 Unknown Location\"...",
+        "properties": {
+          "age": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              13,
+              30,
+              36,
+              50,
+              72
+            ],
+            "type": "number"
+          },
+          "bicyclist_initial_direction_of_travel": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Cyclist"
+            ],
+            "type": "string"
+          },
+          "bicyclist_position": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Cyclist"
+            ],
+            "type": "string"
+          },
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              40471,
+              340209,
+              340239,
+              420499,
+              530478
+            ],
+            "type": "number"
+          },
+          "crash_group_bicycle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "crash_group_bicycle_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Cyclist"
+            ],
+            "type": "string"
+          },
+          "crash_group_pedestrian": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              990
+            ],
+            "type": "number"
+          },
+          "crash_group_pedestrian_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Other/Unknown \u2013 Insufficient..."
+            ],
+            "type": "string"
+          },
+          "crash_location_bicycle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Cyclist"
+            ],
+            "type": "string"
+          },
+          "crash_location_pedestrian": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Unknown/Insufficient Informati..."
+            ],
+            "type": "string"
+          },
+          "crash_type_bicycle": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "crash_type_bicycle_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Cyclist"
+            ],
+            "type": "string"
+          },
+          "crash_type_pedestrian": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              900
+            ],
+            "type": "number"
+          },
+          "crash_type_pedestrian_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Other \u2013 Unknown Location"
+            ],
+            "type": "string"
+          },
+          "intersection_leg": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Farside",
+              "Not Applicable",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "marked_crosswalk_present": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "None Noted",
+              "Unknown",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "motorist_initial_direction_of_travel": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Eastbound",
+              "Northbound",
+              "Southbound",
+              "Unknown Initial Direction of T...",
+              "Westbound"
+            ],
+            "type": "string"
+          },
+          "motorist_maneuver": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Applicable",
+              "Straight Through",
+              "Unknown Motorist Maneuver"
+            ],
+            "type": "string"
+          },
+          "pedestrian_initial_direction_of_travel": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Applicable",
+              "Southbound",
+              "Westbound"
+            ],
+            "type": "string"
+          },
+          "pedestrian_position": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Other/Unknown"
+            ],
+            "type": "string"
+          },
+          "pedestrian_scenario": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4b",
+              "8"
+            ],
+            "type": "string"
+          },
+          "pedestrian_scenario_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MOTORIST TRAVELING STRAIGHT TH...",
+              "Not Applicable"
+            ],
+            "type": "string"
+          },
+          "person_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "person_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5
+            ],
+            "type": "number"
+          },
+          "person_type_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Pedestrian"
+            ],
+            "type": "string"
+          },
+          "school_zone": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "None Noted",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "sex": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Female",
+              "Male"
+            ],
+            "type": "string"
+          },
+          "sidewalk_present": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "None Noted",
+              "Unknown",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              32,
+              34,
+              42,
+              53
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "pbtype_2015::1",
+                  "pbtype_2015::3",
+                  "pbtype_2015::4",
+                  "pbtype_2015::5",
+                  "pbtype_2015::6"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "pbtype_2015::1"
+              },
+              {
+                "id": "pbtype_2015::3"
+              },
+              {
+                "id": "pbtype_2015::4"
+              },
+              {
+                "id": "pbtype_2015::5"
+              },
+              {
+                "id": "pbtype_2015::6"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "age": 19,
+      "bicyclist_initial_direction_of_travel": "Not a Cyclist",
+      "bicyclist_position": "Not a Cyclist",
+      "consecutive_number": 40469,
+      "crash_group_bicycle": 0,
+      "crash_group_bicycle_name": "Not a Cyclist",
+      "crash_group_pedestrian": 990,
+      "crash_group_pedestrian_name": "Other/Unknown \u2013 Insufficient Details",
+      "crash_location_bicycle": "Not a Cyclist",
+      "crash_location_pedestrian": "Unknown/Insufficient Information",
+      "crash_type_bicycle": 0,
+      "crash_type_bicycle_name": "Not a Cyclist",
+      "crash_type_pedestrian": 900,
+      "crash_type_pedestrian_name": "Other \u2013 Unknown Location",
+      "intersection_leg": "Not Applicable",
+      "marked_crosswalk_present": "None Noted",
+      "motorist_initial_direction_of_travel": "Unknown Initial Direction of Travel",
+      "motorist_maneuver": "Not Applicable",
+      "pedestrian_initial_direction_of_travel": "Not Applicable",
+      "pedestrian_position": "Other/Unknown",
+      "pedestrian_scenario": "8",
+      "pedestrian_scenario_name": "Not Applicable",
+      "person_number": 1,
+      "person_type": 5,
+      "person_type_name": "Pedestrian",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "None Noted",
+      "state_number": 4,
+      "vehicle_number": 0
+    },
+    {
+      "age": 57,
+      "bicyclist_initial_direction_of_travel": "Not a Cyclist",
+      "bicyclist_position": "Not a Cyclist",
+      "consecutive_number": 100096,
+      "crash_group_bicycle": 0,
+      "crash_group_bicycle_name": "Not a Cyclist",
+      "crash_group_pedestrian": 990,
+      "crash_group_pedestrian_name": "Other/Unknown \u2013 Insufficient Details",
+      "crash_location_bicycle": "Not a Cyclist",
+      "crash_location_pedestrian": "Unknown/Insufficient Information",
+      "crash_type_bicycle": 0,
+      "crash_type_bicycle_name": "Not a Cyclist",
+      "crash_type_pedestrian": 900,
+      "crash_type_pedestrian_name": "Other \u2013 Unknown Location",
+      "intersection_leg": "Farside",
+      "marked_crosswalk_present": "Yes",
+      "motorist_initial_direction_of_travel": "Northbound",
+      "motorist_maneuver": "Straight Through",
+      "pedestrian_initial_direction_of_travel": "Westbound",
+      "pedestrian_position": "Other/Unknown",
+      "pedestrian_scenario": "4b",
+      "pedestrian_scenario_name": "MOTORIST TRAVELING STRAIGHT THROUGH \u2013 CRASH OCCURRED ON FAR SIDE OF\nINTERSECTION Pedestrian Outside Crosswalk Area, Traveled From Motorist\u2019s Right.",
+      "person_number": 1,
+      "person_type": 5,
+      "person_type_name": "Pedestrian",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "Yes",
+      "state_number": 10,
+      "vehicle_number": 0
+    },
+    {
+      "age": 72,
+      "bicyclist_initial_direction_of_travel": "Not a Cyclist",
+      "bicyclist_position": "Not a Cyclist",
+      "consecutive_number": 530478,
+      "crash_group_bicycle": 0,
+      "crash_group_bicycle_name": "Not a Cyclist",
+      "crash_group_pedestrian": 990,
+      "crash_group_pedestrian_name": "Other/Unknown \u2013 Insufficient Details",
+      "crash_location_bicycle": "Not a Cyclist",
+      "crash_location_pedestrian": "Unknown/Insufficient Information",
+      "crash_type_bicycle": 0,
+      "crash_type_bicycle_name": "Not a Cyclist",
+      "crash_type_pedestrian": 900,
+      "crash_type_pedestrian_name": "Other \u2013 Unknown Location",
+      "intersection_leg": "Unknown",
+      "marked_crosswalk_present": "Yes",
+      "motorist_initial_direction_of_travel": "Eastbound",
+      "motorist_maneuver": "Straight Through",
+      "pedestrian_initial_direction_of_travel": "Not Applicable",
+      "pedestrian_position": "Other/Unknown",
+      "pedestrian_scenario": "8",
+      "pedestrian_scenario_name": "Not Applicable",
+      "person_number": 1,
+      "person_type": 5,
+      "person_type_name": "Pedestrian",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "Unknown",
+      "state_number": 53,
+      "vehicle_number": 0
+    },
+    {
+      "age": 4,
+      "bicyclist_initial_direction_of_travel": "Not a Cyclist",
+      "bicyclist_position": "Not a Cyclist",
+      "consecutive_number": 340482,
+      "crash_group_bicycle": 0,
+      "crash_group_bicycle_name": "Not a Cyclist",
+      "crash_group_pedestrian": 990,
+      "crash_group_pedestrian_name": "Other/Unknown \u2013 Insufficient Details",
+      "crash_location_bicycle": "Not a Cyclist",
+      "crash_location_pedestrian": "Unknown/Insufficient Information",
+      "crash_type_bicycle": 0,
+      "crash_type_bicycle_name": "Not a Cyclist",
+      "crash_type_pedestrian": 900,
+      "crash_type_pedestrian_name": "Other \u2013 Unknown Location",
+      "intersection_leg": "Not Applicable",
+      "marked_crosswalk_present": "Unknown",
+      "motorist_initial_direction_of_travel": "Westbound",
+      "motorist_maneuver": "Unknown Motorist Maneuver",
+      "pedestrian_initial_direction_of_travel": "Not Applicable",
+      "pedestrian_position": "Other/Unknown",
+      "pedestrian_scenario": "8",
+      "pedestrian_scenario_name": "Not Applicable",
+      "person_number": 2,
+      "person_type": 5,
+      "person_type_name": "Pedestrian",
+      "school_zone": "Unknown",
+      "sex": "Male",
+      "sidewalk_present": "Unknown",
+      "state_number": 34,
+      "vehicle_number": 0
+    },
+    {
+      "age": 50,
+      "bicyclist_initial_direction_of_travel": "Not a Cyclist",
+      "bicyclist_position": "Not a Cyclist",
+      "consecutive_number": 40471,
+      "crash_group_bicycle": 0,
+      "crash_group_bicycle_name": "Not a Cyclist",
+      "crash_group_pedestrian": 990,
+      "crash_group_pedestrian_name": "Other/Unknown \u2013 Insufficient Details",
+      "crash_location_bicycle": "Not a Cyclist",
+      "crash_location_pedestrian": "Unknown/Insufficient Information",
+      "crash_type_bicycle": 0,
+      "crash_type_bicycle_name": "Not a Cyclist",
+      "crash_type_pedestrian": 900,
+      "crash_type_pedestrian_name": "Other \u2013 Unknown Location",
+      "intersection_leg": "Not Applicable",
+      "marked_crosswalk_present": "Unknown",
+      "motorist_initial_direction_of_travel": "Unknown Initial Direction of Travel",
+      "motorist_maneuver": "Not Applicable",
+      "pedestrian_initial_direction_of_travel": "Not Applicable",
+      "pedestrian_position": "Other/Unknown",
+      "pedestrian_scenario": "8",
+      "pedestrian_scenario_name": "Not Applicable",
+      "person_number": 1,
+      "person_type": 5,
+      "person_type_name": "Pedestrian",
+      "school_zone": "None Noted",
+      "sex": "Male",
+      "sidewalk_present": "Unknown",
+      "state_number": 4,
+      "vehicle_number": 0
+    }
+  ]
+}

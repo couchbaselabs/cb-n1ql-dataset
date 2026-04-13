@@ -1,0 +1,167 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`MolClin` = \"C\", `OrderNo` = 1",
+        "properties": {
+          "Gene": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BCR::ABL1",
+              "PML::RARA"
+            ],
+            "type": "string"
+          },
+          "InvNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "MolClin": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C"
+            ],
+            "type": "string"
+          },
+          "OrderNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "Prefix": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "RefNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3967,
+              3976,
+              4541,
+              4624
+            ],
+            "type": "number"
+          },
+          "Suffix": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "molclingene::0",
+                  "molclingene::1",
+                  "molclingene::2",
+                  "molclingene::3",
+                  "molclingene::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "molclingene::0"
+              },
+              {
+                "id": "molclingene::1"
+              },
+              {
+                "id": "molclingene::2"
+              },
+              {
+                "id": "molclingene::3"
+              },
+              {
+                "id": "molclingene::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Gene": "BCR::ABL1",
+      "InvNo": 2,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "Prefix": null,
+      "RefNo": 3976,
+      "Suffix": null
+    },
+    {
+      "Gene": "BCR::ABL1",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "Prefix": null,
+      "RefNo": 3967,
+      "Suffix": null
+    },
+    {
+      "Gene": "PML::RARA",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "Prefix": null,
+      "RefNo": 4541,
+      "Suffix": null
+    },
+    {
+      "Gene": "BCR::ABL1",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "Prefix": null,
+      "RefNo": 3976,
+      "Suffix": null
+    },
+    {
+      "Gene": "BCR::ABL1",
+      "InvNo": 1,
+      "MolClin": "C",
+      "OrderNo": 1,
+      "Prefix": null,
+      "RefNo": 4624,
+      "Suffix": null
+    }
+  ]
+}

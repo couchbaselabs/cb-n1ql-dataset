@@ -1,0 +1,197 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "block_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1456",
+              "2491",
+              "4491",
+              "6005",
+              "9101"
+            ],
+            "type": "string"
+          },
+          "direction": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "I",
+              "O"
+            ],
+            "type": "string"
+          },
+          "route_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "14R",
+              "24",
+              "44",
+              "54",
+              "PH"
+            ],
+            "type": "string"
+          },
+          "service_category": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "shape_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "173996",
+              "174031",
+              "174129",
+              "174156",
+              "174172"
+            ],
+            "type": "string"
+          },
+          "trip_headsign": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Bayview District",
+              "Daly City BART",
+              "Glen Park BART",
+              "Jackson + Fillmore",
+              "Market + Powell"
+            ],
+            "type": "string"
+          },
+          "trip_id": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "8960292",
+              "8967350",
+              "8985829",
+              "8993366",
+              "9175612"
+            ],
+            "type": "string"
+          },
+          "trip_shape": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "trips::14434",
+                  "trips::14745",
+                  "trips::15933",
+                  "trips::18562",
+                  "trips::2131"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "trips::14434"
+              },
+              {
+                "id": "trips::14745"
+              },
+              {
+                "id": "trips::15933"
+              },
+              {
+                "id": "trips::18562"
+              },
+              {
+                "id": "trips::2131"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "block_id": "1909",
+      "direction": "I",
+      "route_id": "19",
+      "service_category": null,
+      "shape_id": "174002",
+      "trip_headsign": "Shipyard",
+      "trip_id": "8961832",
+      "trip_shape": null
+    },
+    {
+      "block_id": "507",
+      "direction": "O",
+      "route_id": "5R",
+      "service_category": null,
+      "shape_id": "173946",
+      "trip_headsign": "Transit Center",
+      "trip_id": "8948788",
+      "trip_shape": null
+    },
+    {
+      "block_id": "506",
+      "direction": "O",
+      "route_id": "5R",
+      "service_category": null,
+      "shape_id": "173946",
+      "trip_headsign": "Transit Center",
+      "trip_id": "8948837",
+      "trip_shape": null
+    },
+    {
+      "block_id": "502",
+      "direction": "O",
+      "route_id": "5R",
+      "service_category": null,
+      "shape_id": "173946",
+      "trip_headsign": "Transit Center",
+      "trip_id": "8948794",
+      "trip_shape": null
+    },
+    {
+      "block_id": "604",
+      "direction": "I",
+      "route_id": "6",
+      "service_category": null,
+      "shape_id": "173952",
+      "trip_headsign": "Quintara + 14th Avenue",
+      "trip_id": "8949749",
+      "trip_shape": null
+    }
+  ]
+}

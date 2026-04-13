@@ -1,0 +1,152 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Bit` = \"??\", `CaseNo` = \"1\", `CloneNo` = 1, `InvNo` = 1, `OrderNo` = 1",
+        "properties": {
+          "Bit": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "??"
+            ],
+            "type": "string"
+          },
+          "CaseNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1"
+            ],
+            "type": "string"
+          },
+          "CloneNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "InvNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "OrderNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "RefNo": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              500,
+              524,
+              623,
+              631,
+              632
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "karybit::0",
+                  "karybit::1",
+                  "karybit::2",
+                  "karybit::3",
+                  "karybit::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "karybit::0"
+              },
+              {
+                "id": "karybit::1"
+              },
+              {
+                "id": "karybit::2"
+              },
+              {
+                "id": "karybit::3"
+              },
+              {
+                "id": "karybit::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Bit": "??",
+      "CaseNo": "1",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 500
+    },
+    {
+      "Bit": "??",
+      "CaseNo": "1",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 632
+    },
+    {
+      "Bit": "??",
+      "CaseNo": "1",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 623
+    },
+    {
+      "Bit": "??",
+      "CaseNo": "1",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 524
+    },
+    {
+      "Bit": "??",
+      "CaseNo": "1",
+      "CloneNo": 1,
+      "InvNo": 1,
+      "OrderNo": 1,
+      "RefNo": 631
+    }
+  ]
+}

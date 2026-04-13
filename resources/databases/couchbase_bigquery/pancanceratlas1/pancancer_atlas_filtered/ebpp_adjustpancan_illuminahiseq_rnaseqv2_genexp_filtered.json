@@ -1,0 +1,240 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "AliquotBarcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-33-4533-01A-01R-1201-07",
+              "TCGA-B5-A11S-01A-11R-A118-07",
+              "TCGA-BP-4335-01A-01R-1289-07",
+              "TCGA-BP-5185-01A-01R-1426-07",
+              "TCGA-CJ-4907-01A-01R-1426-07"
+            ],
+            "type": "string"
+          },
+          "Entrez": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "161497",
+              "390064",
+              "53981",
+              "8618",
+              "89958"
+            ],
+            "type": "string"
+          },
+          "ParticipantBarcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-33-4533",
+              "TCGA-B5-A11S",
+              "TCGA-BP-4335",
+              "TCGA-BP-5185",
+              "TCGA-CJ-4907"
+            ],
+            "type": "string"
+          },
+          "SampleBarcode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-33-4533-01A",
+              "TCGA-B5-A11S-01A",
+              "TCGA-BP-4335-01A",
+              "TCGA-BP-5185-01A",
+              "TCGA-CJ-4907-01A"
+            ],
+            "type": "string"
+          },
+          "SampleType": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Metastatic",
+              "Primary Blood Derived Cancer -...",
+              "Primary solid Tumor",
+              "Recurrent Solid Tumor",
+              "Solid Tissue Normal"
+            ],
+            "type": "string"
+          },
+          "SampleTypeLetterCode": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NT",
+              "TB",
+              "TM",
+              "TP",
+              "TR"
+            ],
+            "type": "string"
+          },
+          "Study": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BRCA",
+              "KIRC",
+              "LUAD",
+              "LUSC",
+              "UCEC"
+            ],
+            "type": "string"
+          },
+          "Symbol": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "C9orf140",
+              "CADPS",
+              "CPSF2",
+              "OR51I2",
+              "STRC"
+            ],
+            "type": "string"
+          },
+          "normalized_count": {
+            "#docs": [
+              12,
+              988
+            ],
+            "%docs": [
+              1.2,
+              98.8
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0,
+                2.2118036112416,
+                3.0746,
+                251.681,
+                862.998
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "ebpp_adjustpancan_illuminahise...",
+                  "ebpp_adjustpancan_illuminahise...",
+                  "ebpp_adjustpancan_illuminahise...",
+                  "ebpp_adjustpancan_illuminahise...",
+                  "ebpp_adjustpancan_illuminahise..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "ebpp_adjustpancan_illuminahiseq_rnaseqv2_genexp_filtered::1630223"
+              },
+              {
+                "id": "ebpp_adjustpancan_illuminahiseq_rnaseqv2_genexp_filtered::1783271"
+              },
+              {
+                "id": "ebpp_adjustpancan_illuminahiseq_rnaseqv2_genexp_filtered::2016529"
+              },
+              {
+                "id": "ebpp_adjustpancan_illuminahiseq_rnaseqv2_genexp_filtered::2043627"
+              },
+              {
+                "id": "ebpp_adjustpancan_illuminahiseq_rnaseqv2_genexp_filtered::2725842"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "AliquotBarcode": "TCGA-EL-A4K7-01A-11R-A250-07",
+      "Entrez": "79184",
+      "ParticipantBarcode": "TCGA-EL-A4K7",
+      "SampleBarcode": "TCGA-EL-A4K7-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "THCA",
+      "Symbol": "BRCC3",
+      "normalized_count": 283.6
+    },
+    {
+      "AliquotBarcode": "TCGA-EL-A4K7-01A-11R-A250-07",
+      "Entrez": "387036",
+      "ParticipantBarcode": "TCGA-EL-A4K7",
+      "SampleBarcode": "TCGA-EL-A4K7-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "THCA",
+      "Symbol": "GUSBL1",
+      "normalized_count": 5.3286
+    },
+    {
+      "AliquotBarcode": "TCGA-EL-A4K7-01A-11R-A250-07",
+      "Entrez": "29927",
+      "ParticipantBarcode": "TCGA-EL-A4K7",
+      "SampleBarcode": "TCGA-EL-A4K7-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "THCA",
+      "Symbol": "SEC61A1",
+      "normalized_count": 8021.14
+    },
+    {
+      "AliquotBarcode": "TCGA-EL-A4KD-01A-11R-A250-07",
+      "Entrez": "10234",
+      "ParticipantBarcode": "TCGA-EL-A4KD",
+      "SampleBarcode": "TCGA-EL-A4KD-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "THCA",
+      "Symbol": "LRRC17",
+      "normalized_count": 252.112
+    },
+    {
+      "AliquotBarcode": "TCGA-EM-A22N-01A-11R-A180-07",
+      "Entrez": "8872",
+      "ParticipantBarcode": "TCGA-EM-A22N",
+      "SampleBarcode": "TCGA-EM-A22N-01A",
+      "SampleType": "Primary solid Tumor",
+      "SampleTypeLetterCode": "TP",
+      "Study": "THCA",
+      "Symbol": "CDC123",
+      "normalized_count": 883.523
+    }
+  ]
+}

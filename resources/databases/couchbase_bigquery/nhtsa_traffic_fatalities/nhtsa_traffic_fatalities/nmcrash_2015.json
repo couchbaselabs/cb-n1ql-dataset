@@ -1,0 +1,156 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`non_motorist_contributing_circumstances` = 5, `non_motorist_contributing_circumstances_name` = \"Entering/Exiting Parked or Stop...\", `person_number` = 1, `vehicle_number` = 0",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              60098,
+              120090,
+              230118,
+              310025,
+              310098
+            ],
+            "type": "number"
+          },
+          "non_motorist_contributing_circumstances": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5
+            ],
+            "type": "number"
+          },
+          "non_motorist_contributing_circumstances_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Entering/Exiting Parked or Sto..."
+            ],
+            "type": "string"
+          },
+          "person_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              12,
+              16,
+              23,
+              31
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "nmcrash_2015::0",
+                  "nmcrash_2015::1",
+                  "nmcrash_2015::2",
+                  "nmcrash_2015::7",
+                  "nmcrash_2015::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "nmcrash_2015::0"
+              },
+              {
+                "id": "nmcrash_2015::1"
+              },
+              {
+                "id": "nmcrash_2015::2"
+              },
+              {
+                "id": "nmcrash_2015::7"
+              },
+              {
+                "id": "nmcrash_2015::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 121068,
+      "non_motorist_contributing_circumstances": 5,
+      "non_motorist_contributing_circumstances_name": "Entering/Exiting Parked or Stopped Vehicle",
+      "person_number": 1,
+      "state_number": 12,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 310098,
+      "non_motorist_contributing_circumstances": 5,
+      "non_motorist_contributing_circumstances_name": "Entering/Exiting Parked or Stopped Vehicle",
+      "person_number": 1,
+      "state_number": 31,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 230118,
+      "non_motorist_contributing_circumstances": 5,
+      "non_motorist_contributing_circumstances_name": "Entering/Exiting Parked or Stopped Vehicle",
+      "person_number": 1,
+      "state_number": 23,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 60098,
+      "non_motorist_contributing_circumstances": 5,
+      "non_motorist_contributing_circumstances_name": "Entering/Exiting Parked or Stopped Vehicle",
+      "person_number": 1,
+      "state_number": 6,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 310025,
+      "non_motorist_contributing_circumstances": 5,
+      "non_motorist_contributing_circumstances_name": "Entering/Exiting Parked or Stopped Vehicle",
+      "person_number": 1,
+      "state_number": 31,
+      "vehicle_number": 0
+    }
+  ]
+}

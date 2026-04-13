@@ -1,0 +1,114 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CYP",
+              "TZA",
+              "VEN"
+            ],
+            "type": "string"
+          },
+          "description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Based on official exchange rat...",
+              "Covers mainland Tanzania only.",
+              "Data are for areas under the e..."
+            ],
+            "type": "string"
+          },
+          "series_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "NY.GDP.PCAP.CD",
+              "NY.GDP.PCAP.KD",
+              "NY.GDP.PCAP.PP.KD",
+              "NY.GNP.PCAP.CD",
+              "NY.GNP.PCAP.PP.CD"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "country_series_definitions::0",
+                  "country_series_definitions::6",
+                  "country_series_definitions::7",
+                  "country_series_definitions::8",
+                  "country_series_definitions::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "country_series_definitions::0"
+              },
+              {
+                "id": "country_series_definitions::6"
+              },
+              {
+                "id": "country_series_definitions::7"
+              },
+              {
+                "id": "country_series_definitions::8"
+              },
+              {
+                "id": "country_series_definitions::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "CYP",
+      "description": "Data are for areas under the effective control of the Government of the Republic of Cyprus.",
+      "series_code": "NY.GNP.PCAP.CD"
+    },
+    {
+      "country_code": "TZA",
+      "description": "Covers mainland Tanzania only.",
+      "series_code": "NY.GDP.PCAP.PP.KD"
+    },
+    {
+      "country_code": "VEN",
+      "description": "Based on official exchange rates.",
+      "series_code": "NY.GNP.PCAP.CD"
+    },
+    {
+      "country_code": "TZA",
+      "description": "Covers mainland Tanzania only.",
+      "series_code": "NY.GNP.PCAP.CD"
+    },
+    {
+      "country_code": "TZA",
+      "description": "Covers mainland Tanzania only.",
+      "series_code": "NY.GNP.PCAP.PP.CD"
+    }
+  ]
+}

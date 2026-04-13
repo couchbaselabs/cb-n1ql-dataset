@@ -1,0 +1,145 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`drivers_vision_obscured_by` = 2, `drivers_vision_obscured_by_name` = \"Reflected Glare, Bright Sunligh...\"",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10123,
+              100090,
+              230008,
+              230144,
+              530404
+            ],
+            "type": "number"
+          },
+          "drivers_vision_obscured_by": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2
+            ],
+            "type": "number"
+          },
+          "drivers_vision_obscured_by_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Reflected Glare, Bright Sunlig..."
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              10,
+              23,
+              33,
+              53
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "vision_2015::0",
+                  "vision_2015::1",
+                  "vision_2015::6",
+                  "vision_2015::8",
+                  "vision_2015::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "vision_2015::0"
+              },
+              {
+                "id": "vision_2015::1"
+              },
+              {
+                "id": "vision_2015::6"
+              },
+              {
+                "id": "vision_2015::8"
+              },
+              {
+                "id": "vision_2015::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 380016,
+      "drivers_vision_obscured_by": 2,
+      "drivers_vision_obscured_by_name": "Reflected Glare, Bright Sunlight, Headlights",
+      "state_number": 38,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 330076,
+      "drivers_vision_obscured_by": 2,
+      "drivers_vision_obscured_by_name": "Reflected Glare, Bright Sunlight, Headlights",
+      "state_number": 33,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 330082,
+      "drivers_vision_obscured_by": 2,
+      "drivers_vision_obscured_by_name": "Reflected Glare, Bright Sunlight, Headlights",
+      "state_number": 33,
+      "vehicle_number": 1
+    },
+    {
+      "consecutive_number": 530404,
+      "drivers_vision_obscured_by": 2,
+      "drivers_vision_obscured_by_name": "Reflected Glare, Bright Sunlight, Headlights",
+      "state_number": 53,
+      "vehicle_number": 6
+    },
+    {
+      "consecutive_number": 530404,
+      "drivers_vision_obscured_by": 2,
+      "drivers_vision_obscured_by_name": "Reflected Glare, Bright Sunlight, Headlights",
+      "state_number": 53,
+      "vehicle_number": 5
+    }
+  ]
+}

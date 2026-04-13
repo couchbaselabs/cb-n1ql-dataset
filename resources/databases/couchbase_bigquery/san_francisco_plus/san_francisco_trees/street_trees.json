@@ -1,0 +1,334 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`care_taker` = \"Private\", `legal_status` = \"Permitted Site\", `plant_type` = \"Tree\", `site_info` = \"Sidewalk: Curb side : Cutout\"",
+        "properties": {
+          "address": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "care_assistant": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "care_taker": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Private"
+            ],
+            "type": "string"
+          },
+          "dbh": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "latitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "legal_status": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Permitted Site"
+            ],
+            "type": "string"
+          },
+          "location": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "longitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "permit_notes": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Permit Number 38758",
+              "Permit Number 43922",
+              "Permit Number 44451",
+              "Permit Number 44518",
+              "Permit Number 45761"
+            ],
+            "type": "string"
+          },
+          "plant_date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1998-02-17T12:00:00+00:00",
+              "2001-04-25T12:00:00+00:00",
+              "2001-12-06T12:00:00+00:00",
+              "2001-12-31T12:00:00+00:00",
+              "2002-07-17T12:00:00+00:00"
+            ],
+            "type": "string"
+          },
+          "plant_type": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Tree"
+            ],
+            "type": "string"
+          },
+          "plot_size": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "site_info": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Sidewalk: Curb side : Cutout"
+            ],
+            "type": "string"
+          },
+          "site_order": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              89,
+              148,
+              158,
+              234
+            ],
+            "type": "number"
+          },
+          "species": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Olea europaea :: Olive Tree",
+              "Pyrus kawakamii :: Evergreen P...",
+              "Tree(s) ::"
+            ],
+            "type": "string"
+          },
+          "tree_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              44875,
+              44885,
+              46200,
+              48068,
+              48279
+            ],
+            "type": "number"
+          },
+          "x_coordinate": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "y_coordinate": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "street_trees::0",
+                  "street_trees::1",
+                  "street_trees::2",
+                  "street_trees::3",
+                  "street_trees::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "street_trees::0"
+              },
+              {
+                "id": "street_trees::1"
+              },
+              {
+                "id": "street_trees::2"
+              },
+              {
+                "id": "street_trees::3"
+              },
+              {
+                "id": "street_trees::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": null,
+      "care_assistant": null,
+      "care_taker": "Private",
+      "dbh": null,
+      "latitude": null,
+      "legal_status": "Permitted Site",
+      "location": null,
+      "longitude": null,
+      "permit_notes": "Permit Number 45761",
+      "plant_date": "2002-07-17T12:00:00+00:00",
+      "plant_type": "Tree",
+      "plot_size": null,
+      "site_info": "Sidewalk: Curb side : Cutout",
+      "site_order": 89,
+      "species": "Tree(s) ::",
+      "tree_id": 48279,
+      "x_coordinate": null,
+      "y_coordinate": null
+    },
+    {
+      "address": null,
+      "care_assistant": null,
+      "care_taker": "Private",
+      "dbh": null,
+      "latitude": null,
+      "legal_status": "Permitted Site",
+      "location": null,
+      "longitude": null,
+      "permit_notes": "Permit Number 38758",
+      "plant_date": "1998-02-17T12:00:00+00:00",
+      "plant_type": "Tree",
+      "plot_size": null,
+      "site_info": "Sidewalk: Curb side : Cutout",
+      "site_order": 1,
+      "species": "Olea europaea :: Olive Tree",
+      "tree_id": 35280,
+      "x_coordinate": null,
+      "y_coordinate": null
+    },
+    {
+      "address": null,
+      "care_assistant": null,
+      "care_taker": "Private",
+      "dbh": null,
+      "latitude": null,
+      "legal_status": "Permitted Site",
+      "location": null,
+      "longitude": null,
+      "permit_notes": "Permit Number 44451",
+      "plant_date": "2001-12-06T12:00:00+00:00",
+      "plant_type": "Tree",
+      "plot_size": null,
+      "site_info": "Sidewalk: Curb side : Cutout",
+      "site_order": 33,
+      "species": "Tree(s) ::",
+      "tree_id": 45914,
+      "x_coordinate": null,
+      "y_coordinate": null
+    },
+    {
+      "address": null,
+      "care_assistant": null,
+      "care_taker": "Private",
+      "dbh": null,
+      "latitude": null,
+      "legal_status": "Permitted Site",
+      "location": null,
+      "longitude": null,
+      "permit_notes": "Permit Number 44518",
+      "plant_date": "2001-12-31T12:00:00+00:00",
+      "plant_type": "Tree",
+      "plot_size": null,
+      "site_info": "Sidewalk: Curb side : Cutout",
+      "site_order": 2,
+      "species": "Pyrus kawakamii :: Evergreen Pear",
+      "tree_id": 46200,
+      "x_coordinate": null,
+      "y_coordinate": null
+    },
+    {
+      "address": null,
+      "care_assistant": null,
+      "care_taker": "Private",
+      "dbh": null,
+      "latitude": null,
+      "legal_status": "Permitted Site",
+      "location": null,
+      "longitude": null,
+      "permit_notes": "Permit Number 43922",
+      "plant_date": "2001-04-25T12:00:00+00:00",
+      "plant_type": "Tree",
+      "plot_size": null,
+      "site_info": "Sidewalk: Curb side : Cutout",
+      "site_order": 148,
+      "species": "Tree(s) ::",
+      "tree_id": 44875,
+      "x_coordinate": null,
+      "y_coordinate": null
+    }
+  ]
+}

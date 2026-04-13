@@ -1,0 +1,159 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`vehicle_number` = 0",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10148,
+              60433,
+              290188,
+              290509,
+              360794
+            ],
+            "type": "number"
+          },
+          "non_motorist_action_circumstances": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "non_motorist_action_circumstances_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Going to or from School (K-12)",
+              "Waiting to Cross Roadway"
+            ],
+            "type": "string"
+          },
+          "person_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              6,
+              28,
+              29,
+              36
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "nmprior_2016::1",
+                  "nmprior_2016::4",
+                  "nmprior_2016::6",
+                  "nmprior_2016::7",
+                  "nmprior_2016::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "nmprior_2016::1"
+              },
+              {
+                "id": "nmprior_2016::4"
+              },
+              {
+                "id": "nmprior_2016::6"
+              },
+              {
+                "id": "nmprior_2016::7"
+              },
+              {
+                "id": "nmprior_2016::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 10148,
+      "non_motorist_action_circumstances": 2,
+      "non_motorist_action_circumstances_name": "Waiting to Cross Roadway",
+      "person_number": 1,
+      "state_number": 1,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 290509,
+      "non_motorist_action_circumstances": 1,
+      "non_motorist_action_circumstances_name": "Going to or from School (K-12)",
+      "person_number": 1,
+      "state_number": 29,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 360794,
+      "non_motorist_action_circumstances": 1,
+      "non_motorist_action_circumstances_name": "Going to or from School (K-12)",
+      "person_number": 1,
+      "state_number": 36,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 40617,
+      "non_motorist_action_circumstances": 2,
+      "non_motorist_action_circumstances_name": "Waiting to Cross Roadway",
+      "person_number": 1,
+      "state_number": 4,
+      "vehicle_number": 0
+    },
+    {
+      "consecutive_number": 290188,
+      "non_motorist_action_circumstances": 1,
+      "non_motorist_action_circumstances_name": "Going to or from School (K-12)",
+      "person_number": 1,
+      "state_number": 29,
+      "vehicle_number": 0
+    }
+  ]
+}

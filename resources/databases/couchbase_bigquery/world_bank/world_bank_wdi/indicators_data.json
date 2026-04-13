@@ -1,0 +1,172 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "country_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BEN",
+              "IRL",
+              "PNG",
+              "RWA",
+              "TSS"
+            ],
+            "type": "string"
+          },
+          "country_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Benin",
+              "Ireland",
+              "Papua New Guinea",
+              "Rwanda",
+              "Sub-Saharan Africa (IDA & IBRD..."
+            ],
+            "type": "string"
+          },
+          "indicator_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DT.TDS.DPPG.GN.ZS",
+              "EN.CLC.GHGR.MT.CE",
+              "NE.GDI.STKB.CN",
+              "SH.DYN.NCOM.MA.ZS",
+              "SH.SGR.IRSK.ZS"
+            ],
+            "type": "string"
+          },
+          "indicator_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Changes in inventories (curren...",
+              "GHG net emissions/removals by ...",
+              "Mortality from CVD, cancer, di...",
+              "Public and publicly guaranteed...",
+              "Risk of impoverishing expendit..."
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -1.08505761168939,
+              0.5557490783048,
+              40.5,
+              49.0629088715406,
+              17080000000
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1978,
+              2002,
+              2013,
+              2015,
+              2020
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "indicators_data::1203597",
+                  "indicators_data::193772",
+                  "indicators_data::2469243",
+                  "indicators_data::308108",
+                  "indicators_data::3393053"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "indicators_data::1203597"
+              },
+              {
+                "id": "indicators_data::193772"
+              },
+              {
+                "id": "indicators_data::2469243"
+              },
+              {
+                "id": "indicators_data::308108"
+              },
+              {
+                "id": "indicators_data::3393053"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "country_code": "GHA",
+      "country_name": "Ghana",
+      "indicator_code": "NY.ADJ.NNTY.CD",
+      "indicator_name": "Adjusted net national income (current US$)",
+      "value": 2602905446.17883,
+      "year": 1974
+    },
+    {
+      "country_code": "GHA",
+      "country_name": "Ghana",
+      "indicator_code": "FS.AST.PRVT.GD.ZS",
+      "indicator_name": "Domestic credit to private sector (% of GDP)",
+      "value": 4.56846950517837,
+      "year": 1960
+    },
+    {
+      "country_code": "GHA",
+      "country_name": "Ghana",
+      "indicator_code": "SL.EMP.WORK.MA.ZS",
+      "indicator_name": "Wage and salaried workers, male (% of male employment) (modeled ILO estimate)",
+      "value": 31.4799995422363,
+      "year": 2016
+    },
+    {
+      "country_code": "TGO",
+      "country_name": "Togo",
+      "indicator_code": "NY.GDP.MKTP.CN",
+      "indicator_name": "GDP (current LCU)",
+      "value": 936457601000,
+      "year": 1998
+    },
+    {
+      "country_code": "MOZ",
+      "country_name": "Mozambique",
+      "indicator_code": "NE.CON.TOTL.CD",
+      "indicator_name": "Final consumption expenditure (current US$)",
+      "value": 7015325649.98472,
+      "year": 2004
+    }
+  ]
+}

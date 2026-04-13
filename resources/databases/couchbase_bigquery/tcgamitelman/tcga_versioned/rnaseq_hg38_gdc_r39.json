@@ -1,0 +1,384 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`platform` = \"Illumina\", `primary_site` = \"Stomach\", `project_short_name` = \"TCGA-STAD\"",
+        "properties": {
+          "Ensembl_gene_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N_ambiguous",
+              "N_multimapping",
+              "N_noFeature",
+              "N_unmapped"
+            ],
+            "type": "string"
+          },
+          "Ensembl_gene_id_v": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "N_ambiguous",
+              "N_multimapping",
+              "N_noFeature",
+              "N_unmapped"
+            ],
+            "type": "string"
+          },
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-HU-A4GN-11A-12R-A251-31",
+              "TCGA-HU-A4GQ-01A-11R-A36D-31"
+            ],
+            "type": "string"
+          },
+          "aliquot_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1cbbed6a-6117-48ff-94b1-c9018c...",
+              "99ce4992-5a64-46fe-9b36-dbfeae..."
+            ],
+            "type": "string"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-HU-A4GN",
+              "TCGA-HU-A4GQ"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "7739f659-0e25-4404-ad25-ee52fb...",
+              "f8a32cb0-8c3d-4bc2-8e53-561b89..."
+            ],
+            "type": "string"
+          },
+          "file_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "62f3a6f2-439e-4787-8a4f-ef8956...",
+              "a7474755-f3dc-4a63-bc79-b9d10e..."
+            ],
+            "type": "string"
+          },
+          "fpkm_unstranded": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "fpkm_uq_unstranded": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "gene_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "gene_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "platform": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Illumina"
+            ],
+            "type": "string"
+          },
+          "primary_site": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Stomach"
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-STAD"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-HU-A4GN-11A",
+              "TCGA-HU-A4GQ-01A"
+            ],
+            "type": "string"
+          },
+          "sample_gdc_id": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "22ec17ab-22fc-4e78-a559-ebc949...",
+              "9776b300-217e-4c5a-b9a5-74bf57..."
+            ],
+            "type": "string"
+          },
+          "sample_type_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Primary Tumor",
+              "Solid Tissue Normal"
+            ],
+            "type": "string"
+          },
+          "stranded_first": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1718299,
+              5995075,
+              8012755,
+              11453523,
+              46177138
+            ],
+            "type": "number"
+          },
+          "stranded_second": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1709243,
+              5995075,
+              8012755,
+              11453523,
+              46343299
+            ],
+            "type": "number"
+          },
+          "tpm_unstranded": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "unstranded": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5995075,
+              6361511,
+              7553085,
+              8012755,
+              11453523
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "rnaseq_hg38_gdc_r39::0",
+                  "rnaseq_hg38_gdc_r39::1",
+                  "rnaseq_hg38_gdc_r39::2",
+                  "rnaseq_hg38_gdc_r39::3",
+                  "rnaseq_hg38_gdc_r39::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "rnaseq_hg38_gdc_r39::0"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r39::1"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r39::2"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r39::3"
+              },
+              {
+                "id": "rnaseq_hg38_gdc_r39::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Ensembl_gene_id": "N_noFeature",
+      "Ensembl_gene_id_v": "N_noFeature",
+      "aliquot_barcode": "TCGA-HU-A4GN-11A-12R-A251-31",
+      "aliquot_gdc_id": "1cbbed6a-6117-48ff-94b1-c9018c5aaa67",
+      "case_barcode": "TCGA-HU-A4GN",
+      "case_gdc_id": "f8a32cb0-8c3d-4bc2-8e53-561b89000be7",
+      "file_gdc_id": "a7474755-f3dc-4a63-bc79-b9d10ee278af",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Stomach",
+      "project_short_name": "TCGA-STAD",
+      "sample_barcode": "TCGA-HU-A4GN-11A",
+      "sample_gdc_id": "9776b300-217e-4c5a-b9a5-74bf57d36e59",
+      "sample_type_name": "Solid Tissue Normal",
+      "stranded_first": 46177138,
+      "stranded_second": 46343299,
+      "tpm_unstranded": null,
+      "unstranded": 6361511
+    },
+    {
+      "Ensembl_gene_id": "N_multimapping",
+      "Ensembl_gene_id_v": "N_multimapping",
+      "aliquot_barcode": "TCGA-HU-A4GN-11A-12R-A251-31",
+      "aliquot_gdc_id": "1cbbed6a-6117-48ff-94b1-c9018c5aaa67",
+      "case_barcode": "TCGA-HU-A4GN",
+      "case_gdc_id": "f8a32cb0-8c3d-4bc2-8e53-561b89000be7",
+      "file_gdc_id": "a7474755-f3dc-4a63-bc79-b9d10ee278af",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Stomach",
+      "project_short_name": "TCGA-STAD",
+      "sample_barcode": "TCGA-HU-A4GN-11A",
+      "sample_gdc_id": "9776b300-217e-4c5a-b9a5-74bf57d36e59",
+      "sample_type_name": "Solid Tissue Normal",
+      "stranded_first": 11453523,
+      "stranded_second": 11453523,
+      "tpm_unstranded": null,
+      "unstranded": 11453523
+    },
+    {
+      "Ensembl_gene_id": "N_unmapped",
+      "Ensembl_gene_id_v": "N_unmapped",
+      "aliquot_barcode": "TCGA-HU-A4GN-11A-12R-A251-31",
+      "aliquot_gdc_id": "1cbbed6a-6117-48ff-94b1-c9018c5aaa67",
+      "case_barcode": "TCGA-HU-A4GN",
+      "case_gdc_id": "f8a32cb0-8c3d-4bc2-8e53-561b89000be7",
+      "file_gdc_id": "a7474755-f3dc-4a63-bc79-b9d10ee278af",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Stomach",
+      "project_short_name": "TCGA-STAD",
+      "sample_barcode": "TCGA-HU-A4GN-11A",
+      "sample_gdc_id": "9776b300-217e-4c5a-b9a5-74bf57d36e59",
+      "sample_type_name": "Solid Tissue Normal",
+      "stranded_first": 5995075,
+      "stranded_second": 5995075,
+      "tpm_unstranded": null,
+      "unstranded": 5995075
+    },
+    {
+      "Ensembl_gene_id": "N_ambiguous",
+      "Ensembl_gene_id_v": "N_ambiguous",
+      "aliquot_barcode": "TCGA-HU-A4GN-11A-12R-A251-31",
+      "aliquot_gdc_id": "1cbbed6a-6117-48ff-94b1-c9018c5aaa67",
+      "case_barcode": "TCGA-HU-A4GN",
+      "case_gdc_id": "f8a32cb0-8c3d-4bc2-8e53-561b89000be7",
+      "file_gdc_id": "a7474755-f3dc-4a63-bc79-b9d10ee278af",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Stomach",
+      "project_short_name": "TCGA-STAD",
+      "sample_barcode": "TCGA-HU-A4GN-11A",
+      "sample_gdc_id": "9776b300-217e-4c5a-b9a5-74bf57d36e59",
+      "sample_type_name": "Solid Tissue Normal",
+      "stranded_first": 1718299,
+      "stranded_second": 1709243,
+      "tpm_unstranded": null,
+      "unstranded": 7553085
+    },
+    {
+      "Ensembl_gene_id": "N_multimapping",
+      "Ensembl_gene_id_v": "N_multimapping",
+      "aliquot_barcode": "TCGA-HU-A4GQ-01A-11R-A36D-31",
+      "aliquot_gdc_id": "99ce4992-5a64-46fe-9b36-dbfeaeaead17",
+      "case_barcode": "TCGA-HU-A4GQ",
+      "case_gdc_id": "7739f659-0e25-4404-ad25-ee52fbbcfd44",
+      "file_gdc_id": "62f3a6f2-439e-4787-8a4f-ef895670b7f1",
+      "fpkm_unstranded": null,
+      "fpkm_uq_unstranded": null,
+      "gene_name": null,
+      "gene_type": null,
+      "platform": "Illumina",
+      "primary_site": "Stomach",
+      "project_short_name": "TCGA-STAD",
+      "sample_barcode": "TCGA-HU-A4GQ-01A",
+      "sample_gdc_id": "22ec17ab-22fc-4e78-a559-ebc9493140e6",
+      "sample_type_name": "Primary Tumor",
+      "stranded_first": 8012755,
+      "stranded_second": 8012755,
+      "tpm_unstranded": null,
+      "unstranded": 8012755
+    }
+  ]
+}

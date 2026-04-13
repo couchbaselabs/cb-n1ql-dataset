@@ -1,0 +1,111 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`NameOrder` = 1",
+        "properties": {
+          "Name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Hayata I",
+              "LUND UNPUBLISHED",
+              "Muldal S"
+            ],
+            "type": "string"
+          },
+          "NameOrder": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1
+            ],
+            "type": "number"
+          },
+          "Refno": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              10,
+              11,
+              12
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "authorreference::0",
+                  "authorreference::1",
+                  "authorreference::2",
+                  "authorreference::3",
+                  "authorreference::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "authorreference::0"
+              },
+              {
+                "id": "authorreference::1"
+              },
+              {
+                "id": "authorreference::2"
+              },
+              {
+                "id": "authorreference::3"
+              },
+              {
+                "id": "authorreference::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Name": "LUND UNPUBLISHED",
+      "NameOrder": 1,
+      "Refno": 1
+    },
+    {
+      "Name": "Hayata I",
+      "NameOrder": 1,
+      "Refno": 10
+    },
+    {
+      "Name": "Muldal S",
+      "NameOrder": 1,
+      "Refno": 12
+    },
+    {
+      "Name": "Hayata I",
+      "NameOrder": 1,
+      "Refno": 11
+    },
+    {
+      "Name": "LUND UNPUBLISHED",
+      "NameOrder": 1,
+      "Refno": 1
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "gender_men": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.589,
+              0.633,
+              0.661,
+              0.692,
+              0.71
+            ],
+            "type": "number"
+          },
+          "gender_women": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                0.29,
+                0.308,
+                0.339,
+                0.367,
+                0.411
+              ]
+            ],
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "region": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AMERICAS (non-US)",
+              "APAC",
+              "EMEA"
+            ],
+            "type": "string"
+          },
+          "report_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2021,
+              2022
+            ],
+            "type": "number"
+          },
+          "workforce": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "non_tech",
+              "overall",
+              "tech"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dar_region_non_intersectional_...",
+                  "dar_region_non_intersectional_...",
+                  "dar_region_non_intersectional_...",
+                  "dar_region_non_intersectional_...",
+                  "dar_region_non_intersectional_..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "dar_region_non_intersectional_exits_representation::0"
+              },
+              {
+                "id": "dar_region_non_intersectional_exits_representation::2"
+              },
+              {
+                "id": "dar_region_non_intersectional_exits_representation::6"
+              },
+              {
+                "id": "dar_region_non_intersectional_exits_representation::7"
+              },
+              {
+                "id": "dar_region_non_intersectional_exits_representation::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "gender_men": 0.841,
+      "gender_women": 0.159,
+      "region": "APAC",
+      "report_year": 2021,
+      "workforce": "tech"
+    },
+    {
+      "gender_men": 0.692,
+      "gender_women": 0.308,
+      "region": "EMEA",
+      "report_year": 2021,
+      "workforce": "overall"
+    },
+    {
+      "gender_men": 0.9,
+      "gender_women": null,
+      "region": "AMERICAS (non-US)",
+      "report_year": 2021,
+      "workforce": "tech"
+    },
+    {
+      "gender_men": 0.71,
+      "gender_women": 0.29,
+      "region": "AMERICAS (non-US)",
+      "report_year": 2021,
+      "workforce": "overall"
+    },
+    {
+      "gender_men": 0.589,
+      "gender_women": 0.411,
+      "region": "EMEA",
+      "report_year": 2021,
+      "workforce": "non_tech"
+    }
+  ]
+}

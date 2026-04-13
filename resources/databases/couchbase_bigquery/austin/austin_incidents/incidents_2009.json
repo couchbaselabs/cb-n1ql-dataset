@@ -1,0 +1,207 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`date` = \"2009-04-02\"",
+        "properties": {
+          "address": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1200 BLOCK W HOWARD LN",
+              "12000 BLOCK RESEARCH BLVD SVRD...",
+              "1300 BLOCK W RIVERSIDE DR",
+              "3400 BLOCK W SLAUGHTER LN",
+              "500 BLOCK E 7TH ST"
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2009-04-02"
+            ],
+            "type": "string"
+          },
+          "descript": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DWI",
+              "THEFT"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "location": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "longitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "00:30:00",
+              "00:39:00",
+              "02:30:00",
+              "21:03:00",
+              "21:19:00"
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2009-04-02T06:30:00+00:00",
+              "2009-04-02T06:39:00+00:00",
+              "2009-04-02T08:30:00+00:00",
+              "2009-04-03T03:03:00+00:00",
+              "2009-04-03T03:19:00+00:00"
+            ],
+            "type": "string"
+          },
+          "unique_key": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2009912508,
+              2009920055,
+              2009920181,
+              2009922017,
+              2009922390
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "incidents_2009::3",
+                  "incidents_2009::5",
+                  "incidents_2009::7",
+                  "incidents_2009::8",
+                  "incidents_2009::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "incidents_2009::3"
+              },
+              {
+                "id": "incidents_2009::5"
+              },
+              {
+                "id": "incidents_2009::7"
+              },
+              {
+                "id": "incidents_2009::8"
+              },
+              {
+                "id": "incidents_2009::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "500 BLOCK E 7TH ST",
+      "date": "2009-04-02",
+      "descript": "THEFT",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "00:30:00",
+      "timestamp": "2009-04-02T06:30:00+00:00",
+      "unique_key": 2009920055
+    },
+    {
+      "address": "1300 BLOCK W RIVERSIDE DR",
+      "date": "2009-04-02",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "21:19:00",
+      "timestamp": "2009-04-03T03:19:00+00:00",
+      "unique_key": 2009922390
+    },
+    {
+      "address": "3400 BLOCK W SLAUGHTER LN",
+      "date": "2009-04-02",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "21:03:00",
+      "timestamp": "2009-04-03T03:03:00+00:00",
+      "unique_key": 2009922017
+    },
+    {
+      "address": "800 BLOCK W 6TH ST",
+      "date": "2009-04-02",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "02:50:00",
+      "timestamp": "2009-04-02T08:50:00+00:00",
+      "unique_key": 2009920147
+    },
+    {
+      "address": "300 BLOCK W 5TH ST",
+      "date": "2009-04-02",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "03:29:00",
+      "timestamp": "2009-04-02T09:29:00+00:00",
+      "unique_key": 2009920242
+    }
+  ]
+}

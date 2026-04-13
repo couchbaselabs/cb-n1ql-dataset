@@ -1,0 +1,210 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "",
+        "properties": {
+          "address": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10000 BLOCK BRODIE LN",
+              "300 BLOCK CONGRESS AVE",
+              "3800 BLOCK TODD LN",
+              "4000 BLOCK MC KINNEY FALLS PKW...",
+              "800 BLOCK SHERATON AVE"
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2009-12-14",
+              "2010-08-27"
+            ],
+            "type": "string"
+          },
+          "descript": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "DEBIT CARD ABUSE",
+              "DWI",
+              "FOUND PROPERTY",
+              "VIOL OF PROTECTIVE ORDER"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "location": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "longitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "time": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "00:20:00",
+              "01:26:00",
+              "11:52:00",
+              "15:57:00",
+              "22:27:00"
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2009-12-14T17:52:00+00:00",
+              "2009-12-14T21:57:00+00:00",
+              "2010-08-27T06:20:00+00:00",
+              "2010-08-27T07:26:00+00:00",
+              "2010-08-28T04:27:00+00:00"
+            ],
+            "type": "string"
+          },
+          "unique_key": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20102382619,
+              20102390018,
+              20102392318,
+              20105002170,
+              20105003000
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "incidents_2010::0",
+                  "incidents_2010::1",
+                  "incidents_2010::3",
+                  "incidents_2010::6",
+                  "incidents_2010::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "incidents_2010::0"
+              },
+              {
+                "id": "incidents_2010::1"
+              },
+              {
+                "id": "incidents_2010::3"
+              },
+              {
+                "id": "incidents_2010::6"
+              },
+              {
+                "id": "incidents_2010::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "address": "3200 BLOCK PECAN SPRINGS RD",
+      "date": "2009-12-14",
+      "descript": "VIOL OF PROTECTIVE ORDER",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "05:00:00",
+      "timestamp": "2009-12-14T11:00:00+00:00",
+      "unique_key": 20105000978
+    },
+    {
+      "address": "800 BLOCK W 6TH ST",
+      "date": "2010-08-27",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "00:02:00",
+      "timestamp": "2010-08-27T06:02:00+00:00",
+      "unique_key": 20102390014
+    },
+    {
+      "address": "800 BLOCK W 6TH ST",
+      "date": "2010-08-27",
+      "descript": "DWI",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "23:24:00",
+      "timestamp": "2010-08-28T05:24:00+00:00",
+      "unique_key": 20102392717
+    },
+    {
+      "address": "800 BLOCK SHERATON AVE",
+      "date": "2009-12-14",
+      "descript": "DEBIT CARD ABUSE",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "15:57:00",
+      "timestamp": "2009-12-14T21:57:00+00:00",
+      "unique_key": 20105003000
+    },
+    {
+      "address": "4000 BLOCK MC KINNEY FALLS PKWY",
+      "date": "2009-12-14",
+      "descript": "FOUND PROPERTY",
+      "latitude": null,
+      "location": null,
+      "longitude": null,
+      "time": "11:52:00",
+      "timestamp": "2009-12-14T17:52:00+00:00",
+      "unique_key": 20105002170
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`driver_distracted_by` = 0, `driver_distracted_by_name` = \"Not Distracted\"",
+        "properties": {
+          "consecutive_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              20012,
+              100079,
+              440044,
+              560014,
+              560070
+            ],
+            "type": "number"
+          },
+          "driver_distracted_by": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0
+            ],
+            "type": "number"
+          },
+          "driver_distracted_by_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Distracted"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              10,
+              33,
+              44,
+              56
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "distract_2016::2",
+                  "distract_2016::3",
+                  "distract_2016::6",
+                  "distract_2016::8",
+                  "distract_2016::9"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "distract_2016::2"
+              },
+              {
+                "id": "distract_2016::3"
+              },
+              {
+                "id": "distract_2016::6"
+              },
+              {
+                "id": "distract_2016::8"
+              },
+              {
+                "id": "distract_2016::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "consecutive_number": 560014,
+      "driver_distracted_by": 0,
+      "driver_distracted_by_name": "Not Distracted",
+      "state_number": 56,
+      "vehicle_number": 9
+    },
+    {
+      "consecutive_number": 560070,
+      "driver_distracted_by": 0,
+      "driver_distracted_by_name": "Not Distracted",
+      "state_number": 56,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 560014,
+      "driver_distracted_by": 0,
+      "driver_distracted_by_name": "Not Distracted",
+      "state_number": 56,
+      "vehicle_number": 8
+    },
+    {
+      "consecutive_number": 20012,
+      "driver_distracted_by": 0,
+      "driver_distracted_by_name": "Not Distracted",
+      "state_number": 2,
+      "vehicle_number": 5
+    },
+    {
+      "consecutive_number": 560014,
+      "driver_distracted_by": 0,
+      "driver_distracted_by_name": "Not Distracted",
+      "state_number": 56,
+      "vehicle_number": 7
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`city` = \"AUSTIN\", `complaint_description` = \"(Tara) Financial Services Depar...\", `status` = \"Closed\", `unique_key` = \"FSD - Telecommunication/Gas Uti...\"",
+        "properties": {
+          "city": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "AUSTIN"
+            ],
+            "type": "string"
+          },
+          "close_date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2025-03-10T17:55:38+00:00",
+              "2025-06-23T11:16:25+00:00",
+              "2025-06-23T14:32:23+00:00",
+              "2025-07-22T12:52:14+00:00",
+              "2025-08-08T10:33:42+00:00"
+            ],
+            "type": "string"
+          },
+          "complaint_description": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "(Tara) Financial Services Depa..."
+            ],
+            "type": "string"
+          },
+          "council_district_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              4,
+              9,
+              10
+            ],
+            "type": "number"
+          },
+          "county": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "created_date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2024-07-10T13:03:57+00:00",
+              "2025-01-04T12:03:48+00:00",
+              "2025-06-21T14:04:46+00:00",
+              "2025-07-02T09:10:17+00:00",
+              "2025-07-08T16:06:46+00:00"
+            ],
+            "type": "string"
+          },
+          "incident_address": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "202 W 44TH ST, AUSTIN, TX 7875...",
+              "3908 AVENUE H, AUSTIN, TX 7875...",
+              "4310 SINCLAIR AVE, AUSTIN, TX ...",
+              "6304 WINDSLOW CT, AUSTIN, TX 7...",
+              "7000 NORTHEAST DR, AUSTIN, TX ..."
+            ],
+            "type": "string"
+          },
+          "incident_zip": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "78723",
+              "78724",
+              "78751",
+              "78752",
+              "78756"
+            ],
+            "type": "string"
+          },
+          "last_update_date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2025-03-10T17:55:38+00:00",
+              "2025-06-23T11:16:25+00:00",
+              "2025-06-23T14:32:23+00:00",
+              "2025-07-22T12:52:12+00:00",
+              "2025-08-08T10:33:42+00:00"
+            ],
+            "type": "string"
+          },
+          "latitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30.30104573,
+              30.30831099,
+              30.31274379,
+              30.31491077,
+              30.31979061
+            ],
+            "type": "number"
+          },
+          "location": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "POINT (-97.67976008 30.3197906...",
+              "POINT (-97.68239619 30.3127437...",
+              "POINT (-97.72987087 30.3010457...",
+              "POINT (-97.73035298 30.3083109...",
+              "POINT (-97.74564663 30.3149107..."
+            ],
+            "type": "string"
+          },
+          "longitude": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              -97.74564663,
+              -97.73035298,
+              -97.72987087,
+              -97.68239619,
+              -97.67976008
+            ],
+            "type": "number"
+          },
+          "map_page": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "555J",
+              "555T",
+              "555X",
+              "556L",
+              "556Q"
+            ],
+            "type": "string"
+          },
+          "map_tile": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "MJ25",
+              "MJ26",
+              "MK28",
+              "MM26",
+              "MP25"
+            ],
+            "type": "string"
+          },
+          "source": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Citizen Web Intake",
+              "Phone",
+              "Spot311 Interface"
+            ],
+            "type": "string"
+          },
+          "state_plane_x_coordinate": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3113020.40357563",
+              "3117900.96167238",
+              "3118114.88927507",
+              "3132991.50412128",
+              "3133761.94680422"
+            ],
+            "type": "string"
+          },
+          "state_plane_y_coordinate": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              10082839.9379776,
+              10085477.9534454,
+              10087446.9976118,
+              10087764.9899559,
+              10090028.9508431
+            ],
+            "type": "number"
+          },
+          "status": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Closed"
+            ],
+            "type": "string"
+          },
+          "status_change_date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2025-03-10T17:55:38+00:00",
+              "2025-06-23T11:16:25+00:00",
+              "2025-06-23T14:32:23+00:00",
+              "2025-07-22T12:52:14+00:00",
+              "2025-08-08T10:33:42+00:00"
+            ],
+            "type": "string"
+          },
+          "street_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "44TH",
+              "AVENUE H",
+              "NORTHEAST",
+              "SINCLAIR",
+              "WINDSLOW"
+            ],
+            "type": "string"
+          },
+          "street_number": {
+            "#docs": [
+              1,
+              9
+            ],
+            "%docs": [
+              10,
+              90
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "202",
+                "3908",
+                "4310",
+                "6304",
+                "7000"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "unique_key": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "FSD - Telecommunication/Gas Ut..."
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "311_service_requests::3",
+                  "311_service_requests::5",
+                  "311_service_requests::6",
+                  "311_service_requests::7",
+                  "311_service_requests::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "311_service_requests::3"
+              },
+              {
+                "id": "311_service_requests::5"
+              },
+              {
+                "id": "311_service_requests::6"
+              },
+              {
+                "id": "311_service_requests::7"
+              },
+              {
+                "id": "311_service_requests::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "city": "AUSTIN",
+      "close_date": "2025-03-10T17:55:38+00:00",
+      "complaint_description": "(Tara) Financial Services Depart",
+      "council_district_code": 10,
+      "county": null,
+      "created_date": "2025-01-04T12:03:48+00:00",
+      "incident_address": "4310 SINCLAIR AVE, AUSTIN, TX 78756",
+      "incident_zip": "78756",
+      "last_update_date": "2025-03-10T17:55:38+00:00",
+      "latitude": 30.31491077,
+      "location": "POINT (-97.74564663 30.31491077)",
+      "longitude": -97.74564663,
+      "map_page": "555J",
+      "map_tile": "MJ26",
+      "source": "Phone",
+      "state_plane_x_coordinate": "3113020.40357563",
+      "state_plane_y_coordinate": 10087764.9899559,
+      "status": "Closed",
+      "status_change_date": "2025-03-10T17:55:38+00:00",
+      "street_name": "SINCLAIR",
+      "street_number": "4310",
+      "unique_key": "FSD - Telecommunication/Gas Utility Complaint"
+    },
+    {
+      "city": "AUSTIN",
+      "close_date": "2025-06-04T11:05:58+00:00",
+      "complaint_description": "(Tara) Financial Services Depart",
+      "council_district_code": 4,
+      "county": null,
+      "created_date": "2025-02-24T15:11:25+00:00",
+      "incident_address": "7522 NORTHCREST BLVD, AUSTIN, TX 78752",
+      "incident_zip": "78752",
+      "last_update_date": "2025-06-04T11:05:58+00:00",
+      "latitude": 30.3405758,
+      "location": "POINT (-97.70892784 30.3405758)",
+      "longitude": -97.70892784,
+      "map_page": "525V",
+      "map_tile": "MK28",
+      "source": "Phone",
+      "state_plane_x_coordinate": "3124383.17201744",
+      "state_plane_y_coordinate": 10097367.891516,
+      "status": "Closed",
+      "status_change_date": "2025-06-04T11:05:58+00:00",
+      "street_name": "NORTHCREST",
+      "street_number": "7522",
+      "unique_key": "FSD - Telecommunication/Gas Utility Complaint"
+    },
+    {
+      "city": "AUSTIN",
+      "close_date": "2025-08-08T10:33:42+00:00",
+      "complaint_description": "(Tara) Financial Services Depart",
+      "council_district_code": 9,
+      "county": null,
+      "created_date": "2025-07-08T16:06:46+00:00",
+      "incident_address": "3908 AVENUE H, AUSTIN, TX 78751",
+      "incident_zip": "78751",
+      "last_update_date": "2025-08-08T10:33:42+00:00",
+      "latitude": 30.30104573,
+      "location": "POINT (-97.72987087 30.30104573)",
+      "longitude": -97.72987087,
+      "map_page": "555X",
+      "map_tile": "MJ25",
+      "source": "Phone",
+      "state_plane_x_coordinate": "3118114.88927507",
+      "state_plane_y_coordinate": 10082839.9379776,
+      "status": "Closed",
+      "status_change_date": "2025-08-08T10:33:42+00:00",
+      "street_name": "AVENUE H",
+      "street_number": "3908",
+      "unique_key": "FSD - Telecommunication/Gas Utility Complaint"
+    },
+    {
+      "city": "AUSTIN",
+      "close_date": "2025-04-22T10:13:48+00:00",
+      "complaint_description": "(Tara) Financial Services Depart",
+      "council_district_code": 1,
+      "county": null,
+      "created_date": "2025-02-03T09:19:34+00:00",
+      "incident_address": "6904 ARIES LN, AUSTIN, TX 78724",
+      "incident_zip": "78724",
+      "last_update_date": "2025-04-22T10:13:48+00:00",
+      "latitude": 30.2977876,
+      "location": "POINT (-97.64360785 30.2977876)",
+      "longitude": -97.64360785,
+      "map_page": "557Y",
+      "map_tile": "MP25",
+      "source": "Citizen Web Intake",
+      "state_plane_x_coordinate": "3145358.91370023",
+      "state_plane_y_coordinate": 10082302.9516471,
+      "status": "Closed",
+      "status_change_date": "2025-04-22T10:13:48+00:00",
+      "street_name": "ARIES",
+      "street_number": "6904",
+      "unique_key": "FSD - Telecommunication/Gas Utility Complaint"
+    },
+    {
+      "city": "AUSTIN",
+      "close_date": "2025-05-20T13:35:56+00:00",
+      "complaint_description": "(Tara) Financial Services Depart",
+      "council_district_code": 10,
+      "county": null,
+      "created_date": "2025-05-15T10:22:13+00:00",
+      "incident_address": "BARRINGTON WAY & SHAKESPEAREAN WAY, AUSTIN, TX",
+      "incident_zip": "78759",
+      "last_update_date": "2025-05-20T13:35:56+00:00",
+      "latitude": 30.42884704,
+      "location": "POINT (-97.77543453 30.42884704)",
+      "longitude": -97.77543453,
+      "map_page": "464F",
+      "map_tile": "MG36",
+      "source": "Phone",
+      "state_plane_x_coordinate": "3102671.00265809",
+      "state_plane_y_coordinate": 10128973.99626,
+      "status": "Closed",
+      "status_change_date": "2025-05-20T13:35:56+00:00",
+      "street_name": "BARRINGTON WAY & SHAKESPEAREAN WAY",
+      "street_number": null,
+      "unique_key": "FSD - Telecommunication/Gas Utility Complaint"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`Arm` = \"q\", `Band` = \"10\", `TotalCases` = \"2\", `Type` = \"U\"",
+        "properties": {
+          "Abnormality": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "der(1;2)(q10;p10)",
+              "der(1;2)(q10;q10)",
+              "der(1;3)(q10;q10)",
+              "i(Y)(q10)"
+            ],
+            "type": "string"
+          },
+          "Arm": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "q"
+            ],
+            "type": "string"
+          },
+          "Band": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10"
+            ],
+            "type": "string"
+          },
+          "ChrOrder": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              24
+            ],
+            "type": "number"
+          },
+          "Chromosome": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "Y"
+            ],
+            "type": "string"
+          },
+          "Gene": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "Morph": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1702",
+              "1820",
+              "3111",
+              "8804"
+            ],
+            "type": "string"
+          },
+          "Topo": {
+            "#docs": [
+              3,
+              2
+            ],
+            "%docs": [
+              60,
+              40
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "0401",
+                "0801"
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "TotalCases": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2"
+            ],
+            "type": "string"
+          },
+          "Type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "recurrentdata::0",
+                  "recurrentdata::1",
+                  "recurrentdata::2",
+                  "recurrentdata::3",
+                  "recurrentdata::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "recurrentdata::0"
+              },
+              {
+                "id": "recurrentdata::1"
+              },
+              {
+                "id": "recurrentdata::2"
+              },
+              {
+                "id": "recurrentdata::3"
+              },
+              {
+                "id": "recurrentdata::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "Abnormality": "der(1;2)(q10;q10)",
+      "Arm": "q",
+      "Band": "10",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Gene": null,
+      "Morph": "8804",
+      "Topo": "0801",
+      "TotalCases": "2",
+      "Type": "U"
+    },
+    {
+      "Abnormality": "der(1;3)(q10;q10)",
+      "Arm": "q",
+      "Band": "10",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Gene": null,
+      "Morph": "1702",
+      "Topo": null,
+      "TotalCases": "2",
+      "Type": "U"
+    },
+    {
+      "Abnormality": "der(1;3)(q10;q10)",
+      "Arm": "q",
+      "Band": "10",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Gene": null,
+      "Morph": "3111",
+      "Topo": "0401",
+      "TotalCases": "2",
+      "Type": "U"
+    },
+    {
+      "Abnormality": "i(Y)(q10)",
+      "Arm": "q",
+      "Band": "10",
+      "ChrOrder": 24,
+      "Chromosome": "Y",
+      "Gene": null,
+      "Morph": "1820",
+      "Topo": null,
+      "TotalCases": "2",
+      "Type": "U"
+    },
+    {
+      "Abnormality": "der(1;2)(q10;p10)",
+      "Arm": "q",
+      "Band": "10",
+      "ChrOrder": 1,
+      "Chromosome": "1",
+      "Gene": null,
+      "Morph": "1702",
+      "Topo": null,
+      "TotalCases": "2",
+      "Type": "U"
+    }
+  ]
+}

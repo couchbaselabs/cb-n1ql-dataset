@@ -1,0 +1,50 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`discount` = 0.05",
+        "properties": {
+          "discount": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.05
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "site_wide_promotion::0"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "site_wide_promotion::0"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "discount": 0.05
+    }
+  ]
+}

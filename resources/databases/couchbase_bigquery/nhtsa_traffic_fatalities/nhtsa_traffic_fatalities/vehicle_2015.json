@@ -1,0 +1,2102 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 1000,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`unit_type` = \"Motor Vehicle in Transport (Ins...\"",
+        "properties": {
+          "attempted_avoidance_maneuver": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              4,
+              6,
+              8,
+              99
+            ],
+            "type": "number"
+          },
+          "attempted_avoidance_maneuver_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Braking (Lockup Unknown)",
+              "Braking and Steering Left",
+              "No Avoidance Maneuver",
+              "Steering Left",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "body_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              4,
+              14,
+              31,
+              62,
+              92
+            ],
+            "type": "number"
+          },
+          "body_type_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4-Door Sedan/Hardtop",
+              "Compact Utility (ANSI D-16 Uti...",
+              "Farm Equipment Other Than Truc...",
+              "Single-Unit Straight Truck or ...",
+              "Standard Pickup"
+            ],
+            "type": "string"
+          },
+          "bus_use": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not a Bus",
+              "Shuttle Bus",
+              "Transit/Commuter Bus",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "cargo_body_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              6,
+              8,
+              97
+            ],
+            "type": "number"
+          },
+          "cargo_body_type_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Auto Transporter",
+              "Grain, Chips, Gravel",
+              "Not Applicable",
+              "Other",
+              "Van/Enclosed Box"
+            ],
+            "type": "string"
+          },
+          "commercial_motor_vehicle_license_status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              5,
+              6,
+              97,
+              99
+            ],
+            "type": "number"
+          },
+          "compliance_with_cdl_endorsements": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Endorsement(s) Required, Compl...",
+              "Endorsement(s) Required, Compl...",
+              "No Driver Present/Unknown if D...",
+              "No Endorsements Required For T...",
+              "Unknown, if Required"
+            ],
+            "type": "string"
+          },
+          "compliance_with_license_restrictions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              9
+            ],
+            "type": "number"
+          },
+          "consecutive_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              121132,
+              200198,
+              260001,
+              481506,
+              510210
+            ],
+            "type": "number"
+          },
+          "crash_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              64,
+              68,
+              76,
+              89
+            ],
+            "type": "number"
+          },
+          "crash_type_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CHANGING TRAFFICWAY, VEHICLE T...",
+              "CHANGING TRAFFICWAY, VEHICLE T...",
+              "INTERSECTING PATHS (VEHICLE DA...",
+              "SAME TRAFFICWAY, OPPOSITE DIRE...",
+              "SINGLE DRIVER, CONFIGURATION C..."
+            ],
+            "type": "string"
+          },
+          "critical_event_precrash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              6,
+              11,
+              15,
+              17,
+              54
+            ],
+            "type": "number"
+          },
+          "critical_event_precrash_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Crossing Over (Passing Through...",
+              "Over the Lane Line on Right Si...",
+              "Traveling In Opposite Directio...",
+              "Traveling Too Fast For Conditi...",
+              "Turning Left at Junction"
+            ],
+            "type": "string"
+          },
+          "day_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              6,
+              14,
+              25,
+              27
+            ],
+            "type": "number"
+          },
+          "driver_drinking": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Drinking",
+              "No Drinking"
+            ],
+            "type": "string"
+          },
+          "driver_height": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              64,
+              65,
+              67,
+              73,
+              999
+            ],
+            "type": "number"
+          },
+          "driver_presence": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Driver Present/Not Applicab...",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "driver_weight": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              130,
+              140,
+              225,
+              270,
+              999
+            ],
+            "type": "number"
+          },
+          "drivers_license_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              20,
+              26,
+              48,
+              51
+            ],
+            "type": "number"
+          },
+          "drivers_zip_code": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              22835,
+              33178,
+              49720,
+              66101,
+              77573
+            ],
+            "type": "number"
+          },
+          "emergency_motor_vehicle_use": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Emergency Operation, Emergency...",
+              "Not Applicable",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "extent_of_damage": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Disabling Damage",
+              "Functional Damage",
+              "Minor Damage",
+              "Not Reported",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "fatalities_in_vehicle": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "fire_occurrence": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No or Not Reported",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "first_harmful_event": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              8,
+              12,
+              14,
+              35,
+              42
+            ],
+            "type": "number"
+          },
+          "first_harmful_event_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Embankment",
+              "Motor Vehicle in Transport",
+              "Parked Motor Vehicle (Not In T...",
+              "Pedestrian",
+              "Tree (Standing Only)"
+            ],
+            "type": "string"
+          },
+          "gross_vehicle_weight_rating": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "10,000 lbs or Less",
+              "10,001 lbs - 26,000 lbs",
+              "26,001 lbs or More",
+              "Not Applicable",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "hazardous_material_class_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              2,
+              3,
+              88
+            ],
+            "type": "number"
+          },
+          "hazardous_material_identification_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1005,
+              1267,
+              8888
+            ],
+            "type": "number"
+          },
+          "hazardous_material_involvement": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "hazardous_material_placard": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2
+            ],
+            "type": "number"
+          },
+          "hit_and_run": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No",
+              "Unknown",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "hour_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              11,
+              13,
+              16,
+              20,
+              22
+            ],
+            "type": "number"
+          },
+          "initial_contact_point": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              3,
+              6,
+              9,
+              12,
+              82
+            ],
+            "type": "number"
+          },
+          "jackknife": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No",
+              "Not an Articulated Vehicle",
+              "Yes, First Event",
+              "Yes, Subsequent Event"
+            ],
+            "type": "string"
+          },
+          "license_compliance_with_class_of_vehicle": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No License Required for This C...",
+              "No Valid License for This Clas...",
+              "Not Licensed",
+              "Unknown",
+              "Valid License for This Class V..."
+            ],
+            "type": "string"
+          },
+          "location_of_rollover": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Rollover",
+              "On Median/Separator",
+              "On Roadside",
+              "On Roadway",
+              "Outside of Trafficway"
+            ],
+            "type": "string"
+          },
+          "make_model_combined": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              18001,
+              23481,
+              34034,
+              37031,
+              37402
+            ],
+            "type": "number"
+          },
+          "manner_of_collision": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              6,
+              7
+            ],
+            "type": "number"
+          },
+          "mcid_identification_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "000000000",
+              "2530095",
+              "260341",
+              "313891",
+              "777777777"
+            ],
+            "type": "string"
+          },
+          "mcid_issuing_authority": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              12,
+              13,
+              57,
+              77
+            ],
+            "type": "number"
+          },
+          "minute_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              17,
+              20,
+              24,
+              29,
+              31
+            ],
+            "type": "number"
+          },
+          "month_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5,
+              6,
+              7,
+              8
+            ],
+            "type": "number"
+          },
+          "month_of_first_crash_suspension_or_conviction": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              7,
+              8,
+              99
+            ],
+            "type": "number"
+          },
+          "month_of_last_crash_suspension_or_conviction": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              7,
+              8,
+              10,
+              99
+            ],
+            "type": "number"
+          },
+          "most_harmful_event": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5,
+              8,
+              12,
+              42
+            ],
+            "type": "number"
+          },
+          "motor_carrier_identification_number_mcid": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "00000000000",
+              "132530095",
+              "57260341",
+              "57313891",
+              "77777777777"
+            ],
+            "type": "string"
+          },
+          "non_cdl_license_status": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              6,
+              9
+            ],
+            "type": "number"
+          },
+          "non_cdl_license_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Full Driver License",
+              "Intermediate Driver License",
+              "No Driver Present/Unknown if D...",
+              "Not Licensed",
+              "Unknown License Type"
+            ],
+            "type": "string"
+          },
+          "number_of_motor_vehicles_in_transport_mvit": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            "type": "number"
+          },
+          "number_of_occupants": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "type": "number"
+          },
+          "pre_event_movement_prior_to_recognition_of_critical_event": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              5,
+              10,
+              11,
+              14
+            ],
+            "type": "number"
+          },
+          "pre_impact_location": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              9
+            ],
+            "type": "number"
+          },
+          "pre_impact_stability": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Precrash Stability Unknown",
+              "Skidding Laterally \u2013 Clockwi...",
+              "Skidding Laterally \u2013 Counter...",
+              "Skidding Longitudinally \u2013 Ro...",
+              "Tracking"
+            ],
+            "type": "string"
+          },
+          "previous_dwi_convictions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              99,
+              998
+            ],
+            "type": "number"
+          },
+          "previous_other_moving_violation_convictions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              3,
+              4,
+              99
+            ],
+            "type": "number"
+          },
+          "previous_recorded_crashes": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              98,
+              99
+            ],
+            "type": "number"
+          },
+          "previous_recorded_suspensions_and_revocations": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              3,
+              8,
+              99
+            ],
+            "type": "number"
+          },
+          "previous_speeding_convictions": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              4,
+              99
+            ],
+            "type": "number"
+          },
+          "registered_vehicle_owner": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "type": "number"
+          },
+          "registered_vehicle_owner_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Driver (of This Vehicle) Not R...",
+              "Driver (of This Vehicle) Was R...",
+              "Not Applicable, Vehicle Not Re...",
+              "Vehicle Registered as Business...",
+              "Vehicle Registered as Rental V..."
+            ],
+            "type": "string"
+          },
+          "registration_state": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              20,
+              26,
+              48,
+              51
+            ],
+            "type": "number"
+          },
+          "registration_state_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Florida",
+              "Kansas",
+              "Michigan",
+              "Texas",
+              "Virginia"
+            ],
+            "type": "string"
+          },
+          "related_factors_driver_level_1": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              26,
+              28,
+              38,
+              51
+            ],
+            "type": "number"
+          },
+          "related_factors_driver_level_2": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              28,
+              36,
+              38,
+              87
+            ],
+            "type": "number"
+          },
+          "related_factors_driver_level_3": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              35,
+              58,
+              79,
+              99
+            ],
+            "type": "number"
+          },
+          "related_factors_driver_level_4": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              39,
+              88,
+              91,
+              99
+            ],
+            "type": "number"
+          },
+          "related_factors_vehicle_level_1": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              32,
+              35,
+              42,
+              99
+            ],
+            "type": "number"
+          },
+          "related_factors_vehicle_level_2": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              99
+            ],
+            "type": "number"
+          },
+          "release_of_hazardous_material_from_the_cargo_compartment": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No",
+              "Not Applicable",
+              "Not Reported",
+              "Yes"
+            ],
+            "type": "string"
+          },
+          "roadway_alignment": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Curve Left",
+              "Curve Right",
+              "Curve \u2013 Unknown Direction",
+              "Straight",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "roadway_grade": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Grade, Unknown Slope",
+              "Level",
+              "Not Reported",
+              "Unknown",
+              "Uphill"
+            ],
+            "type": "string"
+          },
+          "roadway_surface_condition": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              99
+            ],
+            "type": "number"
+          },
+          "roadway_surface_condition_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Dry",
+              "Ice/Frost",
+              "Snow",
+              "Unknown",
+              "Wet"
+            ],
+            "type": "string"
+          },
+          "roadway_surface_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Blacktop, Bituminous, or Aspha...",
+              "Concrete",
+              "Non-Trafficway or Driveway Acc...",
+              "Not Reported",
+              "Slag, Gravel or Stone"
+            ],
+            "type": "string"
+          },
+          "rollover": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Rollover",
+              "Rollover, Tripped by Object/Ve...",
+              "Rollover, Unknown Type",
+              "Rollover, Untripped"
+            ],
+            "type": "string"
+          },
+          "special_use": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              3,
+              5,
+              99
+            ],
+            "type": "number"
+          },
+          "special_use_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Special Use",
+              "Police",
+              "Taxi",
+              "Unknown",
+              "Vehicle Used as Other Bus"
+            ],
+            "type": "string"
+          },
+          "speed_limit": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              30,
+              45,
+              55,
+              65,
+              98
+            ],
+            "type": "number"
+          },
+          "speeding_related": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No",
+              "Unknown",
+              "Yes, Exceeded Speed Limit",
+              "Yes, Specifics Unknown",
+              "Yes, Too Fast for Conditions"
+            ],
+            "type": "string"
+          },
+          "state_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              12,
+              20,
+              26,
+              48,
+              51
+            ],
+            "type": "number"
+          },
+          "timestamp_of_crash": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2015-01-02T11:31:00+00:00",
+              "2015-05-25T13:17:00+00:00",
+              "2015-06-14T20:20:00+00:00",
+              "2015-07-06T16:24:00+00:00",
+              "2015-08-27T22:29:00+00:00"
+            ],
+            "type": "string"
+          },
+          "total_lanes_in_roadway": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2,
+              3,
+              4,
+              7,
+              9
+            ],
+            "type": "number"
+          },
+          "traffic_control_device": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              3,
+              20,
+              28,
+              99
+            ],
+            "type": "number"
+          },
+          "traffic_control_device_functioning": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Device Functioning Properly",
+              "No Controls",
+              "Not Reported",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "trafficway_description": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Two-Way, Divided, Positive Med...",
+              "Two-Way, Divided, Unprotected ...",
+              "Two-Way, Not Divided",
+              "Two-Way, Not Divided With a Co...",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "travel_speed": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              5,
+              30,
+              35,
+              998,
+              999
+            ],
+            "type": "number"
+          },
+          "underride_override": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              3,
+              7
+            ],
+            "type": "number"
+          },
+          "unit_type": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Motor Vehicle in Transport (In..."
+            ],
+            "type": "string"
+          },
+          "vehicle_configuration": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              1,
+              2,
+              6,
+              99
+            ],
+            "type": "number"
+          },
+          "vehicle_configuration_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Applicable",
+              "Single-Unit Truck (2 axles and...",
+              "Single-Unit Truck (3 or More a...",
+              "Truck Tractor/Semi-Trailer",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "vehicle_identification_number_vin": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1HGED3654JA0",
+              "2GTEC19V5412",
+              "44275B105483",
+              "JHLRD78494C0",
+              "WBAPH7C58BE6"
+            ],
+            "type": "string"
+          },
+          "vehicle_make": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              18,
+              23,
+              34,
+              37,
+              55
+            ],
+            "type": "number"
+          },
+          "vehicle_make_name": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "BMW",
+              "Buick/Opel",
+              "GMC",
+              "Honda",
+              "Hyundai"
+            ],
+            "type": "string"
+          },
+          "vehicle_model": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              31,
+              34,
+              402,
+              481
+            ],
+            "type": "number"
+          },
+          "vehicle_model_year": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1965,
+              1988,
+              2004,
+              2011,
+              2015
+            ],
+            "type": "number"
+          },
+          "vehicle_number": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "type": "number"
+          },
+          "vehicle_removal": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Not Reported",
+              "Not Towed",
+              "Towed Due to Disabling Damage",
+              "Towed Not Due to Disabling Dam...",
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "vehicle_trailing": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "No Trailing Unit",
+              "Unknown",
+              "Vehicle Towing another Motor V...",
+              "Yes, One Trailing Unit",
+              "Yes, Two Trailing Units"
+            ],
+            "type": "string"
+          },
+          "vin_character_1": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "2",
+              "4",
+              "J",
+              "W"
+            ],
+            "type": "string"
+          },
+          "vin_character_10": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "3",
+              "4",
+              "B",
+              "F",
+              "J"
+            ],
+            "type": "string"
+          },
+          "vin_character_11": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "8",
+              "A",
+              "C",
+              "E"
+            ],
+            "type": "string"
+          },
+          "vin_character_12": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "6"
+            ],
+            "type": "string"
+          },
+          "vin_character_2": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "4",
+              "B",
+              "G",
+              "H",
+              "M"
+            ],
+            "type": "string"
+          },
+          "vin_character_3": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2",
+              "A",
+              "G",
+              "L",
+              "T"
+            ],
+            "type": "string"
+          },
+          "vin_character_4": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "7",
+              "E",
+              "F",
+              "P",
+              "R"
+            ],
+            "type": "string"
+          },
+          "vin_character_5": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "5",
+              "C",
+              "D",
+              "H",
+              "K"
+            ],
+            "type": "string"
+          },
+          "vin_character_6": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "3",
+              "4",
+              "7",
+              "B"
+            ],
+            "type": "string"
+          },
+          "vin_character_7": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "1",
+              "6",
+              "8",
+              "9",
+              "C"
+            ],
+            "type": "string"
+          },
+          "vin_character_8": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "4",
+              "5",
+              "6",
+              "V"
+            ],
+            "type": "string"
+          },
+          "vin_character_9": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "0",
+              "4",
+              "5",
+              "8",
+              "9"
+            ],
+            "type": "string"
+          },
+          "year_of_first_crash_suspension_or_conviction": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              2010,
+              2011,
+              2013,
+              9999
+            ],
+            "type": "number"
+          },
+          "year_of_last_crash_suspension_or_conviction": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0,
+              2012,
+              2013,
+              2014,
+              9999
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 1000,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 1000,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "vehicle_2015::12804",
+                  "vehicle_2015::21733",
+                  "vehicle_2015::23441",
+                  "vehicle_2015::27034",
+                  "vehicle_2015::27863"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "vehicle_2015::12804"
+              },
+              {
+                "id": "vehicle_2015::21733"
+              },
+              {
+                "id": "vehicle_2015::23441"
+              },
+              {
+                "id": "vehicle_2015::27034"
+              },
+              {
+                "id": "vehicle_2015::27863"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "attempted_avoidance_maneuver": 99,
+      "attempted_avoidance_maneuver_name": "Unknown",
+      "body_type": 14,
+      "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories \u201cSmall\u201d and \u201cMidsize\u201d)",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "cargo_body_type_name": "Not Applicable",
+      "commercial_motor_vehicle_license_status": 0,
+      "compliance_with_cdl_endorsements": "No Endorsements Required For This Vehicle",
+      "compliance_with_license_restrictions": 0,
+      "consecutive_number": 240247,
+      "crash_type": 47,
+      "crash_type_name": "SAME TRAFFICWAY, SAME DIRECTION, CONFIGURATION F: SIDESWIPE/ANGLE, Changing Lanes to the Left",
+      "critical_event_precrash": 10,
+      "critical_event_precrash_name": "Over the Lane Line on Left Side of Travel Lane",
+      "day_of_crash": 3,
+      "driver_drinking": "Drinking",
+      "driver_height": 66,
+      "driver_presence": "Yes",
+      "driver_weight": 180,
+      "drivers_license_state": 51,
+      "drivers_zip_code": 22303,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Disabling Damage",
+      "fatalities_in_vehicle": 1,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": "Not Applicable",
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": 0,
+      "hit_and_run": "No",
+      "hour_of_crash": 17,
+      "initial_contact_point": 12,
+      "jackknife": "Not an Articulated Vehicle",
+      "license_compliance_with_class_of_vehicle": "No Valid License for This Class Vehicle",
+      "location_of_rollover": "No Rollover",
+      "make_model_combined": 2405,
+      "manner_of_collision": 6,
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "minute_of_crash": 46,
+      "month_of_crash": 9,
+      "month_of_first_crash_suspension_or_conviction": 12,
+      "month_of_last_crash_suspension_or_conviction": 8,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number_mcid": "00000000000",
+      "non_cdl_license_status": 2,
+      "non_cdl_license_type": "Full Driver License",
+      "number_of_motor_vehicles_in_transport_mvit": 3,
+      "number_of_occupants": 1,
+      "pre_event_movement_prior_to_recognition_of_critical_event": 15,
+      "pre_impact_location": 2,
+      "pre_impact_stability": "Precrash Stability Unknown",
+      "previous_dwi_convictions": 0,
+      "previous_other_moving_violation_convictions": 3,
+      "previous_recorded_crashes": 0,
+      "previous_recorded_suspensions_and_revocations": 0,
+      "previous_speeding_convictions": 0,
+      "registered_vehicle_owner": 1,
+      "registered_vehicle_owner_name": "Driver (of This Vehicle) Was Registered Owner",
+      "registration_state": 51,
+      "registration_state_name": "Virginia",
+      "related_factors_driver_level_1": 27,
+      "related_factors_driver_level_2": 36,
+      "related_factors_driver_level_3": 26,
+      "related_factors_driver_level_4": 58,
+      "related_factors_vehicle_level_1": 0,
+      "related_factors_vehicle_level_2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "roadway_alignment": "Straight",
+      "roadway_grade": "Level",
+      "roadway_surface_condition": 2,
+      "roadway_surface_condition_name": "Wet",
+      "roadway_surface_type": "Blacktop, Bituminous, or Asphalt",
+      "rollover": "No Rollover",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "speed_limit": 55,
+      "speeding_related": "Yes, Too Fast for Conditions",
+      "state_number": 24,
+      "timestamp_of_crash": "2015-09-03T17:46:00+00:00",
+      "total_lanes_in_roadway": 4,
+      "traffic_control_device": 0,
+      "traffic_control_device_functioning": "No Controls",
+      "trafficway_description": "Two-Way, Divided, Positive Median Barrier",
+      "travel_speed": 998,
+      "underride_override": 0,
+      "unit_type": "Motor Vehicle in Transport (Inside or Outside the Trafficway)",
+      "vehicle_configuration": 0,
+      "vehicle_configuration_name": "Not Applicable",
+      "vehicle_identification_number_vin": "1J4GL48K25W6",
+      "vehicle_make": 2,
+      "vehicle_make_name": "Jeep/Kaiser-Jeep/Willys Jeep",
+      "vehicle_model": 405,
+      "vehicle_model_year": 2005,
+      "vehicle_number": 1,
+      "vehicle_removal": "Towed Due to Disabling Damage",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "1",
+      "vin_character_10": "5",
+      "vin_character_11": "W",
+      "vin_character_12": "6",
+      "vin_character_2": "J",
+      "vin_character_3": "4",
+      "vin_character_4": "G",
+      "vin_character_5": "L",
+      "vin_character_6": "4",
+      "vin_character_7": "8",
+      "vin_character_8": "K",
+      "vin_character_9": "2",
+      "year_of_first_crash_suspension_or_conviction": 2011,
+      "year_of_last_crash_suspension_or_conviction": 2015
+    },
+    {
+      "attempted_avoidance_maneuver": 99,
+      "attempted_avoidance_maneuver_name": "Unknown",
+      "body_type": 14,
+      "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories \u201cSmall\u201d and \u201cMidsize\u201d)",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "cargo_body_type_name": "Not Applicable",
+      "commercial_motor_vehicle_license_status": 0,
+      "compliance_with_cdl_endorsements": "No Endorsements Required For This Vehicle",
+      "compliance_with_license_restrictions": 0,
+      "consecutive_number": 470149,
+      "crash_type": 82,
+      "crash_type_name": "CHANGING TRAFFICWAY, VEHICLE TURNING, CONFIGURATION K: TURN INTO PATH, Turn Into Opposite Directions (Turning Left)",
+      "critical_event_precrash": 15,
+      "critical_event_precrash_name": "Turning Left at Junction",
+      "day_of_crash": 11,
+      "driver_drinking": "Drinking",
+      "driver_height": 69,
+      "driver_presence": "Yes",
+      "driver_weight": 155,
+      "drivers_license_state": 47,
+      "drivers_zip_code": 37762,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Disabling Damage",
+      "fatalities_in_vehicle": 1,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": "Not Applicable",
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": 0,
+      "hit_and_run": "No",
+      "hour_of_crash": 23,
+      "initial_contact_point": 11,
+      "jackknife": "Not an Articulated Vehicle",
+      "license_compliance_with_class_of_vehicle": "No Valid License for This Class Vehicle",
+      "location_of_rollover": "No Rollover",
+      "make_model_combined": 2404,
+      "manner_of_collision": 6,
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "minute_of_crash": 18,
+      "month_of_crash": 3,
+      "month_of_first_crash_suspension_or_conviction": 1,
+      "month_of_last_crash_suspension_or_conviction": 1,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number_mcid": "00000000000",
+      "non_cdl_license_status": 2,
+      "non_cdl_license_type": "Full Driver License",
+      "number_of_motor_vehicles_in_transport_mvit": 2,
+      "number_of_occupants": 2,
+      "pre_event_movement_prior_to_recognition_of_critical_event": 11,
+      "pre_impact_location": 1,
+      "pre_impact_stability": "Tracking",
+      "previous_dwi_convictions": 1,
+      "previous_other_moving_violation_convictions": 0,
+      "previous_recorded_crashes": 0,
+      "previous_recorded_suspensions_and_revocations": 1,
+      "previous_speeding_convictions": 0,
+      "registered_vehicle_owner": 1,
+      "registered_vehicle_owner_name": "Driver (of This Vehicle) Was Registered Owner",
+      "registration_state": 47,
+      "registration_state_name": "Tennessee",
+      "related_factors_driver_level_1": 6,
+      "related_factors_driver_level_2": 36,
+      "related_factors_driver_level_3": 38,
+      "related_factors_driver_level_4": 39,
+      "related_factors_vehicle_level_1": 0,
+      "related_factors_vehicle_level_2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "roadway_alignment": "Straight",
+      "roadway_grade": "Level",
+      "roadway_surface_condition": 2,
+      "roadway_surface_condition_name": "Wet",
+      "roadway_surface_type": "Blacktop, Bituminous, or Asphalt",
+      "rollover": "No Rollover",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "speed_limit": 45,
+      "speeding_related": "No",
+      "state_number": 47,
+      "timestamp_of_crash": "2015-03-11T23:18:00+00:00",
+      "total_lanes_in_roadway": 2,
+      "traffic_control_device": 20,
+      "traffic_control_device_functioning": "Device Functioning Properly",
+      "trafficway_description": "Two-Way, Not Divided",
+      "travel_speed": 998,
+      "underride_override": 0,
+      "unit_type": "Motor Vehicle in Transport (Inside or Outside the Trafficway)",
+      "vehicle_configuration": 0,
+      "vehicle_configuration_name": "Not Applicable",
+      "vehicle_identification_number_vin": "1J4GW68N3XC7",
+      "vehicle_make": 2,
+      "vehicle_make_name": "Jeep/Kaiser-Jeep/Willys Jeep",
+      "vehicle_model": 404,
+      "vehicle_model_year": 1999,
+      "vehicle_number": 1,
+      "vehicle_removal": "Towed Due to Disabling Damage",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "1",
+      "vin_character_10": "X",
+      "vin_character_11": "C",
+      "vin_character_12": "7",
+      "vin_character_2": "J",
+      "vin_character_3": "4",
+      "vin_character_4": "G",
+      "vin_character_5": "W",
+      "vin_character_6": "6",
+      "vin_character_7": "8",
+      "vin_character_8": "N",
+      "vin_character_9": "3",
+      "year_of_first_crash_suspension_or_conviction": 2011,
+      "year_of_last_crash_suspension_or_conviction": 2011
+    },
+    {
+      "attempted_avoidance_maneuver": 3,
+      "attempted_avoidance_maneuver_name": "Braking (Lockup)",
+      "body_type": 2,
+      "body_type_name": "2-Door Sedan/Hardtop/Coupe",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "cargo_body_type_name": "Not Applicable",
+      "commercial_motor_vehicle_license_status": 0,
+      "compliance_with_cdl_endorsements": "No Endorsements Required For This Vehicle",
+      "compliance_with_license_restrictions": 0,
+      "consecutive_number": 320020,
+      "crash_type": 88,
+      "crash_type_name": "INTERSECTING PATHS (VEHICLE DAMAGE), CONFIGURATION L: STRAIGHT PATHS, Striking from the Left",
+      "critical_event_precrash": 17,
+      "critical_event_precrash_name": "Crossing Over (Passing Through) Intersection",
+      "day_of_crash": 10,
+      "driver_drinking": "No Drinking",
+      "driver_height": 71,
+      "driver_presence": "Yes",
+      "driver_weight": 280,
+      "drivers_license_state": 32,
+      "drivers_zip_code": 89141,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Disabling Damage",
+      "fatalities_in_vehicle": 0,
+      "fire_occurrence": "Yes",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": "Not Applicable",
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": 0,
+      "hit_and_run": "No",
+      "hour_of_crash": 4,
+      "initial_contact_point": 12,
+      "jackknife": "Not an Articulated Vehicle",
+      "license_compliance_with_class_of_vehicle": "Valid License for This Class Vehicle",
+      "location_of_rollover": "No Rollover",
+      "make_model_combined": 12003,
+      "manner_of_collision": 6,
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "minute_of_crash": 13,
+      "month_of_crash": 1,
+      "month_of_first_crash_suspension_or_conviction": 0,
+      "month_of_last_crash_suspension_or_conviction": 0,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number_mcid": "00000000000",
+      "non_cdl_license_status": 6,
+      "non_cdl_license_type": "Full Driver License",
+      "number_of_motor_vehicles_in_transport_mvit": 2,
+      "number_of_occupants": 2,
+      "pre_event_movement_prior_to_recognition_of_critical_event": 1,
+      "pre_impact_location": 1,
+      "pre_impact_stability": "Skidding Longitudinally \u2013 Rotation Less Than 30 Degrees",
+      "previous_dwi_convictions": 0,
+      "previous_other_moving_violation_convictions": 0,
+      "previous_recorded_crashes": 0,
+      "previous_recorded_suspensions_and_revocations": 0,
+      "previous_speeding_convictions": 0,
+      "registered_vehicle_owner": 2,
+      "registered_vehicle_owner_name": "Driver (of This Vehicle) Not Registered Owner (Other Private Owner)",
+      "registration_state": 32,
+      "registration_state_name": "Nevada",
+      "related_factors_driver_level_1": 6,
+      "related_factors_driver_level_2": 8,
+      "related_factors_driver_level_3": 36,
+      "related_factors_driver_level_4": 91,
+      "related_factors_vehicle_level_1": 0,
+      "related_factors_vehicle_level_2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "roadway_alignment": "Straight",
+      "roadway_grade": "Level",
+      "roadway_surface_condition": 1,
+      "roadway_surface_condition_name": "Dry",
+      "roadway_surface_type": "Blacktop, Bituminous, or Asphalt",
+      "rollover": "No Rollover",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "speed_limit": 45,
+      "speeding_related": "Yes, Exceeded Speed Limit",
+      "state_number": 32,
+      "timestamp_of_crash": "2015-01-10T04:13:00+00:00",
+      "total_lanes_in_roadway": 5,
+      "traffic_control_device": 2,
+      "traffic_control_device_functioning": "Device Functioning Properly",
+      "trafficway_description": "Two-Way, Divided, Unprotected (Painted > One-Way Trafficway Feet) Median",
+      "travel_speed": 128,
+      "underride_override": 0,
+      "unit_type": "Motor Vehicle in Transport (Inside or Outside the Trafficway)",
+      "vehicle_configuration": 0,
+      "vehicle_configuration_name": "Not Applicable",
+      "vehicle_identification_number_vin": "1ZVFT80N8651",
+      "vehicle_make": 12,
+      "vehicle_make_name": "Ford",
+      "vehicle_model": 3,
+      "vehicle_model_year": 2006,
+      "vehicle_number": 1,
+      "vehicle_removal": "Towed Due to Disabling Damage",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "1",
+      "vin_character_10": "6",
+      "vin_character_11": "5",
+      "vin_character_12": "1",
+      "vin_character_2": "Z",
+      "vin_character_3": "V",
+      "vin_character_4": "F",
+      "vin_character_5": "T",
+      "vin_character_6": "8",
+      "vin_character_7": "0",
+      "vin_character_8": "N",
+      "vin_character_9": "8",
+      "year_of_first_crash_suspension_or_conviction": 0,
+      "year_of_last_crash_suspension_or_conviction": 0
+    },
+    {
+      "attempted_avoidance_maneuver": 99,
+      "attempted_avoidance_maneuver_name": "Unknown",
+      "body_type": 4,
+      "body_type_name": "4-Door Sedan/Hardtop",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "cargo_body_type_name": "Not Applicable",
+      "commercial_motor_vehicle_license_status": 0,
+      "compliance_with_cdl_endorsements": "No Endorsements Required For This Vehicle",
+      "compliance_with_license_restrictions": 0,
+      "consecutive_number": 180635,
+      "crash_type": 50,
+      "crash_type_name": "SAME TRAFFICWAY, OPPOSITE DIRECTION, CONFIGURATION G: HEAD-ON, Lateral Move (Left/Right)",
+      "critical_event_precrash": 10,
+      "critical_event_precrash_name": "Over the Lane Line on Left Side of Travel Lane",
+      "day_of_crash": 24,
+      "driver_drinking": "No Drinking",
+      "driver_height": 74,
+      "driver_presence": "Yes",
+      "driver_weight": 252,
+      "drivers_license_state": 18,
+      "drivers_zip_code": 47112,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Disabling Damage",
+      "fatalities_in_vehicle": 1,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": "Not Applicable",
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": 0,
+      "hit_and_run": "No",
+      "hour_of_crash": 23,
+      "initial_contact_point": 12,
+      "jackknife": "Not an Articulated Vehicle",
+      "license_compliance_with_class_of_vehicle": "Valid License for This Class Vehicle",
+      "location_of_rollover": "No Rollover",
+      "make_model_combined": 41051,
+      "manner_of_collision": 2,
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "minute_of_crash": 11,
+      "month_of_crash": 10,
+      "month_of_first_crash_suspension_or_conviction": 11,
+      "month_of_last_crash_suspension_or_conviction": 2,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number_mcid": "00000000000",
+      "non_cdl_license_status": 6,
+      "non_cdl_license_type": "Full Driver License",
+      "number_of_motor_vehicles_in_transport_mvit": 3,
+      "number_of_occupants": 1,
+      "pre_event_movement_prior_to_recognition_of_critical_event": 6,
+      "pre_impact_location": 2,
+      "pre_impact_stability": "Tracking",
+      "previous_dwi_convictions": 0,
+      "previous_other_moving_violation_convictions": 2,
+      "previous_recorded_crashes": 0,
+      "previous_recorded_suspensions_and_revocations": 2,
+      "previous_speeding_convictions": 0,
+      "registered_vehicle_owner": 2,
+      "registered_vehicle_owner_name": "Driver (of This Vehicle) Not Registered Owner (Other Private Owner)",
+      "registration_state": 18,
+      "registration_state_name": "Indiana",
+      "related_factors_driver_level_1": 8,
+      "related_factors_driver_level_2": 28,
+      "related_factors_driver_level_3": 37,
+      "related_factors_driver_level_4": 35,
+      "related_factors_vehicle_level_1": 0,
+      "related_factors_vehicle_level_2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "roadway_alignment": "Curve Right",
+      "roadway_grade": "Level",
+      "roadway_surface_condition": 2,
+      "roadway_surface_condition_name": "Wet",
+      "roadway_surface_type": "Blacktop, Bituminous, or Asphalt",
+      "rollover": "No Rollover",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "speed_limit": 55,
+      "speeding_related": "Yes, Exceeded Speed Limit",
+      "state_number": 18,
+      "timestamp_of_crash": "2015-10-24T23:11:00+00:00",
+      "total_lanes_in_roadway": 2,
+      "traffic_control_device": 0,
+      "traffic_control_device_functioning": "No Controls",
+      "trafficway_description": "Two-Way, Not Divided",
+      "travel_speed": 998,
+      "underride_override": 0,
+      "unit_type": "Motor Vehicle in Transport (Inside or Outside the Trafficway)",
+      "vehicle_configuration": 0,
+      "vehicle_configuration_name": "Not Applicable",
+      "vehicle_identification_number_vin": "JM1BL1V72C16",
+      "vehicle_make": 41,
+      "vehicle_make_name": "Mazda",
+      "vehicle_model": 51,
+      "vehicle_model_year": 2012,
+      "vehicle_number": 1,
+      "vehicle_removal": "Towed Due to Disabling Damage",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "J",
+      "vin_character_10": "C",
+      "vin_character_11": "1",
+      "vin_character_12": "6",
+      "vin_character_2": "M",
+      "vin_character_3": "1",
+      "vin_character_4": "B",
+      "vin_character_5": "L",
+      "vin_character_6": "1",
+      "vin_character_7": "V",
+      "vin_character_8": "7",
+      "vin_character_9": "2",
+      "year_of_first_crash_suspension_or_conviction": 2012,
+      "year_of_last_crash_suspension_or_conviction": 2013
+    },
+    {
+      "attempted_avoidance_maneuver": 1,
+      "attempted_avoidance_maneuver_name": "No Avoidance Maneuver",
+      "body_type": 14,
+      "body_type_name": "Compact Utility (ANSI D-16 Utility Vehicle Categories \u201cSmall\u201d and \u201cMidsize\u201d)",
+      "bus_use": "Not a Bus",
+      "cargo_body_type": 0,
+      "cargo_body_type_name": "Not Applicable",
+      "commercial_motor_vehicle_license_status": 0,
+      "compliance_with_cdl_endorsements": "No Endorsements Required For This Vehicle",
+      "compliance_with_license_restrictions": 0,
+      "consecutive_number": 421096,
+      "crash_type": 64,
+      "crash_type_name": "SAME TRAFFICWAY, OPPOSITE DIRECTION, CONFIGURATION I: SIDESWIPE/ANGLE, Lateral Move (Left/Right)",
+      "critical_event_precrash": 10,
+      "critical_event_precrash_name": "Over the Lane Line on Left Side of Travel Lane",
+      "day_of_crash": 7,
+      "driver_drinking": "No Drinking",
+      "driver_height": 72,
+      "driver_presence": "Yes",
+      "driver_weight": 999,
+      "drivers_license_state": 42,
+      "drivers_zip_code": 16001,
+      "emergency_motor_vehicle_use": "Not Applicable",
+      "extent_of_damage": "Disabling Damage",
+      "fatalities_in_vehicle": 1,
+      "fire_occurrence": "No or Not Reported",
+      "first_harmful_event": 12,
+      "first_harmful_event_name": "Motor Vehicle in Transport",
+      "gross_vehicle_weight_rating": "Not Applicable",
+      "hazardous_material_class_number": 0,
+      "hazardous_material_identification_number": 0,
+      "hazardous_material_involvement": "No",
+      "hazardous_material_placard": 0,
+      "hit_and_run": "No",
+      "hour_of_crash": 12,
+      "initial_contact_point": 10,
+      "jackknife": "Not an Articulated Vehicle",
+      "license_compliance_with_class_of_vehicle": "Valid License for This Class Vehicle",
+      "location_of_rollover": "No Rollover",
+      "make_model_combined": 2404,
+      "manner_of_collision": 8,
+      "mcid_identification_number": "000000000",
+      "mcid_issuing_authority": 0,
+      "minute_of_crash": 4,
+      "month_of_crash": 12,
+      "month_of_first_crash_suspension_or_conviction": 4,
+      "month_of_last_crash_suspension_or_conviction": 5,
+      "most_harmful_event": 12,
+      "motor_carrier_identification_number_mcid": "00000000000",
+      "non_cdl_license_status": 6,
+      "non_cdl_license_type": "Full Driver License",
+      "number_of_motor_vehicles_in_transport_mvit": 3,
+      "number_of_occupants": 1,
+      "pre_event_movement_prior_to_recognition_of_critical_event": 1,
+      "pre_impact_location": 2,
+      "pre_impact_stability": "Skidding Longitudinally \u2013 Rotation Less Than 30 Degrees",
+      "previous_dwi_convictions": 0,
+      "previous_other_moving_violation_convictions": 0,
+      "previous_recorded_crashes": 1,
+      "previous_recorded_suspensions_and_revocations": 0,
+      "previous_speeding_convictions": 1,
+      "registered_vehicle_owner": 2,
+      "registered_vehicle_owner_name": "Driver (of This Vehicle) Not Registered Owner (Other Private Owner)",
+      "registration_state": 42,
+      "registration_state_name": "Pennsylvania",
+      "related_factors_driver_level_1": 28,
+      "related_factors_driver_level_2": 6,
+      "related_factors_driver_level_3": 0,
+      "related_factors_driver_level_4": 0,
+      "related_factors_vehicle_level_1": 0,
+      "related_factors_vehicle_level_2": 0,
+      "release_of_hazardous_material_from_the_cargo_compartment": "Not Applicable",
+      "roadway_alignment": "Straight",
+      "roadway_grade": "Level",
+      "roadway_surface_condition": 1,
+      "roadway_surface_condition_name": "Dry",
+      "roadway_surface_type": "Blacktop, Bituminous, or Asphalt",
+      "rollover": "No Rollover",
+      "special_use": 0,
+      "special_use_name": "No Special Use",
+      "speed_limit": 55,
+      "speeding_related": "Yes, Specifics Unknown",
+      "state_number": 42,
+      "timestamp_of_crash": "2015-12-07T12:04:00+00:00",
+      "total_lanes_in_roadway": 3,
+      "traffic_control_device": 0,
+      "traffic_control_device_functioning": "No Controls",
+      "trafficway_description": "Two-Way, Not Divided With a Continuous Left-Turn Lane",
+      "travel_speed": 70,
+      "underride_override": 0,
+      "unit_type": "Motor Vehicle in Transport (Inside or Outside the Trafficway)",
+      "vehicle_configuration": 0,
+      "vehicle_configuration_name": "Not Applicable",
+      "vehicle_identification_number_vin": "1J4GZ58S0RC1",
+      "vehicle_make": 2,
+      "vehicle_make_name": "Jeep/Kaiser-Jeep/Willys Jeep",
+      "vehicle_model": 404,
+      "vehicle_model_year": 1994,
+      "vehicle_number": 1,
+      "vehicle_removal": "Towed Due to Disabling Damage",
+      "vehicle_trailing": "No Trailing Unit",
+      "vin_character_1": "1",
+      "vin_character_10": "R",
+      "vin_character_11": "C",
+      "vin_character_12": "1",
+      "vin_character_2": "J",
+      "vin_character_3": "4",
+      "vin_character_4": "G",
+      "vin_character_5": "Z",
+      "vin_character_6": "5",
+      "vin_character_7": "8",
+      "vin_character_8": "S",
+      "vin_character_9": "0",
+      "year_of_first_crash_suspension_or_conviction": 2013,
+      "year_of_last_crash_suspension_or_conviction": 2013
+    }
+  ]
+}

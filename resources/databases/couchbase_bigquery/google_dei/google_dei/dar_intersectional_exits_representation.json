@@ -1,0 +1,201 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`workforce` = \"overall\"",
+        "properties": {
+          "gender_us": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "men",
+              "women"
+            ],
+            "type": "string"
+          },
+          "race_asian": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.091,
+              0.107,
+              0.223,
+              0.241,
+              0.288
+            ],
+            "type": "number"
+          },
+          "race_black": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.012,
+              0.02,
+              0.025,
+              0.027,
+              0.03
+            ],
+            "type": "number"
+          },
+          "race_hispanic_latinx": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.018,
+              0.019,
+              0.04,
+              0.044,
+              0.047
+            ],
+            "type": "number"
+          },
+          "race_native_american": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.003,
+              0.004,
+              0.005,
+              0.006,
+              0.007
+            ],
+            "type": "number"
+          },
+          "race_white": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              0.132,
+              0.15,
+              0.4,
+              0.465,
+              0.466
+            ],
+            "type": "number"
+          },
+          "report_year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "type": "number"
+          },
+          "workforce": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "overall"
+            ],
+            "type": "string"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "dar_intersectional_exits_repre...",
+                  "dar_intersectional_exits_repre...",
+                  "dar_intersectional_exits_repre...",
+                  "dar_intersectional_exits_repre...",
+                  "dar_intersectional_exits_repre..."
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "dar_intersectional_exits_representation::1"
+              },
+              {
+                "id": "dar_intersectional_exits_representation::4"
+              },
+              {
+                "id": "dar_intersectional_exits_representation::6"
+              },
+              {
+                "id": "dar_intersectional_exits_representation::7"
+              },
+              {
+                "id": "dar_intersectional_exits_representation::9"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "gender_us": "women",
+      "race_asian": 0.094,
+      "race_black": 0.025,
+      "race_hispanic_latinx": 0.018,
+      "race_native_american": 0.005,
+      "race_white": 0.144,
+      "report_year": 2021,
+      "workforce": "overall"
+    },
+    {
+      "gender_us": "men",
+      "race_asian": 0.258,
+      "race_black": 0.026,
+      "race_hispanic_latinx": 0.047,
+      "race_native_american": 0.006,
+      "race_white": 0.428,
+      "report_year": 2021,
+      "workforce": "overall"
+    },
+    {
+      "gender_us": "women",
+      "race_asian": 0.107,
+      "race_black": 0.02,
+      "race_hispanic_latinx": 0.019,
+      "race_native_american": 0.003,
+      "race_white": 0.132,
+      "report_year": 2022,
+      "workforce": "overall"
+    },
+    {
+      "gender_us": "women",
+      "race_asian": 0.091,
+      "race_black": 0.012,
+      "race_hispanic_latinx": 0.018,
+      "race_native_american": 0.004,
+      "race_white": 0.15,
+      "report_year": 2019,
+      "workforce": "overall"
+    },
+    {
+      "gender_us": "women",
+      "race_asian": 0.087,
+      "race_black": 0.012,
+      "race_hispanic_latinx": 0.016,
+      "race_native_american": 0.004,
+      "race_white": 0.166,
+      "report_year": 2018,
+      "workforce": "overall"
+    }
+  ]
+}

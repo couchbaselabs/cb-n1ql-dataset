@@ -1,0 +1,259 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 10,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`area_code` = \"S35C\", `area_name` = \"Atlanta-Sandy Springs-Roswell, ...\", `footnote_codes` = \"nan\", `item_code` = \"SEHC\", `item_name` = \"Owners' equivalent rent of resi...\", `periodicity_code` = \"R\", `seasonal_code` = \"U\", `series_id` = \"CUURS35CSEHC\", `survey_abbreviation` = \"CU\"",
+        "properties": {
+          "area_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "S35C"
+            ],
+            "type": "string"
+          },
+          "area_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Atlanta-Sandy Springs-Roswell,..."
+            ],
+            "type": "string"
+          },
+          "date": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2009-01-01",
+              "2009-03-01",
+              "2009-06-01",
+              "2009-07-01",
+              "2009-08-01"
+            ],
+            "type": "string"
+          },
+          "footnote_codes": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "nan"
+            ],
+            "type": "string"
+          },
+          "item_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "SEHC"
+            ],
+            "type": "string"
+          },
+          "item_name": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Owners' equivalent rent of res..."
+            ],
+            "type": "string"
+          },
+          "period": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "M01",
+              "M03",
+              "M06",
+              "M07",
+              "M08"
+            ],
+            "type": "string"
+          },
+          "periodicity_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "R"
+            ],
+            "type": "string"
+          },
+          "seasonal_code": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "U"
+            ],
+            "type": "string"
+          },
+          "series_id": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CUURS35CSEHC"
+            ],
+            "type": "string"
+          },
+          "survey_abbreviation": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "CU"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              212.28,
+              212.479,
+              212.826,
+              212.923,
+              213.226
+            ],
+            "type": "number"
+          },
+          "year": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              2008,
+              2009
+            ],
+            "type": "number"
+          },
+          "~meta": {
+            "#docs": 10,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 10,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "cpi_u::1",
+                  "cpi_u::3",
+                  "cpi_u::6",
+                  "cpi_u::7",
+                  "cpi_u::8"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "cpi_u::1"
+              },
+              {
+                "id": "cpi_u::3"
+              },
+              {
+                "id": "cpi_u::6"
+              },
+              {
+                "id": "cpi_u::7"
+              },
+              {
+                "id": "cpi_u::8"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "area_code": "S35C",
+      "area_name": "Atlanta-Sandy Springs-Roswell, GA",
+      "date": "2009-09-01",
+      "footnote_codes": "nan",
+      "item_code": "SEHC",
+      "item_name": "Owners' equivalent rent of residences",
+      "period": "M09",
+      "periodicity_code": "R",
+      "seasonal_code": "U",
+      "series_id": "CUURS35CSEHC",
+      "survey_abbreviation": "CU",
+      "value": 210.977,
+      "year": 2009
+    },
+    {
+      "area_code": "S35C",
+      "area_name": "Atlanta-Sandy Springs-Roswell, GA",
+      "date": "2009-03-01",
+      "footnote_codes": "nan",
+      "item_code": "SEHC",
+      "item_name": "Owners' equivalent rent of residences",
+      "period": "M03",
+      "periodicity_code": "R",
+      "seasonal_code": "U",
+      "series_id": "CUURS35CSEHC",
+      "survey_abbreviation": "CU",
+      "value": 213.226,
+      "year": 2009
+    },
+    {
+      "area_code": "S35C",
+      "area_name": "Atlanta-Sandy Springs-Roswell, GA",
+      "date": "2009-02-01",
+      "footnote_codes": "nan",
+      "item_code": "SEHC",
+      "item_name": "Owners' equivalent rent of residences",
+      "period": "M02",
+      "periodicity_code": "R",
+      "seasonal_code": "U",
+      "series_id": "CUURS35CSEHC",
+      "survey_abbreviation": "CU",
+      "value": 211.786,
+      "year": 2009
+    },
+    {
+      "area_code": "S35C",
+      "area_name": "Atlanta-Sandy Springs-Roswell, GA",
+      "date": "2009-06-01",
+      "footnote_codes": "nan",
+      "item_code": "SEHC",
+      "item_name": "Owners' equivalent rent of residences",
+      "period": "M06",
+      "periodicity_code": "R",
+      "seasonal_code": "U",
+      "series_id": "CUURS35CSEHC",
+      "survey_abbreviation": "CU",
+      "value": 212.923,
+      "year": 2009
+    },
+    {
+      "area_code": "S35C",
+      "area_name": "Atlanta-Sandy Springs-Roswell, GA",
+      "date": "2009-04-01",
+      "footnote_codes": "nan",
+      "item_code": "SEHC",
+      "item_name": "Owners' equivalent rent of residences",
+      "period": "M04",
+      "periodicity_code": "R",
+      "seasonal_code": "U",
+      "series_id": "CUURS35CSEHC",
+      "survey_abbreviation": "CU",
+      "value": 212.608,
+      "year": 2009
+    }
+  ]
+}

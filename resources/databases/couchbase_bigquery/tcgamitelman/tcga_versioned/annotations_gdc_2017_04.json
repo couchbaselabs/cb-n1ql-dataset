@@ -1,0 +1,267 @@
+{
+  "infer_schema": [
+    [
+      {
+        "#docs": 5,
+        "$schema": "http://json-schema.org/draft-06/schema",
+        "Flavor": "`entity_type` = \"Patient\"",
+        "properties": {
+          "aliquot_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "case_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-07-0227",
+              "TCGA-2G-AAFE",
+              "TCGA-3G-AB0Q",
+              "TCGA-3G-AB0T"
+            ],
+            "type": "string"
+          },
+          "case_gdc_id": {
+            "#docs": [
+              1,
+              4
+            ],
+            "%docs": [
+              20,
+              80
+            ],
+            "nestingDepth": 0,
+            "samples": [
+              [
+                null
+              ],
+              [
+                "1d25c24e-bd3c-4023-85c1-b158f7...",
+                "67ff3aa1-9d52-4dc8-8501-ecd0d3...",
+                "acaaed1a-2667-4c56-919b-daf557..."
+              ]
+            ],
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "category": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Case submitted is found to be ...",
+              "General",
+              "History of unacceptable prior ...",
+              "Neoadjuvant therapy"
+            ],
+            "type": "string"
+          },
+          "classification": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Notification",
+              "Observation"
+            ],
+            "type": "string"
+          },
+          "date_created": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "2013-08-12T16:30:34-04:00",
+              "2014-06-30T13:02:12-04:00",
+              "2014-06-30T13:02:57-04:00",
+              "2014-08-21T11:56:37-04:00",
+              "2015-10-09T13:43:11-04:00"
+            ],
+            "type": "string"
+          },
+          "date_edited": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "entity_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-07-0227",
+              "TCGA-2G-AAFE",
+              "TCGA-3G-AB0Q",
+              "TCGA-3G-AB0T"
+            ],
+            "type": "string"
+          },
+          "entity_type": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Patient"
+            ],
+            "type": "string"
+          },
+          "notes": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "Adding another note.",
+              "Distant metastasis submitted a...",
+              "Patient recieved chemotherapy ...",
+              "Patient recieved neoadjuvant c..."
+            ],
+            "type": "string"
+          },
+          "project_short_name": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              "TCGA-MISC",
+              "TCGA-TGCT",
+              "TCGA-THYM"
+            ],
+            "type": "string"
+          },
+          "sample_barcode": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "samples": [
+              null
+            ],
+            "type": "null"
+          },
+          "~meta": {
+            "#docs": 5,
+            "%docs": 100,
+            "nestingDepth": 0,
+            "properties": {
+              "id": {
+                "#docs": 5,
+                "%docs": 100,
+                "nestingDepth": 1,
+                "samples": [
+                  "annotations_gdc_2017_04::0",
+                  "annotations_gdc_2017_04::1",
+                  "annotations_gdc_2017_04::2",
+                  "annotations_gdc_2017_04::3",
+                  "annotations_gdc_2017_04::4"
+                ],
+                "type": "string"
+              }
+            },
+            "samples": [
+              {
+                "id": "annotations_gdc_2017_04::0"
+              },
+              {
+                "id": "annotations_gdc_2017_04::1"
+              },
+              {
+                "id": "annotations_gdc_2017_04::2"
+              },
+              {
+                "id": "annotations_gdc_2017_04::3"
+              },
+              {
+                "id": "annotations_gdc_2017_04::4"
+              }
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    ]
+  ],
+  "sample_rows": [
+    {
+      "aliquot_barcode": null,
+      "case_barcode": "TCGA-3G-AB0T",
+      "case_gdc_id": "acaaed1a-2667-4c56-919b-daf5574371bb",
+      "category": "Neoadjuvant therapy",
+      "classification": "Notification",
+      "date_created": "2014-06-30T13:02:57-04:00",
+      "date_edited": null,
+      "entity_barcode": "TCGA-3G-AB0T",
+      "entity_type": "Patient",
+      "notes": "Patient recieved neoadjuvant chemotherapy prior to TCGA specimen.",
+      "project_short_name": "TCGA-THYM",
+      "sample_barcode": null
+    },
+    {
+      "aliquot_barcode": null,
+      "case_barcode": "TCGA-3G-AB0Q",
+      "case_gdc_id": "67ff3aa1-9d52-4dc8-8501-ecd0d37a8735",
+      "category": "Neoadjuvant therapy",
+      "classification": "Notification",
+      "date_created": "2014-06-30T13:02:12-04:00",
+      "date_edited": null,
+      "entity_barcode": "TCGA-3G-AB0Q",
+      "entity_type": "Patient",
+      "notes": "Patient recieved neoadjuvant chemotherapy prior to TCGA specimen.",
+      "project_short_name": "TCGA-THYM",
+      "sample_barcode": null
+    },
+    {
+      "aliquot_barcode": null,
+      "case_barcode": "TCGA-07-0227",
+      "case_gdc_id": null,
+      "category": "General",
+      "classification": "Observation",
+      "date_created": "2013-08-12T16:30:34-04:00",
+      "date_edited": null,
+      "entity_barcode": "TCGA-07-0227",
+      "entity_type": "Patient",
+      "notes": "Adding another note.",
+      "project_short_name": "TCGA-MISC",
+      "sample_barcode": null
+    },
+    {
+      "aliquot_barcode": null,
+      "case_barcode": "TCGA-3G-AB0T",
+      "case_gdc_id": "acaaed1a-2667-4c56-919b-daf5574371bb",
+      "category": "Case submitted is found to be a recurrence after submission",
+      "classification": "Notification",
+      "date_created": "2015-10-09T13:43:11-04:00",
+      "date_edited": null,
+      "entity_barcode": "TCGA-3G-AB0T",
+      "entity_type": "Patient",
+      "notes": "Distant metastasis submitted as a primary for TCGA. Case was initially diagnosed 5 years prior.",
+      "project_short_name": "TCGA-THYM",
+      "sample_barcode": null
+    },
+    {
+      "aliquot_barcode": null,
+      "case_barcode": "TCGA-2G-AAFE",
+      "case_gdc_id": "1d25c24e-bd3c-4023-85c1-b158f76324f1",
+      "category": "History of unacceptable prior treatment related to a prior/other malignancy",
+      "classification": "Notification",
+      "date_created": "2014-08-21T11:56:37-04:00",
+      "date_edited": null,
+      "entity_barcode": "TCGA-2G-AAFE",
+      "entity_type": "Patient",
+      "notes": "Patient recieved chemotherapy (Bleomycine, Etoposide, and Cisplatin) for the prior maligancy (opposite testicle)",
+      "project_short_name": "TCGA-TGCT",
+      "sample_barcode": null
+    }
+  ]
+}
