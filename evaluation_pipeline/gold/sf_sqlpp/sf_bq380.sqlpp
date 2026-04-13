@@ -1,0 +1,19 @@
+SELECT
+    u.UserName AS UserName,
+    r.upvotes_received AS DistinctUpvotesReceived,
+    IFMISSINGORNULL(
+        (SELECT RAW COUNT(DISTINCT v2.Id)
+         FROM `metakaggle`.`meta_kaggle`.`forummessagevotes` AS v2
+         WHERE v2.FromUserId = r.UserId)[0],
+        0
+    ) AS DistinctUpvotesGiven
+FROM (
+    SELECT fmv.ToUserId AS UserId, COUNT(DISTINCT fmv.Id) AS upvotes_received
+    FROM `metakaggle`.`meta_kaggle`.`forummessagevotes` AS fmv
+    WHERE fmv.ToUserId IS NOT NULL
+    GROUP BY fmv.ToUserId
+    ORDER BY upvotes_received DESC
+    LIMIT 3
+) AS r
+JOIN `metakaggle`.`meta_kaggle`.`users` AS u ON u.Id = r.UserId
+ORDER BY r.upvotes_received DESC, u.UserName ASC;

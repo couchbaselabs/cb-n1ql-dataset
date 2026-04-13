@@ -1,0 +1,58 @@
+WITH de_pubs AS (
+    SELECT
+        p.application_number,
+        MAX(FLOOR(p.filing_date / 10000)) AS filing_year,
+        MAX(p.cpc) AS cpc
+    FROM `patents`.`patents`.`publications` AS p
+    WHERE p.application_number IS NOT NULL
+      AND p.application_number != ''
+      AND p.country_code = 'DE'
+      AND p.grant_date >= 20161201
+      AND p.grant_date <= 20161231
+      AND p.filing_date > 0
+    GROUP BY p.application_number
+),
+patent_parents AS (
+    SELECT par AS cpc_group, dp.filing_year
+    FROM de_pubs AS dp
+    UNNEST dp.cpc AS c
+    JOIN `patents`.`patents`.`cpc_definition` AS cd ON cd.symbol = c.code
+    UNNEST cd.parents AS par
+),
+yearly_counts AS (
+    SELECT pp.cpc_group, pp.filing_year, COUNT(*) AS cnt
+    FROM patent_parents AS pp
+    GROUP BY pp.cpc_group, pp.filing_year
+),
+group_arrays AS (
+    SELECT cpc_group,
+           ARRAY_SORT(ARRAY_AGG({"a_year": filing_year, "b_cnt": cnt})) AS arr
+    FROM yearly_counts
+    GROUP BY cpc_group
+),
+ema_calc AS (
+    SELECT g.cpc_group,
+           (ARRAY {"y": g.arr[i].a_year,
+                    "ema": 0.1 * ARRAY_SUM(
+                        ARRAY g.arr[j].b_cnt * POWER(0.9, i - j)
+                        FOR j IN ARRAY_RANGE(0, i + 1) END
+                    )}
+            FOR i IN ARRAY_RANGE(0, ARRAY_LENGTH(g.arr)) END
+           ) AS ema_arr
+    FROM group_arrays AS g
+),
+flattened AS (
+    SELECT e.cpc_group, v.y AS best_year, v.ema AS max_ema,
+           ROW_NUMBER() OVER (PARTITION BY e.cpc_group ORDER BY v.ema DESC, v.y DESC) AS rn
+    FROM ema_calc AS e
+    UNNEST e.ema_arr AS v
+)
+SELECT
+    f.cpc_group AS CPC_GROUP,
+    cd.titleFull AS FULL_TITLE,
+    f.best_year AS YEAR,
+    ROUND(f.max_ema, 1) AS HIGHEST_EXPONENTIAL_MOVING_AVERAGE
+FROM flattened AS f
+JOIN `patents`.`patents`.`cpc_definition` AS cd ON cd.symbol = f.cpc_group
+WHERE f.rn = 1 AND cd.`level` = 5
+ORDER BY cd.titleFull, f.cpc_group ASC;

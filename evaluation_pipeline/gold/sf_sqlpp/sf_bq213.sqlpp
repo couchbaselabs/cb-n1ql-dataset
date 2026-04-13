@@ -1,0 +1,17 @@
+WITH ipc_codes AS (
+    SELECT
+        p.publication_number,
+        SUBSTR(i.code, 0, 4) AS ipc4
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.ipc AS i
+    WHERE p.country_code = 'US'
+      AND p.kind_code = 'B2'
+      AND p.application_kind = 'A'
+      AND p.grant_date BETWEEN 20220601 AND 20220831
+      AND p.grant_date != 0
+)
+SELECT ipc4 AS IPC4, COUNT(*) AS COUNT
+FROM ipc_codes
+GROUP BY ipc4
+ORDER BY COUNT(*) DESC
+LIMIT 1;

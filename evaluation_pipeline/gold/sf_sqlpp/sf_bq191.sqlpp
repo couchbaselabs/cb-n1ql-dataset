@@ -1,0 +1,16 @@
+SELECT w.repo_name, w.distinct_watcher_count
+FROM (
+    SELECT y.repo.name AS repo_name,
+           COUNT(DISTINCT y.actor.id) AS distinct_watcher_count
+    FROM `githubreposdate`.`year`.`t__2017` AS y
+    WHERE y.type = 'WatchEvent'
+    GROUP BY y.repo.name
+    HAVING COUNT(DISTINCT y.actor.id) > 300
+) AS w
+JOIN (
+    SELECT DISTINCT sf.repo_name
+    FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+) AS sf
+ON w.repo_name = sf.repo_name
+ORDER BY w.distinct_watcher_count DESC
+LIMIT 2;

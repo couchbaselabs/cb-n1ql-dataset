@@ -1,0 +1,21 @@
+SELECT 
+    res.category,
+    SUM(res.local_count) AS `count`
+FROM `githubrepos`.`github_repos`.`sample_contents` AS sc
+UNNEST (
+    SELECT 
+        CASE 
+            WHEN REGEXP_LIKE(line, ".*[ \t]$") THEN 'trailing'
+            WHEN line LIKE ' %' THEN 'Space'
+            ELSE 'Other'
+        END AS category,
+        COUNT(*) AS local_count
+    FROM SPLIT(sc.content, '\n') AS line
+    WHERE sc.`binary` = FALSE
+    GROUP BY CASE 
+        WHEN REGEXP_LIKE(line, ".*[ \t]$") THEN 'trailing'
+        WHEN line LIKE ' %' THEN 'Space'
+        ELSE 'Other'
+    END
+) AS res
+GROUP BY res.category;

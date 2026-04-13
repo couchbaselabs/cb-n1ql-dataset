@@ -1,0 +1,26 @@
+WITH order_agg AS (
+    SELECT
+        o.CustomerID,
+        COUNT(DISTINCT o.OrderID) AS order_count,
+        ROUND(SUM(ol.Quantity * ol.UnitPrice * (1 + ol.TaxRate / 100)), 2) AS total_value
+    FROM `wideworldimporters`.`wide_world_importers`.`sales_orders` AS o
+    JOIN `wideworldimporters`.`wide_world_importers`.`sales_orderlines` AS ol
+        ON o.OrderID = ol.OrderID
+    GROUP BY o.CustomerID
+),
+invoice_agg AS (
+    SELECT
+        i.CustomerID,
+        COUNT(DISTINCT i.InvoiceID) AS invoice_count,
+        ROUND(SUM(il.ExtendedPrice), 2) AS total_value
+    FROM `wideworldimporters`.`wide_world_importers`.`sales_invoices` AS i
+    JOIN `wideworldimporters`.`wide_world_importers`.`sales_invoicelines` AS il
+        ON i.InvoiceID = il.InvoiceID
+    GROUP BY i.CustomerID
+)
+SELECT COUNT(1) AS customer_count
+FROM order_agg AS oa
+JOIN invoice_agg AS ia
+    ON oa.CustomerID = ia.CustomerID
+WHERE oa.order_count = ia.invoice_count
+  AND oa.total_value = ia.total_value;

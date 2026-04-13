@@ -1,0 +1,36 @@
+WITH october_activity AS (
+    SELECT
+        addr AS address,
+        i.block_timestamp AS block_timestamp,
+        i.`value` AS `value`
+    FROM `crypto`.`crypto_bitcoin`.`inputs` AS i
+    UNNEST i.addresses AS addr
+    WHERE i.block_timestamp >= 1506816000000000
+      AND i.block_timestamp < 1509494400000000
+
+    UNION ALL
+
+    SELECT
+        addr AS address,
+        o.block_timestamp AS block_timestamp,
+        o.`value` AS `value`
+    FROM `crypto`.`crypto_bitcoin`.`outputs` AS o
+    UNNEST o.addresses AS addr
+    WHERE o.block_timestamp >= 1506816000000000
+      AND o.block_timestamp < 1509494400000000
+),
+address_stats AS (
+    SELECT
+        address,
+        MAX(block_timestamp) AS last_tx_timestamp,
+        SUM(`value`) AS total_value
+    FROM october_activity
+    GROUP BY address
+)
+SELECT
+    s.address,
+    s.last_tx_timestamp,
+    s.total_value
+FROM address_stats AS s
+ORDER BY s.last_tx_timestamp DESC, s.total_value DESC
+LIMIT 1

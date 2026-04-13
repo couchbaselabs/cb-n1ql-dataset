@@ -1,0 +1,22 @@
+SELECT
+  o.block_timestamp,
+  o.oracle_request_id,
+  o.calldata_json.symbols[pos] AS symbol,
+  o.result_json.rates[pos] / o.calldata_json.multiplier AS adjusted_rate
+FROM (
+  SELECT
+    block_timestamp,
+    block_timestamp_truncated,
+    oracle_request_id,
+    DECODE_JSON(decoded_result.calldata) AS calldata_json,
+    DECODE_JSON(decoded_result.result) AS result_json
+  FROM `crypto`.`crypto_band`.`oracle_requests`
+  WHERE request.oracle_script_id = 3
+    AND decoded_result.calldata IS NOT MISSING
+    AND decoded_result.result IS NOT MISSING
+  ORDER BY block_timestamp_truncated DESC
+  LIMIT 10
+) AS o
+UNNEST ARRAY_RANGE(0, ARRAY_LENGTH(o.calldata_json.symbols)) AS pos
+WHERE o.result_json.rates[pos] IS NOT MISSING
+ORDER BY o.block_timestamp_truncated DESC, o.oracle_request_id DESC, pos ASC;

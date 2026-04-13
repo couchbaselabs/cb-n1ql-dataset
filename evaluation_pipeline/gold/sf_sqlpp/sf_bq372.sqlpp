@@ -1,0 +1,39 @@
+WITH invoiced_order_ids AS (
+    SELECT RAW i.OrderID
+    FROM `wideworldimporters`.`wide_world_importers`.`sales_invoices` AS i
+),
+lost_orders AS (
+    SELECT
+        o.OrderID,
+        c.CustomerCategoryID,
+        SUM(ol.Quantity * ol.UnitPrice) AS lost_order_value
+    FROM `wideworldimporters`.`wide_world_importers`.`sales_orders` AS o
+    JOIN `wideworldimporters`.`wide_world_importers`.`sales_customers` AS c
+        ON o.CustomerID = c.CustomerID
+    JOIN `wideworldimporters`.`wide_world_importers`.`sales_orderlines` AS ol
+        ON o.OrderID = ol.OrderID
+    WHERE o.OrderID NOT IN (SELECT RAW i.OrderID FROM `wideworldimporters`.`wide_world_importers`.`sales_invoices` AS i)
+    GROUP BY o.OrderID, c.CustomerCategoryID
+),
+category_max AS (
+    SELECT
+        lo.CustomerCategoryID,
+        MAX(lo.lost_order_value) AS max_lost_value
+    FROM lost_orders AS lo
+    GROUP BY lo.CustomerCategoryID
+),
+overall_avg AS (
+    SELECT AVG(cm.max_lost_value) AS avg_max_value
+    FROM category_max AS cm
+)
+SELECT
+    cc.CustomerCategoryName,
+    cm.max_lost_value AS MaxLostOrderValue,
+    oa.avg_max_value AS AvgMaxLostOrderValue,
+    ABS(cm.max_lost_value - oa.avg_max_value) AS DifferenceFromAverage
+FROM category_max AS cm
+JOIN `wideworldimporters`.`wide_world_importers`.`sales_customercategories` AS cc
+    ON cm.CustomerCategoryID = cc.CustomerCategoryID
+JOIN overall_avg AS oa ON 1 = 1
+ORDER BY ABS(cm.max_lost_value - oa.avg_max_value), cc.CustomerCategoryName
+LIMIT 1;

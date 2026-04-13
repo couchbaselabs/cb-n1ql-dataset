@@ -1,0 +1,27 @@
+WITH zip_income_diffs AS (
+    SELECT DISTINCT
+        z15.geo_id AS zip_code,
+        g.state_name AS state_name,
+        z18.median_income - z15.median_income AS median_income_diff
+    FROM `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2015_5yr` AS z15
+    JOIN `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2018_5yr` AS z18
+        ON z15.geo_id = z18.geo_id
+    JOIN `censusbureauacs2`.`geo_us_boundaries`.`zip_codes` AS g
+        ON z15.geo_id = g.zip_code
+    WHERE z15.median_income IS NOT NULL
+      AND z18.median_income IS NOT NULL
+)
+SELECT
+    d.state_name AS STATE,
+    ROUND(SUM(IFMISSINGORNULL(z17.employed_wholesale_trade, 0) * 0.38), 2) AS VULNERABLE_WHOLESALE_WORKERS,
+    ROUND(SUM(IFMISSINGORNULL(z17.employed_manufacturing, 0) * 0.41), 2) AS VULNERABLE_MANUFACTURING_WORKERS,
+    ROUND(
+        SUM(IFMISSINGORNULL(z17.employed_wholesale_trade, 0) * 0.38) +
+        SUM(IFMISSINGORNULL(z17.employed_manufacturing, 0) * 0.41),
+        2
+    ) AS TOTAL_VULNERABLE_WORKERS
+FROM zip_income_diffs AS d
+JOIN `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2017_5yr` AS z17
+    ON d.zip_code = z17.geo_id
+GROUP BY d.state_name
+ORDER BY TOTAL_VULNERABLE_WORKERS DESC;

@@ -1,0 +1,49 @@
+WITH classified_calls AS (
+  SELECT
+    c.call_set_name,
+    CASE
+      WHEN c.genotype[0] = 0
+         AND (ARRAY_LENGTH(c.genotype) = 1 OR c.genotype[1] = 0)
+      THEN 1 ELSE 0
+    END AS is_homozygous_reference,
+    CASE
+      WHEN ARRAY_LENGTH(c.genotype) >= 2
+         AND c.genotype[0] = c.genotype[1]
+         AND c.genotype[0] > 0
+      THEN 1 ELSE 0
+    END AS is_homozygous_alternate,
+    CASE
+      WHEN ARRAY_LENGTH(c.genotype) >= 2
+         AND c.genotype[0] != c.genotype[1]
+      THEN 1
+      WHEN ARRAY_LENGTH(c.genotype) = 1
+         AND c.genotype[0] > 0
+      THEN 1
+      WHEN ARRAY_LENGTH(c.genotype) >= 2
+         AND (c.genotype[0] IS NULL OR c.genotype[1] IS NULL)
+         AND ((c.genotype[0] IS NOT NULL AND c.genotype[0] > 0)
+            OR (c.genotype[1] IS NOT NULL AND c.genotype[1] > 0))
+      THEN 1
+      ELSE 0
+    END AS is_heterozygous
+  FROM `1000genomes`.`t__1000_genomes`.`variants` v
+  UNNEST v.`call` c
+  WHERE v.reference_name = 'X'
+    AND v.VT = 'SNP'
+    AND NOT (v.`start` BETWEEN 59999 AND 2699519)
+    AND NOT (v.`start` BETWEEN 154931042 AND 155260559)
+    AND ARRAY_LENGTH(c.genotype) >= 1
+)
+SELECT
+  call_set_name,
+  SUM(is_homozygous_reference) + SUM(is_homozygous_alternate) + SUM(is_heterozygous) AS total_callable_sites,
+  SUM(is_homozygous_reference) AS homozygous_reference_count,
+  SUM(is_homozygous_alternate) AS homozygous_alternate_count,
+  SUM(is_heterozygous) AS heterozygous_count,
+  SUM(is_homozygous_alternate) + SUM(is_heterozygous) AS total_snvs,
+  ROUND(100.0 * SUM(is_heterozygous) / NULLIF(SUM(is_homozygous_alternate) + SUM(is_heterozygous), 0), 2) AS percentage_heterozygous_among_snvs,
+  ROUND(100.0 * SUM(is_homozygous_alternate) / NULLIF(SUM(is_homozygous_alternate) + SUM(is_heterozygous), 0), 2) AS percentage_homozygous_alternate_among_snvs
+FROM classified_calls
+GROUP BY call_set_name
+HAVING SUM(is_homozygous_alternate) + SUM(is_heterozygous) > 0
+ORDER BY percentage_heterozygous_among_snvs DESC, call_set_name;

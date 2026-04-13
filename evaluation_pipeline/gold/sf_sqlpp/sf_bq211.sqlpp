@@ -1,0 +1,16 @@
+SELECT SUM(cnt) AS patent_count
+FROM (
+    SELECT g.family_id, COUNT(*) AS cnt
+    FROM `patents`.`patents`.`publications` AS g
+    WHERE g.country_code = 'CN'
+      AND g.grant_date BETWEEN 20100101 AND 20231231
+      AND g.grant_date != 0
+    GROUP BY g.family_id
+    HAVING g.family_id IN (
+        SELECT RAW p2.family_id
+        FROM `patents`.`patents`.`publications` AS p2
+        WHERE p2.family_id IS NOT NULL
+        GROUP BY p2.family_id
+        HAVING COUNT(DISTINCT p2.application_number) > 1
+    )
+) t;

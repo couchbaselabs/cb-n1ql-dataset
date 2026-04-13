@@ -1,0 +1,22 @@
+WITH event_summary AS (
+    SELECT 
+        e.repo.name AS repo,
+        COUNT(DISTINCT CASE WHEN e.type = 'WatchEvent' THEN e.actor.login END) AS watches,
+        SUM(CASE WHEN e.type = 'IssuesEvent' THEN 1 ELSE 0 END) AS issue_events,
+        SUM(CASE WHEN e.type = 'ForkEvent' THEN 1 ELSE 0 END) AS forks
+    FROM `githubreposdate`.`month`.`t__202204` AS e
+    WHERE e.type IN ['WatchEvent', 'IssuesEvent', 'ForkEvent']
+    GROUP BY e.repo.name
+    HAVING COUNT(DISTINCT CASE WHEN e.type = 'WatchEvent' THEN e.actor.login END) > 0
+       AND SUM(CASE WHEN e.type = 'IssuesEvent' THEN 1 ELSE 0 END) > 0
+       AND SUM(CASE WHEN e.type = 'ForkEvent' THEN 1 ELSE 0 END) > 0
+)
+SELECT ar.repo_name
+FROM `githubreposdate`.`github_repos`.`licenses` AS ar
+JOIN event_summary AS es ON ar.repo_name = es.repo
+WHERE ar.license IN [
+    'gpl-3.0', 'artistic-2.0', 'isc', 'cc0-1.0', 'epl-1.0', 'gpl-2.0',
+    'mpl-2.0', 'lgpl-2.1', 'bsd-2-clause', 'apache-2.0', 'mit', 'lgpl-3.0'
+]
+ORDER BY (es.forks + es.issue_events + es.watches) DESC
+LIMIT 1;

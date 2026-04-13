@@ -1,0 +1,57 @@
+WITH a01b3_apps AS (
+    SELECT
+        a.name AS assignee_name,
+        FLOOR(p.filing_date / 10000) AS filing_year,
+        p.country_code,
+        p.application_number
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.assignee_harmonized AS a
+    WHERE ANY c IN p.cpc SATISFIES c.code LIKE 'A01B3%' END
+      AND a.name IS NOT NULL
+      AND a.name != ''
+      AND p.filing_date > 0
+),
+year_country_counts AS (
+    SELECT
+        assignee_name,
+        filing_year,
+        country_code,
+        COUNT(DISTINCT application_number) AS year_country_cnt
+    FROM a01b3_apps
+    GROUP BY assignee_name, filing_year, country_code
+),
+ranked_year_country AS (
+    SELECT
+        assignee_name,
+        filing_year,
+        country_code,
+        year_country_cnt,
+        SUM(year_country_cnt) OVER (PARTITION BY assignee_name, filing_year) AS year_total,
+        ROW_NUMBER() OVER (PARTITION BY assignee_name, filing_year ORDER BY year_country_cnt DESC, country_code ASC) AS country_rn
+    FROM year_country_counts
+),
+per_year AS (
+    SELECT assignee_name, filing_year, year_total, country_code AS top_country
+    FROM ranked_year_country
+    WHERE country_rn = 1
+),
+per_assignee AS (
+    SELECT
+        assignee_name,
+        filing_year,
+        year_total,
+        top_country,
+        SUM(year_total) OVER (PARTITION BY assignee_name) AS total_apps,
+        ROW_NUMBER() OVER (PARTITION BY assignee_name ORDER BY year_total DESC, filing_year ASC) AS year_rn
+    FROM per_year
+)
+SELECT
+    assignee_name,
+    total_apps,
+    filing_year AS peak_year,
+    year_total AS peak_year_apps,
+    top_country
+FROM per_assignee
+WHERE year_rn = 1
+ORDER BY total_apps DESC, assignee_name ASC
+LIMIT 3;

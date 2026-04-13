@@ -1,0 +1,31 @@
+SELECT
+    giver.UserName AS GiverUserName,
+    recipient.UserName AS ReceiverUserName,
+    tp.upvote_count AS ReceivedUpvotes,
+    IFMISSINGORNULL(
+        (SELECT RAW COUNT(DISTINCT v2.ForumMessageId)
+         FROM `metakaggle`.`meta_kaggle`.`forummessagevotes` AS v2
+         WHERE v2.FromUserId = tp.FromUserId_rev
+           AND v2.ToUserId = tp.FromUserId)[0],
+        0
+    ) AS ReturnedUpvotes
+FROM (
+    SELECT v.FromUserId, v.ToUserId,
+           v.ToUserId AS FromUserId_rev,
+           COUNT(DISTINCT v.ForumMessageId) AS upvote_count
+    FROM `metakaggle`.`meta_kaggle`.`forummessagevotes` AS v
+    WHERE v.ToUserId IN (
+        SELECT RAW ToUserId
+        FROM `metakaggle`.`meta_kaggle`.`forummessagevotes`
+        WHERE ToUserId IS NOT NULL
+        GROUP BY ToUserId
+        ORDER BY COUNT(DISTINCT ForumMessageId) DESC
+        LIMIT 300
+    )
+    AND v.ToUserId IS NOT NULL
+    GROUP BY v.FromUserId, v.ToUserId
+    ORDER BY upvote_count DESC
+    LIMIT 1
+) AS tp
+LEFT JOIN `metakaggle`.`meta_kaggle`.`users` AS giver   ON giver.Id = tp.FromUserId
+JOIN `metakaggle`.`meta_kaggle`.`users` AS recipient ON recipient.Id = tp.ToUserId;

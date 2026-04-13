@@ -1,0 +1,62 @@
+WITH ledger AS (
+    SELECT 
+        i.addresses[0] AS address, 
+        i.`type` AS address_type, 
+        -1 * i.`value` AS amount
+    FROM `crypto`.`crypto_dash`.`transactions` AS t
+    UNNEST t.inputs AS i
+    WHERE 
+        t.block_timestamp_month = '2023-04-01'
+        AND i.addresses IS NOT NULL 
+        AND ARRAY_LENGTH(i.addresses) > 0
+        
+    UNION ALL
+    
+    SELECT 
+        o.addresses[0] AS address, 
+        o.`type` AS address_type, 
+        o.`value` AS amount
+    FROM `crypto`.`crypto_dash`.`transactions` AS t
+    UNNEST t.outputs AS o
+    WHERE 
+        t.block_timestamp_month = '2023-04-01'
+        AND o.addresses IS NOT NULL 
+        AND ARRAY_LENGTH(o.addresses) > 0
+),
+balances AS (
+    SELECT 
+        address, 
+        address_type, 
+        SUM(amount) AS balance
+    FROM ledger
+    GROUP BY 
+        address, 
+        address_type
+)
+SELECT * FROM (
+    SELECT 
+        "highest" AS metric, 
+        b.address, 
+        b.address_type, 
+        b.balance
+    FROM balances AS b 
+    ORDER BY 
+        b.balance DESC, 
+        b.address ASC 
+    LIMIT 1
+) AS hi
+
+UNION ALL
+
+SELECT * FROM (
+    SELECT 
+        "lowest" AS metric, 
+        b.address, 
+        b.address_type, 
+        b.balance
+    FROM balances AS b 
+    ORDER BY 
+        b.balance ASC, 
+        b.address ASC 
+    LIMIT 1
+) AS lo;

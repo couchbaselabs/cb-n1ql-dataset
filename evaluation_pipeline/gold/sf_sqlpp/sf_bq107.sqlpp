@@ -1,0 +1,14 @@
+SELECT
+    r.`name` AS reference_name,
+    r.`length` AS reference_length,
+    COUNT(v.variant_id) AS variant_count,
+    (1.0 * COUNT(v.variant_id)) / r.`length` AS variant_density
+FROM (
+    SELECT `name`, `length`
+    FROM `genomicscannabis`.`genomics_cannabis`.`mnpr01_reference_201703`
+    ORDER BY `length` DESC
+    LIMIT 1
+) AS r
+LEFT JOIN `genomicscannabis`.`genomics_cannabis`.`mnpr01_201703` AS v
+    ON v.reference_name = r.`name`
+GROUP BY r.`name`, r.`length`;

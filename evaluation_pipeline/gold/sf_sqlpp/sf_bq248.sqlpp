@@ -1,0 +1,12 @@
+SELECT
+    SUM(CASE
+            WHEN LOWER(sf.`path`) LIKE '%readme.md%'
+             AND ISSTRING(sc.content)
+             AND CONTAINS(sc.content, 'Copyright (c)')
+            THEN 1 ELSE 0
+        END) * 1.0 / COUNT(*) AS proportion
+FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+JOIN `githubrepos`.`github_repos`.`sample_contents` AS sc ON sf.id = sc.id
+LEFT JOIN `githubrepos`.`github_repos`.`languages` AS l ON sf.repo_name = l.repo_name
+WHERE (l.repo_name IS MISSING)
+   OR NOT (ANY lang IN l.`language` SATISFIES LOWER(lang.`name`) LIKE '%python%' END);

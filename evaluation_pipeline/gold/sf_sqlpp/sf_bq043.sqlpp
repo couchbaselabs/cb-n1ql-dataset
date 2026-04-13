@@ -1,0 +1,22 @@
+SELECT
+  genex.case_barcode AS case_barcode,
+  genex.sample_barcode AS sample_barcode,
+  genex.HGNC_gene_symbol AS HGNC_gene_symbol,
+  genex.normalized_count AS normalized_count,
+  clinical.diag__age_at_diagnosis AS diag__age_at_diagnosis,
+  clinical.demo__gender AS demo__gender,
+  clinical.diag__ajcc_pathologic_stage AS diag__ajcc_pathologic_stage,
+  clinical.demo__vital_status AS demo__vital_status
+FROM (
+    SELECT mutation.case_barcode
+    FROM `tcga`.`tcga_versioned`.`somatic_mutation_hg19_dcc_2017_02` AS mutation
+    WHERE mutation.Hugo_Symbol = 'CDKN2A'
+      AND mutation.project_short_name = 'TCGA-BLCA'
+    GROUP BY mutation.case_barcode
+) AS mc
+JOIN `tcga`.`tcga_versioned`.`clinical_gdc_r39` AS clinical
+    ON clinical.submitter_id = mc.case_barcode
+JOIN `tcga`.`tcga_versioned`.`rnaseq_hg19_gdc_2017_02` AS genex
+    ON genex.case_barcode = mc.case_barcode
+WHERE genex.HGNC_gene_symbol IN ['MDM2', 'TP53', 'CDKN1A', 'CCNE1']
+ORDER BY genex.case_barcode, genex.HGNC_gene_symbol;

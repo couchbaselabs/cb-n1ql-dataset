@@ -1,0 +1,58 @@
+SELECT
+    base.category,
+    base.month_start,
+    base.`year`,
+    base.`month`,
+    base.revenue,
+    base.orders_count,
+    CASE
+        WHEN base.prev_revenue IS NULL OR base.prev_revenue = 0 THEN NULL
+        ELSE ROUND(100.0 * (base.revenue - base.prev_revenue) / base.prev_revenue, 2)
+    END AS revenue_mom_pct,
+    CASE
+        WHEN base.prev_orders IS NULL OR base.prev_orders = 0 THEN NULL
+        ELSE ROUND(100.0 * (base.orders_count - base.prev_orders) / base.prev_orders, 2)
+    END AS orders_mom_pct,
+    base.total_cost,
+    base.revenue - base.total_cost AS profit,
+    CASE
+        WHEN base.total_cost = 0 THEN NULL
+        ELSE (base.revenue - base.total_cost) / base.total_cost
+    END AS profit_to_cost_ratio
+FROM (
+    SELECT
+        p.category,
+        SUBSTR(MILLIS_TO_STR(DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month')), 0, 10) AS month_start,
+        DATE_PART_MILLIS(DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month'), 'year') AS `year`,
+        DATE_PART_MILLIS(DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month'), 'month') AS `month`,
+        DATE_PART_MILLIS(DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month'), 'year') * 12
+            + DATE_PART_MILLIS(DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month'), 'month') AS month_key,
+        SUM(oi.sale_price) AS revenue,
+        COUNT(DISTINCT o.order_id) AS orders_count,
+        SUM(p.cost) AS total_cost,
+        LAG(SUM(oi.sale_price)) OVER (
+            PARTITION BY p.category
+            ORDER BY DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month')
+        ) AS prev_revenue,
+        LAG(COUNT(DISTINCT o.order_id)) OVER (
+            PARTITION BY p.category
+            ORDER BY DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month')
+        ) AS prev_orders,
+        LAG(DATE_PART_MILLIS(DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month'), 'year') * 12
+            + DATE_PART_MILLIS(DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month'), 'month')) OVER (
+            PARTITION BY p.category
+            ORDER BY DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month')
+        ) AS prev_month_key
+    FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+        ON o.order_id = oi.order_id
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+        ON oi.product_id = p.id
+    WHERE o.status = 'Complete'
+      AND o.delivered_at IS NOT NULL
+      AND FLOOR(o.delivered_at / 1000) < STR_TO_MILLIS('2022-01-01T00:00:00Z')
+    GROUP BY
+        p.category,
+        DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month')
+) AS base
+ORDER BY base.category, base.month_start;

@@ -1,0 +1,40 @@
+SELECT
+    l.transaction_hash AS transaction_hash,
+    CONCAT("https://arbiscan.io/tx/", l.transaction_hash) AS etherscan_link,
+    REPLACE(l.`address`, "0x", "") AS token_contract,
+    CASE WHEN LTRIM(from_hex, "0") = "" THEN "0" ELSE LTRIM(from_hex, "0") END AS sender_address,
+    CASE WHEN LTRIM(to_hex, "0") = "" THEN "0" ELSE LTRIM(to_hex, "0") END AS receiver_address,
+    ARRAY_SUM(
+        ARRAY
+            (CASE SUBSTR(amt_hex, i, 1)
+                WHEN "0" THEN 0
+                WHEN "1" THEN 1
+                WHEN "2" THEN 2
+                WHEN "3" THEN 3
+                WHEN "4" THEN 4
+                WHEN "5" THEN 5
+                WHEN "6" THEN 6
+                WHEN "7" THEN 7
+                WHEN "8" THEN 8
+                WHEN "9" THEN 9
+                WHEN "a" THEN 10
+                WHEN "b" THEN 11
+                WHEN "c" THEN 12
+                WHEN "d" THEN 13
+                WHEN "e" THEN 14
+                WHEN "f" THEN 15
+                ELSE 0
+            END) * POWER(16, LENGTH(amt_hex) - i - 1)
+        FOR i IN ARRAY_RANGE(0, LENGTH(amt_hex)) END
+    ) AS transfer_amount
+FROM `googblockchain`.`goog_blockchain_arbitrum_one_us`.`logs` AS l
+LET from_hex = LOWER(SUBSTR(REPLACE(l.topics[1], "0x", ""), 24, 40)),
+    to_hex = LOWER(SUBSTR(REPLACE(l.topics[2], "0x", ""), 24, 40)),
+    raw_amt = LTRIM(LOWER(SUBSTR(REPLACE(l.`data`, "0x", ""), 0, 64)), "0"),
+    amt_hex = CASE WHEN raw_amt = "" THEN "0" ELSE raw_amt END
+WHERE l.block_number = 235503843
+  AND l.removed = FALSE
+  AND ARRAY_LENGTH(l.topics) = 3
+  AND LENGTH(REPLACE(l.`data`, "0x", "")) >= 64
+  AND LOWER(l.topics[0]) = "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+ORDER BY l.transaction_index, l.log_index;

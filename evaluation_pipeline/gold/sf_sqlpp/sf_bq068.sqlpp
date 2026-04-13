@@ -1,0 +1,47 @@
+WITH double_entry_book AS (
+         SELECT
+             TRIM(REPLACE(ENCODE_JSON(inp.addresses),
+     '","', ','), '[]"') AS address,
+             inp.`type` AS entry_type,
+             -inp.`value` AS amount
+         FROM crypto.crypto_bitcoin_cash.transactions AS t
+         UNNEST t.inputs AS inp
+         WHERE t.block_timestamp >=
+     STR_TO_MILLIS("2014-03-01") * 1000
+           AND t.block_timestamp <
+     STR_TO_MILLIS("2014-04-01") * 1000
+         UNION ALL
+         SELECT
+             TRIM(REPLACE(ENCODE_JSON(out.addresses),
+     '","', ','), '[]"') AS address,
+             out.`type` AS entry_type,
+             out.`value` AS amount
+         FROM crypto.crypto_bitcoin_cash.transactions AS t
+         UNNEST t.outputs AS out
+         WHERE t.block_timestamp >=
+     STR_TO_MILLIS("2014-03-01") * 1000
+           AND t.block_timestamp <
+     STR_TO_MILLIS("2014-04-01") * 1000
+     ),
+     address_balances AS (
+         SELECT
+             address,
+             entry_type,
+             SUM(amount) AS balance
+         FROM double_entry_book
+         GROUP BY address, entry_type
+     ),
+     max_min_balances AS (
+         SELECT
+             entry_type,
+             MAX(balance) AS max_balance,
+             MIN(balance) AS min_balance
+         FROM address_balances
+         GROUP BY entry_type
+     )
+     SELECT
+         entry_type AS `type`,
+         max_balance,
+         min_balance
+     FROM max_min_balances
+     ORDER BY entry_type;

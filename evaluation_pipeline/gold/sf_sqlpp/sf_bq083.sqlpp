@@ -1,0 +1,50 @@
+SELECT d.`DATE`,
+       (CASE WHEN d.raw_val < 0 THEN '-$' ELSE '$' END) ||
+       (CASE
+           WHEN LENGTH(int_str) > 9 THEN SUBSTR(int_str, 0, LENGTH(int_str) - 9) || ',' || SUBSTR(int_str, LENGTH(int_str) - 9, 3) || ',' || SUBSTR(int_str, LENGTH(int_str) - 6, 3) || ',' || SUBSTR(int_str, LENGTH(int_str) - 3)
+           WHEN LENGTH(int_str) > 6 THEN SUBSTR(int_str, 0, LENGTH(int_str) - 6) || ',' || SUBSTR(int_str, LENGTH(int_str) - 6, 3) || ',' || SUBSTR(int_str, LENGTH(int_str) - 3)
+           WHEN LENGTH(int_str) > 3 THEN SUBSTR(int_str, 0, LENGTH(int_str) - 3) || ',' || SUBSTR(int_str, LENGTH(int_str) - 3)
+           ELSE int_str
+       END) ||
+       '.' ||
+       (CASE 
+           WHEN dec_val < 10 THEN '0' || TO_STRING(dec_val) 
+           ELSE TO_STRING(dec_val) 
+       END) || '00' AS `Δ Total Market Value`
+FROM (
+  SELECT
+    SUBSTR(MILLIS_TO_UTC(FLOOR(t.block_timestamp / 1000)), 0, 10) AS `DATE`,
+    SUM(
+      (CASE WHEN t.input LIKE '0x40c10f19%' THEN 1 ELSE -1 END) *
+      (
+        ARRAY_SUM(
+          ARRAY
+            (CASE SUBSTR(amt_hex, pos, 1)
+              WHEN '0' THEN 0 WHEN '1' THEN 1 WHEN '2' THEN 2 WHEN '3' THEN 3
+              WHEN '4' THEN 4 WHEN '5' THEN 5 WHEN '6' THEN 6 WHEN '7' THEN 7
+              WHEN '8' THEN 8 WHEN '9' THEN 9 WHEN 'a' THEN 10 WHEN 'b' THEN 11
+              WHEN 'c' THEN 12 WHEN 'd' THEN 13 WHEN 'e' THEN 14 WHEN 'f' THEN 15
+              ELSE 0
+            END) * POWER(16, LENGTH(amt_hex) - pos - 1)
+          FOR pos IN ARRAY_RANGE(0, LENGTH(amt_hex)) END
+        ) / 1000000.0
+      )
+    ) AS raw_val
+  FROM `crypto`.`crypto_ethereum`.`transactions` AS t
+  LET input_l = LOWER(t.input),
+      raw_hex = CASE
+          WHEN input_l LIKE '0x40c10f19%' THEN LTRIM(SUBSTR(input_l, 74, 64), '0')
+          ELSE LTRIM(SUBSTR(input_l, 10, 64), '0')
+      END,
+      amt_hex = CASE WHEN raw_hex IS NULL OR LENGTH(raw_hex) = 0 THEN '0' ELSE raw_hex END
+  WHERE t.to_address = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
+    AND t.block_timestamp >= 1672531200000000
+    AND t.block_timestamp < 1704067200000000
+    AND t.receipt_status = 1
+    AND (input_l LIKE '0x40c10f19%' OR input_l LIKE '0x42966c68%')
+  GROUP BY SUBSTR(MILLIS_TO_UTC(FLOOR(t.block_timestamp / 1000)), 0, 10)
+) AS d
+LET int_part = FLOOR(ABS(d.raw_val)),
+    dec_val = ROUND((ABS(d.raw_val) - int_part) * 100),
+    int_str = TO_STRING(int_part)
+ORDER BY d.`DATE` DESC;

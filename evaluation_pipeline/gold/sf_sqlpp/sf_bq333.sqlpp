@@ -1,0 +1,18 @@
+WITH session_durations AS (
+    SELECT
+        e.browser,
+        e.session_id,
+        (MAX(e.created_at) - MIN(e.created_at)) / 1000000.0 AS session_duration_seconds
+    FROM `thelookecommerce`.`thelook_ecommerce`.`events` AS e
+    WHERE e.session_id IS NOT MISSING
+      AND e.browser IS NOT MISSING
+    GROUP BY e.browser, e.session_id
+)
+SELECT
+    sd.browser,
+    AVG(sd.session_duration_seconds) AS avg_session_duration_seconds
+FROM session_durations AS sd
+GROUP BY sd.browser
+HAVING COUNT(*) > 10
+ORDER BY avg_session_duration_seconds ASC
+LIMIT 3;

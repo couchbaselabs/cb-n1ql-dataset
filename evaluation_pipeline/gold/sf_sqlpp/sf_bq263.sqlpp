@@ -1,0 +1,22 @@
+SELECT
+  SUBSTR(MILLIS_TO_STR(DATE_TRUNC_MILLIS(FLOOR(o.created_at / 1000), 'month')), 0, 10) AS `month`,
+  SUM(oi.sale_price) AS total_sales,
+  SUM(ii.cost) AS total_cost,
+  COUNT(DISTINCT o.order_id) AS complete_orders,
+  SUM(oi.sale_price) - SUM(ii.cost) AS total_profit,
+  CASE
+    WHEN SUM(ii.cost) = 0 THEN NULL
+    ELSE (SUM(oi.sale_price) - SUM(ii.cost)) / SUM(ii.cost)
+  END AS profit_to_cost_ratio
+FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+JOIN `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+  ON o.order_id = oi.order_id
+JOIN `thelookecommerce`.`thelook_ecommerce`.`inventory_items` AS ii
+  ON oi.inventory_item_id = ii.id
+WHERE o.status = 'Complete'
+  AND oi.status = 'Complete'
+  AND FLOOR(o.created_at / 1000) >= STR_TO_MILLIS('2023-01-01T00:00:00Z')
+  AND FLOOR(o.created_at / 1000) < STR_TO_MILLIS('2024-01-01T00:00:00Z')
+  AND ii.product_category = 'Sleep & Lounge'
+GROUP BY DATE_TRUNC_MILLIS(FLOOR(o.created_at / 1000), 'month')
+ORDER BY `month` ASC;

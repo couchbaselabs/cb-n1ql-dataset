@@ -1,0 +1,166 @@
+WITH all_txs AS (
+    SELECT t.* FROM `ethereumblockchain`.`ethereum_blockchain`.`transactions` AS t
+    WHERE t.block_timestamp < 1483228800000000
+),
+all_traces AS (
+    SELECT tr.* FROM `ethereumblockchain`.`ethereum_blockchain`.`traces` AS tr
+    WHERE tr.block_timestamp < 1483228800000000
+      AND (tr.call_type IS NOT VALUED OR tr.call_type NOT IN ['delegatecall', 'callcode', 'staticcall'])
+),
+success_txs AS (
+    SELECT t.* FROM all_txs t WHERE t.receipt_status = 1 OR t.receipt_status IS NOT VALUED
+),
+success_traces AS (
+    SELECT t.* FROM all_traces t WHERE t.`status` = 1 OR t.`status` IS NOT VALUED
+),
+nonreward_traces AS (
+    SELECT t.* FROM success_traces t WHERE t.trace_type <> 'reward'
+),
+reward_traces AS (
+    SELECT t.* FROM success_traces t WHERE t.trace_type = 'reward'
+),
+failed_traces AS (
+    SELECT t.* FROM all_traces t WHERE t.`status` = 0 AND t.trace_type <> 'reward'
+),
+token_events AS (
+    SELECT tt.* FROM `ethereumblockchain`.`ethereum_blockchain`.`token_transfers` AS tt
+    WHERE tt.block_timestamp < 1483228800000000
+),
+activity_events AS (
+    SELECT t.from_address AS `address`, t.block_timestamp AS ts
+    FROM nonreward_traces t WHERE t.from_address IS NOT NULL
+    UNION ALL
+    SELECT t.to_address AS `address`, t.block_timestamp AS ts
+    FROM nonreward_traces t WHERE t.to_address IS NOT NULL
+),
+activity_metrics AS (
+    SELECT
+        ae.`address`,
+        CASE WHEN COUNT(1) > 24
+            THEN SQRT(
+                POWER(SUM(COS((2 * 3.141592653589793 * (ae.ts % 86400000000 / 3600000000)) / 24)) / COUNT(1), 2) +
+                POWER(SUM(SIN((2 * 3.141592653589793 * (ae.ts % 86400000000 / 3600000000)) / 24)) / COUNT(1), 2)
+            )
+        END AS R_active_hour,
+        COUNT(DISTINCT FLOOR(ae.ts / 86400000000)) * 1.0 AS active_days
+    FROM activity_events ae GROUP BY ae.`address`
+),
+incoming_metrics AS (
+    SELECT
+        t.to_address AS `address`,
+        COUNT(1) AS in_trace_count,
+        COUNT(DISTINCT t.from_address) AS in_addr_count,
+        SUM(CASE WHEN t.`value` > 0 THEN 1 ELSE 0 END) AS in_transfer_count,
+        AVG(CASE WHEN t.`value` > 0 THEN t.`value` END) / 1e18 AS in_avg_amount,
+        AVG(CASE WHEN t.trace_type = 'call' THEN t.gas_used END) AS avg_gas_used,
+        STDDEV_SAMP(CASE WHEN t.trace_type = 'call' THEN t.gas_used END) AS std_gas_used,
+        SUM(t.`value`) AS total_in_wei
+    FROM nonreward_traces t
+    GROUP BY t.to_address
+),
+outgoing_metrics AS (
+    SELECT
+        t.from_address AS `address`,
+        COUNT(1) AS out_trace_count,
+        COUNT(DISTINCT t.to_address) AS out_addr_count,
+        SUM(CASE WHEN t.`value` > 0 THEN 1 ELSE 0 END) AS out_transfer_count,
+        AVG(CASE WHEN t.`value` > 0 THEN t.`value` END) / 1e18 AS out_avg_amount,
+        SUM(t.`value`) AS total_out_wei
+    FROM nonreward_traces t
+    GROUP BY t.from_address
+),
+reward_metrics AS (
+    SELECT
+        t.to_address AS `address`,
+        SUM(t.`value`) / 1e18 AS reward_amount,
+        SUM(t.`value`) AS reward_wei
+    FROM reward_traces t
+    GROUP BY t.to_address
+),
+fee_metrics AS (
+    SELECT
+        t.from_address AS `address`,
+        SUM(t.gas_price * t.receipt_gas_used) AS total_fee_wei
+    FROM success_txs t
+    GROUP BY t.from_address
+),
+token_in_metrics AS (
+    SELECT
+        tt.to_address AS `address`,
+        COUNT(1) AS token_in_tnx,
+        COUNT(DISTINCT tt.token_address) AS token_in_type,
+        COUNT(DISTINCT tt.from_address) AS token_from_addr
+    FROM token_events tt
+    GROUP BY tt.to_address
+),
+token_out_metrics AS (
+    SELECT
+        tt.from_address AS `address`,
+        COUNT(1) AS token_out_tnx,
+        COUNT(DISTINCT tt.token_address) AS token_out_type,
+        COUNT(DISTINCT tt.to_address) AS token_to_addr
+    FROM token_events tt
+    GROUP BY tt.from_address
+),
+contract_metrics AS (
+    SELECT
+        tr.from_address AS `address`,
+        COUNT(DISTINCT tr.to_address) AS contract_create_count,
+        SUM((LENGTH(c.bytecode) - 2) / 2) AS bytecode_size
+    FROM success_traces tr
+    JOIN `ethereumblockchain`.`ethereum_blockchain`.`contracts` c
+        ON tr.to_address = c.`address`
+    WHERE tr.trace_type = 'create'
+      AND c.block_timestamp < 1483228800000000
+    GROUP BY tr.from_address
+),
+failure_metrics AS (
+    SELECT t.from_address AS `address`, COUNT(1) AS failure_count
+    FROM failed_traces t
+    GROUP BY t.from_address
+),
+target_addresses AS (
+    SELECT DISTINCT a.address FROM (
+        SELECT t.from_address AS address FROM nonreward_traces t WHERE t.from_address IS NOT NULL
+        UNION ALL
+        SELECT t.to_address AS address FROM nonreward_traces t WHERE t.to_address IS NOT NULL
+        UNION ALL
+        SELECT t.to_address AS address FROM reward_traces t WHERE t.to_address IS NOT NULL
+    ) AS a
+)
+SELECT
+    t.address AS ADDRESS,
+    (COALESCE(im.total_in_wei, 0) + COALESCE(rm.reward_wei, 0) - COALESCE(om.total_out_wei, 0) - COALESCE(fee.total_fee_wei, 0)) / 1e18 AS BALANCE,
+    am.R_active_hour AS R_ACTIVE_HOUR,
+    am.active_days AS ACTIVE_DAYS,
+    COALESCE(im.in_trace_count, 0) AS IN_TRACE_COUNT,
+    COALESCE(im.in_addr_count, 0) AS IN_ADDR_COUNT,
+    COALESCE(im.in_transfer_count, 0) AS IN_TRANSFER_COUNT,
+    im.in_avg_amount AS IN_AVG_AMOUNT,
+    im.avg_gas_used AS AVG_GAS_USED,
+    im.std_gas_used AS STD_GAS_USED,
+    COALESCE(om.out_trace_count, 0) AS OUT_TRACE_COUNT,
+    COALESCE(om.out_addr_count, 0) AS OUT_ADDR_COUNT,
+    COALESCE(om.out_transfer_count, 0) AS OUT_TRANSFER_COUNT,
+    om.out_avg_amount AS OUT_AVG_AMOUNT,
+    COALESCE(tin.token_in_tnx, 0) AS TOKEN_IN_TNX,
+    COALESCE(tin.token_in_type, 0) AS TOKEN_IN_TYPE,
+    COALESCE(tin.token_from_addr, 0) AS TOKEN_FROM_ADDR,
+    COALESCE(tout.token_out_tnx, 0) AS TOKEN_OUT_TNX,
+    COALESCE(tout.token_out_type, 0) AS TOKEN_OUT_TYPE,
+    COALESCE(tout.token_to_addr, 0) AS TOKEN_TO_ADDR,
+    COALESCE(rm.reward_amount, 0) AS REWARD_AMOUNT,
+    COALESCE(cm.contract_create_count, 0) AS CONTRACT_CREATE_COUNT,
+    COALESCE(fail.failure_count, 0) AS FAILURE_COUNT,
+    IFMISSING(cm.bytecode_size, NULL) AS BYTECODE_SIZE
+FROM target_addresses t
+LEFT JOIN activity_metrics am ON t.address = am.address
+LEFT JOIN incoming_metrics im ON t.address = im.address
+LEFT JOIN outgoing_metrics om ON t.address = om.address
+LEFT JOIN reward_metrics rm ON t.address = rm.address
+LEFT JOIN fee_metrics fee ON t.address = fee.address
+LEFT JOIN token_in_metrics tin ON t.address = tin.address
+LEFT JOIN token_out_metrics tout ON t.address = tout.address
+LEFT JOIN contract_metrics cm ON t.address = cm.address
+LEFT JOIN failure_metrics fail ON t.address = fail.address
+ORDER BY t.address;

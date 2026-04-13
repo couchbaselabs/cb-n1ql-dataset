@@ -1,0 +1,76 @@
+WITH file_lang AS (
+    SELECT
+        sf.id,
+        sf.`path`,
+        CASE
+            WHEN LOWER(sf.`path`) LIKE '%.asm'        THEN 'Assembly'
+            WHEN LOWER(sf.`path`) LIKE '%.nasm'       THEN 'Assembly'
+            WHEN LOWER(sf.`path`) LIKE '%.c'          THEN 'C'
+            WHEN LOWER(sf.`path`) LIKE '%.h'          THEN 'C'
+            WHEN LOWER(sf.`path`) LIKE '%.cs'         THEN 'C#'
+            WHEN LOWER(sf.`path`) LIKE '%.c++'        THEN 'C++'
+            WHEN LOWER(sf.`path`) LIKE '%.cpp'        THEN 'C++'
+            WHEN LOWER(sf.`path`) LIKE '%.h++'        THEN 'C++'
+            WHEN LOWER(sf.`path`) LIKE '%.hpp'        THEN 'C++'
+            WHEN LOWER(sf.`path`) LIKE '%.css'        THEN 'CSS'
+            WHEN LOWER(sf.`path`) LIKE '%.clj'        THEN 'Clojure'
+            WHEN LOWER(sf.`path`) LIKE '%.lisp'       THEN 'Common Lisp'
+            WHEN LOWER(sf.`path`) LIKE '%.d'          THEN 'D'
+            WHEN LOWER(sf.`path`) LIKE '%.dart'       THEN 'Dart'
+            WHEN LOWER(sf.`path`) LIKE '%dockerfile'  THEN 'Dockerfile'
+            WHEN LOWER(sf.`path`) LIKE '%.dockerfile' THEN 'Dockerfile'
+            WHEN LOWER(sf.`path`) LIKE '%.ex'         THEN 'Elixir'
+            WHEN LOWER(sf.`path`) LIKE '%.exs'        THEN 'Elixir'
+            WHEN LOWER(sf.`path`) LIKE '%.erl'        THEN 'Erlang'
+            WHEN LOWER(sf.`path`) LIKE '%.go'         THEN 'Go'
+            WHEN LOWER(sf.`path`) LIKE '%.groovy'     THEN 'Groovy'
+            WHEN LOWER(sf.`path`) LIKE '%.html'       THEN 'HTML'
+            WHEN LOWER(sf.`path`) LIKE '%.htm'        THEN 'HTML'
+            WHEN LOWER(sf.`path`) LIKE '%.hs'         THEN 'Haskell'
+            WHEN LOWER(sf.`path`) LIKE '%.hx'         THEN 'Haxe'
+            WHEN LOWER(sf.`path`) LIKE '%.json'       THEN 'JSON'
+            WHEN LOWER(sf.`path`) LIKE '%.java'       THEN 'Java'
+            WHEN LOWER(sf.`path`) LIKE '%.js'         THEN 'JavaScript'
+            WHEN LOWER(sf.`path`) LIKE '%.cjs'        THEN 'JavaScript'
+            WHEN LOWER(sf.`path`) LIKE '%.jl'         THEN 'Julia'
+            WHEN LOWER(sf.`path`) LIKE '%.kt'         THEN 'Kotlin'
+            WHEN LOWER(sf.`path`) LIKE '%.ktm'        THEN 'Kotlin'
+            WHEN LOWER(sf.`path`) LIKE '%.kts'        THEN 'Kotlin'
+            WHEN LOWER(sf.`path`) LIKE '%.lua'        THEN 'Lua'
+            WHEN LOWER(sf.`path`) LIKE '%.matlab'     THEN 'MATLAB'
+            WHEN LOWER(sf.`path`) LIKE '%.m'          THEN 'MATLAB'
+            WHEN LOWER(sf.`path`) LIKE '%.md'         THEN 'Markdown'
+            WHEN LOWER(sf.`path`) LIKE '%.markdown'   THEN 'Markdown'
+            WHEN LOWER(sf.`path`) LIKE '%.mdown'      THEN 'Markdown'
+            WHEN LOWER(sf.`path`) LIKE '%.php'        THEN 'PHP'
+            WHEN LOWER(sf.`path`) LIKE '%.ps1'        THEN 'PowerShell'
+            WHEN LOWER(sf.`path`) LIKE '%.psd1'       THEN 'PowerShell'
+            WHEN LOWER(sf.`path`) LIKE '%.psm1'       THEN 'PowerShell'
+            WHEN LOWER(sf.`path`) LIKE '%.py'         THEN 'Python'
+            WHEN LOWER(sf.`path`) LIKE '%.r'          THEN 'R'
+            WHEN LOWER(sf.`path`) LIKE '%.rb'         THEN 'Ruby'
+            WHEN LOWER(sf.`path`) LIKE '%.rs'         THEN 'Rust'
+            WHEN LOWER(sf.`path`) LIKE '%.scss'       THEN 'SCSS'
+            WHEN LOWER(sf.`path`) LIKE '%.sql'        THEN 'SQL'
+            WHEN LOWER(sf.`path`) LIKE '%.sass'       THEN 'Sass'
+            WHEN LOWER(sf.`path`) LIKE '%.scala'      THEN 'Scala'
+            WHEN LOWER(sf.`path`) LIKE '%.sh'         THEN 'Shell'
+            WHEN LOWER(sf.`path`) LIKE '%.bash'       THEN 'Shell'
+            WHEN LOWER(sf.`path`) LIKE '%.swift'      THEN 'Swift'
+            WHEN LOWER(sf.`path`) LIKE '%.ts'         THEN 'TypeScript'
+            WHEN LOWER(sf.`path`) LIKE '%.vue'        THEN 'Vue'
+            WHEN LOWER(sf.`path`) LIKE '%.xml'        THEN 'XML'
+            WHEN LOWER(sf.`path`) LIKE '%.yml'        THEN 'YAML'
+            WHEN LOWER(sf.`path`) LIKE '%.yaml'       THEN 'YAML'
+            ELSE NULL
+        END AS `language`
+    FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+    JOIN `githubrepos`.`github_repos`.`sample_contents` AS sc ON sf.id = sc.id
+    WHERE sc.content IS NOT NULL AND sc.content != ''
+)
+SELECT `language`, COUNT(*) AS file_count
+FROM file_lang
+WHERE `language` IS NOT NULL
+GROUP BY `language`
+ORDER BY file_count DESC
+LIMIT 10;

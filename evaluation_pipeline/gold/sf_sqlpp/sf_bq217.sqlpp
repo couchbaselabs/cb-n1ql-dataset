@@ -1,0 +1,7 @@
+SELECT COUNT(1) AS pull_request_creation_event_count
+FROM `githubreposdate`.`day`.`t__20230118` AS e
+JOIN `githubrepos`.`github_repos`.`languages` AS l
+    ON e.repo.name = l.repo_name
+WHERE e.type = 'PullRequestEvent'
+    AND e.payload.action = 'opened'
+    AND ANY lang IN l.`language` SATISFIES lang.`name` = 'JavaScript' END;

@@ -1,0 +1,25 @@
+WITH top_assignee AS (
+    SELECT a.name AS assignee_name, COUNT(DISTINCT p.application_number) AS total_apps
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.assignee_harmonized AS a
+    WHERE ANY c IN p.cpc SATISFIES c.code LIKE 'A61%' END
+      AND p.filing_date > 0
+      AND a.name IS NOT NULL
+      AND a.name != ''
+    GROUP BY a.name
+    ORDER BY total_apps DESC
+    LIMIT 1
+),
+yearly AS (
+    SELECT FLOOR(p.filing_date / 10000) AS filing_year,
+           COUNT(DISTINCT p.application_number) AS yr_apps
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.assignee_harmonized AS a
+    WHERE ANY c IN p.cpc SATISFIES c.code LIKE 'A61%' END
+      AND p.filing_date > 0
+      AND a.name = (SELECT RAW ta.assignee_name FROM top_assignee AS ta)[0]
+    GROUP BY FLOOR(p.filing_date / 10000)
+    ORDER BY yr_apps DESC
+    LIMIT 1
+)
+SELECT filing_year AS year FROM yearly;

@@ -1,0 +1,18 @@
+WITH js_primary_repos AS (
+    SELECT l.repo_name
+    FROM `githubrepos`.`github_repos`.`languages` AS l
+    WHERE (
+        SELECT VALUE lang.`name`
+        FROM l.`language` AS lang
+        ORDER BY lang.bytes DESC
+        LIMIT 1
+    )[0] = "JavaScript"
+)
+SELECT 
+    c.repo_name, 
+    COUNT(*) AS commit_count
+FROM `githubrepos`.`github_repos`.`sample_commits` AS c
+JOIN js_primary_repos AS j ON c.repo_name = j.repo_name
+GROUP BY c.repo_name
+ORDER BY commit_count DESC, c.repo_name ASC
+LIMIT 2;

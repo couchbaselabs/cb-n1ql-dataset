@@ -1,0 +1,22 @@
+SELECT
+    t.address,
+    SUM(t.delta) AS balance
+FROM (
+    SELECT
+        tt.to_address AS address,
+        TONUMBER(tt.`value`) AS delta
+    FROM `crypto`.`crypto_ethereum`.`token_transfers` AS tt
+    WHERE LOWER(tt.token_address) = '0xa92a861fc11b99b24296af880011b47f9cafb5ab'
+
+    UNION ALL
+
+    SELECT
+        tt.from_address AS address,
+        -TONUMBER(tt.`value`) AS delta
+    FROM `crypto`.`crypto_ethereum`.`token_transfers` AS tt
+    WHERE LOWER(tt.token_address) = '0xa92a861fc11b99b24296af880011b47f9cafb5ab'
+) AS t
+GROUP BY t.address
+HAVING SUM(t.delta) > 0
+ORDER BY balance ASC, t.address ASC
+LIMIT 3;

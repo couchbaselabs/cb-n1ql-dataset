@@ -1,0 +1,35 @@
+SELECT
+    sf.state_code AS STATE_ABBREVIATION,
+    SUM(t18.median_income - t15.median_income) AS TOTAL_MEDIAN_INCOME_CHANGE,
+    SUM(
+        CASE
+            WHEN (IFMISSINGORNULL(t17.unemployed_pop, 0) + IFMISSINGORNULL(t17.not_in_labor_force, 0) - IFMISSINGORNULL(t17.group_quarters, 0)) < 0 THEN 0
+            ELSE (IFMISSINGORNULL(t17.unemployed_pop, 0) + IFMISSINGORNULL(t17.not_in_labor_force, 0) - IFMISSINGORNULL(t17.group_quarters, 0))
+        END
+    ) AS TOTAL_ADJUSTED_NON_LABOR_FORCE,
+    AVG(
+        CASE
+            WHEN IFMISSINGORNULL(t17.total_pop, 0) > 0 THEN
+                (CASE
+                    WHEN (IFMISSINGORNULL(t17.unemployed_pop, 0) + IFMISSINGORNULL(t17.not_in_labor_force, 0) - IFMISSINGORNULL(t17.group_quarters, 0)) < 0 THEN 0
+                    ELSE (IFMISSINGORNULL(t17.unemployed_pop, 0) + IFMISSINGORNULL(t17.not_in_labor_force, 0) - IFMISSINGORNULL(t17.group_quarters, 0))
+                END) * 1.0 / t17.total_pop
+            ELSE 0
+        END
+    ) AS AVG_ADJUSTED_PROPORTION
+FROM `censusbureauacs2`.`census_bureau_acs`.`censustract_2017_5yr` AS t17
+JOIN `censusbureauacs2`.`census_bureau_acs`.`censustract_2015_5yr` AS t15
+    ON t17.geo_id = t15.geo_id
+JOIN `censusbureauacs2`.`census_bureau_acs`.`censustract_2018_5yr` AS t18
+    ON t17.geo_id = t18.geo_id
+JOIN (
+    SELECT DISTINCT state_fips_code, state_code 
+    FROM `censusbureauacs2`.`geo_us_boundaries`.`zip_codes`
+    WHERE state_code IS NOT NULL
+) AS sf
+    ON sf.state_fips_code = SUBSTR(t17.geo_id, 0, 2)
+WHERE t15.median_income IS NOT NULL
+  AND t18.median_income IS NOT NULL
+GROUP BY sf.state_code
+ORDER BY TOTAL_ADJUSTED_NON_LABOR_FORCE ASC
+LIMIT 3;

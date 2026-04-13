@@ -1,0 +1,22 @@
+WITH daily_creations AS (
+    SELECT
+        SUBSTR(MILLIS_TO_STR(t.block_timestamp / 1000), 0, 10) AS day,
+        SUM(CASE WHEN t.trace_address IS NULL THEN 1 ELSE 0 END) AS ext_count,
+        SUM(CASE WHEN t.trace_address IS NOT NULL THEN 1 ELSE 0 END) AS contract_count
+    FROM `crypto`.`crypto_ethereum`.`traces` AS t
+    WHERE t.trace_type = 'create'
+      AND t.status = 1
+      AND t.block_timestamp >= 1483228800000000
+      AND t.block_timestamp < 1640995200000000
+    GROUP BY SUBSTR(MILLIS_TO_STR(t.block_timestamp / 1000), 0, 10)
+)
+SELECT
+    ds.day,
+    IFNULL(SUM(IFNULL(dc.ext_count, 0)) OVER (ORDER BY ds.day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW), 0) AS cumulative_external_address_creations,
+    IFNULL(SUM(IFNULL(dc.contract_count, 0)) OVER (ORDER BY ds.day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW), 0) AS cumulative_contract_creations
+FROM (
+    SELECT DATE_ADD_STR('2017-01-01', v, 'day') AS day
+    FROM ARRAY_RANGE(0, 1827) AS v
+) AS ds
+LEFT JOIN daily_creations AS dc ON ds.day = dc.day
+ORDER BY ds.day;

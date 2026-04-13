@@ -1,0 +1,91 @@
+WITH family_first AS (
+    SELECT
+        p.family_id,
+        MIN(p.publication_date) AS publication_date
+    FROM `patentsgoogle`.`patents_google`.`publications` AS p
+    WHERE p.family_id IS NOT MISSING
+      AND p.family_id IS NOT NULL
+      AND p.family_id != ""
+      AND p.publication_date IS NOT MISSING
+    GROUP BY p.family_id
+    HAVING MIN(p.publication_date) BETWEEN 20150101 AND 20150131
+),
+pub AS (
+    SELECT
+        ff.family_id,
+        CONCAT2(", ", ARRAY_SORT(ARRAY_AGG(p.publication_number))) AS PUBLICATION_NUMBER,
+        CONCAT2(", ", ARRAY_SORT(ARRAY_DISTINCT(ARRAY_AGG(p.country_code)))) AS COUNTRY_CODE
+    FROM family_first ff
+    JOIN `patentsgoogle`.`patents_google`.`publications` p
+        ON p.family_id = ff.family_id
+    GROUP BY ff.family_id
+),
+tech_class AS (
+    SELECT
+        ff.family_id,
+        CONCAT2(", ", ARRAY_SORT(ARRAY_DISTINCT(
+            ARRAY_FLATTEN(
+                ARRAY_AGG(
+                    ARRAY c.code FOR c IN IFMISSINGORNULL(p.cpc, [])
+                    WHEN c.code IS NOT MISSING AND c.code != "" END
+                ), 1)
+        ))) AS CPC,
+        CONCAT2(", ", ARRAY_SORT(ARRAY_DISTINCT(
+            ARRAY_FLATTEN(
+                ARRAY_AGG(
+                    ARRAY i.code FOR i IN IFMISSINGORNULL(p.ipc, [])
+                    WHEN i.code IS NOT MISSING AND i.code != "" END
+                ), 1)
+        ))) AS IPC
+    FROM family_first ff
+    JOIN `patentsgoogle`.`patents_google`.`publications` p
+        ON p.family_id = ff.family_id
+    GROUP BY ff.family_id
+),
+cit AS (
+    SELECT
+        ff.family_id,
+        CONCAT2(", ", ARRAY_SORT(ARRAY_AGG(crossover.family_id))) AS CITATION
+    FROM family_first ff
+    JOIN `patentsgoogle`.`patents_google`.`publications` fp
+        ON fp.family_id = ff.family_id
+    UNNEST fp.citation AS c
+    JOIN `patentsgoogle`.`patents_google`.`publications` crossover
+        ON c.publication_number = crossover.publication_number
+    WHERE c.publication_number IS NOT MISSING
+      AND c.publication_number != ""
+    GROUP BY ff.family_id
+),
+gpr AS (
+    SELECT
+        ff.family_id,
+        CONCAT2(", ", ARRAY_SORT(ARRAY_AGG(crossover.family_id))) AS CITED_BY
+    FROM family_first ff
+    JOIN `patentsgoogle`.`patents_google`.`publications` fp
+        ON fp.family_id = ff.family_id
+    JOIN `patentsgoogle`.`patents_google`.`abs_and_emb` ae
+        ON ae.publication_number = fp.publication_number
+    UNNEST ae.cited_by AS cb
+    JOIN `patentsgoogle`.`patents_google`.`publications` crossover
+        ON cb.publication_number = crossover.publication_number
+    WHERE cb.publication_number IS NOT MISSING
+      AND cb.publication_number != ""
+      AND crossover.family_id != ff.family_id
+    GROUP BY ff.family_id
+)
+SELECT
+    ff.family_id,
+    ff.publication_date AS PUBLICATION_DATE,
+    pub.PUBLICATION_NUMBER,
+    pub.COUNTRY_CODE,
+    tc.CPC,
+    tc.IPC,
+    cit.CITATION,
+    gpr.CITED_BY
+FROM family_first ff
+LEFT JOIN pub ON pub.family_id = ff.family_id
+LEFT JOIN tech_class tc ON tc.family_id = ff.family_id
+LEFT JOIN cit ON cit.family_id = ff.family_id
+LEFT JOIN gpr ON gpr.family_id = ff.family_id
+WHERE ff.publication_date BETWEEN 20150101 AND 20150131
+ORDER BY ff.publication_date, ff.family_id;

@@ -1,0 +1,47 @@
+WITH double_entry_book AS (
+    SELECT 
+        to_address AS address,
+        SUM(TONUMBER(`value`)) AS `value`
+    FROM `ethereumblockchain`.`ethereum_blockchain`.`traces`
+    WHERE status = 1 
+      AND to_address IS NOT NULL
+      AND (call_type IS NULL OR call_type NOT IN ['delegatecall', 'callcode', 'staticcall'])
+    GROUP BY to_address
+    UNION ALL
+    SELECT 
+        from_address AS address,
+        SUM(-TONUMBER(`value`)) AS `value`
+    FROM `ethereumblockchain`.`ethereum_blockchain`.`traces`
+    WHERE status = 1 
+      AND from_address IS NOT NULL
+      AND (call_type IS NULL OR call_type NOT IN ['delegatecall', 'callcode', 'staticcall'])
+    GROUP BY from_address
+    UNION ALL
+    SELECT 
+        b.miner AS address,
+        SUM(TONUMBER(tx.receipt_gas_used) * TONUMBER(tx.gas_price)) AS `value`
+    FROM `ethereumblockchain`.`ethereum_blockchain`.`transactions` AS tx
+    JOIN `ethereumblockchain`.`ethereum_blockchain`.`blocks` AS b
+        ON b.`number` = tx.block_number
+    WHERE b.miner IS NOT NULL
+    GROUP BY b.miner
+    UNION ALL
+    SELECT 
+        from_address AS address,
+        SUM(-(TONUMBER(receipt_gas_used) * TONUMBER(gas_price))) AS `value`
+    FROM `ethereumblockchain`.`ethereum_blockchain`.`transactions`
+    WHERE from_address IS NOT NULL
+    GROUP BY from_address
+),
+top_10_balances AS (
+    SELECT
+        address,
+        SUM(`value`) AS balance
+    FROM double_entry_book
+    GROUP BY address
+    ORDER BY balance DESC
+    LIMIT 10
+)
+SELECT 
+    ROUND(AVG(balance) / 1000000000000000.0, 2) AS average_balance_trillion
+FROM top_10_balances;

@@ -1,0 +1,15 @@
+SELECT
+    (SUM(CASE WHEN yr = 2020 THEN total_value ELSE 0 END) / 8784.0) -
+    (SUM(CASE WHEN yr = 2019 THEN total_value ELSE 0 END) / 8760.0) AS difference_2020_minus_2019
+FROM (
+    SELECT
+        CASE WHEN block_timestamp < 1577836800000000 THEN 2019 ELSE 2020 END AS yr,
+        SUM(TONUMBER(`value`)) AS total_value
+    FROM `crypto`.`crypto_ethereum`.`token_transfers`
+    WHERE token_address = '0x68e54af74b22acaccffa04ccaad13be16ed14eac'
+      AND (from_address = '0x8babf0ba311aab914c00e8fda7e8558a8b66de5d'
+           OR to_address = '0xfbd6c6b112214d949dcdfb1217153bc0a742862f')
+      AND block_timestamp >= 1546300800000000
+      AND block_timestamp < 1609459200000000
+    GROUP BY CASE WHEN block_timestamp < 1577836800000000 THEN 2019 ELSE 2020 END
+) AS yearly_stats;

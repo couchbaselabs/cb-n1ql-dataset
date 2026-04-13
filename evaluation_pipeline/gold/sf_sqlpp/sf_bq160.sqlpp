@@ -1,0 +1,40 @@
+WITH general_subforum_ids AS (
+    SELECT cf.`Id` AS ForumId
+    FROM `metakaggle`.`meta_kaggle`.`forums` AS pf
+    JOIN `metakaggle`.`meta_kaggle`.`forums` AS cf
+        ON cf.`ParentForumId` = pf.`Id`
+    WHERE pf.`Title` = 'General'
+),
+target_topics AS (
+    SELECT ft.`Id` AS TopicId,
+           ft.`CreationDate`,
+           ft.`Title`,
+           ft.`TotalViews`
+    FROM `metakaggle`.`meta_kaggle`.`forumtopics` AS ft
+    JOIN general_subforum_ids AS gsf ON ft.`ForumId` = gsf.ForumId
+    ORDER BY ft.`CreationDate` ASC, ft.`Id` ASC
+    LIMIT 5
+),
+topic_messages AS (
+    SELECT
+        fm.`ForumTopicId`,
+        fm.`Id` AS MessageId,
+        fm.`PostUserId`
+    FROM target_topics AS tt
+    JOIN `metakaggle`.`meta_kaggle`.`forummessages` AS fm
+        ON fm.`ForumTopicId` = tt.TopicId
+)
+SELECT
+    tt.`CreationDate` AS CreationDate,
+    tt.`Title` AS Title,
+    'General' AS parent_forum_title,
+    COALESCE(COUNT(DISTINCT tm.MessageId), 0) AS reply_count,
+    COALESCE(COUNT(DISTINCT tm.PostUserId), 0) AS distinct_user_replies_count,
+    COALESCE(COUNT(DISTINCT fmv.`Id`), 0) AS total_upvotes,
+    COALESCE(tt.`TotalViews`, 0) AS total_views
+FROM target_topics AS tt
+LEFT JOIN topic_messages AS tm ON tm.`ForumTopicId` = tt.TopicId
+LEFT JOIN `metakaggle`.`meta_kaggle`.`forummessagevotes` AS fmv
+    ON fmv.`ForumMessageId` = tm.MessageId
+GROUP BY tt.TopicId, tt.`CreationDate`, tt.`Title`, tt.`TotalViews`
+ORDER BY tt.`CreationDate` ASC, tt.TopicId ASC;

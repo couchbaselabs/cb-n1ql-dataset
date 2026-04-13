@@ -1,0 +1,63 @@
+WITH patent_fwd_cit AS (
+    SELECT
+        p.publication_number,
+        p.filing_date,
+        p.grant_date,
+        COUNT(1) AS forward_citations_within_1_month
+    FROM `patentsgoogle`.`patents_google`.`publications` AS p
+    JOIN `patentsgoogle`.`patents_google`.`abs_and_emb` AS a
+        ON p.publication_number = a.publication_number
+    UNNEST a.cited_by AS cb
+    JOIN `patentsgoogle`.`patents_google`.`publications` AS cp
+        ON cb.publication_number = cp.publication_number
+    WHERE p.country_code = 'US'
+      AND p.kind_code = 'B2'
+      AND p.grant_date BETWEEN 20100101 AND 20141231
+      AND p.filing_date > 0
+      AND cb.publication_number IS NOT MISSING
+      AND cb.publication_number != ""
+      AND cp.filing_date > 0
+      AND cp.filing_date >= p.filing_date
+      AND cp.filing_date <= (CASE
+              WHEN FLOOR((p.filing_date % 10000) / 100) = 12
+              THEN (FLOOR(p.filing_date / 10000) + 1) * 10000 + 100 + (p.filing_date % 100)
+              ELSE p.filing_date + 100
+          END)
+    GROUP BY p.publication_number, p.filing_date, p.grant_date
+    ORDER BY forward_citations_within_1_month DESC, p.publication_number
+    LIMIT 1
+),
+target_patent AS (
+    SELECT
+        pfc.publication_number,
+        pfc.filing_date,
+        pfc.grant_date,
+        pfc.forward_citations_within_1_month,
+        a.embedding_v1
+    FROM patent_fwd_cit pfc
+    JOIN `patentsgoogle`.`patents_google`.`abs_and_emb` AS a
+        ON pfc.publication_number = a.publication_number
+),
+same_year_similar AS (
+    SELECT
+        ae.publication_number,
+        ARRAY_SUM(ARRAY t.embedding_v1[i] * ae.embedding_v1[i]
+                  FOR i IN ARRAY_RANGE(0, ARRAY_LENGTH(t.embedding_v1)) END
+        ) AS similarity_score
+    FROM target_patent AS t
+    JOIN `patentsgoogle`.`patents_google`.`publications` AS c
+        ON c.filing_date >= TONUMBER(SUBSTR(TOSTRING(t.filing_date), 0, 4) || "0101")
+       AND c.filing_date <= TONUMBER(SUBSTR(TOSTRING(t.filing_date), 0, 4) || "1231")
+       AND c.publication_number != t.publication_number
+    JOIN `patentsgoogle`.`patents_google`.`abs_and_emb` AS ae
+        ON c.publication_number = ae.publication_number
+    WHERE ae.embedding_v1 IS NOT MISSING
+    ORDER BY similarity_score DESC, c.publication_number
+    LIMIT 1
+)
+SELECT
+    t.publication_number AS FOCAL_PUB,
+    t.forward_citations_within_1_month AS CITATION_COUNT,
+    s.publication_number AS SIMILAR_PATENT
+FROM target_patent AS t
+LEFT JOIN same_year_similar AS s ON TRUE;

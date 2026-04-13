@@ -1,0 +1,6 @@
+SELECT COUNT(*) / 12.0 AS AVG_COMMITS_PER_MONTH_2016
+FROM `githubrepos`.`github_repos`.`sample_commits` AS c
+JOIN `githubrepos`.`github_repos`.`languages` AS l ON c.repo_name = l.repo_name
+WHERE c.author.time_sec >= 1451606400
+  AND c.author.time_sec < 1483228800
+  AND ANY lang IN l.`language` SATISFIES LOWER(lang.`name`) = 'python' END;

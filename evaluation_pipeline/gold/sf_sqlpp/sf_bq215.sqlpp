@@ -1,0 +1,45 @@
+WITH base_citations AS (
+    SELECT p.publication_number AS citing_pub, c.publication_number AS cited_pub
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.citation AS c
+    WHERE p.country_code = 'US'
+      AND p.kind_code = 'B2'
+      AND p.grant_date BETWEEN 20150101 AND 20181231
+      AND p.grant_date != 0
+      AND c.publication_number IS NOT NULL
+      AND c.publication_number != ''
+),
+cited_ipc_ranked AS (
+    SELECT bc.citing_pub,
+           bc.cited_pub,
+           SUBSTR(i.code, 0, 4) AS ipc4,
+           ROW_NUMBER() OVER (
+               PARTITION BY bc.citing_pub, bc.cited_pub
+               ORDER BY COUNT(*) DESC, SUBSTR(i.code, 0, 4) ASC
+           ) AS rn
+    FROM base_citations AS bc
+    JOIN `patents`.`patents`.`publications` AS cited
+      ON bc.cited_pub = cited.publication_number
+    UNNEST cited.ipc AS i
+    WHERE i.code IS NOT NULL AND LENGTH(i.code) >= 4
+    GROUP BY bc.citing_pub, bc.cited_pub, SUBSTR(i.code, 0, 4)
+),
+class_counts AS (
+    SELECT citing_pub, ipc4, COUNT(*) AS cnt
+    FROM cited_ipc_ranked
+    WHERE rn = 1
+    GROUP BY citing_pub, ipc4
+),
+patent_stats AS (
+    SELECT citing_pub,
+           SUM(cnt * cnt) AS sum_sq,
+           SUM(cnt) AS total
+    FROM class_counts
+    GROUP BY citing_pub
+)
+SELECT citing_pub AS publication_number,
+       ROUND(1.0 - (sum_sq * 1.0) / (total * total * 1.0), 6) AS originality
+FROM patent_stats
+WHERE total > 1
+ORDER BY (1.0 - (sum_sq * 1.0) / (total * total * 1.0)) DESC, citing_pub ASC
+LIMIT 1;

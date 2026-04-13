@@ -1,0 +1,38 @@
+WITH base AS (
+    SELECT
+        t.block_timestamp_month AS month,
+        t.input_count,
+        t.output_count,
+        t.input_value,
+        t.output_value,
+        CASE
+            WHEN t.output_count > 2
+                 AND t.output_value <= t.input_value
+                 AND ARRAY_LENGTH(ARRAY_DISTINCT(ARRAY o.`value` FOR o IN IFMISSINGORNULL(t.outputs, []) END)) < t.output_count
+            THEN 1 ELSE 0
+        END AS is_coinjoin
+    FROM `crypto`.`crypto_bitcoin`.`transactions` AS t
+    WHERE t.block_timestamp_month >= '2023-07-01'
+      AND t.is_coinbase = FALSE
+)
+SELECT
+    b.month,
+    ROUND(100.0 * SUM(b.is_coinjoin) / COUNT(1), 4) AS TX_PERCENT,
+    ROUND(
+        100.0 * (
+            (CASE WHEN SUM(b.input_count) = 0 THEN 0
+                  ELSE 1.0 * SUM(CASE WHEN b.is_coinjoin = 1 THEN b.input_count ELSE 0 END) / SUM(b.input_count) END) +
+            (CASE WHEN SUM(b.output_count) = 0 THEN 0
+                  ELSE 1.0 * SUM(CASE WHEN b.is_coinjoin = 1 THEN b.output_count ELSE 0 END) / SUM(b.output_count) END)
+        ) / 2,
+        4
+    ) AS UTXOS_PERCENT,
+    ROUND(
+        100.0 * CASE WHEN SUM(b.input_value) = 0 THEN 0
+                     ELSE 1.0 * SUM(CASE WHEN b.is_coinjoin = 1 THEN b.input_value ELSE 0 END) / SUM(b.input_value) END,
+        4
+    ) AS VALUE_PERCENT
+FROM base AS b
+GROUP BY b.month
+HAVING SUM(b.is_coinjoin) > 0
+ORDER BY b.month DESC;

@@ -1,0 +1,7 @@
+SELECT sf.repo_name
+FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+JOIN `githubrepos`.`github_repos`.`sample_contents` AS sc ON sf.id = sc.id
+WHERE LOWER(sf.`path`) LIKE '%.swift'
+  AND sc.`binary` = FALSE
+ORDER BY sc.copies DESC, sf.repo_name ASC
+LIMIT 1;

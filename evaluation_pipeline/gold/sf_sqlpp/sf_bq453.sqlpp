@@ -1,0 +1,73 @@
+-- sf_bq453: Hardy-Weinberg Equilibrium chi-squared analysis for chromosome 17
+-- Variants between positions 41196311 and 41277499
+-- Computes HWE chi-squared with observed/expected genotype counts and allele frequencies
+
+SELECT
+    v.reference_name,
+    v.`start`,
+    v.`end`,
+    v.reference_bases,
+    ARRAY_DISTINCT(v.alternate_bases) AS distinct_alternate_bases,
+    v.VT AS variant_type,
+    CASE
+        WHEN exp_hom_ref > 0 AND exp_het > 0 THEN
+            POWER(obs_hom_ref_count - exp_hom_ref, 2) / exp_hom_ref
+            + POWER(obs_het_count - exp_het, 2) / exp_het
+            + CASE
+                WHEN exp_hom_alt > 0 THEN POWER(obs_hom_alt_count - exp_hom_alt, 2) / exp_hom_alt
+                ELSE 0
+              END
+        ELSE NULL
+    END AS chi_squared_score,
+    total_gts AS total_genotypes,
+    obs_hom_ref_count AS obs_hom_ref,
+    exp_hom_ref,
+    obs_het_count AS obs_het,
+    exp_het,
+    obs_hom_alt_count AS obs_hom_alt,
+    exp_hom_alt,
+    hw_ref_freq AS reference_allele_frequency,
+    1.0 - hw_ref_freq AS alternate_allele_frequency,
+    v.AF AS `1KG_AF`,
+    v.AFR_AF,
+    v.EUR_AF,
+    v.ASN_AF,
+    v.AMR_AF
+FROM `1000genomes`.`t__1000_genomes`.`variants` AS v
+LET valid_calls = ARRAY c FOR c IN v.`call` WHEN
+        ARRAY_LENGTH(c.genotype) = 2
+        AND c.genotype[0] IN [0, 1]
+        AND c.genotype[1] IN [0, 1]
+    END,
+    total_gts = ARRAY_LENGTH(valid_calls),
+    obs_hom_ref_count = ARRAY_LENGTH(
+        ARRAY c FOR c IN valid_calls WHEN c.genotype[0] = 0 AND c.genotype[1] = 0 END
+    ),
+    obs_het_count = ARRAY_LENGTH(
+        ARRAY c FOR c IN valid_calls WHEN
+            (c.genotype[0] = 0 AND c.genotype[1] = 1)
+            OR (c.genotype[0] = 1 AND c.genotype[1] = 0)
+        END
+    ),
+    obs_hom_alt_count = ARRAY_LENGTH(
+        ARRAY c FOR c IN valid_calls WHEN c.genotype[0] = 1 AND c.genotype[1] = 1 END
+    ),
+    hw_ref_freq = CASE
+        WHEN total_gts > 0 THEN (obs_hom_ref_count + (0.5 * obs_het_count)) / total_gts
+        ELSE NULL
+    END,
+    exp_hom_ref = CASE
+        WHEN total_gts > 0 THEN POWER(hw_ref_freq, 2) * total_gts
+        ELSE NULL
+    END,
+    exp_het = CASE
+        WHEN total_gts > 0 THEN 2.0 * hw_ref_freq * (1.0 - hw_ref_freq) * total_gts
+        ELSE NULL
+    END,
+    exp_hom_alt = CASE
+        WHEN total_gts > 0 THEN POWER(1.0 - hw_ref_freq, 2) * total_gts
+        ELSE NULL
+    END
+WHERE v.reference_name = '17'
+  AND v.`start` BETWEEN 41196311 AND 41277499
+ORDER BY v.`start`, v.`end`;

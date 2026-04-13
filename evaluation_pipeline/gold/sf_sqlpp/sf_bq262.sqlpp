@@ -1,0 +1,56 @@
+WITH monthly_sales AS (
+    SELECT
+        SUBSTR(MILLIS_TO_STR(FLOOR(oi.created_at / 1000)), 0, 7) AS sales_month,
+        ii.product_category AS product_category,
+        COUNT(DISTINCT oi.order_id) AS total_orders,
+        SUM(oi.sale_price) AS total_revenue,
+        SUM(oi.sale_price - ii.cost) AS total_profit
+    FROM `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`inventory_items` AS ii
+        ON oi.inventory_item_id = ii.id
+    WHERE oi.created_at >= 1559347200000000
+      AND oi.created_at < 1580515200000000
+      AND SUBSTR(MILLIS_TO_STR(FLOOR(oi.created_at / 1000)), 0, 7) >= '2019-06'
+      AND SUBSTR(MILLIS_TO_STR(FLOOR(oi.created_at / 1000)), 0, 7) <= '2019-12'
+    GROUP BY SUBSTR(MILLIS_TO_STR(FLOOR(oi.created_at / 1000)), 0, 7), ii.product_category
+),
+with_growth AS (
+    SELECT
+        ms.sales_month,
+        ms.product_category,
+        ms.total_orders,
+        ms.total_revenue,
+        ms.total_profit,
+        LAG(ms.total_orders) OVER (
+            PARTITION BY ms.product_category ORDER BY ms.sales_month
+        ) AS prev_orders,
+        LAG(ms.total_revenue) OVER (
+            PARTITION BY ms.product_category ORDER BY ms.sales_month
+        ) AS prev_revenue,
+        LAG(ms.total_profit) OVER (
+            PARTITION BY ms.product_category ORDER BY ms.sales_month
+        ) AS prev_profit
+    FROM monthly_sales AS ms
+)
+SELECT
+    wg.sales_month AS `month`,
+    wg.product_category AS category,
+    wg.total_orders,
+    ROUND(wg.total_revenue, 2) AS total_revenue,
+    ROUND(wg.total_profit, 4) AS total_profit,
+    CASE
+        WHEN wg.prev_orders IS NULL OR wg.prev_orders = 0 THEN NULL
+        ELSE ROUND((wg.total_orders - wg.prev_orders) * 100.0 / wg.prev_orders, 4)
+    END AS orders_mom_growth_pct,
+    CASE
+        WHEN wg.prev_revenue IS NULL OR wg.prev_revenue = 0 THEN NULL
+        ELSE ROUND((wg.total_revenue - wg.prev_revenue) * 100.0 / wg.prev_revenue, 4)
+    END AS revenue_mom_growth_pct,
+    CASE
+        WHEN wg.prev_profit IS NULL OR wg.prev_profit = 0 THEN NULL
+        ELSE ROUND((wg.total_profit - wg.prev_profit) * 100.0 / wg.prev_profit, 4)
+    END AS profit_mom_growth_pct
+FROM with_growth AS wg
+WHERE wg.sales_month >= '2019-07'
+  AND wg.sales_month <= '2019-12'
+ORDER BY wg.sales_month, wg.product_category;

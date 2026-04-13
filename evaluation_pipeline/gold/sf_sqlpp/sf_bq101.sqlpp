@@ -1,0 +1,69 @@
+WITH all_lines AS (
+    SELECT TRIM(REPLACE(line, '\r', '')) AS line
+    FROM `githubrepos`.`github_repos`.`sample_contents` AS sc
+    UNNEST SPLIT(sc.content, '\n') AS line
+    WHERE sc.sample_path LIKE '%.java'
+        AND TRIM(REPLACE(line, '\r', '')) LIKE 'import %'
+        AND CONTAINS(TRIM(REPLACE(line, '\r', '')), ';')
+        AND CONTAINS(TRIM(REPLACE(line, '\r', '')), '.')
+),
+full_imports AS (
+    SELECT
+        line,
+        TRIM(TRIM(
+            CASE
+                WHEN line LIKE 'import static %'
+                    THEN SUBSTR(line, 14, LENGTH(line) - 14)
+                ELSE SUBSTR(line, 7, LENGTH(line) - 7)
+            END
+        , ';'), ' ') AS full_import
+    FROM all_lines
+),
+clean_imports AS (
+    SELECT
+        line,
+        CASE
+            WHEN full_import LIKE '%.*'
+                THEN SUBSTR(full_import, 0, LENGTH(full_import) - 2)
+            ELSE full_import
+        END AS full_import
+    FROM full_imports
+    WHERE CONTAINS(full_import, '.')
+),
+stripped_once AS (
+    SELECT
+        line,
+        full_import,
+        CASE
+            WHEN line LIKE 'import static %'
+                THEN SUBSTR(full_import, 0, LENGTH(full_import) - POSITION(REVERSE(full_import), '.') - 1)
+            WHEN POSITION(REVERSE(full_import), '.') > 0
+                AND UPPER(SUBSTR(full_import, LENGTH(full_import) - POSITION(REVERSE(full_import), '.'), 1))
+                    = SUBSTR(full_import, LENGTH(full_import) - POSITION(REVERSE(full_import), '.'), 1)
+                AND LOWER(SUBSTR(full_import, LENGTH(full_import) - POSITION(REVERSE(full_import), '.'), 1))
+                    != SUBSTR(full_import, LENGTH(full_import) - POSITION(REVERSE(full_import), '.'), 1)
+                THEN SUBSTR(full_import, 0, LENGTH(full_import) - POSITION(REVERSE(full_import), '.') - 1)
+            ELSE full_import
+        END AS once_stripped
+    FROM clean_imports
+),
+packages AS (
+    SELECT
+        CASE
+            WHEN line LIKE 'import static %' AND CONTAINS(once_stripped, '.')
+                AND POSITION(REVERSE(once_stripped), '.') > 0
+                AND UPPER(SUBSTR(once_stripped, LENGTH(once_stripped) - POSITION(REVERSE(once_stripped), '.'), 1))
+                    = SUBSTR(once_stripped, LENGTH(once_stripped) - POSITION(REVERSE(once_stripped), '.'), 1)
+                AND LOWER(SUBSTR(once_stripped, LENGTH(once_stripped) - POSITION(REVERSE(once_stripped), '.'), 1))
+                    != SUBSTR(once_stripped, LENGTH(once_stripped) - POSITION(REVERSE(once_stripped), '.'), 1)
+                THEN SUBSTR(once_stripped, 0, LENGTH(once_stripped) - POSITION(REVERSE(once_stripped), '.') - 1)
+            ELSE once_stripped
+        END AS package
+    FROM stripped_once
+)
+SELECT package, COUNT(*) AS occurrences
+FROM packages
+WHERE package IS NOT NULL AND package != ''
+GROUP BY package
+ORDER BY occurrences DESC
+LIMIT 10;

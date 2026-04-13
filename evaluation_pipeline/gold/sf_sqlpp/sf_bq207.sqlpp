@@ -1,0 +1,11 @@
+SELECT
+    m.publication_number,
+    m.pat_no,
+    cs.claim_no,
+    TONUMBER(cs.word_ct) AS word_ct
+FROM `patentsuspto`.`uspto_oce_claims`.`patent_claims_stats` AS cs
+JOIN `patentsuspto`.`uspto_oce_claims`.`match` AS m USE HASH(BUILD)
+    ON cs.pat_no = m.pat_no
+WHERE cs.ind_flg = '1'
+ORDER BY TONUMBER(cs.word_ct) DESC
+LIMIT 100;

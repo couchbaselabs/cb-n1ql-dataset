@@ -1,0 +1,25 @@
+WITH denso_pubs AS (
+    SELECT DISTINCT p.publication_number AS pub_num
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.assignee_harmonized AS a
+    WHERE a.name = 'DENSO CORP'
+),
+citing_data AS (
+    SELECT
+        REPLACE(a.name, '"', '') AS citing_assignee,
+        SUBSTR((ARRAY c.code FOR c IN p.cpc WHEN c.`first` = true END)[0], 0, 4) AS cpc_sub
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.citation AS cite
+    UNNEST p.assignee_harmonized AS a
+    JOIN denso_pubs AS dp ON cite.publication_number = dp.pub_num
+    WHERE REPLACE(a.name, '"', '') != 'DENSO CORP'
+      AND ANY c IN p.cpc SATISFIES c.`first` = true END
+)
+SELECT
+    cd_data.citing_assignee,
+    cd.titleFull AS cpc_subclass_title,
+    COUNT(*) AS citation_count
+FROM citing_data AS cd_data
+JOIN `patents`.`patents`.`cpc_definition` AS cd ON cd.symbol = cd_data.cpc_sub
+GROUP BY cd_data.citing_assignee, cd.titleFull
+ORDER BY cd_data.citing_assignee, cd.titleFull;

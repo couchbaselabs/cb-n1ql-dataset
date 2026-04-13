@@ -1,0 +1,73 @@
+WITH eas_samples AS (
+    SELECT ARRAY_AGG(si.Sample) AS eas_list
+    FROM `1000genomes`.`t__1000_genomes`.`sample_info` AS si
+    WHERE si.Super_Population = 'EAS'
+),
+known_samples AS (
+    SELECT ARRAY_AGG(si.Sample) AS known_list
+    FROM `1000genomes`.`t__1000_genomes`.`sample_info` AS si
+),
+variant_counts AS (
+    SELECT
+        v.`start`,
+        v.`end`,
+        ARRAY_SUM(ARRAY s.allele_total FOR s IN allele_stats END) AS allele_count,
+        ARRAY_SUM(ARRAY s.ref_count FOR s IN allele_stats END) AS ref_count,
+        ARRAY_SUM(ARRAY s.alt_count FOR s IN allele_stats END) AS alt_count,
+        ARRAY_SUM(ARRAY CASE WHEN s.is_case THEN s.allele_total ELSE 0 END FOR s IN allele_stats END) AS case_count,
+        ARRAY_SUM(ARRAY CASE WHEN NOT s.is_case THEN s.allele_total ELSE 0 END FOR s IN allele_stats END) AS control_count,
+        ARRAY_SUM(ARRAY CASE WHEN s.is_case THEN s.ref_count ELSE 0 END FOR s IN allele_stats END) AS case_ref_count,
+        ARRAY_SUM(ARRAY CASE WHEN s.is_case THEN s.alt_count ELSE 0 END FOR s IN allele_stats END) AS case_alt_count,
+        ARRAY_SUM(ARRAY CASE WHEN NOT s.is_case THEN s.ref_count ELSE 0 END FOR s IN allele_stats END) AS control_ref_count,
+        ARRAY_SUM(ARRAY CASE WHEN NOT s.is_case THEN s.alt_count ELSE 0 END FOR s IN allele_stats END) AS control_alt_count
+    FROM `1000genomes`.`t__1000_genomes`.`variants` AS v,
+         eas_samples AS es,
+         known_samples AS ks
+    LET
+        allele_stats = ARRAY {
+            "is_case": ARRAY_CONTAINS(es.eas_list, c.call_set_name),
+            "ref_count":
+                CASE WHEN c.genotype[0] = 0 THEN 1 ELSE 0 END
+                + CASE WHEN c.genotype[1] = 0 THEN 1 ELSE 0 END,
+            "alt_count":
+                CASE WHEN c.genotype[0] = 1 THEN 1 ELSE 0 END
+                + CASE WHEN c.genotype[1] = 1 THEN 1 ELSE 0 END,
+            "allele_total":
+                CASE WHEN c.genotype[0] = 0 OR c.genotype[0] = 1 THEN 1 ELSE 0 END
+                + CASE WHEN c.genotype[1] = 0 OR c.genotype[1] = 1 THEN 1 ELSE 0 END
+        }
+        FOR c IN v.`call`
+        WHEN ARRAY_CONTAINS(ks.known_list, c.call_set_name)
+             AND (
+                 c.genotype[0] = 0 OR c.genotype[0] = 1
+                 OR c.genotype[1] = 0 OR c.genotype[1] = 1
+             )
+        END
+    WHERE v.reference_name = '12'
+),
+chi_calc AS (
+    SELECT
+        vc.`start`,
+        vc.`end`,
+        POWER(ABS(vc.case_ref_count - expected_case_ref) - 0.5, 2) / expected_case_ref
+        + POWER(ABS(vc.control_ref_count - expected_control_ref) - 0.5, 2) / expected_control_ref
+        + POWER(ABS(vc.case_alt_count - expected_case_alt) - 0.5, 2) / expected_case_alt
+        + POWER(ABS(vc.control_alt_count - expected_control_alt) - 0.5, 2) / expected_control_alt
+            AS CHI2
+    FROM variant_counts AS vc
+    LET ref_freq = 1.0 * vc.ref_count / vc.allele_count,
+        alt_freq = 1.0 * vc.alt_count / vc.allele_count,
+        expected_case_ref = ref_freq * vc.case_count,
+        expected_control_ref = ref_freq * vc.control_count,
+        expected_case_alt = alt_freq * vc.case_count,
+        expected_control_alt = alt_freq * vc.control_count
+    WHERE vc.allele_count > 0
+      AND expected_case_ref >= 5.0
+      AND expected_control_ref >= 5.0
+      AND expected_case_alt >= 5.0
+      AND expected_control_alt >= 5.0
+)
+SELECT `start`, `end`, CHI2
+FROM chi_calc
+WHERE CHI2 >= 29.71679
+ORDER BY CHI2 DESC;

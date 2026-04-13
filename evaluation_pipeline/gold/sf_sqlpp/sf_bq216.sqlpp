@@ -1,0 +1,22 @@
+SELECT p.publication_number
+FROM (
+    SELECT ae.embedding_v1 AS target_embedding,
+           SUBSTR(TOSTRING(tp.filing_date), 0, 4) AS filing_year
+    FROM `patentsgoogle`.`patents_google`.`abs_and_emb` AS ae
+    JOIN `patentsgoogle`.`patents_google`.`publications` AS tp
+        ON tp.publication_number = ae.publication_number
+    WHERE ae.publication_number = 'US-9741766-B2'
+    LIMIT 1
+) AS t
+JOIN `patentsgoogle`.`patents_google`.`publications` AS p
+    ON SUBSTR(TOSTRING(p.filing_date), 0, 4) = t.filing_year
+JOIN `patentsgoogle`.`patents_google`.`abs_and_emb` AS ae
+    ON ae.publication_number = p.publication_number
+LET similarity = ARRAY_SUM(
+    ARRAY t.target_embedding[i] * ae.embedding_v1[i]
+    FOR i IN ARRAY_RANGE(0, ARRAY_LENGTH(t.target_embedding)) END
+)
+WHERE p.publication_number != 'US-9741766-B2'
+  AND ae.embedding_v1 IS NOT MISSING
+ORDER BY similarity DESC
+LIMIT 5;

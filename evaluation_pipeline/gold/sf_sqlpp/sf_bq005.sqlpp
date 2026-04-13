@@ -1,0 +1,18 @@
+WITH ordered_blocks AS (
+    SELECT
+        b.`timestamp` AS ts,
+        b.`number` AS block_num,
+        LAG(b.`timestamp`) OVER (ORDER BY b.`number` ASC) AS prev_ts
+    FROM `crypto`.`crypto_bitcoin`.`blocks` AS b
+    WHERE b.`timestamp` >= 1672444800000000
+      AND b.`timestamp` < 1704067200000000
+)
+SELECT
+    SUBSTR(MILLIS_TO_STR(FLOOR(ob.ts / 1000000) * 1000), 0, 10) AS block_date,
+    AVG((ob.ts - ob.prev_ts) / 1000000.0) AS avg_block_interval_seconds
+FROM ordered_blocks AS ob
+WHERE ob.prev_ts IS NOT NULL
+  AND ob.ts >= 1672531200000000
+GROUP BY SUBSTR(MILLIS_TO_STR(FLOOR(ob.ts / 1000000) * 1000), 0, 10)
+ORDER BY block_date
+LIMIT 10

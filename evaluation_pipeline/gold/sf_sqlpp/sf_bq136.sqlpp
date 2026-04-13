@@ -1,0 +1,56 @@
+WITH confirmed_edges AS (
+    SELECT
+        t.sender AS src,
+        t.to_addr AS dst,
+        t.id AS txid,
+        t.block_timestamp AS ts
+    FROM `crypto`.`crypto_zilliqa`.`transactions` AS t
+    WHERE t.success = TRUE
+      AND IFMISSINGORNULL(t.accepted, TRUE) = TRUE
+      AND t.sender IS VALUED
+      AND t.to_addr IS VALUED
+
+    UNION
+
+    SELECT
+        tr.addr AS src,
+        tr.recipient AS dst,
+        tr.transaction_id AS txid,
+        tr.block_timestamp AS ts
+    FROM `crypto`.`crypto_zilliqa`.`transitions` AS tr
+    WHERE IFMISSINGORNULL(tr.accepted, TRUE) = TRUE
+      AND tr.addr IS VALUED
+      AND tr.recipient IS VALUED
+),
+outgoing_counts AS (
+    SELECT
+        e.src,
+        COUNT(DISTINCT e.txid) AS outgoing_tx_count
+    FROM confirmed_edges AS e
+    GROUP BY e.src
+)
+SELECT DISTINCT
+    CONCAT(
+        'zil1jrpjd8pjuv50cfkfr7eu6yrm3rn5u8rulqhqpz',
+        ' --(tx ',
+        SUBSTR(e1.txid, 0, 5),
+        '..) --> ',
+        e1.dst,
+        ' --(tx ',
+        SUBSTR(e2.txid, 0, 5),
+        '..) --> ',
+        'zil19nmxkh020jnequql9kvqkf3pkwm0j0spqtd26e'
+    ) AS `path`
+FROM confirmed_edges AS e1
+JOIN confirmed_edges AS e2
+    ON e1.dst = e2.src
+JOIN outgoing_counts AS oc
+    ON oc.src = e1.dst
+WHERE e1.src = 'zil1jrpjd8pjuv50cfkfr7eu6yrm3rn5u8rulqhqpz'
+  AND e2.dst = 'zil19nmxkh020jnequql9kvqkf3pkwm0j0spqtd26e'
+  AND e1.dst != 'zil1jrpjd8pjuv50cfkfr7eu6yrm3rn5u8rulqhqpz'
+  AND e1.dst != 'zil19nmxkh020jnequql9kvqkf3pkwm0j0spqtd26e'
+  AND oc.outgoing_tx_count <= 50
+  AND e1.txid != e2.txid
+  AND e1.ts <= e2.ts
+ORDER BY `path`;

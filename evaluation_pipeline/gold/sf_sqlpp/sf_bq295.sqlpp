@@ -1,0 +1,19 @@
+WITH target_repos AS (
+    SELECT DISTINCT LOWER(f.repo_name) AS repo_id,
+           f.repo_name AS original_name
+    FROM `githubreposdate`.`github_repos`.`sample_files` AS f
+    JOIN `githubreposdate`.`github_repos`.`sample_contents` AS c ON f.id = c.id
+    WHERE LOWER(f.`path`) LIKE '%.py' 
+      AND c.size < 15000 
+      AND CONTAINS(c.content, 'def ')
+)
+SELECT
+    REPLACE(tr.original_name, '"', '') AS repo,
+    COUNT(1) AS watch_count
+FROM target_repos AS tr
+JOIN `githubreposdate`.`year`.`t__2017` AS e 
+  ON LOWER(e.repo.name) = tr.repo_id
+WHERE e.type = 'WatchEvent'
+GROUP BY tr.original_name
+ORDER BY watch_count DESC
+LIMIT 3;

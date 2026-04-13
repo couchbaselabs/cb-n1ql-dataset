@@ -1,0 +1,25 @@
+WITH file_depths AS (
+    SELECT
+        sf.`path`,
+        LENGTH(sf.`path`) - LENGTH(REPLACE(sf.`path`, '/', '')) AS depth,
+        CASE
+            WHEN LOWER(sf.`path`) LIKE '%.py'    THEN 'Python'
+            WHEN LOWER(sf.`path`) LIKE '%.c'     THEN 'C'
+            WHEN LOWER(sf.`path`) LIKE '%.ipynb' THEN 'Jupyter Notebook'
+            WHEN LOWER(sf.`path`) LIKE '%.java'  THEN 'Java'
+            WHEN LOWER(sf.`path`) LIKE '%.js'    THEN 'JavaScript'
+            ELSE NULL
+        END AS file_type
+    FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+    WHERE LOWER(sf.`path`) LIKE '%.py'
+        OR LOWER(sf.`path`) LIKE '%.c'
+        OR LOWER(sf.`path`) LIKE '%.ipynb'
+        OR LOWER(sf.`path`) LIKE '%.java'
+        OR LOWER(sf.`path`) LIKE '%.js'
+)
+SELECT file_type, COUNT(*) AS file_count
+FROM file_depths
+WHERE depth > 10 AND file_type IS NOT NULL
+GROUP BY file_type
+ORDER BY file_count DESC
+LIMIT 1;

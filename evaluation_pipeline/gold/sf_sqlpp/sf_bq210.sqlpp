@@ -1,0 +1,12 @@
+SELECT COUNT(*) AS count_us_b2_no_claim_word
+FROM `patents`.`patents`.`publications` AS p
+WHERE p.country_code = 'US'
+  AND p.kind_code = 'B2'
+  AND p.grant_date >= 20080101
+  AND p.grant_date <= 20181231
+  AND p.grant_date != 0
+  AND ARRAY_LENGTH(p.claims_localized) > 0
+  AND (EVERY cl IN p.claims_localized SATISFIES
+        LOWER(IFNULL(cl.text, '')) NOT LIKE '%claim%'
+       END)
+;

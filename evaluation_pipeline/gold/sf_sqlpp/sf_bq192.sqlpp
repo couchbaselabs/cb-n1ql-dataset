@@ -1,0 +1,38 @@
+WITH py_repos AS (
+    SELECT DISTINCT sf.repo_name
+    FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+    WHERE sf.`ref` = 'refs/heads/master'
+        AND sf.`path` LIKE '%.py'
+),
+watch_counts AS (
+    SELECT e.repo.name AS repo_name, COUNT(DISTINCT e.actor.login) AS watch_count
+    FROM `githubreposdate`.`month`.`t__202204` AS e
+    WHERE e.`type` = 'WatchEvent'
+    GROUP BY e.repo.name
+),
+issue_counts AS (
+    SELECT e.repo.name AS repo_name, COUNT(DISTINCT e.payload.issue.id) AS issue_count
+    FROM `githubreposdate`.`month`.`t__202204` AS e
+    WHERE e.`type` = 'IssuesEvent'
+    GROUP BY e.repo.name
+),
+fork_counts AS (
+    SELECT e.repo.name AS repo_name, COUNT(DISTINCT e.id) AS fork_count
+    FROM `githubreposdate`.`month`.`t__202204` AS e
+    WHERE e.`type` = 'ForkEvent'
+    GROUP BY e.repo.name
+)
+SELECT l.repo_name,
+       COALESCE(w.watch_count, 0) + COALESCE(i.issue_count, 0) + COALESCE(f.fork_count, 0) AS cnt
+FROM `githubrepos`.`github_repos`.`licenses` AS l
+JOIN py_repos AS p
+    ON l.repo_name = p.repo_name
+LEFT JOIN watch_counts AS w
+    ON l.repo_name = w.repo_name
+LEFT JOIN issue_counts AS i
+    ON l.repo_name = i.repo_name
+LEFT JOIN fork_counts AS f
+    ON l.repo_name = f.repo_name
+WHERE l.license IN ['artistic-2.0', 'isc', 'mit', 'apache-2.0']
+ORDER BY cnt DESC, l.repo_name
+LIMIT 1;

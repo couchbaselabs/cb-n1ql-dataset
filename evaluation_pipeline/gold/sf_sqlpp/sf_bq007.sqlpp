@@ -1,0 +1,63 @@
+WITH vulnerable_by_state AS (
+    SELECT
+        sf.postal_code AS state_code,
+        sf.state AS state_name,
+        SUM(
+            COALESCE(t17.employed_wholesale_trade, 0) * 0.38423645320197042 +
+            COALESCE(t17.occupation_natural_resources_construction_maintenance, 0) * 0.48071410777129553 +
+            COALESCE(t17.employed_arts_entertainment_recreation_accommodation_food, 0) * 0.89455676291236841 +
+            COALESCE(t17.employed_information, 0) * 0.31315240083507306 +
+            COALESCE(t17.employed_retail_trade, 0) * 0.51 +
+            COALESCE(t17.employed_public_administration, 0) * 0.039299298394228743 +
+            COALESCE(t17.occupation_services, 0) * 0.36555534476489654 +
+            COALESCE(t17.employed_education_health_social, 0) * 0.20323178400562944 +
+            COALESCE(t17.employed_transportation_warehousing_utilities, 0) * 0.3680506593618087 +
+            COALESCE(t17.employed_manufacturing, 0) * 0.40618955512572535
+        ) AS vulnerable_population
+    FROM `censusbureauacs2`.`census_bureau_acs`.`censustract_2017_5yr` AS t17
+    JOIN `censusbureauacs2`.`cyclistic`.`state_fips` AS sf
+        ON TONUMBER(SUBSTR(t17.geo_id, 0, 2)) = sf.fips
+    GROUP BY sf.postal_code, sf.state
+),
+top10 AS (
+    SELECT v.state_code, v.state_name, v.vulnerable_population
+    FROM vulnerable_by_state v
+    ORDER BY v.vulnerable_population DESC
+    LIMIT 10
+),
+income_2015 AS (
+    SELECT
+        zb.state_fips_code,
+        zb.zip_code,
+        z15.median_income AS mi_2015
+    FROM `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2015_5yr` AS z15
+    JOIN `censusbureauacs2`.`geo_us_boundaries`.`zip_codes` AS zb
+        ON zb.zip_code = z15.geo_id
+    WHERE z15.median_income IS NOT NULL
+),
+income_2018 AS (
+    SELECT
+        z18.geo_id AS zip_code,
+        z18.median_income AS mi_2018
+    FROM `censusbureauacs2`.`census_bureau_acs`.`zip_codes_2018_5yr` AS z18
+    WHERE z18.median_income IS NOT NULL
+),
+income_change AS (
+    SELECT
+        sf.postal_code AS state_code,
+        AVG(i18.mi_2018 - i15.mi_2015) AS avg_median_income_change
+    FROM income_2015 AS i15
+    JOIN income_2018 AS i18
+        ON i15.zip_code = i18.zip_code
+    JOIN `censusbureauacs2`.`cyclistic`.`state_fips` AS sf
+        ON TONUMBER(i15.state_fips_code) = sf.fips
+    GROUP BY sf.postal_code
+)
+SELECT
+    t.state_name AS state,
+    t.vulnerable_population,
+    ic.avg_median_income_change
+FROM top10 AS t
+LEFT JOIN income_change AS ic
+    ON t.state_code = ic.state_code
+ORDER BY t.vulnerable_population DESC, t.state_name;

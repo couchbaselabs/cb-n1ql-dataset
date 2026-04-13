@@ -1,0 +1,49 @@
+WITH monthly_metrics AS (
+    SELECT
+        p.category AS product_category,
+        SUBSTR(MILLIS_TO_STR(FLOOR(o.created_at / 1000)), 0, 7) AS year_month,
+        COUNT(DISTINCT o.order_id) AS unique_orders,
+        SUM(oi.sale_price) AS total_revenue
+    FROM `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+        ON oi.order_id = o.order_id
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+        ON oi.product_id = p.id
+    WHERE o.status = 'Complete'
+    GROUP BY p.category, SUBSTR(MILLIS_TO_STR(FLOOR(o.created_at / 1000)), 0, 7)
+),
+with_lag AS (
+    SELECT
+        mm.product_category,
+        mm.year_month,
+        mm.unique_orders,
+        mm.total_revenue,
+        LAG(mm.unique_orders) OVER (
+            PARTITION BY mm.product_category
+            ORDER BY mm.year_month
+        ) AS prev_orders,
+        LAG(mm.total_revenue) OVER (
+            PARTITION BY mm.product_category
+            ORDER BY mm.year_month
+        ) AS prev_revenue
+    FROM monthly_metrics AS mm
+),
+top_category AS (
+    SELECT
+        wl.product_category,
+        AVG(100.0 * (wl.unique_orders - wl.prev_orders) / wl.prev_orders) AS avg_order_growth
+    FROM with_lag AS wl
+    WHERE wl.prev_orders > 0
+    GROUP BY wl.product_category
+    ORDER BY avg_order_growth DESC
+    LIMIT 1
+)
+SELECT
+    tc.product_category,
+    tc.avg_order_growth AS avg_monthly_order_growth_rate,
+    AVG(100.0 * (wl.total_revenue - wl.prev_revenue) / wl.prev_revenue) AS avg_monthly_revenue_growth_rate
+FROM top_category AS tc
+JOIN with_lag AS wl
+    ON wl.product_category = tc.product_category
+WHERE wl.prev_revenue > 0
+GROUP BY tc.product_category, tc.avg_order_growth;

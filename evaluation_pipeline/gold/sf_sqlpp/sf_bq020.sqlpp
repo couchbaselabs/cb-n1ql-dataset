@@ -1,0 +1,11 @@
+SELECT r.`name` AS reference_name
+FROM `genomicscannabis`.`genomics_cannabis`.`mnpr01_reference_201703` AS r
+JOIN (
+    SELECT m.reference_name, COUNT(*) AS variant_count
+    FROM `genomicscannabis`.`genomics_cannabis`.`mnpr01_201703` AS m
+    GROUP BY m.reference_name
+) AS v
+    ON r.`name` = v.reference_name
+WHERE r.`length` > 0
+ORDER BY (1.0 * v.variant_count / r.`length`) DESC
+LIMIT 1;

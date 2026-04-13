@@ -1,0 +1,39 @@
+WITH a61_apps AS (
+    SELECT DISTINCT
+        a.name AS assignee_name,
+        p.application_number,
+        FLOOR(p.filing_date / 10000) AS yr,
+        p.country_code
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.assignee_harmonized AS a
+    WHERE ANY c IN p.cpc SATISFIES c.code LIKE 'A61%' END
+      AND p.filing_date > 0
+      AND a.name IS NOT NULL
+      AND a.name != ''
+),
+top_assignee AS (
+    SELECT assignee_name, COUNT(DISTINCT application_number) AS total_apps
+    FROM a61_apps
+    GROUP BY assignee_name
+    ORDER BY total_apps DESC
+    LIMIT 1
+),
+busiest_year AS (
+    SELECT aa.yr, COUNT(DISTINCT aa.application_number) AS yr_cnt
+    FROM a61_apps AS aa, top_assignee AS ta
+    WHERE aa.assignee_name = ta.assignee_name
+    GROUP BY aa.yr
+    ORDER BY yr_cnt DESC
+    LIMIT 1
+),
+top5 AS (
+    SELECT aa.country_code, COUNT(DISTINCT aa.application_number) AS cnt
+    FROM a61_apps AS aa, top_assignee AS ta, busiest_year AS byr
+    WHERE aa.assignee_name = ta.assignee_name
+      AND aa.yr = byr.yr
+    GROUP BY aa.country_code
+    ORDER BY cnt DESC, aa.country_code ASC
+    LIMIT 5
+)
+SELECT CONCAT(codes[0], ',', codes[1], ',', codes[2], ',', codes[3], ',', codes[4]) AS top_jurisdictions
+LET codes = (SELECT RAW t.country_code FROM top5 AS t ORDER BY t.cnt DESC, t.country_code ASC);

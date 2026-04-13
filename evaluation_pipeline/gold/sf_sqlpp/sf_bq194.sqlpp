@@ -1,0 +1,36 @@
+WITH all_lines AS (
+    SELECT TRIM(REPLACE(line, '\r', '')) AS line
+    FROM `githubrepos`.`github_repos`.`sample_contents` AS sc
+    UNNEST SPLIT(sc.content, '\n') AS line
+    WHERE TYPE(sc.content) = 'string'
+        AND (LOWER(sc.sample_path) LIKE '%.py'
+            OR LOWER(sc.sample_path) LIKE '%.r'
+            OR LOWER(sc.sample_path) LIKE '%.rmd'
+            OR LOWER(sc.sample_path) LIKE '%.ipynb')
+        AND (TRIM(REPLACE(line, '\r', '')) LIKE 'import %'
+            OR TRIM(REPLACE(line, '\r', '')) LIKE 'library(%')
+),
+extracted AS (
+    SELECT
+        SPLIT(TRIM(SPLIT(TRIM(part), '.')[0]), ' ')[0] AS module
+    FROM all_lines AS al
+    UNNEST SPLIT(SUBSTR(al.line, 7), ',') AS part
+    WHERE al.line LIKE 'import %'
+
+    UNION ALL
+
+    SELECT
+        REGEXP_REPLACE(
+            SUBSTR(al.line, 8, POSITION(SUBSTR(al.line, 8), ')')),
+            '[^a-zA-Z0-9_.]', '') AS module
+    FROM all_lines AS al
+    WHERE al.line LIKE 'library(%'
+        AND POSITION(SUBSTR(al.line, 8), ')') > 0
+)
+SELECT module, COUNT(*) AS frequency
+FROM extracted
+WHERE module IS NOT NULL
+    AND TRIM(module) != ''
+GROUP BY module
+ORDER BY frequency DESC
+LIMIT 1 OFFSET 1;

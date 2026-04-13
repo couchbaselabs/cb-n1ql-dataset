@@ -1,0 +1,35 @@
+SELECT
+    r.`month`,
+    r.product_name,
+    r.profit
+FROM (
+    SELECT
+        m.`month`,
+        m.product_name,
+        m.profit,
+        ROW_NUMBER() OVER (
+            PARTITION BY m.`month`
+            ORDER BY m.profit DESC, m.product_name ASC
+        ) AS rn
+    FROM (
+        SELECT
+            SUBSTR(MILLIS_TO_STR(DATE_TRUNC_MILLIS(FLOOR(oi.created_at / 1000), 'month')), 0, 7) AS `month`,
+            oi.product_id,
+            MAX(p.name) AS product_name,
+            SUM(oi.sale_price) - SUM(p.cost) AS profit
+        FROM `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+        JOIN `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+            ON oi.order_id = o.order_id
+        JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+            ON oi.product_id = p.id
+        WHERE FLOOR(oi.created_at / 1000) >= STR_TO_MILLIS('2019-01-01T00:00:00Z')
+          AND FLOOR(oi.created_at / 1000) < STR_TO_MILLIS('2022-09-01T00:00:00Z')
+          AND o.status NOT IN ['Cancelled', 'Returned']
+          AND oi.status NOT IN ['Cancelled', 'Returned']
+        GROUP BY
+            SUBSTR(MILLIS_TO_STR(DATE_TRUNC_MILLIS(FLOOR(oi.created_at / 1000), 'month')), 0, 7),
+            oi.product_id
+    ) AS m
+) AS r
+WHERE r.rn <= 3
+ORDER BY r.`month` ASC, r.rn ASC;

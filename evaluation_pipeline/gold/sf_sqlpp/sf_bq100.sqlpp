@@ -1,0 +1,33 @@
+WITH import_blocks AS (
+    SELECT SPLIT(
+        SUBSTR(
+            c.content,
+            POSITION(c.content, 'import (') + 8,
+            POSITION(SUBSTR(c.content, POSITION(c.content, 'import (') + 8), ')')
+        ),
+        '\n'
+    ) AS lines
+    FROM `githubrepos`.`github_repos`.`sample_contents` AS c
+    WHERE c.content IS NOT NULL
+      AND CONTAINS(c.content, 'import (')
+),
+flattened_lines AS (
+    SELECT TRIM(line) AS line
+    FROM import_blocks AS ib
+    UNNEST ib.lines AS line
+),
+packages AS (
+    SELECT SUBSTR(
+        fl.line,
+        POSITION(fl.line, '"') + 1,
+        POSITION(SUBSTR(fl.line, POSITION(fl.line, '"') + 1), '"')
+    ) AS package
+    FROM flattened_lines AS fl
+    WHERE CONTAINS(fl.line, '"')
+)
+SELECT package, COUNT(*) AS frequency
+FROM packages
+WHERE package IS NOT NULL AND package != ''
+GROUP BY package
+ORDER BY frequency DESC
+LIMIT 10;

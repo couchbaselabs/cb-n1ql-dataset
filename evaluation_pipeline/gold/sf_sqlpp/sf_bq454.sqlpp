@@ -1,0 +1,56 @@
+WITH pop_sizes AS (
+    SELECT
+        si.Super_Population,
+        COUNT(DISTINCT si.Sample) AS total_pop_size
+    FROM `1000genomes`.`t__1000_genomes`.`sample_info` AS si
+    WHERE si.Super_Population IS NOT MISSING
+      AND si.Super_Population != ''
+    GROUP BY si.Super_Population
+),
+all_pop_samples AS (
+    SELECT
+        ARRAY_AGG(CASE WHEN si.Super_Population = 'AFR' THEN si.Sample END) AS afr,
+        ARRAY_AGG(CASE WHEN si.Super_Population = 'AMR' THEN si.Sample END) AS amr,
+        ARRAY_AGG(CASE WHEN si.Super_Population = 'EAS' THEN si.Sample END) AS eas,
+        ARRAY_AGG(CASE WHEN si.Super_Population = 'EUR' THEN si.Sample END) AS eur,
+        ARRAY_AGG(CASE WHEN si.Super_Population = 'SAS' THEN si.Sample END) AS sas
+    FROM `1000genomes`.`t__1000_genomes`.`sample_info` AS si
+    WHERE si.Super_Population IS NOT MISSING
+      AND si.Super_Population != ''
+),
+variant_counts AS (
+    SELECT
+        ARRAY_LENGTH(ARRAY_INTERSECT(alt_callers, aps.afr)) AS afr,
+        ARRAY_LENGTH(ARRAY_INTERSECT(alt_callers, aps.amr)) AS amr,
+        ARRAY_LENGTH(ARRAY_INTERSECT(alt_callers, aps.eas)) AS eas,
+        ARRAY_LENGTH(ARRAY_INTERSECT(alt_callers, aps.eur)) AS eur,
+        ARRAY_LENGTH(ARRAY_INTERSECT(alt_callers, aps.sas)) AS sas
+    FROM `1000genomes`.`t__1000_genomes`.`variants` AS v,
+         all_pop_samples AS aps
+    LET alt_callers = ARRAY c.call_set_name FOR c IN v.`call`
+                      WHEN ANY g IN c.genotype SATISFIES g > 0 END
+                      END
+    WHERE v.AF >= 0.05
+      AND v.reference_name NOT IN ['X', 'Y', 'MT']
+),
+unpivoted AS (
+    SELECT 'AFR' AS pop, vc.afr AS cnt FROM variant_counts AS vc WHERE vc.afr > 0
+    UNION ALL
+    SELECT 'AMR' AS pop, vc.amr AS cnt FROM variant_counts AS vc WHERE vc.amr > 0
+    UNION ALL
+    SELECT 'EAS' AS pop, vc.eas AS cnt FROM variant_counts AS vc WHERE vc.eas > 0
+    UNION ALL
+    SELECT 'EUR' AS pop, vc.eur AS cnt FROM variant_counts AS vc WHERE vc.eur > 0
+    UNION ALL
+    SELECT 'SAS' AS pop, vc.sas AS cnt FROM variant_counts AS vc WHERE vc.sas > 0
+)
+SELECT
+    u.pop AS Super_Population,
+    ps.total_pop_size,
+    'Yes' AS is_common,
+    u.cnt AS num_samples,
+    COUNT(*) AS variant_count
+FROM unpivoted AS u
+JOIN pop_sizes AS ps ON ps.Super_Population = u.pop
+GROUP BY u.pop, ps.total_pop_size, u.cnt
+ORDER BY u.pop, u.cnt

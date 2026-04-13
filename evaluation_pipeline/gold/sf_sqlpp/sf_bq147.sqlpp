@@ -1,0 +1,13 @@
+SELECT s.case_barcode
+FROM (
+    SELECT DISTINCT r.case_barcode, r.sample_type_name
+    FROM `tcga`.`tcga_versioned`.`rnaseq_hg38_gdc_r35` AS r
+    WHERE r.project_short_name = 'TCGA-BRCA'
+      AND r.gene_type = 'protein_coding'
+      AND r.case_barcode IS NOT NULL
+      AND r.sample_type_name IS NOT NULL
+) AS s
+GROUP BY s.case_barcode
+HAVING COUNT(DISTINCT s.sample_type_name) > 1
+   AND SUM(CASE WHEN s.sample_type_name = 'Solid Tissue Normal' THEN 1 ELSE 0 END) > 0
+ORDER BY s.case_barcode;

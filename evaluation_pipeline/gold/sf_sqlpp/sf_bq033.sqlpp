@@ -1,0 +1,21 @@
+WITH iot_monthly AS (
+    SELECT
+        FLOOR(p.filing_date / 10000) * 100 + FLOOR(p.filing_date / 100) % 100 AS yyyymm,
+        COUNT(*) AS cnt
+    FROM `patents`.`patents`.`publications` AS p
+    WHERE p.country_code = 'US'
+      AND p.filing_date != 0
+      AND FLOOR(p.filing_date / 10000) BETWEEN 2008 AND 2022
+      AND ANY ab IN p.abstract_localized SATISFIES LOWER(ab.text) LIKE '%internet of things%' END
+    GROUP BY FLOOR(p.filing_date / 10000) * 100 + FLOOR(p.filing_date / 100) % 100
+),
+date_series AS (
+    SELECT (2008 + FLOOR(m / 12)) * 100 + ((m % 12) + 1) AS yyyymm
+    FROM ARRAY_RANGE(0, 180) AS m
+)
+SELECT
+    ds.yyyymm AS PATENT_DATE_YEARMONTH,
+    COALESCE(mc.cnt, 0) AS NUMBER_OF_PATENT_APPLICATIONS
+FROM date_series AS ds
+LEFT JOIN iot_monthly AS mc ON ds.yyyymm = mc.yyyymm
+ORDER BY ds.yyyymm;

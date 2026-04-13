@@ -1,0 +1,26 @@
+WITH customer_total AS (
+    SELECT
+        i.CustomerID,
+        SUM(il.ExtendedPrice) AS total_spending
+    FROM `wideworldimporters`.`wide_world_importers`.`sales_invoices` AS i
+    JOIN `wideworldimporters`.`wide_world_importers`.`sales_invoicelines` AS il
+        ON il.InvoiceID = i.InvoiceID
+    WHERE SUBSTR(i.InvoiceDate, 0, 4) = '2014'
+    GROUP BY i.CustomerID
+),
+customer_avg AS (
+    SELECT
+        ct.CustomerID,
+        ct.total_spending / 12.0 AS avg_monthly_spending
+    FROM customer_total AS ct
+),
+ranked AS (
+    SELECT
+        ca.avg_monthly_spending,
+        ROW_NUMBER() OVER (ORDER BY ca.avg_monthly_spending) AS rn,
+        COUNT(*) OVER () AS cnt
+    FROM customer_avg AS ca
+)
+SELECT AVG(r.avg_monthly_spending) AS median_avg_monthly_spending
+FROM ranked AS r
+WHERE r.rn IN [FLOOR((r.cnt + 1) / 2), FLOOR((r.cnt + 2) / 2)];

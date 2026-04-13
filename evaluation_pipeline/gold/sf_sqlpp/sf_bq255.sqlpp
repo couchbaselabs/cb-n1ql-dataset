@@ -1,0 +1,9 @@
+SELECT COUNT(*) AS COMMIT_COUNT
+FROM `githubrepos`.`github_repos`.`sample_commits` AS c
+JOIN `githubrepos`.`github_repos`.`languages` AS l ON c.repo_name = l.repo_name
+JOIN `githubrepos`.`github_repos`.`licenses` AS lic ON c.repo_name = lic.repo_name
+WHERE ANY lang IN l.`language` SATISFIES lang.`name` = 'Shell' END
+  AND lic.license = 'apache-2.0'
+  AND LENGTH(c.message) > 5 
+  AND LENGTH(c.message) < 10000
+  AND NOT REGEXP_LIKE(LOWER(c.message), '^(merge|update|test)(\\s|$)');

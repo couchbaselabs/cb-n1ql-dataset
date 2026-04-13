@@ -1,0 +1,35 @@
+WITH month_list AS (
+    SELECT m AS `month`,
+        CASE m
+            WHEN 1  THEN 2678400
+            WHEN 2  THEN 2419200
+            WHEN 3  THEN 2678400
+            WHEN 4  THEN 2592000
+            WHEN 5  THEN 2678400
+            WHEN 6  THEN 2592000
+            WHEN 7  THEN 2678400
+            WHEN 8  THEN 2678400
+            WHEN 9  THEN 2592000
+            WHEN 10 THEN 2678400
+            WHEN 11 THEN 2592000
+            WHEN 12 THEN 2678400
+        END AS seconds
+    FROM (SELECT [1,2,3,4,5,6,7,8,9,10,11,12] AS months) AS arr
+    UNNEST arr.months AS m
+),
+tx_counts AS (
+    SELECT TONUMBER(SUBSTR(t.block_timestamp, 5, 2)) AS `month`,
+           COUNT(1) AS cnt
+    FROM `googblockchain`.`goog_blockchain_polygon_mainnet_us`.`transactions` AS t
+    WHERE t.block_timestamp >= '2023-01-01'
+      AND t.block_timestamp < '2024-01-01'
+    GROUP BY TONUMBER(SUBSTR(t.block_timestamp, 5, 2))
+)
+SELECT
+    2023 AS YEAR,
+    ml.`month` AS MONTH,
+    COALESCE(tc.cnt, 0) AS TOTAL_TXNS,
+    COALESCE(tc.cnt, 0) * 1.0 / ml.seconds AS TPS
+FROM month_list AS ml
+LEFT JOIN tx_counts AS tc ON tc.`month` = ml.`month`
+ORDER BY TOTAL_TXNS DESC, MONTH ASC;

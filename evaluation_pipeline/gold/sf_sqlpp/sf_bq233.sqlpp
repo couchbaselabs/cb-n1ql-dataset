@@ -1,0 +1,50 @@
+WITH py_lines AS (
+    SELECT SPLIT(sc.content, '\n') AS lines
+    FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+    JOIN `githubrepos`.`github_repos`.`sample_contents` AS sc ON sf.id = sc.id
+    WHERE LOWER(sf.`path`) LIKE '%.py'
+      AND sc.`binary` = false AND sc.content IS NOT NULL
+),
+r_lines AS (
+    SELECT SPLIT(sc.content, '\n') AS lines
+    FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+    JOIN `githubrepos`.`github_repos`.`sample_contents` AS sc ON sf.id = sc.id
+    WHERE LOWER(sf.`path`) LIKE '%.r'
+      AND sc.`binary` = false AND sc.content IS NOT NULL
+),
+py_modules AS (
+    SELECT
+        CASE
+            WHEN REGEXP_CONTAINS(TRIM(line), '^from\\s+(\\S+)\\s+import')
+                THEN REGEXP_REPLACE(
+                         REGEXP_REPLACE(TRIM(line), '^from\\s+', ''),
+                         '\\s+import.*$', '')
+            ELSE REGEXP_REPLACE(
+                         REGEXP_REPLACE(TRIM(line), '^import\\s+', ''),
+                         '[\\s,;(].*$', '')
+        END AS module_library,
+        'Python' AS `language`
+    FROM py_lines AS pl
+    UNNEST pl.lines AS line
+    WHERE REGEXP_CONTAINS(TRIM(line), '^import\\s+')
+       OR REGEXP_CONTAINS(TRIM(line), '^from\\s+\\S+\\s+import')
+),
+r_modules AS (
+    SELECT
+        REGEXP_REPLACE(
+            REGEXP_REPLACE(TRIM(line), '^library\\(', ''),
+            '\\).*$', '') AS module_library,
+        'R' AS `language`
+    FROM r_lines AS rl
+    UNNEST rl.lines AS line
+    WHERE REGEXP_CONTAINS(TRIM(line), '^library\\(')
+),
+all_modules AS (
+    SELECT module_library, `language` FROM py_modules WHERE module_library IS NOT NULL AND module_library <> ''
+    UNION ALL
+    SELECT module_library, `language` FROM r_modules WHERE module_library IS NOT NULL AND module_library <> ''
+)
+SELECT `language` AS `LANGUAGE`, module_library AS MODULE_LIBRARY, COUNT(*) AS OCCURRENCE_COUNT
+FROM all_modules
+GROUP BY `language`, module_library
+ORDER BY `language` ASC, OCCURRENCE_COUNT DESC;

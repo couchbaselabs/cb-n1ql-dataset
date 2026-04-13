@@ -1,0 +1,29 @@
+WITH scored_messages AS (
+    SELECT
+        fm.PostUserId AS user_id,
+        vs.message_score,
+        SUM(vs.message_score) OVER () AS global_vote_sum
+    FROM (
+        SELECT v.ForumMessageId AS message_id,
+               COUNT(DISTINCT v.FromUserId) AS message_score
+        FROM `metakaggle`.`meta_kaggle`.`forumtopics` AS ft
+        JOIN `metakaggle`.`meta_kaggle`.`forummessagevotes` AS v
+            ON v.ForumMessageId = ft.FirstForumMessageId
+        WHERE ft.FirstForumMessageId IS NOT NULL
+        GROUP BY v.ForumMessageId
+    ) AS vs
+    JOIN `metakaggle`.`meta_kaggle`.`forummessages` AS fm ON fm.Id = vs.message_id
+)
+SELECT
+    u.UserName AS UserName,
+    ABS(
+        MAX(sm.message_score) -
+        (MAX(sm.global_vote_sum) /
+         (SELECT RAW COUNT(1) FROM `metakaggle`.`meta_kaggle`.`forumtopics`
+          WHERE FirstForumMessageId IS NOT NULL)[0])
+    ) AS abs_diff
+FROM scored_messages AS sm
+JOIN `metakaggle`.`meta_kaggle`.`users` AS u ON u.Id = sm.user_id
+GROUP BY sm.user_id, u.UserName
+ORDER BY MAX(sm.message_score) DESC, u.UserName ASC
+LIMIT 3;

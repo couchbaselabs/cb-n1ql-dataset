@@ -1,0 +1,37 @@
+SELECT
+    module,
+    COUNT(*) AS frequency
+FROM `githubrepos`.`github_repos`.`sample_contents` AS sc
+UNNEST SPLIT(sc.`content`, "\n") AS line
+LET
+    trimmed = TRIM(line),
+    is_py = LOWER(sc.sample_path) LIKE '%.py',
+    is_r = LOWER(sc.sample_path) LIKE '%.r',
+    raw_mod = CASE
+        WHEN is_py THEN
+            CASE
+                WHEN trimmed LIKE 'from % import %'
+                    THEN REGEXP_MATCHES(trimmed, '^from\\s+([^\\s.]+)')[0]
+                WHEN trimmed LIKE 'import %'
+                    THEN REGEXP_MATCHES(trimmed, '^import\\s+([^\\s,.]+)')[0]
+                ELSE NULL
+            END
+        WHEN is_r THEN
+            CASE
+                WHEN trimmed LIKE 'library(%)'
+                    THEN REGEXP_MATCHES(trimmed, 'library\\s*\\(\\s*["\']?([^"\'\\s)]+)')[0]
+                ELSE NULL
+            END
+        ELSE NULL
+    END,
+    module = CASE
+        WHEN is_py THEN REPLACE(REPLACE(raw_mod, 'from ', ''), 'import ', '')
+        WHEN is_r THEN REGEXP_REPLACE(raw_mod, 'library\\s*\\(\\s*["\']?', '')
+        ELSE NULL
+    END
+WHERE (is_py OR is_r)
+  AND module IS NOT NULL
+  AND module != ''
+GROUP BY module
+ORDER BY frequency DESC, module ASC
+LIMIT 5;

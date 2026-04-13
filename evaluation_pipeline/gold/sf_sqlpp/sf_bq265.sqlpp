@@ -1,0 +1,33 @@
+WITH orders_2019 AS (
+  SELECT o.order_id, o.user_id
+  FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+  WHERE DATE_PART_MILLIS(FLOOR(o.created_at / 1000), 'year') = 2019
+    AND o.status NOT IN ['Cancelled', 'Returned']
+),
+order_items_valid AS (
+  SELECT oi.order_id, oi.sale_price
+  FROM `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+  WHERE oi.status NOT IN ['Cancelled', 'Returned']
+    AND oi.sale_price IS NOT NULL
+),
+per_order_revenue AS (
+  SELECT o.order_id, o.user_id,
+         SUM(oi.sale_price) AS order_revenue
+  FROM orders_2019 o
+  JOIN order_items_valid oi
+    ON o.order_id = oi.order_id
+  GROUP BY o.order_id, o.user_id
+),
+per_user AS (
+  SELECT por.user_id,
+         SUM(por.order_revenue) / COUNT(DISTINCT por.order_id) AS aov
+  FROM per_order_revenue por
+  GROUP BY por.user_id
+)
+SELECT u.email
+FROM `thelookecommerce`.`thelook_ecommerce`.`users` AS u
+JOIN per_user p
+  ON u.id = p.user_id
+WHERE DATE_PART_MILLIS(FLOOR(u.created_at / 1000), 'year') = 2019
+ORDER BY p.aov DESC, u.email ASC
+LIMIT 10;

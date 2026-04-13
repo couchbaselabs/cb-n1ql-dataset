@@ -1,0 +1,24 @@
+WITH top_families AS (
+    SELECT
+        p.family_id,
+        COUNT(1) AS publication_count
+    FROM `patentsgoogle`.`patents_google`.`publications` AS p
+    WHERE p.family_id IS NOT MISSING
+      AND p.family_id IS NOT NULL
+      AND p.family_id != "-1"
+    GROUP BY p.family_id
+    ORDER BY publication_count DESC
+    LIMIT 6
+)
+SELECT
+    tf.family_id,
+    a.abstract
+FROM top_families AS tf
+JOIN `patentsgoogle`.`patents_google`.`publications` AS p
+    ON p.family_id = tf.family_id
+JOIN `patentsgoogle`.`patents_google`.`abs_and_emb` AS a
+    ON a.publication_number = p.publication_number
+WHERE a.abstract IS NOT MISSING
+  AND a.abstract IS NOT NULL
+  AND TRIM(a.abstract) != ""
+ORDER BY tf.family_id, p.publication_number;

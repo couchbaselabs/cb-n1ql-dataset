@@ -1,0 +1,32 @@
+WITH pr_repos AS (
+    SELECT e.repo.name AS repo_name
+    FROM `githubreposdate`.`day`.`t__20230118` AS e
+    WHERE e.type = 'PullRequestEvent'
+    GROUP BY e.repo.name
+),
+repo_lang_pairs AS (
+    SELECT l.repo_name, lang.name AS language_name, lang.bytes AS lang_bytes
+    FROM pr_repos AS pr
+    JOIN `githubreposdate`.`github_repos`.`languages` AS l ON l.repo_name = pr.repo_name
+    UNNEST l.`language` AS lang
+),
+repo_max AS (
+    SELECT rlp.repo_name, MAX(rlp.lang_bytes) AS max_bytes
+    FROM repo_lang_pairs AS rlp
+    GROUP BY rlp.repo_name
+),
+repo_primary AS (
+    SELECT rlp.repo_name, MIN(rlp.language_name) AS primary_language
+    FROM repo_lang_pairs AS rlp
+    JOIN repo_max AS rm
+        ON rm.repo_name = rlp.repo_name
+       AND rm.max_bytes = rlp.lang_bytes
+    GROUP BY rlp.repo_name
+)
+SELECT rp.primary_language AS PRIMARY_LANGUAGE, COUNT(1) AS TOTAL_PR_EVENTS
+FROM `githubreposdate`.`day`.`t__20230118` AS e
+JOIN repo_primary AS rp ON e.repo.name = rp.repo_name
+WHERE e.type = 'PullRequestEvent'
+GROUP BY rp.primary_language
+HAVING COUNT(1) >= 5
+ORDER BY TOTAL_PR_EVENTS DESC, PRIMARY_LANGUAGE ASC;

@@ -1,0 +1,55 @@
+WITH patent_data AS (
+    SELECT p.application_number,
+           MAX(FLOOR(p.filing_date / 10000)) AS filing_year,
+           MAX((ARRAY c.code FOR c IN p.cpc WHEN c.`first` = true END)[0]) AS cpc_code
+    FROM `patents`.`patents`.`publications` AS p
+    WHERE p.application_number IS NOT NULL
+      AND p.application_number != ''
+      AND p.filing_date > 0
+    GROUP BY p.application_number
+),
+code_year_counts AS (
+    SELECT cpc_code, filing_year, COUNT(*) AS cnt
+    FROM patent_data
+    WHERE cpc_code IS NOT NULL
+    GROUP BY cpc_code, filing_year
+),
+yearly_counts AS (
+    SELECT par AS cpc_group, cyc.filing_year, SUM(cyc.cnt) AS cnt
+    FROM code_year_counts AS cyc
+    JOIN `patents`.`patents`.`cpc_definition` AS cd ON cd.symbol = cyc.cpc_code
+    UNNEST cd.parents AS par
+    JOIN `patents`.`patents`.`cpc_definition` AS cd_par ON cd_par.symbol = par AND cd_par.`level` = 5
+    GROUP BY par, cyc.filing_year
+),
+group_arrays AS (
+    SELECT cpc_group,
+           ARRAY_SORT(ARRAY_AGG({"a_year": filing_year, "b_cnt": cnt})) AS arr
+    FROM yearly_counts
+    GROUP BY cpc_group
+),
+ema_best AS (
+    SELECT g.cpc_group,
+           (ARRAY {"y": g.arr[i].a_year,
+                    "ema": 0.2 * ARRAY_SUM(
+                        ARRAY g.arr[j].b_cnt * POWER(0.8, i - j)
+                        FOR j IN ARRAY_RANGE(0, i + 1) END
+                    )}
+            FOR i IN ARRAY_RANGE(0, ARRAY_LENGTH(g.arr)) END
+           ) AS ema_arr
+    FROM group_arrays AS g
+),
+flattened AS (
+    SELECT e.cpc_group, v.y AS best_year, v.ema AS max_ema,
+           ROW_NUMBER() OVER (PARTITION BY e.cpc_group ORDER BY v.ema DESC, v.y DESC) AS rn
+    FROM ema_best AS e
+    UNNEST e.ema_arr AS v
+)
+SELECT f.cpc_group AS group_symbol,
+       cd.titleFull AS group_title,
+       f.best_year,
+       f.max_ema
+FROM flattened AS f
+JOIN `patents`.`patents`.`cpc_definition` AS cd ON cd.symbol = f.cpc_group
+WHERE f.rn = 1
+ORDER BY cd.titleFull ASC, f.cpc_group ASC;

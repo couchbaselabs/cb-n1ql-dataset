@@ -1,0 +1,28 @@
+SELECT address,
+       MAX(abs_token_balance) AS max_abs_balance_change
+FROM (
+    SELECT address, token_address,
+           ABS(SUM(delta)) AS abs_token_balance
+    FROM (
+        SELECT from_address AS address, token_address,
+               -TONUMBER(`value`) AS delta
+        FROM `crypto`.`crypto_ethereum`.`token_transfers`
+        WHERE token_address IN [
+            '0x0d8775f648430679a709e98d2b0cb6250d2887ef0',
+            '0x1e15c05cbad367f044cbfbafda3d9a1510db5513'
+        ]
+        UNION ALL
+        SELECT to_address AS address, token_address,
+               TONUMBER(`value`) AS delta
+        FROM `crypto`.`crypto_ethereum`.`token_transfers`
+        WHERE token_address IN [
+            '0x0d8775f648430679a709e98d2b0cb6250d2887ef0',
+            '0x1e15c05cbad367f044cbfbafda3d9a1510db5513'
+        ]
+    ) AS raw_moves
+    WHERE address != '0x0000000000000000000000000000000000000000'
+    GROUP BY address, token_address
+) AS token_totals
+GROUP BY address
+ORDER BY max_abs_balance_change DESC
+LIMIT 6;

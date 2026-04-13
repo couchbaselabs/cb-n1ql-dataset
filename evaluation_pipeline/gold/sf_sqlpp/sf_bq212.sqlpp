@@ -1,0 +1,31 @@
+WITH ipc_per_patent AS (
+    SELECT
+        p.publication_number,
+        SUBSTR(i.code, 0, 4) AS ipc4,
+        COUNT(*) AS ipc_cnt
+    FROM `patents`.`patents`.`publications` AS p
+    UNNEST p.ipc AS i
+    WHERE p.country_code = 'US'
+      AND p.kind_code = 'B2'
+      AND p.application_kind = 'A'
+      AND p.grant_date BETWEEN 20220601 AND 20220930
+      AND p.grant_date != 0
+      AND i.code IS NOT NULL
+      AND LENGTH(i.code) >= 4
+    GROUP BY p.publication_number, SUBSTR(i.code, 0, 4)
+),
+ranked_ipc AS (
+    SELECT
+        publication_number,
+        ipc4,
+        ipc_cnt,
+        ROW_NUMBER() OVER (PARTITION BY publication_number ORDER BY ipc_cnt DESC, ipc4 ASC) AS rn
+    FROM ipc_per_patent
+)
+SELECT
+    publication_number,
+    ipc4 AS IPC4
+FROM ranked_ipc
+WHERE rn = 1
+  AND ipc_cnt >= 10
+ORDER BY publication_number;

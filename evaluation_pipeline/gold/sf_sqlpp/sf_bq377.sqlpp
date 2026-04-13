@@ -1,0 +1,7 @@
+SELECT pkg AS package, COUNT(*) AS frequency
+FROM `githubrepos`.`github_repos`.`sample_contents` AS sc
+UNNEST OBJECT_NAMES(sc.content.`require`) AS pkg
+WHERE TYPE(sc.content) = 'object'
+  AND TYPE(sc.content.`require`) = 'object'
+GROUP BY pkg
+ORDER BY frequency DESC;

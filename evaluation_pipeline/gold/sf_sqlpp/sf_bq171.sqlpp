@@ -1,0 +1,19 @@
+WITH user_upvotes AS (
+    SELECT fmv.ToUserId AS user_id, COUNT(1) AS upvote_count
+    FROM `metakaggle`.`meta_kaggle`.`forummessagevotes` AS fmv
+    WHERE fmv.VoteDate >= '2019-01-01'
+      AND fmv.VoteDate < '2020-01-01'
+    GROUP BY fmv.ToUserId
+),
+avg_upvote AS (
+    SELECT AVG(upvote_count) AS avg_count
+    FROM user_upvotes
+)
+SELECT u.UserName
+FROM user_upvotes AS uu
+JOIN `metakaggle`.`meta_kaggle`.`users` AS u
+    ON u.Id = uu.user_id
+JOIN avg_upvote AS au ON TRUE
+ORDER BY ABS(uu.upvote_count - au.avg_count) ASC,
+         u.UserName ASC
+LIMIT 1;

@@ -1,0 +1,38 @@
+WITH cdkn2a_cases AS (
+    SELECT
+        m.case_barcode,
+        MAX(m.Variant_Classification) AS cdkn2a_variant_classification
+    FROM `tcga`.`tcga_versioned`.`somatic_mutation_hg19_dcc_2017_02` AS m
+    WHERE m.project_short_name = 'TCGA-BLCA'
+      AND m.Hugo_Symbol = 'CDKN2A'
+    GROUP BY m.case_barcode
+),
+expr AS (
+    SELECT
+        r.case_barcode,
+        MAX(CASE WHEN r.HGNC_gene_symbol = 'MDM2'   THEN r.normalized_count END) AS MDM2_nc,
+        MAX(CASE WHEN r.HGNC_gene_symbol = 'TP53'   THEN r.normalized_count END) AS TP53_nc,
+        MAX(CASE WHEN r.HGNC_gene_symbol = 'CDKN1A' THEN r.normalized_count END) AS CDKN1A_nc,
+        MAX(CASE WHEN r.HGNC_gene_symbol = 'CCNE1'  THEN r.normalized_count END) AS CCNE1_nc
+    FROM cdkn2a_cases AS mc
+    JOIN `tcga`.`tcga_versioned`.`rnaseq_hg19_gdc_2017_02` AS r
+        ON r.case_barcode = mc.case_barcode
+    WHERE r.HGNC_gene_symbol IN ['MDM2', 'TP53', 'CDKN1A', 'CCNE1']
+    GROUP BY r.case_barcode
+)
+SELECT
+    c.submitter_id AS case_barcode,
+    cd.cdkn2a_variant_classification,
+    c.demo__gender,
+    c.demo__vital_status,
+    COALESCE(c.demo__days_to_death, 0) AS demo__days_to_death,
+    COALESCE(e.MDM2_nc,   0.0) AS MDM2_normalized_count,
+    COALESCE(e.TP53_nc,   0.0) AS TP53_normalized_count,
+    COALESCE(e.CDKN1A_nc, 0.0) AS CDKN1A_normalized_count,
+    COALESCE(e.CCNE1_nc,  0.0) AS CCNE1_normalized_count
+FROM cdkn2a_cases AS cd
+JOIN `tcga`.`tcga_versioned`.`clinical_gdc_r39` AS c
+    ON c.submitter_id = cd.case_barcode
+LEFT JOIN expr AS e ON cd.case_barcode = e.case_barcode
+WHERE c.proj__project_id = 'TCGA-BLCA'
+ORDER BY c.submitter_id;

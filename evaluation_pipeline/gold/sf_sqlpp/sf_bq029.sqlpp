@@ -1,0 +1,14 @@
+SELECT
+    TOSTRING(period_start) || '-' || TOSTRING(period_start + 4) AS period,
+    ROUND(AVG(inv_count), 6) AS avg_inventors_per_patent,
+    COUNT(*) AS total_patent_publications
+FROM `patents`.`patents`.`publications` AS p
+LET pub_year = FLOOR(p.publication_date / 10000),
+    inv_count = ARRAY_LENGTH(p.inventor_harmonized),
+    period_start = 1960 + FLOOR((pub_year - 1960) / 5) * 5
+WHERE p.country_code = 'CA'
+  AND p.publication_date != 0
+  AND pub_year BETWEEN 1960 AND 2020
+  AND ARRAY_LENGTH(p.inventor_harmonized) > 0
+GROUP BY period_start
+ORDER BY period_start;

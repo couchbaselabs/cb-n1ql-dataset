@@ -1,0 +1,31 @@
+SELECT
+    base.delivery_month,
+    base.profit - base.prev_profit AS profit_increase
+FROM (
+    SELECT
+        SUBSTR(MILLIS_TO_STR(DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month')), 0, 10) AS delivery_month,
+        SUM(oi.sale_price - ii.cost) AS profit,
+        LAG(SUM(oi.sale_price - ii.cost)) OVER (
+            ORDER BY DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month')
+        ) AS prev_profit
+    FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+        ON o.order_id = oi.order_id
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`inventory_items` AS ii
+        ON oi.inventory_item_id = ii.id
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`users` AS u
+        ON o.user_id = u.id
+    WHERE o.status = 'Complete'
+      AND u.traffic_source = 'Facebook'
+      AND FLOOR(o.created_at / 1000) >= STR_TO_MILLIS('2022-08-01T00:00:00Z')
+      AND FLOOR(o.created_at / 1000) < STR_TO_MILLIS('2023-12-01T00:00:00Z')
+      AND o.delivered_at IS NOT NULL
+      AND FLOOR(o.delivered_at / 1000) >= STR_TO_MILLIS('2022-08-01T00:00:00Z')
+      AND FLOOR(o.delivered_at / 1000) < STR_TO_MILLIS('2023-12-01T00:00:00Z')
+    GROUP BY
+        DATE_TRUNC_MILLIS(FLOOR(o.delivered_at / 1000), 'month')
+) AS base
+WHERE base.prev_profit IS NOT NULL
+  AND base.profit - base.prev_profit > 0
+ORDER BY profit_increase DESC, base.delivery_month
+LIMIT 5;

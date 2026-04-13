@@ -1,0 +1,36 @@
+WITH category_purchases AS (
+    SELECT p.category AS category,
+           COUNT(oi.id) AS total_purchase_quantity
+    FROM `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+        ON oi.product_id = p.id
+    GROUP BY p.category
+    ORDER BY COUNT(oi.id) DESC
+    LIMIT 1
+),
+next_events AS (
+    SELECT e1.session_id,
+           e1.uri,
+           e1.created_at,
+           MIN(e2.created_at) AS next_created_at
+    FROM `thelookecommerce`.`thelook_ecommerce`.`events` AS e1
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`events` AS e2
+        ON e2.session_id = e1.session_id
+        AND e2.sequence_number > e1.sequence_number
+    WHERE e1.uri LIKE '/product/%'
+    GROUP BY e1.session_id, e1.uri, e1.created_at
+),
+product_page_visits AS (
+    SELECT p.category AS category,
+           (ne.next_created_at - ne.created_at) / 60000000.0 AS minutes_on_page
+    FROM next_events AS ne
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+        ON TONUMBER(SPLIT(ne.uri, '/')[2]) = p.id
+)
+SELECT cp.category,
+       cp.total_purchase_quantity,
+       AVG(ppv.minutes_on_page) AS avg_time_minutes
+FROM category_purchases AS cp
+LEFT JOIN product_page_visits AS ppv
+    ON ppv.category = cp.category
+GROUP BY cp.category, cp.total_purchase_quantity;

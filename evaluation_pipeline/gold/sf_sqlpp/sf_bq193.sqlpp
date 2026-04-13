@@ -1,0 +1,49 @@
+WITH content_extracted AS (
+    SELECT
+        sc.id AS id,
+        sf.repo_name AS repo_name,
+        sf.`path` AS `path`,
+        SPLIT(sc.content, '\n') AS lines,
+        lang.`name` AS language_name
+    FROM `githubrepos`.`github_repos`.`sample_files` AS sf
+    JOIN `githubrepos`.`github_repos`.`sample_contents` AS sc
+        ON sf.id = sc.id
+    JOIN `githubrepos`.`github_repos`.`languages` AS lr
+        ON sf.repo_name = lr.repo_name
+    UNNEST lr.`language` AS lang
+    WHERE LOWER(sf.`path`) LIKE '%readme.md'
+),
+non_empty_lines AS (
+    SELECT
+        TRIM(line) AS line_,
+        ce.language_name
+    FROM content_extracted AS ce
+    UNNEST ce.lines AS line
+    WHERE TRIM(line) != ''
+        AND NOT (TRIM(line) LIKE '#%')
+        AND NOT (TRIM(line) LIKE '//%')
+),
+aggregated_languages AS (
+    SELECT
+        line_,
+        COUNT(*) AS frequency,
+        ARRAY_AGG(language_name) AS languages
+    FROM non_empty_lines
+    GROUP BY line_
+)
+SELECT
+    REGEXP_REPLACE(line_, '^"|"$', '') AS line,
+    frequency,
+    REPLACE(
+        REPLACE(
+            SUBSTR(
+                ENCODE_JSON(ARRAY_SORT(languages)),
+                2,
+                LENGTH(ENCODE_JSON(ARRAY_SORT(languages))) - 2
+            ),
+            '"', ''
+        ),
+        ',', ', '
+    ) AS languages_sorted
+FROM aggregated_languages
+ORDER BY frequency DESC;

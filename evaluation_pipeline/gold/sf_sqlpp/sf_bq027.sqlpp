@@ -1,0 +1,7 @@
+SELECT
+    p.publication_number,
+    ARRAY_COUNT(ARRAY c FOR c IN p.citation WHEN c.category = 'SEA' END) AS sea_backward_citations
+FROM `patents`.`patents`.`publications` AS p
+WHERE p.grant_date BETWEEN 20100101 AND 20181231
+  AND p.grant_date != 0
+ORDER BY sea_backward_citations DESC;

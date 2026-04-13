@@ -1,0 +1,53 @@
+WITH purchase_months AS (
+    SELECT DISTINCT
+        o.user_id,
+        DATE_PART_MILLIS(FLOOR(o.created_at / 1000), 'year') AS yr,
+        DATE_PART_MILLIS(FLOOR(o.created_at / 1000), 'month') AS mo
+    FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+    WHERE DATE_PART_MILLIS(FLOOR(o.created_at / 1000), 'year') <= 2022
+),
+first_purchase AS (
+    SELECT
+        pm.user_id,
+        MIN(pm.yr * 100 + pm.mo) AS cohort_ym
+    FROM purchase_months AS pm
+    GROUP BY pm.user_id
+),
+user_month_flags AS (
+    SELECT
+        fp.cohort_ym,
+        fp.user_id,
+        MAX(CASE WHEN
+            (pm.yr - FLOOR(fp.cohort_ym / 100)) * 12
+            + (pm.mo - (fp.cohort_ym % 100)) = 0
+            THEN 1 ELSE 0 END) AS m1,
+        MAX(CASE WHEN
+            (pm.yr - FLOOR(fp.cohort_ym / 100)) * 12
+            + (pm.mo - (fp.cohort_ym % 100)) = 1
+            THEN 1 ELSE 0 END) AS m2,
+        MAX(CASE WHEN
+            (pm.yr - FLOOR(fp.cohort_ym / 100)) * 12
+            + (pm.mo - (fp.cohort_ym % 100)) = 2
+            THEN 1 ELSE 0 END) AS m3,
+        MAX(CASE WHEN
+            (pm.yr - FLOOR(fp.cohort_ym / 100)) * 12
+            + (pm.mo - (fp.cohort_ym % 100)) = 3
+            THEN 1 ELSE 0 END) AS m4
+    FROM first_purchase AS fp
+    LEFT JOIN purchase_months AS pm
+        ON pm.user_id = fp.user_id
+    GROUP BY fp.cohort_ym, fp.user_id
+)
+SELECT
+    TOSTRING(FLOOR(umf.cohort_ym / 100)) || '-' ||
+        CASE WHEN (umf.cohort_ym % 100) < 10 THEN '0' ELSE '' END ||
+        TOSTRING(umf.cohort_ym % 100) AS first_purchase_month,
+    COUNT(*) AS cohort_users,
+    ROUND(100.0 * AVG(umf.m1), 2) AS pct_month_1,
+    ROUND(100.0 * AVG(umf.m2), 2) AS pct_month_2,
+    ROUND(100.0 * AVG(umf.m3), 2) AS pct_month_3,
+    ROUND(100.0 * AVG(umf.m4), 2) AS pct_month_4
+FROM user_month_flags AS umf
+WHERE FLOOR(umf.cohort_ym / 100) <= 2022
+GROUP BY umf.cohort_ym
+ORDER BY umf.cohort_ym;

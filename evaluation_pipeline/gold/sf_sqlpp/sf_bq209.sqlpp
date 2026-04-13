@@ -1,0 +1,33 @@
+WITH base_patents AS (
+    SELECT p.publication_number,
+           p.filing_date AS base_filing_date
+    FROM `patents`.`patents`.`publications` AS p
+    WHERE p.grant_date >= 20100101
+      AND p.grant_date <= 20101231
+      AND p.grant_date != 0
+      AND p.filing_date > 0
+      AND p.application_kind = 'A'
+),
+forward_cites AS (
+    SELECT c.publication_number AS cited_pub,
+           p2.application_number AS citing_app,
+           p2.filing_date AS citing_filing_date
+    FROM `patents`.`patents`.`publications` AS p2
+    UNNEST p2.citation AS c
+    WHERE c.publication_number IS NOT NULL
+      AND c.publication_number != ''
+      AND p2.filing_date > 0
+),
+forward_counts AS (
+    SELECT bp.publication_number,
+           COUNT(DISTINCT fc.citing_app) AS fwd_count
+    FROM base_patents AS bp
+    LEFT JOIN forward_cites AS fc
+      ON fc.cited_pub = bp.publication_number
+     AND fc.citing_filing_date >= bp.base_filing_date
+     AND fc.citing_filing_date <= bp.base_filing_date + 100000
+    GROUP BY bp.publication_number
+)
+SELECT COUNT(*) AS patent_count
+FROM forward_counts
+WHERE fwd_count = 1;

@@ -1,0 +1,15 @@
+SELECT
+    r.gene_name,
+    r.Ensembl_gene_id,
+    VAR_SAMP(r.fpkm_uq_unstranded) AS variance,
+    COUNT(DISTINCT r.sample_barcode) AS n_samples
+FROM `tcga`.`tcga_versioned`.`rnaseq_hg38_gdc_r35` AS r
+WHERE r.project_short_name = 'TCGA-BRCA'
+  AND r.sample_type_name = 'Solid Tissue Normal'
+  AND r.gene_type = 'protein_coding'
+  AND r.gene_name IS NOT NULL
+  AND r.fpkm_uq_unstranded IS NOT NULL
+GROUP BY r.Ensembl_gene_id, r.gene_name
+HAVING COUNT(DISTINCT r.sample_barcode) > 1
+ORDER BY variance DESC
+LIMIT 5;
