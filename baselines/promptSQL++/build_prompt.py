@@ -22,7 +22,7 @@ from pathlib import Path
 FEW_SHOT_EXAMPLE = """
 /* Example question and corresponding Couchbase SQL++ query: */
 /* Question: Find the top 3 departments by average employee salary, showing the department name, average salary, and employee count. Only include departments with more than 5 active employees. */
-/* Database: hr_company — Keyspace: `hr_company`.`hr_scope`.`<collection>` */
+/* Bucket: hr_company — Keyspace: `hr_company`.`hr_scope`.`<collection>` */
 /* SQL++ query: */
 SELECT
     d.department_name,
@@ -102,11 +102,12 @@ def build_prompt(instance: dict, use_few_shot: bool = True) -> dict:
     schema_block = build_schema_block(instance.get("schema", []))
     question = instance["question"]
     db_name = instance["db"]
+    #.lower().replace("_", "").replace(" ", "")
 
     parts = []
 
     # Schema
-    parts.append(f"/* Database: {db_name} */")
+    parts.append(f"/* Bucket: {db_name} */")
     parts.append(schema_block)
 
     # External knowledge (if any)
