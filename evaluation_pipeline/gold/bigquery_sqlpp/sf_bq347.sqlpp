@@ -1,0 +1,26 @@
+WITH mr_sops AS (
+    SELECT DISTINCT d.SOPInstanceUID
+    FROM idc.idc_v17.dicom_all d
+    WHERE d.SeriesInstanceUID = "1.3.6.1.4.1.14519.5.2.1.3671.4754.105976129314091491952445656147"
+),
+
+seg_sops AS (
+    SELECT DISTINCT s.SOPInstanceUID
+    FROM idc.idc_v17.segmentations s
+    JOIN idc.idc_v17.dicom_all d
+        ON d.SOPInstanceUID = s.SOPInstanceUID
+    WHERE d.SeriesInstanceUID = "1.3.6.1.4.1.14519.5.2.1.3671.4754.105976129314091491952445656147"
+)
+
+SELECT
+    d.Modality,
+    COUNT(*) AS count_
+FROM idc.idc_v17.dicom_all d
+WHERE d.SOPInstanceUID IN (
+    SELECT RAW SOPInstanceUID FROM mr_sops
+    UNION
+    SELECT RAW SOPInstanceUID FROM seg_sops
+)
+GROUP BY d.Modality
+ORDER BY count_ DESC
+LIMIT 1;

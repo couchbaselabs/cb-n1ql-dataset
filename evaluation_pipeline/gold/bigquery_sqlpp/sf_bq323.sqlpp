@@ -1,0 +1,34 @@
+WITH labeled AS (
+    SELECT
+        CASE
+            WHEN LOWER(d.SeriesDescription) LIKE "%t2_tse_tra%" THEN "t2w_prostateX"
+            WHEN LOWER(d.SeriesDescription) LIKE "%adc%" THEN "adc_prostateX"
+            ELSE NULL
+        END AS label,
+
+        TO_NUMBER(d.RepetitionTime) AS RepetitionTime,
+        TO_NUMBER(d.EchoTime) AS EchoTime,
+        TO_NUMBER(d.SliceThickness) AS SliceThickness
+
+    FROM `idc`.`idc_v17`.`dicom_all` d
+    WHERE d.collection_id = "prostatex"
+      AND d.Modality = "MR"
+      AND d.SeriesDescription IS NOT MISSING
+),
+
+filtered AS (
+    SELECT labeled.*
+    FROM labeled
+    WHERE labeled.label IS NOT NULL
+)
+
+SELECT
+    AVG(RepetitionTime) AS avg_repetition_time,
+    AVG(EchoTime) AS avg_echo_time,
+    AVG(SliceThickness) AS avg_slice_thickness,
+
+    AVG(RepetitionTime) 
+      + AVG(EchoTime) 
+      + AVG(SliceThickness) AS combined_overall_avg
+
+FROM filtered;

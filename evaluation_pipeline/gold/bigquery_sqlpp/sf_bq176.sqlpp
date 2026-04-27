@@ -1,0 +1,29 @@
+WITH copy AS (
+  SELECT case_barcode, start_pos, end_pos, MAX(copy_number) AS copy_number
+  FROM tcgamitelman.tcga_versioned.copy_number_segment_allelic_hg38_gdc_r23
+  WHERE project_short_name = 'TCGA-LAML' AND chromosome = 'chr15'
+  GROUP BY case_barcode, start_pos, end_pos
+),
+band AS (
+  SELECT hg38_start, hg38_stop
+  FROM tcgamitelman.prod.cytobands_hg38
+  WHERE cytoband_name = '15q11' AND chromosome = 'chr15'
+),
+joined AS (
+  SELECT c.case_barcode,
+    (ABS(b.hg38_stop - b.hg38_start) + ABS(c.end_pos - c.start_pos)
+      - ABS(b.hg38_stop - c.end_pos) - ABS(b.hg38_start - c.start_pos)) / 2.0 AS overlap,
+    c.copy_number
+  FROM copy c, band b
+  WHERE c.start_pos <= b.hg38_stop AND c.end_pos >= b.hg38_start
+),
+info AS (
+  SELECT case_barcode,
+    ROUND(SUM(overlap * copy_number) / SUM(overlap)) AS copy_number
+  FROM joined
+  GROUP BY case_barcode
+)
+SELECT case_barcode
+FROM info
+ORDER BY copy_number DESC
+LIMIT 1;

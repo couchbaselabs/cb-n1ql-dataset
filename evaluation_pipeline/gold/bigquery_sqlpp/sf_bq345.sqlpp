@@ -1,0 +1,29 @@
+WITH seg_rtstruct AS (
+    SELECT
+        d.collection_id,
+        d.StudyInstanceUID,
+        d.SeriesInstanceUID,
+        "https://viewer.imaging.datacommons.cancer.gov/viewer/" 
+            || d.StudyInstanceUID AS viewer_url,
+        d.instance_size
+    FROM idc.idc_v17.dicom_all d
+    WHERE d.Modality IN ["SEG", "RTSTRUCT"]
+        AND d.SOPClassUID = "1.2.840.10008.5.1.4.1.1.66.4"
+        AND ARRAY_LENGTH(IFMISSINGORNULL(d.ReferencedSeriesSequence, [])) = 0
+        AND ARRAY_LENGTH(IFMISSINGORNULL(d.ReferencedImageSequence, [])) = 0
+        AND ARRAY_LENGTH(IFMISSINGORNULL(d.SourceImageSequence, [])) = 0
+)
+
+SELECT
+    s.collection_id,
+    s.SeriesInstanceUID,
+    s.StudyInstanceUID,
+    s.viewer_url,
+    SUM(s.instance_size) / 1024 AS collection_size_KB
+FROM seg_rtstruct s
+GROUP BY
+    s.collection_id,
+    s.SeriesInstanceUID,
+    s.StudyInstanceUID,
+    s.viewer_url
+ORDER BY collection_size_KB DESC;

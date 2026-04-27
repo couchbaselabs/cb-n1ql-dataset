@@ -1,0 +1,54 @@
+WITH unnested AS (
+    SELECT
+        d.SOPInstanceUID,
+
+        cnc.CodeMeaning AS cnc_cm,
+        cnc.CodingSchemeDesignator AS cnc_csd,
+        cnc.CodeValue AS cnc_val,
+
+        ccs.CodeMeaning AS ccs_cm,
+        ccs.CodingSchemeDesignator AS ccs_csd,
+        ccs.CodeValue AS ccs_val
+
+    FROM idc.idc_v17.dicom_all d
+
+    UNNEST d.SpecimenDescriptionSequence AS spec_desc
+    UNNEST spec_desc.SpecimenPreparationSequence AS prep_seq
+    UNNEST prep_seq.SpecimenPreparationStepContentItemSequence AS prep_step
+    UNNEST prep_step.ConceptNameCodeSequence AS cnc
+    UNNEST prep_step.ConceptCodeSequence AS ccs
+
+    WHERE d.Modality = "SM"
+),
+
+embedding AS (
+    SELECT DISTINCT
+        SOPInstanceUID,
+        ccs_cm AS embedding_cm
+    FROM unnested
+    WHERE cnc_csd = "SCT"
+        AND cnc_val = "430863003"
+        AND ccs_csd = "SCT"
+),
+
+staining AS (
+    SELECT DISTINCT
+        SOPInstanceUID,
+        ccs_cm AS staining_cm
+    FROM unnested
+    WHERE cnc_csd = "SCT"
+        AND cnc_val = "424361007"
+        AND ccs_csd = "SCT"
+)
+
+SELECT
+    e.embedding_cm AS embeddingMedium_CodeMeaning,
+    s.staining_cm AS staining_usingSubstance_CodeMeaning,
+    COUNT(*) AS count_
+FROM embedding e
+JOIN staining s
+    ON e.SOPInstanceUID = s.SOPInstanceUID
+GROUP BY
+    e.embedding_cm,
+    s.staining_cm
+ORDER BY count_ DESC;

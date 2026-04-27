@@ -1,0 +1,65 @@
+WITH clinical_brca AS (
+    SELECT
+        c.bcr_patient_barcode AS ParticipantBarcode,
+        c.histological_type
+    FROM pancanceratlas1.pancancer_atlas_filtered.clinical_pancan_patient_with_followup_filtered c
+    WHERE c.acronym = "BRCA"
+      AND c.histological_type IS NOT NULL
+),
+cdh1_mutated AS (
+    SELECT DISTINCT m.ParticipantBarcode
+    FROM pancanceratlas1.pancancer_atlas_filtered.mc3_maf_v5_one_per_tumor_sample m
+    WHERE m.Hugo_Symbol = "CDH1"
+      AND m.`FILTER` = "PASS"
+),
+patient_data AS (
+    SELECT
+        cb.histological_type,
+        CASE WHEN cm.ParticipantBarcode IS NOT NULL THEN "YES" ELSE "NO" END AS mutation_status
+    FROM clinical_brca cb
+    LEFT JOIN cdh1_mutated cm ON cb.ParticipantBarcode = cm.ParticipantBarcode
+),
+observed AS (
+    SELECT
+        histological_type,
+        mutation_status,
+        COUNT(*) AS Nij
+    FROM patient_data
+    GROUP BY histological_type, mutation_status
+),
+row_totals AS (
+    SELECT histological_type, SUM(Nij) AS Ni
+    FROM observed
+    GROUP BY histological_type
+),
+col_totals AS (
+    SELECT mutation_status, SUM(Nij) AS Nj
+    FROM observed
+    GROUP BY mutation_status
+),
+filtered_rows AS (
+    SELECT histological_type FROM row_totals WHERE Ni > 10
+),
+filtered_cols AS (
+    SELECT mutation_status FROM col_totals WHERE Nj > 10
+),
+expected_cells AS (
+    SELECT fr.histological_type, fc.mutation_status
+    FROM filtered_rows fr, filtered_cols fc
+),
+contingency AS (
+    SELECT
+        ec.histological_type,
+        ec.mutation_status,
+        COALESCE(o.Nij, 0) AS Nij,
+        (SUM(COALESCE(o.Nij, 0)) OVER (PARTITION BY ec.histological_type)) *
+        (SUM(COALESCE(o.Nij, 0)) OVER (PARTITION BY ec.mutation_status)) /
+        (SUM(COALESCE(o.Nij, 0)) OVER ()) AS E_nij
+    FROM expected_cells ec
+    LEFT JOIN observed o
+      ON ec.histological_type = o.histological_type
+      AND ec.mutation_status = o.mutation_status
+)
+SELECT
+    SUM(POWER(Nij - E_nij, 2) / E_nij) AS chi_square
+FROM contingency;

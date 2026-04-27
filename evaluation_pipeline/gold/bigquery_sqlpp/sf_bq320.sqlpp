@@ -1,0 +1,5 @@
+SELECT
+    COUNT(DISTINCT d.StudyInstanceUID) AS total_count
+FROM `idc`.`idc_v17`.`dicom_pivot` d
+WHERE LOWER(d.SegmentedPropertyTypeCodeSequence) = "15825003"
+  AND d.collection_id IN ["Community", "nsclc_radiomics"];

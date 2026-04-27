@@ -1,0 +1,70 @@
+WITH patient_expr AS (
+    SELECT
+        g.ParticipantBarcode,
+        AVG(LOG(g.normalized_count + 1)) AS avg_expr
+    FROM pancanceratlas1.pancancer_atlas_filtered.ebpp_adjustpancan_illuminahiseq_rnaseqv2_genexp_filtered g
+    WHERE g.Symbol = "IGF2"
+      AND g.Study = "LGG"
+      AND g.normalized_count IS NOT NULL
+    GROUP BY g.ParticipantBarcode
+),
+patient_histology AS (
+    SELECT
+        c.bcr_patient_barcode AS ParticipantBarcode,
+        c.icd_o_3_histology
+    FROM pancanceratlas1.pancancer_atlas_filtered.clinical_pancan_patient_with_followup_filtered c
+    WHERE c.acronym = "LGG"
+      AND c.icd_o_3_histology IS NOT NULL
+      AND NOT REGEXP_LIKE(c.icd_o_3_histology, "^\\[.*\\]$")
+),
+joined_data AS (
+    SELECT
+        h.icd_o_3_histology AS grp,
+        p.avg_expr AS val
+    FROM patient_expr p
+    JOIN patient_histology h ON p.ParticipantBarcode = h.ParticipantBarcode
+),
+ranked_data AS (
+    SELECT
+        grp,
+        val,
+        RANK() OVER (ORDER BY val ASC) AS rn
+    FROM joined_data
+),
+tie_groups AS (
+    SELECT val, MIN(rn) AS min_rank, MAX(rn) AS max_rank, COUNT(*) AS cnt
+    FROM ranked_data
+    GROUP BY val
+),
+avg_ranked AS (
+    SELECT
+        r.grp,
+        (t.min_rank + t.max_rank) / 2.0 AS avg_rank
+    FROM ranked_data r
+    JOIN tie_groups t ON r.val = t.val
+),
+group_stats AS (
+    SELECT
+        grp,
+        COUNT(*) AS ni,
+        SUM(avg_rank) AS Si,
+        SUM(POWER(avg_rank, 2)) AS Qi
+    FROM avg_ranked
+    GROUP BY grp
+    HAVING COUNT(*) > 1
+),
+totals AS (
+    SELECT
+        SUM(ni) AS N,
+        SUM(Si) AS sum_S,
+        SUM(Si * Si / ni) AS sum_S2_over_n,
+        SUM(Qi) AS sum_Q,
+        COUNT(*) AS num_groups
+    FROM group_stats
+)
+SELECT
+    totals.num_groups AS TOTAL_GROUPS,
+    totals.N AS TOTAL_SAMPLES,
+    (totals.N - 1) * (totals.sum_S2_over_n - POWER(totals.sum_S, 2) / totals.N) /
+    (totals.sum_Q - POWER(totals.sum_S, 2) / totals.N) AS H_SCORE
+FROM totals;

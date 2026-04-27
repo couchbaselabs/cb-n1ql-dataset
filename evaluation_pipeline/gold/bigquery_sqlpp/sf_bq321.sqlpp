@@ -1,0 +1,11 @@
+SELECT
+    COUNT(DISTINCT d.StudyInstanceUID) AS total_count
+FROM `idc`.`idc_v17`.`dicom_all` d
+WHERE d.collection_id = "qin_prostate_repeatability"
+  AND d.SeriesDescription IN [
+        "DWI",
+        "T2 Weighted Axial",
+        "Apparent Diffusion Coefficient",
+        "T2 Weighted Axial Segmentations",
+        "Apparent Diffusion Coefficient Segmentations"
+  ];
