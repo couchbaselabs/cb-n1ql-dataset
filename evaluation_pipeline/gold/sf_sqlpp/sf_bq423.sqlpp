@@ -1,0 +1,24 @@
+SELECT c.creative_page_url
+FROM `googleads`.`google_ads_transparency_center`.`creative_stats` AS c
+UNNEST c.region_stats AS rs
+WHERE c.ad_format_type = "IMAGE"
+  AND LOWER(c.topic) LIKE "%health%"
+  AND c.advertiser_verification_status = "VERIFIED"
+  AND c.advertiser_location = "CY"
+  AND rs.region_code = "HR"
+  AND rs.times_shown_availability_date IS NOT VALUED
+  AND rs.times_shown_upper_bound IS VALUED
+  AND rs.first_shown > "2023-01-01"
+  AND rs.last_shown < "2024-01-01"
+  AND c.audience_selection_approach_info.demographic_info IS VALUED
+  AND c.audience_selection_approach_info.demographic_info <> "CRITERIA_UNUSED"
+  AND c.audience_selection_approach_info.geo_location IS VALUED
+  AND c.audience_selection_approach_info.geo_location <> "CRITERIA_UNUSED"
+  AND c.audience_selection_approach_info.contextual_signals IS VALUED
+  AND c.audience_selection_approach_info.contextual_signals <> "CRITERIA_UNUSED"
+  AND c.audience_selection_approach_info.customer_lists IS VALUED
+  AND c.audience_selection_approach_info.customer_lists <> "CRITERIA_UNUSED"
+  AND c.audience_selection_approach_info.topics_of_interest IS VALUED
+  AND c.audience_selection_approach_info.topics_of_interest <> "CRITERIA_UNUSED"
+ORDER BY rs.times_shown_upper_bound DESC
+LIMIT 1;

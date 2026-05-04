@@ -1,0 +1,28 @@
+SELECT COALESCE(SUM(addr_balances.balance) / 1000000000000000000.0, 0) AS circulating_supply_bnb
+FROM (
+    SELECT flows.address, SUM(flows.amount) AS balance
+    FROM (
+        SELECT tt.to_address AS address, SUM(TONUMBER(tt.`value`)) AS amount
+        FROM `ethereumblockchain`.`ethereum_blockchain`.`token_transfers` AS tt
+        WHERE tt.token_address IN (
+            SELECT RAW tk.address
+            FROM `ethereumblockchain`.`ethereum_blockchain`.`tokens` AS tk
+            WHERE tk.`symbol` = 'BNB'
+        )
+          AND tt.to_address != '0x0000000000000000000000000000000000000000'
+        GROUP BY tt.to_address
+
+        UNION ALL
+
+        SELECT tt.from_address AS address, -SUM(TONUMBER(tt.`value`)) AS amount
+        FROM `ethereumblockchain`.`ethereum_blockchain`.`token_transfers` AS tt
+        WHERE tt.token_address IN (
+            SELECT RAW tk.address
+            FROM `ethereumblockchain`.`ethereum_blockchain`.`tokens` AS tk
+            WHERE tk.`symbol` = 'BNB'
+        )
+          AND tt.from_address != '0x0000000000000000000000000000000000000000'
+        GROUP BY tt.from_address
+    ) AS flows
+    GROUP BY flows.address
+) AS addr_balances;

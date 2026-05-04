@@ -1,0 +1,15 @@
+WITH filtered_users AS (
+    SELECT u.age
+    FROM `thelookecommerce`.`thelook_ecommerce`.`users` AS u
+    WHERE u.created_at >= STR_TO_MILLIS('2019-01-01T00:00:00Z') * 1000
+      AND u.created_at < STR_TO_MILLIS('2022-05-01T00:00:00Z') * 1000
+),
+age_limits AS (
+    SELECT MAX(age) AS oldest_age, MIN(age) AS youngest_age
+    FROM filtered_users
+)
+SELECT ABS(
+           COALESCE(SUM(CASE WHEN fu.age = al.oldest_age THEN 1 ELSE 0 END), 0) -
+           COALESCE(SUM(CASE WHEN fu.age = al.youngest_age THEN 1 ELSE 0 END), 0)
+       ) AS difference_in_user_count
+FROM filtered_users AS fu, age_limits AS al;

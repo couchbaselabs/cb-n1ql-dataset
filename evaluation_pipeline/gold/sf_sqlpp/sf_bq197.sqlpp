@@ -1,0 +1,50 @@
+WITH monthly_product_sales AS (
+    SELECT
+        DATE_TRUNC_STR(MILLIS_TO_STR(o.created_at / 1000), 'month') AS sales_month,
+        p.id AS product_id,
+        p.name AS product_name,
+        p.brand,
+        p.category,
+        COUNT(oi.id) AS total_sales,
+        SUM(oi.sale_price) AS total_revenue
+    FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+        ON oi.order_id = o.order_id
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+        ON p.id = oi.product_id
+    WHERE o.status = 'Complete'
+      AND p.brand IS VALUED
+      AND o.created_at / 1000 < STR_TO_MILLIS('2024-07-01')
+    GROUP BY
+        DATE_TRUNC_STR(MILLIS_TO_STR(o.created_at / 1000), 'month'),
+        p.id,
+        p.name,
+        p.brand,
+        p.category
+),
+ranked_sales AS (
+    SELECT
+        mps.sales_month,
+        mps.product_id,
+        mps.product_name,
+        mps.brand,
+        mps.category,
+        mps.total_sales,
+        mps.total_revenue,
+        ROW_NUMBER() OVER (
+            PARTITION BY mps.sales_month
+            ORDER BY mps.total_sales DESC, mps.total_revenue DESC, mps.product_id ASC
+        ) AS rn
+    FROM monthly_product_sales AS mps
+)
+SELECT
+    sales_month AS month,
+    product_name,
+    brand,
+    category,
+    total_sales,
+    ROUND(total_revenue, 2) AS total_revenue,
+    'Complete' AS order_status
+FROM ranked_sales
+WHERE rn = 1
+ORDER BY month;

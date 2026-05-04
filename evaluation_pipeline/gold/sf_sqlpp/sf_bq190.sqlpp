@@ -1,0 +1,24 @@
+SELECT
+  ab.gender,
+  ab.min_age AS youngest_age,
+  SUM(CASE WHEN u.age = ab.min_age THEN 1 ELSE 0 END) AS youngest_user_count,
+  ab.max_age AS oldest_age,
+  SUM(CASE WHEN u.age = ab.max_age THEN 1 ELSE 0 END) AS oldest_user_count
+FROM (
+  SELECT
+    gender,
+    MIN(age) AS min_age,
+    MAX(age) AS max_age
+  FROM `thelookecommerce`.`thelook_ecommerce`.`users`
+  WHERE created_at >= 1546300800000000
+    AND created_at < 1651363200000000
+    AND gender IN ["M", "F"]
+  GROUP BY gender
+) AS ab
+JOIN `thelookecommerce`.`thelook_ecommerce`.`users` AS u
+  ON u.gender = ab.gender
+WHERE u.created_at >= 1546300800000000
+  AND u.created_at < 1651363200000000
+  AND u.gender IN ["M", "F"]
+GROUP BY ab.gender, ab.min_age, ab.max_age
+ORDER BY ab.gender;

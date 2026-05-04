@@ -1,0 +1,9 @@
+SELECT
+  SUBSTR(MILLIS_TO_STR(FLOOR(t.block_timestamp / 1000)), 0, 10) AS transaction_date,
+  SUM(t.amount) AS total_transaction_amount
+FROM `crypto`.`crypto_zilliqa`.`transactions` AS t
+WHERE t.block_timestamp < 1640995200000000
+  AND t.success = TRUE
+GROUP BY SUBSTR(MILLIS_TO_STR(FLOOR(t.block_timestamp / 1000)), 0, 10)
+ORDER BY total_transaction_amount DESC
+LIMIT 1;

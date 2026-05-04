@@ -1,0 +1,27 @@
+SELECT
+    DATE_PART_STR(MILLIS_TO_STR(FLOOR(o.created_at / 1000)), 'month') AS order_month,
+    u.country,
+    ii.product_department,
+    ii.product_category,
+    COUNT(DISTINCT o.order_id) AS number_of_orders,
+    COUNT(DISTINCT o.user_id) AS unique_purchasers,
+    SUM(ii.product_retail_price) - SUM(ii.cost) AS profit
+FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+JOIN `thelookecommerce`.`thelook_ecommerce`.`users` AS u
+    ON o.user_id = u.id
+JOIN `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+    ON o.order_id = oi.order_id
+JOIN `thelookecommerce`.`thelook_ecommerce`.`inventory_items` AS ii
+    ON oi.inventory_item_id = ii.id
+WHERE o.created_at >= 1609459200000000
+  AND o.created_at < 1640995200000000
+  AND u.created_at >= 1609459200000000
+  AND u.created_at < 1640995200000000
+  AND ii.created_at >= 1609459200000000
+  AND ii.created_at < 1640995200000000
+GROUP BY
+    DATE_PART_STR(MILLIS_TO_STR(FLOOR(o.created_at / 1000)), 'month'),
+    u.country,
+    ii.product_department,
+    ii.product_category
+ORDER BY order_month, u.country, ii.product_department, ii.product_category;

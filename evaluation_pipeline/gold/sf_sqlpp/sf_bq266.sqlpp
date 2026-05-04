@@ -1,0 +1,56 @@
+WITH monthly_product_sales AS (
+    SELECT DISTINCT
+        CASE
+            WHEN ii.sold_at >= 1577836800000000 AND ii.sold_at < 1580515200000000 THEN 1
+            WHEN ii.sold_at >= 1580515200000000 AND ii.sold_at < 1583020800000000 THEN 2
+            WHEN ii.sold_at >= 1583020800000000 AND ii.sold_at < 1585699200000000 THEN 3
+            WHEN ii.sold_at >= 1585699200000000 AND ii.sold_at < 1588291200000000 THEN 4
+            WHEN ii.sold_at >= 1588291200000000 AND ii.sold_at < 1590969600000000 THEN 5
+            WHEN ii.sold_at >= 1590969600000000 AND ii.sold_at < 1593561600000000 THEN 6
+            WHEN ii.sold_at >= 1593561600000000 AND ii.sold_at < 1596240000000000 THEN 7
+            WHEN ii.sold_at >= 1596240000000000 AND ii.sold_at < 1598918400000000 THEN 8
+            WHEN ii.sold_at >= 1598918400000000 AND ii.sold_at < 1601510400000000 THEN 9
+            WHEN ii.sold_at >= 1601510400000000 AND ii.sold_at < 1604188800000000 THEN 10
+            WHEN ii.sold_at >= 1604188800000000 AND ii.sold_at < 1606780800000000 THEN 11
+            WHEN ii.sold_at >= 1606780800000000 AND ii.sold_at < 1609459200000000 THEN 12
+        END AS month_num,
+        CASE
+            WHEN ii.sold_at >= 1577836800000000 AND ii.sold_at < 1580515200000000 THEN "2020-01"
+            WHEN ii.sold_at >= 1580515200000000 AND ii.sold_at < 1583020800000000 THEN "2020-02"
+            WHEN ii.sold_at >= 1583020800000000 AND ii.sold_at < 1585699200000000 THEN "2020-03"
+            WHEN ii.sold_at >= 1585699200000000 AND ii.sold_at < 1588291200000000 THEN "2020-04"
+            WHEN ii.sold_at >= 1588291200000000 AND ii.sold_at < 1590969600000000 THEN "2020-05"
+            WHEN ii.sold_at >= 1590969600000000 AND ii.sold_at < 1593561600000000 THEN "2020-06"
+            WHEN ii.sold_at >= 1593561600000000 AND ii.sold_at < 1596240000000000 THEN "2020-07"
+            WHEN ii.sold_at >= 1596240000000000 AND ii.sold_at < 1598918400000000 THEN "2020-08"
+            WHEN ii.sold_at >= 1598918400000000 AND ii.sold_at < 1601510400000000 THEN "2020-09"
+            WHEN ii.sold_at >= 1601510400000000 AND ii.sold_at < 1604188800000000 THEN "2020-10"
+            WHEN ii.sold_at >= 1604188800000000 AND ii.sold_at < 1606780800000000 THEN "2020-11"
+            WHEN ii.sold_at >= 1606780800000000 AND ii.sold_at < 1609459200000000 THEN "2020-12"
+        END AS sales_month,
+        p.id AS product_id,
+        p.name AS product_name,
+        p.retail_price - p.cost AS profit
+    FROM `thelookecommerce`.`thelook_ecommerce`.`inventory_items` AS ii
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+        ON ii.product_id = p.id
+    WHERE ii.sold_at IS NOT NULL
+      AND ii.sold_at >= 1577836800000000
+      AND ii.sold_at < 1609459200000000
+),
+monthly_min_profit AS (
+    SELECT
+        month_num,
+        MIN(profit) AS min_profit
+    FROM monthly_product_sales
+    GROUP BY month_num
+)
+SELECT DISTINCT
+    s.sales_month,
+    s.product_name,
+    s.profit
+FROM monthly_product_sales AS s
+JOIN monthly_min_profit AS m
+    ON s.month_num = m.month_num
+   AND s.profit = m.min_profit
+ORDER BY s.month_num, s.product_name;

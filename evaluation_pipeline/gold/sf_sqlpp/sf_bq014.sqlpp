@@ -1,0 +1,38 @@
+WITH valid_orders AS (
+    SELECT o.user_id, o.order_id, o.created_at
+    FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+    WHERE o.status NOT IN ['Cancelled', 'Returned']
+),
+first_order_timestamps AS (
+    SELECT vo.user_id, MIN(vo.created_at) AS first_created_at
+    FROM valid_orders AS vo
+    GROUP BY vo.user_id
+),
+first_orders AS (
+    SELECT vo.user_id, MIN(vo.order_id) AS order_id
+    FROM valid_orders AS vo
+    JOIN first_order_timestamps AS fot
+        ON vo.user_id = fot.user_id
+       AND vo.created_at = fot.first_created_at
+    GROUP BY vo.user_id
+),
+category_metrics AS (
+    SELECT
+        p.category AS product_category,
+        COUNT(DISTINCT fo.user_id) AS customer_count,
+        SUM(oi.sale_price) AS revenue
+    FROM first_orders AS fo
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+        ON fo.order_id = oi.order_id
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+        ON oi.product_id = p.id
+    WHERE oi.status NOT IN ['Cancelled', 'Returned']
+    GROUP BY p.category
+)
+SELECT
+    cm.product_category,
+    cm.revenue,
+    cm.customer_count
+FROM category_metrics AS cm
+ORDER BY cm.customer_count DESC, cm.revenue DESC
+LIMIT 1;

@@ -1,0 +1,37 @@
+WITH first_purchases AS (
+    SELECT
+        o.user_id,
+        MIN(o.created_at) AS first_purchase_at
+    FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+    WHERE o.status != 'Cancelled'
+    GROUP BY o.user_id
+),
+jan_2020_cohort AS (
+    SELECT fp.user_id
+    FROM first_purchases AS fp
+    WHERE DATE_PART_MILLIS(FLOOR(fp.first_purchase_at / 1000), 'year') = 2020
+      AND DATE_PART_MILLIS(FLOOR(fp.first_purchase_at / 1000), 'month') = 1
+),
+cohort_size AS (
+    SELECT COUNT(1) AS total_users
+    FROM jan_2020_cohort AS c
+),
+monthly_returns AS (
+    SELECT
+        DATE_PART_MILLIS(FLOOR(o.created_at / 1000), 'month') AS month_num,
+        COUNT(DISTINCT o.user_id) AS returning_users
+    FROM `thelookecommerce`.`thelook_ecommerce`.`orders` AS o
+    JOIN jan_2020_cohort AS c
+        ON o.user_id = c.user_id
+    WHERE o.status != 'Cancelled'
+      AND DATE_PART_MILLIS(FLOOR(o.created_at / 1000), 'year') = 2020
+      AND DATE_PART_MILLIS(FLOOR(o.created_at / 1000), 'month') BETWEEN 2 AND 12
+    GROUP BY DATE_PART_MILLIS(FLOOR(o.created_at / 1000), 'month')
+)
+SELECT
+    mr.month_num,
+    mr.returning_users,
+    cs.total_users AS cohort_users,
+    mr.returning_users * 1.0 / cs.total_users AS return_proportion
+FROM monthly_returns AS mr, cohort_size AS cs
+ORDER BY mr.month_num;

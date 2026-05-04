@@ -1,0 +1,11 @@
+SELECT CONCAT("https://cronoscan.com/address/", t.from_address) AS sender_url,
+       COUNT(1) AS transaction_count
+FROM `googblockchain`.`goog_blockchain_cronos_mainnet_us`.`transactions` AS t
+JOIN `googblockchain`.`goog_blockchain_cronos_mainnet_us`.`blocks` AS b
+  ON t.block_hash = b.block_hash
+WHERE t.to_address IS NOT NULL
+  AND b.size > 4096
+  AND b.block_timestamp >= "2023-01-01T00:00:00"
+GROUP BY t.from_address
+ORDER BY transaction_count DESC
+LIMIT 1;

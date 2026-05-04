@@ -1,0 +1,35 @@
+WITH monthly_product_profit AS (
+    SELECT
+        DATE_TRUNC_MILLIS(oi.created_at / 1000, 'month') AS month_start,
+        oi.product_id,
+        p.name AS product_name,
+        SUM(p.cost) AS total_cost,
+        SUM(oi.sale_price - p.cost) AS total_profit
+    FROM `thelookecommerce`.`thelook_ecommerce`.`order_items` AS oi
+    JOIN `thelookecommerce`.`thelook_ecommerce`.`products` AS p
+        ON oi.product_id = p.id
+    WHERE oi.created_at / 1000 < STR_TO_MILLIS('2024-01-01T00:00:00Z')
+    GROUP BY DATE_TRUNC_MILLIS(oi.created_at / 1000, 'month'), oi.product_id, p.name
+),
+ranked_products AS (
+    SELECT
+        mpp.month_start,
+        mpp.product_id,
+        mpp.product_name,
+        mpp.total_cost,
+        mpp.total_profit,
+        ROW_NUMBER() OVER (
+            PARTITION BY mpp.month_start
+            ORDER BY mpp.total_profit DESC, mpp.product_id ASC
+        ) AS rn
+    FROM monthly_product_profit AS mpp
+)
+SELECT
+    MILLIS_TO_STR(rp.month_start, '1111-11') AS month,
+    rp.product_id,
+    rp.product_name,
+    rp.total_cost,
+    rp.total_profit
+FROM ranked_products AS rp
+WHERE rp.rn = 1
+ORDER BY rp.month_start ASC;

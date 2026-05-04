@@ -1,0 +1,23 @@
+SELECT
+  r.creative_page_url AS page_url,
+  rs.first_shown AS first_shown_time,
+  rs.last_shown AS last_shown_time,
+  r.disapproval[0].removal_reason AS removal_reason,
+  r.disapproval[0].violation_category AS violation_category,
+  rs.times_shown_lower_bound,
+  rs.times_shown_upper_bound
+FROM `googleads`.`google_ads_transparency_center`.`removed_creative_stats` AS r
+UNNEST r.region_stats AS rs
+WHERE rs.region_code = 'HR'
+  AND (rs.times_shown_availability_date IS MISSING OR rs.times_shown_availability_date IS NULL)
+  AND rs.times_shown_lower_bound > 10000
+  AND rs.times_shown_upper_bound < 25000
+  AND (
+    IFMISSINGORNULL(r.audience_selection_approach_info.demographic_info, 'CRITERIA_UNUSED') != 'CRITERIA_UNUSED'
+    OR IFMISSINGORNULL(r.audience_selection_approach_info.geo_location, 'CRITERIA_UNUSED') != 'CRITERIA_UNUSED'
+    OR IFMISSINGORNULL(r.audience_selection_approach_info.contextual_signals, 'CRITERIA_UNUSED') != 'CRITERIA_UNUSED'
+    OR IFMISSINGORNULL(r.audience_selection_approach_info.customer_lists, 'CRITERIA_UNUSED') != 'CRITERIA_UNUSED'
+    OR IFMISSINGORNULL(r.audience_selection_approach_info.topics_of_interest, 'CRITERIA_UNUSED') != 'CRITERIA_UNUSED'
+  )
+ORDER BY rs.last_shown DESC
+LIMIT 5;
