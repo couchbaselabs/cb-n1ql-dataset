@@ -1,0 +1,91 @@
+WITH copy AS (
+  SELECT
+    case_barcode,
+    chromosome,
+    start_pos,
+    end_pos,
+    MAX(copy_number) AS copy_number
+  FROM `tcgamitelman`.`tcga_versioned`.`copy_number_segment_allelic_hg38_gdc_r23`
+  WHERE project_short_name = "TCGA-BRCA"
+  GROUP BY case_barcode, chromosome, start_pos, end_pos
+),
+
+joined AS (
+  SELECT
+    b.chromosome,
+    b.cytoband_name,
+    b.hg38_start,
+    b.hg38_stop,
+    c.case_barcode,
+    c.start_pos,
+    c.end_pos,
+    c.copy_number
+  FROM copy c
+  JOIN `tcgamitelman`.`prod`.`cytobands_hg38` b
+    ON b.chromosome = c.chromosome
+  WHERE c.start_pos <= b.hg38_stop
+    AND c.end_pos >= b.hg38_start
+),
+
+sums AS (
+  SELECT
+    chromosome,
+    cytoband_name,
+    hg38_start,
+    hg38_stop,
+    case_barcode,
+    SUM((LEAST(hg38_stop, end_pos) - GREATEST(hg38_start, start_pos)) * copy_number) AS weighted_sum,
+    SUM(LEAST(hg38_stop, end_pos) - GREATEST(hg38_start, start_pos)) AS total_overlap
+  FROM joined
+  GROUP BY chromosome, cytoband_name, hg38_start, hg38_stop, case_barcode
+),
+
+info AS (
+  SELECT
+    chromosome,
+    cytoband_name,
+    hg38_start,
+    hg38_stop,
+    case_barcode,
+    ROUND(weighted_sum / total_overlap) AS copy_number
+  FROM sums
+  WHERE total_overlap > 0
+),
+
+total_cases AS (
+  SELECT COUNT(DISTINCT case_barcode) AS total
+  FROM `tcgamitelman`.`tcga_versioned`.`copy_number_segment_allelic_hg38_gdc_r23`
+  WHERE project_short_name = "TCGA-BRCA"
+),
+
+aberrations AS (
+  SELECT
+    chromosome,
+    cytoband_name,
+    hg38_start,
+    hg38_stop,
+    SUM(CASE WHEN copy_number > 3 THEN 1 ELSE 0 END) AS total_amp,
+    SUM(CASE WHEN copy_number = 3 THEN 1 ELSE 0 END) AS total_gain,
+    SUM(CASE WHEN copy_number = 0 THEN 1 ELSE 0 END) AS total_homodel,
+    SUM(CASE WHEN copy_number = 1 THEN 1 ELSE 0 END) AS total_heterodel,
+    SUM(CASE WHEN copy_number = 2 THEN 1 ELSE 0 END) AS total_diploid
+  FROM info
+  GROUP BY chromosome, cytoband_name, hg38_start, hg38_stop
+)
+
+SELECT
+  cb.chromosome,
+  cb.cytoband_name,
+  cb.hg38_start,
+  cb.hg38_stop,
+  ROUND(100.0 * IFNULL(a.total_homodel, 0) / tc.total, 2) AS homozygous_deletion_pct,
+  ROUND(100.0 * IFNULL(a.total_heterodel, 0) / tc.total, 2) AS heterozygous_deletion_pct,
+  ROUND(100.0 * IFNULL(a.total_diploid, 0) / tc.total, 2) AS diploid_pct,
+  ROUND(100.0 * IFNULL(a.total_gain, 0) / tc.total, 2) AS gain_pct,
+  ROUND(100.0 * IFNULL(a.total_amp, 0) / tc.total, 2) AS amplification_pct
+FROM `tcgamitelman`.`prod`.`cytobands_hg38` cb
+LEFT JOIN aberrations a
+  ON a.chromosome = cb.chromosome
+ AND a.cytoband_name = cb.cytoband_name,
+total_cases tc
+ORDER BY cb.chromosome, cb.cytoband_name;

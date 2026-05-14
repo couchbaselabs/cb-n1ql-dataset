@@ -1,0 +1,36 @@
+WITH youtube_buyers AS (
+
+    SELECT DISTINCT t.fullVisitorId
+
+    FROM ga360.google_analytics_sample.ga_sessions_201707 t
+    UNNEST t.hits AS h
+    UNNEST h.product AS p
+
+    WHERE
+        p.v2ProductName IS NOT NULL
+        AND LOWER(p.v2ProductName) LIKE "%youtube%"
+        AND p.productRevenue IS NOT NULL
+),
+
+product_quantity AS (
+
+    SELECT
+        p.v2ProductName AS other_purchased_products,
+        SUM(p.productQuantity) AS quantity
+
+    FROM ga360.google_analytics_sample.ga_sessions_201707 t
+    UNNEST t.hits AS h
+    UNNEST h.product AS p
+
+    WHERE
+        p.productRevenue IS NOT NULL
+        AND NOT LOWER(p.v2ProductName) LIKE "%youtube%"
+        AND t.fullVisitorId IN (SELECT RAW fullVisitorId FROM youtube_buyers)
+
+    GROUP BY p.v2ProductName
+)
+
+SELECT other_purchased_products,quantity
+FROM product_quantity
+ORDER BY quantity DESC
+LIMIT 1;

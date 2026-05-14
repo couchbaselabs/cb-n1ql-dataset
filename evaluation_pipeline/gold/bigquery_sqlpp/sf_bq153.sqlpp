@@ -1,0 +1,25 @@
+WITH patient_avg AS (
+    SELECT
+        g.ParticipantBarcode,
+        AVG(LOG(g.normalized_count + 1)) AS avg_log_expr
+    FROM pancanceratlas1.pancancer_atlas_filtered.ebpp_adjustpancan_illuminahiseq_rnaseqv2_genexp_filtered g
+    WHERE g.Symbol = "IGF2"
+      AND g.Study = "LGG"
+      AND g.normalized_count IS NOT NULL
+    GROUP BY g.ParticipantBarcode
+),
+patient_histology AS (
+    SELECT
+        c.bcr_patient_barcode AS ParticipantBarcode,
+        c.icd_o_3_histology
+    FROM pancanceratlas1.pancancer_atlas_filtered.clinical_pancan_patient_with_followup_filtered c
+    WHERE c.acronym = "LGG"
+      AND c.icd_o_3_histology IS NOT NULL
+      AND NOT REGEXP_LIKE(c.icd_o_3_histology, "^\\[.*\\]$")
+)
+SELECT
+    h.icd_o_3_histology,
+    AVG(p.avg_log_expr) AS avg_log_igf2
+FROM patient_avg p
+JOIN patient_histology h ON p.ParticipantBarcode = h.ParticipantBarcode
+GROUP BY h.icd_o_3_histology;

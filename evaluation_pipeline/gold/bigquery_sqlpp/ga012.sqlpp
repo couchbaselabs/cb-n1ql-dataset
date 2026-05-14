@@ -1,0 +1,22 @@
+WITH tax_rates AS (
+  SELECT
+    i.item_category,
+    SUM(e.ecommerce.tax_value_in_usd) / SUM(e.ecommerce.purchase_revenue_in_usd) AS tax_rate
+  FROM ga4.ga4_obfuscated_sample_ecommerce.events_202011 e
+  UNNEST e.items i
+  WHERE e.event_date = "20201130"
+    AND e.event_name = "purchase"
+  GROUP BY i.item_category
+  ORDER BY tax_rate DESC
+  LIMIT 1
+)
+SELECT DISTINCT
+  e.ecommerce.transaction_id AS TRANSACTION_ID,
+  e.ecommerce.total_item_quantity AS TOTAL_ITEM_QUANTITY,
+  e.ecommerce.purchase_revenue_in_usd AS PURCHASE_REVENUE_IN_USD,
+  e.ecommerce.purchase_revenue AS PURCHASE_REVENUE
+FROM ga4.ga4_obfuscated_sample_ecommerce.events_202011 e
+UNNEST e.items i
+WHERE e.event_date = "20201130"
+  AND e.event_name = "purchase"
+  AND i.item_category IN (SELECT RAW t.item_category FROM tax_rates t)

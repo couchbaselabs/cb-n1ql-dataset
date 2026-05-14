@@ -1,0 +1,21 @@
+SELECT
+    a.country_name,
+    SUM(a.population) AS under_20,
+    p.midyear_population AS total,
+    ROUND((SUM(a.population) * 100.0) / p.midyear_population, 2) AS pct_under_20
+
+FROM `census_bureau_international`.`census_bureau_international`.`midyear_population_agespecific` AS a
+JOIN `census_bureau_international`.`census_bureau_international`.`midyear_population` AS p
+ON a.country_code = p.country_code
+
+WHERE a.year = 2020
+  AND a.age < 20
+  AND p.year = 2020
+
+GROUP BY a.country_name, p.midyear_population
+
+HAVING p.midyear_population > 0   -- avoid division issues
+
+ORDER BY pct_under_20 DESC
+
+LIMIT 10;

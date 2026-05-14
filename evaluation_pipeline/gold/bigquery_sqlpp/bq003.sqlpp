@@ -1,0 +1,69 @@
+WITH base AS (
+    SELECT 
+        "2017-04" AS month,
+        s.fullVisitorId,
+        s.totals.pageviews AS pageviews,
+        s.totals.transactions AS transactions
+    FROM ga360.google_analytics_sample.ga_sessions_201704 s
+
+    UNION ALL
+
+    SELECT 
+        "2017-05" as month,
+        s.fullVisitorId,
+        s.totals.pageviews,
+        s.totals.transactions
+    FROM ga360.google_analytics_sample.ga_sessions_201705 s
+
+    UNION ALL
+
+    SELECT 
+        "2017-06" as month,
+        s.fullVisitorId,
+        s.totals.pageviews,
+        s.totals.transactions
+    FROM ga360.google_analytics_sample.ga_sessions_201706 s
+
+    UNION ALL
+
+    SELECT 
+        "2017-07" as month,
+        s.fullVisitorId,
+        s.totals.pageviews,
+        s.totals.transactions
+    FROM ga360.google_analytics_sample.ga_sessions_201707 s
+),
+
+aggregated AS (
+    SELECT 
+        month,
+
+        /* purchase */
+        SUM(CASE 
+                WHEN transactions >= 1 
+                THEN pageviews 
+            END)
+/ COUNT(DISTINCT CASE 
+                    WHEN transactions >= 1 
+                    THEN fullVisitorId 
+                END) 
+        AS avg_pageviews_purchase,
+
+        /* non-purchase */
+        SUM(CASE 
+                WHEN transactions IS NULL 
+                THEN pageviews 
+            END)
+/ COUNT(DISTINCT CASE 
+                    WHEN transactions IS NULL 
+                    THEN fullVisitorId 
+                END) 
+        AS avg_pageviews_non_purchase
+
+    FROM base
+    GROUP BY month
+)
+
+SELECT *
+FROM aggregated
+ORDER BY month;

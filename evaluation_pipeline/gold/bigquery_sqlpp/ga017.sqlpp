@@ -1,0 +1,25 @@
+WITH unnested_events AS (
+    SELECT
+        T.user_pseudo_id,
+        T.event_timestamp,
+        MAX(CASE WHEN ep.`key` = "page_location" THEN ep.`value`.string_value ELSE NULL END) AS page_location
+    FROM ga4.ga4_obfuscated_sample_ecommerce.events_202101 AS T
+    UNNEST T.event_params AS ep
+    WHERE T.event_name = "page_view"
+    GROUP BY T.user_pseudo_id, T.event_timestamp
+),
+
+temp AS (
+    SELECT
+        page_location,
+        COUNT(*) AS event_count,
+        COUNT(DISTINCT user_pseudo_id) AS users
+    FROM unnested_events
+    WHERE page_location IS NOT NULL
+    GROUP BY page_location
+    ORDER BY event_count DESC
+)
+
+SELECT users
+FROM temp
+LIMIT 1;

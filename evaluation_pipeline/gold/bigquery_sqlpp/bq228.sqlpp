@@ -1,0 +1,6 @@
+SELECT c.major_category, SUM(c.`value`) AS incidents
+FROM london.london_crime.crime_by_lsoa c
+WHERE c.borough = 'Barking and Dagenham'
+GROUP BY c.major_category
+ORDER BY incidents DESC
+LIMIT 3

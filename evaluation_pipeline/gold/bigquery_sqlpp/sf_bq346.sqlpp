@@ -1,0 +1,24 @@
+WITH sampled_sops AS (
+    SELECT
+        d.SOPInstanceUID AS seg_SOPInstanceUID,
+        IFMISSINGORNULL(
+            d.ReferencedSeriesSequence[0].ReferencedInstanceSequence[0].ReferencedSOPInstanceUID,
+            d.ReferencedImageSequence[0].ReferencedSOPInstanceUID,
+            d.SourceImageSequence[0].ReferencedSOPInstanceUID
+        ) AS referenced_sop
+    FROM idc.idc_v17.dicom_all d
+    WHERE d.Modality = "SEG"
+        AND d.SOPClassUID = "1.2.840.10008.5.1.4.1.1.66.4"
+        AND d.`access` = "Public"
+)
+
+SELECT
+    s.SegmentedPropertyCategory.CodeMeaning AS segmentation_category,
+    COUNT(*) AS count_
+FROM sampled_sops ss
+JOIN idc.idc_v17.segmentations s
+    ON s.SOPInstanceUID = ss.seg_SOPInstanceUID
+WHERE s.SegmentedPropertyCategory.CodeMeaning IS NOT MISSING
+GROUP BY s.SegmentedPropertyCategory.CodeMeaning
+ORDER BY count_ DESC
+LIMIT 5;

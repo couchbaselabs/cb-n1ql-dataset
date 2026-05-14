@@ -1,0 +1,47 @@
+WITH patient_expr AS (
+    SELECT
+        g.ParticipantBarcode,
+        AVG(LOG(g.normalized_count + 1)) AS avg_expr
+    FROM pancanceratlas1.pancancer_atlas_filtered.ebpp_adjustpancan_illuminahiseq_rnaseqv2_genexp_filtered g
+    WHERE g.Symbol = "DRG2"
+      AND g.Study = "LGG"
+      AND g.normalized_count IS NOT NULL
+    GROUP BY g.ParticipantBarcode
+),
+tp53_mutated AS (
+    SELECT DISTINCT m.ParticipantBarcode
+    FROM pancanceratlas1.pancancer_atlas_filtered.mc3_maf_v5_one_per_tumor_sample m
+    WHERE m.Study = "LGG"
+      AND m.Hugo_Symbol = "TP53"
+      AND m.`FILTER` = "PASS"
+),
+labeled AS (
+    SELECT
+        p.avg_expr,
+        CASE WHEN t.ParticipantBarcode IS NOT NULL THEN 1 ELSE 0 END AS is_mutated
+    FROM patient_expr p
+    LEFT JOIN tp53_mutated t ON p.ParticipantBarcode = t.ParticipantBarcode
+),
+group_stats AS (
+    SELECT
+        is_mutated,
+        COUNT(*) AS n,
+        SUM(avg_expr) AS sum_x,
+        SUM(POWER(avg_expr, 2)) AS sum_x2
+    FROM labeled
+    GROUP BY is_mutated
+    HAVING COUNT(*) >= 10
+),
+stats AS (
+    SELECT
+        is_mutated,
+        n,
+        sum_x / n AS mean_x,
+        (sum_x2 - POWER(sum_x, 2) / n) / (n - 1) AS var_x
+    FROM group_stats
+),
+mut AS (SELECT mean_x, var_x, n FROM stats WHERE is_mutated = 1),
+nomut AS (SELECT mean_x, var_x, n FROM stats WHERE is_mutated = 0)
+SELECT
+    ROUND((mut.mean_x - nomut.mean_x) / SQRT(mut.var_x / mut.n + nomut.var_x / nomut.n), 2) AS T_SCORE
+FROM mut, nomut;

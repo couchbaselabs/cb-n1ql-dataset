@@ -1,0 +1,23 @@
+SELECT
+    p.v2ProductName AS other_purchased_products
+FROM ga360.google_analytics_sample.ga_sessions_201707 AS T
+UNNEST T.hits AS h
+UNNEST h.product AS p
+
+WHERE T.fullVisitorId IN (
+
+    -- Users who bought Henley
+    SELECT DISTINCT RAW T2.fullVisitorId
+    FROM ga360.google_analytics_sample.ga_sessions_201707 AS T2
+    UNNEST T2.hits AS h2
+    UNNEST h2.product AS p2
+    WHERE p2.v2ProductName = "YouTube Men's Vintage Henley"
+      AND p2.productRevenue IS NOT NULL
+)
+
+AND p.v2ProductName != "YouTube Men's Vintage Henley"
+AND p.productRevenue IS NOT NULL
+
+GROUP BY p.v2ProductName
+ORDER BY SUM(p.productQuantity) DESC
+LIMIT 1;

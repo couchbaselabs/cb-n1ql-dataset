@@ -1,0 +1,45 @@
+WITH visitor_ids AS (
+    SELECT DISTINCT s.fullVisitorId, s.visitId
+    FROM ga360.google_analytics_sample.ga_sessions_201701 s
+    UNNEST s.hits AS h
+    WHERE h.type = "PAGE"
+      AND REGEXP_CONTAINS(h.page.pagePath, "^/home")
+      AND REGEXP_CONTAINS(s.trafficSource.campaign, "Data Share")
+),
+all_pages AS (
+    SELECT s.fullVisitorId, s.visitId,
+           s.visitStartTime + h.time / 1000 AS ts,
+           h.page.pagePath AS pagePath
+    FROM ga360.google_analytics_sample.ga_sessions_201701 s
+    UNNEST s.hits AS h
+),
+visitor_pages AS (
+    SELECT ap.fullVisitorId, ap.visitId, ap.pagePath,
+           MIN(ap.ts) AS ts
+    FROM all_pages ap JOIN visitor_ids vi
+    ON ap.fullVisitorId = vi.fullVisitorId AND ap.visitId = vi.visitId
+    GROUP BY ap.fullVisitorId, ap.visitId, ap.pagePath
+),
+page_sequence AS (
+    SELECT vp.pagePath, vp.ts,
+           LEAD(vp.ts, 1) OVER (PARTITION BY vp.fullVisitorId, vp.visitId ORDER BY vp.ts) - vp.ts AS page_duration,
+           LEAD(vp.pagePath, 1) OVER (PARTITION BY vp.fullVisitorId, vp.visitId ORDER BY vp.ts) AS next_page
+    FROM visitor_pages vp
+),
+most_common AS (
+    SELECT ps.next_page, COUNT(*) AS cnt
+    FROM page_sequence ps
+    WHERE ps.next_page IS NOT NULL
+      AND REGEXP_CONTAINS(ps.pagePath, "^/home")
+    GROUP BY ps.next_page
+    ORDER BY cnt DESC
+    LIMIT 1
+),
+max_dur AS (
+    SELECT MAX(ps.page_duration) AS max_duration
+    FROM page_sequence ps
+    WHERE ps.page_duration IS NOT NULL
+      AND REGEXP_CONTAINS(ps.pagePath, "^/home")
+)
+SELECT mc.next_page, md.max_duration
+FROM most_common mc, max_dur md;

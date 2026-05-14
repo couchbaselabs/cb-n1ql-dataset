@@ -1,0 +1,62 @@
+WITH tmp AS (
+  SELECT
+    t.fullVisitorId,
+    t.visitId,
+    t.totals_transactions,
+    MIN(t.channelGrouping) AS channelGrouping,
+    MIN(t.geoNetwork_country) AS geoNetwork_country
+  FROM `ecommerce`.`ecommerce`.`rev_transactions` t
+  GROUP BY
+    t.fullVisitorId,
+    t.visitId,
+    t.totals_transactions
+),
+
+tmp1 AS (
+  SELECT
+    t.channelGrouping,
+    t.geoNetwork_country,
+    SUM(t.totals_transactions) AS tt
+  FROM tmp t
+  GROUP BY t.channelGrouping, t.geoNetwork_country
+),
+
+country_counts AS (
+  SELECT
+    t1.channelGrouping,
+    COUNT(DISTINCT t1.geoNetwork_country) AS CountryCount
+  FROM tmp1 t1
+  GROUP BY t1.channelGrouping
+),
+
+tmp2 AS (
+  SELECT
+    t1.channelGrouping,
+    t1.geoNetwork_country,
+    t1.tt AS TotalTransaction,
+    cc.CountryCount
+  FROM tmp1 t1
+  JOIN country_counts cc
+    ON t1.channelGrouping = cc.channelGrouping
+),
+
+tmp3 AS (
+  SELECT
+    t2.channelGrouping,
+    t2.geoNetwork_country AS Country,
+    t2.TotalTransaction
+  FROM tmp2 t2
+  WHERE t2.CountryCount > 1
+)
+
+SELECT
+  t3.channelGrouping,
+  t3.Country,
+  t3.TotalTransaction
+FROM tmp3 t3
+WHERE t3.TotalTransaction = (
+  SELECT RAW MAX(t4.TotalTransaction)
+  FROM tmp3 t4
+  WHERE t4.channelGrouping = t3.channelGrouping
+)[0]
+ORDER BY t3.channelGrouping;

@@ -1,0 +1,33 @@
+WITH visitors AS (
+    SELECT
+        COUNT(DISTINCT t.fullVisitorId) AS total_visitors
+    FROM ecommerce.ecommerce.web_analytics t
+),
+
+purchasers AS (
+    SELECT
+        COUNT(DISTINCT t.fullVisitorId) AS total_purchasers
+    FROM ecommerce.ecommerce.web_analytics t
+    WHERE t.totals.transactions IS NOT NULL
+),
+
+-- transactions per purchaser
+txn_per_user AS (
+    SELECT
+        t.fullVisitorId,
+        SUM(IFMISSINGORNULL(t.totals.transactions, 0)) AS total_txn
+    FROM ecommerce.ecommerce.web_analytics t
+    WHERE t.totals.transactions IS NOT NULL
+    GROUP BY t.fullVisitorId
+),
+
+transactions AS (
+    SELECT
+        AVG(total_txn) AS avg_transactions_per_purchaser
+    FROM txn_per_user
+)
+
+SELECT
+    p.total_purchasers / v.total_visitors AS conversion_rate,
+    a.avg_transactions_per_purchaser
+FROM visitors v, purchasers p, transactions a;

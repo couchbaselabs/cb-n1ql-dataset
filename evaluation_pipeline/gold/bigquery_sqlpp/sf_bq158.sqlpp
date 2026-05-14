@@ -1,0 +1,30 @@
+WITH brca_mc3_patients AS (
+    SELECT DISTINCT m.ParticipantBarcode
+    FROM pancanceratlas1.pancancer_atlas_filtered.mc3_maf_v5_one_per_tumor_sample m
+    WHERE m.Study = "BRCA"
+),
+denom_hist AS (
+    SELECT p.ParticipantBarcode, cb.histological_type
+    FROM brca_mc3_patients p
+    JOIN pancanceratlas1.pancancer_atlas_filtered.clinical_pancan_patient_with_followup_filtered cb
+      ON p.ParticipantBarcode = cb.bcr_patient_barcode
+    WHERE cb.histological_type IS NOT NULL
+),
+cdh1_mutants AS (
+    SELECT DISTINCT m.ParticipantBarcode
+    FROM pancanceratlas1.pancancer_atlas_filtered.mc3_maf_v5_one_per_tumor_sample m
+    WHERE m.Study = "BRCA"
+      AND m.Hugo_Symbol = "CDH1"
+)
+SELECT
+    dh.histological_type,
+    COUNT(DISTINCT CASE WHEN cm.ParticipantBarcode IS NOT NULL THEN dh.ParticipantBarcode END) AS MUTATED_CASES,
+    COUNT(DISTINCT dh.ParticipantBarcode) AS TOTAL_CASES,
+    ROUND(100.0 * COUNT(DISTINCT CASE WHEN cm.ParticipantBarcode IS NOT NULL THEN dh.ParticipantBarcode END)
+      / COUNT(DISTINCT dh.ParticipantBarcode), 2) AS MUTATION_PERCENTAGE
+FROM denom_hist dh
+LEFT JOIN cdh1_mutants cm ON dh.ParticipantBarcode = cm.ParticipantBarcode
+GROUP BY dh.histological_type
+ORDER BY (100.0 * COUNT(DISTINCT CASE WHEN cm.ParticipantBarcode IS NOT NULL THEN dh.ParticipantBarcode END)
+      / COUNT(DISTINCT dh.ParticipantBarcode)) DESC
+LIMIT 5;

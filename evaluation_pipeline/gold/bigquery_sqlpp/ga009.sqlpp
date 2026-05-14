@@ -1,0 +1,13 @@
+SELECT
+  ROUND(
+    COUNT(DISTINCT (CASE
+      WHEN (FIRST ep.`value`.string_value FOR ep IN e.event_params WHEN ep.`key` = 'session_engaged' END) = '1'
+           OR (FIRST ep.`value`.int_value FOR ep IN e.event_params WHEN ep.`key` = 'session_engaged' END) = 1
+      THEN CONCAT(e.user_pseudo_id, '-', TOSTRING(
+        (FIRST ep.`value`.int_value FOR ep IN e.event_params WHEN ep.`key` = 'ga_session_id' END)
+      ))
+      ELSE NULL
+    END)) * 1.0 / COUNT(DISTINCT e.user_pseudo_id),
+    6
+  ) AS avg_engaged_sessions_per_user
+FROM ga4.ga4_obfuscated_sample_ecommerce.events_202012 e

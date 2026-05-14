@@ -1,0 +1,37 @@
+WITH joined AS (
+  SELECT b.chromosome, b.cytoband_name, s.case_barcode, s.copy_number
+  FROM tcgamitelman.tcga_versioned.copy_number_segment_allelic_hg38_gdc_r23 s
+  JOIN tcgamitelman.prod.cytobands_hg38 b
+    ON b.chromosome = s.chromosome
+  WHERE s.project_short_name = 'TCGA-KIRC'
+    AND s.start_pos <= b.hg38_stop AND s.end_pos >= b.hg38_start
+),
+cbands AS (
+  SELECT chromosome, cytoband_name, case_barcode, MAX(copy_number) AS copy_number
+  FROM joined
+  GROUP BY chromosome, cytoband_name, case_barcode
+),
+aberrations AS (
+  SELECT chromosome, cytoband_name,
+    SUM(CASE WHEN copy_number > 3 THEN 1 ELSE 0 END) AS total_amp,
+    SUM(CASE WHEN copy_number = 3 THEN 1 ELSE 0 END) AS total_gain,
+    SUM(CASE WHEN copy_number = 0 THEN 1 ELSE 0 END) AS total_homodel,
+    SUM(CASE WHEN copy_number = 1 THEN 1 ELSE 0 END) AS total_heterodel,
+    SUM(CASE WHEN copy_number = 2 THEN 1 ELSE 0 END) AS total_normal
+  FROM cbands
+  GROUP BY chromosome, cytoband_name
+),
+total_cases AS (
+  SELECT COUNT(DISTINCT case_barcode) AS total
+  FROM tcgamitelman.tcga_versioned.copy_number_segment_allelic_hg38_gdc_r23
+  WHERE project_short_name = 'TCGA-KIRC'
+)
+SELECT a.chromosome, a.cytoband_name,
+  tc.total AS total_cases,
+  100.0 * a.total_amp / tc.total AS freq_amp,
+  100.0 * a.total_gain / tc.total AS freq_gain,
+  100.0 * a.total_homodel / tc.total AS freq_homodel,
+  100.0 * a.total_heterodel / tc.total AS freq_heterodel,
+  100.0 * a.total_normal / tc.total AS freq_normal
+FROM aberrations a, total_cases tc
+ORDER BY a.chromosome, a.cytoband_name;

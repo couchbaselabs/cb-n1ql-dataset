@@ -1,0 +1,22 @@
+WITH monthly_totals AS (
+  SELECT
+    SUM(CASE WHEN t.subscriber_type = 'Customer' OR t.c_subscription_type = 'Customer' THEN t.duration_sec / 60.0 ELSE 0 END) AS customer_minutes_sum,
+    SUM(CASE WHEN t.subscriber_type = 'Subscriber' OR t.c_subscription_type = 'Subscriber' THEN t.duration_sec / 60.0 ELSE 0 END) AS subscriber_minutes_sum,
+    DATE_PART_STR(t.end_date, 'month') AS end_month
+  FROM san_francisco_plus.san_francisco_bikeshare.bikeshare_trips t
+  WHERE DATE_PART_STR(t.end_date, 'year') = 2017
+  GROUP BY DATE_PART_STR(t.end_date, 'month')
+),
+cumulative_totals AS (
+  SELECT
+    mt.end_month,
+    SUM(mt2.customer_minutes_sum) / 1000.0 AS cumulative_minutes_cust,
+    SUM(mt2.subscriber_minutes_sum) / 1000.0 AS cumulative_minutes_sub
+  FROM monthly_totals mt
+  JOIN monthly_totals mt2 ON mt2.end_month <= mt.end_month
+  GROUP BY mt.end_month
+)
+SELECT ct.end_month
+FROM cumulative_totals ct
+ORDER BY ABS(ct.cumulative_minutes_cust - ct.cumulative_minutes_sub) DESC
+LIMIT 1;

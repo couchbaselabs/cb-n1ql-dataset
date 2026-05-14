@@ -1,0 +1,12 @@
+SELECT 
+    s.name AS sample_name,
+    COUNT(1) AS homo_ref_single_alt_count
+FROM `humangenomevariants`.`human_genome_variants`.`t__1000_genomes_phase_3_variants_20150220` AS v
+UNNEST v.`call` AS s
+WHERE ARRAY_LENGTH(v.alternate_bases) = 1
+  AND ARRAY_LENGTH(s.genotype) = 2
+  AND s.genotype[0] = 0
+  AND s.genotype[1] = 0
+GROUP BY s.name
+ORDER BY homo_ref_single_alt_count DESC
+LIMIT 10;

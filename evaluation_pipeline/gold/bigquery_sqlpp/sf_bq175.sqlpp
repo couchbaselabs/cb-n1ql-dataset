@@ -1,0 +1,34 @@
+WITH joined AS (
+  SELECT b.cytoband_name, s.case_barcode, s.copy_number
+  FROM tcgamitelman.tcga_versioned.copy_number_segment_allelic_hg38_gdc_r23 s
+  JOIN tcgamitelman.prod.cytobands_hg38 b
+    ON b.chromosome = s.chromosome
+  WHERE s.project_short_name = 'TCGA-KIRC'
+    AND s.chromosome = 'chr1'
+    AND b.chromosome = 'chr1'
+    AND s.start_pos <= b.hg38_stop AND s.end_pos >= b.hg38_start
+),
+cbands AS (
+  SELECT cytoband_name, case_barcode, MAX(copy_number) AS copy_number
+  FROM joined
+  GROUP BY cytoband_name, case_barcode
+),
+aberrations AS (
+  SELECT cytoband_name,
+    SUM(CASE WHEN copy_number > 3 THEN 1 ELSE 0 END) AS total_amp,
+    SUM(CASE WHEN copy_number = 3 THEN 1 ELSE 0 END) AS total_gain,
+    SUM(CASE WHEN copy_number = 1 THEN 1 ELSE 0 END) AS total_heterodel
+  FROM cbands
+  GROUP BY cytoband_name
+),
+ranked AS (
+  SELECT cytoband_name,
+    DENSE_RANK() OVER (ORDER BY total_amp DESC) AS rank_amp,
+    DENSE_RANK() OVER (ORDER BY total_gain DESC) AS rank_gain,
+    DENSE_RANK() OVER (ORDER BY total_heterodel DESC) AS rank_heterodel
+  FROM aberrations
+)
+SELECT cytoband_name
+FROM ranked
+WHERE rank_amp <= 11 AND rank_gain <= 11 AND rank_heterodel <= 11
+ORDER BY cytoband_name;

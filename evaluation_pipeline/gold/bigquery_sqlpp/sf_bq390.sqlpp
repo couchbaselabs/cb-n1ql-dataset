@@ -1,0 +1,22 @@
+WITH mr_studies AS (
+    SELECT DISTINCT d.StudyInstanceUID
+    FROM idc.idc_v17.dicom_all d
+    WHERE d.Modality = "MR"
+        AND d.collection_id = "qin_prostate_repeatability"
+        AND LOWER(d.SeriesDescription) LIKE "%t2 weighted axial%"
+),
+
+seg_studies AS (
+    SELECT DISTINCT d.StudyInstanceUID
+    FROM idc.idc_v17.dicom_all d
+    JOIN idc.idc_v17.segmentations s
+        ON d.SOPInstanceUID = s.SOPInstanceUID
+    WHERE d.collection_id = "qin_prostate_repeatability"
+        AND s.SegmentedPropertyCategory.CodeMeaning = "Anatomical Structure"
+        AND LOWER(s.SegmentedPropertyType.CodeMeaning) LIKE "%peripheral zone%"
+)
+
+SELECT DISTINCT m.StudyInstanceUID
+FROM mr_studies m
+JOIN seg_studies s
+    ON m.StudyInstanceUID = s.StudyInstanceUID;

@@ -1,0 +1,16 @@
+SELECT SUM(TO_NUMBER(d.NumberOfFrames)) AS total_frames
+FROM `idc`.`idc_v17`.`dicom_all` d                                                                                                                            
+WHERE d.collection_name = "TCGA-BRCA"
+  AND d.Modality = "SM"
+  AND d.NumberOfFrames IS NOT MISSING
+
+  AND ANY sd IN d.SpecimenDescriptionSequence SATISFIES
+        ANY prep IN sd.SpecimenPreparationSequence SATISFIES
+            ANY step IN prep.SpecimenPreparationStepContentItemSequence SATISFIES
+                ANY code IN step.ConceptCodeSequence SATISFIES
+                    code.CodeMeaning IS NOT MISSING
+                    AND LOWER(code.CodeMeaning) LIKE "%eosin%"
+                END
+            END
+        END
+  END;

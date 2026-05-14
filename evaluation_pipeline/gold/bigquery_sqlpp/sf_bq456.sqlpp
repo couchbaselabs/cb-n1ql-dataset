@@ -1,0 +1,30 @@
+SELECT
+    d.PatientID,
+    d.StudyInstanceUID,
+    d.StudyDate,
+    q.findingSite.CodeMeaning AS FindingSite,
+
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "elongation" THEN q.`Value` END) AS Elongation,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "flatness" THEN q.`Value` END) AS Flatness,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "least axis in 3d length" THEN q.`Value` END) AS LeastAxis3D,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "major axis in 3d length" THEN q.`Value` END) AS MajorAxis3D,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "maximum 3d diameter of a mesh" THEN q.`Value` END) AS Max3DDiameter,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "minor axis in 3d length" THEN q.`Value` END) AS MinorAxis3D,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "sphericity" THEN q.`Value` END) AS Sphericity,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "surface area of mesh" THEN q.`Value` END) AS SurfaceArea,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "surface to volume ratio" THEN q.`Value` END) AS SurfaceToVolumeRatio,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "volume from voxel summation" THEN q.`Value` END) AS VolumeVoxel,
+    MAX(CASE WHEN LOWER(q.Quantity.CodeMeaning) = "volume of mesh" THEN q.`Value` END) AS VolumeMesh
+
+FROM `idc`.`idc_v17`.`dicom_all` d
+JOIN `idc`.`idc_v17`.`quantitative_measurements` q
+    ON q.segmentationInstanceUID = d.SOPInstanceUID
+
+WHERE d.StudyDate IS NOT MISSING
+  AND SUBSTR(d.StudyDate, 0, 4) = "2001"
+
+GROUP BY
+    d.PatientID,
+    d.StudyInstanceUID,
+    d.StudyDate,
+    q.findingSite.CodeMeaning;
