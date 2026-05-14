@@ -359,7 +359,7 @@ def evaluate_single_sql_instance(
             }
 
         # Snowflake-sourced instances use a different bucket naming convention
-        if instance_id.startswith("sf"):
+        if str(instance_id).startswith("sf"):
             bucket_name, scope_name = db_to_bucket_scope_sf(db_name)
         else:
             bucket_name, scope_name = db_to_bucket_scope(db_name)
@@ -548,7 +548,7 @@ def save_correct_ids_to_csv(output_results, result_dir: str):
 
     transformed_ids = []
     for item in correct_ids:
-        if item.startswith(("bq", "ga", "local")):
+        if str(item).startswith(("bq", "ga", "local")):
             transformed_ids.append(f"{item}")
         else:
             transformed_ids.append(item)
@@ -586,9 +586,9 @@ def evaluate_spider2sql_sqlpp(args, temp_dir: Path, cluster):
 
     pred_ids = []
     if mode == "sql":
-        pred_ids = [Path(file).stem for file in os.listdir(pred_result_dir) if file.endswith(".sqlpp")]
+        pred_ids = [int(Path(file).stem) if Path(file).stem.isdigit() else Path(file).stem for file in os.listdir(pred_result_dir) if file.endswith(".sqlpp")]
     elif mode == "exec_result":
-        pred_ids = [Path(file).stem for file in os.listdir(pred_result_dir) if file.endswith(".csv")]
+        pred_ids = [int(Path(file).stem) if Path(file).stem.isdigit() else Path(file).stem for file in os.listdir(pred_result_dir) if file.endswith(".csv")]
 
     gold_ids = list(eval_standard_dict.keys())
     # Only evaluate instance_ids that are in spider2-lite-local.jsonl (Couchbase local DBs)

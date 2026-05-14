@@ -1,0 +1,13 @@
+Text
+"In a way, the measurement you proposed is widely used in case of error (model quality) analysis -- then it is called MAE, ""mean absolute error""."
+"In accepting an answer it seems important to me that we pay attention to whether the answer is circular.  The normal distribution is based on these measurements of variance from squared error terms, but that isn't in and of itself a justification for using (X-M)^2 over |X-M|."
+"Do you think the term standard means this is THE standard today ? Isn't it like asking why principal component are ""principal"" and not secondary ?"
+My understanding of this question is that it could be shorter just be something like: what is the difference between the MAE and the RMSE ? otherwise it is difficult to deal with.
+"Related question: http://stats.stackexchange.com/q/354/919 (""Bias towards natural numbers in the case of least squares."")"
+"*""the absolute-value method will be smaller""*, actually, it'll be bigger for small variances - it'll always be closer to 1 though (unless it is 1 or 0)"
+"Despite the antiquity of this question, I've posted a new answer, which says something that I think is worth knowing about."
+"This following article has the pictorial & easy-to-understand explanation. [http://www.mathsisfun.com/data/standard-deviation.html](http://www.mathsisfun.com/data/standard-deviation.html) Thanks,
+Rajesh."
+See http://www.graphpad.com/curvefit/linear_regression.htm See Minimizing sum-of-squares section
+Every answer offered so far is circular. They focus on ease of mathematical calculations (which is nice but by no means fundamental) or on properties of the Gaussian (Normal) distribution and OLS. Around 1800 Gauss *started* with least squares and variance and from those *derived* the Normal distribution--there's the circularity. A truly fundamental reason that has not been invoked in any answer yet is the *unique* role played by the variance in the [Central Limit Theorem](http://stats.stackexchange.com/questions/3734). Another is the importance in decision theory of minimizing quadratic loss.
+"+1 @whuber: Thanks for pointing this out, which was bothering me as well.  Now, though, have to go and read up on the Central Limit Theorem!  Oh well. ;-)"

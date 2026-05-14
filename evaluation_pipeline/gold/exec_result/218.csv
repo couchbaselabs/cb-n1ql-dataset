@@ -1,0 +1,2 @@
+CAST(COUNT(CASE WHEN T1.element <> 'f' THEN T2.molecule_id ELSE NULL END) AS REAL) * 100 / COUNT(T2.molecule_id)
+99.89165763813651

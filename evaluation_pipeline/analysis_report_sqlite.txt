@@ -1,0 +1,1872 @@
+======================================================================
+SQL++ EVALUATION LOG ANALYSIS REPORT
+======================================================================
+
+Final Score: 0.4962 (66/133 correct)
+Error Rate: 67/133 = 50.4%
+Total local questions: 1047
+
+Total errors captured: 67
+  - N1QL query errors: 24
+  - Wrong output (result mismatch): 42
+  - Evaluation errors: 0
+  - Comparison errors: 1
+
+======================================================================
+ERROR CATEGORIES (sorted by frequency)
+======================================================================
+
+[6] Out of memory
+    Instances: local035, local050, local059, local060, local061, local063
+
+[5] CROSS JOIN not supported
+    Instances: local003, local070, local081, local130, local284
+
+[3] Other syntax error (3000)
+    Instances: local066, local279, local309
+
+[2] Other error (1080)
+    Instances: local025, local058
+
+[2] Invalid function: ARRAY_TO_STRING
+    Instances: local073, local201
+
+[1] Other error (4036)
+    Instances: local170
+
+[1] UNION after ORDER BY/LIMIT
+    Instances: local220
+
+[1] Other error (3300)
+    Instances: local269
+
+[1] Other error (3220)
+    Instances: local275
+
+[1] Missing secondary index for join
+    Instances: local298
+
+[1] Other error (0)
+    Instances: local355
+
+[1] Comparison script error
+    Instances: local197
+
+======================================================================
+ROOT CAUSE ANALYSIS
+======================================================================
+
+SQL dialect mismatch (SQL vs SQL++): 6 instances
+
+Missing/unsupported functions: 2 instances
+
+Resource constraints: 8 instances
+
+Other: 9 instances
+
+======================================================================
+ERRORS BY DATABASE
+======================================================================
+  None: 24 errors
+
+======================================================================
+TOP 10 SLOWEST QUERIES
+======================================================================
+
+Instance ID     Duration (s)   Rows     Event
+-------------------------------------------------------
+local355        360.001        ?        query_error
+local025        359.516        ?        query_error
+local058        359.516        ?        query_error
+local035        344.684        ?        query_error
+local050        286.209        ?        query_error
+local067        280.898        10       query_success
+local210        259.83         21       query_success
+local040        253.206        3        query_success
+local209        237.898        1        query_success
+local041        236.213        1        query_success
+
+======================================================================
+PASS RATE BY DATABASE
+======================================================================
+
+Database                  Pass     Fail     Rate
+--------------------------------------------------
+unknown                   66       67       49.6%
+
+======================================================================
+WRONG OUTPUT ANALYSIS (queries that ran but produced incorrect results)
+======================================================================
+
+Total result mismatches: 42
+  - Shape mismatch (different rows/cols): 42
+  - Value mismatch (same shape, wrong values): 0
+
+Instance ID     DB                   Pred Shape     Gold Shape     Issue
+---------------------------------------------------------------------------
+local002        E_commerce           1x1            1x3 | 1x1 | 1x1 SHAPE
+local007        Baseball             1x1            1x1 | 1x1 | 1x1 SHAPE
+local017        California_Traffic_Collision 0x0            1x1 | 1x1      SHAPE
+local028        Brazilian_E_Commerce 12x4           12x4 | 12x4    SHAPE
+local029        Brazilian_E_Commerce 3x5            3x5 | 3x4      SHAPE
+local031        Brazilian_E_Commerce 1x1            1x1            SHAPE
+local049        modern_data          1x2            1x1 | 1x1      SHAPE
+local056        sqlite-sakila        1x1            1x1 | 1x2      SHAPE
+local064        bank_sales_trading   1x7            1x7 | 1x7 | 1x5 SHAPE
+local065        modern_data          1x1            1x1 | 1x1      SHAPE
+local075        bank_sales_trading   9x6            9x6 | 9x6      SHAPE
+local098        Db-IMDB              1x1            1x1 | 1x1 | 1x1 | 1x1 | 1x1 SHAPE
+local100        Db-IMDB              1x1            1x1            SHAPE
+local131        EntertainmentAgency  25x4           25x5           SHAPE
+local141        AdventureWorks       58x5           62x3 | 58x5    SHAPE
+local152        imdb_movies          9x9            9x9 | 9x9      SHAPE
+local156        bank_sales_trading   20x7           20x5 | 20x5 | 20x5 | 20x5 SHAPE
+local157        bank_sales_trading   20x5           20x3 | 18x3 | 20x3 SHAPE
+local169        city_legislation     20x4           20x4 | 20x2 | 20x2 | 20x3 SHAPE
+local195        sqlite-sakila        5x6            1x1 | 1x3 | 1x1 SHAPE
+local229        IPL                  578x6          579x6 | 577x6  SHAPE
+local244        music                3x4            3x4 | 3x4      SHAPE
+local253        education_business   20x4           20x4 | 20x4 | 20x4 SHAPE
+local258        IPL                  330x6          329x5 | 329x5 | 330x5 | 330x5 | 329x5 SHAPE
+local259        IPL                  468x18         468x18 | 468x18 | 468x18 SHAPE
+local263        stacking             2x3            2x3            SHAPE
+local270        oracle_sql           1x2            4x2 | 4x3      SHAPE
+local273        oracle_sql           6x2            2x2 | 2x3      SHAPE
+local277        oracle_sql           1x1            1x1 | 1x1 | 1x1 | 1x1 SHAPE
+local283        EU_soccer            90x5           88x5           SHAPE
+local285        bank_sales_trading   0x0            24x11 | 24x11 | 24x11 | 24x11 SHAPE
+local286        electronic_sales     236x10         236x7 | 236x8 | 236x8 | 236x9 | 236x8 | 236x8 | 236x8 | 236x8 | 233x8 SHAPE
+local299        bank_sales_trading   0x0            3x2 | 3x2 | 3x2 | 3x2 SHAPE
+local301        bank_sales_trading   3x4            3x2 | 3x4 | 3x4 SHAPE
+local302        bank_sales_trading   5x3            1x2 | 1x2      SHAPE
+local330        log                  9x2            5x2 | 5x2 | 5x2 SHAPE
+local331        log                  2x2            3x2 | 3x2 | 3x2 SHAPE
+local336        f1                   2x2            4x2 | 4x2 | 4x2 | 4x2 | 4x2 SHAPE
+local344        f1                   6x2            4x2 | 4x2      SHAPE
+local356        f1                   0x0            76x1 | 76x1 | 92x1 | 60x1 | 77x1 SHAPE
+local358        log                  5x2            5x2 | 5x2      SHAPE
+local360        log                  9x2            9x3 | 9x3 | 9x3 SHAPE
+
+  Wrong output by database:
+    AdventureWorks: 1
+    Baseball: 1
+    Brazilian_E_Commerce: 3
+    California_Traffic_Collision: 1
+    Db-IMDB: 2
+    EU_soccer: 1
+    E_commerce: 1
+    EntertainmentAgency: 1
+    IPL: 3
+    bank_sales_trading: 8
+    city_legislation: 1
+    education_business: 1
+    electronic_sales: 1
+    f1: 3
+    imdb_movies: 1
+    log: 4
+    modern_data: 2
+    music: 1
+    oracle_sql: 3
+    sqlite-sakila: 2
+    stacking: 1
+
+======================================================================
+DETAILED DIFF FOR EACH MISMATCH
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+  local002  (db: E_commerce)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `daily_toy_sales` AS (
+      SELECT
+        SPLIT(`o`.`order_purchase_timestamp`, " ")[0] AS `sales_date`,
+        COUNT(1) AS `toy_sales`
+      FROM `E_commerce`.`E_commerce_scope`.`order_items` AS `oi`
+      INNER JOIN `E_commerce`.`E_commerce_scope`.`orders` AS `o`
+        ON `o`.`order_id` = `oi`.`order_id`
+      INNER JOIN `E_commerce`.`E_commerce_scope`.`products` AS `p`
+        ON `p`.`product_id` = `oi`.`product_id`
+      LEFT JOIN `E_commerce`.`E_commerce_scope`.`product_category_name_translation` AS `t`
+        ON `t`.`
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['sum_of_four_5_day_moving_averages']
+    Gold-only columns: ['AVG_MOVING_AVERAGE', 'NUM_DAYS', 'TOTAL_MOVING_AVERAGES']
+
+  Pred head (1 rows):
+  sum_of_four_5_day_moving_averages
+  ---------------------------------
+  36.890234106531814               
+
+  Gold head (1 rows):
+  NUM_DAYS | TOTAL_MOVING_AVERAGES | AVG_MOVING_AVERAGE
+  ---------+-----------------------+-------------------
+  4        | 4340.1019             | 1085.0255         
+
+──────────────────────────────────────────────────────────────────────
+  local007  (db: Baseball)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `player_spans` AS (
+      SELECT
+        (
+          ROUND(ABS(DATE_DIFF_STR(`p`.`final_game`, `p`.`debut`, "year")), 2)
+          + ROUND(ABS(DATE_DIFF_STR(`p`.`final_game`, `p`.`debut`, "month")) / 12, 2)
+          + ROUND(ABS(DATE_DIFF_STR(`p`.`final_game`, `p`.`debut`, "day")) / 365, 2)
+        ) AS `career_span_years`
+      FROM `Baseball`.`Baseball_scope`.`player` AS `p`
+      WHERE `p`.`debut` IS NOT MISSING
+        AND `p`.`debut` IS NOT NULL
+        AND `p`.`debut` != ""
+        AND `p`.`final_game` IS NOT MISSING
+        AND `p
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['average_single_career_span_years']
+    Gold-only columns: ['AVG_CAREER_SPAN_YEARS']
+
+  Pred head (1 rows):
+  average_single_career_span_years
+  --------------------------------
+  14.37                           
+
+  Gold head (1 rows):
+  AVG_CAREER_SPAN_YEARS
+  ---------------------
+  4.85                 
+
+──────────────────────────────────────────────────────────────────────
+  local017  (db: California_Traffic_Collision)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `cause_counts` AS (
+      SELECT SUBSTR(`c`.`collision_date`, 0, 4) AS `collision_year`,
+             `c`.`primary_collision_factor` AS `cause`,
+             COUNT(1) AS `cause_count`
+      FROM `California_Traffic_Collision`.`California_Traffic_Collision_scope`.`collisions` AS `c`
+      WHERE `c`.`collision_date` IS NOT MISSING
+        AND `c`.`collision_date` IS NOT NULL
+        AND `c`.`primary_collision_factor` IS NOT MISSING
+        AND `c`.`primary_collision_factor` IS NOT NULL
+      GROUP BY SUBSTR(`c`.`collision_date`
+        ... (truncated)
+
+  Column differences:
+    Gold-only columns: ['YEAR']
+
+  Gold head (1 rows):
+  YEAR
+  ----
+  2021
+
+──────────────────────────────────────────────────────────────────────
+  local028  (db: Brazilian_E_Commerce)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `months` AS (
+      SELECT "01" AS `month_num`, "January" AS `month`
+      UNION ALL
+      SELECT "02" AS `month_num`, "February" AS `month`
+      UNION ALL
+      SELECT "03" AS `month_num`, "March" AS `month`
+      UNION ALL
+      SELECT "04" AS `month_num`, "April" AS `month`
+      UNION ALL
+      SELECT "05" AS `month_num`, "May" AS `month`
+      UNION ALL
+      SELECT "06" AS `month_num`, "June" AS `month`
+      UNION ALL
+      SELECT "07" AS `month_num`, "July" AS `month`
+      UNION ALL
+      SELECT "08" AS `month_num`, "August" AS `month`
+      U
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['month']
+    Gold-only columns: ['Month']
+    Common columns:    ['2016', '2017', '2018']
+
+  Pred head (5 rows):
+  2016 | 2017 | 2018 | month   
+  -----+------+------+---------
+  0    | 0    | 0    | January 
+  0    | 0    | 0    | February
+  0    | 0    | 0    | March   
+  0    | 0    | 0    | April   
+  0    | 0    | 0    | May     
+
+  Gold head (5 rows):
+  Month    | 2016 | 2017 | 2018
+  ---------+------+------+-----
+  January  | 0    | 283  | 6597
+  February | 0    | 1351 | 5850
+  March    | 0    | 2382 | 6824
+  April    | 0    | 1849 | 7850
+  May      | 0    | 3751 | 7111
+
+  Value mismatches (first 5):
+    Row    Column                    Pred                      Gold                     
+    ------ ------------------------- ------------------------- -------------------------
+    9      2016                      0                         205                      
+    10     2016                      0                         58                       
+    11     2016                      0                         4                        
+    0      2017                      0                         283                      
+    1      2017                      0                         1351                     
+
+──────────────────────────────────────────────────────────────────────
+  local029  (db: Brazilian_E_Commerce)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `delivered_orders` AS (
+      SELECT
+        `o`.`order_id` AS `order_id`,
+        `c`.`customer_unique_id` AS `customer_unique_id`,
+        `c`.`customer_city` AS `customer_city`,
+        `c`.`customer_state` AS `customer_state`
+      FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS `o`
+      JOIN `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_customers` AS `c`
+        ON `o`.`customer_id` = `c`.`customer_id`
+      WHERE `o`.`order_status` = "delivered"
+    ),
+    `order_payment_totals` AS (
+      S
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['average_payment_value', 'delivered_order_count']
+    Gold-only columns: ['avg_payment_value', 'delivered_orders']
+    Common columns:    ['customer_city', 'customer_state', 'customer_unique_id']
+
+  Pred head (3 rows):
+  average_payment_value | customer_city | customer_state | customer_unique_id             | delivered_order_count
+  ----------------------+---------------+----------------+--------------------------------+----------------------
+  58.62                 | sao paulo     | SP             | 8d50f5eadf50201ccdcedfb9e2a... | 15                   
+  130.3                 | praia grande  | SP             | 3e43e6105506432c953e165fb2a... | 9                    
+  160.39                | recife        | PE             | ca77025e7201e3b30c44b472ff3... | 7                    
+
+  Gold head (3 rows):
+  customer_unique_id             | delivered_orders | avg_payment_value  | customer_city | customer_state
+  -------------------------------+------------------+--------------------+---------------+---------------
+  8d50f5eadf50201ccdcedfb9e2a... | 15               | 58.618             | sao paulo     | SP            
+  3e43e6105506432c953e165fb2a... | 9                | 130.29555555555555 | praia grande  | SP            
+  1b6c7548a2a1f9037c1fd3ddfed... | 7                | 137.00142857142856 | ituiutaba     | MG            
+
+  Value mismatches (first 3):
+    Row    Column                    Pred                      Gold                     
+    ------ ------------------------- ------------------------- -------------------------
+    2      customer_city             recife                    ituiutaba                
+    2      customer_state            PE                        MG                       
+    2      customer_unique_id        ca77025e7201e3b30c44b472f 1b6c7548a2a1f9037c1fd3ddf
+
+──────────────────────────────────────────────────────────────────────
+  local031  (db: Brazilian_E_Commerce)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `annual_delivered` AS (
+      SELECT SUBSTR(`o`.`order_purchase_timestamp`, 0, 4) AS `order_year`,
+             COUNT(1) AS `annual_delivered_orders_volume`
+      FROM `Brazilian_E_Commerce`.`Brazilian_E_Commerce_scope`.`olist_orders` AS `o`
+      WHERE `o`.`order_status` = 'delivered'
+        AND `o`.`order_purchase_timestamp` IS NOT MISSING
+        AND `o`.`order_purchase_timestamp` IS NOT NULL
+        AND SUBSTR(`o`.`order_purchase_timestamp`, 0, 4) IN ["2016", "2017", "2018"]
+      GROUP BY SUBSTR(`o`.`order_purchase_
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['highest_monthly_delivered_orders_volume']
+    Gold-only columns: ['HIGHEST_MONTHLY_VOLUME']
+
+  Pred head (1 rows):
+  highest_monthly_delivered_orders_volume
+  ---------------------------------------
+  265                                    
+
+  Gold head (1 rows):
+  HIGHEST_MONTHLY_VOLUME
+  ----------------------
+  205                   
+
+──────────────────────────────────────────────────────────────────────
+  local049  (db: modern_data)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `filtered_companies` AS (
+      SELECT `ci`.`industry` AS `industry`, SUBSTR(`cd`.`date_joined`, 0, 4) AS `join_year`
+      FROM `modern_data`.`modern_data_scope`.`companies_dates` AS `cd`
+      JOIN `modern_data`.`modern_data_scope`.`companies_industries` AS `ci`
+        ON `cd`.`company_id` = `ci`.`company_id`
+      WHERE `cd`.`date_joined` IS NOT NULL
+        AND SUBSTR(`cd`.`date_joined`, 0, 4) BETWEEN "2019" AND "2021"
+        AND `ci`.`industry` IS NOT NULL
+    ),
+    `top_industry` AS (
+      SELECT `fc`.`industry`, COUNT(
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['avg_new_unicorns_per_year_2019_2021', 'top_industry']
+    Gold-only columns: ['AVERAGE_NEW_UNICORNS_PER_YEAR']
+
+  Pred head (1 rows):
+  avg_new_unicorns_per_year_2019_2021 | top_industry
+  ------------------------------------+-------------
+  59.666666666666664                  | Fintech     
+
+  Gold head (1 rows):
+  AVERAGE_NEW_UNICORNS_PER_YEAR
+  -----------------------------
+  60.333333                    
+
+──────────────────────────────────────────────────────────────────────
+  local056  (db: sqlite-sakila)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `monthly_payments` AS (
+      SELECT
+        `p`.`customer_id` AS `customer_id`,
+        SUBSTR(`p`.`payment_date`, 0, 7) AS `payment_month`,
+        SUM(`p`.`amount`) AS `monthly_amount`
+      FROM `sqlite_sakila`.`sqlite_sakila_scope`.`payment` AS `p`
+      WHERE `p`.`customer_id` IS NOT MISSING
+        AND `p`.`payment_date` IS NOT MISSING
+        AND `p`.`amount` IS NOT NULL
+      GROUP BY `p`.`customer_id`, SUBSTR(`p`.`payment_date`, 0, 7)
+    ),
+    `monthly_changes` AS (
+      SELECT
+        `mp`.`customer_id` AS `customer_id`,
+        `m
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['full_name']
+    Gold-only columns: ['CUSTOMER_FULL_NAME']
+
+  Pred head (1 rows):
+  full_name        
+  -----------------
+  HECTOR POINDEXTER
+
+  Gold head (1 rows):
+  CUSTOMER_FULL_NAME
+  ------------------
+  STEPHEN QUALLS    
+
+──────────────────────────────────────────────────────────────────────
+  local064  (db: bank_sales_trading)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+      `hm`.`month_number` AS `highest_positive_balance_month`,
+      `hm`.`positive_customer_count` AS `highest_month_positive_customer_count`,
+      `hm`.`average_month_end_balance` AS `highest_month_average_month_end_balance`,
+      `lm`.`month_number` AS `lowest_positive_balance_month`,
+      `lm`.`positive_customer_count` AS `lowest_month_positive_customer_count`,
+      `lm`.`average_month_end_balance` AS `lowest_month_average_month_end_balance`,
+      `hm`.`average_month_end_balance` - `lm`.`average_month_end_b
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['average_balance_difference', 'highest_month_average_month_end_balance', 'highest_month_positive_customer_count', 'highest_positive_balance_month', 'lowest_month_average_month_end_balance', 'lowest_month_positive_customer_count', 'lowest_positive_balance_month']
+    Gold-only columns: ['average_difference', 'highest_avg_balance', 'highest_month', 'highest_positive_count', 'lowest_avg_balance', 'lowest_month', 'lowest_positive_count']
+
+  Pred head (1 rows):
+  average_balance_difference | highest_month_average_month_end_balance | highest_month_positive_customer_count | highest_positive_balance_month | lowest_month_average_month_end_balance | lowest_month_positive_customer_count | lowest_positive_balance_month
+  ---------------------------+-----------------------------------------+---------------------------------------+--------------------------------+----------------------------------------+--------------------------------------+------------------------------
+  0                          | 0                                       | 0                                     | 1                              | 0                                      | 0                                    | 1                            
+
+  Gold head (1 rows):
+  highest_month | highest_positive_count | highest_avg_balance | lowest_month | lowest_positive_count | lowest_avg_balance | average_difference
+  --------------+------------------------+---------------------+--------------+-----------------------+--------------------+-------------------
+  1             | 424                    | 557.704             | 5            | 0                     | 0.0                | 557.704           
+
+──────────────────────────────────────────────────────────────────────
+  local065  (db: modern_data)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `valid_orders` AS (
+      SELECT RAW `r`.`order_id`
+      FROM `modern_data`.`modern_data_scope`.`pizza_clean_runner_orders` AS `r`
+      WHERE `r`.`cancellation` IS MISSING OR `r`.`cancellation` IS NULL
+    )
+    SELECT SUM(
+      CASE
+        WHEN `pn`.`pizza_name` = "Meat Lovers" THEN 12
+        WHEN `pn`.`pizza_name` = "Vegetarian" THEN 10
+        ELSE 0
+      END
+      + CASE
+          WHEN `co`.`extras` IS MISSING OR `co`.`extras` IS NULL OR TRIM(`co`.`extras`) = "" THEN 0
+          ELSE ARRAY_LENGTH(SPLIT(`co`.`extras`, ","))
+        END
+    
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['total_income']
+    Gold-only columns: ['TOTAL_INCOME']
+
+  Pred head (1 rows):
+  total_income
+  ------------
+  34          
+
+  Gold head (1 rows):
+  TOTAL_INCOME
+  ------------
+  144         
+
+──────────────────────────────────────────────────────────────────────
+  local075  (db: bank_sales_trading)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `filtered_events` AS (
+      SELECT
+        `ph`.`product_id` AS `product_id`,
+        `ph`.`page_name` AS `product_name`,
+        `e`.`visit_id` AS `visit_id`,
+        `e`.`cookie_id` AS `cookie_id`,
+        `ei`.`event_name` AS `event_name`
+      FROM `bank_sales_trading`.`bank_sales_trading_scope`.`shopping_cart_events` AS `e`
+      JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`shopping_cart_page_hierarchy` AS `ph`
+        ON `e`.`page_id` = `ph`.`page_id`
+      JOIN `bank_sales_trading`.`bank_sales_trading_scope`.`sho
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['product_name', 'times_added_to_cart', 'times_left_in_cart_without_purchase', 'times_purchased', 'times_viewed']
+    Gold-only columns: ['ADDED_TO_CART', 'LEFT_IN_CART', 'PRODUCT_VIEWS', 'PURCHASES', 'page_name']
+    Common columns:    ['product_id']
+
+  Pred head (5 rows):
+  product_id | product_name   | times_added_to_cart | times_left_in_cart_without_purchase | times_purchased | times_viewed
+  -----------+----------------+---------------------+-------------------------------------+-----------------+-------------
+  1          | Salmon         | 938                 | 938                                 | 0               | 1559        
+  2          | Kingfish       | 920                 | 920                                 | 0               | 1559        
+  3          | Tuna           | 931                 | 931                                 | 0               | 1515        
+  4          | Russian Caviar | 946                 | 946                                 | 0               | 1563        
+  5          | Black Truffle  | 924                 | 924                                 | 0               | 1469        
+
+  Gold head (5 rows):
+  product_id | page_name      | PRODUCT_VIEWS | ADDED_TO_CART | PURCHASES | LEFT_IN_CART
+  -----------+----------------+---------------+---------------+-----------+-------------
+  1.0        | Salmon         | 1559          | 938           | 711       | 227         
+  2.0        | Kingfish       | 1559          | 920           | 707       | 213         
+  3.0        | Tuna           | 1515          | 931           | 697       | 234         
+  4.0        | Russian Caviar | 1563          | 946           | 697       | 249         
+  5.0        | Black Truffle  | 1469          | 924           | 707       | 217         
+
+──────────────────────────────────────────────────────────────────────
+  local098  (db: Db-IMDB)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `actor_years` AS (
+      SELECT TRIM(`mc`.`PID`) AS `PID`,
+             TO_NUMBER(REGEXP_REPLACE(TRIM(`m`.`year`), '^.*?(\\d{4})\\s*$', '\\1')) AS `year_num`
+      FROM `Db_IMDB`.`Db_IMDB_scope`.`M_Cast` AS `mc`
+      INNER JOIN `Db_IMDB`.`Db_IMDB_scope`.`Movie` AS `m`
+        ON `m`.`MID` = `mc`.`MID`
+      WHERE `mc`.`PID` IS NOT MISSING
+        AND `mc`.`PID` IS NOT NULL
+        AND TRIM(`mc`.`PID`) != ''
+        AND `m`.`year` IS NOT MISSING
+        AND `m`.`year` IS NOT NULL
+        AND REGEXP_LIKE(TRIM(`m`.`year`), '^.*\\d{4}\\
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['actor_count']
+    Gold-only columns: ['ACTORS_WITH_NO_LONG_BREAKS']
+
+  Pred head (1 rows):
+  actor_count
+  -----------
+  32127      
+
+  Gold head (1 rows):
+  ACTORS_WITH_NO_LONG_BREAKS
+  --------------------------
+  29066                     
+
+──────────────────────────────────────────────────────────────────────
+  local100  (db: Db-IMDB)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `srk` AS (
+      SELECT DISTINCT TRIM(`p`.`PID`) AS `PID`
+      FROM `Db_IMDB`.`Db_IMDB_scope`.`Person` AS `p`
+      WHERE `p`.`PID` IS NOT NULL
+        AND `p`.`PID` IS NOT MISSING
+        AND `p`.`Name` IS NOT NULL
+        AND `p`.`Name` IS NOT MISSING
+        AND TRIM(`p`.`Name`) = 'Shahrukh Khan'
+    ),
+    `srk_movies` AS (
+      SELECT DISTINCT TRIM(`mc`.`MID`) AS `MID`
+      FROM `Db_IMDB`.`Db_IMDB_scope`.`M_Cast` AS `mc`
+      JOIN `srk` AS `s`
+        ON TRIM(`mc`.`PID`) = `s`.`PID`
+      WHERE `mc`.`MID` IS NOT NULL
+        AND `mc`.`MID` 
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['shahrukh_number_2_count']
+    Gold-only columns: ['COUNT(DISTINCT PID)']
+
+  Pred head (1 rows):
+  shahrukh_number_2_count
+  -----------------------
+  0                      
+
+  Gold head (1 rows):
+  COUNT(DISTINCT PID)
+  -------------------
+  25698              
+
+──────────────────────────────────────────────────────────────────────
+  local131  (db: EntertainmentAgency)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+      `ms`.`StyleName`,
+      SUM(CASE WHEN `mp`.`PreferenceSeq` = 1 THEN 1 ELSE 0 END) AS `FirstPreferenceCount`,
+      SUM(CASE WHEN `mp`.`PreferenceSeq` = 2 THEN 1 ELSE 0 END) AS `SecondPreferenceCount`,
+      SUM(CASE WHEN `mp`.`PreferenceSeq` = 3 THEN 1 ELSE 0 END) AS `ThirdPreferenceCount`
+    FROM `EntertainmentAgency`.`EntertainmentAgency_scope`.`Musical_Styles` AS `ms`
+    LEFT JOIN `EntertainmentAgency`.`EntertainmentAgency_scope`.`Musical_Preferences` AS `mp`
+      ON `mp`.`StyleID` = `ms`.`StyleID`
+    GROUP
+        ... (truncated)
+
+  Column differences:
+    Gold-only columns: ['StyleID']
+    Common columns:    ['FirstPreferenceCount', 'SecondPreferenceCount', 'StyleName', 'ThirdPreferenceCount']
+
+  Pred head (5 rows):
+  FirstPreferenceCount | SecondPreferenceCount | StyleName           | ThirdPreferenceCount
+  ---------------------+-----------------------+---------------------+---------------------
+  0                    | 1                     | 40's Ballroom Music | 1                   
+  0                    | 0                     | 50's Music          | 0                   
+  1                    | 0                     | 60's Music          | 0                   
+  0                    | 1                     | 70's Music          | 0                   
+  0                    | 0                     | 80's Music          | 1                   
+
+  Gold head (5 rows):
+  StyleID | StyleName           | FirstPreferenceCount | SecondPreferenceCount | ThirdPreferenceCount
+  --------+---------------------+----------------------+-----------------------+---------------------
+  1       | 40's Ballroom Music | 0                    | 1                     | 1                   
+  2       | 50's Music          | 0                    | 0                     | 0                   
+  3       | 60's Music          | 1                    | 0                     | 0                   
+  4       | 70's Music          | 0                    | 1                     | 0                   
+  5       | 80's Music          | 0                    | 0                     | 1                   
+
+──────────────────────────────────────────────────────────────────────
+  local141  (db: AdventureWorks)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `annual_sales` AS (
+      SELECT
+        TO_NUMBER(`h`.`salespersonid`) AS `salesperson_id`,
+        TO_NUMBER(SUBSTR(`h`.`orderdate`, 0, 4)) AS `sales_year`,
+        SUM(`h`.`subtotal`) AS `annual_total_sales`
+      FROM `AdventureWorks`.`AdventureWorks_scope`.`salesorderheader` AS `h`
+      WHERE `h`.`salespersonid` IS NOT MISSING
+        AND `h`.`salespersonid` IS NOT NULL
+        AND `h`.`salespersonid` != ""
+        AND `h`.`orderdate` IS NOT MISSING
+        AND `h`.`orderdate` IS NOT NULL
+        AND `h`.`orderdate` != ""
+      GRO
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['annual_sales_quota', 'annual_total_sales', 'sales_minus_quota', 'sales_year', 'salesperson_id']
+    Gold-only columns: ['Difference', 'Salesperson', 'Year']
+
+  Pred head (5 rows):
+  annual_sales_quota | annual_total_sales | sales_minus_quota  | sales_year | salesperson_id
+  -------------------+--------------------+--------------------+------------+---------------
+  126000             | 28926.246499999997 | -97073.7535        | 2011       | 274           
+  471000             | 453524.5233        | -17475.4767        | 2012       | 274           
+  521000             | 431088.72380000004 | -89911.27619999996 | 2013       | 274           
+  187000             | 178584.3625        | -8415.637500000012 | 2014       | 274           
+  1425000            | 875823.8318000003  | -549176.1681999997 | 2011       | 275           
+
+  Gold head (5 rows):
+  Salesperson | Year | Difference        
+  ------------+------+-------------------
+  274.0       | 2011 | -93432.0845       
+  274.0       | 2012 | 45197.36800000002 
+  274.0       | 2013 | -35119.35800000001
+  274.0       | 2014 | 14288.5196        
+  275.0       | 2011 | -438701.9098      
+
+──────────────────────────────────────────────────────────────────────
+  local152  (db: imdb_movies)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `director_stats` AS (
+      SELECT
+        `dm`.`name_id` AS `director_id`,
+        `n`.`name` AS `director_name`,
+        COUNT(DISTINCT `dm`.`movie_id`) AS `movie_count`,
+        ROUND(AVG(`m`.`duration`)) AS `avg_inter_movie_duration`,
+        ROUND(AVG(`r`.`avg_rating`), 2) AS `avg_rating`,
+        SUM(`r`.`total_votes`) AS `total_votes`,
+        MIN(`r`.`avg_rating`) AS `min_rating`,
+        MAX(`r`.`avg_rating`) AS `max_rating`,
+        SUM(`m`.`duration`) AS `total_movie_duration`
+      FROM `imdb_movies`.`imdb_movies_scope`.`
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['avg_inter_movie_duration', 'avg_rating', 'director_id', 'director_name', 'max_rating', 'min_rating', 'movie_count', 'total_movie_duration', 'total_votes']
+    Gold-only columns: ['AVG_INTER_MOVIE_DURATION', 'AVG_RATING', 'DIRECTOR_ID', 'DIRECTOR_NAME', 'MAX_RATING', 'MIN_RATING', 'MOVIE_COUNT', 'TOTAL_MOVIE_DURATION', 'TOTAL_VOTES']
+
+  Pred head (5 rows):
+  avg_inter_movie_duration | avg_rating | director_id | director_name     | max_rating | min_rating | movie_count | total_movie_duration | total_votes
+  -------------------------+------------+-------------+-------------------+------------+------------+-------------+----------------------+------------
+  123                      | 5.42       | nm1777967   | A.L. Vijay        | 6.9        | 3.7        | 5           | 613                  | 1754       
+  86                       | 3.02       | nm2096009   | Andrew Jones      | 3.2        | 2.7        | 5           | 432                  | 1989       
+  126                      | 6.02       | nm0814469   | Sion Sono         | 6.4        | 5.4        | 4           | 502                  | 2972       
+  100                      | 6.48       | nm0001752   | Steven Soderbergh | 7.0        | 6.2        | 4           | 401                  | 171684     
+  96                       | 5.45       | nm0425364   | Jesse V. Johnson  | 6.5        | 4.2        | 4           | 383                  | 14778      
+
+  Gold head (5 rows):
+  DIRECTOR_ID | DIRECTOR_NAME     | MOVIE_COUNT | AVG_INTER_MOVIE_DURATION | AVG_RATING | TOTAL_VOTES | MIN_RATING | MAX_RATING | TOTAL_MOVIE_DURATION
+  ------------+-------------------+-------------+--------------------------+------------+-------------+------------+------------+---------------------
+  nm1777967   | A.L. Vijay        | 5           | 177                      | 5.42       | 1754        | 3.7        | 6.9        | 613                 
+  nm2096009   | Andrew Jones      | 5           | 191                      | 3.02       | 1989        | 2.7        | 3.2        | 432                 
+  nm0814469   | Sion Sono         | 4           | 331                      | 6.03       | 2972        | 5.4        | 6.4        | 502                 
+  nm0001752   | Steven Soderbergh | 4           | 254                      | 6.48       | 171684      | 6.2        | 7.0        | 401                 
+  nm0425364   | Jesse V. Johnson  | 4           | 299                      | 5.45       | 14778       | 4.2        | 6.5        | 383                 
+
+──────────────────────────────────────────────────────────────────────
+  local156  (db: bank_sales_trading)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+      `x`.`year` AS `year`,
+      `x`.`region` AS `region`,
+      `x`.`total_dollar_amount_spent` AS `total_dollar_amount_spent`,
+      `x`.`total_quantity_purchased` AS `total_quantity_purchased`,
+      `x`.`annual_avg_purchase_price` AS `annual_avg_purchase_price`,
+      RANK() OVER (
+        PARTITION BY `x`.`year`
+        ORDER BY `x`.`annual_avg_purchase_price` DESC
+      ) AS `region_rank_by_avg_purchase_price`,
+      CASE
+        WHEN `x`.`previous_year_avg_purchase_price` IS NULL
+          OR `x`.`previous_year_avg_purchase_pri
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['annual_avg_purchase_price', 'annual_percentage_change_in_cost', 'region_rank_by_avg_purchase_price', 'total_dollar_amount_spent', 'total_quantity_purchased', 'year']
+    Gold-only columns: ['avg_price_rank', 'avg_purchase_price', 'pct_change_from_prior_year', 'txn_year']
+    Common columns:    ['region']
+
+  Pred head (5 rows):
+  annual_avg_purchase_price | annual_percentage_change_in_cost | region        | region_rank_by_avg_purchase_price | total_dollar_amount_spent | total_quantity_purchased | year
+  --------------------------+----------------------------------+---------------+-----------------------------------+---------------------------+--------------------------+-----
+  8031.1102321332           | NaN                              | India         | 1                                 | 6270398.633194416         | 780.7636119980003        | 2018
+  7829.998856964972         | NaN                              | Asia          | 2                                 | 7627657.322571672         | 974.1581655259996        | 2018
+  7690.712833435067         | NaN                              | Africa        | 3                                 | 7568421.906972988         | 984.0988827549996        | 2018
+  7578.47510418075          | NaN                              | United States | 4                                 | 41118808.52287529         | 5425.736438744997        | 2018
+  7524.87792890684          | NaN                              | Australia     | 5                                 | 22509215.70904507         | 2991.306426722998        | 2018
+
+  Gold head (5 rows):
+  txn_year | region        | avg_purchase_price | avg_price_rank | pct_change_from_prior_year
+  ---------+---------------+--------------------+----------------+---------------------------
+  2018     | India         | 8031.110232133203  | 1              | 118.19137081402044        
+  2018     | Asia          | 7829.998856964974  | 2              | 95.60626426357732         
+  2018     | Africa        | 7690.712833435067  | 3              | 92.86443313539888         
+  2018     | United States | 7578.4751041807485 | 4              | 98.80541802500144         
+  2018     | Australia     | 7524.877928906838  | 5              | 88.9565934363511          
+
+──────────────────────────────────────────────────────────────────────
+  local157  (db: bank_sales_trading)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `normalized` AS (
+      SELECT
+        `b`.`ticker` AS `ticker`,
+        `b`.`market_date` AS `market_date`,
+        STR_TO_MILLIS(`b`.`market_date`, '02-01-2006') AS `date_millis`,
+        CASE
+          WHEN `b`.`volume` = '-' THEN 0
+          WHEN `b`.`volume` LIKE '%K' THEN TONUMBER(SUBSTR(`b`.`volume`, 0, LENGTH(`b`.`volume`) - 1)) * 1000
+          WHEN `b`.`volume` LIKE '%M' THEN TONUMBER(SUBSTR(`b`.`volume`, 0, LENGTH(`b`.`volume`) - 1)) * 1000000
+          ELSE TONUMBER(`b`.`volume`)
+        END AS `volume`
+      FROM `bank_s
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['current_volume', 'daily_volume_pct_change', 'market_date', 'prev_non_zero_volume']
+    Gold-only columns: ['daily_percentage_change', 'date']
+    Common columns:    ['ticker']
+
+  Pred head (5 rows):
+  current_volume | daily_volume_pct_change | market_date | ticker | prev_non_zero_volume
+  ---------------+-------------------------+-------------+--------+---------------------
+  80330          | NaN                     | 01-08-2021  | BTC    | NaN                 
+  74810          | -6.8716544254948335     | 02-08-2021  | BTC    | 80330.0             
+  260            | -99.65245288063093      | 03-08-2021  | BTC    | 74810.0             
+  79220          | 30369.23076923077       | 04-08-2021  | BTC    | 260.0               
+  130600         | 64.85735925271396       | 05-08-2021  | BTC    | 79220.0             
+
+  Gold head (5 rows):
+  ticker | date       | daily_percentage_change
+  -------+------------+------------------------
+  BTC    | 2021-08-01 | NaN                    
+  BTC    | 2021-08-02 | -6.871654425494834     
+  BTC    | 2021-08-03 | -99.65245288063092     
+  BTC    | 2021-08-04 | 30369.23076923077      
+  BTC    | 2021-08-05 | 64.85735925271396      
+
+──────────────────────────────────────────────────────────────────────
+  local169  (db: city_legislation)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `first_terms` AS (
+      SELECT
+        `t`.`id_bioguide`,
+        MIN(`t`.`term_start`) AS `first_term_start`
+      FROM `city_legislation`.`city_legislation_scope`.`legislators_terms` AS `t`
+      WHERE `t`.`id_bioguide` IS NOT MISSING
+        AND `t`.`id_bioguide` IS NOT NULL
+        AND `t`.`term_start` IS NOT MISSING
+        AND `t`.`term_start` IS NOT NULL
+      GROUP BY `t`.`id_bioguide`
+    ),
+    `cohort` AS (
+      SELECT
+        `ft`.`id_bioguide`,
+        `ft`.`first_term_start`,
+        CONCAT(SUBSTR(`ft`.`first_term_start`, 0, 4), "-12
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['annual_retention_rate', 'cohort_size', 'period_number', 'retained_legislators']
+    Gold-only columns: ['LEGISLATORS_RETAINED', 'RETENTION_RATE_PERCENT', 'TOTAL_COHORT', 'YEAR_AFTER_FIRST_TERM']
+
+  Pred head (5 rows):
+  annual_retention_rate | cohort_size | retained_legislators | period_number
+  ----------------------+-------------+----------------------+--------------
+  0.0                   | 4033        | 0                    | NaN          
+  0.0                   | 4033        | 0                    | NaN          
+  0.0                   | 4033        | 0                    | NaN          
+  0.0                   | 4033        | 0                    | NaN          
+  0.0                   | 4033        | 0                    | NaN          
+
+  Gold head (5 rows):
+  YEAR_AFTER_FIRST_TERM | TOTAL_COHORT | LEGISLATORS_RETAINED | RETENTION_RATE_PERCENT
+  ----------------------+--------------+----------------------+-----------------------
+  1                     | 4033         | 3956                 | 98.09                 
+  2                     | 4033         | 3113                 | 77.19                 
+  3                     | 4033         | 3094                 | 76.72                 
+  4                     | 4033         | 2754                 | 68.29                 
+  5                     | 4033         | 2735                 | 67.82                 
+
+──────────────────────────────────────────────────────────────────────
+  local195  (db: sqlite-sakila)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `total_customers` AS (
+      SELECT COUNT(*) AS `customer_count`
+      FROM `sqlite_sakila`.`sqlite_sakila_scope`.`customer` AS `c`
+    ),
+    `actor_rental_counts` AS (
+      SELECT `fa`.`actor_id`, COUNT(*) AS `rental_count`
+      FROM `sqlite_sakila`.`sqlite_sakila_scope`.`film_actor` AS `fa`
+      JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`inventory` AS `i`
+        ON `i`.`film_id` = `fa`.`film_id`
+      JOIN `sqlite_sakila`.`sqlite_sakila_scope`.`rental` AS `r`
+        ON `r`.`inventory_id` = `i`.`inventory_id`
+      GROUP BY `
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['actor_id', 'customer_percentage', 'customers_who_rented_this_actor', 'first_name', 'last_name', 'rental_count']
+    Gold-only columns: ['CAST(COUNT(DISTINCT T3."CUSTOMER_ID") AS REAL) * 100 / (\n    SELECT\n      COUNT(*)\n    FROM "SQLITE_SAKILA"."SQLITE_SAKILA"."CUSTOMER"\n  )']
+
+  Pred head (5 rows):
+  actor_id | customer_percentage | customers_who_rented_this_actor | first_name | last_name   | rental_count
+  ---------+---------------------+---------------------------------+------------+-------------+-------------
+  107      | 71.12               | 426                             | GINA       | DEGENERES   | 753         
+  181      | 67.78               | 406                             | MATTHEW    | CARREY      | 678         
+  198      | 67.11               | 402                             | MARY       | KEITEL      | 674         
+  144      | 66.61               | 399                             | ANGELA     | WITHERSPOON | 654         
+  102      | 63.61               | 381                             | WALTER     | TORN        | 640         
+
+  Gold head (1 rows):
+  CAST(COUNT(DISTINCT T3."CUSTOMER_ID") AS REAL) * 100 / (
+    SELECT
+      COUNT(*)
+    FROM "SQLITE_SAKILA"."SQLITE_SAKILA"."CUSTOMER"
+  )
+  ------------------------------------------------------------------------------------------------------------------------------------------
+  99.1652754590985                                                                                                                          
+
+──────────────────────────────────────────────────────────────────────
+  local229  (db: IPL)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `extras_per_ball` AS (
+      SELECT `e`.`match_id`, `e`.`innings_no`, `e`.`over_id`, `e`.`ball_id`,
+             SUM(`e`.`extra_runs`) AS `extra_runs`
+      FROM `IPL`.`IPL_scope`.`extra_runs` AS `e`
+      GROUP BY `e`.`match_id`, `e`.`innings_no`, `e`.`over_id`, `e`.`ball_id`
+    ),
+    `wickets_per_ball` AS (
+      SELECT `w`.`match_id`, `w`.`innings_no`, `w`.`over_id`, `w`.`ball_id`,
+             COUNT(1) AS `wickets_on_ball`
+      FROM `IPL`.`IPL_scope`.`wicket_taken` AS `w`
+      GROUP BY `w`.`match_id`, `w`.`innings_no`, `w
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['partnership_runs', 'player_1_id', 'player_1_score', 'player_2_id', 'player_2_score']
+    Gold-only columns: ['PLAYER1_ID', 'PLAYER1_SCORE', 'PLAYER2_ID', 'PLAYER2_SCORE', 'TOTAL_PARTNERSHIP_RUNS']
+    Common columns:    ['match_id']
+
+  Pred head (5 rows):
+  match_id | partnership_runs | player_1_id | player_1_score | player_2_id | player_2_score
+  ---------+------------------+-------------+----------------+-------------+---------------
+  335987   | 60               | 2           | 45             | 4           | 12            
+  335987   | 60               | 2           | 41             | 1           | 10            
+  335988   | 73               | 19          | 42             | 23          | 31            
+  335989   | 112              | 42          | 52             | 40          | 50            
+  335990   | 55               | 11          | 38             | 9           | 16            
+
+  Gold head (5 rows):
+  match_id | PLAYER1_ID | PLAYER2_ID | PLAYER1_SCORE | PLAYER2_SCORE | TOTAL_PARTNERSHIP_RUNS
+  ---------+------------+------------+---------------+---------------+-----------------------
+  335987   | 2          | 4          | 45            | 12            | 57                    
+  335988   | 19         | 23         | 42            | 31            | 73                    
+  335989   | 42         | 40         | 52            | 50            | 102                   
+  335990   | 11         | 9          | 38            | 16            | 54                    
+  335991   | 56         | 59         | 22            | 9             | 31                    
+
+──────────────────────────────────────────────────────────────────────
+  local244  (db: music)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `track_revenue` AS (
+      SELECT
+        `il`.`TrackId`,
+        SUM(`il`.`UnitPrice` * `il`.`Quantity`) AS `track_revenue`
+      FROM `music`.`music_scope`.`InvoiceLine` AS `il`
+      GROUP BY `il`.`TrackId`
+    ),
+    `classified_tracks` AS (
+      SELECT
+        `t`.`TrackId`,
+        (`t`.`Milliseconds` / 60000.0) AS `duration_minutes`,
+        CASE
+          WHEN (`t`.`Milliseconds` / 60000.0) < 5 THEN "short"
+          WHEN (`t`.`Milliseconds` / 60000.0) <= 10 THEN "medium"
+          ELSE "long"
+        END AS `length_category`,
+        IFMISSING
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['category', 'max_time_minutes', 'min_time_minutes', 'total_revenue']
+    Gold-only columns: ['CATEGORY', 'MAX_DURATION_MINUTES', 'MIN_DURATION_MINUTES', 'TOTAL_REVENUE']
+
+  Pred head (3 rows):
+  category | max_time_minutes  | min_time_minutes  | total_revenue    
+  ---------+-------------------+-------------------+------------------
+  long     | 88.11588333333333 | 10.048            | 246.6300000000003
+  medium   | 9.941983333333333 | 5.005916666666667 | 541.5300000000034
+  short    | 4.99635           | 0.01785           | 1540.440000000012
+
+  Gold head (3 rows):
+  CATEGORY | MIN_DURATION_MINUTES | MAX_DURATION_MINUTES | TOTAL_REVENUE     
+  ---------+----------------------+----------------------+-------------------
+  long     | 47.726183            | 88.115883            | 41.78999999999999 
+  medium   | 3.28925              | 47.0861              | 1817.5499999999995
+  short    | 0.01785              | 3.2888               | 469.26            
+
+──────────────────────────────────────────────────────────────────────
+  local253  (db: education_business)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `cleaned_city_salary_data` AS (
+      SELECT
+        `s`.`Location` AS `Location`,
+        `s`.`CompanyName` AS `CompanyName`,
+        TONUMBER(REGEXP_REPLACE(`s`.`Salary`, "[^0-9.]", "")) AS `CleanSalary`
+      FROM `education_business`.`education_business_scope`.`SalaryDataset` AS `s`
+      WHERE `s`.`Location` IN ["Mumbai", "Pune", "New Delhi", "Hyderabad"]
+        AND `s`.`CompanyName` IS NOT MISSING
+        AND `s`.`CompanyName` IS NOT NULL
+        AND `s`.`Salary` IS NOT MISSING
+        AND `s`.`Salary` IS NOT NULL
+        AND 
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['AverageSalaryInCountry', 'AverageSalaryInState', 'CompanyName']
+    Gold-only columns: ['Average Salary in Country', 'Average Salary in State', 'Company Name']
+    Common columns:    ['Location']
+
+  Pred head (5 rows):
+  AverageSalaryInCountry | AverageSalaryInState | CompanyName     | Location 
+  -----------------------+----------------------+-----------------+----------
+  5081882.0              | 5081882.0            | Qwerty Concepts | Hyderabad
+  4949704.0              | 4949704.0            | SetuServ        | Hyderabad
+  1510743.5              | 3000000.0            | XYZ (Turkey)    | Hyderabad
+  1643757.75             | 2745265.5            | ABCDEF          | Hyderabad
+  2658491.0              | 2658491.0            | MarketLinc      | Hyderabad
+
+  Gold head (5 rows):
+  Location  | Company Name    | Average Salary in State | Average Salary in Country
+  ----------+-----------------+-------------------------+--------------------------
+  Hyderabad | Meta            | 6275360.0               | 915555.247007            
+  Hyderabad | Qwerty Concepts | 5081882.0               | 915555.247007            
+  Hyderabad | SetuServ        | 4949704.0               | 915555.247007            
+  Hyderabad | Nassau Re       | 3773676.0               | 915555.247007            
+  Hyderabad | Enrich IBS      | 3773676.0               | 915555.247007            
+
+──────────────────────────────────────────────────────────────────────
+  local258  (db: IPL)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `base_deliveries` AS (
+      SELECT
+        `b`.`bowler` AS `bowler_id`,
+        `b`.`match_id` AS `match_id`,
+        `b`.`innings_no` AS `innings_no`,
+        `b`.`over_id` AS `over_id`,
+        `b`.`ball_id` AS `ball_id`,
+        IFMISSINGORNULL(`bs`.`runs_scored`, 0) AS `bat_runs`,
+        CASE
+          WHEN `er`.`extra_type` IN ["wides", "noballs"] THEN 0
+          ELSE 1
+        END AS `legal_ball`
+      FROM `IPL`.`IPL_scope`.`ball_by_ball` AS `b`
+      LEFT JOIN `IPL`.`IPL_scope`.`batsman_scored` AS `bs`
+        ON `bs`.`match_id` = `b`
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['best_bowling', 'bowler_id', 'bowler_name', 'economy_rate', 'strike_rate', 'total_wickets']
+    Gold-only columns: ['BEST_BOWLING', 'ECONOMY_RATE', 'STRIKE_RATE', 'TOTAL_WICKETS', 'player_name']
+
+  Pred head (5 rows):
+  best_bowling | bowler_id | bowler_name     | economy_rate      | strike_rate        | total_wickets
+  -------------+-----------+-----------------+-------------------+--------------------+--------------
+  5-12         | 194       | SL Malinga      | 6.309305373525557 | 16.006993006993007 | 143          
+  5-17         | 136       | A Mishra        | 7.130982367758186 | 19.365853658536587 | 123          
+  4-21         | 71        | DJ Bravo        | 7.902874132804758 | 16.540983606557376 | 122          
+  5-17         | 50        | Harbhajan Singh | 6.801346801346801 | 22.462184873949578 | 119          
+  4-17         | 67        | PP Chawla       | 7.414410662224073 | 20.176470588235293 | 119          
+
+  Gold head (5 rows):
+  player_name    | TOTAL_WICKETS | ECONOMY_RATE | STRIKE_RATE | BEST_BOWLING
+  ---------------+---------------+--------------+-------------+-------------
+  PD Collingwood | 5             | 6.7416       | 17.8        | 2-19        
+  A Nel          | 1             | 10.3333      | 18.0        | 1-31        
+  KP Appanna     | 9             | 7.7222       | 24.0        | 4-17        
+  ND Doshi       | 2             | 8.3571       | 28.0        | 1-15        
+  BW Hilfenhaus  | 22            | 7.4355       | 16.9091     | 3-25        
+
+──────────────────────────────────────────────────────────────────────
+  local259  (db: IPL)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `role_counts` AS (
+      SELECT `pm`.`player_id`, `pm`.`role`, COUNT(1) AS `role_count`
+      FROM `IPL`.`IPL_scope`.`player_match` AS `pm`
+      WHERE `pm`.`player_id` IS NOT MISSING
+        AND `pm`.`role` IS NOT MISSING
+      GROUP BY `pm`.`player_id`, `pm`.`role`
+    ),
+    `role_ranked` AS (
+      SELECT `role_counts`.`player_id`, `role_counts`.`role`,
+             ROW_NUMBER() OVER (
+               PARTITION BY `role_counts`.`player_id`
+               ORDER BY `role_counts`.`role_count` DESC, `role_counts`.`role` ASC
+             )
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['highest_score_in_single_match', 'matches_with_at_least_100_runs', 'matches_with_at_least_30_runs', 'matches_with_at_least_50_runs', 'total_runs_scored']
+    Gold-only columns: ['highest_score', 'matches_100_plus', 'matches_30_plus', 'matches_50_plus', 'total_runs']
+    Common columns:    ['batting_average', 'batting_hand', 'best_bowling_performance', 'bowling_skill', 'economy_rate', 'most_frequent_role', 'player_id', 'player_name', 'strike_rate', 'total_balls_faced', 'total_matches_played', 'total_times_dismissed', 'total_wickets_taken']
+
+  Pred head (5 rows):
+  batting_average    | batting_hand   | best_bowling_performance | bowling_skill      | economy_rate      | highest_score_in_single_match | matches_with_at_least_100_runs | matches_with_at_least_30_runs | matches_with_at_least_50_runs | most_frequent_role | player_id | player_name     | strike_rate        | total_balls_faced | total_matches_played | total_runs_scored | total_times_dismissed | total_wickets_taken
+  -------------------+----------------+--------------------------+--------------------+-------------------+-------------------------------+--------------------------------+-------------------------------+-------------------------------+--------------------+-----------+-----------------+--------------------+-------------------+----------------------+-------------------+-----------------------+--------------------
+  25.057692307692307 | Left-hand bat  | 2-20                     | Right-arm medium   | 7.694656488549619 | 91                            | 0                              | 20                            | 7                             | Captain            | 1         | SC Ganguly      | 100.92951200619675 | 1291              | 57                   | 1303              | 52                    | 10                 
+  28.267441860465116 | Right-hand bat | NaN                      | Right-arm medium   | NaN               | 158                           | 2                              | 35                            | 13                            | Player             | 2         | BB McCullum     | 125.05144032921811 | 1944              | 91                   | 2431              | 86                    | 0                  
+  10.11111111111111  | Right-hand bat | NaN                      | Right-arm medium   | NaN               | 28                            | 0                              | 0                             | 0                             | Captain            | 3         | RT Ponting      | 70.54263565891473  | 129               | 10                   | 91                | 9                     | 0                  
+  26.979591836734695 | Right-hand bat | 2-2                      | Right-arm offbreak | 8.674922600619196 | 71                            | 0                              | 19                            | 5                             | Player             | 4         | DJ Hussey       | 120.07266121707539 | 1101              | 64                   | 1322              | 49                    | 8                  
+  9.142857142857142  | Right-hand bat | 1-7                      | Right-arm offbreak | 5.809523809523809 | 16                            | 0                              | 0                             | 0                             | Player             | 5         | Mohammad Hafeez | 76.19047619047619  | 84                | 8                    | 64                | 7                     | 2                  
+
+  Gold head (5 rows):
+  player_id | player_name     | most_frequent_role | batting_hand   | bowling_skill      | total_runs | total_matches_played | total_times_dismissed | batting_average | highest_score | matches_30_plus | matches_50_plus | matches_100_plus | total_balls_faced | strike_rate | total_wickets_taken | economy_rate | best_bowling_performance
+  ----------+-----------------+--------------------+----------------+--------------------+------------+----------------------+-----------------------+-----------------+---------------+-----------------+-----------------+------------------+-------------------+-------------+---------------------+--------------+-------------------------
+  1         | SC Ganguly      | Captain            | Left-hand bat  | Right-arm medium   | 1303       | 57                   | 52                    | 25.057692       | 91            | 20              | 7               | 0                | 1249              | 104.323459  | 10                  | 7.783784     | 2-20                    
+  2         | BB McCullum     | Player             | Right-hand bat | Right-arm medium   | 2431       | 91                   | 86                    | 28.267442       | 158           | 35              | 13              | 2                | 1875              | 129.653333  | 0                   | NaN          | NaN                     
+  3         | RT Ponting      | Captain            | Right-hand bat | Right-arm medium   | 91         | 10                   | 9                     | 10.111111       | 28            | 0               | 0               | 0                | 129               | 70.542636   | 0                   | NaN          | NaN                     
+  4         | DJ Hussey       | Player             | Right-hand bat | Right-arm offbreak | 1322       | 64                   | 49                    | 26.979592       | 71            | 19              | 5               | 0                | 1084              | 121.95572   | 8                   | 8.811321     | 2-2                     
+  5         | Mohammad Hafeez | Player             | Right-hand bat | Right-arm offbreak | 64         | 8                    | 7                     | 9.142857        | 16            | 0               | 0               | 0                | 83                | 77.108434   | 2                   | 6.0          | 1-7                     
+
+  Value mismatches (first 5):
+    Row    Column                    Pred                      Gold                     
+    ------ ------------------------- ------------------------- -------------------------
+    0      batting_average           25.057692307692307        25.057692                
+    1      batting_average           28.267441860465116        28.267442                
+    2      batting_average           10.11111111111111         10.111111                
+    3      batting_average           26.979591836734695        26.979592                
+    4      batting_average           9.142857142857142         9.142857                 
+
+──────────────────────────────────────────────────────────────────────
+  local263  (db: stacking)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `step_scores` AS (
+      SELECT
+        `ms`.`name` AS `name`,
+        `ms`.`version` AS `version`,
+        `ms`.`step` AS `step`,
+        MAX(CASE WHEN `ms`.`model` <> "Stack" THEN `ms`.`test_score` ELSE NULL END) AS `max_non_stack_test_score`,
+        MAX(CASE WHEN `ms`.`model` = "Stack" THEN `ms`.`test_score` ELSE NULL END) AS `stack_test_score`
+      FROM `stacking`.`stacking_scope`.`model_score` AS `ms`
+      WHERE `ms`.`model` IS NOT MISSING
+        AND `ms`.`test_score` IS NOT MISSING
+        AND `ms`.`name` IS NOT MISSING
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['L1_model', 'occurrence_count', 'status']
+    Gold-only columns: ['L1_MODEL', 'OCCURRENCES', 'STATUS']
+
+  Pred head (2 rows):
+  L1_model   | occurrence_count | status
+  -----------+------------------+-------
+  regression | 36               | soft  
+  regression | 78               | strong
+
+  Gold head (2 rows):
+  STATUS | L1_MODEL   | OCCURRENCES
+  -------+------------+------------
+  soft   | regression | 17         
+  strong | regression | 37         
+
+──────────────────────────────────────────────────────────────────────
+  local270  (db: oracle_sql)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH RECURSIVE top_level_packaging AS (
+        SELECT `p`.`id` AS `packaging_id`
+        FROM `oracle_sql`.`oracle_sql_scope`.`packaging` AS `p`
+        WHERE NOT EXISTS (
+            SELECT 1
+            FROM `oracle_sql`.`oracle_sql_scope`.`packaging_relations` AS `pr_parent`
+            WHERE `pr_parent`.`contains_id` = `p`.`id`
+        )
+    ),
+    packaging_hierarchy AS (
+        SELECT
+            `pr`.`packaging_id` AS `root_packaging_id`,
+            `pr`.`contains_id` AS `current_packaging_id`,
+            `pr`.`contains_id` AS `item_id
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['container_name', 'item_name']
+    Gold-only columns: ['CONTAINER_NAME', 'ITEM_NAME']
+
+  Pred head (1 rows):
+  container_name | item_name   
+  ---------------+-------------
+  Pallet Mix MS  | Bottle 500cl
+
+  Gold head (4 rows):
+  CONTAINER_NAME | ITEM_NAME   
+  ---------------+-------------
+  Pallet Mix MS  | Bottle 500cl
+  Pallet Mix SG  | Bottle 500cl
+  Pallet of L    | Bottle 500cl
+  Pallet of M    | Bottle 330cl
+
+──────────────────────────────────────────────────────────────────────
+  local273  (db: oracle_sql)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `order_demand` AS (
+      SELECT
+        `ol`.`order_id`,
+        `ol`.`product_id`,
+        `ol`.`qty` AS `order_qty`,
+        (SUM(`ol`.`qty`) OVER (
+          PARTITION BY `ol`.`product_id`
+          ORDER BY `ol`.`order_id`
+          ROWS UNBOUNDED PRECEDING
+        ) - `ol`.`qty`) AS `demand_start`,
+        SUM(`ol`.`qty`) OVER (
+          PARTITION BY `ol`.`product_id`
+          ORDER BY `ol`.`order_id`
+          ROWS UNBOUNDED PRECEDING
+        ) AS `demand_end`
+      FROM `oracle_sql`.`oracle_sql_scope`.`orderlines` AS `ol`
+      WHERE `ol`.`qty
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['avg_pick_percentage', 'product_name']
+    Gold-only columns: ['AVG_PICK_PERCENTAGE', 'PRODUCT_NAME']
+
+  Pred head (5 rows):
+  avg_pick_percentage | product_name    
+  --------------------+-----------------
+  30.76923076923077   | Der Helle Kumpel
+  75.0                | Hazy Pink Cloud 
+  50.0                | Hercule Trippel 
+  30.952380952380953  | Hoppy Crude Oil 
+  100.0               | Monks and Nuns  
+
+  Gold head (2 rows):
+  PRODUCT_NAME | AVG_PICK_PERCENTAGE
+  -------------+--------------------
+  4280         | 0.0                
+  6520         | 0.0                
+
+──────────────────────────────────────────────────────────────────────
+  local277  (db: oracle_sql)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `product_ids` AS (
+      SELECT 4160 AS `product_id`
+      UNION ALL
+      SELECT 7790 AS `product_id`
+    ),
+    `series` AS (
+      SELECT
+        `p`.`product_id` AS `product_id`,
+        `step` AS `step`,
+        ((`step` - 1) % 12) + 1 AS `month_no`,
+        IFMISSINGORNULL(`ms`.`qty`, 0) AS `qty`
+      FROM `product_ids` AS `p`
+      UNNEST ARRAY_RANGE(1, 37) AS `step`
+      LEFT JOIN `oracle_sql`.`oracle_sql_scope`.`monthly_sales` AS `ms`
+        ON `ms`.`product_id` = `p`.`product_id`
+       AND ((TO_NUMBER(SUBSTR(`ms`.`mth`, 0, 4)) - 2016) 
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['average_forecasted_annual_sales_2018']
+    Gold-only columns: ['AVG_FORECASTED_ANNUAL_SALES_2018']
+
+  Pred head (1 rows):
+  average_forecasted_annual_sales_2018
+  ------------------------------------
+  416.0031834161758                   
+
+  Gold head (1 rows):
+  AVG_FORECASTED_ANNUAL_SALES_2018
+  --------------------------------
+  277.3343                        
+
+──────────────────────────────────────────────────────────────────────
+  local283  (db: EU_soccer)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `match_points` AS (
+      SELECT
+        `m`.`season` AS `season`,
+        `m`.`league_id` AS `league_id`,
+        `m`.`country_id` AS `country_id`,
+        `m`.`home_team_api_id` AS `team_api_id`,
+        CASE
+          WHEN `m`.`home_team_goal` > `m`.`away_team_goal` THEN 3
+          WHEN `m`.`home_team_goal` = `m`.`away_team_goal` THEN 1
+          ELSE 0
+        END AS `points`
+      FROM `EU_soccer`.`EU_soccer_scope`.`Match` AS `m`
+      WHERE `m`.`season` IS NOT MISSING
+        AND `m`.`season` IS NOT NULL
+        AND `m`.`league_id` IS NOT
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['champion_team_name']
+    Gold-only columns: ['champion_team']
+    Common columns:    ['country', 'league', 'season', 'total_points']
+
+  Pred head (5 rows):
+  champion_team_name    | country | league                 | season    | total_points
+  ----------------------+---------+------------------------+-----------+-------------
+  RSC Anderlecht        | Belgium | Belgium Jupiler League | 2008/2009 | 77          
+  Standard de Liège     | Belgium | Belgium Jupiler League | 2008/2009 | 77          
+  Manchester United     | England | England Premier League | 2008/2009 | 90          
+  Girondins de Bordeaux | France  | France Ligue 1         | 2008/2009 | 80          
+  VfL Wolfsburg         | Germany | Germany 1. Bundesliga  | 2008/2009 | 69          
+
+  Gold head (5 rows):
+  season    | champion_team         | league                 | country | total_points
+  ----------+-----------------------+------------------------+---------+-------------
+  2008/2009 | RSC Anderlecht        | Belgium Jupiler League | Belgium | 77          
+  2008/2009 | Manchester United     | England Premier League | England | 90          
+  2008/2009 | Girondins de Bordeaux | France Ligue 1         | France  | 80          
+  2008/2009 | VfL Wolfsburg         | Germany 1. Bundesliga  | Germany | 69          
+  2008/2009 | Inter                 | Italy Serie A          | Italy   | 84          
+
+──────────────────────────────────────────────────────────────────────
+  local285  (db: bank_sales_trading)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `wholesale_yearly` AS (
+      SELECT
+        TO_NUMBER(SUBSTR(`w`.`whsle_date`, 0, 4)) AS `year`,
+        `w`.`item_code` AS `item_code`,
+        AVG(`w`.`whsle_px_rmb-kg`) AS `avg_wholesale_price`,
+        MAX(`w`.`whsle_px_rmb-kg`) AS `max_wholesale_price`,
+        MIN(`w`.`whsle_px_rmb-kg`) AS `min_wholesale_price`
+      FROM `bank_sales_trading`.`bank_sales_trading_scope`.`veg_whsle_df` AS `w`
+      WHERE `w`.`whsle_date` IS NOT NULL
+        AND TO_NUMBER(SUBSTR(`w`.`whsle_date`, 0, 4)) BETWEEN 2020 AND 2023
+        AND `w`.`
+        ... (truncated)
+
+  Column differences:
+    Gold-only columns: ['AVG_LOSS_RATE', 'AVG_WHOLESALE_PRICE', 'MAX_WHOLESALE_PRICE', 'MIN_WHOLESALE_PRICE', 'PROFIT', 'TOTAL_LOSS', 'TOTAL_SELLING_PRICE', 'TOTAL_WHOLESALE_PRICE', 'WHOLESALE_PRICE_DIFFERENCE', 'YEAR', 'category_name']
+
+  Gold head (5 rows):
+  YEAR | category_name               | AVG_WHOLESALE_PRICE | MAX_WHOLESALE_PRICE | MIN_WHOLESALE_PRICE | WHOLESALE_PRICE_DIFFERENCE | TOTAL_WHOLESALE_PRICE | TOTAL_SELLING_PRICE | AVG_LOSS_RATE | TOTAL_LOSS | PROFIT  
+  -----+-----------------------------+---------------------+---------------------+---------------------+----------------------------+-----------------------+---------------------+---------------+------------+---------
+  2020 | Aquatic Tuberous Vegetables | 6.23                | 29.54               | 0.76                | 28.78                      | 37427.01              | 52665.96            | 7.94          | 2773.55    | 12465.41
+  2020 | Cabbage                     | 5.9                 | 10.8                | 1.6                 | 9.2                        | 53973.8               | 84200.26            | 12.25         | 6297.1     | 23929.37
+  2020 | Capsicum                    | 7.43                | 45.39               | 0.4                 | 44.99                      | 82190.88              | 125582.87           | 7.99          | 6659.14    | 36732.85
+  2020 | Edible Mushroom             | 7.87                | 80.0                | 1.33                | 78.67                      | 85546.02              | 138305.38           | 9.6           | 8686.32    | 44073.05
+  2020 | Flower/Leaf Vegetables      | 4.13                | 45.77               | 0.51                | 45.26                      | 140227.29             | 234650.04           | 13.95         | 18584.05   | 75838.7 
+
+──────────────────────────────────────────────────────────────────────
+  local286  (db: electronic_sales)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `seller_item_sales` AS (
+      SELECT `oi`.`seller_id`,
+             SUM(`oi`.`price`) AS `total_sales`,
+             AVG(`oi`.`price`) AS `average_item_price`,
+             COUNT(1) AS `products_sold_quantity`
+      FROM `electronic_sales`.`electronic_sales_scope`.`order_items` AS `oi`
+      GROUP BY `oi`.`seller_id`
+      HAVING COUNT(1) > 100
+    ),
+    `seller_order_pairs` AS (
+      SELECT DISTINCT `oi`.`seller_id`, `oi`.`order_id`
+      FROM `electronic_sales`.`electronic_sales_scope`.`order_items` AS `oi`
+      INNER JOIN `seller_
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['average_packing_time_days', 'max_category_sales_volume', 'products_sold_quantity', 'seller_city', 'seller_state', 'top_product_categories_english']
+    Gold-only columns: ['average_packing_time_hours', 'top_categories_english', 'total_quantity_sold']
+    Common columns:    ['average_item_price', 'average_review_score', 'seller_id', 'total_sales']
+
+  Pred head (5 rows):
+  average_item_price | average_packing_time_days | average_review_score | max_category_sales_volume | products_sold_quantity | seller_city      | seller_id                      | seller_state | top_product_categories_english | total_sales       
+  -------------------+---------------------------+----------------------+---------------------------+------------------------+------------------+--------------------------------+--------------+--------------------------------+-------------------
+  198.50573529411596 | 2.286472148541114         | 4.133451957295374    | 1002                      | 1156                   | guariba          | 4869f7a5dfa277a7dca6462dcf3... | SP           | watches_gifts                  | 229472.62999999805
+  543.3562195121942  | 2.8636363636363638        | 4.132022471910112    | 257                       | 410                    | lauro de freitas | 53243585a1d6dc2643021fd1853... | BA           | telephony                      | 222776.04999999964
+  100.89225968796923 | 2.226798462383306         | 3.827873403664631    | 1572                      | 1987                   | ibitinga         | 4a3ca9315b744ce9f8e93743614... | SP           | bed_bath_table                 | 200472.91999999486
+  331.1297440273011  | 2.2130584192439864        | 4.339070567986231    | 579                       | 586                    | sumare           | fa1c13f2614d7b5c4749cbc52fe... | SP           | watches_gifts                  | 194042.02999999846
+  137.7741129032256  | 11.262677484787018        | 3.488798370672098    | 1233                      | 1364                   | itaquaquecetuba  | 7c67e1448b00f6e969d365cea6b... | SP           | office_furniture               | 187923.88999999975
+
+  Gold head (5 rows):
+  seller_id                      | total_quantity_sold | total_sales | average_item_price | average_review_score | average_packing_time_hours | top_categories_english
+  -------------------------------+---------------------+-------------+--------------------+----------------------+----------------------------+-----------------------
+  4869f7a5dfa277a7dca6462dcf3... | 1156                | 229472.63   | 198.50573529411764 | 4.133452             | 56.191866                  | watches_gifts         
+  53243585a1d6dc2643021fd1853... | 410                 | 222776.05   | 543.3562195121951  | 4.132022             | 73.258523                  | telephony             
+  4a3ca9315b744ce9f8e93743614... | 1987                | 200472.92   | 100.89225968797184 | 3.827873             | 56.331302                  | bed_bath_table        
+  fa1c13f2614d7b5c4749cbc52fe... | 586                 | 194042.03   | 331.12974402730373 | 4.339071             | 56.104811                  | watches_gifts         
+  7c67e1448b00f6e969d365cea6b... | 1364                | 187923.89   | 137.7741129032258  | 3.488798             | 273.240816                 | office_furniture      
+
+  Value mismatches (first 5):
+    Row    Column                    Pred                      Gold                     
+    ------ ------------------------- ------------------------- -------------------------
+    0      average_item_price        198.50573529411596        198.50573529411764       
+    1      average_item_price        543.3562195121942         543.3562195121951        
+    2      average_item_price        100.89225968796923        100.89225968797184       
+    3      average_item_price        331.1297440273011         331.12974402730373       
+    4      average_item_price        137.7741129032256         137.7741129032258        
+
+──────────────────────────────────────────────────────────────────────
+  local299  (db: bank_sales_trading)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT
+      `m`.`month_key` AS `month`,
+      SUM(`m`.`max_30_day_avg_balance`) AS `summed_max_30_day_avg_balances`
+    FROM (
+      SELECT
+        `r`.`month_key` AS `month_key`,
+        `r`.`customer_id` AS `customer_id`,
+        MAX(`r`.`rolling_30_day_avg_balance`) AS `max_30_day_avg_balance`
+      FROM (
+        SELECT
+          `b`.`customer_id` AS `customer_id`,
+          `b`.`txn_date` AS `txn_date`,
+          `b`.`month_key` AS `month_key`,
+          `b`.`first_month_key` AS `first_month_key`,
+          CASE
+            WHEN AVG(`b`.`running_ba
+        ... (truncated)
+
+  Column differences:
+    Gold-only columns: ['month', 'monthly_total_max_30d_avg']
+
+  Gold head (3 rows):
+  month   | monthly_total_max_30d_avg
+  --------+--------------------------
+  2020-02 | 286194.267               
+  2020-03 | 314140.852               
+  2020-04 | 170303.921               
+
+──────────────────────────────────────────────────────────────────────
+  local301  (db: bank_sales_trading)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `mid_june_sales` AS (
+      SELECT
+        `s`.`calendar_year` AS `calendar_year`,
+        SUM(
+          CASE
+            WHEN STR_TO_MILLIS(`s`.`week_date`) >= DATE_ADD_STR(TOSTRING(`s`.`calendar_year`) || '-06-15', -28, 'day')
+             AND STR_TO_MILLIS(`s`.`week_date`) < STR_TO_MILLIS(TOSTRING(`s`.`calendar_year`) || '-06-15')
+            THEN `s`.`sales`
+            ELSE 0
+          END
+        ) AS `sales_4_weeks_before`,
+        SUM(
+          CASE
+            WHEN STR_TO_MILLIS(`s`.`week_date`) >= STR_TO_MILLIS(TOSTRING(`s`.`cale
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['calendar_year', 'pct_change_sales', 'sales_4_weeks_after', 'sales_4_weeks_before']
+    Gold-only columns: ['percentage_change', 'sale_year']
+
+  Pred head (3 rows):
+  calendar_year | pct_change_sales | sales_4_weeks_after | sales_4_weeks_before
+  --------------+------------------+---------------------+---------------------
+  2018          | NaN              | 3757304881          | 0                   
+  2019          | NaN              | 3976100502          | 0                   
+  2020          | NaN              | 4062154321          | 0                   
+
+  Gold head (3 rows):
+  sale_year | percentage_change
+  ----------+------------------
+  2018      | 0.193027         
+  2019      | 0.103849         
+  2020      | -1.146018        
+
+──────────────────────────────────────────────────────────────────────
+  local302  (db: bank_sales_trading)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT `r`.`attribute_type`,
+           ROUND(`r`.`avg_pct_change_in_sales`, 2) AS `avg_pct_change_in_sales`,
+           CASE
+             WHEN `r`.`avg_pct_change_in_sales` = `m`.`min_avg_pct_change_in_sales` THEN TRUE
+             ELSE FALSE
+           END AS `is_highest_negative_impact`
+    FROM (
+      SELECT `c`.`attribute_type`,
+             AVG(`c`.`pct_change_in_sales`) AS `avg_pct_change_in_sales`
+      FROM (
+        SELECT `s`.`attribute_type`,
+               `s`.`attribute_value`,
+               ((SUM(CASE WHEN `s`.`period` = "aft
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['attribute_type', 'avg_pct_change_in_sales', 'is_highest_negative_impact']
+    Gold-only columns: ['ATTRIBUTE_NAME', 'AVG_PCT_CHANGE']
+
+  Pred head (5 rows):
+  attribute_type | avg_pct_change_in_sales | is_highest_negative_impact
+  ---------------+-------------------------+---------------------------
+  demographic    | -2.01                   | True                      
+  age_band       | -1.87                   | False                     
+  customer_type  | -1.42                   | False                     
+  region         | -1.11                   | False                     
+  platform       | 2.37                    | False                     
+
+  Gold head (1 rows):
+  ATTRIBUTE_NAME | AVG_PCT_CHANGE 
+  ---------------+----------------
+  demographic    | -2.008666666667
+
+──────────────────────────────────────────────────────────────────────
+  local330  (db: log)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `session_bounds` AS (
+      SELECT
+        `a`.`session` AS `session`,
+        MIN(`a`.`stamp`) AS `first_stamp`,
+        MAX(`a`.`stamp`) AS `last_stamp`
+      FROM `log`.`log_scope`.`activity_log` AS `a`
+      WHERE `a`.`session` IS NOT NULL
+        AND `a`.`stamp` IS NOT NULL
+        AND `a`.`path` IS NOT NULL
+      GROUP BY `a`.`session`
+    ),
+    `landing_page_sessions` AS (
+      SELECT DISTINCT
+        `a`.`path` AS `page`,
+        `a`.`session` AS `session`
+      FROM `log`.`log_scope`.`activity_log` AS `a`
+      JOIN `session_bounds` AS `b`
+      
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['page', 'unique_session_count']
+    Gold-only columns: ['UNIQUE_SESSIONS_COUNT', 'WEB_PAGE']
+
+  Pred head (5 rows):
+  page          | unique_session_count
+  --------------+---------------------
+  /detail       | 9                   
+  /detail/      | 9                   
+  /search_list  | 7                   
+  /search_list/ | 7                   
+                | 2                   
+
+  Gold head (5 rows):
+  WEB_PAGE       | UNIQUE_SESSIONS_COUNT
+  ---------------+----------------------
+  /detail/       | 9                    
+  /search_list/  | 7                    
+  /complete      | 2                    
+  /              | 2                    
+  /search_input/ | 2                    
+
+──────────────────────────────────────────────────────────────────────
+  local331  (db: log)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `ordered` AS (
+      SELECT `a`.`session`,
+             `a`.`path`,
+             `a`.`stamp`,
+             ROW_NUMBER() OVER (
+               PARTITION BY `a`.`session`
+               ORDER BY `a`.`stamp`, META(`a`).`id`
+             ) AS `rn`
+      FROM `log`.`log_scope`.`activity_log` AS `a`
+      WHERE `a`.`session` IS NOT NULL
+        AND `a`.`stamp` IS NOT NULL
+        AND `a`.`path` IS NOT NULL
+    )
+    SELECT `o3`.`path` AS `third_page_visit`,
+           COUNT(1) AS `occurrence_count`
+    FROM `ordered` AS `o1`
+    JOIN `ordered` AS `o2`
+      ON `o
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['occurrence_count', 'third_page_visit']
+    Gold-only columns: ['occurrences', 'third_page']
+
+  Pred head (2 rows):
+  occurrence_count | third_page_visit
+  -----------------+-----------------
+  16               | /detail         
+  12               | /detail/        
+
+  Gold head (3 rows):
+  third_page | occurrences
+  -----------+------------
+  /detail    | 55         
+  /          | 2          
+  /input     | 2          
+
+──────────────────────────────────────────────────────────────────────
+  local336  (db: f1)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `lap_changes` AS (
+      SELECT
+        `lp`.`race_id`,
+        `lp`.`driver_id`,
+        `lp`.`lap`,
+        `lp`.`lap_type`,
+        `lp`.`position`,
+        LAG(`lp`.`position`) OVER (
+          PARTITION BY `lp`.`race_id`, `lp`.`driver_id`
+          ORDER BY `lp`.`lap`,
+                   CASE
+                     WHEN LOWER(`lp`.`lap_type`) LIKE "start%" THEN 0
+                     WHEN LOWER(`lp`.`lap_type`) LIKE "race%" THEN 1
+                     WHEN LOWER(`lp`.`lap_type`) LIKE "pit%" THEN 2
+                     WHEN LOWER(`lp`.`lap_typ
+        ... (truncated)
+    Common columns:    ['category', 'overtake_count']
+
+  Pred head (2 rows):
+  category                 | overtake_count
+  -------------------------+---------------
+  standard on-track passes | 6290          
+  retirements              | 17            
+
+  Gold head (4 rows):
+  category   | overtake_count
+  -----------+---------------
+  Retirement | 13            
+  Pit        | 3435          
+  Start      | 5407          
+  Track      | 10613         
+
+──────────────────────────────────────────────────────────────────────
+  local344  (db: f1)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `eligible_races` AS (
+      SELECT RAW `re`.`race_id`
+      FROM `f1`.`f1_scope`.`races_ext` AS `re`
+      WHERE `re`.`is_pit_data_available` = 1
+    ),
+    `driver_events` AS (
+      SELECT
+        `lp`.`race_id`,
+        `lp`.`driver_id`,
+        `lp`.`lap`,
+        `lp`.`lap_type`,
+        `lp`.`position`,
+        LAG(`lp`.`position`) OVER (
+          PARTITION BY `lp`.`race_id`, `lp`.`driver_id`
+          ORDER BY `lp`.`lap`
+        ) AS `prev_position`,
+        `r`.`grid`
+      FROM `f1`.`f1_scope`.`lap_positions` AS `lp`
+      JOIN `f1`.`f1_scope`.`result
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['overtake_count']
+    Gold-only columns: ['num_overtakes']
+    Common columns:    ['overtake_type']
+
+  Pred head (5 rows):
+  overtake_count | overtake_type                 
+  ---------------+-------------------------------
+  53326          | Race                          
+  3164           | Retirement (Mechanical Prob...
+  2410           | Retirement (Driver Error)     
+  1355           | Starting Position - Pit Lan...
+  61             | Starting Position - No Qual...
+
+  Gold head (4 rows):
+  overtake_type | num_overtakes
+  --------------+--------------
+  P             | 37398        
+  T             | 13402        
+  R             | 5536         
+  S             | 2443         
+
+──────────────────────────────────────────────────────────────────────
+  local356  (db: f1)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `race_laps` AS (
+      SELECT `lp`.`race_id`, `lp`.`lap`, `lp`.`driver_id`, `lp`.`position`
+      FROM `f1`.`f1_scope`.`lap_positions` AS `lp`
+      WHERE `lp`.`lap_type` = "race"
+        AND `lp`.`lap` > 1
+        AND `lp`.`race_id` IS NOT NULL
+        AND `lp`.`driver_id` IS NOT NULL
+        AND `lp`.`position` IS NOT NULL
+    ),
+    `valid_transitions` AS (
+      SELECT `cur`.`race_id`, `cur`.`lap`, `cur`.`driver_id`, `cur`.`position`, `prev`.`position` AS `prev_position`
+      FROM `race_laps` AS `cur`
+      JOIN `f1`.`f1_scope`.`lap
+        ... (truncated)
+
+  Column differences:
+    Gold-only columns: ['full_name']
+
+  Gold head (5 rows):
+  full_name         
+  ------------------
+  Alessandro Zanardi
+  Alex Yoong        
+  Alexander Rossi   
+  Allan McNish      
+  Andrea Montermini 
+
+──────────────────────────────────────────────────────────────────────
+  local358  (db: log)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    SELECT `categorized`.`age_category`, COUNT(1) AS `user_count`
+    FROM (
+      SELECT CASE
+        WHEN `ages`.`age_years` >= 20 AND `ages`.`age_years` < 30 THEN "20s"
+        WHEN `ages`.`age_years` >= 30 AND `ages`.`age_years` < 40 THEN "30s"
+        WHEN `ages`.`age_years` >= 40 AND `ages`.`age_years` < 50 THEN "40s"
+        WHEN `ages`.`age_years` >= 50 AND `ages`.`age_years` < 60 THEN "50s"
+        ELSE "others"
+      END AS `age_category`
+      FROM (
+        SELECT DATE_DIFF_STR(NOW_STR(), `u`.`birth_date`, "year") AS `age_year
+        ... (truncated)
+    Common columns:    ['age_category', 'user_count']
+
+  Pred head (5 rows):
+  age_category | user_count
+  -------------+-----------
+  20s          | 48        
+  30s          | 88        
+  40s          | 24        
+  50s          | 24        
+  others       | 136       
+
+  Gold head (5 rows):
+  age_category | user_count
+  -------------+-----------
+  20s          | 88        
+  30s          | 24        
+  40s          | 24        
+  50s          | 56        
+  others       | 128       
+
+  Value mismatches (first 4):
+    Row    Column                    Pred                      Gold                     
+    ------ ------------------------- ------------------------- -------------------------
+    0      user_count                48                        88                       
+    1      user_count                88                        24                       
+    3      user_count                24                        56                       
+    4      user_count                136                       128                      
+
+──────────────────────────────────────────────────────────────────────
+  local360  (db: log)
+──────────────────────────────────────────────────────────────────────
+
+  SQL++ Query:
+    WITH `activity_sessions` AS (
+      SELECT DISTINCT `a`.`session`
+      FROM `log`.`log_scope`.`activity_log` AS `a`
+      WHERE `a`.`session` IS NOT MISSING
+        AND `a`.`session` IS NOT NULL
+    ),
+    `first_detail` AS (
+      SELECT `a`.`session`, MIN(`a`.`stamp`) AS `first_detail_stamp`
+      FROM `log`.`log_scope`.`activity_log` AS `a`
+      WHERE `a`.`session` IS NOT MISSING
+        AND `a`.`session` IS NOT NULL
+        AND `a`.`path` = '/detail'
+      GROUP BY `a`.`session`
+    ),
+    `first_complete` AS (
+      SELECT `f`.`session`, MIN(`f`.`
+        ... (truncated)
+
+  Column differences:
+    Pred-only columns: ['pre_event_count']
+    Gold-only columns: ['path', 'search_type']
+    Common columns:    ['session']
+
+  Pred head (5 rows):
+  pre_event_count | session 
+  ----------------+---------
+  0               | 1cf7678e
+  0               | 3efe001c
+  0               | 5d5b0997
+  0               | 5eb2e107
+  0               | 87b5725f
+
+  Gold head (5 rows):
+  session  | path     | search_type
+  ---------+----------+------------
+  1cf7678e | /detail/ | NaN        
+  3efe001c | /detail  | NaN        
+  5d5b0997 | /detail/ | NaN        
+  5eb2e107 | /detail  | NaN        
+  87b5725f | /detail  | NaN        
+
+====================================================================================================
+Instance ID     Error Code   Error Description
+====================================================================================================
+local003        3000         syntax error - line 49, column 3, at: CROSS
+local025        1080         Timeout 5m59.5s exceeded
+local035        5600         Query node has run out of memory (curr: 3522166784 limit: 3521118208)
+local050        5600         Query node has run out of memory (curr: 3522166784 limit: 3521118208)
+local058        1080         Timeout 5m59.5s exceeded
+local059        5600         Query node has run out of memory (curr: 3522166784 limit: 3521118208)
+local060        5600         Query node has run out of memory (curr: 3522166784 limit: 3521118208)
+local061        5600         Query node has run out of memory (curr: 3522166784 limit: 3521118208)
+local063        5600         Query node has run out of memory (curr: 3522166784 limit: 3521118208)
+local066        3000         syntax error - line 15, column 3, at: UNNEST (reserved word)
+local070        3000         syntax error - line 49, column 3, at: CROSS
+local073        3000         Invalid function ARRAY_TO_STRING (resolving to default:ARRAY_TO_STRING) (near...
+local081        3000         syntax error - line 36, column 1, at: CROSS
+local130        3000         syntax error - line 34, column 1, at: CROSS
+local170        4036         <ec=201, category=couchbase.query, message=planning_failure (201), context=Qu...
+local201        3000         Invalid function ARRAY_TO_STRING (resolving to default:ARRAY_TO_STRING) (near...
+local220        3000         syntax error - line 62, column 3, at: UNION (reserved word)
+local269        3300         recursive_with semantics: Distinct not allowed
+local275        3220         LAG window function ORDER BY clause is required.
+local279        3000         syntax error - line 13, column 1, at: RECURSIVE (reserved word)
+local284        3000         syntax error - line 42, column 1, at: CROSS
+local298        5420         Inner of nested-loop join (t2) cannot have more than 1000 documents without a...
+local309        3000         ParsingFailedException(<ec=8, category=couchbase.common, message=parsing_fail...
+local355        N/A          
+====================================================================================================
+Total: 24 errors out of 133 evaluated queries

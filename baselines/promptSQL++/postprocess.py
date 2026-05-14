@@ -16,55 +16,85 @@ from pathlib import Path
 from tqdm import tqdm
 
 
+def extract_headers(raw_text: str) -> tuple[list[str], str]:
+    """
+    Extract leading -- bucket / -- scope header lines from the raw text.
+
+    Scans only the lines before any code block or SQL body begins.
+    Returns (header_lines, remaining_text).
+    """
+    header_lines = []
+    remaining_lines = []
+    found_non_header = False
+
+    for line in raw_text.splitlines():
+        stripped = line.strip()
+        if not found_non_header:
+            m = re.match(r"^--\s*(bucket|scope)\s*:\s*.+$", stripped, re.IGNORECASE)
+            if m:
+                header_lines.append(stripped)
+                continue
+        found_non_header = True
+        remaining_lines.append(line)
+
+    return header_lines, "\n".join(remaining_lines)
+
+
 def extract_sql(raw_text: str) -> str:
     """
-    Extract the SQL++ query from raw LLM output.
+    Extract the SQL++ query from raw LLM output, preserving any leading
+    -- bucket / -- scope header comments.
 
     Handles:
     - ```sql ... ``` or ```sqlpp ... ``` blocks
     - Plain SQL with surrounding explanation text
     - Multiple code blocks (takes the longest one)
     """
+    # Pull out header lines first, then work on the rest
+    header_lines, body = extract_headers(raw_text)
+
     # Try to find fenced code blocks
     patterns = [
         r"```(?:sql\+\+|sqlpp|sql|n1ql)\s*\n(.*?)```",  # language-tagged blocks
         r"```\s*\n(.*?)```",                                # untagged blocks
     ]
 
+    sql = None
     for pattern in patterns:
-        matches = re.findall(pattern, raw_text, re.DOTALL | re.IGNORECASE)
+        matches = re.findall(pattern, body, re.DOTALL | re.IGNORECASE)
         if matches:
             # Return the longest match (most likely the main query)
-            return max(matches, key=len).strip()
-
-    # No code blocks found — assume the whole text is SQL
-    # Strip common non-SQL prefixes/suffixes
-    text = raw_text.strip()
-
-    # Remove leading explanation lines (lines not starting with SQL keywords)
-    lines = text.split("\n")
-    sql_start_keywords = (
-        "SELECT", "WITH", "INSERT", "UPDATE", "DELETE", "CREATE",
-        "DROP", "ALTER", "MERGE", "UPSERT", "EXPLAIN", "INFER",
-        "--", "/*",
-    )
-
-    # Find the first line that looks like SQL
-    start_idx = 0
-    for i, line in enumerate(lines):
-        stripped = line.strip().upper()
-        if any(stripped.startswith(kw) for kw in sql_start_keywords):
-            start_idx = i
+            sql = max(matches, key=len).strip()
             break
 
-    result = "\n".join(lines[start_idx:]).strip()
+    if sql is None:
+        # No code blocks found — assume the whole body is SQL
+        text = body.strip()
 
-    # Remove trailing explanation after the query (after a semicolon + newline + text)
-    semicolon_match = re.search(r";\s*\n\s*\n", result)
-    if semicolon_match:
-        result = result[:semicolon_match.end()].strip()
+        lines = text.split("\n")
+        sql_start_keywords = (
+            "SELECT", "WITH", "INSERT", "UPDATE", "DELETE", "CREATE",
+            "DROP", "ALTER", "MERGE", "UPSERT", "EXPLAIN", "INFER",
+            "--", "/*",
+        )
 
-    return result
+        start_idx = 0
+        for i, line in enumerate(lines):
+            stripped = line.strip().upper()
+            if any(stripped.startswith(kw) for kw in sql_start_keywords):
+                start_idx = i
+                break
+
+        sql = "\n".join(lines[start_idx:]).strip()
+
+        # Remove trailing explanation after the query (after a semicolon + newline + text)
+        semicolon_match = re.search(r";\s*\n\s*\n", sql)
+        if semicolon_match:
+            sql = sql[:semicolon_match.end()].strip()
+
+    if header_lines:
+        return "\n".join(header_lines) + "\n" + sql
+    return sql
 
 
 def main():

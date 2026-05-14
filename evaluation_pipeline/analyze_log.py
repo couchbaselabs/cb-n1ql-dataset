@@ -13,7 +13,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 _SCRIPT_DIR = Path(__file__).resolve().parent
-LOG_FILE = _SCRIPT_DIR / "log_sqlpp.jsonl"
+LOG_FILE = _SCRIPT_DIR / "log_sqlpp_catalog.jsonl"
 OUTPUT_FILE = _SCRIPT_DIR / "analysis_report.txt"
 
 # Tee print to both stdout and output file
