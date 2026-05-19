@@ -114,6 +114,15 @@ EOF
 # ============================================================
 if [[ "$EVAL_ONLY" == "false" ]]; then
     echo "▶ Step 1/3: Generate SQL++ queries via MCP"
+    # Clear stale .sqlpp files from previous runs so failed/missing queries
+    # don't silently persist and get mistaken for results of this run.
+    if [[ -d "$QUERIES_DIR" ]]; then
+        STALE_COUNT=$(ls "${QUERIES_DIR}"/*.sqlpp 2>/dev/null | wc -l | tr -d ' ')
+        if [[ "$STALE_COUNT" -gt 0 ]]; then
+            rm -f "${QUERIES_DIR}"/*.sqlpp
+            echo "  Cleared ${STALE_COUNT} stale .sqlpp file(s) from previous run"
+        fi
+    fi
     LIMIT_ARG=""
     if [[ "$LIMIT" -gt 0 ]]; then
         LIMIT_ARG="--limit $LIMIT"
