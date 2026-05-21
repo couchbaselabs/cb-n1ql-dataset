@@ -21,10 +21,15 @@ TEST_DIR = BASE_DIR.parent
 OUTPUT_DIR = BASE_DIR / "output"
 QUERIES_DIR = OUTPUT_DIR / "queries"
 LOG_FILE = OUTPUT_DIR / "run_log.jsonl"
-SERVER_LOG_FILE = OUTPUT_DIR / "server.log"
-SERVER_DIR = Path.home() / "SEMANTIC-CATALOG" / "mcp-server-couchbase"
-SERVER_PYTHON = SERVER_DIR / ".venv" / "bin" / "python"
-SERVER_SRC = SERVER_DIR / "src"
+SERVER_LOG_FILE = Path(os.environ["MCP_SERVER_LOG_FILE"]) if "MCP_SERVER_LOG_FILE" in os.environ else OUTPUT_DIR / "server.log"
+
+
+def _resolve_server_dir() -> Path:
+    env_path = os.environ.get("MCP_SERVER_PATH", "").strip()
+    if env_path:
+        return Path(env_path)
+    # fallback to old hardcoded location
+    return Path.home() / "SEMANTIC-CATALOG" / "mcp-server-couchbase"
 
 
 def utc_now_iso() -> str:
@@ -52,20 +57,39 @@ def build_output_paths(instance_id: str) -> dict[str, Path]:
 
 
 def build_server_env() -> dict[str, str]:
+    server_dir = _resolve_server_dir()
+    server_src = server_dir / "src"
+
     env = os.environ.copy()
+
+    # Remap MCP_CB_* → CB_* so the MCP server sees its expected var names
+    mcp_prefix = "MCP_CB_"
+    for key, value in list(env.items()):
+        if key.startswith(mcp_prefix):
+            cb_key = "CB_" + key[len(mcp_prefix):]
+            env.setdefault(cb_key, value)
+
     existing_pythonpath = env.get("PYTHONPATH")
     env["PYTHONPATH"] = (
-        f"{SERVER_SRC}{os.pathsep}{existing_pythonpath}"
+        f"{server_src}{os.pathsep}{existing_pythonpath}"
         if existing_pythonpath
-        else str(SERVER_SRC)
+        else str(server_src)
     )
     env["CB_MCP_TRANSPORT"] = "stdio"
     return env
 
 
+def _resolve_server_python() -> Path:
+    venv_path = os.environ.get("MCP_SERVER_VENV_PATH", "").strip()
+    if venv_path:
+        return Path(venv_path) / "bin" / "python"
+    # fallback: venv inside the server dir
+    return _resolve_server_dir() / ".venv" / "bin" / "python"
+
+
 def build_server_params() -> StdioServerParameters:
     return StdioServerParameters(
-        command=str(SERVER_PYTHON),
+        command=str(_resolve_server_python()),
         args=["-m", "mcp_server"],
         env=build_server_env(),
     )

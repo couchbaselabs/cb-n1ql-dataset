@@ -38,7 +38,7 @@ ifneq ($(TIMEOUT),360)
 endif
 
 # ============================================================
-.PHONY: help setup run generate eval analyze smoke clean
+.PHONY: help setup run generate eval analyze quicktest clean
 
 help:
 	@$(PYTHON) -c "\
@@ -52,7 +52,7 @@ Usage: make <target> \
 \n  generate     Generate SQL++ queries only (skip evaluation) \
 \n  eval         Evaluate an existing submission (skip generation) \
 \n  analyze      Re-run analysis on an existing evaluation log \
-\n  smoke        Quick sanity check: run 1 question end-to-end \
+\n  quicktest    Quick sanity check: run 1 question end-to-end \
 \n  clean        Remove the run directory for PIPELINE_TAG \
 \n\nSetup workflow: \
 \n  1. Fill in value fields in config.json \
@@ -87,11 +87,11 @@ analyze:
 	cp "$$LOG" evaluation_pipeline/log_sqlpp_catalog.jsonl; \
 	$(PYTHON) evaluation_pipeline/analyze_log.py 2>&1 | tee "$$RUN_DIR/logs/analysis_report.txt"
 
-smoke:
-	@echo "Running smoke test (1 question, dataset=$(DATASET))..."
-	@./run_mcp.sh --mode "$(DATASET)" --tag smoke --limit 1
+quicktest:
+	@echo "Running quick test (1 question, dataset=$(DATASET))..."
+	@./run_mcp.sh --mode "$(DATASET)" --tag quicktest --limit 1
 	@echo ""
-	@echo "Smoke test complete. Check runs/mcp_smoke/ for results."
+	@echo "Quick test complete. Check runs/mcp_quicktest/ for results."
 
 clean:
 	@if [ -z "$(TAG)" ]; then \
