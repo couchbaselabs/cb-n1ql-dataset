@@ -88,9 +88,10 @@ if [[ ! -f "$QUESTIONS_FILE" ]]; then
 fi
 
 # ---------- Build run name ----------
-RUN_NAME="mcp"
+IST_TIMESTAMP="$(TZ='Asia/Kolkata' date '+%Y%m%d_%H%M%S')"
+RUN_NAME="${IST_TIMESTAMP}"
 if [[ -n "$RUN_TAG" ]]; then
-    RUN_NAME="mcp_${RUN_TAG}"
+    RUN_NAME="${IST_TIMESTAMP}_${RUN_TAG}"
 fi
 
 RUN_DIR="${RUNS_DIR}/${RUN_NAME}"
