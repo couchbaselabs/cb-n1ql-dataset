@@ -204,12 +204,14 @@ if [[ "$EVAL_ONLY" == "false" ]]; then
     echo ""
 
     # ============================================================
-    # STEP 2: Postprocess — copy queries to submission dir
+    # STEP 2: Postprocess — clean LLM output and write to submission dir
     # ============================================================
-    echo "▶ Step 2/3: Postprocess — copying queries to submission dir"
-    cp "${QUERIES_DIR}"/*.sqlpp "${SUBMISSION_DIR}/" 2>/dev/null || true
-    COUNT=$(ls "${SUBMISSION_DIR}"/*.sqlpp 2>/dev/null | wc -l | tr -d ' ')
-    echo "  Copied ${COUNT} .sqlpp files to ${SUBMISSION_DIR}"
+    echo "▶ Step 2/3: Postprocess — cleaning queries → submission dir"
+    "$EVAL_PYTHON" "${BASELINE_DIR}/postprocess.py" \
+        --input_dir "$QUERIES_DIR" \
+        --output_dir "$SUBMISSION_DIR"
+    COUNT=$(find "${SUBMISSION_DIR}" -maxdepth 1 -name "*.sqlpp" | wc -l | tr -d ' ')
+    echo "  ${COUNT} .sqlpp files written to ${SUBMISSION_DIR}"
     echo ""
 else
     echo "▶ Skipping Steps 1-2 (--eval_only)"
