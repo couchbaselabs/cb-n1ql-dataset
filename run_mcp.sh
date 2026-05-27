@@ -28,6 +28,14 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Load .env from project root if present
+if [[ -f "${ROOT_DIR}/.env" ]]; then
+    set -o allexport
+    # shellcheck source=/dev/null
+    source "${ROOT_DIR}/.env"
+    set +o allexport
+fi
 BASELINE_DIR="${ROOT_DIR}/baselines/promptSQL++"
 EVAL_DIR="${ROOT_DIR}/evaluation_pipeline"
 GOLD_DIR="${EVAL_DIR}/gold"
@@ -41,6 +49,9 @@ if [[ -z "$PYTHON_BIN" ]]; then
     echo "Error: python3 not found in PATH"
     exit 1
 fi
+
+# Python for evaluation scripts (needs pandas, couchbase, tqdm — use iQ-FastAPI venv)
+EVAL_PYTHON="${IQ_FASTAPI_VENV_PATH}/bin/python"
 
 # ---------- Defaults ----------
 MODE="sqlite"
@@ -77,9 +88,10 @@ if [[ ! -f "$QUESTIONS_FILE" ]]; then
 fi
 
 # ---------- Build run name ----------
-RUN_NAME="mcp"
+IST_TIMESTAMP="$(TZ='Asia/Kolkata' date '+%Y%m%d_%H%M%S')"
+RUN_NAME="${IST_TIMESTAMP}"
 if [[ -n "$RUN_TAG" ]]; then
-    RUN_NAME="mcp_${RUN_TAG}"
+    RUN_NAME="${IST_TIMESTAMP}_${RUN_TAG}"
 fi
 
 RUN_DIR="${RUNS_DIR}/${RUN_NAME}"
@@ -110,25 +122,96 @@ cat > "${RUN_DIR}/run_meta.json" <<EOF
 EOF
 
 # ============================================================
+# START iQ-FastAPI
+# ============================================================
+IQ_PID=""
+if [[ "$EVAL_ONLY" == "false" ]]; then
+    if [[ -z "${IQ_FASTAPI_PATH:-}" ]]; then
+        echo "Error: IQ_FASTAPI_PATH is not set in .env"
+        exit 1
+    fi
+    if [[ -z "${IQ_FASTAPI_VENV_PATH:-}" ]]; then
+        echo "Error: IQ_FASTAPI_VENV_PATH is not set in .env"
+        exit 1
+    fi
+    IQ_PYTHON="${IQ_FASTAPI_VENV_PATH}/bin/python"
+    IQ_PORT="${IQ_FASTAPI_PORT:-8000}"
+    echo "▶ Starting iQ-FastAPI (port ${IQ_PORT})..."
+
+    # Start iQ-FastAPI in a subshell: export IQ_* vars with prefix stripped,
+    # then exec the process so it inherits them cleanly.
+    (
+        while IFS='=' read -r key value; do
+            if [[ "$key" == IQ_* ]]; then
+                export "${key#IQ_}=${value}"
+            fi
+        done < "${ROOT_DIR}/.env"
+        exec "$IQ_PYTHON" "${IQ_FASTAPI_PATH}/main.py"
+    ) > "${LOG_DIR}/iq_fastapi.log" 2>&1 &
+    IQ_PID=$!
+
+    # Wait for iQ-FastAPI to be healthy (up to 60s)
+    echo "  Waiting for iQ-FastAPI to be ready..."
+    for i in $(seq 1 30); do
+        if curl -sf "http://localhost:${IQ_PORT}/" > /dev/null 2>&1; then
+            echo "  iQ-FastAPI is up (PID ${IQ_PID})"
+            break
+        fi
+        if ! kill -0 "$IQ_PID" 2>/dev/null; then
+            echo "Error: iQ-FastAPI process died. Check ${LOG_DIR}/iq_fastapi.log"
+            exit 1
+        fi
+        sleep 2
+        if [[ $i -eq 30 ]]; then
+            echo "Error: iQ-FastAPI did not become healthy within 60s. Check ${LOG_DIR}/iq_fastapi.log"
+            kill "$IQ_PID" 2>/dev/null || true
+            exit 1
+        fi
+    done
+    echo ""
+
+    # Ensure iQ-FastAPI is killed when the script exits
+    trap 'echo "Stopping iQ-FastAPI..."; kill "$IQ_PID" 2>/dev/null || true' EXIT
+fi
+
+# ============================================================
 # STEP 1: Generate SQL++ via MCP
 # ============================================================
 if [[ "$EVAL_ONLY" == "false" ]]; then
     echo "▶ Step 1/3: Generate SQL++ queries via MCP"
+    # Clear stale output from previous runs so failed/missing queries
+    # don't silently persist and get mistaken for results of this run.
+    if [[ -d "$QUERIES_DIR" ]]; then
+        STALE_COUNT=$(find "${QUERIES_DIR}" -maxdepth 1 -name "*.sqlpp" | wc -l | tr -d ' ')
+        if [[ "$STALE_COUNT" -gt 0 ]]; then
+            rm -f "${QUERIES_DIR}"/*.sqlpp
+            echo "  Cleared ${STALE_COUNT} stale .sqlpp file(s) from previous run"
+        fi
+    fi
+    for stale in "${TEST_DIR}/output/run_log.jsonl"; do
+        if [[ -f "$stale" ]]; then
+            rm -f "$stale"
+            echo "  Cleared stale $(basename $stale) from previous run"
+        fi
+    done
     LIMIT_ARG=""
     if [[ "$LIMIT" -gt 0 ]]; then
         LIMIT_ARG="--limit $LIMIT"
         echo "  (limit: $LIMIT questions)"
     fi
-    "$PYTHON_BIN" "${TEST_DIR}/run.py" --questions_file "$QUESTIONS_FILE" $LIMIT_ARG
+    MCP_SERVER_LOG_FILE="${LOG_DIR}/mcp_server.log" \
+        "${MCP_SERVER_VENV_PATH}/bin/python" "${TEST_DIR}/run.py" --questions_file "$QUESTIONS_FILE" $LIMIT_ARG
     echo ""
 
     # ============================================================
-    # STEP 2: Postprocess — copy queries to submission dir
+    # STEP 2: Postprocess — clean LLM output and write to submission dir
     # ============================================================
-    echo "▶ Step 2/3: Postprocess — copying queries to submission dir"
-    cp "${QUERIES_DIR}"/*.sqlpp "${SUBMISSION_DIR}/" 2>/dev/null || true
-    COUNT=$(ls "${SUBMISSION_DIR}"/*.sqlpp 2>/dev/null | wc -l | tr -d ' ')
-    echo "  Copied ${COUNT} .sqlpp files to ${SUBMISSION_DIR}"
+    echo "▶ Step 2/3: Postprocess — cleaning queries → submission dir"
+    "$EVAL_PYTHON" "${BASELINE_DIR}/postprocess.py" \
+        --input_dir "$QUERIES_DIR" \
+        --output_dir "$SUBMISSION_DIR"
+    COUNT=$(find "${SUBMISSION_DIR}" -maxdepth 1 -name "*.sqlpp" | wc -l | tr -d ' ')
+    echo "  ${COUNT} .sqlpp files written to ${SUBMISSION_DIR}"
     echo ""
 else
     echo "▶ Skipping Steps 1-2 (--eval_only)"
@@ -142,12 +225,11 @@ fi
 if [[ "$SKIP_EVAL" == "false" ]]; then
     echo "▶ Step 3/3: Evaluate against Couchbase"
 
-    "$PYTHON_BIN" "${EVAL_DIR}/evaluate_sqlpp_catalog.py" \
+    "$EVAL_PYTHON" "${EVAL_DIR}/evaluate_sqlpp_catalog.py" \
         --result_dir "$SUBMISSION_DIR" \
         --gold_dir "$GOLD_DIR" \
         --max_workers "$MAX_WORKERS" \
-        --timeout "$TIMEOUT" \
-        2>&1 | tee "${LOG_DIR}/evaluate.log"
+        --timeout "$TIMEOUT"
 
     if [[ -f "${EVAL_DIR}/log_sqlpp_catalog.jsonl" ]]; then
         cp "${EVAL_DIR}/log_sqlpp_catalog.jsonl" "${LOG_DIR}/log_sqlpp_catalog.jsonl"
@@ -155,7 +237,7 @@ if [[ "$SKIP_EVAL" == "false" ]]; then
 
     echo ""
     echo "▶ Analyzing evaluation log..."
-    "$PYTHON_BIN" "${EVAL_DIR}/analyze_log.py" 2>&1 | tee "${LOG_DIR}/analysis_report.txt" || true
+    "$EVAL_PYTHON" "${EVAL_DIR}/analyze_log.py" 2>&1 | tee "${LOG_DIR}/analysis_report.txt" || true
 
     if [[ -f "${EVAL_DIR}/analysis_report.txt" ]]; then
         cp "${EVAL_DIR}/analysis_report.txt" "${LOG_DIR}/analysis_report.txt" 2>/dev/null || true
@@ -168,7 +250,7 @@ else
 fi
 
 # ---------- Update run metadata with scores ----------
-"$PYTHON_BIN" -c "
+"$EVAL_PYTHON" -c "
 import json, os
 meta_path = '${RUN_DIR}/run_meta.json'
 with open(meta_path) as f:
